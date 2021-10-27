@@ -1,0 +1,48 @@
+.plan(AI MODEL PROJECT STARTED YESTERDAY 20-08-2021)(C)(2021)(All Rights Are Reserved).
+-----
+
+-----
+20-08-2021 - 05:45PM: Created Project AI Model (Worked all night long)
+21-08-2021 - 11:42PM: Administration
+-----
+Created Project Model AI. I've created 4 directories, and 32 files to start the project off with.
+The real structure of the AI routines already is becoming visible. Right now we're at verion v.0.0-1b.
+
+- Files: (32)
+-----
+2 files for algorithms a header and object files
+1 check up file
+1 concepts file
+1 customs file
+1 definitions file
+1 dictionary file
+2 functions files a header and object files
+1 gradle file
+1 header file
+1 internet file
+2 interpret files a header and object files
+1 limits file
+2 log files a header and object files
+1 manifest text file
+1 main program file
+1 readme file
+1 routines file
+1 saying file
+1 setup file
+1 file with only a zero
+5 directories: ai, al, crypt, log, and doc
+2 ai files a header and object files in the ai directory
+2 al files in the al directory
+1 hashing file in the crypt directory
+1 logged output file in the log directory
+2 documents in the doc directory
+1 tar.gz (cabinet file) with all the files and directories
+
+-----
+23-08-2021 - 09:15PM to 9:17 AM
+-----
+- reorganized folder layout and added the drum machine
+- moved files to individual directories: ai, al, cfg, crypt, definitions, log, speech, system directories
+- bug sweeped code and removed some bugs
+- update administration
+- added MD5 hashing capability to the AI module

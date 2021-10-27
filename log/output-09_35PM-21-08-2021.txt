@@ -1,0 +1,78 @@
+┌──(bb331㉿elem)-[~/…/06x7091.(_RESEARCH_&_SCIENCE_)/0x1900.(AI & LAB) SCIENCE) AVIATION) ROCKETRY_)/03.(A.I.)_.Artificial Intelligence model/model]
+└─$ ./setup.sh
+
+COMPILING...
+done.
+
+RUNNING: AI...
+
+][][
+
+-:: checking arguments.
+        1: arguments.
+
+-:: checking AI functions.
+
+-:: test run - performing tests on modules.
+        -:: random query for speech synthesis.
+        -:: check.
+        -:: access random method for sampling in device.
+        -:: check.
+        -:: accessing random routine for sampling.
+        -:: check.
+        -:: performs random queries inside catalogue algorithmic.
+        -:: check.
+        -:: random pattern recognition for input measure.
+        -:: check.
+
+-:: generated internal report.
+        -:: everything is nominal.
+        -:: checked every function.
+        -:: operational.
+
+-::[_E_[entropy):>___::-
+
+-:: __low on entropy ::-
+-:: normal entropies ::-
+-:: _high in entropy ::-
+
+
+-:: hashing algorithm.
+
+-:: check integrity / logical step counter.
+        -:: step:3 -:: complete. (100%)
+        -:: step:2 -:: complete. (100%)
+        -:: step:1 -:: complete. (100%)
+        -:: step:0 -:: complete. (100%)
+        -:: steps completed: 4
+
+-:: starting AI.
+        -:: sampler: 8 threads.
+
+-:: test run - performing tests on modules.
+        -:: random query for speech synthesis.
+        -:: check.
+        -:: access random method for sampling in device.
+        -:: check.
+        -:: accessing random routine for sampling.
+        -:: check.
+        -:: performs random queries inside catalogue algorithmic.
+        -:: check.
+        -:: random pattern recognition for input measure.
+        -:: check.
+
+-:: constructing artificial life routine.
+-:: starting evolving mechanic life in artifical habits.
+        -:: living inside that function running a numbers sequence.
+
+][][
+
+33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333..222
+-:: aborts runtime! and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled 1.
+-:: destructor artificial life routine was called.
+done.
+                                                                                                                   
+┌──(bb331㉿elem)-[~/…/06x7091.(_RESEARCH_&_SCIENCE_)/0x1900.(AI & LAB) SCIENCE) AVIATION) ROCKETRY_)/03.(A.I.)_.Artificial Intelligence model/model]
+└─$ model-ai
