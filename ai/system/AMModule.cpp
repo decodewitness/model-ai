@@ -29,9 +29,9 @@ public:
 
     int getRNG();
 
-    void nrs(int max, int x); // heavy numbers sequence
+    void nrs(int max, int x); // x heavy numbers sequence
     void incrementalNrs(int max, int x); // another heavy numbers sequence
-    
+
     string returnProduct(); // don't return into x as product that is futile
     int returnProductn(); // don't return to k as product that is futile
 };
