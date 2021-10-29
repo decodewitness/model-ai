@@ -40,4 +40,51 @@ int maximum(int a=0, int b=0) { int number=std::max(a,b); return number; }
 int minimum(int a=0, int b=0) { int number=std::min(a,b); return number; }
 int square(int x=0) { int number=sqrt(x); return number; }
 
-// eof
+
+// LIST OF OWN PARAMETERS
+// THE WAY IT WORkS IS DUBLICATE ONE FUNCTION ENTRY THEN
+// MODIFY THE CODE TO ADJUST ITS BEHAVIOR.
+
+// MATH FUNCTIONS
+
+void cosinF(double param) {
+    double result;
+    result = cos ( param * pi() / 180.0 );
+    printf ("The cosine of %f degrees is %f.\n", param, result );
+}
+
+void sinF(double param) {
+    double result;
+    result = sin (param*pi()/180);
+    printf ("The sine of %f degrees is %f.\n", param, result );
+}
+
+void tanF(double param)
+{
+  double result;
+  
+  result = tan ( param * pi() / 180.0 );
+  printf ("The tangent of %f degrees is %f.\n", param, result );
+}
+
+void acosF(double param)
+{
+  double result;  
+  result = acos (param) * 180.0 / pi();
+  printf ("The arc cosine of %f is %f degrees.\n", param, result);
+}
+
+void asinF(double param)
+{
+    double result;
+    result = asin (param) * 180.0 / pi();
+    printf ("The arc sine of %f is %f degrees\n", param, result);
+}
+
+void atanF(double param)
+{
+  double result;
+  result = atan (param) * 180 / pi();
+  printf ("The arc tangent of %f is %f degrees\n", param, result );
+}
+

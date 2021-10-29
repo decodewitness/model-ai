@@ -1,3 +1,5 @@
+// AMMODULE.H - IS USED BY AI/AI.H
+
 #include "AMModule.cpp"
 
 #include <cstdio>
@@ -54,14 +56,18 @@ int AMModule::getRNG() {
     return this->rnd;
 };
 
-void nrs(int max, int x) {
+void nrs(int max, int x, int limits) {
+    // compares between bounds
+    int boundLow = x;
+    int boundHigh = max;
 
-    int boundsLow[max];
+    int boundsLow[max]; // not implemented yet
     int boundsHigh[max];
 
-    for (int i=1; i<max; i++) {
-        if (i<boundsLow[0] && i<boundsHigh[0]) {
+    for (int i=1; i<limits; i++) {
+        if (i>boundLow && i<boundHigh) {
             // take action
+            cout << ":number (" << i << ")" << std::endl;
         }
     }
 };

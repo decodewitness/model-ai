@@ -10,6 +10,9 @@
 // hal
 #include "header.h"
 
+// AMModule
+#include "system/AMModule.h"
+
 // modules
 #include "md5/md5.cpp"
 #include "system/chk.h"
@@ -71,7 +74,9 @@ public:
 	void appliance();
 	
 	void decouple();
-	void saygrace();	
+	void saygrace();
+
+	void AMMod();
 };
 
 // eof

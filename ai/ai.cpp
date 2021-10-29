@@ -52,6 +52,14 @@ void AI::hal() {
 	start_hal();
 }
 
+void AMMod() {
+	AMModule *ammodule = new AMModule;
+	std::cout << "-:: running AMModule." << std::endl;
+	std::cout <<"    --AM Module--" << std::endl;
+	ammodule->nrs(60, 3, 100);
+	delete ammodule;
+}
+
 void AI::run_checks(int args) {
 	std::cout << "-:: checking arguments." << std::endl;
 	std::cout << "\t" << args << ": arguments." << std::endl;
