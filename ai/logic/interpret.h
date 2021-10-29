@@ -15,6 +15,5 @@ public:
 
 	void setTmp(std::string s) { tmp = s; }
 	void getTmp() { std::cout << this->tmp << "."; }
-
 };
 // eof

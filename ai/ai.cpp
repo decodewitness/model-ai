@@ -8,6 +8,7 @@
 #include <fstream>
 
 #include "ai.h"
+
 //#include "system/AMModule.h" 	// already included in AI/AI.H
 
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
@@ -29,6 +30,8 @@ AI::AI(int n) {
 
 	// run virtual appliance (virtual ai instance)
 	std::cout << "\t -:: loading virtual instance" << std::endl << std::endl;
+	
+	this->query();
 	this->appliance();
 }
 
@@ -333,4 +336,17 @@ void AI::saygrace() {
 	std::cout << "-:: done." << std::endl;
 };
 
-// eof
+void AI::query() {
+	// QUERY
+
+	std::cout << "::- query in sample." << std::endl;
+	
+	// PROMPT
+	std::cout << "--? :: ";
+	std::string y;
+    std::cin >> y;
+	
+	//s = sampleX();
+	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;
+	logicalQuery(y);
+};

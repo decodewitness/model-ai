@@ -4,6 +4,8 @@
 #define _AI_HEADER
 #endif
 
+#include <cstring>
+
 // asterisktab
 #include "logic/ascii/asterisktab.h"
 
@@ -28,8 +30,9 @@
 #include "logic/algorithms.cpp"
 #include "language/concepts.cpp"
 #include "language/speech/saying.cpp"
+#include "logic/assembly/input.cpp"
 
-const int number_of_modules = 16;	// equal to the number of include headers (above in this file)
+const int number_of_modules = 17;	// equal to the number of include headers (above in this file)
 const int SAMPLER_THREADS = 8;
 
 class AI {
@@ -77,6 +80,7 @@ public:
 	void saygrace();
 
 	void AMMod();
+	void query();
 };
 
 // eof
