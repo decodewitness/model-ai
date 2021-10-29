@@ -1,22 +1,25 @@
+#include <cstring>
+
 class AMModule {
 
 private:
     int j;
-    string r;
-    string s;
-    string x;
+    std::string r;
+    std::string s;
+    std::string x;
 
-    int i;
-    int j;
+
     int k;
-
+    int l;
+    int m;
+    
     int rnd;
 
 public:
     AMModule();
 
-    void addStringR(string r);
-    void addStringS(string s);
+    void addStringR(std::string r);
+    void addStringS(std::string s);
     
     void addni(int n);
     void addnj(int n);
@@ -32,6 +35,6 @@ public:
     void nrs(int max, int x, int limits); // x heavy numbers sequence
     void incrementalNrs(int max, int x); // another heavy numbers sequence
 
-    string returnProduct(); // don't return into x as product that is futile
+    std::string returnProduct(); // don't return into x as product that is futile
     int returnProductn(); // don't return to k as product that is futile
 };

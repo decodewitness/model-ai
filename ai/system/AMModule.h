@@ -7,14 +7,14 @@
 #include <ctime>
 
 AMModule::AMModule() {
-    this->j = 3;
+    this->l = 3;
 };
 
-void AMModule::addStringR(string r) {
+void AMModule::addStringR(std::string r) {
     this->r = r;
 };
 
-void AMModule::addStringS(string s) {
+void AMModule::addStringS(std::string s) {
     this->s = s;
 };
 
@@ -22,24 +22,24 @@ void AMModule::combine() {
     this->x = r + s;
 };
 
-string AMModule::returnProduct() {
+std::string AMModule::returnProduct() {
     return this->x;
 }
 
 void AMModule::addni(int n) {
-    this->i = n;
+    this->k = n;
 }
 
 void AMModule::addnj(int n) {
-    this->j = n;
+    this->l = n;
 };
 
 void AMModule::combinen() {
-    this->k = this->i + this->j;
+    this->m = this->k + this->l;
 };
 
 int AMModule::returnProductn() {
-    return this->k;
+    return this->m;
 }
 
 void AMModule::seedRNG10() {
@@ -56,7 +56,7 @@ int AMModule::getRNG() {
     return this->rnd;
 };
 
-void nrs(int max, int x, int limits) {
+void AMModule::nrs(int max, int x, int limits) {
     // compares between bounds
     int boundLow = x;
     int boundHigh = max;
@@ -67,7 +67,7 @@ void nrs(int max, int x, int limits) {
     for (int i=1; i<limits; i++) {
         if (i>boundLow && i<boundHigh) {
             // take action
-            cout << ":number (" << i << ")" << std::endl;
+            std::cout << ":number (" << i << ")" << std::endl;
         }
     }
 };

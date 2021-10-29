@@ -8,7 +8,7 @@
 #include <fstream>
 
 #include "ai.h"
-#include "system/AMModule.h"
+//#include "system/AMModule.h" 	// already included in AI/AI.H
 
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
 const int runtime_testing = 1001;
