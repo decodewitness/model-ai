@@ -7,12 +7,12 @@ void logicalQuery(std::string &x) {
 
     // set logic to 0 for automatic override of logic function
 
-    // DEFAULT: (3)
+    // DEFAULT: (3) (PERFORM X COMPUTATION)
     int y = logic;  // is inherited from /ai/logic/assembly/logic.h
     
     // ========= DEFAULT TO NO LOGIC =========
     // uncomment the next comment for no logic
-    //y = 0;
+    //y = 2;
     // ========= DEFAULT TO NO LOGIC =========
 
     switch (y) {
@@ -29,14 +29,14 @@ void logicalQuery(std::string &x) {
             std::cout << "-:: :logic: (read line)::-" << std::endl;
             std::cout << "\t" << x << " (" << x.length() << ")" << std::endl;
             
-            commands(logic, x);
+            commands(y, x);
             break;
 
         case 3: // compute x computation
             std::cout << "-:: :logic: (compute x computation)::-" << std::endl;
             std::cout << "\t" << x << std::endl;
 
-            commands(logic, x);
+            commands(y, x);
             break;
 
         default: //
