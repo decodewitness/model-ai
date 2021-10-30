@@ -21,9 +21,12 @@ int main(int argc, char *argv[]) {
 	// hash function checks file hashes
 	ai.hash("my string"); // checking integrity
 
+	// logical kill chain (uncomment next line)
+	//ai.kill(9);
+
 	// health
 	chk();
-
+	
 	// stepping engine
 	ai.stepping();
 	

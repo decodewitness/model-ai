@@ -6,6 +6,8 @@
 
 #include <cstring>
 
+
+
 // asterisktab
 #include "logic/ascii/asterisktab.h"
 
@@ -81,6 +83,9 @@ public:
 
 	void AMMod();
 	void query();
+
+	// killchain
+	void kill(int x);
 };
 
 // eof

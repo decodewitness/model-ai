@@ -350,3 +350,16 @@ void AI::query() {
 	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;
 	logicalQuery(y);
 };
+
+void AI::kill(int x) {
+	switch (x) {
+		case 9:
+			std::cout << std::endl << "-/- initializing sequence." << std::endl << std::endl;
+			//system("pwd");
+			exit(0);
+			break;
+		default:
+			std::cout << std::endl << "-/- unknown sequence." << std::endl << std::endl;
+			break;
+	};	
+}
