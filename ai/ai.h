@@ -6,7 +6,8 @@
 
 #include <cstring>
 
-
+// database
+#include "database/db.cpp"
 
 // asterisktab
 #include "logic/ascii/asterisktab.h"

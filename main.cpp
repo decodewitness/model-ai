@@ -11,7 +11,11 @@ int main(int argc, char *argv[]) {
 
 	// splash AI model
 	splash();
-	
+
+	if (logging_is_enabled==true) {
+		std::cout << std::endl << "::- log is enabled." << std::endl;
+	}
+
 	// class instances
 	AI ai(argc);
 

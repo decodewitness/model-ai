@@ -123,7 +123,7 @@ void AI::headers() {
 
 	// list headers
 	for (i=0; i<count; i++) {
-		std::cout << asterisktab << arr[i] << std::endl;
+		//std::cout << asterisktab << arr[i] << std::endl;
 	}
 
 	// load headers here

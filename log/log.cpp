@@ -1,4 +1,4 @@
-// LOG.CPP - GENERATE (LOGS ON THE FLY) FOR MODEL AI
+// LOG.CPP - GENERATE (LOGS ON THE FLY) FOR MODEL AI USED BY "/HEADER.H"
 	// (receipt and transactions)
 
 #include <iostream>

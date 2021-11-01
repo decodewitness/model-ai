@@ -11,6 +11,8 @@
 
  ** ][][
 
+
+::- log is enabled.
 -:: checking arguments.
 	1: arguments.
 
@@ -128,8 +130,8 @@
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	hello
-(NOP)
+	yellow
+	[ computation:  ]
 -:: finished computation.
 
 -:: aborts runtime! and clean up gracefully!
