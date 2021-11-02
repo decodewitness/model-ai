@@ -38,14 +38,18 @@ g++ -o a.out ./main.cpp
 echo "~:done."
 
 echo
-echo "~:removing old runtime."
+echo "~:checking for old runtime environment."
 if [ -f "bin/runtime" ]
-  then
+then
+  echo "-/- removing old runtime."
   rm -f bin/runtime
+else
+  echo "-/- no old runtime found."
+  echo "~: continuing"
 fi
 
 echo
-echo "~:moving ai model to \"bin/runtime\"."
+echo "~:moving (new) ai model to \"bin/runtime\"."
 mv a.out bin/runtime
 echo "~:program \"model\" (ai) is stored in the \"./bin/\" directory as \"./bin/runtime\"."
 
