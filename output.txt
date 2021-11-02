@@ -1,5 +1,10 @@
+~:checking for GCC compiler.
+-/- found GCC compiler
 
-~:COMPILING...
+~:checking for Curl libraries
+-/- found Curl.
+
+~:compiling...
 ~:done.
 
 ~:removing old runtime.
@@ -130,7 +135,7 @@
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	yellow
+	color
 	[ computation:  ]
 -:: finished computation.
 

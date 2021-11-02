@@ -1,7 +1,39 @@
 #!/usr/bin/bash
 
+### check for GCC compiler
+
+echo "~:checking for GCC compiler."
+if [ -f "/usr/bin/gcc" ]
+then
+  echo "-/- found GCC compiler"
+else
+  echo "-/- could not find GCC compiler"
+  echo "-/- installing GCC compiler"
+  echo "!~ I need SUDO to install GCC else press CTRL+C and install GCC manually."
+  sudo apt update && sudo apt install gcc
+fi
+
 echo
-echo "~:COMPILING..."
+echo "~:checking for Curl libraries"
+if [ -d /usr/include/c++/10/curl ]
+then
+  echo "-/- found Curl."
+else
+  echo
+  echo "~:fixing C headers & Curl libraries."
+  echo "-/- extracting Curl library."
+  tar xvf libs/curl.tar.gz 
+  echo "-/- creating \"/usr/include/c++/10/curl\" directory."
+  echo "!~ I need SUDO to install the Curl library in your C++ headers."
+  echo "else press CTRL+C and install the Curl header files for C++ manually."
+  sudo mkdir -p /usr/include/c++/10/curl
+  sudo mv ./curl/* /usr/include/c++/10/curl
+  echo "-/- removing empty directory \"./curl\" to keep the project folder clean."
+  rmdir curl
+fi
+
+echo
+echo "~:compiling..."
 g++ -o a.out ./main.cpp
 echo "~:done."
 
