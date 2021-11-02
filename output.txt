@@ -7,9 +7,10 @@
 ~:compiling...
 ~:done.
 
-~:removing old runtime.
+~:checking for old runtime environment.
+-/- removing old runtime.
 
-~:moving ai model to "bin/runtime".
+~:moving (new) ai model to "bin/runtime".
 ~:program "model" (ai) is stored in the "./bin/" directory as "./bin/runtime".
 
 ~:RUNNING: AI...
@@ -135,7 +136,7 @@
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	color
+	yolo
 	[ computation:  ]
 -:: finished computation.
 
