@@ -9,6 +9,8 @@
 
 #include "ai.h"
 
+bool app = true; // this setting to "true" runs the virtual appliance.
+
 //#include "system/AMModule.h" 	// already included in AI/AI.H
 
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
@@ -17,19 +19,23 @@ const int runtime_testing = 1001;
 AI::AI(int n) {
 	this->init();
 	
-	// functions
-	this->run_checks(n);
-	this->test_run(runtime_testing);	// 1001 means test all modules ( SET TEST RUN OPTIONS HERE )
-
 	// represent headers
 	this->headers();
+	
+	// functions
+	this->run_checks(n);
+	this->check_functions();
+	this->test_run(runtime_testing);	// 1001 means test all modules ( SET TEST RUN OPTIONS HERE )
+
 	HAL hal;
 
-	// run virtual appliance (virtual ai instance)
-	std::cout << "\t -:: loading virtual instance" << std::endl << std::endl;
-	
+	if (app == true) {
+		// run virtual appliance (virtual ai instance)
+		std::cout << "\t -:: loading virtual instance" << std::endl << std::endl;
+		this->appliance(); // this->appliance(); runs the virtual instance
+	}
+	// perform query sampling
 	this->query();
-	this->appliance();
 }
 
 void AI::openfs() {

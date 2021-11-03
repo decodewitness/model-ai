@@ -1,5 +1,0 @@
-#!/bin/bash
-
-./setup.sh > output.log.txt
-
-exit 0
