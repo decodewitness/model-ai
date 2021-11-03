@@ -30,6 +30,10 @@ echo "~:starting AI virtual instance (N)"
 echo
 ./ai/virtual/virtual-cd/bin0/runtime
 echo
+echo "~:removing (virtual-cd hierarchy)."
+echo
+rm -rf ./ai/virtual/virtual-cd
+echo
 echo "~:done."
 echo
 
