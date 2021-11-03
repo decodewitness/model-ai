@@ -1,4 +1,0 @@
-
-COMPILING...
-Program is stored in the "./runtime" directory and called "model".
-done.

@@ -21,6 +21,7 @@
 // modules
 #include "md5/md5.cpp"
 #include "system/chk.h"
+#include "fetch/fetch.h"
 #include "system/splash.h"
 #include "system/gradle.h"
 #include "logic/learn.cpp"
@@ -35,7 +36,7 @@
 #include "language/speech/saying.cpp"
 #include "logic/assembly/input.cpp"
 
-const int number_of_modules = 17;	// equal to the number of include headers (above in this file)
+const int number_of_modules = 18;	// equal to the number of include headers (above in this file)
 const int SAMPLER_THREADS = 8;
 
 class AI {
@@ -50,6 +51,8 @@ private:
 
 	Sampler *sampler;
 	std::string modules[number_of_modules];	// these are all files and used to construct the virtual domain
+
+	std::string crlurl;
 
 public:
 
@@ -84,6 +87,12 @@ public:
 
 	void AMMod();
 	void query();
+
+	std::string curl_url() {
+		return this->crlurl;
+	}
+
+	int curl(std::string f);
 
 	// killchain
 	void kill(int x);

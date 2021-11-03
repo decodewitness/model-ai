@@ -9,18 +9,17 @@ using namespace std;
 // main function
 int main(int argc, char *argv[]) {
 
+	if (logging_is_enabled==true) {
+		cout << std::endl << "enabled logging (1)" << std::endl;
+	}
 	// splash AI model
 	splash();
-
-	if (logging_is_enabled==true) {
-		std::cout << std::endl << "::- log is enabled." << std::endl;
-	}
 
 	// class instances
 	AI ai(argc);
 
 	// checking AI functions
-	ai.check_functions();
+	//ai.check_functions();
 
 	// hash function checks file hashes
 	ai.hash("my string"); // checking integrity
@@ -47,7 +46,15 @@ int main(int argc, char *argv[]) {
 	} else {
 		exit(1);
 	}
+
+	// curl attempt site "curled_url" [std::string]
+	ai.curl(ai.curl_url());
 	
+	// stage down and decouple logic (graceful shutdown)
+	ai.decouple();
+
+return 0;
+}	
 	
 	//cout << "Working Directory: ";
 	//system("pwd");
@@ -87,9 +94,8 @@ int main(int argc, char *argv[]) {
 	// closing program
 	
 	// grace routine in decouple() - kill off any AI functions and unloading modules
-	ai.decouple();
 
-return 0;
-}
+//return 0;
+//}
 
 // eof

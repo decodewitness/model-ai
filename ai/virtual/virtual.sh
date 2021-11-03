@@ -26,7 +26,7 @@ echo "~:compiling virtual instance of AI."
 g++ -o ./ai/virtual/virtual-cd/bin0/runtime ./ai/virtual/virtual-cd/main.cpp
 echo "~:done."
 echo
-echo "~:starting AI virtual instance (1)"
+echo "~:starting AI virtual instance (N)"
 echo
 ./ai/virtual/virtual-cd/bin0/runtime
 echo

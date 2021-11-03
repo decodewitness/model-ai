@@ -9,13 +9,14 @@
 
 #include "ai.h"
 
-//#include "system/AMModule.h" 	// already included in AI/AI.H
-
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
 const int runtime_testing = 1001;
 
 AI::AI(int n) {
-	this->init();
+	this->nr = 8;
+	this->ch = 'c';
+	this->testrun = false;
+	this->check_routine = 1;
 	
 	// functions
 	this->run_checks(n);
@@ -27,8 +28,6 @@ AI::AI(int n) {
 
 	// run virtual appliance (virtual ai instance)
 	std::cout << "\t -:: loading virtual instance" << std::endl << std::endl;
-	
-	this->query();
 	this->appliance();
 }
 
@@ -50,14 +49,6 @@ void AI::closers() {
 
 void AI::hal() {
 	start_hal();
-}
-
-void AMMod() {
-	AMModule *ammodule = new AMModule;
-	std::cout << "-:: running AMModule." << std::endl;
-	std::cout <<"    --AM Module--" << std::endl;
-	ammodule->nrs(60, 3, 100);
-	delete ammodule;
 }
 
 void AI::run_checks(int args) {
@@ -120,7 +111,7 @@ void AI::headers() {
 
 	// list headers
 	for (i=0; i<count; i++) {
-		//std::cout << asterisktab << arr[i] << std::endl;
+		std::cout << asterisktab << arr[i] << std::endl;
 	}
 
 	// load headers here
@@ -279,17 +270,6 @@ void AI::init() {
 	// ALL INITIALIZATION HAPPENS HERE
 	std::cout << "-:: initialization." << std::endl;
 
-	this->nr = 8;
-	this->ch = 'c';
-	this->check_routine = 1;
-	
-	this->testrun = false;
-	this->run_checks();
-	
-
-	// set "this->crlurl" to resource URL.
-	this->crlurl = "https://www.google.com";
-
 	int x=0;
 
 	// gradle to help build cradle
@@ -325,7 +305,7 @@ void AI::decouple() {
 }
 
 void AI::saygrace() {
-	std::cout  << std::endl << std::endl << "::=> saving grace (routine) and closing libraries <::" << std::endl;
+	std::cout  << std::endl << std::endl << "::=> saying grace (routine) and closing libraries <::" << std::endl;
 		
 	this->nr = 0;
 	this->ch = '0';
@@ -344,37 +324,4 @@ void AI::saygrace() {
 	std::cout << "-:: done." << std::endl;
 };
 
-void AI::query() {
-	// QUERY
-
-	std::cout << "::- query in sample." << std::endl;
-	
-	// PROMPT
-	std::cout << "--? :: ";
-	std::string y;
-    std::cin >> y;
-	
-	//s = sampleX();
-	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;
-	logicalQuery(y);
-};
-
-void AI::kill(int x) {
-	switch (x) {
-		case 9:
-			std::cout << std::endl << "-/- initializing sequence." << std::endl << std::endl;
-			//system("pwd");
-			exit(0);
-			break;
-		default:
-			std::cout << std::endl << "-/- unknown sequence." << std::endl << std::endl;
-			break;
-	};	
-};
-
-int AI::curl(std::string f) {
-	std::cout << "********* CURLING **********" << std::endl << std::endl;
-	int x = do_curl(f);
-	std::cout << "x:" << x << std::endl;
-	return x;
-};
+// eof

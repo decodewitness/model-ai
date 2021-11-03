@@ -14,27 +14,13 @@ else
 fi
 
 echo
-echo "~:checking for Curl libraries"
-if [ -d /usr/include/c++/10/curl ]
-then
-  echo "-/- found Curl."
-else
-  echo
-  echo "~:fixing C headers & Curl libraries."
-  echo "-/- extracting Curl library."
-  tar xvf libs/curl.tar.gz 
-  echo "-/- creating \"/usr/include/c++/10/curl\" directory."
-  echo "!~ I need SUDO to install the Curl library in your C++ headers."
-  echo "else press CTRL+C and install the Curl header files for C++ manually."
-  sudo mkdir -p /usr/include/c++/10/curl
-  sudo mv ./curl/* /usr/include/c++/10/curl
-  echo "-/- removing empty directory \"./curl\" to keep the project folder clean."
-  rmdir curl
-fi
+echo "~:installing Curl libraries"
+echo "!~ I need SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C, then install \"libcurl4-openssl-dev\" manually with APT."
+sudo apt install libcurl4-openssl-dev
 
 echo
 echo "~:compiling..."
-g++ -o a.out ./main.cpp
+g++ -o a.out ./main.cpp -lcurl
 echo "~:done."
 
 echo
@@ -71,7 +57,7 @@ if [ -d "./bin" ] && [ -f "./bin/runtime" ]
 else
   echo
   echo "~:something went wrong."
-  exit 1
+  exit 0
 fi
 
 if [ -f "a.out" ]

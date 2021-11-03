@@ -8,9 +8,8 @@
 #include <unistd.h>
 
 // CLASS LIBRARIES HEADERS
+#include "cfg/cfg.h"
 #include "ai/ai.cpp"
-#include "log/log.cpp"
-#include "cfg/definitions.h"
 
 // INCLUDE SYSTEM
 
