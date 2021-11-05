@@ -9,7 +9,7 @@ then
 else
   echo "-/- could not find GCC compiler"
   echo "-/- installing GCC compiler"
-  echo "!~ I need SUDO to install GCC else press CTRL+C and install GCC manually."
+  echo "!~ I need SUDO to install GCC, else press CTRL+C and install GCC manually."
   sudo apt update && sudo apt install gcc
 fi
 
