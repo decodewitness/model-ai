@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+<<<<<<< HEAD
+=======
+# MAYBE YOUR ONLY BACKUP SCRIPT
+>>>>>>> 933e21d3e97ec19592a14c4ad5e64a29a1688637
 ### check for GCC compiler
 
 echo "~:checking for GCC compiler."

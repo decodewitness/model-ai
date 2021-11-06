@@ -9,7 +9,7 @@
 
 #include "ai.h"
 
-bool app = true; // this setting to "true" runs the virtual appliance.
+bool app = true; // DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
 
 //#include "system/AMModule.h" 	// already included in AI/AI.H
 

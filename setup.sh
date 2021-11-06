@@ -19,7 +19,11 @@ echo "~:installing Curl libraries"
 echo "(+one time runscript [that deletes its*elf])"
 #./script.sh
 echo "H-E-R-E"
+<<<<<<< HEAD
 #pwd
+=======
+pwd
+>>>>>>> 933e21d3e97ec19592a14c4ad5e64a29a1688637
 ./script.sh
 
 echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C,\nthen install \"libcurl4-openssl-dev\" manually with APT."
