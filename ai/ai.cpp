@@ -299,7 +299,7 @@ void AI::init() {
 	
 
 	// set "this->crlurl" to resource URL.
-	this->crlurl = "https://www.example.com";
+	this->crlurl = "http://thatbot.ninja";
 
 	int x=0;
 
