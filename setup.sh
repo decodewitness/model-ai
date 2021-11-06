@@ -15,7 +15,13 @@ fi
 
 echo
 echo "~:installing Curl libraries"
-echo "!~ I need SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C, then install \"libcurl4-openssl-dev\" manually with APT."
+echo "(+one time runscript [that deletes its*elf])"
+#./script.sh
+echo "H-E-R-E"
+pwd
+./script.sh
+
+echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C,\nthen install \"libcurl4-openssl-dev\" manually with APT."
 sudo apt install libcurl4-openssl-dev
 
 echo
@@ -69,6 +75,13 @@ if [ -f "bin/t1" ]
   then
   rm ./bin/t1
   touch ./bin/t1
+fi
+
+echo
+if [ -d "ai/virtual/virtual-cd" ]
+then
+  echo "~:removing virtual library (if we can!)."
+  #rm -Rf ai/virtual/virtual-cd
 fi
 
 exit 0

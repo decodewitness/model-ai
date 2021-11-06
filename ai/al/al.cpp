@@ -178,7 +178,7 @@ return 1;
 // ARTIFICIAL LIFE FUNCTIONS
 
 HAL::HAL() {
-	std::cout << std::endl << "-:: starting evolving mechanic life in artifical habits." << std::endl;
+	std::cout << std::endl << "-:: starting evolving mechanic life in artificial life habits." << std::endl;
 	
 	// first throttle c with 'c' here
 	this->c = 'c';
