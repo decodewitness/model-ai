@@ -1,5 +1,4 @@
 // MAIN.CPP - YOUR MAIN FILE CARRYING THE MAIN FUNCTION FOR YOUR AI MODEL
-// MAIN FIlE FOR HEADER.H
 
 // including all headers
 #include "header.h"
@@ -50,7 +49,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	// curl attempt site "curled_url" [std::string]
-	ai.curl("https://thatbot.ninja");
+	ai.curl(ai.curl_url());
 	
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();

@@ -1,0 +1,17 @@
+this->modules[0]  = "md5/md5.cpp";
+this->modules[1]  = "system/chk.h";
+this->modules[2]  = "../al/al.cpp";
+this->modules[3]  = "../al/header.h";
+this->modules[4]  = "system/splash.h";
+this->modules[5]  = "system/gradle.h";
+this->modules[6]  = "logic/learn.cpp";
+this->modules[7]  = "drums/drums.cpp";
+this->modules[8]  = "logic/limits.cpp";
+this->modules[9]  = "entropy/header.h";
+this->modules[10]  = "speech/saying.cpp";
+this->modules[11]  = "system/modules.cpp";
+this->modules[12] = "logic/interpret.cpp";
+this->modules[13] = "system/protocol.cpp";
+this->modules[14] = "sampler/sampler.cpp";
+this->modules[15] = "logic/algorithms.cpp";
+this->modules[16] = "language/concepts.cpp";
