@@ -34,10 +34,11 @@
 #include "sampler/sampler.cpp"
 #include "logic/algorithms.cpp"
 #include "language/concepts.cpp"
+#include "system/modules/modular.cpp"
 #include "language/speech/saying.cpp"
 #include "logic/assembly/input.cpp"
 
-const int number_of_modules = 19;	// equal to the number of include headers (above in this file)
+const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)
 const int SAMPLER_THREADS = 8;
 
 class AI {
@@ -53,7 +54,7 @@ private:
 	bool access;
 
 	Sampler *sampler;
-	std::string modules[number_of_modules];	// these are all files and used to construct the virtual domain
+	std::string number_modules[nr_modules];	// thesr_oe are all files and used to construct the virtual domain
 
 	std::string crlurl;
 

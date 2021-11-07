@@ -171,149 +171,221 @@ ENTER PASSCODE:
 -:: extending behaviour module
 	 -:: loading virtual instance
 
+executing "virtual.sh"
+done.
+::- query in sample.
+--? :: 
 
-~:removing and recreating "ai/virtual/virtual-cd/".
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ computation:  ]
+-:: finished computation.
+
+-:: aborts runtime! and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled .
+-:: destructor artificial life routine was called. -:: killing abstraction layer.
+-:: hashing function.
+	-:: hashing ("my string")
+	-:: hash: 2ba81a47c5512d9e23c435c1f29373cb
+
+-:: checking health criteria
+	-:: health monitoring. (10) criteria.
+	-:: 1. one:	true
+	-:: 2. two:	true
+	-:: 3. three:	true
+	-:: 4. four:	true
+	-:: 5. five:	false
+	-:: 6. six:	true
+	-:: 7. seven:	false
+	-:: 8. eight:	true
+	-:: 9. nine:	true
+	-:: 10. ten:	true
+
+-:: check integrity / logical step counter.
+	-:: step:3 -:: complete. (100%)
+	-:: step:2 -:: complete. (100%)
+	-:: step:1 -:: complete. (100%)
+	-:: step:0 -:: complete. (100%)
+	-:: steps completed: 4
+
+-:: starting AI.
+	-:: sampler: 8 threads.
+	-:: starting sampler.
+		-:: set 8 threads.
+	::--entropy--::
+
+	-:: sampler set to recording.
+
+-:: feeding entropy
+-:: tap the ltctap.
+
+
+-::: sampler thread ::#9:: :::-
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#8:: :::-
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#7:: :::-
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#6:: :::-
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#5:: :::-
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#4:: :::-
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#3:: :::-
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#2:: :::-
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#1:: :::-
+	-:: -:: psht -:: <tap>
+********* CURLING **********
+
+
+<<<<<<<<<<<<<<<<<<<<<<<
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>THATBOT.NINJA |Minecraft Server</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Mono&family=Scheherazade+New&display=swap" rel="stylesheet">
+
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+
+  <p class="navbar whitebg">
+    <a href="/">Home</a> <a href="/instructions">Instructions</a> <a href="/screenshots">Screenshots</a>
+  </p>
+
+
+<div class="App">
+      <h1 class="bluebg">| <span class="orangered">Minecraft Server</span> | <span class="blue">'ThatBot.Ninja'</span></h1>
+      <h2 class="graybg">|  <span class="orange">Better Pack your Lunch Before Your Friends</span> | <span class="yellowtextonly">Find Out!</span></h2>
+      <hr />
+      <div class="container">
+        <span class="box"><h1 class="yellow inline padded">PLAY MINECRAFT ON OUR SERVERS</h1></span>
+      </div>
+      <img class="padded" src="./img/pickaxe.png" height="125" width="125" />
+      <p>
+        <strong class="fontsize">While your friends are all out having fun, you have the awesome option to play <span class="blue font-size">Minecraft</span>.
+        <br />
+        Have fun so you don't have to worry about your friends.</strong>
+        <br />
+      </p>
+      <hr />
+      <h3 class="yellow inline">Do You  Want To Play?</h3>
+      <br />
+
+      <a class="btn btn-warning btn-lg padbutton" href="/instructions">Click Here!</a>
+
+      <p class="padbottom marged">
+        Join our Discord Server <strong>@</strong> <a href="https://discord.gg/HR9jCRgQ" alt="Join Our Discord Server">Join our Discord</a>
+      </p>
+      <p>
+        ❤️❤️❤️
+        <br />
+        <strong class="blue fontsize">Make friends online</strong>
+      </p>
+      <p>
+        However life goes, it doesn't matter if you have friends because you should be best friends with yourself,
+        <br />
+        to keep yourself entertained.
+        <br />
+        As long as you can do that then you can choose anybody to hang with.
+      </p>
+      <p>
+        <strong>Join our servers</strong> and find new friends, or invite your friends online.
+      </p>
+      <hr />
+      <p>
+        ❤️❤️❤️
+        <br />
+        <strong class="blue fontsize">All you need is the server address and to read the instructions page</strong>
+      </p>
+      <p>
+        <a class="red" href="/instructions">Read the Instructions on how to Connect to our Server</a>
+      </p>
+      <hr />
+      <div class="orangebg padded">
+      </div>
+      <p class="goldbg nomargin padded">
+        <strong>You can use</strong> <em><span class="blue fontsize padded">"thatbot.ninja:25555"</span></em> <strong>in the <strong>server IP field</strong> when you add a server
+        <br />
+        in <strong>Multi-Player</strong> when you <strong>Add a Server</strong> in your game in <span class="blue fontsize"><em>Minecraft</em></span>.</strong>
+      </p>
+      <div class="graybg padded">
+        <iframe src="https://giphy.com/embed/WtDaSUB8GDiRW" width="357" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/minecraft-WtDaSUB8GDiRW">via GIPHY</a></p>
+      </div>
+      <div class="yellow">
+        <strong>Do you have what it takes to battle</strong> your surroundings and <strong>keep an eye out with other players</strong>!
+        <br />
+
+        Make <strong>powerfull alliances</strong> and trade in your goods for more comfort <strong>to win together</strong>.
+        <br />
+        This <strong>epic game of Minecraft</strong> you can't afford to not play on our <strong>Minecraft servers</strong>!
+      </div>
+      <h2 class="whitebg">Put "<span class="blue">thatbot.ninja:25555</span>" in the "<span class="orange">Add Server</span>" box in "<span class="orangered">Minecraft (Java Edition)</span>" and connect.</h2>
+      If you get server is hibernating connect to it, so that it will start, then wait 60 seconds for it to come online and you can join.
+      <div class="alert alert-warning" role="alert">
+        Bring Fun Into Your World With Minecraft! ⭐ <a href="https://www.minecraft.net" alt="Minecraft website" target="_blank">Minecraft Developer's Website</a> ⭐
+      </div>
+      <img class="roundedcorners" src="./img/Minecraft.jpg" width="600" height="400" />
+      <br />
+      <img class="padded" src="./img/pickaxe2.png" height="125" width="125" />
+      <p class="yellow">Join Our <strong>&lt;Mailing List&gt;</strong> for Offers and Promotions!</p>
+      <footer>
+        <p>
+          <sub>Icons made by <a href="https://www.flaticon.com/authors/aldo-cervantes" title="Aldo Cervantes">Aldo Cervantes</a> &amp; <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></sub>
+        </p>
+        <br />
+        Copyright(&copy;)(2021) All Rights Are Reserved.
+      </footer>
+    </div>
+
+
+</body>
+</html>
+
+
+<<<<<<<<<<<<<<<<<<<<<<<
+x:0
+
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+
+
+::=> saving grace (routine) and closing libraries <::
+-:: closing files.
+-:: cleaning memory.
+-:: done.
 ~:done.
 
-~:creating "virtual-cd" directory in "./ai/virtual/".
-
-
-~:extracting the ai model to "ai/virtual/virtual-cd/model-ai".
-
-model-ai/ai/al/mem/disk.h
-model-ai/ai/al/mem/forest.cpp
-model-ai/ai/al/mem/forest.h
-model-ai/ai/al/mem/leaf.cpp
-model-ai/ai/al/mem/leaf.h
-model-ai/ai/al/mem/tree.cpp
-model-ai/ai/al/mem/tree.h
-model-ai/ai/database/data/data
-model-ai/ai/entropy/environment/t1lt
-model-ai/ai/entropy/fingerprint/1tlt1tl
-model-ai/ai/entropy/fingerprint/CUBE
-model-ai/ai/language/concept/custom.cpp
-model-ai/ai/language/concept/dictionary.cpp
-model-ai/ai/language/speech/saying.cpp
-model-ai/ai/logic/ascii/asterisktab.h
-model-ai/ai/logic/assembly/command.h
-model-ai/ai/logic/assembly/input.cpp
-model-ai/ai/logic/assembly/input.h
-model-ai/ai/logic/assembly/logic.cpp
-model-ai/ai/logic/assembly/logic.h
-model-ai/ai/logic/transponder/transponder.cpp
-model-ai/ai/system/definitions/internet.h
-model-ai/ai/system/definitions/slang.h
-model-ai/ai/system/definitions/technical.h
-model-ai/ai/virtual/AI/ai0.cpp.tar.gz
-model-ai/ai/virtual/AI/script.sh.tar.gz
-model-ai/ai/virtual/AI/appliance.tar.gz
-model-ai/ai/virtual/apatching/repos.sh
-model-ai/ai/virtual/apatching/setup.sh.bak
-model-ai/ai/al/al.cpp
-model-ai/ai/al/al.h
-model-ai/ai/al/header.h
-model-ai/ai/al/splash-al.h
-model-ai/ai/database/db.cpp
-model-ai/ai/database/db.h
-model-ai/ai/entropy/entropy.cpp
-model-ai/ai/entropy/header.h
-model-ai/ai/entropy/ltctapttclt.cpp
-model-ai/ai/entropy/tmp.txt
-model-ai/ai/language/concepts.cpp
-model-ai/ai/logic/algorithms.cpp
-model-ai/ai/logic/interpret.cpp
-model-ai/ai/logic/interpret.h
-model-ai/ai/logic/learn.cpp
-model-ai/ai/logic/learn.h
-model-ai/ai/logic/limits.cpp
-model-ai/ai/logic/routines.cpp
-model-ai/ai/system/AMModule.cpp
-model-ai/ai/system/AMModule.h
-model-ai/ai/system/chk.h
-model-ai/ai/system/gradle.h
-model-ai/ai/system/protocol.cpp
-model-ai/ai/system/splash.h
-model-ai/ai/virtual/virtual.sh
-model-ai/ai/virtual/virtual.sh.1
-model-ai/ai/virtual/virtual.sh.old
-model-ai/ai/virtual/script.sh.tar.gz
-model-ai/ai/drums/drums.cpp
-model-ai/ai/drums/drums.h
-model-ai/ai/fetch/curl.cpp
-model-ai/ai/fetch/fetch.h
-model-ai/ai/md5/md5.cpp
-model-ai/ai/md5/md5.h
-model-ai/ai/sampler/sampler.cpp
-model-ai/ai/ai.cpp
-model-ai/ai/ai.h
-model-ai/ai/header.h
-model-ai/ai/modules.txt
-model-ai/ai/security.cpp
-model-ai/bin/runtime
-model-ai/bin/t1
-model-ai/bin/tl
-model-ai/bin/perl.pl
-model-ai/cfg/cfg.h
-model-ai/cfg/definitions.h
-model-ai/cfg/log.h
-model-ai/libs/curl.tar.gz
-model-ai/log/output-03_45AM-25-08-2021
-model-ai/log/output-09_35PM-21-08-2021.txt
-model-ai/log/output-6_57PM-24-8-2021.txt
-model-ai/.gitignore
-model-ai/1tlt1tl
-model-ai/header.h
-model-ai/main.cpp
-model-ai/README.md
-model-ai/script.sh
-model-ai/setup.sh
-model-ai/t1
-model-ai/t1lt
-model-ai/test.sh
-model-ai/VERSION.md
-model-ai/zero
-model-ai/ai/virtual/AI/model-ai/
-model-ai/ai/al/mem/
-model-ai/ai/database/data/
-model-ai/ai/entropy/environment/
-model-ai/ai/entropy/fingerprint/
-model-ai/ai/language/concept/
-model-ai/ai/language/speech/
-model-ai/ai/language/jquery/
-model-ai/ai/logic/ascii/
-model-ai/ai/logic/assembly/
-model-ai/ai/logic/transponder/
-model-ai/ai/system/definitions/
-model-ai/ai/virtual/AI/
-model-ai/ai/virtual/apatching/
-model-ai/ai/al/
-model-ai/ai/database/
-model-ai/ai/entropy/
-model-ai/ai/language/
-model-ai/ai/logic/
-model-ai/ai/system/
-model-ai/ai/virtual/
-model-ai/ai/drums/
-model-ai/ai/fetch/
-model-ai/ai/md5/
-model-ai/ai/sampler/
-model-ai/ai/
-model-ai/bin/
-model-ai/cfg/
-model-ai/libs/
-model-ai/log/
-model-ai/
-~:removing old source instance: "./ai/virtual/virtual-cd/ai/ai.cpp".
-
-
-~:compiling virtual instance of AI.
-~:done.
-
-~:starting AI virtual instance (N)
-
-
--:: enabled logging.
- ** ][][ **
-
-~:: security routine
-ENTER PASSCODE: 
