@@ -62,6 +62,11 @@ ENTER PASSCODE:
 -:: initialization.
 -:: checking arguments.
 	0: arguments.
+	-:: opening file streams.
+	-:: drum machine
+'::: DRUMS :::'
+-:: cycle 1: 4
+-:: cycle 2: 2
 
 ::- loading gradle -::
 ~:: checking for gradle modules.
@@ -1868,11 +1873,6 @@ ENTER PASSCODE:
 	-:: no &(such) implementation.
 		~:: ((0))::(no module)::implementation.
 	-:: gradle method finished. (1)
-	-:: opening file streams.
-	-:: drum machine
-'::: DRUMS :::'
--:: cycle 1: 4
--:: cycle 2: 2
 
 -:: setting headers
 -:: checking arguments.
@@ -2131,6 +2131,8 @@ x:0
 -:: cleaning memory.
 -:: done.
 ~:done.
+
+
 
 
 

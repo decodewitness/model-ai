@@ -303,12 +303,6 @@ void AI::init() {
 
 	int x=0;
 
-	// gradle to help build cradle
-	x=gradle();
-		
-	std::cout << "\t-:: gradle method finished. (";
-	std::cout << x << ")" << std::endl;
-
 	// file streams
 	std::cout << "\t-:: opening file streams." << std::endl;
 	// open file streams for tl
@@ -319,6 +313,11 @@ void AI::init() {
 	// drum machine drum machine
 	std::cout << "\t-:: drum machine" << std::endl;
 	DrumMachine();
+
+	// gradle to help build cradle
+	x=gradle();
+	std::cout << "\t-:: gradle method finished. (";
+	std::cout << x << ")" << std::endl;
 }
 
 void AI::appliance() {
