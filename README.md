@@ -18,6 +18,11 @@ Latest branch in Artificial Intelligence (A.I) software. Version (v.0.0-21a) (07
 
     
 
+
+
+
+
+
 ~:checking for GCC compiler.
 -/- found GCC compiler
 
@@ -3031,8 +3036,12 @@ x:0
 ::=> saving grace (routine) and closing libraries <=::
 -:: closing files.
 -:: cleaning memory.
+
+-:: calling destructor for AI::Model.
 -:: done.
 ~:done.
+
+
 
 
 
