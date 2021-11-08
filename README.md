@@ -24,7 +24,7 @@ Latest branch in Artificial Intelligence (A.I) software. Version (v.0.0-21a) (07
 ~:installing Curl libraries
 (+one time runscript [that deletes its*elf])
 H-E-R-E
---  - PERL INTERVAL OR PARSING --!~ I need your SUDO to install "libcurl4-openssl-dev", else press CTRL + C,\nthen install "libcurl4-openssl-dev" manually with APT.
+--  - PERL INTERVAL OR PARSING --!~ I need your SUDO to install "libcurl4-openssl-dev", else press CTRL + C, and then install "libcurl4-openssl-dev" manually with APT.
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -604,6 +604,8 @@ x:0
 -:: cleaning memory.
 -:: done.
 ~:done.
+
+
 
 
 

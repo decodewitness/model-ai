@@ -23,7 +23,7 @@ echo "H-E-R-E"
 
 ./script.sh
 
-echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C,\nthen install \"libcurl4-openssl-dev\" manually with APT."
+echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C, and then install \"libcurl4-openssl-dev\" manually with APT."
 sudo apt install libcurl4-openssl-dev
 
 echo
