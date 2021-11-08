@@ -9,7 +9,7 @@ int gradle() {
 	std::cout << "::- loading gradle -::" << std::endl;
 
 	int PVAR=25; // total number of modules
-	int MVAR=5;		// number of different modules (or) modules (5) + spc (2) (or) modules + spc + (aux) (25)
+	int MVAR=25;		// number of different modules (or) modules (5) + spc (2) (or) modules + spc + (aux) (25)
 
 	// component to edit/sample with and limit to n components
 	int component = 0;
@@ -48,15 +48,15 @@ bool check_gradle_components(int comp=1) { // check functioning of gradle
 			break;
 		case 2:	// methods
 			std::cout << "\t-:: checking gradle module 02." << std::endl; // hook up to methods 										(Fx)
-			break;
 			std::cout << "\t\t~:: (02)::(FX)+module)::implementation." << std::endl;
+			break;
 		case 3:	// routines
 			std::cout << "\t-:: checking gradle module 03." << std::endl; // routes / routines											(Rt)
 			std::cout << "\t\t~:: (03)::(RT)+module)::implementation." << std::endl;
 			break;
 		case 4: // catalogue
 			std::cout << "\t-:: checking gradle module 04." << std::endl; // catalogue / database										(CdB)
-			std::cout << "\t\t~:: (04)::(CBD)+module)::implementation." << std::endl;
+			std::cout << "\t\t~:: (04)::(CDB)+module)::implementation." << std::endl;
 			break;
 		case 5:	// recognition
 			std::cout << "\t-:: checking gradle module 05." << std::endl; // pattern recognition / analytics							(Rec)

@@ -18,6 +18,8 @@ Latest branch in Artificial Intelligence (A.I) software. Version (v.0.0-21a) (07
 
     
 
+
+
 ~:checking for GCC compiler.
 -/- found GCC compiler
 
@@ -67,276 +69,1801 @@ ENTER PASSCODE:
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 01.
 		~:: (01)::(EN)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 03.
 		~:: (03)::(RT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: checking gradle module 04.
-		~:: (04)::(CBD)+module)::implementation.
+		~:: (04)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+~:: checking for gradle modules.
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
 ~:: checking for gradle modules.
 	-:: no &(such) implementation.
 		~:: ((0))::(no module)::implementation.
@@ -604,7 +2131,6 @@ x:0
 -:: cleaning memory.
 -:: done.
 ~:done.
-
 
 
 
