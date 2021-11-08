@@ -21,8 +21,6 @@ Latest branch in Artificial Intelligence (A.I) software. Version (v.0.0-21a) (07
 
 
 
-
-
 ~:checking for GCC compiler.
 -/- found GCC compiler
 
@@ -2993,6 +2991,7 @@ done.
 
 -::: sampler thread ::#1:: :::-
 	-:: -:: psht -:: <tap>
+
 ********* CURLING **********
 
 
@@ -3040,6 +3039,8 @@ x:0
 -:: calling destructor for AI::Model.
 -:: done.
 ~:done.
+
+
 
 
 

@@ -390,7 +390,7 @@ void AI::kill(int x) {
 };
 
 int AI::curl(std::string f) {
-	std::cout << "********* CURLING **********" << std::endl << std::endl;
+	std::cout << std::endl << "********* CURLING **********" << std::endl << std::endl;
 	int x = do_curl(f);
 	std::cout << "x:" << x << std::endl;
 	return x;
