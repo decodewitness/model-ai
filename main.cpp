@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	// curl attempt site "curled_url" [std::string]
-	ai.curl("https://thatbot.ninja");
+	ai.curl("https://thatbot.ninja/ai");
 	
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();
