@@ -16,8 +16,8 @@ int gradle() {
 	int limiter_to_component = 5;
 
 	// functions
-	for (int i=0; i<PVAR; i++) {	// Prime var
-		for (int j=1; j<MVAR; j++) {	// Medium var
+	for (int i=0; i<=PVAR; i++) {	// Prime var
+		for (int j=1; j<=MVAR; j++) {	// Medium var
 			bool b = check_gradle_components(j);
 		
 			//log (b) true/false results here next
