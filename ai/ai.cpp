@@ -334,6 +334,10 @@ void AI::decouple() {
 	this->saygrace();
 }
 
+void AI::destroy_msg() {
+	std::cout << std::endl << "-:: calling destructor for AI::Model." << std::endl;
+}
+
 void AI::saygrace() {
 	std::cout  << std::endl << std::endl << "::=> saving grace (routine) and closing libraries <=::" << std::endl;
 		
@@ -348,7 +352,10 @@ void AI::saygrace() {
 
 	// clean up sampler allocated memory
 	std::cout << "-:: cleaning memory." << std::endl;
+
 	delete this->sampler;
+
+	this->destroy_msg();
 
 	// final AI message
 	std::cout << "-:: done." << std::endl;
@@ -400,4 +407,21 @@ int AI::links(std::string url, int max) {
 void AI::enforce_security() {
 	bool ack = security_prompt();
 	this->access = ack;
+};
+
+void AI::mod() {
+	this->mdl = new Modular;
+
+	this->mdl->query();
+	this->mdl->set_data("unicorn =1=");
+	this->mdl->set_datas(0, "unicorns =2=");
+	this->mdl->set_datas(2, "unicorn =3=");
+	this->mdl->set_datas(0, "unicorn =1=");
+	this->mdl->set_data("unicorn =4=");
+
+	this->mdl->get_index();
+
+	this->mdl->polldata();
+
+	delete this->mdl;
 };

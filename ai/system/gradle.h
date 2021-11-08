@@ -17,10 +17,15 @@ int gradle() {
 
 	// functions
 	for (int i=0; i<=PVAR; i++) {	// Prime var
-		for (int j=1; j<=MVAR; j++) {	// Medium var
+		for (int j=0; j<=MVAR; j++) {	// Medium var
 			bool b = check_gradle_components(j);
 		
 			//log (b) true/false results here next
+			if (b != true) {
+				std::cout << "\t(no module was available.)" << std::endl;
+			} else {
+				std::cout << "\t(module was found.)" << std::endl;
+			}
 		}
 	}
 		
@@ -33,14 +38,18 @@ return 1;
 };
 
 bool check_gradle_components(int comp=1) { // check functioning of gradle
+	
+	bool checks = true;
 
 	std::cout << "~:: checking for gradle modules." << std::endl;
-	
+
 	switch (comp) {	// These will switch modules (for swapping in / swapping out) +/-(modules)
 												// (language)(methods)(routes)(coll./database)(record) (SPC)(SPC)
 		case 0: // no implementation
 			std::cout << "\t-:: no &(such) implementation." << std::endl;
 			std::cout << "\t\t~:: ((0))::(no module)::implementation." << std::endl;
+
+			checks = false;
 			break;
 		case 1:	// speech
 			std::cout << "\t-:: checking gradle module 01." << std::endl; // 	// needs to be wired to natural language processing		(En)
@@ -148,10 +157,12 @@ bool check_gradle_components(int comp=1) { // check functioning of gradle
 		default:
 			std::cout << "\t! -:: no such component is registered." << std::endl;
 			std::cout << "\t\t(((__NIL)))" << std::endl;
+
+			checks = false;
 			break;
 	};
 	
-	return true;
+	return checks;
 };
 
 // eof

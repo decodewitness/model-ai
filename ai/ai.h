@@ -59,10 +59,13 @@ private:
 
 	std::string crlurl;
 
+	Modular *mdl;
+
 public:
 
 	AI(int n=1);
 
+	void init();
 	void enforce_security();
 	
 	void openfs();
@@ -85,16 +88,17 @@ public:
 	void sample();
 
 	void headers();
-	void init();
 
 	void appliance();
 	
 	void decouple();
+	void destroy_msg();
 	void saygrace();
 
 	void AMMod();
 	void query();
 
+	void mod();
 
 	std::string curl_url() {
 		return this->crlurl;
