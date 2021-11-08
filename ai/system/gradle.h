@@ -1,28 +1,40 @@
 // GRADLE.H - MAIN GRADLE FILE WILL GLUE ALL FUNCTIONS AND CLASSES - USED BY "AI/AI.H"
-
 #include <iostream>
-
 
 int gradle() {
 
-	std::cout << "::- loading gradle -::" << std::endl << std::endl;
+	bool check_gradle_components(int comp);
+
+	std::cout << std::endl;
+	std::cout << "::- loading gradle -::" << std::endl;
+
+	int PVAR=25; // total number of modules
+	int MVAR=5;		// number of different modules (or) modules (5) + spc (2) (or) modules + spc + (aux) (25)
+
+	// component to edit/sample with and limit to n components
+	int component = 0;
+	int limiter_to_component = 5;
 
 	// functions
-	bool check_gradle_components(int comp);
-	
-	// component to start with and limit of components
-	int component = 1;
-	int limiter = 5;
-	
+	for (int i=0; i<PVAR; i++) {	// Prime var
+		for (int j=1; j<MVAR; j++) {	// Medium var
+			bool b = check_gradle_components(j);
+		
+			//log (b) true/false results here next
+		}
+	}
+		
 	// actually check the gradle functioning inside the next function
-	check_gradle_components(component);
+	// sample 1 module:
+	//---------------------- uncomment next line --------------------------------
+	bool b = check_gradle_components(component);
 	
 return 1;
 };
 
 bool check_gradle_components(int comp=1) { // check functioning of gradle
 
-	std::cout << "\t-:: checking for gradle modules." << std::endl;
+	std::cout << "~:: checking for gradle modules." << std::endl;
 	
 	switch (comp) {	// These will switch modules (for swapping in / swapping out) +/-(modules)
 												// (language)(methods)(routes)(coll./database)(record) (SPC)(SPC)
@@ -52,11 +64,11 @@ bool check_gradle_components(int comp=1) { // check functioning of gradle
 			break;
 		case 6: 	// SPECIAL (A)()
 			std::cout << "\t-:: checking gradle module 06." << std::endl;	// SPECIAL(A)												(SPCA) LFT
-			std::cout << "\t\t~:: (BMOD)::(SPC)(A)(LFT+module)::implementation." << std::endl;
+			std::cout << "\t\t~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation." << std::endl;
 			break;
 		case 7:		// SPECIAL (B)()
 			std::cout << "\t-:: checking gradle module 07." << std::endl;	// SPECIAL(B)												(SPCB) RGHT
-			std::cout << "\t\t~:: (BMOD)::(SPC)(B)(RGHT+module)::implementation." << std::endl;
+			std::cout << "\t\t~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation." << std::endl;
 			break;
 		case 8:	// speech
 			std::cout << "\t-:: checking gradle module 08." << std::endl;
@@ -66,7 +78,6 @@ bool check_gradle_components(int comp=1) { // check functioning of gradle
 			std::cout << "\t-:: checking gradle module 09." << std::endl;
 			std::cout << "\t\t~:: (OUT)(2-2)::(EN)+module)::implementation." << std::endl;
 			break;
-
 		case 10: // routines
 			std::cout << "\t-:: checking gradle module 10." << std::endl;
 			std::cout << "\t\t~:: (OUT)(3-3)::(FX)+module)::implementation." << std::endl;
@@ -75,7 +86,6 @@ bool check_gradle_components(int comp=1) { // check functioning of gradle
 			std::cout << "\t-:: checking gradle module 11." << std::endl;
 			std::cout << "\t\t~:: (OUT)(4-4)::(FX)+module)::implementation." << std::endl;
 			break;
-
 		case 12: // recognition
 			std::cout << "\t-:: checking gradle module 12." << std::endl;
 			std::cout << "\t\t~:: (IN)(5-5)::(RT)+module)::implementation." << std::endl;
@@ -111,28 +121,30 @@ bool check_gradle_components(int comp=1) { // check functioning of gradle
 			std::cout << "\t-:: checking gradle module 19." << std::endl;
 			std::cout << "\t\t~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation." << std::endl;
 			break;
-
-		case 21:	// recognition
+		case 20:	// recognition
 			std::cout << "\t-:: checking gradle module 20." << std::endl;
+			std::cout << "\t\t~:: (IN)(aux)(III)::(FX_INT)+module)::implementation." << std::endl;
+			break;
+		case 21:	// recognition
+			std::cout << "\t-:: checking gradle module 21." << std::endl;
 			std::cout << "\t\t~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation." << std::endl;
 			break;
 		case 22:	// recognition
-			std::cout << "\t-:: checking gradle module 20." << std::endl;
+			std::cout << "\t-:: checking gradle module 22." << std::endl;
 			std::cout << "\t\t~:: (IN)(aux)(V)::(RT_O)+module)::implementation." << std::endl;
 			break;
 		case 23:	// recognition
-			std::cout << "\t-:: checking gradle module 20." << std::endl;
+			std::cout << "\t-:: checking gradle module 23." << std::endl;
 			std::cout << "\t\t~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation." << std::endl;
 			break;
 		case 24:	// recognition
-			std::cout << "\t-:: checking gradle module 20." << std::endl;
-			std::cout << "\t\t~:: (OUT/IN)(aux)(_B_)::(REC_OPT)+module)::implementation." << std::endl;
+			std::cout << "\t-:: checking gradle module 24." << std::endl;
+			std::cout << "\t\t~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation." << std::endl;
 			break;
 		case 25:	// recognition
-			std::cout << "\t-:: checking gradle module 20." << std::endl;
-			std::cout << "\t\t~:: (IN/OUT)(aux)(__A1_B2)::(_(XL)c_)+module)::implementation." << std::endl;
+			std::cout << "\t-:: checking gradle module 25." << std::endl;
+			std::cout << "\t\t~:: (OUT/IN)(aux)(__A1_B2)::((XL)_:c)+module)::implementation." << std::endl;
 			break;
-				
 		default:
 			std::cout << "\t! -:: no such component is registered." << std::endl;
 			std::cout << "\t\t(((__NIL)))" << std::endl;
