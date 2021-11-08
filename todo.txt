@@ -1,4 +1,0 @@
-password
-encryption
-file fetching
-browser
