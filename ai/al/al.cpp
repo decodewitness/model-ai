@@ -38,7 +38,7 @@ void AL::life() {	// artificial habits
 
 void AL::modifies_behaviour() {
 	std::cout << std::endl;
-	std::cout << "-:: extending behaviour module" << std::endl;
+	std::cout << std::endl << "-:: extending behaviour module" << std::endl;
 
 	// extend behaviour
 }
