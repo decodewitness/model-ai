@@ -62,6 +62,7 @@ if [ -f "./bin/runtime" ]
     chmod u+r ./bin/runtime
     chmod u+x ./bin/runtime
     ./bin/runtime
+    echo
     echo "~:done."
   else
     echo
