@@ -2,6 +2,8 @@
 #include "interpret.h"
 
 // interprets
+std::string sos; // start of sentence
+std::string eos; // end of sentence
 std::string language_construct;
 
 // temporary containers
@@ -11,4 +13,9 @@ std::string tempB;
 // result container
 std::string result;
 
-// eof
+// grammar rules
+std::string subject;
+std::string nouns;
+std::string pronouns;
+std::string adjective;
+std::string numerical;

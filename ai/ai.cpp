@@ -336,7 +336,7 @@ void AI::decouple() {
 }
 
 void AI::saygrace() {
-	std::cout  << std::endl << std::endl << "::=> saving grace (routine) and closing libraries <::" << std::endl;
+	std::cout  << std::endl << std::endl << "::=> saving grace (routine) and closing libraries <=::" << std::endl;
 		
 	this->nr = 0;
 	this->ch = '0';
@@ -387,6 +387,14 @@ int AI::curl(std::string f) {
 	std::cout << "********* CURLING **********" << std::endl << std::endl;
 	int x = do_curl(f);
 	std::cout << "x:" << x << std::endl;
+	return x;
+};
+
+int AI::links(std::string url, int max) {
+	std::cout << "********* FETCHING LINKS (max: " << max << ") **********" << std::endl << std::endl;
+	
+	int x = fetch_link(url, max);
+
 	return x;
 };
 

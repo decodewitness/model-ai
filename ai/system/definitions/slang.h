@@ -9,6 +9,9 @@ std::string image[16] = { "image", "photo", "photograph", "picture", "shot" };
 // url
 std::string url[16] = { "url", "link", "hyperlink", "hyper-link" };
 
+// internet protocol and port numbers
+std::string wwwdata[16] = {"http://", "https://", "http://www.", "https://www.", "port 80", "port:80", "port 443", "port:443" };
+
 // computer
 std::string computer[16] = { "ip", "mac", "mac address", "proxy", "server" };
 

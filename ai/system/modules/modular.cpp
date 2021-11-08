@@ -1,11 +1,13 @@
+// /AI/SYSTEM/MODULES/MODULAR.CPP - USED BY "/AI/AI.H"
+// DEFINES THE MODULAR CLASS FOR CREATING VARIOUS MODULES OR ENTITIES.
+
 #include <string>
 #include <iostream>
 
 const int limit = 64;
 
 class Modular {
-private:
-    
+private:    
     int data_in_module;
     
     std::string module_name;
@@ -29,7 +31,6 @@ Modular::Modular(std::string n, std::string t) {
 };
 
 void Modular::set_data(std::string dat) {
-    
     if (this->data_in_module < limit) {
         this->module_data[data_in_module] = dat;
         this->data_in_module++;

@@ -34,9 +34,10 @@
 #include "sampler/sampler.cpp"
 #include "logic/algorithms.cpp"
 #include "language/concepts.cpp"
+#include "logic/assembly/input.cpp"
 #include "system/modules/modular.cpp"
 #include "language/speech/saying.cpp"
-#include "logic/assembly/input.cpp"
+#include "logic/transponder/transponder.cpp"
 
 const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)
 const int SAMPLER_THREADS = 8;
@@ -99,7 +100,9 @@ public:
 		return this->crlurl;
 	}
 
+	// curl and fetch links
 	int curl(std::string f);
+	int links(std::string url, int max);
 
 	// killchain
 	void kill(int x);

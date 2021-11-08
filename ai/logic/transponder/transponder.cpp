@@ -1,24 +1,27 @@
+// /AI/LOGIC/TRANSPONDER/TRANSPONDER.CPP - USED BY /AI/AI.H
+// USED FOR LANGUAGE INTERPRETATIONS.
+
 #include <iostream>
 #include <string>
 
 class Transponder {
-    private:
+private:
+    std::string initial_sentence;
 
-    protected:
-        std::string subject;
-        std::string answer;
+protected:
+    std::string subject;
+    std::string answer;
         
-    public:
-        Transponder(std::string s);
+public:
+    Transponder(std::string s);
 
-        std::string respond();
-        void analytics();
+    std::string respond();
+    void analytics();
 };
 
 Transponder::Transponder(std::string s) {
-    this->subject = s;
-    this->respond();
-}
+    this->initial_sentence = s;
+};
 
 std::string Transponder::respond() {
     std::cout << std::endl;
@@ -29,17 +32,13 @@ std::string Transponder::respond() {
 
     this->answer = "- message relayed.";
     return this->answer;
-}
+};
 
 void Transponder::analytics() {
-
-    unsigned countWords(char *str);
+    unsigned int countWords(char *str);
 
     int len = this->subject.length();
     int wordcount = 1;
 
-    std::string subject;
-    std::string nouns;
-    std::string adjective;
-    std::string numerical;
-}
+    this->respond();
+};
