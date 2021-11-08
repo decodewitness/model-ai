@@ -22,7 +22,7 @@
 #include "md5/md5.cpp"
 #include "system/chk.h"
 #include "security.cpp"
-#include "fetch/fetch.h"
+#include "fetch/curl.cpp"
 #include "system/splash.h"
 #include "system/gradle.h"
 #include "logic/learn.cpp"
