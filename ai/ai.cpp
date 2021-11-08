@@ -305,7 +305,7 @@ void AI::init() {
 
 	// gradle to help build cradle
 	x=gradle();
-
+		
 	std::cout << "\t-:: gradle method finished. (";
 	std::cout << x << ")" << std::endl;
 

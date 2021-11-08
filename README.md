@@ -18,7 +18,7 @@ Latest branch in Artificial Intelligence (A.I) software. Version (v.0.0-21a) (07
 
     
 
-~:checking for GCC compiler. -/- found GCC compiler
+~:checking for GCC compiler. -/- found GCC compilerai
 
 :installing Curl libraries (+one time runscript [that deletes its*elf]) H-E-R-E -- - PERL INTERVAL OR PARSING --! I need your SUDO to install "libcurl4-openssl-dev", else press CTRL + C,\nthen install "libcurl4-openssl-dev" manually with APT. Reading package lists... Building dependency tree... Reading state information... libcurl4-openssl-dev is already the newest version (7.74.0-1.3+b1). The following packages were automatically installed and are no longer required: libdap27 libdapclient6v5 libdav1d4 libepsilon1 libgdal28 libgeos-3.9.1 libgupnp-1.2-0 libidn11 libnetcdf18 libntfs-3g883 libomp-11-dev libomp5-11 libproj19 liburcu6 libx265-192 libyara4 python3-editor python3-exif python3-ipython-genutils python3-pylnk python3-stem Use 'sudo apt autoremove' to remove them. 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
