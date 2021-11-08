@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+#include "AMModule.h"
+
 const int limit = 64;
 
 class Modular {

@@ -2,7 +2,7 @@
 // MAIN FIlE FOR HEADER.H
 
 // including all headers
-#include "header.h"
+#include "main.h"
 
 // namespaces
 using namespace std;

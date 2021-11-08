@@ -13,10 +13,10 @@
 #include "logic/ascii/asterisktab.h"
 
 // hal
-#include "header.h"
+#include "al/al.cpp"
 
-// AMModule
-#include "system/AMModule.h"
+// configurations
+#include "cfg/config.h"
 
 // modules
 #include "md5/md5.cpp"
@@ -28,15 +28,15 @@
 #include "logic/learn.cpp"
 #include "drums/drums.cpp"
 #include "logic/limits.cpp"
-#include "entropy/header.h"
+#include "entropy/b3hiv3.h"
 #include "logic/interpret.cpp"
 #include "system/protocol.cpp"
 #include "sampler/sampler.cpp"
 #include "logic/algorithms.cpp"
 #include "language/concepts.cpp"
 #include "logic/assembly/input.cpp"
-#include "system/modules/modular.cpp"
 #include "language/speech/saying.cpp"
+#include "system/modules/modular.cpp"	// includes AMModule.h
 #include "logic/transponder/transponder.cpp"
 
 const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)

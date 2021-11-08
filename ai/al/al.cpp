@@ -1,6 +1,11 @@
-// (in sub-directory) "./AL/AL.CPP" - ARTIFICIAL LIFE PROGRAM FOR MODEL AI
+// (in sub-directory) "./AL/AL.CPP" - USED BY "/AI/AI.H" FOR ARTIFICIAL LIFE PROGRAM FOR MODEL AI
 
 #include "al.h"
+
+// HAL
+void start_hal() {
+    HAL hal;
+};
 
 // ARTIFICIAL LIFE CLASS FUNCTIONS
 

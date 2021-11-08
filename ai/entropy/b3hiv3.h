@@ -1,3 +1,5 @@
+// "/AI/ENTROPY/B3HIV3.H" :: USED BY "/AI/AI.H"
+
 //1tlt1tl
 //t1tl      (THE B3HIv3)
 //tl
@@ -32,7 +34,7 @@ int tl(char x) { std::cout << "ltct"; return 3;}
 void run() {
     entropyr();
     entropyw(main_extrapolation_data);
-    //std::cout << "\t-:: -:: psht -:: <tap>" << std::endl;
+    std::cout << "\t-:: -:: psht -:: <tap>" << std::endl;
 
     lt1tlt1(); t1tl(); tl();
     int x=0;

@@ -1,4 +1,4 @@
-// (in sub-directory) ".AL/AL.H" - ARTIFICIAL LIFE HEADER (USED IN AL/AL.CPP)
+// "/AI/AL/AL.H" - ARTIFICIAL LIFE HEADER - USED BY "AI/AL/AL.CPP"
 
 #include <iostream>
 #include "mem/disk.h"
