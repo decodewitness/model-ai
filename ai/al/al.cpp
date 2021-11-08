@@ -35,18 +35,20 @@ void AL::life() {	// artificial habits
 			counter++;
 		}
 		if (counter==30000 || counter==60000) { // runs 2 times
-			this->modifies_behaviour();
+			// do action to start extending behavior
 		}
 	}
+
+	this->modifies_behaviour();
 	//std::cout << std::endl << "-::: result :::-" << std::endl;
-}
+};
 
 void AL::modifies_behaviour() {
 	std::cout << std::endl;
-	std::cout << std::endl << "-:: extending behaviour module" << std::endl;
+	std::cout << std::endl << "-:: extending behavior module" << std::endl;
 
 	// extend behaviour
-}
+};
 
 int AL::live() {
 	populate();

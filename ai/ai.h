@@ -28,7 +28,7 @@
 #include "logic/learn.cpp"
 #include "drums/drums.cpp"
 #include "logic/limits.cpp"
-#include "entropy/b3hiv3.h"
+#include "entropy/b3hiv3.h"		// includes entropy.cpp && ltctapttclt.cpp
 #include "logic/interpret.cpp"
 #include "system/protocol.cpp"
 #include "sampler/sampler.cpp"
@@ -38,6 +38,7 @@
 #include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"	// includes AMModule.h
 #include "logic/transponder/transponder.cpp"
+
 
 const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)
 const int SAMPLER_THREADS = 8;

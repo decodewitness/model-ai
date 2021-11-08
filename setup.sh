@@ -17,7 +17,7 @@ fi
 echo
 echo "~:installing Curl libraries"
 echo "(+one time runscript [that deletes its*elf])"
-#./script.sh
+./ai/bin/script.sh
 echo "H-E-R-E"
 #pwd
 
@@ -33,23 +33,23 @@ echo "~:done."
 
 echo
 echo "~:checking for old runtime environment."
-if [ -f "bin/runtime" ]
+if [ -f "ai/bin/runtime" ]
 then
   echo "-/- removing old runtime."
-  rm -f bin/runtime
+  rm -f ai/bin/runtime
 else
   echo "-/- no old runtime found."
   echo "~: continuing"
 fi
 
 echo
-echo "~:moving (new) ai model to \"bin/runtime\"."
-mv a.out bin/runtime
-echo "~:program \"model\" (ai) is stored in the \"./bin/\" directory as \"./bin/runtime\"."
+echo "~:moving (new) ai model to \"ai/bin/runtime\"."
+mv a.out ai/bin/runtime
+echo "~:program \"model\" (ai) is stored in the \"./ai/bin/\" directory as \"./bin/runtime\"."
 
 sleep 1
 
-if [ -d "./bin" ] && [ -f "./bin/runtime" ]
+if [ -d "./ai/bin" ] && [ -f "./ai/bin/runtime" ]
   then
     echo
     echo "~:RUNNING: AI..."
@@ -57,11 +57,11 @@ if [ -d "./bin" ] && [ -f "./bin/runtime" ]
     sleep 1
 fi
 
-if [ -f "./bin/runtime" ]
+if [ -f "./ai/bin/runtime" ]
   then
-    chmod u+r ./bin/runtime
-    chmod u+x ./bin/runtime
-    ./bin/runtime
+    chmod u+r ./ai/bin/runtime
+    chmod u+x ./ai/bin/runtime
+    ./ai/bin/runtime
     echo
     echo "~:done."
   else
@@ -76,10 +76,10 @@ if [ -f "a.out" ]
   rm ./a.out
 fi
 
-if [ -f "bin/t1" ]
+if [ -f "ai/bin/TL/t1" ]
   then
-  rm ./bin/t1
-  touch ./bin/t1
+  rm ./ai/bin/TL/t1
+  touch ./ai/bin/TL/t1
 fi
 
 echo

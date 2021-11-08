@@ -44,7 +44,7 @@ AI::AI(int n) {
 }
 
 void AI::openfs() {
-    fs.open ("bin/tl", std::fstream::in | std::fstream::out | std::fstream::app);
+    fs.open ("ai/bin/TL/tl", std::fstream::in | std::fstream::out | std::fstream::app);
 }
 
 void AI::closefs() {
@@ -52,7 +52,7 @@ void AI::closefs() {
 }
 
 void AI::openrs() {
-	rs.open ("bin/t1", std::fstream::in | std::fstream::out | std::fstream::app);
+	rs.open ("ai/bin/TL/t1", std::fstream::in | std::fstream::out | std::fstream::app);
 }
 
 void AI::closers() {
@@ -276,10 +276,11 @@ void AI::sample() {
 	for (int i=SAMPLER_THREADS+1;i>0;i--) {
 		std::cout << std::endl << std::endl;
 		std::cout << "-::: sampler thread ::#" << i << ":: :::-" << std::endl;
-		// ltctap
-		//run();	// run ltctap here ltctap(->) :: from "entropy/header.h"
+		
+		// ltctap / fcltaptaptap()
+		run();	// run ltctap / fcltaptaptap() / entropyr() / entropyw() :: from "entropy/header.h"
+		
 		std::cout << "\t-:: -:: psht -:: <tap>" << std::endl;
-
 	}
 };
 
