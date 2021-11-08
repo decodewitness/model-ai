@@ -1,5 +1,23 @@
 //  "AI/ENTROPY/LTCTAPTTCLT.CPP" USED BY "AI.H"
 
+#include <fstream>
+
+void fcltaptaptap() {
+    
+    char str[10] = "data.txt";
+    
+    //std::cout << "Enter the name of an existing text file: ";
+    //std::cin.get (str,256);    // get c-string
+    
+    std::ifstream is(str);     // open file
+    char c;
+    
+    while (is.get(c))          // loop getting single characters
+        std::cout << c;
+    
+    is.close();                // close file
+}
+
 // title panel                          //t1
 /* int t1() {;}                             //tl
  * void tl() {;}                //1tlt1tl
@@ -19,24 +37,5 @@
 // void lt1tlt1(int t) {std::cout << "tap";}
 // void tlt1(int t) {std::cout << "tap";}
 // int t1(int t) {std::cout << "tap";}
-
-// #include "header.h"
-#include <fstream>
-
-void fcltaptaptap() {
-    
-    char str[10] = "data.txt";
-    
-    //std::cout << "Enter the name of an existing text file: ";
-    //std::cin.get (str,256);    // get c-string
-    
-    std::ifstream is(str);     // open file
-    char c;
-    
-    while (is.get(c))          // loop getting single characters
-        std::cout << c;
-    
-    is.close();                // close file
-}
 
 // eof
