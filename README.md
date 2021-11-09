@@ -1,7 +1,17 @@
 # model-ai
 
-Latest branch in Artificial Intelligence (A.I) software. Version (v.0.1-22a) (07:44PM CET) (C)(2021)-(August 21 2021)-All Rights Are Reserved. Use it at own risk. We're not responsible for any damages caused by the software in this repository, or any files which you download.
+Latest branch in Artificial Intelligence (A.I) software.
+Version (v.0.1-22a) (07:44PM CET) (C)(2021) (August 21 2021)
 
+All Rights Are Reserved For The Respectful Owner.
+We are not responsible for any damages caused by downloading any files from this repository,
+nore are we responsible for any damage caused by downloading files which you download from our website.
+
+This a development version: ( *** Please contact Us if you want more Information @ development <AT> model-ai.com *** )
+Use at your own risk !!!
+
+
+(C)(2021) 
 ░▄▄▄▄░
 ▀▀▄██►
 ▀▀███►
