@@ -9,16 +9,20 @@ int gradle() {
 	std::cout << "::- loading gradle -::" << std::endl;
 
 	int PVAR=25; // total number of modules
-	int MVAR=25;		// number of different modules (or) modules (5) + spc (2) (or) modules + spc + (aux) (25)
+	int MVAR=1;		// number of times to run 1 complete set of modules (or) modules (5) + spc (2) (or) modules + spc + (aux) (25)
 
 	// component to edit/sample with and limit to n components
-	int component = 0;
+	int nocomponent = 0;
 	int limiter_to_component = 5;
 
 	// functions
-	for (int i=0; i<=PVAR; i++) {	// Prime var
-		for (int j=0; j<=MVAR; j++) {	// Medium var
-			bool b = check_gradle_components(j);
+	for (int totalModulesRan=0; totalModulesRan<=PVAR; totalModulesRan++) {	// Prime var
+
+		for (int nrOfSets=0; nrOfSets<=MVAR; nrOfSets++) {	// Medium var
+			// calculate module size in dependencies
+
+			// check gradle components
+			bool b = check_gradle_components(nrOfSets);
 		
 			//log (b) true/false results here next
 			if (b != true) {
@@ -32,13 +36,16 @@ int gradle() {
 	// actually check the gradle functioning inside the next function
 	// sample 1 module:
 	//---------------------- uncomment next line --------------------------------
-	bool b = check_gradle_components(component);
+	bool b = check_gradle_components(nocomponent); // run nocomponent to switch off components and run without building any modules
 	
 return 1;
 };
 
 bool check_gradle_components(int comp=1) { // check functioning of gradle
-	
+
+	// NEED TO STILL LOAD THE MODULES IN THIS FUNCTION ~!!!
+	///////////////////////////////////////////////////////
+
 	bool checks = true;
 
 	std::cout << "~:: checking for gradle modules." << std::endl;
