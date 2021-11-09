@@ -8,8 +8,10 @@ int gradle() {
 	std::cout << std::endl;
 	std::cout << "::- loading gradle -::" << std::endl;
 
-	int PVAR=25; // total number of modules
-	int MVAR=1;		// number of times to run 1 complete set of modules (or) modules (5) + spc (2) (or) modules + spc + (aux) (25)
+	int PVAR=1; // total number of modules
+	int MVAR=25;		// number of times to run 1 complete set of modules (or) modules (5) + spc (2) (or) modules + spc + (aux) (25)
+
+	std::cout << "~!~ running: " << MVAR << "(modules); (" << PVAR << ") sets of module runs." << std::endl;
 
 	// component to edit/sample with and limit to n components
 	int nocomponent = 0;

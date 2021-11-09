@@ -41,10 +41,13 @@
 #include "logic/transponder/transponder.cpp"
 
 
-
-// --- VIRTUAL APPLIANCE CONTROL SETTING --- // DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
+// DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
+	// --- VIRTUAL APP APPLIANCE CONTROL SETTING ---
 bool app = false;
+// --- VIRTUAL APP APPLIANCE CONTROL SETTING ---
+	// --- VIRTUAL APP APPLIANCE CONTROL SETTING ---
 
+	
 const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)
 const int SAMPLER_THREADS = 8;
 
