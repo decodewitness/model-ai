@@ -8,7 +8,11 @@ We are not responsible for any damages caused by downloading any files from this
 nore are we responsible for any damage caused by downloading files which you download from our website.
 
 This a development version: ( *** Please contact Us if you want more Information @ development <AT> model-ai.com *** )
-Use at your own risk !!!
+
+
+
+Use this software at your own risk !!!
+No intentional harm is done.
 
 
 (C)(2021) 
