@@ -1,85 +1,45 @@
-// AMMODULE.H - IS USED BY AI/AI.H
+// "/AI/SYSTEM/MODULES/AMMODULE.H" - USED BY "/AI/SYSTEM/MODULES/AMMODULE.CPP"
 
-#include "AMModule.cpp"
+#include <string>
 
-#include <cstdio>
-#include <cstdlib>
-#include <ctime>
+class AMModule {
 
-AMModule::AMModule() {
-    this->l = 3;
-};
+private:
+    int j;
+    std::string r;
+    std::string s;
+    std::string x;
 
-void AMModule::addStringR(std::string r) {
-    this->r = r;
-};
 
-void AMModule::addStringS(std::string s) {
-    this->s = s;
-};
+    int k;
+    int l;
+    int m;
+    
+    int rnd;
 
-void AMModule::combine() {
-    this->x = r + s;
-};
+public:
+    AMModule();
 
-std::string AMModule::returnProduct() {
-    return this->x;
-}
+    void addStringR(std::string r);
+    void addStringS(std::string s);
+    
+    void addni(int n);
+    void addnj(int n);
 
-void AMModule::addni(int n) {
-    this->k = n;
-}
+    void combine();
+    void combinen();
 
-void AMModule::addnj(int n) {
-    this->l = n;
-};
+    // loader for modules
+    bool loader(std::string filen);
 
-void AMModule::combinen() {
-    this->m = this->k + this->l;
-};
+    void seedRNG10();
+    void seedRNG100();
 
-int AMModule::returnProductn() {
-    return this->m;
-}
+    int getRNG();
 
-void AMModule::seedRNG10() {
-    srand (time(NULL));
-    this->rnd = rand() % 100 + 1;
-};
+    void nrs(int max, int x, int limits); // x heavy numbers sequence
+    void incrementalNrs(int max, int x); // another heavy numbers sequence
 
-void AMModule::seedRNG100() {
-    srand (time(NULL));
-    this->rnd = rand() % 100 + 1;
-};
-
-int AMModule::getRNG() {
-    return this->rnd;
-};
-
-void AMModule::nrs(int max, int x, int limits) {
-    // compares between bounds
-    int boundLow = x;
-    int boundHigh = max;
-
-    int boundsLow[max]; // not implemented yet
-    int boundsHigh[max];
-
-    for (int i=1; i<limits; i++) {
-        if (i>boundLow && i<boundHigh) {
-            // take action
-            std::cout << ":number (" << i << ")" << std::endl;
-        }
-    }
-};
-
-void incrementalNrs(int max, int x) {
-
-    int boundsLow[max];
-    int boundsHigh[max];
-
-    for (int i=1; i<max; i++) {
-        if (i<boundsLow[i] && i<boundsHigh[i]) {
-            // take action
-        }
-    }
+    std::string returnProduct(); // don't return into x as product that is futile
+    int returnProductn(); // don't return to k as product that is futile
 };

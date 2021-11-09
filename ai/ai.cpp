@@ -11,7 +11,7 @@
 
 bool app = true; // DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
 
-//#include "system/AMModule.h" 	// already included in AI/AI.H
+//#include "system/AMModule.cpp" 	// already included in "modular.cpp" in "/ai/ai.h"
 
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
 const int runtime_testing = 1001;
@@ -19,8 +19,11 @@ const int runtime_testing = 1001;
 AI::AI(int n) {
 
 	if (this->access == false) {
-		this->enforce_security();
+		this->enforce_security();	// also draws security prompt
 	}
+
+	// splash oval
+	int x=amnesia();
 
 	this->init();
 	
@@ -64,10 +67,30 @@ void AI::hal() {
 }
 
 void AMMod() {
+	
+	int r; // for storing random number
+
+	// create AMModule
 	AMModule *ammodule = new AMModule;
 	std::cout << "-:: running AMModule." << std::endl;
-	std::cout <<"    --AM Module--" << std::endl;
+
+	// number sequence compares between upper and lower bounds
 	ammodule->nrs(60, 3, 100);
+	
+	splash();	// splash sequence
+	
+	// some random numbers
+	// use r later as input for modules
+	std::cout << "~:: some random numbers:" << std::endl;
+		
+	ammodule->seedRNG10();
+	r = ammodule->getRNG();	// this function also displays the random number
+	
+	// some more random numbers
+	ammodule->seedRNG100();
+	r = ammodule->getRNG(); // this function also displays the random number
+
+	// delete
 	delete ammodule;
 }
 
@@ -139,8 +162,9 @@ void AI::headers() {
 }
 
 void AI::test(int n=0) {
+
 	// display oval
-	int x=amnesia();
+	//int x=amnesia();
 
 	// function writes "- check."
 	void check();

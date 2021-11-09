@@ -9,7 +9,7 @@
 // database
 #include "database/db.cpp"
 
-// asterisktab
+// asterisktab & amnesia splashing routines
 #include "logic/ascii/amnesia.h"
 #include "logic/ascii/asterisktab.h"
 
@@ -37,7 +37,7 @@
 #include "language/concepts.cpp"
 #include "logic/assembly/input.cpp"
 #include "language/speech/saying.cpp"
-#include "system/modules/modular.cpp"	// includes AMModule.h
+#include "system/modules/modular.cpp"	// includes AMModule.h and Modular
 #include "logic/transponder/transponder.cpp"
 
 
