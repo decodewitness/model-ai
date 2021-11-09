@@ -9,9 +9,6 @@
 
 #include "ai.h"
 
-// DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
-bool app = true;
-
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
 const int runtime_testing = 1001;
 

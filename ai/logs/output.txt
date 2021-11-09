@@ -15,7 +15,8 @@ libcurl4-openssl-dev is already the newest version (7.74.0-1.3+b1).
 ~:done.
 
 ~:checking for old runtime environment.
--/- removing old runtime.
+-/- no old runtime found.
+~: continuing
 
 ~:moving (new) ai model to "ai/bin/runtime".
 ~:program "model" (ai) is stored in the "./ai/bin/" directory as "./bin/runtime".
@@ -1642,11 +1643,6 @@ ENTER PASSCODE:
 
 
 -:: extending module behavior.
-	 -:: loading virtual instance
-
-executing "virtual.sh"
-~you still need to create the virtual instance compressed archive and such.
-done.
 ::- query in sample.
 --? :: 
 
