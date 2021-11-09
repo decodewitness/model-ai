@@ -9,13 +9,13 @@
 
 #include "ai.h"
 
-bool app = true; // DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
-
-//#include "system/AMModule.cpp" 	// already included in "modular.cpp" in "/ai/ai.h"
+// DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
+bool app = true;
 
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
 const int runtime_testing = 1001;
 
+// AI constructor
 AI::AI(int n) {
 
 	if (this->access == false) {
@@ -25,16 +25,18 @@ AI::AI(int n) {
 	// splash oval
 	int x=amnesia();
 
+	// initialize the AI model
 	this->init();
 	
 	// represent headers
 	this->headers();
 	
-	// functions
+	// functional checks
 	this->run_checks(n);
 	this->check_functions();
 	this->test_run(runtime_testing);	// 1001 means test all modules ( SET TEST RUN OPTIONS HERE )
 
+	// HAL -- hypervisor
 	HAL hal;
 
 	if (app == true) {
