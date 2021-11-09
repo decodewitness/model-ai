@@ -1,6 +1,6 @@
 # model-ai
 
-Latest branch in Artificial Intelligence (A.I) software.
+Latest branch in Artificial Intelligence (A.I) software ((( MODEL-AI ))).
 Version (v.0.1-22a) (07:44PM CET) (C)(2021) (August 21 2021)
 
 All Rights Are Reserved For The Respectful Owner.
