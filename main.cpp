@@ -1,5 +1,5 @@
 // MAIN.CPP - YOUR MAIN FILE CARRYING THE MAIN FUNCTION FOR YOUR AI MODEL
-// MAIN FIlE FOR HEADER.H
+// MAIN FILE FOR HEADER.H
 
 // including all headers
 #include "main.h"
@@ -19,9 +19,15 @@ int main(int argc, char *argv[]) {
 
 	// class instances
 	AI ai(argc);
-
+	
+	// health
+	chk();
+	
 	// checking AI functions
 	//ai.check_functions();
+
+	//ai modules
+	ai.mod();
 
 	// hash function checks file hashes
 	ai.hash("my string"); // checking integrity
@@ -29,9 +35,6 @@ int main(int argc, char *argv[]) {
 	// logical kill chain (uncomment next line)
 	//ai.kill(9);
 
-	// health
-	chk();
-	
 	// stepping engine
 	ai.stepping();
 	

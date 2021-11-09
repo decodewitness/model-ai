@@ -45,7 +45,7 @@ void AL::life() {	// artificial habits
 
 void AL::modifies_behaviour() {
 	std::cout << std::endl;
-	std::cout << std::endl << "-:: extending behavior module" << std::endl;
+	std::cout << std::endl << "-:: extending module behavior." << std::endl;
 
 	// extend behaviour
 };
@@ -74,8 +74,8 @@ int AL::live() {
 
 
 	// ARTIFICIAL LIFE ROUTINE
-	for (int i=0;i<=110000;i++) {
-		if (i>=99993 && countdown>0) {
+	for (int i=0; i<=alr_limit; i++) {
+		if (i>=alr_countdown && countdown>0) {
 			countdown -= 1;
 			std::cout << countdown << std::endl;
 		}
@@ -93,83 +93,83 @@ int AL::live() {
 			}
 		}
 
-		if (i==500) {
+		if (i==(alr_limit / 10) * 0.5) {										// 5%
 			std::cout << std::endl << "5%" << std::endl;
 		}
 
-		if (i==1000) {
+		if (i==(alr_limit / 10) * 1) {			// 10%
 			std::cout << std::endl << "10%" << std::endl;
 		}
 
-		if (i==1500) {
+		if (i==(alr_limit / 10) * 1.5) {										// 15%
 			std::cout << std::endl << "15%" << std::endl;
 		}
 
-		if (i==2000) {
+		if (i==(alr_limit / 10) * 2) {										// 20%
 			std::cout << std::endl << "20%" << std::endl;
 		}
 
-		if (i==2500) {
+		if (i==(alr_limit / 10) * 2.5) {										// 25%
 			std::cout << std::endl << "25%" << std::endl;
 		}
 
-		if (i==3000) {
+		if (i==(alr_limit / 10) * 3) {										// 30%
 			std::cout << std::endl << "30%" << std::endl;
 		}
 
-		if (i==3500) {
+		if (i==(alr_limit / 10) * 3.5) {										// 35%
 			std::cout << std::endl << "35%" << std::endl;
 		}
 
-		if (i==4000) {
+		if (i==(alr_limit / 10) * 4) {										// 40%
 			std::cout << std::endl << "40%" << std::endl;
 		}
 
-		if (i==4500) {
+		if (i==(alr_limit / 10) * 4.5) {										// 45%
 			std::cout << std::endl << "45%" << std::endl;
 		}
 
-		if (i==5000) {
+		if (i==(alr_limit / 10) * 5) {										// 50%
 			std::cout << std::endl << "50%" << std::endl;
 		}
 
-		if (i==5500) {
+		if (i==(alr_limit / 10) * 5.5) {										// 55%
 			std::cout << std::endl << "55%" << std::endl;
 		}
 
-		if (i==6000) {
+		if (i==(alr_limit / 10) * 6) {										// 60%
 			std::cout << std::endl << "60%" << std::endl;
 		}
 
-		if (i==6500) {
+		if (i==(alr_limit / 10) * 6.5) {										// 65%
 			std::cout << std::endl << "65%" << std::endl;
 		}
 
-		if (i==7000) {
+		if (i==(alr_limit / 10) * 7) {										// 70%
 			std::cout << std::endl << "70%" << std::endl;
 		}
 
-		if (i==7500) {
+		if (i==(alr_limit / 10) * 7.5) {										// 75%
 			std::cout << std::endl << "75%" << std::endl;
 		}
 
-		if (i==8000) {
+		if (i==(alr_limit / 10) * 8) {										// 80%
 			std::cout << std::endl << "80%" << std::endl;
 		}
 
-		if (i==8500) {
+		if (i==(alr_limit / 10) * 8.5) {										// 85%
 			std::cout << std::endl << "85%" << std::endl;
 		}
 
-		if (i==9000) {
+		if (i==(alr_limit / 10) * 9) {										// 90%
 			std::cout << std::endl << "90%" << std::endl;
 		}
 
-		if (i==9500) {
+		if (i==(alr_limit / 10) * 9.5) {										// 95%
 			std::cout << std::endl << "95%" << std::endl;
 		}
 
-		if (i==10000) {
+		if (i==alr_limit) {										// 100%
 			std::cout << std::endl << "100%" << std::endl;
 		}
 

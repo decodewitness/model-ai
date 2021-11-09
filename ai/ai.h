@@ -10,6 +10,7 @@
 #include "database/db.cpp"
 
 // asterisktab
+#include "logic/ascii/amnesia.h"
 #include "logic/ascii/asterisktab.h"
 
 // hal

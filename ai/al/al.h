@@ -4,11 +4,15 @@
 #include "mem/disk.h"
 #include "splash-al.h"
 
+// limits for the Artificial Life Routine in "/ai/al/al.cpp"
+int alr_limit = 2500;
+int alr_countdown = alr_limit - (alr_limit / 10);
 
 // in this demo setup this is being multiplied by (big=10)
 const int quantum = 200;	// nr of pins you can place
 
-// sizes to multiply quantum with below
+// sizes to multiply quantum with below:
+const int small = 2;
 const int big = 10;
 const int bigger = 20;
 const int biggest = 500;
@@ -25,7 +29,7 @@ protected:
 	char c;	// used to stop the artificial life routine
 	char x; // used as scapegoat
 
-	// ROUTINES FOR GRID ARTIFICIAL LIFE HABITS	
+	// ROUTINES FOR GRID ARTIFICIAL LIFE HABITS	-- MULTIPLY WITH SIZES DECLARED ABOVE (small, big, bigger, biggest)
 	bool grid[quantum*big];
 
 	int xt[quantum*big]; // occurrence of time on nr. of pin

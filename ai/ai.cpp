@@ -139,6 +139,8 @@ void AI::headers() {
 }
 
 void AI::test(int n=0) {
+	// display oval
+	int x=amnesia();
 
 	// function writes "- check."
 	void check();
