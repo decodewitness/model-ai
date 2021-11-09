@@ -4,6 +4,8 @@
 #define _AI_HEADER
 #endif
 
+#define URL "https://model-ai.com/ai"
+
 #include <cstring>
 
 // database

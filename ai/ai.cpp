@@ -84,11 +84,11 @@ void AMMod() {
 	std::cout << "~:: some random numbers:" << std::endl;
 		
 	ammodule->seedRNG10();
-	r = ammodule->getRNG();	// this function also displays the random number
+	r10 = ammodule->getRNG();	// this function also displays the random number
 	
 	// some more random numbers
 	ammodule->seedRNG100();
-	r = ammodule->getRNG(); // this function also displays the random number
+	r100 = ammodule->getRNG(); // this function also displays the random number
 
 	// delete
 	delete ammodule;
