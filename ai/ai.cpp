@@ -67,7 +67,8 @@ void AI::hal() {
 
 void AMMod() {
 	
-	int r; // for storing random number
+	int r10; // for storing random number <=10
+	int r100; // for storing random number <=100
 
 	// create AMModule
 	AMModule *ammodule = new AMModule;
@@ -325,7 +326,7 @@ void AI::init() {
 	
 
 	// set "this->crlurl" to resource URL.
-	this->crlurl = "http://thatbot.ninja";
+	this->crlurl = URL;
 
 	int x=0;
 
