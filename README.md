@@ -30,6 +30,7 @@ model-ai
 ░▄▄▄▄░ ▀▀▄██► ▀▀███► ░▀███►░█► ▒▄████▀▀ (88)
 
     
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ~:checking for GCC compiler.
 -/- found GCC compiler
 
@@ -41,6 +42,18 @@ Reading package lists...
 Building dependency tree...
 Reading state information...
 libcurl4-openssl-dev is already the newest version (7.74.0-1.3+b1).
+The following packages were automatically installed and are no longer required:
+  kwayland-data kwayland-integration kwin-style-kali libfam0
+  libkdecorations2-5v5 libkdecorations2private8 libkdecorations2private9
+  libkf5archive5 libkf5auth-data libkf5authcore5 libkf5codecs-data
+  libkf5codecs5 libkf5config-bin libkf5config-data libkf5configcore5
+  libkf5configgui5 libkf5configwidgets-data libkf5configwidgets5
+  libkf5coreaddons-data libkf5coreaddons5 libkf5guiaddons5 libkf5i18n-data
+  libkf5i18n5 libkf5iconthemes-bin libkf5iconthemes-data libkf5iconthemes5
+  libkf5idletime5 libkf5waylandclient5 libkf5widgetsaddons-data
+  libkf5widgetsaddons5 libkf5windowsystem-data libkf5windowsystem5
+  libpolkit-qt5-1-1 libxcb-res0
+Use 'sudo apt autoremove' to remove them.
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
 ~:compiling...
@@ -1675,200 +1688,46 @@ ENTER PASSCODE:
 
 -:: extending module behavior.
 ::- query in sample.
---? :: 
+--? :: <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+USAGE:
+-----
 
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	logic
-	[ computation:  ]
--:: finished computation.
+This command will run the (model-ai) program, and generate a "README.md" file, in the project root directory
+based on the output of the "setup.sh" script running the AI model (model-ai).
+The "README.md" file will consist of the files in "model-ai/ai/logs":
 
--:: aborts runtime! and clean up gracefully!
+[running the program -OPTION- (1)]
+ -------            ----------
 
--:: display ((x)->live())(?x) equaled .
--:: destructor artificial life routine was called. -:: killing abstraction layer.
+   $ ./run
+    
+    (or)
 
+   $ ./bootstrap
 
--:: checking health criteria
-	-:: health monitoring. (10) criteria.
-	-:: 1. one:	true
-	-:: 2. two:	true
-	-:: 3. three:	true
-	-:: 4. four:	true
-	-:: 5. five:	false
-	-:: 6. six:	true
-	-:: 7. seven:	false
-	-:: 8. eight:	true
-	-:: 9. nine:	true
-	-:: 10. ten:	true
 
--:: created modular template.
-~: updated module - index(1).
-	~:: filled in modular template with generic data.
--:: query module ::-
-	~:: data inside modular template (index): (1)
-	~:: data inside modular template (at index): (module)
--:: query module ::-
-	~:: data inside modular template (index): (-1)
-	~:: data inside modular template (at index): ()
-~: updated module - index(0).
-	~:: updated record (0).
-~: updated module - index(0).
-~: updated module - index(1).
-	~:: updated record (0).
-~: updated module - index(1).
-~: updated module - index(2).
-:1: unicorn =1=
-:2: 
 
--:: check integrity / logical step counter.
-	-:: step:3 -:: complete. (100%)
-	-:: step:2 -:: complete. (100%)
-	-:: step:1 -:: complete. (100%)
-	-:: step:0 -:: complete. (100%)
-	-:: steps completed: 4
+Using this next command will run the (model-ai) AI from "setup.sh", and generate an "output.log" text file in "./ai/logs":
 
--:: starting AI.
-	-:: sampler: 8 threads.
-	-:: starting sampler.
-		-:: set 8 threads.
-	::--entropy--::
 
-	-:: sampler set to recording.
+[running the program -OPTION- (2)]
+ -------            ----------
 
--:: feeding entropy
--:: tap the ltctap.
+   $ ./bootstrap | tee ./ai/logs/output.log
 
+   (The "run" command already generates an "output.log" file inside the "ai/logs" directory)
 
--::: sampler thread ::#9:: :::-
 
+The main compiled C++ program (model-ai) is in the "/model-ai/ai/bin" directory and called "runtime" after the compilation with the scripts.
+Do remember that if you move the program over to another location, then you will lose the functionality of some functional scripts
+which the program (model-ai) uses.
 
-HEREDOC:more
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
 
-	-:: -:: psht -:: <tap>
+REQUIREMENTS:
+-----
 
 
--::: sampler thread ::#8:: :::-
-
-
-HEREDOC:lorem
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
-
-	-:: -:: psht -:: <tap>
-
-
--::: sampler thread ::#7:: :::-
-
-
-HEREDOC:ipsum
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
-
-	-:: -:: psht -:: <tap>
-
-
--::: sampler thread ::#6:: :::-
-
-
-HEREDOC:more
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
-
-	-:: -:: psht -:: <tap>
-
-
--::: sampler thread ::#5:: :::-
-
-
-HEREDOC:lorem
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
-
-	-:: -:: psht -:: <tap>
-
-
--::: sampler thread ::#4:: :::-
-
-
-HEREDOC:ipsum
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
-
-	-:: -:: psht -:: <tap>
-
-
--::: sampler thread ::#3:: :::-
-
-
-HEREDOC:more
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
-
-	-:: -:: psht -:: <tap>
-
-
--::: sampler thread ::#2:: :::-
-
-
-HEREDOC:lorem
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
-
-	-:: -:: psht -:: <tap>
-
-
--::: sampler thread ::#1:: :::-
-
-
-HEREDOC:ipsum
-	-:: -:: psht -:: <tap>
-holytapltcltcttapishholytaptapishltct
-::- insert the tam tam reading -::
--:: swapping sequence. x=3;
-
-	-:: -:: psht -:: <tap>
-
-********* CURLING **********
-
-
-<<<<<<<<<<<<<<<<<<<<<<<
-
-<<<<<<<<<<<<<<<<<<<<<<<
-x:0
-
--:: decoupler.
-	-:: decoupling sampler
-	-:: sampler set to pause.
-
-
-::=> saving grace (routine) and closing libraries <=::
--:: closing files.
--:: cleaning memory.
-
--:: calling destructor for AI::Model.
--:: done.
-
-~:done.
-
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 >>>>>>> 67a543ef128a69601235772a22f8d5f81d32bfd4
 O._
 red_circle__CUBED:

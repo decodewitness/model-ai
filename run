@@ -1,15 +1,19 @@
 #!/bin/bash
 
-echo "^.^ ~( Running Program and Generating README.MD )"
+echo "^.^ ,~={( RUNNING PROGRAM AND GENERATING \"README.Md\" FILE )}~!"
 
-./setup.sh |tee ./ai/logs/output.log
+./bootstrap |tee ./ai/logs/output.log
 
 echo
 echo "GENERATING \"README.md\" TEXT FILE."
 
-cat ./addy/component_readme_1.txt > README.md
-cat ./ai/logs/output.log >> README.md
-cat ./addy/component_readme_2.txt >> README.md
+cat ./ai/log/addy/readme_component_1.txt > README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+cat ./ai/log/output.log >> README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+cat ./ai/log/addy/beneficial.txt >> README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+cat ./ai/log/addy/readme_component_2.txt >> README.md
 
 echo "done."
 exit 0
