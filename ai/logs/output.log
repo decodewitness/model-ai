@@ -29,8 +29,7 @@ libcurl4-openssl-dev is already the newest version (7.74.0-1.3+b1).
 ~:: security routine
 ENTER PASSCODE: 
 (debug) checking passcode.
--:: ACCESS GRANTED
-	~::exporting to environment.
+-:: ACCESS GRANTED (level) (security_level)	~::exporting to environment.
 [2J[H
                                                                                
                                                                                
@@ -1689,9 +1688,7 @@ ENTER PASSCODE:
 ~: updated module - index(2).
 :1: unicorn =1=
 :2: 
--:: hashing function.
-	-:: hashing ("my string")
-	-:: hash: 2ba81a47c5512d9e23c435c1f29373cb
+
 -:: check integrity / logical step counter.
 	-:: step:3 -:: complete. (100%)
 	-:: step:2 -:: complete. (100%)

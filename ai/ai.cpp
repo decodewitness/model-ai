@@ -92,7 +92,13 @@ void AMMod() {
 
 	// delete
 	delete ammodule;
-}
+};
+
+std::string AI::hashtype(std::string s) {
+	//hash(s);
+return hashn(s);
+};
+
 
 void AI::run_checks(int args) {
 	std::cout << "-:: checking arguments." << std::endl;
@@ -233,9 +239,14 @@ void AI::test_run(int flag=0) {	// simulate a test run
 };	
 
 bool AI::stepping() {	// integrity checking
+
+	// need to check file hashes here based of integrity
 	bool hashesCheckOut=true;
+	
+	// any errors? 
 	bool errors=false;
 	
+	// steps
 	int steps=4;
 	int steps_completed=0;
 	int count=steps;
@@ -250,11 +261,10 @@ bool AI::stepping() {	// integrity checking
 		if (errors==true) {	// check for errors
 			this->ch='d';	// change to 'd' in case of errors
 		}
-		
-		
+			
 		// check for the need for the bail out routine
 		if (this->ch != 'c')
-			break; // bail on anything different than 'c'!
+			break; // bails on anything different than 'c'!
 		else {
 			steps_completed++;
 			std::cout << " -:: complete. (100%)" << std::endl;
@@ -277,11 +287,6 @@ bool AI::stepping() {	// integrity checking
 	}
 };
 
-void AI::hash(string s) {
-	std::cout << "-:: hashing function." << std::endl;
-	std::cout << "\t-:: hashing (\"" << s << "\")" << std::endl;
-	std::cout << "\t-:: hash: " << md5(s.c_str());
-}
 
 void AI::sample() {
 	cout << "-:: starting AI." << std::endl;

@@ -22,9 +22,7 @@
 #include "cfg/config.h"
 
 // modules
-#include "md5/md5.cpp"
 #include "system/chk.h"
-#include "security.cpp"
 #include "fetch/curl.cpp"
 #include "system/splash.h"
 #include "system/gradle.h"
@@ -40,6 +38,7 @@
 #include "logic/assembly/input.cpp"
 #include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"	// includes AMModule.h and Modular
+#include "system/security/security.cpp"
 #include "logic/transponder/transponder.cpp"
 
 
@@ -76,50 +75,55 @@ public:
 
 	AI(int n=1);
 
+	// round init
 	void init();
-	void enforce_security();
+
+	// headers
+	void headers();
 	
-	void openfs();
-	void openrs();
-
-	void hal();
-
-	void closefs();
-	void closers();
-
+	// checking mechanisms
 	void run_checks(int arg=0);
 	void check_functions();
 	void chk();
-	
 	void test(int n);
 	void test_run(int flag);
+	
+	// load (load balancing is not implemented yet) (uncomment the next line to start implementing it)
+		// void loadbalance();	// function that does load balancing
 
+	// file streams		
+	void openfs();
+	void openrs();
+	void closefs();
+	void closers();
+	
+	// hall and functional stepping mechanism
+	void hal();
 	bool stepping();
-	void hash(string s);
+
+	// queries, sampler & appliance
+	void query();
 	void sample();
-
-	void headers();
-
 	void appliance();
 	
-	void decouple();
-	void destroy_msg();
-	void saygrace();
-
+	// modules
 	void AMMod();
-	void query();
-
 	void mod();
 
-	std::string curl_url() {
-		return this->crlurl;
-	}
-
 	// curl and fetch links
+	std::string curl_url() { return this->crlurl; }
 	int curl(std::string f);
 	int links(std::string url, int max);
 
+	// hashing and security
+	void enforce_security();
+	std::string hashtype(std::string h); // checking integrity
+
+
 	// killchain
+	void destroy_msg();
+	void saygrace();
+	void decouple();
 	void kill(int x);
 };
 

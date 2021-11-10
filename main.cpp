@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 	ai.mod();
 
 	// hash function checks file hashes
-	ai.hash("my string"); // checking integrity
+	ai.hashtype("my string"); // checking integrity
 
 	// logical kill chain (uncomment next line)
 	//ai.kill(9);
