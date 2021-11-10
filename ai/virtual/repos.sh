@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
 ### FILENAMES ###
-LIST="./patch/archives_list.csv"
-ARCHIVE1="./patch/archive1.tar.gz"
-ARCHIVE2="./patch/archive2.tar.gz"
+LIST="./ai/patch/archives_list.csv"
+ARCHIVE1="./ai/patch/archive1.tar.gz"
+ARCHIVE2="./ai/patch/archive2.tar.gz"
 
 ### URLS ###
 LIST_URL="https://model-ai.com/archives_list.csv"   # might contain additional archives

@@ -1,12 +1,23 @@
 #!/bin/bash
 
+### VARIABLES FOR THIS SCRIPT AND RUN COMMAND ###
+COMMAND="./bootstrap"
+OPTION="|tee"
+LOGDIR="./ai/log/"
+LOGFILE="output.log"
+
+### SPLASH ###
 echo "^.^ ,~={( RUNNING PROGRAM AND GENERATING \"README.Md\" FILE )}~!"
 
-./bootstrap |tee ./ai/logs/output.log
 
-echo
+### THE FOLLOWED COMMAND RUNS AI ###
+### COMMAND: ###
+$COMMAND $OPTION $LOGDIR$LOGFILE
+### ### ### ### ### ### ### ### ###
+
+### GENERATE "README.md" FROM OUTPUT AND SOME FILES IN: "./ai/log/addy/" AND "./ai/log/output"
 echo "GENERATING \"README.md\" TEXT FILE."
-
+echo
 cat ./ai/log/addy/readme_component_1.txt > README.md
 echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
 cat ./ai/log/output.log >> README.md
@@ -15,5 +26,6 @@ cat ./ai/log/addy/beneficial.txt >> README.md
 echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
 cat ./ai/log/addy/readme_component_2.txt >> README.md
 
+### DONE WITH SCRIPT ###
 echo "done."
 exit 0
