@@ -48,7 +48,7 @@ Modular::Modular() {
     this->moddata = true;
 
     // query the modular template
-    modular.query();
+    //modular.query();
 };
 
 Modular::Modular(std::string n, std::string t) {
@@ -75,14 +75,14 @@ void Modular::set_data(std::string dat) {
 
 void Modular::set_datas(int i, std::string dat) {
     
-    std::cout << "\t~:: setting data( " << i << " )" << std::endl;
+    std::cout << "\t~:: setting modular data (" << i << ")" << std::endl;
     bool updated = true;
     
     if (this->data_in_module <= limit-1) {
         if (i <= this->data_in_module) {
             this->module_data[i] = dat;
             this->moddata = true;
-            std::cout << "\t~:: updated record (" << i << ")." << std::endl;
+            std::cout << "\t~:: updated modular record (" << i << ")." << std::endl;
         } else {
             this->module_data[this->data_in_module++];
         }
