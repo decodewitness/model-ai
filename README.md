@@ -1,5 +1,35 @@
+# model-ai
+
+Latest branch in Artificial Intelligence (A.I) software ((( MODEL-AI ))).
+Version (v.0.1-22a) (07:44PM CET) (C)(2021) (August 21 2021)
+
+All Rights Are Reserved For The Respectful Owner.
+We are not responsible for any damages caused by downloading any files from this repository,
+nore are we responsible for any damage caused by downloading files which you download from our website.
+
+This a development version: ( *** Please contact Us if you want more Information @ development <AT> model-ai.com *** )
 
 
+
+Use this software at your own risk !!!
+No intentional harm is done.
+
+
+(C)(2021) 
+░▄▄▄▄░
+▀▀▄██►
+▀▀███►
+░▀███►░█►
+▒▄████▀▀
+(88)
+1. 
+
+model-ai
+
+
+░▄▄▄▄░ ▀▀▄██► ▀▀███► ░▀███►░█► ▒▄████▀▀ (88)
+
+    
 ~:checking for GCC compiler.
 -/- found GCC compiler
 
@@ -17,8 +47,7 @@ libcurl4-openssl-dev is already the newest version (7.74.0-1.3+b1).
 ~:done.
 
 ~:checking for old runtime environment.
--/- no old runtime found.
-~: continuing
+-/- removing old runtime.
 
 ~:moving (new) ai model to "ai/bin/runtime".
 ~:program "model" (ai) is stored in the "./ai/bin/" directory as "./bin/runtime".
@@ -32,8 +61,7 @@ libcurl4-openssl-dev is already the newest version (7.74.0-1.3+b1).
 ~:: security routine
 ENTER PASSCODE: 
 (debug) checking passcode.
--:: ACCESS GRANTED
-	~::exporting to environment.
+-:: ACCESS GRANTED (level) (security_level)	~::exporting to environment.
 [2J[H
                                                                                
                                                                                
@@ -1692,9 +1720,7 @@ ENTER PASSCODE:
 ~: updated module - index(2).
 :1: unicorn =1=
 :2: 
--:: hashing function.
-	-:: hashing ("my string")
-	-:: hash: 2ba81a47c5512d9e23c435c1f29373cb
+
 -:: check integrity / logical step counter.
 	-:: step:3 -:: complete. (100%)
 	-:: step:2 -:: complete. (100%)
@@ -1843,5 +1869,35 @@ x:0
 
 ~:done.
 
+# model-ai
+
+Latest branch in Artificial Intelligence (A.I) software ((( MODEL-AI ))).
+Version (v.0.1-22a) (07:44PM CET) (C)(2021) (August 21 2021)
+
+All Rights Are Reserved For The Respectful Owner.
+We are not responsible for any damages caused by downloading any files from this repository,
+nore are we responsible for any damage caused by downloading files which you download from our website.
+
+This a development version: ( *** Please contact Us if you want more Information @ development <AT> model-ai.com *** )
 
 
+
+Use this software at your own risk !!!
+No intentional harm is done.
+
+
+(C)(2021) 
+░▄▄▄▄░
+▀▀▄██►
+▀▀███►
+░▀███►░█►
+▒▄████▀▀
+(88)
+1. 
+
+model-ai
+
+
+░▄▄▄▄░ ▀▀▄██► ▀▀███► ░▀███►░█► ▒▄████▀▀ (88)
+
+    

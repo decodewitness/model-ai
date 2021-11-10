@@ -3,6 +3,13 @@
 echo "^.^ ~( Running Program and Generating README.MD )"
 
 ./setup.sh |tee ./ai/logs/output.log
-./generate_readme.sh
 
+echo
+echo "GENERATING \"README.md\" TEXT FILE."
+
+cat ./addy/component_readme_1.txt > README.md
+cat ./ai/logs/output.log >> README.md
+cat ./addy/component_readme_1.txt >> README.md
+
+echo "done."
 exit 0
