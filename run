@@ -16,14 +16,16 @@ $COMMAND $OPTION $LOGDIR$LOGFILE
 ### ### ### ### ### ### ### ### ###
 
 ### GENERATE "README.md" FROM OUTPUT AND SOME FILES IN: "./ai/log/addy/" AND "./ai/log/output"
-echo "GENERATING \"README.md\" TEXT FILE."
-echo
+echo "GENERATING \"README.md\" < TEXTFILES."
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
 cat ./ai/log/addy/readme_component_1.txt > README.md
-cat ./ai/log/addy/readme_component_2.txt >> README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
-cat ./ai/log/output.log >> README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
 cat ./ai/log/addy/beneficial.txt >> README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+echo "PROGRAM DEBUGGING OUTPUT FROM SCRIPT"
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+cat ./ai/log/output.log >> README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+cat ./ai/log/addy/readme_component_2.txt >> README.md
 
 ### DONE WITH SCRIPT ###
 echo "done."
