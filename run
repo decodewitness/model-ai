@@ -1,34 +1,5 @@
 #!/bin/bash
 
-### VARIABLES FOR THIS SCRIPT AND RUN COMMAND ###
-COMMAND="./bootstrap"
-OPTION="|tee"
-LOGDIR="./ai/log/"
-LOGFILE="output.log"
-SPC=" "
-### SPLASH ###
-echo "^.^ ,~={( RUNNING PROGRAM AND GENERATING \"README.Md\" FILE )}~!"
+./setup |tee ./ai/log/setup.txt
 
-
-### THE FOLLOWED COMMAND RUNS AI ###
-$COMMAND $OPTION $LOGDIR$LOGFILE
-### ### ### ### ### ### ### ### ###
-
-### GENERATE "README.md" FROM OUTPUT AND SOME FILES IN: "./ai/log/addy/" AND "./ai/log/output"
-echo "GENERATING \"README.md\" < TEXT FILES." > README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
-echo "THIS IS INFORMATION ABOUT THE MODEL-AI" >> README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
-cat ./ai/log/addy/beneficial.txt >> README.md
-cat ./ai/log/addy/readme_component_1.txt >> README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
-echo "PROGRAM DEBUGGED OUTPUT MODELAI-SCRIPT" >> README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
-cat ./ai/log/output.log >> README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
-cat ./ai/log/addy/readme_component_2.txt >> README.md
-cat ./ai/log/addy/copylaw.txt >> README.md
-
-### DONE WITH SCRIPT ###
-echo "done."
 exit 0

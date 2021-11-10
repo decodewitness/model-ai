@@ -1,39 +1,3 @@
-~:checking for GCC compiler.
--/- found GCC compiler
-
-~:installing Curl libraries
-(+one time runscript [that deletes its*elf])
-H-E-R-E
-!~ I need your SUDO to install "libcurl4-openssl-dev", else press CTRL + C, and then install "libcurl4-openssl-dev" manually with APT.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-libcurl4-openssl-dev is already the newest version (7.74.0-1.3+b1).
-The following packages were automatically installed and are no longer required:
-  kwayland-data kwayland-integration kwin-style-kali libfam0
-  libkdecorations2-5v5 libkdecorations2private8 libkdecorations2private9
-  libkf5archive5 libkf5auth-data libkf5authcore5 libkf5codecs-data
-  libkf5codecs5 libkf5config-bin libkf5config-data libkf5configcore5
-  libkf5configgui5 libkf5configwidgets-data libkf5configwidgets5
-  libkf5coreaddons-data libkf5coreaddons5 libkf5guiaddons5 libkf5i18n-data
-  libkf5i18n5 libkf5iconthemes-bin libkf5iconthemes-data libkf5iconthemes5
-  libkf5idletime5 libkf5waylandclient5 libkf5widgetsaddons-data
-  libkf5widgetsaddons5 libkf5windowsystem-data libkf5windowsystem5
-  libpolkit-qt5-1-1 libxcb-res0
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-~:compiling...
-~:done.
-
-~:checking for old runtime environment.
--/- removing old runtime.
-
-~:moving (new) ai model to "ai/bin/runtime".
-~:program "model" (ai) is stored in the "./ai/bin/" directory as "./bin/runtime".
-
-~:RUNNING: AI...
-
 
 -:: enabled logging.
  ** ][][ **
@@ -1312,9 +1276,16 @@ ENTER PASSCODE:
 	0: arguments.
 	-:: opening file streams.
 	-:: drum machine
-'::: DRUMS :::'
--:: cycle 1: 4
--:: cycle 2: 2
+
+-::: DRUMS MACHINE OF THE DRUMS :::-
+
+~::--::-( status of drum kits )-::--::~
+-:: cycle 1: m( 3 m( 1
+	-:: cycle 2: m( 1 m( 3
+
+{{ +pose ( 2 ) }} :: {{ -intervalA ( 0.75 ) }} {{ -intervalB ( 0.375 ) }}
+~::--::(status of drum kits)::--::~
+
 
 ::- loading gradle -::
 ~!~ running: 25(modules); (1) sets of module runs.
@@ -1656,3 +1627,191 @@ ENTER PASSCODE:
 -:: extending module behavior.
 ::- query in sample.
 --? :: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ x computation: type:(char) len:5 vowels:3 consonants:2 special:0  ]
+-:: finished computation.
+
+-:: aborts runtime! and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled .
+-:: destructor artificial life routine was called. -:: killing abstraction layer.
+
+
+-:: checking health criteria
+	-:: health monitoring. (10) criteria.
+	-:: 1. one:	true
+	-:: 2. two:	true
+	-:: 3. three:	true
+	-:: 4. four:	true
+	-:: 5. five:	false
+	-:: 6. six:	true
+	-:: 7. seven:	false
+	-:: 8. eight:	true
+	-:: 9. nine:	true
+	-:: 10. ten:	true
+
+-__:::: ( created ) modular template ::::__-
+~: updated module - index(1).
+	~:: filled in modular template with generic data.
+~: updated module - index(0).
+~: updated module - index(1).
+	~:: setting modular data (2)
+	~:: updated modular record (2).
+~: updated module - index(1).
+	~:: setting modular data (3)
+~: updated module - index(2).
+	~:: setting modular data (4)
+~: updated module - index(3).
+:1: unicorn =001=
+:2: unicorn =002=
+:3: unicorns =003=
+:4: 
+
+-:: check integrity / logical step counter.
+	-:: step:3 -:: complete. (100%)
+	-:: step:2 -:: complete. (100%)
+	-:: step:1 -:: complete. (100%)
+	-:: step:0 -:: complete. (100%)
+	-:: steps completed: 4
+
+-:: starting AI.
+	-:: sampler: 8 threads.
+	-:: starting sampler.
+		-:: set 8 threads.
+	::--entropy--::
+
+	-:: sampler set to recording.
+
+-:: feeding entropy
+-:: tap the ltctap.
+
+
+-::: sampler thread ::#9:: :::-
+
+
+HEREDOC:more
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#8:: :::-
+
+
+HEREDOC:lorem
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#7:: :::-
+
+
+HEREDOC:ipsum
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#6:: :::-
+
+
+HEREDOC:more
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#5:: :::-
+
+
+HEREDOC:lorem
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#4:: :::-
+
+
+HEREDOC:ipsum
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#3:: :::-
+
+
+HEREDOC:more
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#2:: :::-
+
+
+HEREDOC:lorem
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#1:: :::-
+
+
+HEREDOC:ipsum
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+********* CURLING **********
+
+
+<<<<<<<<<<<<<<<<<<<<<<<
+
+<<<<<<<<<<<<<<<<<<<<<<<
+x:0
+
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+
+
+::=> saving grace (routine) and closing libraries <=::
+-:: closing files.
+-:: cleaning memory.
+
+-:: calling destructor for AI::Model.
+-:: done.
