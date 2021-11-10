@@ -7,24 +7,30 @@ echo "~:checking for GCC compiler."
 if [ -f "/usr/bin/gcc" ]
 then
   echo "-/- found GCC compiler"
+  echo "-/- updating Curl libraries"
+  echo "!~ I need SUDO to install libcurl4-openssl-dev, else press CTRL+C and install GCC manually."
+  sudo apt -y update && sudo apt -y install libcurl4-openssl-dev
 else
   echo "-/- could not find GCC compiler"
   echo "-/- installing GCC compiler"
-  echo "!~ I need SUDO to install GCC, else press CTRL+C and install GCC manually."
-  sudo apt update && sudo apt install gcc
+  echo "-/- also installing Curl libraries"
+  echo "!~ I need SUDO to install GCC and libcurl4-openssl-dev, else press CTRL+C and install GCC manually."
+  sudo apt -y update && sudo apt -y install gcc libcurl4-openssl-dev
 fi
 
 echo
-echo "~:installing Curl libraries"
+echo "~:: (running): \"/ai/bin/script.sh\""
 echo "(+one time runscript [that deletes its*elf])"
 ./ai/bin/script.sh
-echo "H-E-R-E"
+#rm ./ai/bin/script.sh
+echo "~:file got deleted by its*elf"
+
 #pwd
+#./script.sh
 
-./script.sh
-
-echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C, and then install \"libcurl4-openssl-dev\" manually with APT."
-sudo apt install libcurl4-openssl-dev
+#echo "~:installing Curl libraries"
+#echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C, and then install \"libcurl4-openssl-dev\" manually with APT."
+#sudo apt install libcurl4-openssl-dev
 
 echo
 echo "~:compiling..."
