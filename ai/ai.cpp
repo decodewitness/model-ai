@@ -65,33 +65,30 @@ void AI::hal() {
 	start_hal();
 }
 
-void AMMod() {
+void AI::AMMod() {
 	
-	int r10; // for storing random number <=10
-	int r100; // for storing random number <=100
-
 	// create AMModule
-	AMModule *ammodule = new AMModule;
+	this->ammodule = new AMModule;
+	this->ammod = true; // set to true on new AMModule
+
 	std::cout << "-:: running AMModule." << std::endl;
 
-	// number sequence compares between upper and lower bounds
-	ammodule->nrs(60, 3, 100);
-	
 	splash();	// splash sequence
 	
 	// some random numbers
 	// use r later as input for modules
 	std::cout << "~:: some random numbers:" << std::endl;
-		
+	
+	// number sequence compares between upper and lower bounds
+	ammodule->nrs(60, 3, 100);
+
+	// random numbers
 	ammodule->seedRNG10();
-	r10 = ammodule->getRNG();	// this function also displays the random number
+	this->r10 = ammodule->getRNG();	// this function also displays the random number
 	
 	// some more random numbers
 	ammodule->seedRNG100();
-	r100 = ammodule->getRNG(); // this function also displays the random number
-
-	// delete
-	delete ammodule;
+	this->r100 = ammodule->getRNG(); // this function also displays the random number
 };
 
 std::string AI::hashtype(std::string s) {
@@ -332,6 +329,7 @@ void AI::init() {
 
 	// set "this->crlurl" to resource URL.
 	this->crlurl = URL;
+	this->cmb = new Combine;
 
 	int x=0;
 
@@ -385,7 +383,10 @@ void AI::saygrace() {
 	// clean up sampler allocated memory
 	std::cout << "-:: cleaning memory." << std::endl;
 
-	delete this->sampler;
+	if (this->smpl == true)  { delete this->sampler; }
+	if (this->ammod == true) { delete this->ammodule; }
+	if (this->modul == true) { delete this->mdl; }
+	if (this->comb == true)  { delete this->cmb; }
 
 	this->destroy_msg();
 
@@ -408,11 +409,15 @@ void AI::query() {
 	logicalQuery(y);
 };
 
-void AI::kill(int x) {
+void AI::killc(int x) {	// basically implies killchain handle
 	switch (x) {
 		case 9:
 			std::cout << std::endl << "-/- initializing sequence." << std::endl << std::endl;
 			//system("pwd");
+			if (this->smpl == true)  { delete this->sampler; }
+			if (this->ammod == true) { delete this->ammodule; }
+			if (this->modul == true) { delete this->mdl; }
+			if (this->comb == true)  { delete this->cmb; }
 			exit(0);
 			break;
 		default:
@@ -450,10 +455,6 @@ void AI::mod() {
 	this->mdl->set_datas(2, "unicorn =3=");
 	this->mdl->set_datas(0, "unicorn =1=");
 	this->mdl->set_data("unicorn =4=");
-
 	this->mdl->get_index();
-
 	this->mdl->polldata();
-
-	delete this->mdl;
 };

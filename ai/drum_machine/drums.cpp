@@ -9,7 +9,7 @@
 void filter(int &x);
 
 DrumMachine::DrumMachine() {    // cycle_###[] are either drum_cycle_one, drum_cycle_two, or drum_cycle_three
-    std::cout << std::endl << "\t-::: DRUMS MACHINE OF THE DRUMS :::-" << std::endl << std::endl;
+    std::cout << std::endl << "-::: DRUMS MACHINE OF THE DRUMS :::-" << std::endl << std::endl;
 
     // set pose time for when to start track sample
     this->pose = Tstart;    // (default = 00:00:02 seconds)
@@ -188,17 +188,17 @@ void DrumMachine::setIntervalB() {
 void DrumMachine::status() {    // broadcast status message
 
     // status
-    std::cout << "~::--::(status of drum kits)::--::~" << std::endl << std::endl;
+    std::cout << "~::--::-( status of drum kits )-::--::~" << std::endl;
     
     // cycles
-    std::cout << "-:: cycle 1: m(" << this->cycle_one[0] << "m(" << this->cycle_one[1] << std::endl;
-    std::cout << "\t-:: cycle 2: m(" << this->cycle_two[0] << "m(" << this->cycle_two[1] << std::endl;
+    std::cout << "-:: cycle 1: m( " << this->cycle_one[0] << " m( " << this->cycle_one[1] << std::endl;
+    std::cout << "\t-:: cycle 2: m( " << this->cycle_two[0] << " m( " << this->cycle_two[1] << std::endl;
     std::cout << std::endl;
 
     // intervals
-    std::cout << "{{ pose ( " << this->pose << " ) }} :: ";
-    std::cout << "{{ intervalA ( " << this->intervalA << " ) }} ";
-    std::cout << "{{ intervalB ( " << this->intervalB << " ) " << "}}" << std::endl;
+    std::cout << "{{ +pose ( " << this->pose << " ) }} :: ";
+    std::cout << "{{ -intervalA ( " << this->intervalA << " ) }} ";
+    std::cout << "{{ -intervalB ( " << this->intervalB << " ) " << "}}" << std::endl;
 
     // status
     std::cout << "~::--::(status of drum kits)::--::~" << std::endl << std::endl;
