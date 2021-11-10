@@ -11,13 +11,14 @@ echo "^.^ ,~={( RUNNING PROGRAM AND GENERATING \"README.Md\" FILE )}~!"
 
 
 ### THE FOLLOWED COMMAND RUNS AI ###
-$COMMAND$SPC$OPTION$SPC$LOGDIR$LOGFILE
+$COMMAND $OPTION $LOGDIR$LOGFILE
 ### ### ### ### ### ### ### ### ###
 
 ### GENERATE "README.md" FROM OUTPUT AND SOME FILES IN: "./ai/log/addy/" AND "./ai/log/output"
 echo "GENERATING \"README.md\" < TEXT FILES." > README.md
 echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
 echo "THIS IS INFORMATION ABOUT THE MODEL-AI" >> README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
 cat ./ai/log/addy/beneficial.txt >> README.md
 cat ./ai/log/addy/readme_component_1.txt >> README.md
 echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
