@@ -15,16 +15,18 @@ $COMMAND$SPC$OPTION$SPC$LOGDIR$LOGFILE
 ### ### ### ### ### ### ### ### ###
 
 ### GENERATE "README.md" FROM OUTPUT AND SOME FILES IN: "./ai/log/addy/" AND "./ai/log/output"
-echo "GENERATING \"README.md\" < TEXTFILES."
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
-cat ./ai/log/addy/beneficial.txt > README.md
+echo "GENERATING \"README.md\" < TEXT FILES." > README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+echo "THIS IS INFORMATION ABOUT THE MODEL-AI" >> README.md
+cat ./ai/log/addy/beneficial.txt >> README.md
 cat ./ai/log/addy/readme_component_1.txt >> README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
-echo "PROGRAM DEBUGGING OUTPUT FROM SCRIPT"
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+echo "PROGRAM DEBUGGED OUTPUT MODELAI-SCRIPT" >> README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
 cat ./ai/log/output.log >> README.md
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" >> README.md
 cat ./ai/log/addy/readme_component_2.txt >> README.md
+cat ./ai/log/addy/copylaw.txt >> README.md
 
 ### DONE WITH SCRIPT ###
 echo "done."
