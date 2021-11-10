@@ -27,7 +27,6 @@
 #include "system/splash.h"
 #include "system/gradle.h"
 #include "logic/learn.cpp"
-#include "drums/drums.cpp"
 #include "logic/limits.cpp"
 #include "entropy/b3hiv3.h"		// includes entropy.cpp && ltctapttclt.cpp
 #include "logic/interpret.cpp"
@@ -35,6 +34,7 @@
 #include "sampler/sampler.cpp"
 #include "logic/algorithms.cpp"
 #include "language/concepts.cpp"
+#include "drum_machine/drums.cpp"
 #include "logic/assembly/input.cpp"
 #include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"	// includes AMModule.h and Modular
