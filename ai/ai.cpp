@@ -449,12 +449,14 @@ void AI::enforce_security() {
 void AI::mod() {
 	this->mdl = new Modular;
 
-	this->mdl->query();
-	this->mdl->set_data("unicorn =1=");
-	this->mdl->set_datas(0, "unicorns =2=");
-	this->mdl->set_datas(1, "unicorn =3=");
-	this->mdl->set_datas(2, "unicorn =1=");
-	this->mdl->set_data("unicorn =4=");
+	// BUSY TESTING THIS MOD()
+
+	//this->mdl->query();
+	this->mdl->set_data("unicorn =001=");
+	this->mdl->set_data("unicorn =002=");
+	this->mdl->set_datas(2, "unicorns =003=");
+	this->mdl->set_datas(3, "unicorn =004=");
+	this->mdl->set_datas(4, "unicorn =005=");
 	this->mdl->get_index();
 	this->mdl->polldata();
 };
