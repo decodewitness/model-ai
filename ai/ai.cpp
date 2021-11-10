@@ -452,8 +452,8 @@ void AI::mod() {
 	this->mdl->query();
 	this->mdl->set_data("unicorn =1=");
 	this->mdl->set_datas(0, "unicorns =2=");
-	this->mdl->set_datas(2, "unicorn =3=");
-	this->mdl->set_datas(0, "unicorn =1=");
+	this->mdl->set_datas(1, "unicorn =3=");
+	this->mdl->set_datas(2, "unicorn =1=");
 	this->mdl->set_data("unicorn =4=");
 	this->mdl->get_index();
 	this->mdl->polldata();

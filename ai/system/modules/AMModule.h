@@ -10,7 +10,6 @@ private:
     std::string s;
     std::string x;
 
-
     int k;
     int l;
     int m;
