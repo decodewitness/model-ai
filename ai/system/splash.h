@@ -7,7 +7,7 @@
 #include <iostream>
 
 void splash(void) {
-	std::cout << " ** ][][" << std::endl << std::endl;
+	std::cout << " ** ][][ **" << std::endl << std::endl;
 }
 
 // eof

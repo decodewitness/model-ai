@@ -111,8 +111,8 @@ public:
 	void shepard(int n, int i) {
 		if (n==i) {
 			this->sheep++;
-			std::cout << std::endl << "-:: MEH!!!(" << n << ")" << std::endl;
-			this->ch = getchar();
+			std::cout << std::endl << "-:: SHEPARD @(\"" << n << "\")(sheep=\"" << sheep << "\")" << std::endl << std::endl;
+			//this->ch = getchar();
 		}
 	}
 

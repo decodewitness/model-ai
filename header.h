@@ -8,7 +8,6 @@
 #include <unistd.h>
 
 // CLASS LIBRARIES HEADERS
-#include "cfg/security.cpp"
 #include "cfg/cfg.h"
 #include "ai/ai.cpp"
 

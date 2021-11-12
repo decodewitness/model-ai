@@ -17,6 +17,11 @@ bool app = true; // this setting to "true" runs the virtual appliance.
 const int runtime_testing = 1001;
 
 AI::AI(int n) {
+
+	if (this->access == false) {
+		this->enforce_security();
+	}
+
 	this->init();
 	
 	// represent headers
@@ -294,7 +299,7 @@ void AI::init() {
 	
 
 	// set "this->crlurl" to resource URL.
-	this->crlurl = "https://www.google.com";
+	this->crlurl = "https://www.example.com";
 
 	int x=0;
 
@@ -383,4 +388,9 @@ int AI::curl(std::string f) {
 	int x = do_curl(f);
 	std::cout << "x:" << x << std::endl;
 	return x;
+};
+
+void AI::enforce_security() {
+	bool ack = security_prompt();
+	this->access = ack;
 };

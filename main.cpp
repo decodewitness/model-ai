@@ -9,16 +9,9 @@ using namespace std;
 // main function
 int main(int argc, char *argv[]) {
 
-	std::string password;
-
 	if (logging_is_enabled==true) {
-		cout << std::endl << "enabled logging (1)" << std::endl;
+		cout << std::endl << "-:: enabled logging." << std::endl;
 	}
-
-	std::cout << "ENTER PASSCODE: ";
-	std::cin >> password;
-
-	check_passcode(password);
 
 	// splash AI model
 	splash();
