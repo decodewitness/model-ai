@@ -73,29 +73,44 @@ CombineModule::CombineModule() {
 
 
 moduleContainer CombineModule::combine(moduleContainer one, moduleContainer two) { // combine 2 module containers / input=container
-    /* moduleContainer {
-            std::string containerName;
-            int sizeData;
-            char *data;
-        }
-    */
+    // struct moduleContainer {
+    //     std::string containerName;
+    //     int sizeData;
+    //     char *data;
+    //     int indexes[sizeOfIndexes/2];
+    //     int filledIndex;
+    // };
 
     std::cout << "~:: combining 2 container modules: (" << one.containerName << ") (" << two.containerName << ")" << std::endl;
     moduleContainer cont;
 
-    cont.containerName = "dataContainer";
+    cont.containerName = "dataContainer"; // make this random
     cont.sizeData = one.sizeData + two.sizeData;
     cont.data = new char[cont.sizeData];
-    
+
+    std::cout << "\t~:: copy container 1 size of data: " << one.sizeData << std::endl;
     for (int i=0; i<one.sizeData; i++) {
         cont.data[i] = one.data[i];
     }
 
+    std::cout << "\t~:: copy container 2 size of data: " << two.sizeData << std::endl;
     for (int i=one.sizeData; i<cont.sizeData; i++) {
         cont.data[i] = two.data[i];
     }
 
-    std::cout << "\t~:: combined data / returning container (size: " << cont.sizeData << ")" << std::endl;
+    std::cout << "\t~:: copy container 1 indexes: " << "(" << one.filledIndex << (sizeOfIndexes/2) << ")" << std::endl;
+    for (int i=0; i<sizeOfIndexes/2; i++) {
+        if (i < one.filledIndex) {
+            cont.indexes[i] = one.indexes[i];    
+        }
+    }
+
+    std::cout << "\t~:: copy container 2 indexes: " << "(" << two.filledIndex << ":" << (sizeOfIndexes/2) << ")" << std::endl;
+    for (int i=sizeOfIndexes/2; i < two.filledIndex && i < sizeOfIndexes; i++) {
+        cont.indexes[i] = two.indexes[i];
+    }
+
+    std::cout << "\t~:: combined data / returning container (size data): " << cont.sizeData << std::endl;
     return cont;
 };
 
@@ -103,8 +118,10 @@ int CombineModule::recount(moduleContainer one, moduleContainer two) {
     this->sizeModules = one.sizeData + two.sizeData;
     this->module1 = one.containerName;
     this->module2 = two.containerName;
-
-    std::cout << "\t~:: recounting data in modules (" << one.containerName << ")(" << two.containerName << "); amounting to : (" << this->sizeModules << ")" << std::endl;
-
+    
+    std::cout << "\t~:: recounting data in modules" << std::endl;
+    std::cout << "(" << one.containerName << ")(" << two.containerName << "); amounting to : data(";
+    std::cout << this->sizeModules << ") indexes(" << (one.filledIndex + two.filledIndex) << ")" << std::endl;
+    
     return this->sizeModules;
 };

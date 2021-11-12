@@ -54,9 +54,9 @@ Modular::Modular() {
 Modular::Modular(std::string n, std::string t) {
     this->module_name = n;
     this->module_type = t;
-    this->data_in_module = 1;
+    this->data_in_module = 0;
 
-    this->moddata = true;
+    this->moddata = false;
 };
 
 void Modular::set_data(std::string dat) {
@@ -65,7 +65,7 @@ void Modular::set_data(std::string dat) {
         this->module_data[data_in_module] = dat;
         this->data_in_module++;
         this->moddata = true;
-        std::cout << "~: updated module - index(" << (this->data_in_module - 1) << ")." << std::endl;
+        std::cout << "~: updated module - at index(" << (this->data_in_module - 1) << ")." << std::endl;
 
     } else {
         perror("!~ (ERROR) - setting Modular data");
@@ -73,32 +73,32 @@ void Modular::set_data(std::string dat) {
     }
 };
 
-void Modular::set_datas(int i, std::string dat) {
+// void Modular::set_datas(int i, std::string dat) {
     
-    std::cout << "\t~:: setting modular data (" << i << ")" << std::endl;
-    bool updated = true;
+//     std::cout << "\t~:: setting modular data (" << i << ")" << std::endl;
+//     bool updated = true;
     
-    if (this->data_in_module <= limit-1) {
-        if (i <= this->data_in_module) {
-            this->module_data[i] = dat;
-            this->moddata = true;
-            std::cout << "\t~:: updated modular record (" << i << ")." << std::endl;
-        } else {
-            this->module_data[this->data_in_module++];
-        }
-    } else {
-        updated = false;
-        this->moddata = false;
-        perror("!~ (ERROR) - setting Modular data");
-    }
+//     if (this->data_in_module <= limit-1) {
+//         if (i <= this->data_in_module) {
+//             this->module_data[i] = dat;
+//             this->moddata = true;
+//             std::cout << "\t~:: updated modular record (" << i << ")." << std::endl;
+//         } else {
+//             this->module_data[this->data_in_module++];
+//         }
+//     } else {
+//         updated = false;
+//         this->moddata = false;
+//         perror("!~ (ERROR) - setting Modular data");
+//     }
     
-    if (updated == true) {
-        std::cout << "~: updated module - index(" << (this->data_in_module - 1) << ")." << std::endl;
-    } else {
-        std::cout << "\t~!! bumped onto limit capacity of module (@ " << this->data_in_module << ")." << std::endl;
-        std::cout << "\t~:: index now at: " << this->get_index() << std::endl;
-    }
-};
+//     if (updated == true) {
+//         std::cout << "~: updated module - index(" << (this->data_in_module - 1) << ")." << std::endl;
+//     } else {
+//         std::cout << "\t~!! bumped onto limit capacity of module (@ " << this->data_in_module << ")." << std::endl;
+//         std::cout << "\t~:: index now at: " << this->get_index() << std::endl;
+//     }
+// };
 
 
 std::string Modular::get_data(int index) {

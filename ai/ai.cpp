@@ -458,21 +458,29 @@ void AI::mod() {
 
 	// BUSY TESTING THIS MOD()
 
-	//this->mdl->query();
+	std::cout << std::endl << "~:: setting module data in cab." << std::endl;
+
 	this->mdl->set_data("unicorn =001=");
 	this->mdl->set_data("unicorn =002=");
-	this->mdl->set_datas(2, "unicorns =003=");
-	this->mdl->set_datas(3, "unicorn =004=");
-	this->mdl->set_datas(4, "unicorn =005=");
+	this->mdl->set_data("unicorn =003=");
+	this->mdl->set_data("unicorn =004=");
+	this->mdl->set_data("unicorn =005=");
+
+	std::cout << "~:: getting index" << std::endl;
 	this->mdl->get_index();
+
+	std::cout << "~:: polling data" << std::endl;
 	this->mdl->polldata();
+	
+	//this->mdl->query();
 };
 
 void AI::combmod(moduleContainer a, moduleContainer b) {
+	
+	std::cout << std::endl << "~:: combine modules ::~" << std::endl;
+
 	this->combinemodule = new CombineModule();
 	this->combm = true;
-
-	std::cout << std::endl << "~:: combine modules ::~" << std::endl;
 	this->m = this->combinemodule->combine(a, b);
 
 	std::cout << "returned: " << this->m.sizeData << " size in module data is stored" << std::endl;
