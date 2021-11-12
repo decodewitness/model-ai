@@ -38,7 +38,7 @@ void commands(int x, std::string param) {
             }
             
             // draw x computation here
-            std::cout << "type:(char)" << " len:" << param.length() << " ";
+            std::cout << "type:char" << " len:" << param.length() << " ";
             std::cout << "vowels:" << vowels << " ";
             std::cout << "consonants:" << consonants << " ";
             std::cout << "special:" << special << " ";

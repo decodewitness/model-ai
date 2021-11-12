@@ -135,7 +135,7 @@ int Modular::polldata() {
     
     if (this->moddata == true) {
         for (i = 0; i < this->get_index(); i++) {
-            std::cout << ":" << (i+1) << ": " << this->get_data(i) << std::endl;
+            std::cout << ":" << (i) << ": " << this->get_data(i) << std::endl;
         }
     } else {
         std::cout << "~:: (poll) no data in this module!" << std::endl;

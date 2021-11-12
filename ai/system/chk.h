@@ -38,7 +38,7 @@ void chk() {
 	newCheck.names[0] = "one";
 	newCheck.checklist[0] = true;
 
-	newCheck.names[1] = "two";
+	newCheck.names[1] = "two: Modules";
 	newCheck.checklist[1] = true;
 
 	newCheck.names[2] = "three";

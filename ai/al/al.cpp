@@ -195,7 +195,7 @@ HAL::HAL() {
 };
 
 HAL::~HAL() {
-	std::cout << std::endl << "-:: aborts runtime! and clean up gracefully!" << std::endl << std::endl;
+	std::cout << std::endl << "-:: aborting artificial life sequence, and clean up gracefully!" << std::endl << std::endl;
 	std::cout << "-:: display ((x)->live())(?x) equaled " << this->x << "." << std::endl;
 };
 

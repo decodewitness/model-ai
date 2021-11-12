@@ -37,10 +37,12 @@
 #include "drum_machine/drums.cpp"
 #include "logic/assembly/input.cpp"
 #include "language/speech/saying.cpp"
-#include "system/modules/modular.cpp"	// includes AMModule.h and Modular
+#include "system/modules/modular.cpp"
 #include "system/modules/combine.cpp"
 #include "system/security/security.cpp"
 #include "logic/transponder/transponder.cpp"
+
+const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)
 
 
 // DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
@@ -50,7 +52,6 @@ bool app = false;
 	// --- VIRTUAL APP APPLIANCE CONTROL SETTING ---
 
 	
-const int nr_modules = 19;	// equal to the number of includes in "modules" (above in this file)
 const int SAMPLER_THREADS = 8;
 
 class AI {
@@ -71,16 +72,19 @@ private:
 	AMModule *ammodule;
 	Modular *mdl;
 	Combine *cmb;
+	CombineModule *combinemodule;
 	Sampler *sampler;
 	
 	bool ammod;
 	bool modul;
 	bool comb;
+	bool combm;
 	bool smpl;
 	
-
 	std::string number_modules[nr_modules];	// thesr_oe are all files and used to construct the virtual domain
 	std::string crlurl;
+
+	moduleContainer m;
 
 public:
 
@@ -120,6 +124,9 @@ public:
 	// modules
 	void AMMod();
 	void mod();
+
+	// combineModule
+	void combmod(moduleContainer a, moduleContainer b);
 
 	// curl and fetch links
 	std::string curl_url() { return this->crlurl; }

@@ -387,6 +387,12 @@ void AI::saygrace() {
 	if (this->ammod == true) { delete this->ammodule; }
 	if (this->modul == true) { delete this->mdl; }
 	if (this->comb == true)  { delete this->cmb; }
+	if (this->combm == true) { delete this->combinemodule; }
+
+	this->smpl = false;
+	this->ammod = false;
+	this->modul = false;
+	this->combm = false;
 
 	this->destroy_msg();
 
@@ -418,6 +424,7 @@ void AI::killc(int x) {	// basically implies killchain handle
 			if (this->ammod == true) { delete this->ammodule; }
 			if (this->modul == true) { delete this->mdl; }
 			if (this->comb == true)  { delete this->cmb; }
+			if (this->combm == true) { delete this->combinemodule; }
 			exit(0);
 			break;
 		default:
@@ -459,4 +466,14 @@ void AI::mod() {
 	this->mdl->set_datas(4, "unicorn =005=");
 	this->mdl->get_index();
 	this->mdl->polldata();
+};
+
+void AI::combmod(moduleContainer a, moduleContainer b) {
+	this->combinemodule = new CombineModule();
+	this->combm = true;
+
+	std::cout << std::endl << "~:: combine modules ::~" << std::endl;
+	this->m = this->combinemodule->combine(a, b);
+
+	std::cout << "returned: " << this->m.sizeData << " size in module data is stored" << std::endl;
 };

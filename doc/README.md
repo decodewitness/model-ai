@@ -1634,7 +1634,7 @@ ENTER PASSCODE:
 	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
--:: aborting artificial life sequence, and clean up gracefully!
+-:: aborts runtime! and clean up gracefully!
 
 -:: display ((x)->live())(?x) equaled .
 -:: destructor artificial life routine was called. -:: killing abstraction layer.
@@ -1665,10 +1665,10 @@ ENTER PASSCODE:
 ~: updated module - index(2).
 	~:: setting modular data (4)
 ~: updated module - index(3).
-:0: unicorn =001=
-:1: unicorn =002=
-:2: unicorns =003=
-:3: 
+:1: unicorn =001=
+:2: unicorn =002=
+:3: unicorns =003=
+:4: 
 
 -:: check integrity / logical step counter.
 	-:: step:3 -:: complete. (100%)
