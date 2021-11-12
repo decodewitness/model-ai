@@ -40,7 +40,7 @@ Modular::Modular() {
     std::string str3 = "module";
 
     Modular modular(str1, str2);
-    std::cout << std::endl << "-__:::: ( created ) modular template ::::__-" << std::endl;
+    std::cout << std::endl << "-__:::: ( created ) modular template ::::__-" << std::endl << std::endl;
 
     modular.set_data(str3);
     std::cout << "\t~:: filled in modular template with generic data." << std::endl;
