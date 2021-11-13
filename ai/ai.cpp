@@ -12,6 +12,52 @@
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
 const int runtime_testing = 1001;
 
+// EXTERNAL DECLARATIONS
+// const extern int module_limits;
+// extern std::string moduleName[module_limits];
+// extern std::string data[module_limits];
+
+
+// DECLARATIONS
+// MODULES DEFINITIONS AND DECLARATIONS
+
+
+std::string moduleName[module_limits] = {
+	"--speech synthesizers--",
+	"--      sensors      --",
+	"--pattern recognition--",
+	"--artificial life rtn--",
+	"--       drums       --",
+	"--natural language pr--",
+	"--catalogues routines--",
+	"--health & life cycle--",
+	"--        ocr        --",
+	"--image & translation--",
+	"--      _EOM        --"
+}; // COUNT ON THIS AND NOT THE VARIABLE "module_limits"
+// LAST MODULE TO SET THE LIMIT IN ARRAY (PLEASE ALSO SPECIFY THE modulesTotal NUMBER EQUAL TO THE LAST MODULE)
+
+int modulesTotal = 10;  // this should be equal to the index of the "EOM" module (IN THE HIGHEST INDEX OF MODULENAME / THE INDEX AFTER THE LAST MODULE)
+int dataTotal = 10; // this should be equal to the number of files in the "data[]" array
+
+// FIT DATA INTO data[] ARRAY
+std::string moduleData[module_limits] = {
+	"speech.csv"
+	"sensor_reading.csv",
+	"pattern_recognition.csv",
+	"artificial_life.csv",
+	"drums.csv",
+	"natural_language_processing.csv",
+	"catalogues.csv",
+	"health_criteria.csv",
+	"ocr.csv",
+	"images_translation.csv",
+	"__REACHED_EOM_THE_LAST_MODULE"
+}; // PLACEHOLDER INSIDE LAST MODULE AGAIN
+
+
+
+
 // AI constructor
 AI::AI(int n) {
 
@@ -140,31 +186,49 @@ void AI::check_functions() {
 }
 
 void AI::headers() {
-	// put in array and manipulate headers
-	std::cout << std::endl << "-:: setting headers" << std::endl;
+	
+	// manipulate headers
+	std::cout << std::endl << "-:: setting headers ::-" << std::endl;
 
 	// open headers list file
-	std::fstream headers("headers.txt");
+	std::fstream fheaders("headers.txt");
 	
 	// variables
-	string arr[1024];
+	int i=0, heapsize=0, total=4, count=1024;
+	string arr[count];
 	string tmp;
-	int i=0, count;
 
-	// close file with headers' file handle
-	headers.close();
+	//initialize array arr[]
+	for (int ki=0; heapsize < count && heapsize < total; ki++) {
+				arr[ki] = "- ()[:  module name  :] - data[queryObject] (#)";
+				std::cout << "- ()[:  module name  :] - data[queryObject] (#)" << std::endl;
+				std::cout << "      " << moduleName[ki] << " - " << moduleData[ki] << std::endl;
+				heapsize++;
+	}
+
+	// declare function stackmodule
+	void stackmodule(int x, std::string *ar);
+
 	count = i;
 
 	// list headers
-	for (i=0; i<count; i++) {
+	for (i=0; i<count && i<heapsize; i++) {
+		
 		//std::cout << asterisktab << arr[i] << std::endl;
+		std::cout << "- setting header:";
+
+		// stacking headers
+		stackmodule(i, &arr[i]);
+
+		// write headers to file
+		fheaders << arr[i] << std::endl;
 	}
 
-	// load headers here
-	// // //
+	// close file with headers' file handle
+	fheaders.close();
 }
 
-void AI::test(int n=0) {
+void AI::test(int n=0) { // testing all modules in this function
 
 	// display oval
 	//int x=amnesia();
@@ -178,26 +242,42 @@ void AI::test(int n=0) {
 		case 0:
 			std::cout << "! -:: skipping tests." << std::endl;
 			break;
+			
 		case 1:	// speech
 			std::cout << "\t-:: random query for speech synthesis." << std::endl;
-			check();
+
+			// this->synthesizer->check()
+			check();	// writes check after checking is done
 			break;
+
 		case 2:	// methods
 			std::cout << "\t-:: access random method for sampling in device." << std::endl;
-			check();
+
+			// this->methods->check();
+			check();	// writes check after checking is done
 			break;
+
 		case 3: // routines
 			std::cout << "\t-:: accessing random sampler routine for sampling." << std::endl;
-			check();
+			
+			// this->sampler->check();
+			check();	// writes check after checking is done
 			break;
+
 		case 4: // catalogue
 			std::cout << "\t-:: performs random queries inside catalogue algorithmic." << std::endl;
-			check();
+
+			// this->db->check();
+			check();	// writes check after checking is done
 			break;
+
 		case 5: // recognition
 			std::cout << "\t-:: random pattern recognition for input measure." << std::endl;
-			check();
+
+			// this->sensors->check();
+			check();	// writes check after checking is done
 			break;
+
 		default: // unrecognized
 			std::cout << "! -:: error :: module not recognized in testing engine." << std::endl;
 			break;
@@ -312,7 +392,9 @@ void AI::sample() {
 	}
 };
 
-void check() { std::cout << "\t-:: check." << std::endl; }
+void check() {
+	std::cout << "\t-:: check." << std::endl;
+}
 
 void AI::init() {
 	// INITIALIZATION
@@ -392,6 +474,7 @@ void AI::saygrace() {
 	this->smpl = false;
 	this->ammod = false;
 	this->modul = false;
+	this->comb = false;
 	this->combm = false;
 
 	this->destroy_msg();
@@ -484,4 +567,26 @@ void AI::combmod(moduleContainer a, moduleContainer b) {
 	this->m = this->combinemodule->combine(a, b);
 
 	std::cout << "returned: " << this->m.sizeData << " size in module data is stored" << std::endl;
+};
+
+
+
+
+// OTHER FUNCTIONS
+
+void stackmodule(int x, std::string *ar) {
+	// stacking header
+	// header name / content label
+		// functions -> functions in display
+	
+	std::cout << x << ". " << *(ar+x) << std::endl;
+	switch (x) {	// x == module
+		case 0: // speech
+		case 1: // sampling
+		case 2: // random sampler routine for sampling
+		case 3: // random queries inside catalogue
+		case 4: // pattern recognition
+		default:
+		break;
+	};
 };

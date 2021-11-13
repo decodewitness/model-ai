@@ -1502,7 +1502,15 @@ ENTER PASSCODE:
 		~:: ((0))::(no module)::implementation.
 	-:: gradle method finished. (1)
 
--:: setting headers
+-:: setting headers ::-
+- ()[:  module name  :] - data[queryObject] (#)
+      --speech synthesizers-- - speech.csvsensor_reading.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --      sensors      -- - pattern_recognition.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --pattern recognition-- - artificial_life.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --artificial life rtn-- - drums.csv
 -:: checking arguments.
 	1: arguments.
 
@@ -1802,6 +1810,16 @@ holytapltcltcttapishholytaptapishltct
 
 
 <<<<<<<<<<<<<<<<<<<<<<<
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /ai</pre>
+</body>
+</html>
 
 <<<<<<<<<<<<<<<<<<<<<<<
 x:0

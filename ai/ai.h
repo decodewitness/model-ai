@@ -21,7 +21,7 @@
 // configurations
 #include "cfg/config.h"
 
-// modules
+// headers
 #include "system/chk.h"
 #include "fetch/curl.cpp"
 #include "system/splash.h"
@@ -40,9 +40,13 @@
 #include "system/modules/modular.cpp"
 #include "system/modules/combine.cpp"
 #include "system/security/security.cpp"
+//#include "system/modules/definitions.cpp"
 #include "logic/transponder/transponder.cpp"
 
 const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)
+
+// FOR OTHER MODULES
+const int module_limits = 1024;
 
 
 // DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
@@ -81,7 +85,7 @@ private:
 	bool combm;
 	bool smpl;
 	
-	std::string number_modules[nr_modules];	// thesr_oe are all files and used to construct the virtual domain
+	std::string number_modules[nr_modules];	// these are all files and used to construct the virtual domain
 	std::string crlurl;
 
 	moduleContainer m;
