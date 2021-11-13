@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 //=====================================
 //=====================================
+=======
+>>>>>>> 3f87458c3194946052a71447f2d657773d4f5f45
 
 -:: enabled logging.
  ** ][][ **
@@ -1636,7 +1639,11 @@ ENTER PASSCODE:
 	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
+<<<<<<< HEAD
 -:: aborting artificial life sequence, and clean up gracefully!
+=======
+-:: aborts runtime! and clean up gracefully!
+>>>>>>> 3f87458c3194946052a71447f2d657773d4f5f45
 
 -:: display ((x)->live())(?x) equaled .
 -:: destructor artificial life routine was called. -:: killing abstraction layer.
@@ -1656,6 +1663,7 @@ ENTER PASSCODE:
 	-:: 10. ten:	true
 
 -__:::: ( created ) modular template ::::__-
+<<<<<<< HEAD
 
 ~: updated module - at index(0).
 	~:: filled in modular template with generic data.
@@ -1673,6 +1681,23 @@ ENTER PASSCODE:
 :2: unicorn =003=
 :3: unicorn =004=
 :4: unicorn =005=
+=======
+~: updated module - index(1).
+	~:: filled in modular template with generic data.
+~: updated module - index(0).
+~: updated module - index(1).
+	~:: setting modular data (2)
+	~:: updated modular record (2).
+~: updated module - index(1).
+	~:: setting modular data (3)
+~: updated module - index(2).
+	~:: setting modular data (4)
+~: updated module - index(3).
+:1: unicorn =001=
+:2: unicorn =002=
+:3: unicorns =003=
+:4: 
+>>>>>>> 3f87458c3194946052a71447f2d657773d4f5f45
 
 -:: check integrity / logical step counter.
 	-:: step:3 -:: complete. (100%)
@@ -1819,6 +1844,9 @@ x:0
 
 -:: calling destructor for AI::Model.
 -:: done.
+<<<<<<< HEAD
 
 //=====================================
 //=====================================
+=======
+>>>>>>> 3f87458c3194946052a71447f2d657773d4f5f45
