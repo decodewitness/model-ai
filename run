@@ -3,6 +3,8 @@
 ### SETUP SCRIPT FOR THE AI ROUTINE ###
 
 ### check for GCC compiler
+echo "RUNTIME SCRIPT"
+echo
 echo "~:checking for GCC compiler."
 if [ -f "/usr/bin/gcc" ]
 then
@@ -89,7 +91,10 @@ then
   #rm -Rf ai/virtual/virtual-cd
 fi
 
-echo "copying \"runtime.txt\" log file to \"./doc\""
+echo "~:copying \"runtime.txt\" log file to \"./doc\""
 cp ./ai/log/runtime.txt ./doc
+
+echo "~:filling README.md"
+cat ./ai/log/runtime.txt > README.md
 
 exit 0

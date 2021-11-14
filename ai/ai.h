@@ -15,7 +15,7 @@
 #include "logic/ascii/amnesia.h"
 #include "logic/ascii/asterisktab.h"
 
-// hal
+// artificial life routines
 #include "al/al.cpp"
 
 // configurations
@@ -43,7 +43,8 @@
 #include "logic/transponder/transponder.cpp"
 #include "system/modules/combine/combine.cpp"
 
-const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)
+// linked to above modules
+const int nr_modules = 18;	// equal to the number of includes in "modules" (above this)
 
 // FOR OTHER MODULES
 const int module_limits = 1024;
@@ -84,7 +85,10 @@ private:
 	bool comb;
 	bool combm;
 	bool smpl;
-	
+
+	int element;
+	int elements;
+
 	std::string number_modules[nr_modules];	// these are all files and used to construct the virtual domain
 	std::string crlurl;
 
@@ -119,6 +123,7 @@ public:
 	// hall and functional stepping mechanism
 	void hal();
 	bool stepping();
+	bool pooling(int x=1);
 
 	// queries, sampler & appliance
 	void query();

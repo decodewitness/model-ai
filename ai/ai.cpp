@@ -324,16 +324,35 @@ bool AI::stepping() {	// integrity checking
 	bool errors=false;
 	
 	// steps
-	int steps=4;
+	int steps=10;
 	int steps_completed=0;
 	int count=steps;
 
+	const double Percent=100.00;
+
+	double degrees = 0.00;
+	double percentage=100.00;
+	double inPercent=0.00;
+	double onePercent=(Percent/Percent);
+
 	std::cout << std::endl << "-:: check integrity / logical step counter." << std::endl;
-	
+
 	for (int i=steps; i>=1; i--) {
 		// implement incremental logic here
-		std::cout << "\t-:: step:" << --steps;
+
+		if (this->pooling(this->element++) != true && this->element < this->elements) {
+			hashesCheckOut=false;
+		};
 		
+		// increase percentages
+		percentage -= (steps * (Percent/onePercent));
+		inPercent += (Percent/steps);
+		std::cout << "(percentage): (%): " << inPercent << "% +/+)  :";
+		
+		// calculate degrees & adding measure in degrees
+		degrees = (1-(1-((Percent - inPercent)/100)));
+		std::cout << "(minus percentage): (-DEG.): " << degrees << " in degrees :." << std::endl;
+
 		// on error bail out (set ch to anything but 'c' during checking to prevent the next checks)
 		if (errors==true) {	// check for errors
 			this->ch='d';	// change to 'd' in case of errors
@@ -344,7 +363,7 @@ bool AI::stepping() {	// integrity checking
 			break; // bails on anything different than 'c'!
 		else {
 			steps_completed++;
-			std::cout << " -:: complete. (100%)" << std::endl;
+			std::cout << " -:: step: " << (steps-i + 1) << " complete. (100%)" << std::endl;
 		}
 	}
 	
@@ -569,6 +588,17 @@ void AI::combmod(moduleContainer a, moduleContainer b) {
 	std::cout << "returned: " << this->m.sizeData << " size in module data is stored" << std::endl;
 };
 
+bool AI::pooling(int x) {
+	this->elements = 5;
+	std::cout << "\t-::max pool elements: " << this->elements << " :: pooling: " << x << " elements." << std::endl;
+
+	for (int i=1; i<=x && i<this->elements; i++) {
+		std::cout << "\t~pooling: reserve " << i << "." << std::endl;
+
+		// pool reserve here from data
+	}
+	return 1;
+}
 
 
 
