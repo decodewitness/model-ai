@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 
-#include "AMModule.cpp"
+#include "ammodule/AMModule.cpp"
 
 const int limit = 64;
 

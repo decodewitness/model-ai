@@ -38,10 +38,10 @@
 #include "logic/assembly/input.cpp"
 #include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"
-#include "system/modules/combine.cpp"
 #include "system/security/security.cpp"
 //#include "system/modules/definitions.cpp"
 #include "logic/transponder/transponder.cpp"
+#include "system/modules/combine/combine.cpp"
 
 const int nr_modules = 18;	// equal to the number of includes in "modules" (above in this file)
 
