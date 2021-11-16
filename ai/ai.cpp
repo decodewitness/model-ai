@@ -600,8 +600,6 @@ bool AI::pooling(int x) {
 	return 1;
 }
 
-
-
 // OTHER FUNCTIONS
 
 void stackmodule(int x, std::string *ar) {

@@ -5,9 +5,10 @@
 #include <cstring>
 
 struct checks { // structure that contains all the checklist items
-    int it; // should be the size of the arrays
-    bool checklist[10];
-    std::string names[10];
+    int it; // should be the size of the arrays except payload which is variable here
+    bool checklist[10];	// check is valid or false
+    std::string names[10];	// names for the checklist items
+	std::string payload[128]; // apply this in context
 };
 
 void chkconf(checks chklist) {  // checks checklist -> it needs to be set

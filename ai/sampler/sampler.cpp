@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "samplertrack.cpp"
+
 class Sampler {
 
 private:
@@ -16,8 +18,16 @@ public:
     Sampler(int t) {
         std::cout << "\t-:: starting sampler." << std::endl;
         this->threads = 8;
-        std::cout << "\t\t-:: set " << this->threads << " threads." << std::endl;
+        std::cout << "\t\t-:: sampling is set to (" << this->threads << ") threads." << std::endl;
     }
+
+    // int maximumThreads=128;
+    // bool threads_initialized[128];
+    
+    int track=1;    // main track in sampler
+    int initialize=track;
+
+    SamplerTrack samplerTrack;
 
     void setTo(int n) {
         switch (n) {
@@ -27,6 +37,8 @@ public:
                 this->repeat_cycle=false;
                 this->promiscuous=true;
                 std::cout << "\t-:: sampler set to promiscuous." << std::endl;
+                std::cout << "\t\t(- promisc. -)" << std::endl;
+
             break;
             case 1:
                 this->pause=false;
@@ -34,6 +46,8 @@ public:
                 this->promiscuous=false;
                 this->recording=true;
                 std::cout << "\t-:: sampler set to recording." << std::endl;
+                std::cout << "\t\t(- >iO -)" << std::endl;
+
             break;
             case 2:
                 this->repeat_cycle=false;
@@ -41,6 +55,7 @@ public:
                 this->recording=false;
                 this->pause=true;
                 std::cout << "\t-:: sampler set to pause." << std::endl;
+                std::cout << "\t\t(-  ||  -)" << std::endl;
             break;
             case 3:
                 this->promiscuous=false;
@@ -48,11 +63,15 @@ public:
                 this->pause=false;
                 this->repeat_cycle=true;
                 std::cout << "\t-:: sampler set to repeatcycle." << std::endl;
+                std::cout << "\t\t(- *<--R -)" << std::endl;
+            default:
+                this->setTo(initialize);
+            break;
         };
     }
 
     void init() {
-        this->setTo(1);
+        this->setTo(initialize);
     }
 
     void decouple() {

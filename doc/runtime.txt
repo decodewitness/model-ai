@@ -1288,215 +1288,111 @@ ENTER PASSCODE:
 
 
 ::- loading gradle -::
-~!~ running: 25(modules); (1) sets of module runs.
+~!~ running: 25(modules); (0) sets of module runs or x.
 ~:: checking for gradle modules.
 	-:: no &(such) implementation.
 		~:: ((0))::(no module)::implementation.
 	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 01.
-		~:: (01)::(EN)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 02.
-		~:: (02)::(FX)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 03.
-		~:: (03)::(RT)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 04.
-		~:: (04)::(CDB)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 05.
-		~:: (05)::(REC)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 06.
-		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 07.
-		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 08.
-		~:: (OUT)(1-1)::(EN)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 09.
-		~:: (OUT)(2-2)::(EN)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 10.
-		~:: (OUT)(3-3)::(FX)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 11.
-		~:: (OUT)(4-4)::(FX)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 12.
-		~:: (IN)(5-5)::(RT)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 13.
-		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 14.
-		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 15.
-		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 16.
-		~:: (IN)(aux)(4)::(REC)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 17.
-		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 18.
-		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 19.
-		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 20.
-		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 21.
-		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 22.
-		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 23.
-		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 24.
-		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 25.
-		~:: (OUT/IN)(aux)(__A1_B2)::((XL)_:c)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
 	-:: no &(such) implementation.
 		~:: ((0))::(no module)::implementation.
 	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 01.
-		~:: (01)::(EN)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 02.
-		~:: (02)::(FX)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 03.
-		~:: (03)::(RT)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 04.
-		~:: (04)::(CDB)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 05.
-		~:: (05)::(REC)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 06.
-		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 07.
-		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 08.
-		~:: (OUT)(1-1)::(EN)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 09.
-		~:: (OUT)(2-2)::(EN)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 10.
-		~:: (OUT)(3-3)::(FX)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 11.
-		~:: (OUT)(4-4)::(FX)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 12.
-		~:: (IN)(5-5)::(RT)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 13.
-		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 14.
-		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 15.
-		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 16.
-		~:: (IN)(aux)(4)::(REC)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 17.
-		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 18.
-		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 19.
-		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 20.
-		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 21.
-		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 22.
-		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
-	-:: checking gradle module 23.
-		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 24.
-		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
-	(module was found.)
-~:: checking for gradle modules.
-	-:: checking gradle module 25.
-		~:: (OUT/IN)(aux)(__A1_B2)::((XL)_:c)+module)::implementation.
-	(module was found.)
+	-:: no &(such) implementation.
+		~:: ((0))::(no module)::implementation.
+	(no module was available.)
 ~:: checking for gradle modules.
 	-:: no &(such) implementation.
 		~:: ((0))::(no module)::implementation.
@@ -1638,8 +1534,8 @@ ENTER PASSCODE:
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	l
-	[ x computation: type:char len:1 vowels:1 consonants:0 special:0  ]
+	logic
+	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1682,140 +1578,75 @@ ENTER PASSCODE:
 
 -:: check integrity / logical step counter.
 	-::max pool elements: 5 :: pooling: 0 elements.
-(percentage): (%): 5% +/+)  :(minus percentage): (-DEG.): 0.95 in degrees :.
+(percentage): (%): 10% +/+)  :(minus percentage): (-DEG.): 0.9 in degrees :.
  -:: step: 1 complete. (100%)
 	-::max pool elements: 5 :: pooling: 1 elements.
-(percentage): (%): 10% +/+)  :(minus percentage): (-DEG.): 0.9 in degrees :.
+	~pooling: reserve 1.
+(percentage): (%): 20% +/+)  :(minus percentage): (-DEG.): 0.8 in degrees :.
  -:: step: 2 complete. (100%)
 	-::max pool elements: 5 :: pooling: 2 elements.
 	~pooling: reserve 1.
-(percentage): (%): 15% +/+)  :(minus percentage): (-DEG.): 0.85 in degrees :.
+	~pooling: reserve 2.
+(percentage): (%): 30% +/+)  :(minus percentage): (-DEG.): 0.7 in degrees :.
  -:: step: 3 complete. (100%)
 	-::max pool elements: 5 :: pooling: 3 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
-(percentage): (%): 20% +/+)  :(minus percentage): (-DEG.): 0.8 in degrees :.
+	~pooling: reserve 3.
+(percentage): (%): 40% +/+)  :(minus percentage): (-DEG.): 0.6 in degrees :.
  -:: step: 4 complete. (100%)
 	-::max pool elements: 5 :: pooling: 4 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
 	~pooling: reserve 3.
-(percentage): (%): 25% +/+)  :(minus percentage): (-DEG.): 0.75 in degrees :.
+	~pooling: reserve 4.
+(percentage): (%): 50% +/+)  :(minus percentage): (-DEG.): 0.5 in degrees :.
  -:: step: 5 complete. (100%)
 	-::max pool elements: 5 :: pooling: 5 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
 	~pooling: reserve 3.
 	~pooling: reserve 4.
-(percentage): (%): 30% +/+)  :(minus percentage): (-DEG.): 0.7 in degrees :.
+(percentage): (%): 60% +/+)  :(minus percentage): (-DEG.): 0.4 in degrees :.
  -:: step: 6 complete. (100%)
 	-::max pool elements: 5 :: pooling: 6 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
 	~pooling: reserve 3.
 	~pooling: reserve 4.
-(percentage): (%): 35% +/+)  :(minus percentage): (-DEG.): 0.65 in degrees :.
+(percentage): (%): 70% +/+)  :(minus percentage): (-DEG.): 0.3 in degrees :.
  -:: step: 7 complete. (100%)
 	-::max pool elements: 5 :: pooling: 7 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
 	~pooling: reserve 3.
 	~pooling: reserve 4.
-(percentage): (%): 40% +/+)  :(minus percentage): (-DEG.): 0.6 in degrees :.
+(percentage): (%): 80% +/+)  :(minus percentage): (-DEG.): 0.2 in degrees :.
  -:: step: 8 complete. (100%)
 	-::max pool elements: 5 :: pooling: 8 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
 	~pooling: reserve 3.
 	~pooling: reserve 4.
-(percentage): (%): 45% +/+)  :(minus percentage): (-DEG.): 0.55 in degrees :.
+(percentage): (%): 90% +/+)  :(minus percentage): (-DEG.): 0.1 in degrees :.
  -:: step: 9 complete. (100%)
 	-::max pool elements: 5 :: pooling: 9 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
 	~pooling: reserve 3.
 	~pooling: reserve 4.
-(percentage): (%): 50% +/+)  :(minus percentage): (-DEG.): 0.5 in degrees :.
- -:: step: 10 complete. (100%)
-	-::max pool elements: 5 :: pooling: 10 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 55% +/+)  :(minus percentage): (-DEG.): 0.45 in degrees :.
- -:: step: 11 complete. (100%)
-	-::max pool elements: 5 :: pooling: 11 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 60% +/+)  :(minus percentage): (-DEG.): 0.4 in degrees :.
- -:: step: 12 complete. (100%)
-	-::max pool elements: 5 :: pooling: 12 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 65% +/+)  :(minus percentage): (-DEG.): 0.35 in degrees :.
- -:: step: 13 complete. (100%)
-	-::max pool elements: 5 :: pooling: 13 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 70% +/+)  :(minus percentage): (-DEG.): 0.3 in degrees :.
- -:: step: 14 complete. (100%)
-	-::max pool elements: 5 :: pooling: 14 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 75% +/+)  :(minus percentage): (-DEG.): 0.25 in degrees :.
- -:: step: 15 complete. (100%)
-	-::max pool elements: 5 :: pooling: 15 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 80% +/+)  :(minus percentage): (-DEG.): 0.2 in degrees :.
- -:: step: 16 complete. (100%)
-	-::max pool elements: 5 :: pooling: 16 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 85% +/+)  :(minus percentage): (-DEG.): 0.15 in degrees :.
- -:: step: 17 complete. (100%)
-	-::max pool elements: 5 :: pooling: 17 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 90% +/+)  :(minus percentage): (-DEG.): 0.1 in degrees :.
- -:: step: 18 complete. (100%)
-	-::max pool elements: 5 :: pooling: 18 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 95% +/+)  :(minus percentage): (-DEG.): 0.05 in degrees :.
- -:: step: 19 complete. (100%)
-	-::max pool elements: 5 :: pooling: 19 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
 (percentage): (%): 100% +/+)  :(minus percentage): (-DEG.): 0 in degrees :.
- -:: step: 20 complete. (100%)
-	-:: steps completed: 20
+ -:: step: 10 complete. (100%)
+	-:: steps completed: 10
 
 -:: starting AI.
 	-:: sampler: 8 threads.
 	-:: starting sampler.
-		-:: set 8 threads.
+		-:: sampling is set to (8) threads.
 	::--entropy--::
 
 	-:: sampler set to recording.
+		(- >iO -)
 
 -:: feeding entropy
 -:: tap the ltctap.
@@ -1932,6 +1763,7 @@ holytapltcltcttapishholytaptapishltct
 
 
 <<<<<<<<<<<<<<<<<<<<<<<
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1949,6 +1781,7 @@ x:0
 -:: decoupler.
 	-:: decoupling sampler
 	-:: sampler set to pause.
+		(-  ||  -)
 
 
 ::=> saving grace (routine) and closing libraries <=::

@@ -19,7 +19,7 @@ int do_curl(std::string my_url)
 
   curl = curl_easy_init();
   if(curl) {
-   	std::cout << std::endl << "<<<<<<<<<<<<<<<<<<<<<<<" << std::endl;
+   	std::cout << std::endl << "<<<<<<<<<<<<<<<<<<<<<<<" << std::endl << std::endl;
 
     curl_easy_setopt(curl, CURLOPT_URL, my_url.c_str());
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
@@ -28,9 +28,9 @@ int do_curl(std::string my_url)
     res = curl_easy_perform(curl);
     curl_easy_cleanup(curl);
 
-    std::cout << readBuffer << std::endl;
+    std::cout << readBuffer;
 
-    	std::cout << "<<<<<<<<<<<<<<<<<<<<<<<" << std::endl;
+    	std::cout << std::endl << "<<<<<<<<<<<<<<<<<<<<<<<" << std::endl;
   }
 
   return 0;
