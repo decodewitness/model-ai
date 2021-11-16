@@ -39,7 +39,7 @@
 #include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"
 #include "system/security/security.cpp"
-//#include "system/modules/definitions.cpp"
+#include "system/definitions/encoder.cpp"
 #include "logic/transponder/transponder.cpp"
 #include "system/modules/combine/combine.cpp"
 
