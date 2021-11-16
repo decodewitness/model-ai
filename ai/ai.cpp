@@ -194,7 +194,7 @@ void AI::headers() {
 	std::fstream fheaders("headers.txt");
 	
 	// variables
-	int i=0, heapsize=0, total=4, count=1024;
+	int i=0, heapsize=0, total=10, count=1024;	// variable "total" is number of .csv files for the model
 	string arr[count];
 	string tmp;
 

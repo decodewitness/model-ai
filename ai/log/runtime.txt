@@ -1407,6 +1407,18 @@ ENTER PASSCODE:
       --pattern recognition-- - pattern_recognition.csv
 - ()[:  module name  :] - data[queryObject] (#)
       --artificial life rtn-- - artificial_life.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --       drums       -- - drums.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --natural language pr-- - natural_language_processing.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --catalogues routines-- - catalogues.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --health & life cycle-- - health_criteria.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --        ocr        -- - ocr.csv
+- ()[:  module name  :] - data[queryObject] (#)
+      --image & translation-- - images_translation.csv
 -:: checking arguments.
 	1: arguments.
 
