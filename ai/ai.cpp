@@ -42,7 +42,7 @@ int dataTotal = 10; // this should be equal to the number of files in the "data[
 
 // FIT DATA INTO data[] ARRAY
 std::string moduleData[module_limits] = {
-	"speech.csv"
+	"speech.csv",
 	"sensor_reading.csv",
 	"pattern_recognition.csv",
 	"artificial_life.csv",

@@ -1400,13 +1400,13 @@ ENTER PASSCODE:
 
 -:: setting headers ::-
 - ()[:  module name  :] - data[queryObject] (#)
-      --speech synthesizers-- - speech.csvsensor_reading.csv
+      --speech synthesizers-- - speech.csv
 - ()[:  module name  :] - data[queryObject] (#)
-      --      sensors      -- - pattern_recognition.csv
+      --      sensors      -- - sensor_reading.csv
 - ()[:  module name  :] - data[queryObject] (#)
-      --pattern recognition-- - artificial_life.csv
+      --pattern recognition-- - pattern_recognition.csv
 - ()[:  module name  :] - data[queryObject] (#)
-      --artificial life rtn-- - drums.csv
+      --artificial life rtn-- - artificial_life.csv
 -:: checking arguments.
 	1: arguments.
 
