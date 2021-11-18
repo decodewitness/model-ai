@@ -21,7 +21,7 @@ void fcltaptaptap() {
 // title panel                          //t1
 /* int t1() {;}                             //tl
  * void tl() {;}                //1tlt1tl
- * void lt1tlt1() {;}           //t1tl      (THE B3HIv3)
+ * void lt1tlt1() {;}           //t1tl      (THE B33HIv3)
  * void t1tl() {;} */           //tl
 // trousers                     //t1
 /* void lt1tlt1(int t) {;}

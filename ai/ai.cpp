@@ -191,28 +191,33 @@ void AI::headers() {
 	std::cout << std::endl << "-:: setting headers ::-" << std::endl;
 
 	// open headers list file
-	std::fstream fheaders("headers.txt");
+	std::cout << "\t~:: opening \"headers.txt\" for writing." << std::endl;
+	ofstream fheaders;
+	fheaders.open("headers.txt");
 	
 	// variables
-	int i=0, heapsize=0, total=10, count=1024;	// variable "total" is number of .csv files for the model
+	int ki=0;
+	int heapsize=0, total=10, count=1024;	// variable "total" is number of .csv files defined in moduleData[] above
 	string arr[count];
 	string tmp;
 
+	std::cout << "\t- ()[:  module name  :] - data[queryObject] (#)" << std::endl;
 	//initialize array arr[]
-	for (int ki=0; heapsize < count && heapsize < total; ki++) {
-				arr[ki] = "- ()[:  module name  :] - data[queryObject] (#)";
-				std::cout << "- ()[:  module name  :] - data[queryObject] (#)" << std::endl;
-				std::cout << "      " << moduleName[ki] << " - " << moduleData[ki] << std::endl;
+	for (ki=0; heapsize < count && heapsize < total; ki++) {
+				arr[ki] = moduleName[ki] + ":" + moduleData[ki];
+				//std::cout << "      " << moduleName[ki] << " - " << moduleData[ki] << std::endl;
+				std::cout << "\t" << arr[ki] << std::endl;
 				heapsize++;
 	}
+	heapsize = ki;
+	count = ki;
 
 	// declare function stackmodule
 	void stackmodule(int x, std::string *ar);
 
-	count = i;
 
 	// list headers
-	for (i=0; i<count && i<heapsize; i++) {
+	for (int i=0; i<count && i<heapsize; i++) {
 		
 		//std::cout << asterisktab << arr[i] << std::endl;
 		std::cout << "- setting header:";
@@ -221,7 +226,7 @@ void AI::headers() {
 		stackmodule(i, &arr[i]);
 
 		// write headers to file
-		fheaders << arr[i] << std::endl;
+		fheaders << i << ". " << arr[i] << std::endl;
 	}
 
 	// close file with headers' file handle

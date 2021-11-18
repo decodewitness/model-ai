@@ -1399,26 +1399,28 @@ ENTER PASSCODE:
 	-:: gradle method finished. (1)
 
 -:: setting headers ::-
-- ()[:  module name  :] - data[queryObject] (#)
-      --speech synthesizers-- - speech.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --      sensors      -- - sensor_reading.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --pattern recognition-- - pattern_recognition.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --artificial life rtn-- - artificial_life.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --       drums       -- - drums.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --natural language pr-- - natural_language_processing.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --catalogues routines-- - catalogues.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --health & life cycle-- - health_criteria.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --        ocr        -- - ocr.csv
-- ()[:  module name  :] - data[queryObject] (#)
-      --image & translation-- - images_translation.csv
+	~:: opening "headers.txt" for writing.
+	- ()[:  module name  :] - data[queryObject] (#)
+	--speech synthesizers--:speech.csv
+	--      sensors      --:sensor_reading.csv
+	--pattern recognition--:pattern_recognition.csv
+	--artificial life rtn--:artificial_life.csv
+	--       drums       --:drums.csv
+	--natural language pr--:natural_language_processing.csv
+	--catalogues routines--:catalogues.csv
+	--health & life cycle--:health_criteria.csv
+	--        ocr        --:ocr.csv
+	--image & translation--:images_translation.csv
+- setting header:0. --speech synthesizers--:speech.csv
+- setting header:1. --pattern recognition--:pattern_recognition.csv
+- setting header:2. --       drums       --:drums.csv
+- setting header:3. --catalogues routines--:catalogues.csv
+- setting header:4. --        ocr        --:ocr.csv
+- setting header:5. 
+- setting header:6. 
+- setting header:7. 
+- setting header:8. 
+- setting header:9. 
 -:: checking arguments.
 	1: arguments.
 
@@ -1575,18 +1577,9 @@ ENTER PASSCODE:
 	~:: filled in modular template with generic data.
 
 ~:: setting module data in cab.
-~: updated module - at index(0).
-~: updated module - at index(1).
-~: updated module - at index(2).
-~: updated module - at index(3).
-~: updated module - at index(4).
 ~:: getting index
 ~:: polling data
-:0: unicorn =001=
-:1: unicorn =002=
-:2: unicorn =003=
-:3: unicorn =004=
-:4: unicorn =005=
+~:: (poll) no data in this module!
 
 -:: check integrity / logical step counter.
 	-::max pool elements: 5 :: pooling: 0 elements.
