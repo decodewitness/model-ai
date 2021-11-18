@@ -1288,139 +1288,133 @@ ENTER PASSCODE:
 
 
 ::- loading gradle -::
-~!~ running: 25(modules); (0) sets of module runs or x.
+~!~ running: 25(modules); (1) sets of module runs or x.
 ~:: checking for gradle modules.
 	-:: no &(such) implementation.
 		~:: ((0))::(no module)::implementation.
 	(no module was available.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 01.
+		~:: (01)::(EN)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 02.
+		~:: (02)::(FX)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 03.
+		~:: (03)::(RT)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 04.
+		~:: (04)::(CDB)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 05.
+		~:: (05)::(REC)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 06.
+		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 07.
+		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 08.
+		~:: (OUT)(1-1)::(EN)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 09.
+		~:: (OUT)(2-2)::(EN)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 10.
+		~:: (OUT)(3-3)::(FX)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 11.
+		~:: (OUT)(4-4)::(FX)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 12.
+		~:: (IN)(5-5)::(RT)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 13.
+		~:: (OUT)(aux)(1)::(RT)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 14.
+		~:: (IN)(aux)(2)::(CDB)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 15.
+		~:: (OUT)(aux)(3)::(CDB)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 16.
+		~:: (IN)(aux)(4)::(REC)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 17.
+		~:: (OUT)(aux)(5)::(REC)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 18.
+		~:: (IN)(aux)(I)::(EN_VAR)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 19.
+		~:: (OUT)(aux)(II)::(EN_VAR)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 20.
+		~:: (IN)(aux)(III)::(FX_INT)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 21.
+		~:: (OUT)(aux)(IV)::(FX_INT)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 22.
+		~:: (IN)(aux)(V)::(RT_O)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 23.
+		~:: (IN)(aux)(_A_)::(CDB_DATA)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 24.
+		~:: (IN/OUT)(aux)(_B_)::(REC_OPT)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
-	-:: no &(such) implementation.
-		~:: ((0))::(no module)::implementation.
-	(no module was available.)
+	-:: checking gradle module 25.
+		~:: (OUT/IN)(aux)(__A1_B2)::((XL)_:c)+module)::implementation.
+	(module was found.)
 ~:: checking for gradle modules.
 	-:: no &(such) implementation.
 		~:: ((0))::(no module)::implementation.
 	-:: gradle method finished. (1)
 
 -:: setting headers ::-
-	~:: opening "headers.txt" for writing.
+	~:: opening "ai/headers" for input.
+	~:: opening "ai/headers.txt" for output.
+		~:: successfully opened "/headers.txt".
+		~:: successfully opened "headers".
+	~:: enumerating headers.
+		speech.csv,
+		sensor_reading.csv,
+		pattern_recognition.csv,
+		artificial_life.csv,
+		drums.csv,
+		natural_language_processing.csv,
+		catalogues.csv,
+		health_criteria.csv,
+		ocr.csv,
+		images_translation.csv
 	- ()[:  module name  :] - data[queryObject] (#)
-	--speech synthesizers--:speech.csv
-	--      sensors      --:sensor_reading.csv
-	--pattern recognition--:pattern_recognition.csv
-	--artificial life rtn--:artificial_life.csv
-	--       drums       --:drums.csv
-	--natural language pr--:natural_language_processing.csv
-	--catalogues routines--:catalogues.csv
-	--health & life cycle--:health_criteria.csv
-	--        ocr        --:ocr.csv
-	--image & translation--:images_translation.csv
-- setting header:0. --speech synthesizers--:speech.csv
-- setting header:1. --pattern recognition--:pattern_recognition.csv
-- setting header:2. --       drums       --:drums.csv
-- setting header:3. --catalogues routines--:catalogues.csv
-- setting header:4. --        ocr        --:ocr.csv
-- setting header:5. 
-- setting header:6. 
-- setting header:7. 
-- setting header:8. 
-- setting header:9. 
 -:: checking arguments.
 	1: arguments.
 
@@ -1472,13 +1466,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1573,13 +1565,21 @@ ENTER PASSCODE:
 
 -__:::: ( created ) modular template ::::__-
 
-~: updated module - at index(0).
 	~:: filled in modular template with generic data.
 
 ~:: setting module data in cab.
-~:: getting index
+~: updated module - at index(0).
+~: updated module - at index(1).
+~: updated module - at index(2).
+~: updated module - at index(3).
+~: updated module - at index(4).
+~:: getting index: 5
 ~:: polling data
-~:: (poll) no data in this module!
+:0: unicorn =001=
+:1: unicorn =002=
+:2: unicorn =003=
+:3: unicorn =004=
+:4: unicorn =005=
 
 -:: check integrity / logical step counter.
 	-::max pool elements: 5 :: pooling: 0 elements.
@@ -1766,19 +1766,65 @@ holytapltcltcttapishholytaptapishltct
 
 ********* CURLING **********
 
-
 <<<<<<<<<<<<<<<<<<<<<<<
 
 <!DOCTYPE html>
-<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Error</title>
+<title>MODEL-AI.COM |Artificial Intelligence</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- Stylesheet -->
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<pre>Cannot GET /ai</pre>
+
+<div class="whitebluebg paddedl">
+  <h1 class="zeromargin">MODEL-AI.com |</h1>
+  <h1>Artificial Intelligence Systems</h1>
+  <h3 class="zeromargin">Your Artificial Intelligence</h3>
+</div>
+
+<hr />
+
+
+<nav>
+  <a class="btn btn-lg btn-primary" href="/decodewitness">Decodewitness</a>  <a class="btn btn-lg btn-primary" href="/documentation">Documentation</a> <a class="btn btn-lg btn-primary" href="/downloads">Downloads</a>
+</nav>
+
+<hr />
+
+<div>
+  <p>Welcome to the <a href="https://model-ai.com">Model-Ai.com</a> website, our AI hub.</p>
+  <p><strong>Shape intelligence different</strong></p>
+</div>
+
+<div class="paddedl">
+  <img class="rounder" src="images/Model-Ai.png" height="355" width="355" alt="(MODEL-AI): Blue/White Logo" />
+</div>
+
+<hr />
+
+<div>
+  <p>To view our commercial project visit our <a href="https://github.com/decodewitness/model-ai" target="_blank">Repository</a> on Github</p>
+</div>
+
+<hr />
+<footer>
+  <p>
+    <strong><a href="https://model-ai.com">Model-Ai</a>&copy;</strong>
+    <br />
+    Copyright(&copy;)(2021);
+    <br />
+    <strong>All Rights Have Been Reserved(&copy;)(2021)</strong>
+  </p>
+</footer>
 </body>
 </html>
+
 
 <<<<<<<<<<<<<<<<<<<<<<<
 x:0

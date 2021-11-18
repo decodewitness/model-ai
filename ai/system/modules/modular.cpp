@@ -6,12 +6,12 @@
 
 #include "ammodule/AMModule.cpp"
 
-const int limit = 64;
+const int limit = 128;
 
 class Modular {
 private:
 
-    bool moddata;
+    bool moddata[limit];
     int data_in_module;
     
     std::string empty_module;
@@ -42,11 +42,12 @@ Modular::Modular() {
     Modular modular(str1, str2);
     std::cout << std::endl << "-__:::: ( created ) modular template ::::__-" << std::endl << std::endl;
 
-    modular.set_data(str3);
+    //modular.set_data(str3);
     std::cout << "\t~:: filled in modular template with generic data." << std::endl;
 
-    this->moddata = true;
-
+    //this->moddata[] = true;
+    this->moddata[0] = this->moddata[1] = this->moddata[2] = true;
+    this->data_in_module = 0;
     // query the modular template
     //modular.query();
 };
@@ -54,22 +55,21 @@ Modular::Modular() {
 Modular::Modular(std::string n, std::string t) {
     this->module_name = n;
     this->module_type = t;
-    this->data_in_module = 0;
-
-    this->moddata = false;
+    //this->data_in_module = 0;
+    //this->moddata = false;
 };
 
 void Modular::set_data(std::string dat) {
-    if (this->data_in_module < limit) {
+    if (this->data_in_module <= limit) {
 
         this->module_data[data_in_module] = dat;
+        this->moddata[this->data_in_module] = true;
         this->data_in_module++;
-        this->moddata = true;
         std::cout << "~: updated module - at index(" << (this->data_in_module - 1) << ")." << std::endl;
 
     } else {
         perror("!~ (ERROR) - setting Modular data");
-        this->moddata = false;
+        this->moddata[this->data_in_module] = false;
     }
 };
 
@@ -100,9 +100,8 @@ void Modular::set_data(std::string dat) {
 //     }
 // };
 
-
 std::string Modular::get_data(int index) {
-    if (this->moddata == true) {
+    if (this->moddata[index] == true) {
         return this->module_data[index];
     } else {
         return this->empty_module;
@@ -121,7 +120,7 @@ void Modular::query() {
     
     std::cout << "-:: query module ::-" << std::endl;
     
-    if (this->moddata == true) {
+    if (this->moddata[this->data_in_module] == true) {
         std::cout << "\t~:: data inside modular template (index): (" << this->get_index() << ")" << std::endl;
         std::cout << "\t~:: data inside modular template (at index): (" << this->get_data(this->get_index()) << ")" << std::endl;
     } else {
@@ -129,16 +128,16 @@ void Modular::query() {
     }
 };
 
-
-int Modular::polldata() {
+int Modular::polldata() { // need to check this
     int i;
     
-    if (this->moddata == true) {
+    if (this->moddata[this->data_in_module -1] == true) {
         for (i = 0; i < this->get_index(); i++) {
             std::cout << ":" << (i) << ": " << this->get_data(i) << std::endl;
         }
     } else {
         std::cout << "~:: (poll) no data in this module!" << std::endl;
+        std::cout << "this->moddata[index] = " << this->data_in_module << "\tthis->get_index() = " << this->get_index() << std::endl;
     }
 
     return i;

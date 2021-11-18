@@ -187,26 +187,47 @@ void AI::check_functions() {
 
 void AI::headers() {
 	
-	// manipulate headers
-	std::cout << std::endl << "-:: setting headers ::-" << std::endl;
+	// file streams
+	ifstream ifheaders;
+	ofstream ofheaders;
 
-	// open headers list file
-	std::cout << "\t~:: opening \"headers.txt\" for writing." << std::endl;
-	ofstream fheaders;
-	fheaders.open("headers.txt");
-	
 	// variables
 	int ki=0;
-	int heapsize=0, total=10, count=1024;	// variable "total" is number of .csv files defined in moduleData[] above
+	int heapsize=0, total=modulesTotal, count=1024;	// variable "total" is number of .csv files defined in moduleData[] above
 	string arr[count];
 	string tmp;
 
+	std::string hdr; // used to enumerate headers
+
+	// manipulate headers
+	std::cout << std::endl << "-:: setting headers ::-" << std::endl;
+
+	// open headers files && list files
+	std::cout << "\t~:: opening \"ai/headers\" for input." << std::endl;
+	ifheaders.open("ai/headers");
+	std::cout << "\t~:: opening \"ai/headers.txt\" for output." << std::endl;
+	ofheaders.open("headers.txt");
+	
+	if (ofheaders.is_open() == true) {
+		std::cout << "\t\t~:: successfully opened \"/headers.txt\"." << std::endl;
+	}
+
+	// enumerate headers
+	if (ifheaders.is_open() == true) {
+		std::cout << "\t\t~:: successfully opened \"headers\"." << std::endl;
+		std::cout << "\t~:: enumerating headers." << std::endl;
+
+		while ( getline(ifheaders, hdr) ) {	// get headers from file
+			std::cout << "\t\t" << hdr << std::endl;
+		}
+	}
+	
 	std::cout << "\t- ()[:  module name  :] - data[queryObject] (#)" << std::endl;
 	//initialize array arr[]
-	for (ki=0; heapsize < count && heapsize < total; ki++) {
+	for (ki=0; heapsize < modulesTotal && heapsize < total && ki < heapsize; ki++) {
 				arr[ki] = moduleName[ki] + ":" + moduleData[ki];
 				//std::cout << "      " << moduleName[ki] << " - " << moduleData[ki] << std::endl;
-				std::cout << "\t" << arr[ki] << std::endl;
+				std::cout << "\t\t- " << arr[ki] << std::endl;
 				heapsize++;
 	}
 	heapsize = ki;
@@ -216,8 +237,8 @@ void AI::headers() {
 	void stackmodule(int x, std::string *ar);
 
 
-	// list headers
-	for (int i=0; i<count && i<heapsize; i++) {
+	// stack headers
+	for (int i=0; i<modulesTotal && i<count && i<heapsize; i++) {
 		
 		//std::cout << asterisktab << arr[i] << std::endl;
 		std::cout << "- setting header:";
@@ -226,11 +247,11 @@ void AI::headers() {
 		stackmodule(i, &arr[i]);
 
 		// write headers to file
-		fheaders << i << ". " << arr[i] << std::endl;
+		ofheaders << (i+1) << "." << arr[i] << std::endl;
 	}
 
 	// close file with headers' file handle
-	fheaders.close();
+	ofheaders.close();
 }
 
 void AI::test(int n=0) { // testing all modules in this function
@@ -541,7 +562,7 @@ void AI::killc(int x) {	// basically implies killchain handle
 };
 
 int AI::curl(std::string f) {
-	std::cout << std::endl << "********* CURLING **********" << std::endl << std::endl;
+	std::cout << std::endl << "********* CURLING **********" << std::endl;
 	int x = do_curl(f);
 	std::cout << "x:" << x << std::endl;
 	return x;
@@ -573,9 +594,9 @@ void AI::mod() {
 	this->mdl->set_data("unicorn =004=");
 	this->mdl->set_data("unicorn =005=");
 
-	std::cout << "~:: getting index" << std::endl;
-	this->mdl->get_index();
-
+	std::cout << "~:: getting index: ";
+	std::cout << this->mdl->get_index() << std::endl;
+	
 	std::cout << "~:: polling data" << std::endl;
 	this->mdl->polldata();
 	

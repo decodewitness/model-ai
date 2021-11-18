@@ -10,7 +10,7 @@ int gradle() {
 
 	int x = 25; // total number of modules
 	int MVAR=x;	// number of times to run 1 complete set of modules (or) modules (5) + spc (2) (or) modules + spc + (aux) (25)
-	int PVAR=0; // total number of cyles including 0 for 1 cycle
+	int PVAR=1; // total number of cyles including 0 for 1 cycle
 
 	std::cout << "~!~ running: " << MVAR << "(modules); (" << PVAR << ") sets of module runs or x." << std::endl;
 
@@ -21,13 +21,13 @@ int gradle() {
 	// functions
 	for (int totalModulesRan=0; totalModulesRan<=MVAR; totalModulesRan++) {	// Prime var
 
-		for (int nrOfSets=0; nrOfSets<=PVAR; nrOfSets++) {	// Medium var
+		for (int nrOfSets=1; nrOfSets<=PVAR; nrOfSets++) {	// Medium var
 			// calculate module size in dependencies
 
 			// check gradle components
 			// check here for module
 			// checkformodule(int i)
-			bool b = check_gradle_components(nrOfSets);
+			bool b = check_gradle_components(totalModulesRan);
 		
 			//log (b) true/false results here next
 			if (b != true) {
