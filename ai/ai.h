@@ -28,7 +28,7 @@
 #include "system/gradle.h"
 #include "logic/learn.cpp"
 #include "logic/limits.cpp"
-#include "entropy/b3hiv3.h"		// includes entropy.cpp && ltctapttclt.cpp
+#include "entropy/b33hiv3.h"		// includes entropy.cpp && ltctapttclt.cpp
 #include "logic/interpret.cpp"
 #include "system/protocol.cpp"
 #include "sampler/sampler.cpp"
