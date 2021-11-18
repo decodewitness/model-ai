@@ -188,18 +188,15 @@ void DrumMachine::setIntervalB() {
 void DrumMachine::status() {    // broadcast status message
 
     // status
-    std::cout << "~::--::-( status of drum kits )-::--::~" << std::endl;
-    
+    std::cout << "~::--::(status of drum kits)::--::~" << std::endl;
+        
     // cycles
-    std::cout << "-:: cycle 1: m( " << this->cycle_one[0] << " m( " << this->cycle_one[1] << std::endl;
-    std::cout << "\t-:: cycle 2: m( " << this->cycle_two[0] << " m( " << this->cycle_two[1] << std::endl;
+    std::cout << "\t-:: cycle 1: m( " << this->cycle_one[0] << " m( " << this->cycle_one[1] << std::endl;
+    std::cout << "\t\t-:: cycle 2: m( " << this->cycle_two[0] << " m( " << this->cycle_two[1] << std::endl;
     std::cout << std::endl;
 
     // intervals
-    std::cout << "{{ +pose ( " << this->pose << " ) }} :: ";
+    std::cout << "\t{{ +pose ( " << this->pose << " ) }} :: ";
     std::cout << "{{ -intervalA ( " << this->intervalA << " ) }} ";
     std::cout << "{{ -intervalB ( " << this->intervalB << " ) " << "}}" << std::endl;
-
-    // status
-    std::cout << "~::--::(status of drum kits)::--::~" << std::endl << std::endl;
 };

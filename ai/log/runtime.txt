@@ -1279,13 +1279,11 @@ ENTER PASSCODE:
 
 -::: DRUMS MACHINE OF THE DRUMS :::-
 
-~::--::-( status of drum kits )-::--::~
--:: cycle 1: m( 3 m( 1
-	-:: cycle 2: m( 1 m( 3
-
-{{ +pose ( 2 ) }} :: {{ -intervalA ( 0.75 ) }} {{ -intervalB ( 0.375 ) }}
 ~::--::(status of drum kits)::--::~
+	-:: cycle 1: m( 3 m( 1
+		-:: cycle 2: m( 1 m( 3
 
+	{{ +pose ( 2 ) }} :: {{ -intervalA ( 0.75 ) }} {{ -intervalB ( 0.375 ) }}
 
 ::- loading gradle -::
 ~!~ running: 25(modules); (1) sets of module runs or x.
@@ -1401,22 +1399,23 @@ ENTER PASSCODE:
 -:: setting headers ::-
 	~:: opening "ai/headers" for input.
 	~:: opening "ai/headers.txt" for output.
-		~:: successfully opened "/headers.txt".
-		~:: successfully opened "headers".
+		~:: successfully opened "ai/headers.txt".
+		~:: successfully opened "ai/headers".
 	~:: enumerating headers.
-		speech.csv,
-		sensor_reading.csv,
-		pattern_recognition.csv,
-		artificial_life.csv,
-		drums.csv,
-		natural_language_processing.csv,
-		catalogues.csv,
-		health_criteria.csv,
-		ocr.csv,
-		images_translation.csv
 	- ()[:  module name  :] - data[queryObject] (#)
+		* speech.csv,
+		* sensor_reading.csv,
+		* pattern_recognition.csv,
+		* artificial_life.csv,
+		* drums.csv,
+		* natural_language_processing.csv,
+		* catalogues.csv,
+		* health_criteria.csv,
+		* ocr.csv,
+		* images_translation.csv
 -:: checking arguments.
 	1: arguments.
+-:: enumerating arguments:
 
 -:: checking AI functions.
 

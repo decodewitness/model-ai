@@ -146,6 +146,13 @@ return hashn(s);
 void AI::run_checks(int args) {
 	std::cout << "-:: checking arguments." << std::endl;
 	std::cout << "\t" << args << ": arguments." << std::endl;
+
+	if (args > 0) {
+		std::cout << "-:: enumerating arguments:" << std::endl;
+		for (int i=0; i<args; i++) {
+			//std::cout << "\t* " << ai_arguments[i] << std::endl;
+		}
+	}
 	// couples back to main()
 }
 
@@ -206,23 +213,24 @@ void AI::headers() {
 	std::cout << "\t~:: opening \"ai/headers\" for input." << std::endl;
 	ifheaders.open("ai/headers");
 	std::cout << "\t~:: opening \"ai/headers.txt\" for output." << std::endl;
-	ofheaders.open("headers.txt");
+	ofheaders.open("ai/headers.txt");
 	
 	if (ofheaders.is_open() == true) {
-		std::cout << "\t\t~:: successfully opened \"/headers.txt\"." << std::endl;
+		std::cout << "\t\t~:: successfully opened \"ai/headers.txt\"." << std::endl;
 	}
 
 	// enumerate headers
 	if (ifheaders.is_open() == true) {
-		std::cout << "\t\t~:: successfully opened \"headers\"." << std::endl;
+		std::cout << "\t\t~:: successfully opened \"ai/headers\"." << std::endl;
+		
 		std::cout << "\t~:: enumerating headers." << std::endl;
+		std::cout << "\t- ()[:  module name  :] - data[queryObject] (#)" << std::endl;
 
 		while ( getline(ifheaders, hdr) ) {	// get headers from file
-			std::cout << "\t\t" << hdr << std::endl;
+			std::cout << "\t\t* " << hdr << std::endl;
 		}
 	}
 	
-	std::cout << "\t- ()[:  module name  :] - data[queryObject] (#)" << std::endl;
 	//initialize array arr[]
 	for (ki=0; heapsize < modulesTotal && heapsize < total && ki < heapsize; ki++) {
 				arr[ki] = moduleName[ki] + ":" + moduleData[ki];

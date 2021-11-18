@@ -17,6 +17,8 @@ int main(int argc, char *argv[]) {
 	// splash AI model
 	splash();
 
+	// pass arguments here
+
 	// class instances
 	AI ai(argc);
 	
