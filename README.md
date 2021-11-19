@@ -1854,6 +1854,7 @@ x:0
 
 -:: calling destructor for AI::Model.
 -:: done.
+<<<<<<< HEAD
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).
@@ -2219,3 +2220,5 @@ Skepticism in the absence of evidence is healthy. Apathy in the absence of conne
  To criticize the incompetent is easy; it is more difficult to criticize
 
 EOF
+=======
+>>>>>>> 871447f10a24ad29424e19bb8af2cbb71d4afdb9
