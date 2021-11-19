@@ -102,8 +102,20 @@ cp ./ai/log/make_readme.sh ./
 chmod +x ./make_readme.sh
 
 echo "~:cleaning up"
-./make_readme.sh
-rm ./make_readme.sh
+if [ -f "./make_readme.sh" ]
+  then
+  ./make_readme.sh
+fi
+if [ -f "./doc/make_readme.sh" ]
+  then
+  rm ./doc/make_readme.sh
+fi
+
+if [ -f "./doc/README.md" ]
+  then
+  cp ./doc/README.md .
+fi
 
 echo "done."
 exit 0
+# EOF
