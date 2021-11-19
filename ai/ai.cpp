@@ -207,7 +207,7 @@ void AI::headers() {
 	std::string hdr; // used to enumerate headers
 
 	// manipulate headers
-	std::cout << std::endl << "-:: setting headers ::-" << std::endl;
+	std::cout << std::endl << "-:: setting headers :: total -::(" << total << ")::-" << std::endl;
 
 	// open headers files && list files
 	std::cout << "\t~:: opening \"ai/headers\" for input." << std::endl;
@@ -249,13 +249,13 @@ void AI::headers() {
 	for (int i=0; i<modulesTotal && i<count && i<heapsize; i++) {
 		
 		//std::cout << asterisktab << arr[i] << std::endl;
-		std::cout << "- setting header:";
+		std::cout << "- stacking header: ";
 
 		// stacking headers
 		stackmodule(i, &arr[i]);
 
-		// write headers to file
-		ofheaders << (i+1) << "." << arr[i] << std::endl;
+		// write current module to "header.txt" file
+		ofheaders << (arr+i) << std::endl;
 	}
 
 	// close file with headers' file handle

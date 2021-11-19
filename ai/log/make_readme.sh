@@ -41,11 +41,15 @@ if [ -f "./program.txt" ]
   then
   mv ./program.txt ./doc/
 fi
+if [ -f "./beneficial.txt" ]
+  then
+  mv ./beneficial.txt ./doc/
+fi
 if [ -f "./authors.txt" ]
   then
   mv ./authors.txt ./doc/
 fi
-if [ -f "./copyrightlaw.txt" ]
+if [ -f "./copyrightandlaw.txt" ]
   then
   mv ./copyrightandlaw.txt ./doc/
 fi
@@ -109,7 +113,7 @@ if [ -f "./doc/readme_component_2.txt" ]
 fi
 if [ -f "./doc/copyrightandlaw.txt" ]
   then
-  cat ./copyrightandlaw.txt >> ./doc/README.md
+  cat ./doc/copyrightandlaw.txt >> ./doc/README.md
   rm ./doc/copyrightandlaw.txt
 fi
 if [ -f "./doc/header2.txt" ]
@@ -127,6 +131,8 @@ if [ -f "./doc/README.md" ]
 fi
 ### do your clean up here ###
 
+
 ### exit the script ###
+echo
 exit 0
 # EOF

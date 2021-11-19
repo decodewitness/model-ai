@@ -12,6 +12,44 @@ Latest branch in Artificial Intelligence (A.I) software. Version (v.0.0-1b) (07:
 (88)
 1. 
 
+USAGE:
+-----
+
+This command will run the (model-ai) program, and generate a "README.md" file, in the project root directory
+based on the output of the "setup.sh" script running the AI model (model-ai).
+The "README.md" file will consist of the files in "model-ai/ai/logs":
+
+[running the program -OPTION- (1)]
+ -------            ----------
+
+   $ ./run
+    
+    (or)
+
+   $ ./bootstrap
+
+
+
+Using this next command will run the (model-ai) AI from "setup.sh", and generate an "output.log" text file in "./ai/logs":
+
+
+[running the program -OPTION- (2)]
+ -------            ----------
+
+   $ ./bootstrap | tee ./ai/logs/output.log
+
+   (The "run" command already generates an "output.log" file inside the "ai/logs" directory)
+
+
+The main compiled C++ program (model-ai) is in the "/model-ai/ai/bin" directory and called "runtime" after the compilation with the scripts.
+Do remember that if you move the program over to another location, then you will lose the functionality of some functional scripts
+which the program (model-ai) uses.
+
+
+REQUIREMENTS:
+-----
+
+
 
 -:: enabled logging.
  ** ][][ **
@@ -1410,7 +1448,7 @@ ENTER PASSCODE:
 		~:: ((0))::(no module)::implementation.
 	-:: gradle method finished. (1)
 
--:: setting headers ::-
+-:: setting headers :: total -::(10)::-
 	~:: opening "ai/headers" for input.
 	~:: opening "ai/headers.txt" for output.
 		~:: successfully opened "ai/headers.txt".
@@ -2023,6 +2061,13 @@ liddy: I'm that stamp you thought you licked but missed... now I'm back with a p
 Skepticism in the absence of evidence is healthy. Apathy in the absence of connection is natural.
 
 To criticize the incompetent is easy; it is more difficult to criticize EOF
+LEGAL CONSENSUS IS REQUIRED BEFORE ANY RIGHTS WOULD BE GRANTED ON YOUR BEHALF WHEN USING (ANY) PROGRAM WE MAY DISTRIBUTE WITHIN OUR LOCAL DOMAIN.
+COPYRIGHT STATEMENT IS LEGAL COPYRIGHT UNDER ARTIKEL 1 VS COPYRIGHTED MATERIAL: (C)(2021)MODEL-AI ARTIFICIAL INTELLIGENCE MODEL; ALL RIGHTS ARE RESERVED(C)(2021).
+
+(MODEL-AI)
+[Just Another Language Construct]
+
+10/11/2021 - 6:47PM
 O._
 
 🔴__CUBED:
