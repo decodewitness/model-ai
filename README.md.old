@@ -1451,10 +1451,10 @@ ENTER PASSCODE:
 -:: setting headers :: total -::(10)::-
 	~:: opening "ai/headers" for input.
 	~:: opening "ai/headers.txt" for output.
-		~:: successfully opened "ai/headers.txt".
-		~:: successfully opened "ai/headers".
+		~:: HEADER_OUT<ofheaders> successfully opened "ai/headers.txt".
+		~:: HEADER_IN<ifheaders> successfully opened "ai/headers".
 	~:: enumerating headers.
-	- ()[:  module name  :] - data[queryObject] (#)
+	- ()[:  module name  :] && data[queryObject] (#)
 		* speech.csv,
 		* sensor_reading.csv,
 		* pattern_recognition.csv,
@@ -1465,6 +1465,17 @@ ENTER PASSCODE:
 		* health_criteria.csv,
 		* ocr.csv,
 		* images_translation.csv
+~:: stacking headers/modules ::~
+	- stacking header: (0) :: <address>(0x7ffc1ebe1b40)
+	- stacking header: (1) :: <address>(0x7ffc1ebe1b60)
+	- stacking header: (2) :: <address>(0x7ffc1ebe1b80)
+	- stacking header: (3) :: <address>(0x7ffc1ebe1ba0)
+	- stacking header: (4) :: <address>(0x7ffc1ebe1bc0)
+	- stacking header: (5) :: <address>(0x7ffc1ebe1be0)
+	- stacking header: (6) :: <address>(0x7ffc1ebe1c00)
+	- stacking header: (7) :: <address>(0x7ffc1ebe1c20)
+	- stacking header: (8) :: <address>(0x7ffc1ebe1c40)
+	- stacking header: (9) :: <address>(0x7ffc1ebe1c60)
 -:: checking arguments.
 	1: arguments.
 -:: enumerating arguments:
@@ -1593,8 +1604,8 @@ ENTER PASSCODE:
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	log
+	[ x computation: type:char len:3 vowels:2 consonants:1 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2061,6 +2072,13 @@ liddy: I'm that stamp you thought you licked but missed... now I'm back with a p
 Skepticism in the absence of evidence is healthy. Apathy in the absence of connection is natural.
 
 To criticize the incompetent is easy; it is more difficult to criticize EOF
+LEGAL CONSENSUS IS REQUIRED BEFORE ANY RIGHTS WOULD BE GRANTED ON YOUR BEHALF WHEN USING (ANY) PROGRAM WE MAY DISTRIBUTE WITHIN OUR LOCAL DOMAIN.
+COPYRIGHT STATEMENT IS LEGAL COPYRIGHT UNDER ARTIKEL 1 VS COPYRIGHTED MATERIAL: (C)(2021)MODEL-AI ARTIFICIAL INTELLIGENCE MODEL; ALL RIGHTS ARE RESERVED(C)(2021).
+
+(MODEL-AI)
+[Just Another Language Construct]
+
+10/11/2021 - 6:47PM
 O._
 
 🔴__CUBED:

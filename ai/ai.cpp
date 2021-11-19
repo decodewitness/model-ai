@@ -195,8 +195,8 @@ void AI::check_functions() {
 void AI::headers() {
 	
 	// file streams
-	ifstream ifheaders;
-	ofstream ofheaders;
+	ifstream indata;
+	ofstream outdata;
 
 	// variables
 	int ki=0;
@@ -211,22 +211,22 @@ void AI::headers() {
 
 	// open headers files && list files
 	std::cout << "\t~:: opening \"ai/headers\" for input." << std::endl;
-	ifheaders.open("ai/headers");
+	indata.open("ai/headers");
 	std::cout << "\t~:: opening \"ai/headers.txt\" for output." << std::endl;
-	ofheaders.open("ai/headers.txt");
+	outdata.open("ai/headers.txt");
 	
-	if (ofheaders.is_open() == true) {
-		std::cout << "\t\t~:: successfully opened \"ai/headers.txt\"." << std::endl;
+	if (outdata.is_open() == true) {
+		std::cout << "\t\t~:: HEADER_OUT<ofheaders> successfully opened \"ai/headers.txt\"." << std::endl;
 	}
 
 	// enumerate headers
-	if (ifheaders.is_open() == true) {
-		std::cout << "\t\t~:: successfully opened \"ai/headers\"." << std::endl;
+	if (indata.is_open() == true) {
+		std::cout << "\t\t~:: HEADER_IN<ifheaders> successfully opened \"ai/headers\"." << std::endl;
 		
 		std::cout << "\t~:: enumerating headers." << std::endl;
-		std::cout << "\t- ()[:  module name  :] - data[queryObject] (#)" << std::endl;
+		std::cout << "\t- ()[:  module name  :] && data[queryObject] (#)" << std::endl;
 
-		while ( getline(ifheaders, hdr) ) {	// get headers from file
+		while ( getline(indata, hdr) ) {	// get headers from file
 			std::cout << "\t\t* " << hdr << std::endl;
 		}
 	}
@@ -238,28 +238,31 @@ void AI::headers() {
 				std::cout << "\t\t- " << arr[ki] << std::endl;
 				heapsize++;
 	}
-	heapsize = ki;
-	count = ki;
-
+	
 	// declare function stackmodule
-	void stackmodule(int x, std::string *ar);
+	std::string * stackmodule(int x, std::string *ar);
 
 
 	// stack headers
-	for (int i=0; i<modulesTotal && i<count && i<heapsize; i++) {
+	std::cout << "~:: stacking headers/modules ::~" << std::endl;
+
+	// pointer xsample
+	std::string *xsample = NULL;
+
+	for (int i=0; i<modulesTotal; i++) {
 		
 		//std::cout << asterisktab << arr[i] << std::endl;
-		std::cout << "- stacking header: ";
+		std::cout << "\t- stacking header:";
 
 		// stacking headers
-		stackmodule(i, &arr[i]);
+		xsample = stackmodule(i, (arr+i));
 
 		// write current module to "header.txt" file
-		ofheaders << (arr+i) << std::endl;
+		outdata << "header(" << i << ")::" << *xsample << std::endl;
 	}
 
 	// close file with headers' file handle
-	ofheaders.close();
+	outdata.close();
 }
 
 void AI::test(int n=0) { // testing all modules in this function
@@ -636,12 +639,12 @@ bool AI::pooling(int x) {
 
 // OTHER FUNCTIONS
 
-void stackmodule(int x, std::string *ar) {
+std::string * stackmodule(int x, std::string *ar) {
 	// stacking header
 	// header name / content label
 		// functions -> functions in display
 	
-	std::cout << x << ". " << *(ar+x) << std::endl;
+	std::cout << "(" << x << ")::<address>(" << ar << ")" << std::endl;
 	switch (x) {	// x == module
 		case 0: // speech
 		case 1: // sampling
@@ -651,4 +654,8 @@ void stackmodule(int x, std::string *ar) {
 		default:
 		break;
 	};
+
+	std::string *mystr = ar;
+
+	return mystr;
 };

@@ -1399,10 +1399,10 @@ ENTER PASSCODE:
 -:: setting headers :: total -::(10)::-
 	~:: opening "ai/headers" for input.
 	~:: opening "ai/headers.txt" for output.
-		~:: successfully opened "ai/headers.txt".
-		~:: successfully opened "ai/headers".
+		~:: HEADER_OUT<ofheaders> successfully opened "ai/headers.txt".
+		~:: HEADER_IN<ifheaders> successfully opened "ai/headers".
 	~:: enumerating headers.
-	- ()[:  module name  :] - data[queryObject] (#)
+	- ()[:  module name  :] && data[queryObject] (#)
 		* speech.csv,
 		* sensor_reading.csv,
 		* pattern_recognition.csv,
@@ -1413,6 +1413,17 @@ ENTER PASSCODE:
 		* health_criteria.csv,
 		* ocr.csv,
 		* images_translation.csv
+~:: stacking headers/modules ::~
+	- stacking header: (0)::<address>(0x7ffe389a9f50)
+	- stacking header: (1)::<address>(0x7ffe389a9f70)
+	- stacking header: (2)::<address>(0x7ffe389a9f90)
+	- stacking header: (3)::<address>(0x7ffe389a9fb0)
+	- stacking header: (4)::<address>(0x7ffe389a9fd0)
+	- stacking header: (5)::<address>(0x7ffe389a9ff0)
+	- stacking header: (6)::<address>(0x7ffe389aa010)
+	- stacking header: (7)::<address>(0x7ffe389aa030)
+	- stacking header: (8)::<address>(0x7ffe389aa050)
+	- stacking header: (9)::<address>(0x7ffe389aa070)
 -:: checking arguments.
 	1: arguments.
 -:: enumerating arguments:
@@ -1465,13 +1476,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
