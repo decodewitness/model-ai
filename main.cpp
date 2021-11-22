@@ -58,7 +58,8 @@ int main(int argc, char *argv[]) {
 	}
 
 	// curl attempt site "curled_url" [std::string]
-	ai.curl("https://model-ai.com");
+	int x = ai.curl("https://model-ai.com");
+	
 	
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();

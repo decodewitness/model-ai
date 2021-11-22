@@ -1468,16 +1468,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd002d38b0)
-	- stacking header:(1)::<address>(0x7ffd002d38d0)
-	- stacking header:(2)::<address>(0x7ffd002d38f0)
-	- stacking header:(3)::<address>(0x7ffd002d3910)
-	- stacking header:(4)::<address>(0x7ffd002d3930)
-	- stacking header:(5)::<address>(0x7ffd002d3950)
-	- stacking header:(6)::<address>(0x7ffd002d3970)
-	- stacking header:(7)::<address>(0x7ffd002d3990)
-	- stacking header:(8)::<address>(0x7ffd002d39b0)
-	- stacking header:(9)::<address>(0x7ffd002d39d0)
+	- stacking header:(0)::<address>(0x7ffc3fd8c130)
+	- stacking header:(1)::<address>(0x7ffc3fd8c150)
+	- stacking header:(2)::<address>(0x7ffc3fd8c170)
+	- stacking header:(3)::<address>(0x7ffc3fd8c190)
+	- stacking header:(4)::<address>(0x7ffc3fd8c1b0)
+	- stacking header:(5)::<address>(0x7ffc3fd8c1d0)
+	- stacking header:(6)::<address>(0x7ffc3fd8c1f0)
+	- stacking header:(7)::<address>(0x7ffc3fd8c210)
+	- stacking header:(8)::<address>(0x7ffc3fd8c230)
+	- stacking header:(9)::<address>(0x7ffc3fd8c250)
 
 -:: checking arguments.
 	1: arguments.
@@ -1534,11 +1534,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1635,15 +1637,23 @@ ENTER PASSCODE:
 	-:: 9. nine:	true
 	-:: 10. ten:	true
 
+
 -/- getting "archives_list.csv"
 -/- done with downloads.
 
 ~/~ patching.
 patching: "archives_list.csv" (archives)
 
-+OK (1)
++OK
 PATCHING +OK
-~:: auto-patch routine.
+~:: auto-patch routine ::~
+~:: (DEBUG) cabinets:
+{"archive1.tar.gz","archive2.tar.gz","archive3.tar.gz","extra.txt"}
+~:: (PATCHING FILES)::(4):
+	* (1) * archive1.tar.gz ~ being patched.
+	* (2) * archive2.tar.gz ~ being patched.
+	* (3) * archive3.tar.gz ~ being patched.
+	* (4) * extra.txt ~ being patched.
 
 -__:::: ( created ) modular template ::::__-
 
@@ -1666,21 +1676,25 @@ PATCHING +OK
 -:: check integrity / logical step counter.
 	-::max pool elements: 5 :: pooling: 0 elements.
 (percentage): (%): 10% +/+)  :(minus percentage): (-DEG.): 0.9 in degrees :.
+
  -:: step: 1 complete. (100%)
 	-::max pool elements: 5 :: pooling: 1 elements.
 	~pooling: reserve 1.
 (percentage): (%): 20% +/+)  :(minus percentage): (-DEG.): 0.8 in degrees :.
+
  -:: step: 2 complete. (100%)
 	-::max pool elements: 5 :: pooling: 2 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
 (percentage): (%): 30% +/+)  :(minus percentage): (-DEG.): 0.7 in degrees :.
+
  -:: step: 3 complete. (100%)
 	-::max pool elements: 5 :: pooling: 3 elements.
 	~pooling: reserve 1.
 	~pooling: reserve 2.
 	~pooling: reserve 3.
 (percentage): (%): 40% +/+)  :(minus percentage): (-DEG.): 0.6 in degrees :.
+
  -:: step: 4 complete. (100%)
 	-::max pool elements: 5 :: pooling: 4 elements.
 	~pooling: reserve 1.
@@ -1688,6 +1702,7 @@ PATCHING +OK
 	~pooling: reserve 3.
 	~pooling: reserve 4.
 (percentage): (%): 50% +/+)  :(minus percentage): (-DEG.): 0.5 in degrees :.
+
  -:: step: 5 complete. (100%)
 	-::max pool elements: 5 :: pooling: 5 elements.
 	~pooling: reserve 1.
@@ -1695,6 +1710,7 @@ PATCHING +OK
 	~pooling: reserve 3.
 	~pooling: reserve 4.
 (percentage): (%): 60% +/+)  :(minus percentage): (-DEG.): 0.4 in degrees :.
+
  -:: step: 6 complete. (100%)
 	-::max pool elements: 5 :: pooling: 6 elements.
 	~pooling: reserve 1.
@@ -1702,6 +1718,7 @@ PATCHING +OK
 	~pooling: reserve 3.
 	~pooling: reserve 4.
 (percentage): (%): 70% +/+)  :(minus percentage): (-DEG.): 0.3 in degrees :.
+
  -:: step: 7 complete. (100%)
 	-::max pool elements: 5 :: pooling: 7 elements.
 	~pooling: reserve 1.
@@ -1709,6 +1726,7 @@ PATCHING +OK
 	~pooling: reserve 3.
 	~pooling: reserve 4.
 (percentage): (%): 80% +/+)  :(minus percentage): (-DEG.): 0.2 in degrees :.
+
  -:: step: 8 complete. (100%)
 	-::max pool elements: 5 :: pooling: 8 elements.
 	~pooling: reserve 1.
@@ -1716,6 +1734,7 @@ PATCHING +OK
 	~pooling: reserve 3.
 	~pooling: reserve 4.
 (percentage): (%): 90% +/+)  :(minus percentage): (-DEG.): 0.1 in degrees :.
+
  -:: step: 9 complete. (100%)
 	-::max pool elements: 5 :: pooling: 9 elements.
 	~pooling: reserve 1.
@@ -1723,7 +1742,9 @@ PATCHING +OK
 	~pooling: reserve 3.
 	~pooling: reserve 4.
 (percentage): (%): 100% +/+)  :(minus percentage): (-DEG.): 0 in degrees :.
+
  -:: step: 10 complete. (100%)
+
 	-:: steps completed: 10
 
 -:: starting AI.
@@ -1848,7 +1869,7 @@ holytapltcltcttapishholytaptapishltct
 
 ********* CURLING **********
 
-<<<<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 <!DOCTYPE html>
 <head>
@@ -1908,8 +1929,8 @@ holytapltcltcttapishholytaptapishltct
 </html>
 
 
-<<<<<<<<<<<<<<<<<<<<<<<
-x:0
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+-:: curl succeeded.
 
 -:: decoupler.
 	-:: decoupling sampler

@@ -1468,16 +1468,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd16268350)
-	- stacking header:(1)::<address>(0x7ffd16268370)
-	- stacking header:(2)::<address>(0x7ffd16268390)
-	- stacking header:(3)::<address>(0x7ffd162683b0)
-	- stacking header:(4)::<address>(0x7ffd162683d0)
-	- stacking header:(5)::<address>(0x7ffd162683f0)
-	- stacking header:(6)::<address>(0x7ffd16268410)
-	- stacking header:(7)::<address>(0x7ffd16268430)
-	- stacking header:(8)::<address>(0x7ffd16268450)
-	- stacking header:(9)::<address>(0x7ffd16268470)
+	- stacking header:(0)::<address>(0x7ffe49010760)
+	- stacking header:(1)::<address>(0x7ffe49010780)
+	- stacking header:(2)::<address>(0x7ffe490107a0)
+	- stacking header:(3)::<address>(0x7ffe490107c0)
+	- stacking header:(4)::<address>(0x7ffe490107e0)
+	- stacking header:(5)::<address>(0x7ffe49010800)
+	- stacking header:(6)::<address>(0x7ffe49010820)
+	- stacking header:(7)::<address>(0x7ffe49010840)
+	- stacking header:(8)::<address>(0x7ffe49010860)
+	- stacking header:(9)::<address>(0x7ffe49010880)
 
 -:: checking arguments.
 	1: arguments.
@@ -1635,14 +1635,23 @@ ENTER PASSCODE:
 	-:: 9. nine:	true
 	-:: 10. ten:	true
 
+
 -/- getting "archives_list.csv"
 -/- done with downloads.
+
 ~/~ patching.
 patching: "archives_list.csv" (archives)
 
-+OK (1)
++OK
 PATCHING +OK
-~:: auto-patch routine.
+~:: auto-patch routine ::~
+~:: (DEBUG) cabinets:
+{"archive1.tar.gz","archive2.tar.gz","archive3.tar.gz","extra.txt"}
+~:: (PATCHING FILES)::(4):
+	* (1) * archive1.tar.gz ~ being patched.
+	* (2) * archive2.tar.gz ~ being patched.
+	* (3) * archive3.tar.gz ~ being patched.
+	* (4) * extra.txt ~ being patched.
 
 -__:::: ( created ) modular template ::::__-
 
@@ -1847,7 +1856,7 @@ holytapltcltcttapishholytaptapishltct
 
 ********* CURLING **********
 
-<<<<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 <!DOCTYPE html>
 <head>
@@ -1907,8 +1916,8 @@ holytapltcltcttapishholytaptapishltct
 </html>
 
 
-<<<<<<<<<<<<<<<<<<<<<<<
-x:0
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+-:: curl succeeded.
 
 -:: decoupler.
 	-:: decoupling sampler

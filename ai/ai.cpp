@@ -404,7 +404,7 @@ bool AI::stepping() {	// integrity checking
 			break; // bails on anything different than 'c'!
 		else {
 			steps_completed++;
-			std::cout << " -:: step: " << (steps-i + 1) << " complete. (100%)" << std::endl;
+			std::cout << std::endl << " -:: step: " << (steps-i + 1) << " complete. (100%)" << std::endl;
 		}
 	}
 	
@@ -414,12 +414,12 @@ bool AI::stepping() {	// integrity checking
 
 	if (hashesCheckOut == true) {
 		// steps completed
-		std::cout << "\t-:: steps completed: " << steps_completed << std::endl;
+		std::cout << std::endl <<"\t-:: steps completed: " << steps_completed << std::endl;
 		return true;
 	} else {
 		// steps did not complete
-		std::cout << "\t-:: steps completed: " << steps_completed << std::endl;
-		std::cout << "\t-:: steps incomplete: " << (count-steps_completed) << std::endl;
+		std::cout << std::endl << "\t-:: steps completed: " << steps_completed << std::endl;
+		std::cout << "\t\t-:: steps incomplete: " << (count-steps_completed) << std::endl;
 		return false;
 	}
 };
@@ -579,7 +579,12 @@ void AI::killc(int x) {	// basically implies killchain handle
 int AI::curl(std::string f) {
 	std::cout << std::endl << "********* CURLING **********" << std::endl;
 	int x = do_curl(f);
-	std::cout << "x:" << x << std::endl;
+	
+	// std::cout << "x:" << x << std::endl;
+	if (x+1 == 1) {
+		std::cout << "-:: curl succeeded." << std::endl;
+	}
+
 	return x;
 };
 
@@ -642,10 +647,15 @@ bool AI::pooling(int x) {
 }
 
 void AI::auto_patch() {
-	std::cout << std::endl << "~:: auto-patch routine.";
+	std::cout << std::endl << std::endl << "~:: auto-patch routine ::~";
 	sleep(1);
+
+	// download cabinets
 	system("./ai/patching/repos");
 	std::cout << std::endl;
+
+	// patch cabinets
+	patch_module();
 }
 
 // OTHER FUNCTIONS
