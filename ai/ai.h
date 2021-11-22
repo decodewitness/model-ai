@@ -38,13 +38,14 @@
 #include "logic/assembly/input.cpp"
 #include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"
+#include "modular_bay/modular_bay.cpp"
 #include "system/security/security.cpp"
 #include "system/definitions/encoder.cpp"
 #include "logic/transponder/transponder.cpp"
 #include "system/modules/combine/combine.cpp"
 
 // linked to above modules
-const int nr_modules = 18;	// equal to the number of includes in "modules" (above this)
+const int nr_modules = 21;	// equal to the number of includes in "modules" (above this)
 
 // FOR OTHER MODULES
 const int module_limits = 1024;

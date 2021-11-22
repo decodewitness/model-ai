@@ -31,7 +31,7 @@ void AL::life() {	// artificial habits
 
 	int counter=0;
 	for (int i=0; i<=60532; i++) {
-		if (i%2000) {
+		if (i%al_top_limit) {
 			counter++;
 		}
 		if (counter==30000 || counter==60000) { // runs 2 times
@@ -51,27 +51,14 @@ void AL::modifies_behaviour() {
 };
 
 int AL::live() {
-	populate();
 
-	// if (fork() == 0) {
-	// 	int counter=0;
-	// 	for (int i=0; i<=605320; i++) {
-	// 		if (i%2000) {
-	// 			counter++;
-	// 		}
-	// 		if (counter==600000) {
-	// 			std::cout << "-::: result :::-" << std::endl;
-	// 		}
-	// 	}
-	// } else {
 	std::cout << std::endl << "-:: living inside that function running a numbers sequence." << std::endl << std::endl;
-		
-	int dot=5, count=0, countdown=10;
 	
-	splash_al();
-
+	int dot=5, count=0, countdown=10;
 	int pinlabel=1000;	// used for shepard(int n) in artificial life routine
-
+	
+	populate();
+	splash_al();
 
 	// ARTIFICIAL LIFE ROUTINE
 	for (int i=0; i<=alr_limit; i++) {

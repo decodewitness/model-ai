@@ -6,6 +6,7 @@
 
 // limits for the Artificial Life Routine in "/ai/al/al.cpp"
 int alr_limit = 2500;
+int al_top_limit = 2000;
 int alr_countdown = alr_limit - (alr_limit / 10);
 
 // in this demo setup this is being multiplied by (big=10)
@@ -16,6 +17,8 @@ const int small = 2;
 const int big = 10;
 const int bigger = 20;
 const int biggest = 500;
+
+
 
 // class artificial life
 class AL {

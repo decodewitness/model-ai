@@ -1466,16 +1466,16 @@ ENTER PASSCODE:
 		* ocr.csv,
 		* images_translation.csv
 ~:: stacking headers/modules ::~
-	- stacking header: (0)::<address>(0x7ffe389a9f50)
-	- stacking header: (1)::<address>(0x7ffe389a9f70)
-	- stacking header: (2)::<address>(0x7ffe389a9f90)
-	- stacking header: (3)::<address>(0x7ffe389a9fb0)
-	- stacking header: (4)::<address>(0x7ffe389a9fd0)
-	- stacking header: (5)::<address>(0x7ffe389a9ff0)
-	- stacking header: (6)::<address>(0x7ffe389aa010)
-	- stacking header: (7)::<address>(0x7ffe389aa030)
-	- stacking header: (8)::<address>(0x7ffe389aa050)
-	- stacking header: (9)::<address>(0x7ffe389aa070)
+	- stacking header:(0)::<address>(0x7ffc19854a30)
+	- stacking header:(1)::<address>(0x7ffc19854a50)
+	- stacking header:(2)::<address>(0x7ffc19854a70)
+	- stacking header:(3)::<address>(0x7ffc19854a90)
+	- stacking header:(4)::<address>(0x7ffc19854ab0)
+	- stacking header:(5)::<address>(0x7ffc19854ad0)
+	- stacking header:(6)::<address>(0x7ffc19854af0)
+	- stacking header:(7)::<address>(0x7ffc19854b10)
+	- stacking header:(8)::<address>(0x7ffc19854b30)
+	- stacking header:(9)::<address>(0x7ffc19854b50)
 -:: checking arguments.
 	1: arguments.
 -:: enumerating arguments:
@@ -1511,6 +1511,9 @@ ENTER PASSCODE:
 	-:: kbuild reserving 1024(DEG) bytes ::- for your additional mappings.
 
 -:: starting evolving mechanic life in artificial life habits.
+
+-:: living inside that function running a numbers sequence.
+
 	-:: max nodes (1)
 	(1 trees in forest)
 	-:: calculating size dependencies
@@ -1528,17 +1531,16 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
-
--:: living inside that function running a numbers sequence.
-
  oo[
 
 ....32323232....32323232....32323232....32323232...
