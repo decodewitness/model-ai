@@ -82,6 +82,10 @@ AI::AI(int n) {
 	// HAL -- hypervisor
 	HAL hal;
 
+	// check modular bay
+	ModularBay modular_bay;
+	modular_bay.scan();
+
 	if (app == true) {
 		// run virtual appliance (virtual ai instance)
 		std::cout << "\t -:: loading virtual instance" << std::endl << std::endl;

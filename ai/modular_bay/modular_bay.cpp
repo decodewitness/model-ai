@@ -2,15 +2,16 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include <fstream>
 #include <ctime>
 #include <thread>
 
 #include "modular_bay.h"
 
-class Bay {
+class ModularBay {
     private:
-        std::string path;
+        std::string path_var;
         std::string filename;
         std::ifstream file_data;
 
@@ -18,32 +19,39 @@ class Bay {
         int starting_time;
 
     public:
-        Bay(std::string path) {
+        ModularBay() {
             // constructor
 
             // set the starting time for scanning periodically
                 // in a thread
-            this->timer();
             
             // set the filename
-            this->path = path;
+            this->path_var = MB_path;
 
             std::cout << "~:: accessing modular bay construct." << std::endl;
 
             // periodically use this->scan() to find new data
-            std::cout << "\t~:: opening " << MB_path << " for inspection." << std::endl;
-            this->scan();
+            std::cout << "\t~:: opening \"/" << MB_path << "\" for inspection." << std::endl;
+            //this->timer();
         };
         
         void timer() {
-            
             std::cout << "\t~:: starting timer." << std::endl;
+            //int starting_time = time(NULL);
+            //int mean_time = time(NULL);
 
-            // function declared below
-            void funct();
-            
-            // use thread for funct()
-            std::thread first_thread(funct);
+            // for (int i=0;; i++) {
+            //     if (i % 2000 == 1) {
+            //         mean_time = time(NULL);
+            //     }
+
+            //     if (mean_time % 150 == 1) {
+            //         std::cout << "~:: checking bay." << std::endl;
+            //     }
+
+            //     if ((mean_time - starting_time) % 100 == 1)  // break out of loop after no activity or reset timer here
+            //         break;
+            // }
         };
         
         void open() {
@@ -63,15 +71,19 @@ class Bay {
             this->file_is_open = false;
         }
 
-        void glob() {
+        void globf(std::string pattern) {
             // glob all content inside the bay area
+            std::cout << "\t\t~:: glob() in directory: (" << this->path_var << "):" << std::endl;
             
-            std::cout << "\t~:: glob()" << std::endl;
+            // glob here
+                // handle string vector
+            glob(pattern.c_str());
         }
 
         void scan() {
+            std::cout << "\t~:: scanning() directory: (" << this->path_var << ")." << std::endl;
             // scan bay periodically based on the time ~ ca. once every 30 seconds or 60 seconds or so
-            this->glob();
+            this->globf(pattern);
         }
 
         void analyze() {
@@ -89,21 +101,20 @@ class Bay {
 
 
 // functions
-void funct() {
+// void funct() {
+//    int starting_time = time(NULL);
+//     int mean_time = time(NULL);
 
-    int starting_time = time(NULL);
-    int mean_time = time(NULL);
+//     for (int i=0;; i++) {
+//         if (i % 2000 == 1) {
+//             mean_time = time(NULL);
+//         }
 
-    for (int i=0;; i++) {
-        if (i % 2000 == 1) {
-            mean_time = time(NULL);
-        }
+//         if (mean_time % 150 == 1) {
+//             std::cout << "~:: checking bay." << std::endl;
+//         }
 
-        if (mean_time % 150 == 1) {
-            std::cout << "~:: checking bay." << std::endl;
-        }
-
-        if ((mean_time - starting_time) % 100 == 1)  // break out of loop after no activity or reset timer here
-            break;
-    }
-};
+//         if ((mean_time - starting_time) % 100 == 1)  // break out of loop after no activity or reset timer here
+//             break;
+//     } 
+// };

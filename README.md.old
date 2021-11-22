@@ -1466,16 +1466,16 @@ ENTER PASSCODE:
 		* ocr.csv,
 		* images_translation.csv
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffcaca31a60)
-	- stacking header:(1)::<address>(0x7ffcaca31a80)
-	- stacking header:(2)::<address>(0x7ffcaca31aa0)
-	- stacking header:(3)::<address>(0x7ffcaca31ac0)
-	- stacking header:(4)::<address>(0x7ffcaca31ae0)
-	- stacking header:(5)::<address>(0x7ffcaca31b00)
-	- stacking header:(6)::<address>(0x7ffcaca31b20)
-	- stacking header:(7)::<address>(0x7ffcaca31b40)
-	- stacking header:(8)::<address>(0x7ffcaca31b60)
-	- stacking header:(9)::<address>(0x7ffcaca31b80)
+	- stacking header:(0)::<address>(0x7fff63f342d0)
+	- stacking header:(1)::<address>(0x7fff63f342f0)
+	- stacking header:(2)::<address>(0x7fff63f34310)
+	- stacking header:(3)::<address>(0x7fff63f34330)
+	- stacking header:(4)::<address>(0x7fff63f34350)
+	- stacking header:(5)::<address>(0x7fff63f34370)
+	- stacking header:(6)::<address>(0x7fff63f34390)
+	- stacking header:(7)::<address>(0x7fff63f343b0)
+	- stacking header:(8)::<address>(0x7fff63f343d0)
+	- stacking header:(9)::<address>(0x7fff63f343f0)
 -:: checking arguments.
 	1: arguments.
 -:: enumerating arguments:
@@ -1597,7 +1597,11 @@ ENTER PASSCODE:
 
 
 -:: extending module behavior.
-::- query in sample.
+~:: accessing modular bay construct.
+	~:: opening "/bay" for inspection.
+	~:: scanning() directory: (bay).
+		~:: glob() in directory: (bay):
+Model-Ai.pngREADME.mdREADME.md.oldaibaybootstrapdocdocsmain.cppmain.hrunruntime.txt::- query in sample.
 --? :: 
 
 -:: testing sample ::-
