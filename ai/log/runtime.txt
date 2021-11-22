@@ -1414,16 +1414,16 @@ ENTER PASSCODE:
 		* ocr.csv,
 		* images_translation.csv
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffeadbb4e00)
-	- stacking header:(1)::<address>(0x7ffeadbb4e20)
-	- stacking header:(2)::<address>(0x7ffeadbb4e40)
-	- stacking header:(3)::<address>(0x7ffeadbb4e60)
-	- stacking header:(4)::<address>(0x7ffeadbb4e80)
-	- stacking header:(5)::<address>(0x7ffeadbb4ea0)
-	- stacking header:(6)::<address>(0x7ffeadbb4ec0)
-	- stacking header:(7)::<address>(0x7ffeadbb4ee0)
-	- stacking header:(8)::<address>(0x7ffeadbb4f00)
-	- stacking header:(9)::<address>(0x7ffeadbb4f20)
+	- stacking header:(0)::<address>(0x7fff1ee5c430)
+	- stacking header:(1)::<address>(0x7fff1ee5c450)
+	- stacking header:(2)::<address>(0x7fff1ee5c470)
+	- stacking header:(3)::<address>(0x7fff1ee5c490)
+	- stacking header:(4)::<address>(0x7fff1ee5c4b0)
+	- stacking header:(5)::<address>(0x7fff1ee5c4d0)
+	- stacking header:(6)::<address>(0x7fff1ee5c4f0)
+	- stacking header:(7)::<address>(0x7fff1ee5c510)
+	- stacking header:(8)::<address>(0x7fff1ee5c530)
+	- stacking header:(9)::<address>(0x7fff1ee5c550)
 -:: checking arguments.
 	1: arguments.
 -:: enumerating arguments:

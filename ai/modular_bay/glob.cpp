@@ -17,7 +17,7 @@ inline std::vector<std::string> glob(const std::string& pat){
         ret.push_back(string(glob_result.gl_pathv[i]));
     
         // print results
-        std::cout << "\t\t\t - " << string(glob_result.gl_pathv[i]) << std::endl;
+        std::cout << "\t\t\t * " << string(glob_result.gl_pathv[i]) << std::endl;
     }
     globfree(&glob_result);
     return ret;
