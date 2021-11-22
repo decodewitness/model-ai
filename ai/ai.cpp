@@ -264,6 +264,7 @@ void AI::headers() {
 
 	// close file with headers' file handle
 	outdata.close();
+	std::cout << std::endl;
 }
 
 void AI::test(int n=0) { // testing all modules in this function
@@ -636,6 +637,13 @@ bool AI::pooling(int x) {
 		// pool reserve here from data
 	}
 	return 1;
+}
+
+void AI::auto_patch() {
+	std::cout << std::endl << "~:: auto-patch routine.";
+	sleep(1);
+	system("./ai/patching/repos");
+	std::cout << std::endl;
 }
 
 // OTHER FUNCTIONS

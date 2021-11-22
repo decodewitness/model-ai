@@ -10,7 +10,8 @@ LIST_URL="$LIST_URL_ROOT/$FILENAME"   # might contain additional archives
 
 ### PATCHING ###
 DLCSV="$1"
-DESTINATION="./ai/patch/files/"
+DESTINATION="./ai/patching/files/"
+LOCATION=$DESTINATION
 FILENAME="archives_list.csv"
 
 ### FILENAMES ###
@@ -55,16 +56,16 @@ if [ -f "./$FILENAME" ]
   elif [ -d "$DESTINATION" ]
   then
   cp "./$FILENAME" $LOCATION
-  export modelai-patched="a0+ok"
+  export model_ai_patched="a0+ok"
   echo "+OK (1)"
   elif [ -f "./run" ]
   then
   mkdir -p $DESTINATION
   cp "./$FILENAME" $DESTINATION
-  export modelai-patched="a1+ok"
+  export model_ai_patched="a1+ok"
   echo "+OK (2)"
   else
-  export modelai-patched="not+ok"
+  export model_ai_patched="not+ok"
   echo "+NOT_OK(3)"
   exit 1
 fi

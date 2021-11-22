@@ -29,6 +29,7 @@
 #include "logic/learn.cpp"
 #include "logic/limits.cpp"
 #include "entropy/b33hiv3.h"		// includes entropy.cpp && ltctapttclt.cpp
+#include "patching/patch.cpp"
 #include "logic/interpret.cpp"
 #include "system/protocol.cpp"
 #include "sampler/sampler.cpp"
@@ -36,8 +37,8 @@
 #include "language/concepts.cpp"
 #include "drum_machine/drums.cpp"
 #include "logic/assembly/input.cpp"
-#include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"
+#include "language/speech/saying.cpp"
 #include "modular_bay/modular_bay.cpp"
 #include "system/security/security.cpp"
 #include "system/definitions/encoder.cpp"
@@ -134,6 +135,9 @@ public:
 	// modules
 	void AMMod();
 	void mod();
+
+	// patching
+	void auto_patch();
 
 	// combineModule
 	void combmod(moduleContainer a, moduleContainer b);

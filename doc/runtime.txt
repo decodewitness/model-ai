@@ -1414,16 +1414,17 @@ ENTER PASSCODE:
 		* ocr.csv,
 		* images_translation.csv
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc803e9e70)
-	- stacking header:(1)::<address>(0x7ffc803e9e90)
-	- stacking header:(2)::<address>(0x7ffc803e9eb0)
-	- stacking header:(3)::<address>(0x7ffc803e9ed0)
-	- stacking header:(4)::<address>(0x7ffc803e9ef0)
-	- stacking header:(5)::<address>(0x7ffc803e9f10)
-	- stacking header:(6)::<address>(0x7ffc803e9f30)
-	- stacking header:(7)::<address>(0x7ffc803e9f50)
-	- stacking header:(8)::<address>(0x7ffc803e9f70)
-	- stacking header:(9)::<address>(0x7ffc803e9f90)
+	- stacking header:(0)::<address>(0x7ffecdeb4850)
+	- stacking header:(1)::<address>(0x7ffecdeb4870)
+	- stacking header:(2)::<address>(0x7ffecdeb4890)
+	- stacking header:(3)::<address>(0x7ffecdeb48b0)
+	- stacking header:(4)::<address>(0x7ffecdeb48d0)
+	- stacking header:(5)::<address>(0x7ffecdeb48f0)
+	- stacking header:(6)::<address>(0x7ffecdeb4910)
+	- stacking header:(7)::<address>(0x7ffecdeb4930)
+	- stacking header:(8)::<address>(0x7ffecdeb4950)
+	- stacking header:(9)::<address>(0x7ffecdeb4970)
+
 -:: checking arguments.
 	1: arguments.
 -:: enumerating arguments:
@@ -1580,6 +1581,15 @@ ENTER PASSCODE:
 	-:: 8. eight:	true
 	-:: 9. nine:	true
 	-:: 10. ten:	true
+
+-/- getting "archives_list.csv"
+-/- done with downloads.
+~/~ patching.
+patching: "archives_list.csv" (archives)
+
++OK (1)
+PATCHING +OK
+~:: auto-patch routine.
 
 -__:::: ( created ) modular template ::::__-
 

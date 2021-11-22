@@ -25,6 +25,9 @@ int main(int argc, char *argv[]) {
 	// health
 	chk();
 	
+	// auto patch
+	ai.auto_patch();
+
 	// checking AI functions
 	//ai.check_functions();
 

@@ -1466,16 +1466,17 @@ ENTER PASSCODE:
 		* ocr.csv,
 		* images_translation.csv
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdaaf82210)
-	- stacking header:(1)::<address>(0x7ffdaaf82230)
-	- stacking header:(2)::<address>(0x7ffdaaf82250)
-	- stacking header:(3)::<address>(0x7ffdaaf82270)
-	- stacking header:(4)::<address>(0x7ffdaaf82290)
-	- stacking header:(5)::<address>(0x7ffdaaf822b0)
-	- stacking header:(6)::<address>(0x7ffdaaf822d0)
-	- stacking header:(7)::<address>(0x7ffdaaf822f0)
-	- stacking header:(8)::<address>(0x7ffdaaf82310)
-	- stacking header:(9)::<address>(0x7ffdaaf82330)
+	- stacking header:(0)::<address>(0x7fff4efff3d0)
+	- stacking header:(1)::<address>(0x7fff4efff3f0)
+	- stacking header:(2)::<address>(0x7fff4efff410)
+	- stacking header:(3)::<address>(0x7fff4efff430)
+	- stacking header:(4)::<address>(0x7fff4efff450)
+	- stacking header:(5)::<address>(0x7fff4efff470)
+	- stacking header:(6)::<address>(0x7fff4efff490)
+	- stacking header:(7)::<address>(0x7fff4efff4b0)
+	- stacking header:(8)::<address>(0x7fff4efff4d0)
+	- stacking header:(9)::<address>(0x7fff4efff4f0)
+
 -:: checking arguments.
 	1: arguments.
 -:: enumerating arguments:
@@ -1531,13 +1532,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1603,26 +1602,15 @@ ENTER PASSCODE:
 	~:: opening "/bay" for inspection.
 	~:: scanning() directory: (bay).
 		~:: glob() in directory: (bay):
-		 :: files in directory:
-			 - Model-Ai.png
-			 - README.md
-			 - README.md.old
-			 - ai
-			 - bay
-			 - bootstrap
-			 - doc
-			 - docs
-			 - main.cpp
-			 - main.h
-			 - run
-			 - runtime.txt
+		   :: files in directory ::
+			 * bay/info.txt
 ::- query in sample.
 --? :: 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	ai
+	[ x computation: type:char len:2 vowels:0 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1643,6 +1631,15 @@ ENTER PASSCODE:
 	-:: 8. eight:	true
 	-:: 9. nine:	true
 	-:: 10. ten:	true
+
+-/- getting "archives_list.csv"
+-/- done with downloads.
+~/~ patching.
+patching: "archives_list.csv" (archives)
+
++OK (1)
+PATCHING +OK
+~:: auto-patch routine.
 
 -__:::: ( created ) modular template ::::__-
 

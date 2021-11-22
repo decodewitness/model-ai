@@ -5,7 +5,7 @@ echo "-/- executing \"virtual\" script."
 
 ### update the cabinet (then run "maestro")
 #echo "-/- updating (fetching from repository)"
-#./repos
+#./ai/patching/repos
 
 ### prune files here ###
 echo "-/- pruning file dependencies"
