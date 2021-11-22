@@ -1466,16 +1466,16 @@ ENTER PASSCODE:
 		* ocr.csv,
 		* images_translation.csv
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff63f342d0)
-	- stacking header:(1)::<address>(0x7fff63f342f0)
-	- stacking header:(2)::<address>(0x7fff63f34310)
-	- stacking header:(3)::<address>(0x7fff63f34330)
-	- stacking header:(4)::<address>(0x7fff63f34350)
-	- stacking header:(5)::<address>(0x7fff63f34370)
-	- stacking header:(6)::<address>(0x7fff63f34390)
-	- stacking header:(7)::<address>(0x7fff63f343b0)
-	- stacking header:(8)::<address>(0x7fff63f343d0)
-	- stacking header:(9)::<address>(0x7fff63f343f0)
+	- stacking header:(0)::<address>(0x7ffdaaf82210)
+	- stacking header:(1)::<address>(0x7ffdaaf82230)
+	- stacking header:(2)::<address>(0x7ffdaaf82250)
+	- stacking header:(3)::<address>(0x7ffdaaf82270)
+	- stacking header:(4)::<address>(0x7ffdaaf82290)
+	- stacking header:(5)::<address>(0x7ffdaaf822b0)
+	- stacking header:(6)::<address>(0x7ffdaaf822d0)
+	- stacking header:(7)::<address>(0x7ffdaaf822f0)
+	- stacking header:(8)::<address>(0x7ffdaaf82310)
+	- stacking header:(9)::<address>(0x7ffdaaf82330)
 -:: checking arguments.
 	1: arguments.
 -:: enumerating arguments:
@@ -1531,11 +1531,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1601,7 +1603,20 @@ ENTER PASSCODE:
 	~:: opening "/bay" for inspection.
 	~:: scanning() directory: (bay).
 		~:: glob() in directory: (bay):
-Model-Ai.pngREADME.mdREADME.md.oldaibaybootstrapdocdocsmain.cppmain.hrunruntime.txt::- query in sample.
+		 :: files in directory:
+			 - Model-Ai.png
+			 - README.md
+			 - README.md.old
+			 - ai
+			 - bay
+			 - bootstrap
+			 - doc
+			 - docs
+			 - main.cpp
+			 - main.h
+			 - run
+			 - runtime.txt
+::- query in sample.
 --? :: 
 
 -:: testing sample ::-
