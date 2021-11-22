@@ -1,11 +1,11 @@
 #!/bin/bash
 
 ### ENABLE "app=true" near the top of "/model-ai/ai/ai.cpp" ###
-echo "-/- executing \"virtual.sh\"."
+echo "-/- executing \"virtual\" script."
 
 ### update the cabinet (then run "maestro")
-echo "-/- updating (fetching from repository)"
-./repos.sh
+#echo "-/- updating (fetching from repository)"
+#./repos
 
 ### prune files here ###
 echo "-/- pruning file dependencies"
@@ -13,7 +13,7 @@ echo "-/- pruning file dependencies"
 # roll over library files adding new library to the hierarchy
 # (probably best to build a new model for the "virtual-cd" and "instance")
 # get new script editor "ai.cpp" and compile it
-    # archive.tar.gz ~ (some sort of cabinet file) probably from https://model-ai.com/archive.tar.gz downloaded file
+    # archive.tar.gz ~ (some sort of cabinet file) probably from https://model-ai.com/archive/archive#.tar.gz downloaded file
     # list.info ~ (list of utilities included)
     # ./scripts/script.####.sh
 # combine scripts to the proper place in the hierarchy or simply replace modules

@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
-perl ./perl.pl
+echo "-:running runtime script."
+echo
+perl ./ai/bin/perl.pl
 
 ##
 ## THIS EDIT SCRIPT "SCRIPT.SH" BELONGS IN "/MODEL-AI/AI/BIN/"

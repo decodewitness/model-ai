@@ -3,7 +3,7 @@
 ### SETUP SCRIPT FOR THE AI ROUTINE ###
 
 ### check for GCC compiler
-echo "RUNTIME SCRIPT"
+echo "~:`RUNTIME SCRIPT`"
 echo
 echo "~:checking for GCC compiler."
 if [ -f "/usr/bin/gcc" ]
@@ -18,9 +18,9 @@ fi
 
 echo
 echo "~:installing Curl libraries"
-echo "(+one time runscript [that deletes its*elf])"
+echo "~:(+one time runscript [that deletes its*elf])"
 ./ai/bin/script.sh
-echo "H-E-R-E"
+echo "~:done."
 #pwd
 
 ./script.sh
@@ -29,7 +29,7 @@ echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL +
 sudo apt install libcurl4-openssl-dev
 
 echo
-echo "~:compiling..."
+echo "~:compiling... flags: (-lcurl)"
 g++ -o a.out ./main.cpp -lcurl
 echo "~:done."
 

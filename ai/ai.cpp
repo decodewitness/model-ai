@@ -55,9 +55,6 @@ std::string moduleData[module_limits] = {
 	"__REACHED_EOM_THE_LAST_MODULE"
 }; // PLACEHOLDER INSIDE LAST MODULE AGAIN
 
-
-
-
 // AI constructor
 AI::AI(int n) {
 
@@ -493,7 +490,7 @@ void AI::init() {
 }
 
 void AI::appliance() {
-	system("./ai/virtual/virtual.sh");
+	system("./ai/virtual/virtual");
 }
 
 void AI::decouple() {
