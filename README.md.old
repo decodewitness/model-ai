@@ -1468,16 +1468,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe49010760)
-	- stacking header:(1)::<address>(0x7ffe49010780)
-	- stacking header:(2)::<address>(0x7ffe490107a0)
-	- stacking header:(3)::<address>(0x7ffe490107c0)
-	- stacking header:(4)::<address>(0x7ffe490107e0)
-	- stacking header:(5)::<address>(0x7ffe49010800)
-	- stacking header:(6)::<address>(0x7ffe49010820)
-	- stacking header:(7)::<address>(0x7ffe49010840)
-	- stacking header:(8)::<address>(0x7ffe49010860)
-	- stacking header:(9)::<address>(0x7ffe49010880)
+	- stacking header:(0)::<address>(0x7fff2cd47ff0)
+	- stacking header:(1)::<address>(0x7fff2cd48010)
+	- stacking header:(2)::<address>(0x7fff2cd48030)
+	- stacking header:(3)::<address>(0x7fff2cd48050)
+	- stacking header:(4)::<address>(0x7fff2cd48070)
+	- stacking header:(5)::<address>(0x7fff2cd48090)
+	- stacking header:(6)::<address>(0x7fff2cd480b0)
+	- stacking header:(7)::<address>(0x7fff2cd480d0)
+	- stacking header:(8)::<address>(0x7fff2cd480f0)
+	- stacking header:(9)::<address>(0x7fff2cd48110)
 
 -:: checking arguments.
 	1: arguments.
@@ -1672,66 +1672,158 @@ PATCHING +OK
 :4: unicorn =005=
 
 -:: check integrity / logical step counter.
-	-::max pool elements: 5 :: pooling: 0 elements.
-(percentage): (%): 10% +/+)  :(minus percentage): (-DEG.): 0.9 in degrees :.
- -:: step: 1 complete. (100%)
-	-::max pool elements: 5 :: pooling: 1 elements.
-	~pooling: reserve 1.
-(percentage): (%): 20% +/+)  :(minus percentage): (-DEG.): 0.8 in degrees :.
- -:: step: 2 complete. (100%)
-	-::max pool elements: 5 :: pooling: 2 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-(percentage): (%): 30% +/+)  :(minus percentage): (-DEG.): 0.7 in degrees :.
- -:: step: 3 complete. (100%)
-	-::max pool elements: 5 :: pooling: 3 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-(percentage): (%): 40% +/+)  :(minus percentage): (-DEG.): 0.6 in degrees :.
- -:: step: 4 complete. (100%)
-	-::max pool elements: 5 :: pooling: 4 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 50% +/+)  :(minus percentage): (-DEG.): 0.5 in degrees :.
- -:: step: 5 complete. (100%)
-	-::max pool elements: 5 :: pooling: 5 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 60% +/+)  :(minus percentage): (-DEG.): 0.4 in degrees :.
- -:: step: 6 complete. (100%)
-	-::max pool elements: 5 :: pooling: 6 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 70% +/+)  :(minus percentage): (-DEG.): 0.3 in degrees :.
- -:: step: 7 complete. (100%)
-	-::max pool elements: 5 :: pooling: 7 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 80% +/+)  :(minus percentage): (-DEG.): 0.2 in degrees :.
- -:: step: 8 complete. (100%)
-	-::max pool elements: 5 :: pooling: 8 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 90% +/+)  :(minus percentage): (-DEG.): 0.1 in degrees :.
- -:: step: 9 complete. (100%)
-	-::max pool elements: 5 :: pooling: 9 elements.
-	~pooling: reserve 1.
-	~pooling: reserve 2.
-	~pooling: reserve 3.
-	~pooling: reserve 4.
-(percentage): (%): 100% +/+)  :(minus percentage): (-DEG.): 0 in degrees :.
- -:: step: 10 complete. (100%)
+
+-:: (logical step) max pool elements: 10 :: pooling: 0 elements.
+	~:: (percentage): (%): 10% +/+)
+		:(minus percentage): (-DEG.): 0.9 in degrees :.
+
+ -:: step: 1 complete. (100%) / (1/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 1 elements.
+		~:: pooling: reserve 1.
+(pool) (1)
+	~:: (percentage): (%): 20% +/+)
+		:(minus percentage): (-DEG.): 0.8 in degrees :.
+
+ -:: step: 2 complete. (100%) / (2/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 2 elements.
+		~:: pooling: reserve 1.
+(pool) (2)
+		~:: pooling: reserve 2.
+(pool) (3)
+	~:: (percentage): (%): 30% +/+)
+		:(minus percentage): (-DEG.): 0.7 in degrees :.
+
+ -:: step: 3 complete. (100%) / (3/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 3 elements.
+		~:: pooling: reserve 1.
+(pool) (4)
+		~:: pooling: reserve 2.
+(pool) (5)
+		~:: pooling: reserve 3.
+(pool) (6)
+	~:: (percentage): (%): 40% +/+)
+		:(minus percentage): (-DEG.): 0.6 in degrees :.
+
+ -:: step: 4 complete. (100%) / (4/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 4 elements.
+		~:: pooling: reserve 1.
+(pool) (7)
+		~:: pooling: reserve 2.
+(pool) (8)
+		~:: pooling: reserve 3.
+(pool) (9)
+		~:: pooling: reserve 4.
+(pool) (10)
+	~:: (percentage): (%): 50% +/+)
+		:(minus percentage): (-DEG.): 0.5 in degrees :.
+
+ -:: step: 5 complete. (100%) / (5/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 5 elements.
+		~:: pooling: reserve 1.
+(pool) (11)
+		~:: pooling: reserve 2.
+(pool) (12)
+		~:: pooling: reserve 3.
+(pool) (13)
+		~:: pooling: reserve 4.
+(pool) (14)
+		~:: pooling: reserve 5.
+(pool) (15)
+	~:: (percentage): (%): 60% +/+)
+		:(minus percentage): (-DEG.): 0.4 in degrees :.
+
+ -:: step: 6 complete. (100%) / (6/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 6 elements.
+		~:: pooling: reserve 1.
+(pool) (16)
+		~:: pooling: reserve 2.
+(pool) (17)
+		~:: pooling: reserve 3.
+(pool) (18)
+		~:: pooling: reserve 4.
+(pool) (19)
+		~:: pooling: reserve 5.
+(pool) (20)
+		~:: pooling: reserve 6.
+(pool) (21)
+	~:: (percentage): (%): 70% +/+)
+		:(minus percentage): (-DEG.): 0.3 in degrees :.
+
+ -:: step: 7 complete. (100%) / (7/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 7 elements.
+		~:: pooling: reserve 1.
+(pool) (22)
+		~:: pooling: reserve 2.
+(pool) (23)
+		~:: pooling: reserve 3.
+(pool) (24)
+		~:: pooling: reserve 4.
+(pool) (25)
+		~:: pooling: reserve 5.
+(pool) (26)
+		~:: pooling: reserve 6.
+(pool) (27)
+		~:: pooling: reserve 7.
+(pool) (28)
+	~:: (percentage): (%): 80% +/+)
+		:(minus percentage): (-DEG.): 0.2 in degrees :.
+
+ -:: step: 8 complete. (100%) / (8/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 8 elements.
+		~:: pooling: reserve 1.
+(pool) (29)
+		~:: pooling: reserve 2.
+(pool) (30)
+		~:: pooling: reserve 3.
+(pool) (31)
+		~:: pooling: reserve 4.
+(pool) (32)
+		~:: pooling: reserve 5.
+(pool) (33)
+		~:: pooling: reserve 6.
+(pool) (34)
+		~:: pooling: reserve 7.
+(pool) (35)
+		~:: pooling: reserve 8.
+(pool) (36)
+	~:: (percentage): (%): 90% +/+)
+		:(minus percentage): (-DEG.): 0.1 in degrees :.
+
+ -:: step: 9 complete. (100%) / (9/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 9 elements.
+		~:: pooling: reserve 1.
+(pool) (37)
+		~:: pooling: reserve 2.
+(pool) (38)
+		~:: pooling: reserve 3.
+(pool) (39)
+		~:: pooling: reserve 4.
+(pool) (40)
+		~:: pooling: reserve 5.
+(pool) (41)
+		~:: pooling: reserve 6.
+(pool) (42)
+		~:: pooling: reserve 7.
+(pool) (43)
+		~:: pooling: reserve 8.
+(pool) (44)
+		~:: pooling: reserve 9.
+(pool) (45)
+	~:: (percentage): (%): 100% +/+)
+		:(minus percentage): (-DEG.): 0 in degrees :.
+
+ -:: step: 10 complete. (100%) / (10/10)
+
+
 	-:: steps completed: 10
 
 -:: starting AI.

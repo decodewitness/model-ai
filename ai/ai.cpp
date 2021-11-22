@@ -376,7 +376,7 @@ bool AI::stepping() {	// integrity checking
 	double inPercent=0.00;
 	double onePercent=(Percent/Percent);
 
-	std::cout << std::endl << "-:: check integrity / logical step counter." << std::endl;
+	std::cout << std::endl << "-:: check integrity / logical step counter." << std::endl << std::endl;
 
 	for (int i=steps; i>=1; i--) {
 		// implement incremental logic here
@@ -388,11 +388,11 @@ bool AI::stepping() {	// integrity checking
 		// increase percentages
 		percentage -= (steps * (Percent/onePercent));
 		inPercent += (Percent/steps);
-		std::cout << "(percentage): (%): " << inPercent << "% +/+)  :";
+		std::cout << "\t~:: (percentage): (%): " << inPercent << "% +/+)";
 		
 		// calculate degrees & adding measure in degrees
 		degrees = (1-(1-((Percent - inPercent)/100)));
-		std::cout << "(minus percentage): (-DEG.): " << degrees << " in degrees :." << std::endl;
+		std::cout << std::endl << "\t\t:(minus percentage): (-DEG.): " << degrees << " in degrees :." << std::endl;
 
 		// on error bail out (set ch to anything but 'c' during checking to prevent the next checks)
 		if (errors==true) {	// check for errors
@@ -404,7 +404,7 @@ bool AI::stepping() {	// integrity checking
 			break; // bails on anything different than 'c'!
 		else {
 			steps_completed++;
-			std::cout << std::endl << " -:: step: " << (steps-i + 1) << " complete. (100%)" << std::endl;
+			std::cout << std::endl << " -:: step: " << (steps-i + 1) << " complete. (100%) / (" << (steps-i+1) << "/" << count << ")" << std::endl << std::endl;
 		}
 	}
 	
@@ -468,6 +468,7 @@ void AI::init() {
 	this->testrun = false;
 	this->run_checks();
 	
+	this->pool = 0;
 
 	// set "this->crlurl" to resource URL.
 	this->crlurl = URL;
@@ -635,13 +636,17 @@ void AI::combmod(moduleContainer a, moduleContainer b) {
 };
 
 bool AI::pooling(int x) {
-	this->elements = 5;
-	std::cout << "\t-::max pool elements: " << this->elements << " :: pooling: " << x << " elements." << std::endl;
+	this->elements = 10;
+	std::cout << "-:: (logical step) max pool elements: " << this->elements << " :: pooling: " << x << " elements." << std::endl;
 
 	for (int i=1; i<=x && i<this->elements; i++) {
-		std::cout << "\t~pooling: reserve " << i << "." << std::endl;
+		std::cout << "\t\t~:: pooling: reserve " << i << "." << std::endl;
 
 		// pool reserve here from data
+		this->pool++;
+		std::cout << "\t\t(pool) (" << this->pool << ")" << std::endl;
+
+		// add pool data here
 	}
 	return 1;
 }

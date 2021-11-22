@@ -70,6 +70,8 @@ private:
 	int r10; // for storing random number <=10
 	int r100; // for storing random number <=100
 
+	int pool; // for pooling data (initialize to 0)
+
 	char ch;
 	bool testrun;
 	bool recordat;
