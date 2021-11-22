@@ -45,6 +45,7 @@ wget --output-file="$LOGDIR/$LOGFILE" $LIST_URL
 echo "-/- done with downloads."
 
 ### PATCH ###
+echo
 echo "~/~ patching."
 echo "patching: \"$FILENAME\" (archives)"
 echo

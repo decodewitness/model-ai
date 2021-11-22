@@ -224,12 +224,14 @@ void AI::headers() {
 	if (indata.is_open() == true) {
 		std::cout << "\t\t~:: HEADER_IN<ifheaders> successfully opened \"ai/headers\"." << std::endl;
 		
-		std::cout << "\t~:: enumerating headers." << std::endl;
+		std::cout << "\t~:: enumerating headers." << std::endl << std::endl;
 		std::cout << "\t- ()[:  module name  :] && data[queryObject] (#)" << std::endl;
 
 		while ( getline(indata, hdr) ) {	// get headers from file
 			std::cout << "\t\t* " << hdr << std::endl;
 		}
+
+		std::cout << std::endl;
 	}
 	
 	//initialize array arr[]
@@ -544,7 +546,7 @@ void AI::saygrace() {
 void AI::query() {
 	// QUERY
 
-	std::cout << "::- query in sample." << std::endl;
+	std::cout << std::endl << "::- query in sample -::" << std::endl;
 	
 	// PROMPT
 	std::cout << "--? :: ";

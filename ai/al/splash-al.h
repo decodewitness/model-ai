@@ -7,7 +7,7 @@
 #include <iostream>
 
 void splash_al(void) {
-	std::cout << " oo[" << std::endl << std::endl;
+	std::cout << std::endl << " oo[" << std::endl << std::endl;
 }
 
 // eof

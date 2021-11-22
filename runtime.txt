@@ -1402,6 +1402,7 @@ ENTER PASSCODE:
 		~:: HEADER_OUT<ofheaders> successfully opened "ai/headers.txt".
 		~:: HEADER_IN<ifheaders> successfully opened "ai/headers".
 	~:: enumerating headers.
+
 	- ()[:  module name  :] && data[queryObject] (#)
 		* speech.csv,
 		* sensor_reading.csv,
@@ -1413,17 +1414,18 @@ ENTER PASSCODE:
 		* health_criteria.csv,
 		* ocr.csv,
 		* images_translation.csv
+
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffecdeb4850)
-	- stacking header:(1)::<address>(0x7ffecdeb4870)
-	- stacking header:(2)::<address>(0x7ffecdeb4890)
-	- stacking header:(3)::<address>(0x7ffecdeb48b0)
-	- stacking header:(4)::<address>(0x7ffecdeb48d0)
-	- stacking header:(5)::<address>(0x7ffecdeb48f0)
-	- stacking header:(6)::<address>(0x7ffecdeb4910)
-	- stacking header:(7)::<address>(0x7ffecdeb4930)
-	- stacking header:(8)::<address>(0x7ffecdeb4950)
-	- stacking header:(9)::<address>(0x7ffecdeb4970)
+	- stacking header:(0)::<address>(0x7ffd002d38b0)
+	- stacking header:(1)::<address>(0x7ffd002d38d0)
+	- stacking header:(2)::<address>(0x7ffd002d38f0)
+	- stacking header:(3)::<address>(0x7ffd002d3910)
+	- stacking header:(4)::<address>(0x7ffd002d3930)
+	- stacking header:(5)::<address>(0x7ffd002d3950)
+	- stacking header:(6)::<address>(0x7ffd002d3970)
+	- stacking header:(7)::<address>(0x7ffd002d3990)
+	- stacking header:(8)::<address>(0x7ffd002d39b0)
+	- stacking header:(9)::<address>(0x7ffd002d39d0)
 
 -:: checking arguments.
 	1: arguments.
@@ -1480,16 +1482,15 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
+
  oo[
 
 ....32323232....32323232....32323232....32323232...
@@ -1554,7 +1555,8 @@ ENTER PASSCODE:
 		~:: glob() in directory: (bay):
 		   :: files in directory ::
 			 * bay/info.txt
-::- query in sample.
+
+::- query in sample -::
 --? :: 
 
 -:: testing sample ::-
@@ -1567,7 +1569,6 @@ ENTER PASSCODE:
 
 -:: display ((x)->live())(?x) equaled .
 -:: destructor artificial life routine was called. -:: killing abstraction layer.
-
 
 -:: checking health criteria
 	-:: health monitoring. (10) criteria.
@@ -1584,6 +1585,7 @@ ENTER PASSCODE:
 
 -/- getting "archives_list.csv"
 -/- done with downloads.
+
 ~/~ patching.
 patching: "archives_list.csv" (archives)
 

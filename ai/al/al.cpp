@@ -18,7 +18,7 @@ AL::AL() { // AL constructor
 };
 
 AL::~AL() { // AL destructor
-	std::cout << "-:: destructor artificial life routine was called. -:: killing abstraction layer." << std::endl;
+	std::cout << "-:: destructor artificial life routine was called. -:: killing abstraction layer.";
 };
 
 void AL::kbuild(double i) {
@@ -58,6 +58,7 @@ int AL::live() {
 	int pinlabel=1000;	// used for shepard(int n) in artificial life routine
 	
 	populate();
+	//std::cout << std::endl;
 	splash_al();
 
 	// ARTIFICIAL LIFE ROUTINE

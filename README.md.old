@@ -1454,6 +1454,7 @@ ENTER PASSCODE:
 		~:: HEADER_OUT<ofheaders> successfully opened "ai/headers.txt".
 		~:: HEADER_IN<ifheaders> successfully opened "ai/headers".
 	~:: enumerating headers.
+
 	- ()[:  module name  :] && data[queryObject] (#)
 		* speech.csv,
 		* sensor_reading.csv,
@@ -1465,17 +1466,18 @@ ENTER PASSCODE:
 		* health_criteria.csv,
 		* ocr.csv,
 		* images_translation.csv
+
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff4efff3d0)
-	- stacking header:(1)::<address>(0x7fff4efff3f0)
-	- stacking header:(2)::<address>(0x7fff4efff410)
-	- stacking header:(3)::<address>(0x7fff4efff430)
-	- stacking header:(4)::<address>(0x7fff4efff450)
-	- stacking header:(5)::<address>(0x7fff4efff470)
-	- stacking header:(6)::<address>(0x7fff4efff490)
-	- stacking header:(7)::<address>(0x7fff4efff4b0)
-	- stacking header:(8)::<address>(0x7fff4efff4d0)
-	- stacking header:(9)::<address>(0x7fff4efff4f0)
+	- stacking header:(0)::<address>(0x7ffd16268350)
+	- stacking header:(1)::<address>(0x7ffd16268370)
+	- stacking header:(2)::<address>(0x7ffd16268390)
+	- stacking header:(3)::<address>(0x7ffd162683b0)
+	- stacking header:(4)::<address>(0x7ffd162683d0)
+	- stacking header:(5)::<address>(0x7ffd162683f0)
+	- stacking header:(6)::<address>(0x7ffd16268410)
+	- stacking header:(7)::<address>(0x7ffd16268430)
+	- stacking header:(8)::<address>(0x7ffd16268450)
+	- stacking header:(9)::<address>(0x7ffd16268470)
 
 -:: checking arguments.
 	1: arguments.
@@ -1540,6 +1542,7 @@ ENTER PASSCODE:
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
+
  oo[
 
 ....32323232....32323232....32323232....32323232...
@@ -1604,20 +1607,20 @@ ENTER PASSCODE:
 		~:: glob() in directory: (bay):
 		   :: files in directory ::
 			 * bay/info.txt
-::- query in sample.
+
+::- query in sample -::
 --? :: 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	ai
-	[ x computation: type:char len:2 vowels:0 consonants:2 special:0  ]
+	logic
+	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
 
 -:: display ((x)->live())(?x) equaled .
 -:: destructor artificial life routine was called. -:: killing abstraction layer.
-
 
 -:: checking health criteria
 	-:: health monitoring. (10) criteria.
