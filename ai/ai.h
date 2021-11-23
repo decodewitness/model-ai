@@ -26,27 +26,28 @@
 #include "fetch/curl.cpp"
 #include "system/splash.h"
 #include "system/gradle.h"
-#include "logic/learn.cpp"
-#include "logic/limits.cpp"
 #include "entropy/b33hiv3.h"		// includes entropy.cpp && ltctapttclt.cpp
 #include "patching/patch.cpp"
-#include "logic/interpret.cpp"
 #include "system/protocol.cpp"
 #include "sampler/sampler.cpp"
-#include "logic/algorithms.cpp"
 #include "language/concepts.cpp"
 #include "drum_machine/drums.cpp"
+#include "logic/analysis/learn.cpp"
 #include "logic/assembly/input.cpp"
+#include "logic/analysis/limits.cpp"
 #include "system/modules/modular.cpp"
 #include "language/speech/saying.cpp"
 #include "modular_bay/modular_bay.cpp"
+#include "logic/analysis/interpret.cpp"
 #include "system/security/security.cpp"
+#include "logic/analysis/algorithms.cpp"
 #include "system/definitions/encoder.cpp"
+#include "system/definitions/routines.cpp"
 #include "logic/transponder/transponder.cpp"
 #include "system/modules/combine/combine.cpp"
 
 // linked to above modules
-const int nr_modules = 21;	// equal to the number of includes in "modules" (above this)
+const int nr_modules = 23;	// equal to the number of includes in "modules" (above this)
 
 // FOR OTHER MODULES
 const int module_limits = 1024;

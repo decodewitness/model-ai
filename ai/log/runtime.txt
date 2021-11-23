@@ -1416,16 +1416,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe2953fbc0)
-	- stacking header:(1)::<address>(0x7ffe2953fbe0)
-	- stacking header:(2)::<address>(0x7ffe2953fc00)
-	- stacking header:(3)::<address>(0x7ffe2953fc20)
-	- stacking header:(4)::<address>(0x7ffe2953fc40)
-	- stacking header:(5)::<address>(0x7ffe2953fc60)
-	- stacking header:(6)::<address>(0x7ffe2953fc80)
-	- stacking header:(7)::<address>(0x7ffe2953fca0)
-	- stacking header:(8)::<address>(0x7ffe2953fcc0)
-	- stacking header:(9)::<address>(0x7ffe2953fce0)
+	- stacking header:(0)::<address>(0x7ffe940dfb10)
+	- stacking header:(1)::<address>(0x7ffe940dfb30)
+	- stacking header:(2)::<address>(0x7ffe940dfb50)
+	- stacking header:(3)::<address>(0x7ffe940dfb70)
+	- stacking header:(4)::<address>(0x7ffe940dfb90)
+	- stacking header:(5)::<address>(0x7ffe940dfbb0)
+	- stacking header:(6)::<address>(0x7ffe940dfbd0)
+	- stacking header:(7)::<address>(0x7ffe940dfbf0)
+	- stacking header:(8)::<address>(0x7ffe940dfc10)
+	- stacking header:(9)::<address>(0x7ffe940dfc30)
 
 -:: checking arguments.
 	1: arguments.

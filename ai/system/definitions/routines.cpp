@@ -1,22 +1,20 @@
 // (inside AI directory) AI/ROUTINES.CPP - GRAMMAR ROUTINES FOR AI MODEL (USED BY SAYING.CPP & INTERPRET.H)
-
 // handle interpunctions and line carries
 
 #include <iostream>
 #include <cstring>
 
-
 // newline character
 void carry() { std::cout << std::endl; }
 
 // skip a line
-void skip() { std::cout << std::endl << std::endl; }	// 1x "skip()" is the same as two times: "carry(); carry();"
+void skipline() { std::cout << std::endl << std::endl; }	// 1x "skip()" is the same as two times: "carry(); carry();"
 
 // space
-void space() { std::cout << " "; }
+void space() { std::cout << (32); }
 
 // interpunction
-void interpunct() { std::cout << "."; }
+void dot() { std::cout << "."; }
 
 // comma and space
 void comma() { std::cout << ","; }
@@ -25,6 +23,6 @@ void comma() { std::cout << ","; }
 void question() { std::cout << "?"; }
 
 // exclamation
-void exclam() { std::cout << "!"; }
+void exclaim() { std::cout << "!"; }
 
 // eof

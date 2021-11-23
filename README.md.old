@@ -1468,16 +1468,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff2cd47ff0)
-	- stacking header:(1)::<address>(0x7fff2cd48010)
-	- stacking header:(2)::<address>(0x7fff2cd48030)
-	- stacking header:(3)::<address>(0x7fff2cd48050)
-	- stacking header:(4)::<address>(0x7fff2cd48070)
-	- stacking header:(5)::<address>(0x7fff2cd48090)
-	- stacking header:(6)::<address>(0x7fff2cd480b0)
-	- stacking header:(7)::<address>(0x7fff2cd480d0)
-	- stacking header:(8)::<address>(0x7fff2cd480f0)
-	- stacking header:(9)::<address>(0x7fff2cd48110)
+	- stacking header:(0)::<address>(0x7ffe2953fbc0)
+	- stacking header:(1)::<address>(0x7ffe2953fbe0)
+	- stacking header:(2)::<address>(0x7ffe2953fc00)
+	- stacking header:(3)::<address>(0x7ffe2953fc20)
+	- stacking header:(4)::<address>(0x7ffe2953fc40)
+	- stacking header:(5)::<address>(0x7ffe2953fc60)
+	- stacking header:(6)::<address>(0x7ffe2953fc80)
+	- stacking header:(7)::<address>(0x7ffe2953fca0)
+	- stacking header:(8)::<address>(0x7ffe2953fcc0)
+	- stacking header:(9)::<address>(0x7ffe2953fce0)
 
 -:: checking arguments.
 	1: arguments.
@@ -1681,7 +1681,7 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 1 elements.
 		~:: pooling: reserve 1.
-(pool) (1)
+		(pool) (1)
 	~:: (percentage): (%): 20% +/+)
 		:(minus percentage): (-DEG.): 0.8 in degrees :.
 
@@ -1689,9 +1689,9 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 2 elements.
 		~:: pooling: reserve 1.
-(pool) (2)
+		(pool) (2)
 		~:: pooling: reserve 2.
-(pool) (3)
+		(pool) (3)
 	~:: (percentage): (%): 30% +/+)
 		:(minus percentage): (-DEG.): 0.7 in degrees :.
 
@@ -1699,11 +1699,11 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 3 elements.
 		~:: pooling: reserve 1.
-(pool) (4)
+		(pool) (4)
 		~:: pooling: reserve 2.
-(pool) (5)
+		(pool) (5)
 		~:: pooling: reserve 3.
-(pool) (6)
+		(pool) (6)
 	~:: (percentage): (%): 40% +/+)
 		:(minus percentage): (-DEG.): 0.6 in degrees :.
 
@@ -1711,13 +1711,13 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 4 elements.
 		~:: pooling: reserve 1.
-(pool) (7)
+		(pool) (7)
 		~:: pooling: reserve 2.
-(pool) (8)
+		(pool) (8)
 		~:: pooling: reserve 3.
-(pool) (9)
+		(pool) (9)
 		~:: pooling: reserve 4.
-(pool) (10)
+		(pool) (10)
 	~:: (percentage): (%): 50% +/+)
 		:(minus percentage): (-DEG.): 0.5 in degrees :.
 
@@ -1725,15 +1725,15 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 5 elements.
 		~:: pooling: reserve 1.
-(pool) (11)
+		(pool) (11)
 		~:: pooling: reserve 2.
-(pool) (12)
+		(pool) (12)
 		~:: pooling: reserve 3.
-(pool) (13)
+		(pool) (13)
 		~:: pooling: reserve 4.
-(pool) (14)
+		(pool) (14)
 		~:: pooling: reserve 5.
-(pool) (15)
+		(pool) (15)
 	~:: (percentage): (%): 60% +/+)
 		:(minus percentage): (-DEG.): 0.4 in degrees :.
 
@@ -1741,17 +1741,17 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 6 elements.
 		~:: pooling: reserve 1.
-(pool) (16)
+		(pool) (16)
 		~:: pooling: reserve 2.
-(pool) (17)
+		(pool) (17)
 		~:: pooling: reserve 3.
-(pool) (18)
+		(pool) (18)
 		~:: pooling: reserve 4.
-(pool) (19)
+		(pool) (19)
 		~:: pooling: reserve 5.
-(pool) (20)
+		(pool) (20)
 		~:: pooling: reserve 6.
-(pool) (21)
+		(pool) (21)
 	~:: (percentage): (%): 70% +/+)
 		:(minus percentage): (-DEG.): 0.3 in degrees :.
 
@@ -1759,19 +1759,19 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 7 elements.
 		~:: pooling: reserve 1.
-(pool) (22)
+		(pool) (22)
 		~:: pooling: reserve 2.
-(pool) (23)
+		(pool) (23)
 		~:: pooling: reserve 3.
-(pool) (24)
+		(pool) (24)
 		~:: pooling: reserve 4.
-(pool) (25)
+		(pool) (25)
 		~:: pooling: reserve 5.
-(pool) (26)
+		(pool) (26)
 		~:: pooling: reserve 6.
-(pool) (27)
+		(pool) (27)
 		~:: pooling: reserve 7.
-(pool) (28)
+		(pool) (28)
 	~:: (percentage): (%): 80% +/+)
 		:(minus percentage): (-DEG.): 0.2 in degrees :.
 
@@ -1779,21 +1779,21 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 8 elements.
 		~:: pooling: reserve 1.
-(pool) (29)
+		(pool) (29)
 		~:: pooling: reserve 2.
-(pool) (30)
+		(pool) (30)
 		~:: pooling: reserve 3.
-(pool) (31)
+		(pool) (31)
 		~:: pooling: reserve 4.
-(pool) (32)
+		(pool) (32)
 		~:: pooling: reserve 5.
-(pool) (33)
+		(pool) (33)
 		~:: pooling: reserve 6.
-(pool) (34)
+		(pool) (34)
 		~:: pooling: reserve 7.
-(pool) (35)
+		(pool) (35)
 		~:: pooling: reserve 8.
-(pool) (36)
+		(pool) (36)
 	~:: (percentage): (%): 90% +/+)
 		:(minus percentage): (-DEG.): 0.1 in degrees :.
 
@@ -1801,23 +1801,23 @@ PATCHING +OK
 
 -:: (logical step) max pool elements: 10 :: pooling: 9 elements.
 		~:: pooling: reserve 1.
-(pool) (37)
+		(pool) (37)
 		~:: pooling: reserve 2.
-(pool) (38)
+		(pool) (38)
 		~:: pooling: reserve 3.
-(pool) (39)
+		(pool) (39)
 		~:: pooling: reserve 4.
-(pool) (40)
+		(pool) (40)
 		~:: pooling: reserve 5.
-(pool) (41)
+		(pool) (41)
 		~:: pooling: reserve 6.
-(pool) (42)
+		(pool) (42)
 		~:: pooling: reserve 7.
-(pool) (43)
+		(pool) (43)
 		~:: pooling: reserve 8.
-(pool) (44)
+		(pool) (44)
 		~:: pooling: reserve 9.
-(pool) (45)
+		(pool) (45)
 	~:: (percentage): (%): 100% +/+)
 		:(minus percentage): (-DEG.): 0 in degrees :.
 
