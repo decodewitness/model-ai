@@ -15,13 +15,11 @@
 #include "logic/ascii/amnesia.h"
 #include "logic/ascii/asterisktab.h"
 
-// artificial life routines
-#include "al/al.cpp"
-
 // configurations
-#include "cfg/config.h"
+#include "system/cfg/config.h"
 
 // headers
+#include "al/al.cpp"
 #include "system/chk.h"
 #include "fetch/curl.cpp"
 #include "system/splash.h"
@@ -47,7 +45,7 @@
 #include "system/modules/combine/combine.cpp"
 
 // linked to above modules
-const int nr_modules = 23;	// equal to the number of includes in "modules" (above this)
+const int nr_modules = 24;	// equal to the number of includes in "modules" (above this)
 
 // FOR OTHER MODULES
 const int module_limits = 1024;

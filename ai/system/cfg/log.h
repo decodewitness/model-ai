@@ -1,4 +1,4 @@
-// LOG.CPP - GENERATE (LOGS ON THE FLY) FOR MODEL AI USED BY "CFG/CFG.H"
+// /AI/SYSTEM/CFG/LOG.CPP - GENERATE (LOGS ON THE FLY) FOR MODEL AI USED BY "/AI/SYSTEM/CFG/CFG.H"
 	// (receipt and transactions)
 
 #include <iostream>
