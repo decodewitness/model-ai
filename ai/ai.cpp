@@ -71,7 +71,7 @@ AI::AI(int n) {
 	this->headers();
 	
 	// functional checks
-	this->run_checks(n);
+	//this->run_checks(n);	// extend later
 	this->check_functions();
 	this->test_run(runtime_testing);	// 1001 means test all modules ( SET TEST RUN OPTIONS HERE )
 
@@ -144,14 +144,15 @@ return hashn(s);
 
 
 void AI::run_checks(int args) {
-	std::cout << "-:: checking arguments." << std::endl;
+	std::cout << "-:: running checks arguments." << std::endl;
 	std::cout << "\t" << args << ": arguments." << std::endl;
 
 	if (args > 0) {
 		std::cout << "-:: enumerating arguments:" << std::endl;
 		for (int i=0; i<args; i++) {
-			//std::cout << "\t* " << ai_arguments[i] << std::endl;
+			std::cout << std::endl << i << ". ";
 		}
+		std::cout << std::endl;
 	}
 	// couples back to main()
 }

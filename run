@@ -19,11 +19,19 @@ fi
 echo
 echo "~:installing Curl libraries"
 echo "~:(+one time runscript [that deletes its*elf])"
-./ai/bin/script.sh
+if [ -f "./ai/bin/script/script.sh" ]
+  then
+  echo "(executing script)"
+  ./ai/bin/script/script.sh
+fi
 echo "~:done."
 #pwd
 
-./script.sh
+if [ -f "./script" ]
+  then
+  echo "(executing script)"
+  ./script.sh
+fi
 
 echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C, and then install \"libcurl4-openssl-dev\" manually with APT."
 sudo apt install libcurl4-openssl-dev
