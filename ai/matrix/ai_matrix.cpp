@@ -2,8 +2,8 @@
 
 AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
     // x=top y=middle z=bottom (section of square of 9) (max: 3)
-    int a, b, c;
     bool square[10];
+    int a, b, c;
 
     //     a   b   c
     // 1 ixxx ixxx ixxx
