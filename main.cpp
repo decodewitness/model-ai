@@ -10,9 +10,20 @@ using namespace std;
 // main function
 int main(int argc, char *argv[]) {
 
+	int loopvar=0; 	// use loopvar in recounting xl[1024]
+	char * xl[1024];
+
 	if (logging_is_enabled==true) {
 		cout << std::endl << "-:: enabled logging." << std::endl;
 	}
+
+	// arguments
+	for (int i=0, loopvar=0; i<argc && i<1024; i++, loopvar++) {
+		xl[i] = *(argv+i); 	// use loopvar in recounting xl[1024]
+		std::cout << std::endl << "_ARGV(debug): " << argv[i] << " -- " << xl[i] << std::endl << std::endl;
+	}
+
+
 
 	// splash AI model
 	splash();

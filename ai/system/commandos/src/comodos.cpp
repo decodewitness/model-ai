@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
     string line;
     ifstream fs;
     
-    cout << "~=::COMODOS:_'>" << (VERSION+1) << endl;
+    cout << std::endl << "~=::COMODOS:_'>" << VERSION[1] << endl;
 
     if (argc >= 2) {
         fs.open(argv[1],ios::in);

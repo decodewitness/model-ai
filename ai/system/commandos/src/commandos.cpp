@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
             break;
         
         case 2: // with 2 args prints the version
-            cout << "Commandos_" << VERSION << endl;
+            cout << std::endl << "Commandos_" << VERSION[0] << endl;
 
         default:
             cout << "argument1"

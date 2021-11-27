@@ -52,6 +52,9 @@ LOGGED OUTPUT OF THIS BETA:
 
 
 -:: enabled logging.
+
+_ARGV(debug): ./ai/bin/runtime -- ./ai/bin/runtime
+
  ** ][][ **
 
 ~:: security routine
@@ -1470,16 +1473,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff8f5c3c90)
-	- stacking header:(1)::<address>(0x7fff8f5c3cb0)
-	- stacking header:(2)::<address>(0x7fff8f5c3cd0)
-	- stacking header:(3)::<address>(0x7fff8f5c3cf0)
-	- stacking header:(4)::<address>(0x7fff8f5c3d10)
-	- stacking header:(5)::<address>(0x7fff8f5c3d30)
-	- stacking header:(6)::<address>(0x7fff8f5c3d50)
-	- stacking header:(7)::<address>(0x7fff8f5c3d70)
-	- stacking header:(8)::<address>(0x7fff8f5c3d90)
-	- stacking header:(9)::<address>(0x7fff8f5c3db0)
+	- stacking header:(0)::<address>(0x7ffc5d5ea1d0)
+	- stacking header:(1)::<address>(0x7ffc5d5ea1f0)
+	- stacking header:(2)::<address>(0x7ffc5d5ea210)
+	- stacking header:(3)::<address>(0x7ffc5d5ea230)
+	- stacking header:(4)::<address>(0x7ffc5d5ea250)
+	- stacking header:(5)::<address>(0x7ffc5d5ea270)
+	- stacking header:(6)::<address>(0x7ffc5d5ea290)
+	- stacking header:(7)::<address>(0x7ffc5d5ea2b0)
+	- stacking header:(8)::<address>(0x7ffc5d5ea2d0)
+	- stacking header:(9)::<address>(0x7ffc5d5ea2f0)
 
 -:: checking arguments.
 	1: arguments.
@@ -1675,11 +1678,13 @@ PATCHING +OK
 :2: unicorn =003=
 :3: unicorn =004=
 :4: unicorn =005=
-Commandos_0x55b67413e020
+
+Commandos_v.0.0-1a
 argument1
 argument2
 argument3
-~=::COMODOS:_'>0x55602c927040
+
+~=::COMODOS:_'>v.0.0-1a
 (debug)___.
 -:: check integrity / logical step counter.
 
