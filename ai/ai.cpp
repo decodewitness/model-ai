@@ -9,6 +9,10 @@
 
 #include "ai.h"
 
+// CONSTANTS
+//const char _RESTOREMODEL[32] = "ai/patching/restore";
+	// declared elsewhere
+
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
 const int runtime_testing = 1001;
 
@@ -471,7 +475,7 @@ void AI::init() {
 	this->pool = 0;
 
 	// set "this->crlurl" to resource URL.
-	this->crlurl = URL;
+	this->crlurl = DOWNLOADURL;
 	this->cmb = new Combine;
 
 	int x=0;
@@ -663,14 +667,26 @@ void AI::auto_patch() {
 	patch_module();
 }
 
-void AI::rollout() {
+void AI::rollout(int n) {
 	// roll out comodos & commandos
-	std::cout << "(debug)___.";
-	system(_COMODOS);
+	std::cout << "(debug)___msgs.";
+	switch (n) {
+		case 1: // roll out next model
+			//std::cout << "~:: download next model ::~" << std::endl;
+			system(_RESTOREMODEL);
+		break;
+
+		case 9: // roll out comodos
+			system(_COMODOS);
+		break;
+	
+		default: // default
+			std::cout << "~:: no rollouts." << std::endl;
+		break;
+	};
 };
 
 // OTHER FUNCTIONS
-
 std::string * stackmodule(int x, std::string *ar) {
 	// stacking header
 	// header name / content label

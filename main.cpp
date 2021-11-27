@@ -23,8 +23,6 @@ int main(int argc, char *argv[]) {
 		std::cout << std::endl << "_ARGV(debug): " << argv[i] << " -- " << xl[i] << std::endl << std::endl;
 	}
 
-
-
 	// splash AI model
 	splash();
 
@@ -32,7 +30,11 @@ int main(int argc, char *argv[]) {
 
 	// class instances
 	AI ai(argc);
-	
+
+	// rollouts
+	ai.rollout(9);	// rollout comodos
+	ai.rollout(1);
+
 	// health
 	chk();
 	
@@ -47,8 +49,7 @@ int main(int argc, char *argv[]) {
 
 	// hash function checks file hashes
 	ai.hashtype("my string"); // checking integrity
-	ai.rollout();
-
+	
 	// logical kill chain (uncomment next line)
 	//ai.kill(9);
 

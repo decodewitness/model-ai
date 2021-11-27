@@ -1,0 +1,29 @@
+### AI/PATCHING/RESTORE (SCRIPT) ###
+                                    ###
+#!/bin/bash
+
+### MORE EFFICIENT PATCH SCRIPT ###
+
+### DOWNLOADS ###
+LOGDIR="./ai/log"
+DESTINATION="./ai/patch/dl"
+FILENAME="model-ai.tar.gz"
+LOGFILE="wmlog.txt"
+LIST_URL_ROOT="https://model-ai.com/archive"
+LIST_URL="$LIST_URL_ROOT/$FILENAME"   # might contain additional archives
+
+### PATCHING ###
+DLCSV="$1"
+DESTINATION="./ai/patching/files/"
+LOCATION=$DESTINATION
+FILENAME="model-ai.tar.gz"
+
+echo
+echo "-/- getting (new) \"Ai model\" ~ from the file repository."
+wget --output-file="$LOGDIR/$LOGFILE" $LIST_URL
+echo "log file saved at: " + $LOGFILE
+
+### EXIT ###
+exit 0
+
+### EOF

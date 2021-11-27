@@ -4,7 +4,7 @@
 #define _AI_HEADER
 #endif
 
-#define URL "https://model-ai.com/ai"
+#define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
 
 // commandos / comodos && _varaan
 //#include "comodovaraan.cpp"	// already included differently
@@ -29,7 +29,7 @@
 #include "system/splash.h"
 #include "system/gradle.h"
 #include "comodo/varaan.h"
-#include "entropy/b33hiv3.h"		// includes entropy.cpp && ltctapttclt.cpp
+#include "entropy/b33hiv3.h"	// includes entropy.cpp && ltctapttclt.cpp
 #include "patching/patch.cpp"
 #include "system/protocol.cpp"
 #include "sampler/sampler.cpp"
@@ -40,7 +40,6 @@
 #include "logic/analysis/limits.cpp"
 #include "system/modules/modular.cpp"
 #include "language/speech/saying.cpp"
-#include "modular_bay/modular_bay.cpp"
 #include "logic/analysis/interpret.cpp"
 #include "system/security/security.cpp"
 #include "logic/analysis/algorithms.cpp"
@@ -48,6 +47,7 @@
 #include "system/definitions/routines.cpp"
 #include "logic/transponder/transponder.cpp"
 #include "system/modules/combine/combine.cpp"
+#include "system/modules/modular_bay/modular_bay.cpp"
 
 // linked to above modules
 const int nr_modules = 24;	// equal to the number of includes in "modules" (above this)
@@ -112,8 +112,8 @@ public:
 	// headers
 	void headers();
 
-	// comodo
-	void rollout();
+	// rollouts
+	void rollout(int n);
 	
 	// checking mechanisms
 	void run_checks(int arg=0);

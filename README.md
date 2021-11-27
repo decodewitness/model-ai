@@ -1473,16 +1473,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc75dad790)
-	- stacking header:(1)::<address>(0x7ffc75dad7b0)
-	- stacking header:(2)::<address>(0x7ffc75dad7d0)
-	- stacking header:(3)::<address>(0x7ffc75dad7f0)
-	- stacking header:(4)::<address>(0x7ffc75dad810)
-	- stacking header:(5)::<address>(0x7ffc75dad830)
-	- stacking header:(6)::<address>(0x7ffc75dad850)
-	- stacking header:(7)::<address>(0x7ffc75dad870)
-	- stacking header:(8)::<address>(0x7ffc75dad890)
-	- stacking header:(9)::<address>(0x7ffc75dad8b0)
+	- stacking header:(0)::<address>(0x7ffe768b7080)
+	- stacking header:(1)::<address>(0x7ffe768b70a0)
+	- stacking header:(2)::<address>(0x7ffe768b70c0)
+	- stacking header:(3)::<address>(0x7ffe768b70e0)
+	- stacking header:(4)::<address>(0x7ffe768b7100)
+	- stacking header:(5)::<address>(0x7ffe768b7120)
+	- stacking header:(6)::<address>(0x7ffe768b7140)
+	- stacking header:(7)::<address>(0x7ffe768b7160)
+	- stacking header:(8)::<address>(0x7ffe768b7180)
+	- stacking header:(9)::<address>(0x7ffe768b71a0)
 
 
 -:: checking AI functions.
@@ -1610,7 +1610,7 @@ ENTER PASSCODE:
 	~:: scanning() directory: (bay).
 		~:: glob() in directory: (bay):
 		   :: files in directory ::
-			 * bay/audio
+			 * bay/DCIM
 			 * bay/info.txt
 
 ::- query in sample -::
@@ -1625,7 +1625,17 @@ ENTER PASSCODE:
 -:: aborting artificial life sequence, and clean up gracefully!
 
 -:: display ((x)->live())(?x) equaled .
--:: destructor artificial life routine was called. -:: killing abstraction layer.
+
+Commandos_v.0.0-1a
+argument1
+argument2
+argument3
+
+~=::COMODOS:_'>v.0.0-1a
+
+-/- getting (new) "Ai model" ~ from the file repository.
+log file saved at:  + wmlog.txt
+-:: destructor artificial life routine was called. -:: killing abstraction layer.(debug)___msgs.(debug)___msgs.
 
 -:: checking health criteria
 	-:: health monitoring. (10) criteria.
@@ -1676,13 +1686,6 @@ PATCHING +OK
 :3: unicorn =004=
 :4: unicorn =005=
 
-Commandos_v.0.0-1a
-argument1
-argument2
-argument3
-
-~=::COMODOS:_'>v.0.0-1a
-(debug)___.
 -:: check integrity / logical step counter.
 
 -:: (logical step) max pool elements: 10 :: pooling: 0 elements.
