@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 
+#include "varab.h"
 #include "varan.h"
 
 // *    .    * //
@@ -16,7 +17,6 @@
 //  INTERFACE  //
 //*   * . *   *//
 
-const char VERSION[] = "v.0.0-1a";
     /*~+=+ model_a_i )(_'_>~<
   //    //       //
 _/   //7*/        //*7
@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
     string line;
     ifstream fs;
     
-    cout << "~=::COMODOS:_'>" << VERSION << endl;
+    cout << "~=::COMODOS:_'>" << (VERSION+1) << endl;
 
     if (argc >= 2) {
         fs.open(argv[1],ios::in);

@@ -1,0 +1,1 @@
+const char VERSION[2][32] = { "v.0.0-1a", "v.0.0-1a" };

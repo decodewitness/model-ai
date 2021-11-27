@@ -36,6 +36,7 @@ int main(int argc, char *argv[]) {
 
 	// hash function checks file hashes
 	ai.hashtype("my string"); // checking integrity
+	ai.rollout();
 
 	// logical kill chain (uncomment next line)
 	//ai.kill(9);

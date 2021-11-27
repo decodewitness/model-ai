@@ -5,7 +5,7 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
     bool square[10];
     int a, b, c;
 
-    //     a   b   c
+    //     a    b    c
     // 1 ixxx ixxx ixxx
     // 2  xxx  xxx  xxx
     // 3  xxx  xxx  xxx
@@ -15,7 +15,7 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
     int C_square[10]; // a,b3;
     int decimal[30]; // 30 decimals
    
-    switch (x) {
+    switch (x) { // 120 A_square units {x+y+z=360}
         
         case 0: A_square[0] = 0;
                 A_square[1] = 0;
@@ -26,7 +26,7 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
                 A_square[6] = 0;
                 A_square[7] = 0;
                 A_square[8] = 0;
-                A_square[9] = 0;
+                A_square[9] = -2;
                 break;
 
         case 1: A_square[0] = 1;
@@ -137,17 +137,19 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
                 A_square[9] = 0;     
                 break;
 
-        case 10: A_square[0] = 10;
-                 A_square[1] = 0;
-                 A_square[2] = 0;
-                 A_square[3] = 0;
-                 A_square[4] = 0;
-                 A_square[5] = 0;
-                 A_square[6] = 0;
-                 A_square[7] = 0;
-                 A_square[8] = 0;
-                 A_square[9] = 0;     
-                 break;
+        case 10:
+                A_square[0] = 10;
+                A_square[1] = 0;
+                A_square[2] = 0;
+                A_square[3] = 0;
+                A_square[4] = 0;
+                A_square[5] = 0;
+                A_square[6] = 0;
+                A_square[7] = 0;
+                A_square[8] = 0;
+                A_square[9] = 0;     
+                break;
+
         default:
                 A_square[0] = 0;
                 A_square[1] = 0;
@@ -158,7 +160,7 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
                 A_square[6] = 0;
                 A_square[7] = 0;
                 A_square[8] = 0;
-                A_square[9] = 0;
+                A_square[9] = 1;
             break;
     };
 
@@ -172,7 +174,7 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
                  A_square[6] = 0;
                  A_square[7] = 0;
                  A_square[8] = 0;
-                 A_square[9] = 0;
+                 A_square[9] = -2;
                  break;
          
          case 1: A_square[0] = 0;
@@ -283,17 +285,18 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
                 A_square[9] = 0;
                 break;
 
-        case 10: A_square[0] = 0;
-                 A_square[1] = 10;
-                 A_square[2] = 0;
-                 A_square[3] = 0;
-                 A_square[4] = 0;
-                 A_square[5] = 0;
-                 A_square[6] = 0;
-                 A_square[7] = 0;
-                 A_square[8] = 0;
-                 A_square[9] = 0;     
-                 break;
+        case 10:
+                A_square[0] = 0;
+                A_square[1] = 10;
+                A_square[2] = 0;
+                A_square[3] = 0;
+                A_square[4] = 0;
+                A_square[5] = 0;
+                A_square[6] = 0;
+                A_square[7] = 0;
+                A_square[8] = 0;
+                A_square[9] = 0;     
+                break;
 
         default:
                 A_square[0] = 0;
@@ -305,34 +308,34 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
                 A_square[6] = 0;
                 A_square[7] = 0;
                 A_square[8] = 0;
-                A_square[9] = 0;
+                A_square[9] = 1;
             break;
     };
 
     switch (z) {
         case 0: A_square[0] = 0;
-                 A_square[1] = 0;
-                 A_square[2] = 0;
-                 A_square[3] = 0;
-                 A_square[4] = 0;
-                 A_square[5] = 0;
-                 A_square[6] = 0;
-                 A_square[7] = 0;
-                 A_square[8] = 0;
-                 A_square[9] = 0;
-                 break;
+                A_square[1] = 0;
+                A_square[2] = 0;
+                A_square[3] = 0;
+                A_square[4] = 0;
+                A_square[5] = 0;
+                A_square[6] = 0;
+                A_square[7] = 0;
+                A_square[8] = 0;
+                A_square[9] = -2;
+                break;
          
-         case 1: A_square[0] = 0;
-                 A_square[1] = 0;
-                 A_square[2] = 1;
-                 A_square[3] = 0;
-                 A_square[4] = 0;
-                 A_square[5] = 0;
-                 A_square[6] = 0;
-                 A_square[7] = 0;
-                 A_square[8] = 0;
-                 A_square[9] = 0;
-                 break;
+        case 1: A_square[0] = 0;
+                A_square[1] = 0;
+                A_square[2] = 1;
+                A_square[3] = 0;
+                A_square[4] = 0;
+                A_square[5] = 0;
+                A_square[6] = 0;
+                A_square[7] = 0;
+                A_square[8] = 0;
+                A_square[9] = 0;
+                break;
 
         case 2: A_square[0] = 0;
                 A_square[1] = 0;
@@ -452,7 +455,7 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
                 A_square[6] = 0;
                 A_square[7] = 0;
                 A_square[8] = 0;
-                A_square[9] = 0;
+                A_square[9] = 1;
             break;
     };
 };

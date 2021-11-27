@@ -1365,11 +1365,13 @@ ENTER PASSCODE:
 	(module was found.)
 ~:: checking for gradle modules.
 	-:: checking gradle module 06.
-		~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation.
+		~:: (BMOD)::(SPC)
+(A)(SPC/LFT+module)::implementation.
 	(module was found.)
 ~:: checking for gradle modules.
 	-:: checking gradle module 07.
-		~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation.
+		~:: (BMOD)::(SPC)
+(B)(SPC/RGHT+module)::implementation.
 	(module was found.)
 ~:: checking for gradle modules.
 	-:: checking gradle module 08.
@@ -1468,16 +1470,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd3fa0b3e0)
-	- stacking header:(1)::<address>(0x7ffd3fa0b400)
-	- stacking header:(2)::<address>(0x7ffd3fa0b420)
-	- stacking header:(3)::<address>(0x7ffd3fa0b440)
-	- stacking header:(4)::<address>(0x7ffd3fa0b460)
-	- stacking header:(5)::<address>(0x7ffd3fa0b480)
-	- stacking header:(6)::<address>(0x7ffd3fa0b4a0)
-	- stacking header:(7)::<address>(0x7ffd3fa0b4c0)
-	- stacking header:(8)::<address>(0x7ffd3fa0b4e0)
-	- stacking header:(9)::<address>(0x7ffd3fa0b500)
+	- stacking header:(0)::<address>(0x7fff8f5c3c90)
+	- stacking header:(1)::<address>(0x7fff8f5c3cb0)
+	- stacking header:(2)::<address>(0x7fff8f5c3cd0)
+	- stacking header:(3)::<address>(0x7fff8f5c3cf0)
+	- stacking header:(4)::<address>(0x7fff8f5c3d10)
+	- stacking header:(5)::<address>(0x7fff8f5c3d30)
+	- stacking header:(6)::<address>(0x7fff8f5c3d50)
+	- stacking header:(7)::<address>(0x7fff8f5c3d70)
+	- stacking header:(8)::<address>(0x7fff8f5c3d90)
+	- stacking header:(9)::<address>(0x7fff8f5c3db0)
 
 -:: checking arguments.
 	1: arguments.
@@ -1534,11 +1536,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1671,7 +1675,12 @@ PATCHING +OK
 :2: unicorn =003=
 :3: unicorn =004=
 :4: unicorn =005=
-
+Commandos_0x55b67413e020
+argument1
+argument2
+argument3
+~=::COMODOS:_'>0x55602c927040
+(debug)___.
 -:: check integrity / logical step counter.
 
 -:: (logical step) max pool elements: 10 :: pooling: 0 elements.

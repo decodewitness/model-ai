@@ -4,7 +4,7 @@
 // HEADER
 #include <iostream>
 
-const char VERSION[] = "v.0.0-1a";
+#include "varab.h"
 
 using namespace std;
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 
             system("pwd"); // prints working directory
 
-            cout << endl << "~ :--parser:--passing arguments" << endl;
+            cout << endl << "~ :--parser:--passing arguents::" << endl;
             
             // running arguments here
             system("ai/bin/commandos --version");

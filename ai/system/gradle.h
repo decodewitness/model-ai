@@ -91,12 +91,14 @@ bool check_gradle_components(int comp=1) { // check functioning of gradle
 			break;
 		case 6: 	// SPECIAL (A)()
 			std::cout << "\t-:: checking gradle module 06." << std::endl;	// SPECIAL(A)												(SPCA) LFT
-			std::cout << "\t\t~:: (BMOD)::(SPC)(A)(SPC/LFT+module)::implementation." << std::endl;
+			std::cout << "\t\t~:: (BMOD)::(SPC)" << std::endl;
+			std::cout << "(A)(SPC/LFT+module)::implementation." << std::endl;
 			active_module=6;
 			break;
 		case 7:		// SPECIAL (B)()
 			std::cout << "\t-:: checking gradle module 07." << std::endl;	// SPECIAL(B)												(SPCB) RGHT
-			std::cout << "\t\t~:: (BMOD)::(SPC)(B)(SPC/RGHT+module)::implementation." << std::endl;
+			std::cout << "\t\t~:: (BMOD)::(SPC)" << std::endl;
+			std::cout << "(B)(SPC/RGHT+module)::implementation." << std::endl;
 			active_module=7;
 			break;
 		case 8:	// speech

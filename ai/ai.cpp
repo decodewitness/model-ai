@@ -664,6 +664,7 @@ void AI::auto_patch() {
 
 void AI::rollout() {
 	// roll out comodos & commandos
+	std::cout << "(debug)___.";
 	system(_COMODOS);
 };
 
