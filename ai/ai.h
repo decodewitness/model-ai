@@ -16,8 +16,8 @@
 #include "database/db.cpp"
 
 // asterisktab & amnesia splashing routines
-#include "logic/ascii/amnesia.h"
-#include "logic/ascii/asterisktab.h"
+#include "system/logic/ascii/amnesia.h"
+#include "system/logic/ascii/asterisktab.h"
 
 // configurations
 #include "system/config/config.h"
@@ -35,17 +35,17 @@
 #include "sampler/sampler.cpp"
 #include "language/concepts.cpp"
 #include "drum_machine/drums.cpp"
-#include "logic/analysis/learn.cpp"
-#include "logic/assembly/input.cpp"
-#include "logic/analysis/limits.cpp"
+#include "system/logic/analysis/learn.cpp"
+#include "system/logic/assembly/input.cpp"
+#include "system/logic/analysis/limits.cpp"
 #include "system/modules/modular.cpp"
 #include "language/speech/saying.cpp"
-#include "logic/analysis/interpret.cpp"
+#include "system/logic/analysis/interpret.cpp"
 #include "system/security/security.cpp"
-#include "logic/analysis/algorithms.cpp"
+#include "system/logic/analysis/algorithms.cpp"
 #include "system/definitions/encoder.cpp"
 #include "system/definitions/routines.cpp"
-#include "logic/transponder/transponder.cpp"
+#include "system/logic/transponder/transponder.cpp"
 #include "system/modules/combine/combine.cpp"
 #include "system/modules/modular_bay/modular_bay.cpp"
 

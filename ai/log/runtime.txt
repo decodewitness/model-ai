@@ -1421,16 +1421,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe768b7080)
-	- stacking header:(1)::<address>(0x7ffe768b70a0)
-	- stacking header:(2)::<address>(0x7ffe768b70c0)
-	- stacking header:(3)::<address>(0x7ffe768b70e0)
-	- stacking header:(4)::<address>(0x7ffe768b7100)
-	- stacking header:(5)::<address>(0x7ffe768b7120)
-	- stacking header:(6)::<address>(0x7ffe768b7140)
-	- stacking header:(7)::<address>(0x7ffe768b7160)
-	- stacking header:(8)::<address>(0x7ffe768b7180)
-	- stacking header:(9)::<address>(0x7ffe768b71a0)
+	- stacking header:(0)::<address>(0x7ffeb5934f90)
+	- stacking header:(1)::<address>(0x7ffeb5934fb0)
+	- stacking header:(2)::<address>(0x7ffeb5934fd0)
+	- stacking header:(3)::<address>(0x7ffeb5934ff0)
+	- stacking header:(4)::<address>(0x7ffeb5935010)
+	- stacking header:(5)::<address>(0x7ffeb5935030)
+	- stacking header:(6)::<address>(0x7ffeb5935050)
+	- stacking header:(7)::<address>(0x7ffeb5935070)
+	- stacking header:(8)::<address>(0x7ffeb5935090)
+	- stacking header:(9)::<address>(0x7ffeb59350b0)
 
 
 -:: checking AI functions.
@@ -1559,6 +1559,7 @@ ENTER PASSCODE:
 		~:: glob() in directory: (bay):
 		   :: files in directory ::
 			 * bay/DCIM
+			 * bay/downloads
 			 * bay/info.txt
 
 ::- query in sample -::
@@ -1573,6 +1574,7 @@ ENTER PASSCODE:
 -:: aborting artificial life sequence, and clean up gracefully!
 
 -:: display ((x)->live())(?x) equaled .
+
 
 Commandos_v.0.0-1a
 argument1
