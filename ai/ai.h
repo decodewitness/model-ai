@@ -6,6 +6,10 @@
 
 #define URL "https://model-ai.com/ai"
 
+// commandos / comodos && _varaan
+//#include "comodovaraan.cpp"
+
+// headers
 #include <cstring>
 
 // database
@@ -16,7 +20,7 @@
 #include "logic/ascii/asterisktab.h"
 
 // configurations
-#include "system/cfg/config.h"
+#include "system/config/config.h"
 
 // headers
 #include "al/al.cpp"
@@ -24,6 +28,7 @@
 #include "fetch/curl.cpp"
 #include "system/splash.h"
 #include "system/gradle.h"
+//#include "comodo/varaan.h"
 #include "entropy/b33hiv3.h"		// includes entropy.cpp && ltctapttclt.cpp
 #include "patching/patch.cpp"
 #include "system/protocol.cpp"

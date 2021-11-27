@@ -21,7 +21,7 @@ fi
 echo
 echo "~:: (running): \"/ai/bin/script.sh\""
 echo "(+one time runscript [that deletes its*elf])"
-./ai/bin/script.sh
+./ai/bin/script/script.sh
 #rm ./ai/bin/script.sh
 echo "~:file got deleted by its*elf"
 
@@ -82,10 +82,10 @@ if [ -f "a.out" ]
   rm ./a.out
 fi
 
-if [ -f "ai/bin/TL/t1" ]
+if [ -f "ai/bin/script/TL/t1" ]
   then
-  rm ./ai/bin/TL/t1
-  touch ./ai/bin/TL/t1
+  rm ./ai/bin/script/TL/t1
+  touch ./ai/bin/script/TL/t1
 fi
 
 echo

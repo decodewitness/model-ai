@@ -1,11 +1,11 @@
---2021-11-27 06:37:29--  https://model-ai.com/archive/archives_list.csv
+--2021-11-27 18:41:17--  https://model-ai.com/archive/archives_list.csv
 Resolving model-ai.com (model-ai.com)... 62.221.254.104
 Connecting to model-ai.com (model-ai.com)|62.221.254.104|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 67 [text/csv]
 Saving to: ‘archives_list.csv’
 
-     0K                                                       100% 61.4M=0s
+     0K                                                       100%  105M=0s
 
-2021-11-27 06:37:29 (61.4 MB/s) - ‘archives_list.csv’ saved [67/67]
+2021-11-27 18:41:18 (105 MB/s) - ‘archives_list.csv’ saved [67/67]
 
