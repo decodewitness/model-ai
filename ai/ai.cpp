@@ -21,7 +21,6 @@ const int runtime_testing = 1001;
 // DECLARATIONS
 // MODULES DEFINITIONS AND DECLARATIONS
 
-
 std::string moduleName[module_limits] = {
 	"--speech synthesizers--",
 	"--      sensors      --",
@@ -662,6 +661,11 @@ void AI::auto_patch() {
 	// patch cabinets
 	patch_module();
 }
+
+void AI::rollout() {
+	// roll out comodos & commandos
+	system(_COMODOS);
+};
 
 // OTHER FUNCTIONS
 

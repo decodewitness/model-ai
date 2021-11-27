@@ -46,7 +46,7 @@ Do remember that if you move the program over to another location, then you will
 which the program (model-ai) uses.
 
 
-REQUIREMENTS:
+LOGGED OUTPUT OF THIS BETA:
 -----
 
 
@@ -1468,16 +1468,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd37eb6f30)
-	- stacking header:(1)::<address>(0x7ffd37eb6f50)
-	- stacking header:(2)::<address>(0x7ffd37eb6f70)
-	- stacking header:(3)::<address>(0x7ffd37eb6f90)
-	- stacking header:(4)::<address>(0x7ffd37eb6fb0)
-	- stacking header:(5)::<address>(0x7ffd37eb6fd0)
-	- stacking header:(6)::<address>(0x7ffd37eb6ff0)
-	- stacking header:(7)::<address>(0x7ffd37eb7010)
-	- stacking header:(8)::<address>(0x7ffd37eb7030)
-	- stacking header:(9)::<address>(0x7ffd37eb7050)
+	- stacking header:(0)::<address>(0x7fff65368000)
+	- stacking header:(1)::<address>(0x7fff65368020)
+	- stacking header:(2)::<address>(0x7fff65368040)
+	- stacking header:(3)::<address>(0x7fff65368060)
+	- stacking header:(4)::<address>(0x7fff65368080)
+	- stacking header:(5)::<address>(0x7fff653680a0)
+	- stacking header:(6)::<address>(0x7fff653680c0)
+	- stacking header:(7)::<address>(0x7fff653680e0)
+	- stacking header:(8)::<address>(0x7fff65368100)
+	- stacking header:(9)::<address>(0x7fff65368120)
 
 -:: checking arguments.
 	1: arguments.
@@ -2193,13 +2193,6 @@ liddy: I'm that stamp you thought you licked but missed... now I'm back with a p
 Skepticism in the absence of evidence is healthy. Apathy in the absence of connection is natural.
 
 To criticize the incompetent is easy; it is more difficult to criticize EOF
-LEGAL CONSENSUS IS REQUIRED BEFORE ANY RIGHTS WOULD BE GRANTED ON YOUR BEHALF WHEN USING (ANY) PROGRAM WE MAY DISTRIBUTE WITHIN OUR LOCAL DOMAIN.
-COPYRIGHT STATEMENT IS LEGAL COPYRIGHT UNDER ARTIKEL 1 VS COPYRIGHTED MATERIAL: (C)(2021)MODEL-AI ARTIFICIAL INTELLIGENCE MODEL; ALL RIGHTS ARE RESERVED(C)(2021).
-
-(MODEL-AI)
-[Just Another Language Construct]
-
-10/11/2021 - 6:47PM
 O._
 
 🔴__CUBED:

@@ -7,7 +7,6 @@ echo
 
 if [ -f "README.md" ]
   then
-    rm ./README.md
     mv README.md README.md.1
 fi
 if [ -d "./doc" ]

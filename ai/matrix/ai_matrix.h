@@ -1,7 +1,5 @@
 // AI/MATRIX/MATRIX.CPP - MATRIX / FILTER - USED BY "/AI/AI.H"
 
-#include "cmd/cmd.cpp"
-
 class AI_Matrix {
     private:
 
@@ -12,7 +10,7 @@ class AI_Matrix {
 
 // AI/MATRIX/CMD/CMD.CPP - USED BY "/AI/MATRIX/AI_MATRIX.H"
 
-char commands[9][32] = { "one", "two", "three",
+char punch[9][32] = { "one", "two", "three",
                             "four", "five", "six",
                                 "seven", "eight", "nine" };
 

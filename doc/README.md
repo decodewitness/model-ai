@@ -46,7 +46,7 @@ Do remember that if you move the program over to another location, then you will
 which the program (model-ai) uses.
 
 
-REQUIREMENTS:
+LOGGED OUTPUT OF THIS BETA:
 -----
 
 
@@ -1468,16 +1468,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff27d2d650)
-	- stacking header:(1)::<address>(0x7fff27d2d670)
-	- stacking header:(2)::<address>(0x7fff27d2d690)
-	- stacking header:(3)::<address>(0x7fff27d2d6b0)
-	- stacking header:(4)::<address>(0x7fff27d2d6d0)
-	- stacking header:(5)::<address>(0x7fff27d2d6f0)
-	- stacking header:(6)::<address>(0x7fff27d2d710)
-	- stacking header:(7)::<address>(0x7fff27d2d730)
-	- stacking header:(8)::<address>(0x7fff27d2d750)
-	- stacking header:(9)::<address>(0x7fff27d2d770)
+	- stacking header:(0)::<address>(0x7ffd3fa0b3e0)
+	- stacking header:(1)::<address>(0x7ffd3fa0b400)
+	- stacking header:(2)::<address>(0x7ffd3fa0b420)
+	- stacking header:(3)::<address>(0x7ffd3fa0b440)
+	- stacking header:(4)::<address>(0x7ffd3fa0b460)
+	- stacking header:(5)::<address>(0x7ffd3fa0b480)
+	- stacking header:(6)::<address>(0x7ffd3fa0b4a0)
+	- stacking header:(7)::<address>(0x7ffd3fa0b4c0)
+	- stacking header:(8)::<address>(0x7ffd3fa0b4e0)
+	- stacking header:(9)::<address>(0x7ffd3fa0b500)
 
 -:: checking arguments.
 	1: arguments.
@@ -1534,13 +1534,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -2193,13 +2191,6 @@ liddy: I'm that stamp you thought you licked but missed... now I'm back with a p
 Skepticism in the absence of evidence is healthy. Apathy in the absence of connection is natural.
 
 To criticize the incompetent is easy; it is more difficult to criticize EOF
-LEGAL CONSENSUS IS REQUIRED BEFORE ANY RIGHTS WOULD BE GRANTED ON YOUR BEHALF WHEN USING (ANY) PROGRAM WE MAY DISTRIBUTE WITHIN OUR LOCAL DOMAIN.
-COPYRIGHT STATEMENT IS LEGAL COPYRIGHT UNDER ARTIKEL 1 VS COPYRIGHTED MATERIAL: (C)(2021)MODEL-AI ARTIFICIAL INTELLIGENCE MODEL; ALL RIGHTS ARE RESERVED(C)(2021).
-
-(MODEL-AI)
-[Just Another Language Construct]
-
-10/11/2021 - 6:47PM
 O._
 
 🔴__CUBED:

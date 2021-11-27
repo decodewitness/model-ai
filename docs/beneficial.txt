@@ -32,7 +32,7 @@ Do remember that if you move the program over to another location, then you will
 which the program (model-ai) uses.
 
 
-REQUIREMENTS:
+LOGGED OUTPUT OF THIS BETA:
 -----
 
 
