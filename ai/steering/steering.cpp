@@ -24,6 +24,9 @@
 // namespaces
 using namespace std;
 
+// logging the program
+bool logging_is_enabled = true;
+
 // main function
 int steering(int arc) {
 
