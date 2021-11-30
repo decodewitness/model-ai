@@ -669,10 +669,22 @@ void AI::auto_patch() {
 
 void AI::rollout(int n) {
 	// roll out comodos & commandos
-	std::cout << "(debug)___msgs.";
+	std::cout << std::endl << "(debug)___msgs." << std::endl;
 	switch (n) {
-		case 1: // roll out next model
+		case 1: // roll out no model
 			//std::cout << "~:: download next model ::~" << std::endl;
+			std::cout << std::endl << "~::rollout function(1)::set to n(2-3-9)." << std::endl;
+		break;
+
+	case 2: // roll out next model
+			//std::cout << "~:: download next model ::~" << std::endl;
+			std::cout << std::endl << "~::rollout function(2)::set to n(2-3-9)." << std::endl;
+			system(_RESTOREMODEL);
+		break;
+
+	case 3: // roll out next model and patch
+			//std::cout << "~:: download next model ::~" << std::endl;
+			std::cout << std::endl << "~::rollout function(3)::set to n(2-3-9)." << std::endl;
 			system(_RESTOREMODEL);
 			system(_PATCH);
 		break;

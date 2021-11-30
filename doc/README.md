@@ -1472,16 +1472,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd6f35ec10)
-	- stacking header:(1)::<address>(0x7ffd6f35ec30)
-	- stacking header:(2)::<address>(0x7ffd6f35ec50)
-	- stacking header:(3)::<address>(0x7ffd6f35ec70)
-	- stacking header:(4)::<address>(0x7ffd6f35ec90)
-	- stacking header:(5)::<address>(0x7ffd6f35ecb0)
-	- stacking header:(6)::<address>(0x7ffd6f35ecd0)
-	- stacking header:(7)::<address>(0x7ffd6f35ecf0)
-	- stacking header:(8)::<address>(0x7ffd6f35ed10)
-	- stacking header:(9)::<address>(0x7ffd6f35ed30)
+	- stacking header:(0)::<address>(0x7fff3a7555f0)
+	- stacking header:(1)::<address>(0x7fff3a755610)
+	- stacking header:(2)::<address>(0x7fff3a755630)
+	- stacking header:(3)::<address>(0x7fff3a755650)
+	- stacking header:(4)::<address>(0x7fff3a755670)
+	- stacking header:(5)::<address>(0x7fff3a755690)
+	- stacking header:(6)::<address>(0x7fff3a7556b0)
+	- stacking header:(7)::<address>(0x7fff3a7556d0)
+	- stacking header:(8)::<address>(0x7fff3a7556f0)
+	- stacking header:(9)::<address>(0x7fff3a755710)
 
 
 -:: checking AI functions.
@@ -1624,6 +1624,9 @@ ENTER PASSCODE:
 
 -:: display ((x)->live())(?x) equaled .
 
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
+(debug)___msgs.
 
 Commandos_v.0.0-1a
 argument1
@@ -1632,9 +1635,10 @@ argument3
 
 ~=::COMODOS:_'>v.0.0-1a
 
--/- getting (new) "Ai model" ~ from the file repository.
-log file saved at:  + wmlog.txt
--:: destructor artificial life routine was called. -:: killing abstraction layer.(debug)___msgs.(debug)___msgs.
+(debug)___msgs.
+
+~::rollout(1)::set to n(2-3-9).
+
 
 -:: checking health criteria
 	-:: health monitoring. (10) criteria.
