@@ -26,7 +26,7 @@
 #include "al/al.cpp"
 #include "system/chk.h"
 #include "fetch/curl.cpp"
-#include "system/splash.h"
+#include "steering/splash.h"
 #include "system/gradle.h"
 #include "comodo/varaan.h"
 #include "patching/patch.cpp"
