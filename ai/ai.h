@@ -29,9 +29,9 @@
 #include "system/splash.h"
 #include "system/gradle.h"
 #include "comodo/varaan.h"
-#include "entropy/b33hiv3.h"	// includes entropy.cpp && ltctapttclt.cpp
 #include "patching/patch.cpp"
 #include "system/protocol.cpp"
+#include "entropy/b33hiv3.cpp"	// includes entropy.cpp && ltctapttclt.cpp
 #include "sampler/sampler.cpp"
 #include "language/concepts.cpp"
 #include "drum_machine/drums.cpp"

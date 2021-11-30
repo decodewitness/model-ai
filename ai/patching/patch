@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# OVERWRITE MODEL
+tar xvf --overwrite-dir ./model-ai.tar.gz
+
+exit 0
+# EOF

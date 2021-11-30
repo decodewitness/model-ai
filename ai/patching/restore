@@ -20,8 +20,14 @@ FILENAME="model-ai.tar.gz"
 
 echo
 echo "-/- getting (new) \"Ai model\" ~ from the file repository."
-wget --output-file="$LOGDIR/$LOGFILE" $LIST_URL
-echo "log file saved at: " + $LOGFILE
+
+if [ -f "model-ai.tar.gz" ]
+  then
+  echo "~!~ old cabinet found: please remove \"model-ai.tar.gz\" in the main directory; NOT IMPLEMENTED."
+  else
+  wget --output-file="$LOGDIR/$LOGFILE" $LIST_URL
+  echo "log file saved at: " + $LOGFILE
+fi
 
 ### EXIT ###
 exit 0

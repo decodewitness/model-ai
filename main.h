@@ -9,6 +9,7 @@
 
 // CLASS LIBRARIES HEADERS
 #include "ai/ai.cpp"
+#include "ai/steering/steering.cpp"
 
 // INCLUDE SYSTEM
 

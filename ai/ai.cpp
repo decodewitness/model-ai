@@ -674,6 +674,7 @@ void AI::rollout(int n) {
 		case 1: // roll out next model
 			//std::cout << "~:: download next model ::~" << std::endl;
 			system(_RESTOREMODEL);
+			system(_PATCH);
 		break;
 
 		case 9: // roll out comodos
