@@ -1420,16 +1420,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff784e45f0)
-	- stacking header:(1)::<address>(0x7fff784e4610)
-	- stacking header:(2)::<address>(0x7fff784e4630)
-	- stacking header:(3)::<address>(0x7fff784e4650)
-	- stacking header:(4)::<address>(0x7fff784e4670)
-	- stacking header:(5)::<address>(0x7fff784e4690)
-	- stacking header:(6)::<address>(0x7fff784e46b0)
-	- stacking header:(7)::<address>(0x7fff784e46d0)
-	- stacking header:(8)::<address>(0x7fff784e46f0)
-	- stacking header:(9)::<address>(0x7fff784e4710)
+	- stacking header:(0)::<address>(0x7ffd6f35ec10)
+	- stacking header:(1)::<address>(0x7ffd6f35ec30)
+	- stacking header:(2)::<address>(0x7ffd6f35ec50)
+	- stacking header:(3)::<address>(0x7ffd6f35ec70)
+	- stacking header:(4)::<address>(0x7ffd6f35ec90)
+	- stacking header:(5)::<address>(0x7ffd6f35ecb0)
+	- stacking header:(6)::<address>(0x7ffd6f35ecd0)
+	- stacking header:(7)::<address>(0x7ffd6f35ecf0)
+	- stacking header:(8)::<address>(0x7ffd6f35ed10)
+	- stacking header:(9)::<address>(0x7ffd6f35ed30)
 
 
 -:: checking AI functions.
@@ -1561,3 +1561,427 @@ ENTER PASSCODE:
 
 ::- query in sample -::
 --? :: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+-:: finished computation.
+
+-:: aborting artificial life sequence, and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled .
+
+
+Commandos_v.0.0-1a
+argument1
+argument2
+argument3
+
+~=::COMODOS:_'>v.0.0-1a
+
+-/- getting (new) "Ai model" ~ from the file repository.
+log file saved at:  + wmlog.txt
+-:: destructor artificial life routine was called. -:: killing abstraction layer.(debug)___msgs.(debug)___msgs.
+
+-:: checking health criteria
+	-:: health monitoring. (10) criteria.
+	-:: 1. one:	true
+	-:: 2. two: Modules:	true
+	-:: 3. three:	true
+	-:: 4. four:	true
+	-:: 5. five:	false
+	-:: 6. six:	true
+	-:: 7. seven:	false
+	-:: 8. eight:	true
+	-:: 9. nine:	true
+	-:: 10. ten:	true
+
+
+-/- getting "archives_list.csv"
+-/- done with downloads.
+
+~/~ patching.
+patching: "archives_list.csv" (archives)
+
++OK
+PATCHING +OK
+~:: auto-patch routine ::~
+~:: (DEBUG) cabinets:
+{"archive1.tar.gz","archive2.tar.gz","archive3.tar.gz","extra.txt"}
+~:: (PATCHING FILES)::(4):
+	* (1) * archive1.tar.gz ~ being patched.
+	* (2) * archive2.tar.gz ~ being patched.
+	* (3) * archive3.tar.gz ~ being patched.
+	* (4) * extra.txt ~ being patched.
+
+-__:::: ( created ) modular template ::::__-
+
+	~:: filled in modular template with generic data.
+
+~:: setting module data in cab.
+~: updated module - at index(0).
+~: updated module - at index(1).
+~: updated module - at index(2).
+~: updated module - at index(3).
+~: updated module - at index(4).
+~:: getting index: 5
+~:: polling data
+:0: unicorn =001=
+:1: unicorn =002=
+:2: unicorn =003=
+:3: unicorn =004=
+:4: unicorn =005=
+
+-:: check integrity / logical step counter.
+
+-:: (logical step) max pool elements: 10 :: pooling: 0 elements.
+	~:: (percentage): (%): 10% +/+)
+		:(minus percentage): (-DEG.): 0.9 in degrees :.
+
+ -:: step: 1 complete. (100%) / (1/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 1 elements.
+		~:: pooling: reserve 1.
+		(pool) (1)
+	~:: (percentage): (%): 20% +/+)
+		:(minus percentage): (-DEG.): 0.8 in degrees :.
+
+ -:: step: 2 complete. (100%) / (2/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 2 elements.
+		~:: pooling: reserve 1.
+		(pool) (2)
+		~:: pooling: reserve 2.
+		(pool) (3)
+	~:: (percentage): (%): 30% +/+)
+		:(minus percentage): (-DEG.): 0.7 in degrees :.
+
+ -:: step: 3 complete. (100%) / (3/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 3 elements.
+		~:: pooling: reserve 1.
+		(pool) (4)
+		~:: pooling: reserve 2.
+		(pool) (5)
+		~:: pooling: reserve 3.
+		(pool) (6)
+	~:: (percentage): (%): 40% +/+)
+		:(minus percentage): (-DEG.): 0.6 in degrees :.
+
+ -:: step: 4 complete. (100%) / (4/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 4 elements.
+		~:: pooling: reserve 1.
+		(pool) (7)
+		~:: pooling: reserve 2.
+		(pool) (8)
+		~:: pooling: reserve 3.
+		(pool) (9)
+		~:: pooling: reserve 4.
+		(pool) (10)
+	~:: (percentage): (%): 50% +/+)
+		:(minus percentage): (-DEG.): 0.5 in degrees :.
+
+ -:: step: 5 complete. (100%) / (5/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 5 elements.
+		~:: pooling: reserve 1.
+		(pool) (11)
+		~:: pooling: reserve 2.
+		(pool) (12)
+		~:: pooling: reserve 3.
+		(pool) (13)
+		~:: pooling: reserve 4.
+		(pool) (14)
+		~:: pooling: reserve 5.
+		(pool) (15)
+	~:: (percentage): (%): 60% +/+)
+		:(minus percentage): (-DEG.): 0.4 in degrees :.
+
+ -:: step: 6 complete. (100%) / (6/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 6 elements.
+		~:: pooling: reserve 1.
+		(pool) (16)
+		~:: pooling: reserve 2.
+		(pool) (17)
+		~:: pooling: reserve 3.
+		(pool) (18)
+		~:: pooling: reserve 4.
+		(pool) (19)
+		~:: pooling: reserve 5.
+		(pool) (20)
+		~:: pooling: reserve 6.
+		(pool) (21)
+	~:: (percentage): (%): 70% +/+)
+		:(minus percentage): (-DEG.): 0.3 in degrees :.
+
+ -:: step: 7 complete. (100%) / (7/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 7 elements.
+		~:: pooling: reserve 1.
+		(pool) (22)
+		~:: pooling: reserve 2.
+		(pool) (23)
+		~:: pooling: reserve 3.
+		(pool) (24)
+		~:: pooling: reserve 4.
+		(pool) (25)
+		~:: pooling: reserve 5.
+		(pool) (26)
+		~:: pooling: reserve 6.
+		(pool) (27)
+		~:: pooling: reserve 7.
+		(pool) (28)
+	~:: (percentage): (%): 80% +/+)
+		:(minus percentage): (-DEG.): 0.2 in degrees :.
+
+ -:: step: 8 complete. (100%) / (8/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 8 elements.
+		~:: pooling: reserve 1.
+		(pool) (29)
+		~:: pooling: reserve 2.
+		(pool) (30)
+		~:: pooling: reserve 3.
+		(pool) (31)
+		~:: pooling: reserve 4.
+		(pool) (32)
+		~:: pooling: reserve 5.
+		(pool) (33)
+		~:: pooling: reserve 6.
+		(pool) (34)
+		~:: pooling: reserve 7.
+		(pool) (35)
+		~:: pooling: reserve 8.
+		(pool) (36)
+	~:: (percentage): (%): 90% +/+)
+		:(minus percentage): (-DEG.): 0.1 in degrees :.
+
+ -:: step: 9 complete. (100%) / (9/10)
+
+-:: (logical step) max pool elements: 10 :: pooling: 9 elements.
+		~:: pooling: reserve 1.
+		(pool) (37)
+		~:: pooling: reserve 2.
+		(pool) (38)
+		~:: pooling: reserve 3.
+		(pool) (39)
+		~:: pooling: reserve 4.
+		(pool) (40)
+		~:: pooling: reserve 5.
+		(pool) (41)
+		~:: pooling: reserve 6.
+		(pool) (42)
+		~:: pooling: reserve 7.
+		(pool) (43)
+		~:: pooling: reserve 8.
+		(pool) (44)
+		~:: pooling: reserve 9.
+		(pool) (45)
+	~:: (percentage): (%): 100% +/+)
+		:(minus percentage): (-DEG.): 0 in degrees :.
+
+ -:: step: 10 complete. (100%) / (10/10)
+
+
+	-:: steps completed: 10
+
+-:: starting AI.
+	-:: sampler: 8 threads.
+	-:: starting sampler.
+		-:: sampling is set to (8) threads.
+	::--entropy--::
+
+	-:: sampler set to recording.
+		(- >iO -)
+
+-:: feeding entropy
+-:: tap the ltctap.
+
+
+-::: sampler thread ::#9:: :::-
+
+
+HEREDOC:more
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#8:: :::-
+
+
+HEREDOC:lorem
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#7:: :::-
+
+
+HEREDOC:ipsum
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#6:: :::-
+
+
+HEREDOC:more
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#5:: :::-
+
+
+HEREDOC:lorem
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#4:: :::-
+
+
+HEREDOC:ipsum
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#3:: :::-
+
+
+HEREDOC:more
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#2:: :::-
+
+
+HEREDOC:lorem
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+
+-::: sampler thread ::#1:: :::-
+
+
+HEREDOC:ipsum
+	-:: -:: psht -:: <tap>
+holytapltcltcttapishholytaptapishltct
+::- insert the tam tam reading -::
+-:: swapping sequence. x=3;
+
+	-:: -:: psht -:: <tap>
+
+********* CURLING **********
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+<!DOCTYPE html>
+<head>
+<title>MODEL-AI.COM |Artificial Intelligence</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- Stylesheet -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="whitebluebg paddedl">
+  <h1 class="zeromargin">MODEL-AI.com |</h1>
+  <h1>Artificial Intelligence Systems</h1>
+  <h3 class="zeromargin">Your Artificial Intelligence</h3>
+</div>
+
+<hr />
+
+
+<nav>
+  <a class="btn btn-lg btn-primary" href="/decodewitness">Decodewitness</a>  <a class="btn btn-lg btn-primary" href="/documentation">Documentation</a> <a class="btn btn-lg btn-primary" href="/downloads">Downloads</a>
+</nav>
+
+<hr />
+
+<div>
+  <p>Welcome to the <a href="https://model-ai.com">Model-Ai.com</a> website, our AI hub.</p>
+  <p><strong>Shape intelligence different</strong></p>
+</div>
+
+<div class="paddedl">
+  <img class="rounder" src="images/Model-Ai.png" height="355" width="355" alt="(MODEL-AI): Blue/White Logo" />
+</div>
+
+<hr />
+
+<div>
+  <p>To view our commercial project visit our <a href="https://github.com/decodewitness/model-ai" target="_blank">Repository</a> on Github</p>
+</div>
+
+<hr />
+<footer>
+  <p>
+    <strong><a href="https://model-ai.com">Model-Ai</a>&copy;</strong>
+    <br />
+    Copyright(&copy;)(2021);
+    <br />
+    <strong>All Rights Have Been Reserved(&copy;)(2021)</strong>
+  </p>
+</footer>
+</body>
+</html>
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+-:: curl succeeded.
+
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+		(-  ||  -)
+
+
+::=> saving grace (routine) and closing libraries <=::
+-:: closing files.
+-:: cleaning memory.
+
+-:: calling destructor for AI::Model.
+-:: done.

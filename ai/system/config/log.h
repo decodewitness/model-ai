@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cstring>
 
-bool logging_is_enabled=true;
+//bool logging_is_enabled=true;
 
 // logging structure
 std::string id;			// the id of subjects

@@ -1420,16 +1420,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffcc00de600)
-	- stacking header:(1)::<address>(0x7ffcc00de620)
-	- stacking header:(2)::<address>(0x7ffcc00de640)
-	- stacking header:(3)::<address>(0x7ffcc00de660)
-	- stacking header:(4)::<address>(0x7ffcc00de680)
-	- stacking header:(5)::<address>(0x7ffcc00de6a0)
-	- stacking header:(6)::<address>(0x7ffcc00de6c0)
-	- stacking header:(7)::<address>(0x7ffcc00de6e0)
-	- stacking header:(8)::<address>(0x7ffcc00de700)
-	- stacking header:(9)::<address>(0x7ffcc00de720)
+	- stacking header:(0)::<address>(0x7ffd6f35ec10)
+	- stacking header:(1)::<address>(0x7ffd6f35ec30)
+	- stacking header:(2)::<address>(0x7ffd6f35ec50)
+	- stacking header:(3)::<address>(0x7ffd6f35ec70)
+	- stacking header:(4)::<address>(0x7ffd6f35ec90)
+	- stacking header:(5)::<address>(0x7ffd6f35ecb0)
+	- stacking header:(6)::<address>(0x7ffd6f35ecd0)
+	- stacking header:(7)::<address>(0x7ffd6f35ecf0)
+	- stacking header:(8)::<address>(0x7ffd6f35ed10)
+	- stacking header:(9)::<address>(0x7ffd6f35ed30)
 
 
 -:: checking AI functions.
@@ -1581,7 +1581,7 @@ argument3
 ~=::COMODOS:_'>v.0.0-1a
 
 -/- getting (new) "Ai model" ~ from the file repository.
-~!~ old cabinet found: please remove "model-ai.tar.gz" in the main directory; NOT IMPLEMENTED.
+log file saved at:  + wmlog.txt
 -:: destructor artificial life routine was called. -:: killing abstraction layer.(debug)___msgs.(debug)___msgs.
 
 -:: checking health criteria
