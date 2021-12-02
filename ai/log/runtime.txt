@@ -1420,16 +1420,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffee198bc60)
-	- stacking header:(1)::<address>(0x7ffee198bc80)
-	- stacking header:(2)::<address>(0x7ffee198bca0)
-	- stacking header:(3)::<address>(0x7ffee198bcc0)
-	- stacking header:(4)::<address>(0x7ffee198bce0)
-	- stacking header:(5)::<address>(0x7ffee198bd00)
-	- stacking header:(6)::<address>(0x7ffee198bd20)
-	- stacking header:(7)::<address>(0x7ffee198bd40)
-	- stacking header:(8)::<address>(0x7ffee198bd60)
-	- stacking header:(9)::<address>(0x7ffee198bd80)
+	- stacking header:(0)::<address>(0x7ffe104b3530)
+	- stacking header:(1)::<address>(0x7ffe104b3550)
+	- stacking header:(2)::<address>(0x7ffe104b3570)
+	- stacking header:(3)::<address>(0x7ffe104b3590)
+	- stacking header:(4)::<address>(0x7ffe104b35b0)
+	- stacking header:(5)::<address>(0x7ffe104b35d0)
+	- stacking header:(6)::<address>(0x7ffe104b35f0)
+	- stacking header:(7)::<address>(0x7ffe104b3610)
+	- stacking header:(8)::<address>(0x7ffe104b3630)
+	- stacking header:(9)::<address>(0x7ffe104b3650)
 
 
 -:: checking AI functions.
@@ -1975,7 +1975,7 @@ holytapltcltcttapishholytaptapishltct
 
 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-~:: file stored at : "bay/downloads/myfile.html".
+~:: file stored at : "bay/downloads/page.html".
 -:: curl succeeded.
 
 -:: decoupler.
