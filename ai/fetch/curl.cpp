@@ -5,6 +5,11 @@
 #include <string>
 #include <curl/curl.h>
 
+#include <fstream>
+
+char *URLS[1024];
+bool URLS_isset = false;
+
 static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
 {
     ((std::string*)userp)->append((char*)contents, size * nmemb);
@@ -13,27 +18,37 @@ static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *use
 
 int do_curl(std::string my_url)
 {
-  CURL *curl;
-  CURLcode res;
-  std::string readBuffer;
+    CURL *curl;
+    CURLcode res;
+    std::string readBuffer;
+    std::string filen = "bay/downloads/page.html";
 
-  curl = curl_easy_init();
-  if(curl) {
-   	std::cout << std::endl << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<" << std::endl << std::endl;
+    std::ofstream outfile;
+    outfile.open(filen);
 
-    curl_easy_setopt(curl, CURLOPT_URL, my_url.c_str());
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
+    curl = curl_easy_init();
+    
+    if (curl) {
+        curl_easy_setopt(curl, CURLOPT_URL, my_url.c_str());
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
-    res = curl_easy_perform(curl);
-    curl_easy_cleanup(curl);
+        res = curl_easy_perform(curl);
+        curl_easy_cleanup(curl);
+   	
+        std::cout << std::endl << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<" << std::endl << std::endl;
+        std::cout << readBuffer;    // prints the curled page.
+        std::cout << std::endl << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<" << std::endl;
 
-    std::cout << readBuffer;
-
-    	std::cout << std::endl << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<" << std::endl;
-  }
-
-  return 0;
+        // store HTML file
+        if (outfile.is_open() == true) {
+            outfile << readBuffer;
+            outfile.close();
+            
+            std::cout << "~:: file stored at : \"" << filen << "\"." << std::endl;
+        }
+    }
+return 0;
 }
 
 int fetch_link(std::string &my_url, int max_links)

@@ -1420,16 +1420,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff3a7555f0)
-	- stacking header:(1)::<address>(0x7fff3a755610)
-	- stacking header:(2)::<address>(0x7fff3a755630)
-	- stacking header:(3)::<address>(0x7fff3a755650)
-	- stacking header:(4)::<address>(0x7fff3a755670)
-	- stacking header:(5)::<address>(0x7fff3a755690)
-	- stacking header:(6)::<address>(0x7fff3a7556b0)
-	- stacking header:(7)::<address>(0x7fff3a7556d0)
-	- stacking header:(8)::<address>(0x7fff3a7556f0)
-	- stacking header:(9)::<address>(0x7fff3a755710)
+	- stacking header:(0)::<address>(0x7ffee198bc60)
+	- stacking header:(1)::<address>(0x7ffee198bc80)
+	- stacking header:(2)::<address>(0x7ffee198bca0)
+	- stacking header:(3)::<address>(0x7ffee198bcc0)
+	- stacking header:(4)::<address>(0x7ffee198bce0)
+	- stacking header:(5)::<address>(0x7ffee198bd00)
+	- stacking header:(6)::<address>(0x7ffee198bd20)
+	- stacking header:(7)::<address>(0x7ffee198bd40)
+	- stacking header:(8)::<address>(0x7ffee198bd60)
+	- stacking header:(9)::<address>(0x7ffee198bd80)
 
 
 -:: checking AI functions.
@@ -1585,7 +1585,7 @@ argument3
 
 (debug)___msgs.
 
-~::rollout(1)::set to n(2-3-9).
+~::rollout function(1)::set to n(2-3-9).
 
 
 -:: checking health criteria
@@ -1975,6 +1975,7 @@ holytapltcltcttapishholytaptapishltct
 
 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+~:: file stored at : "bay/downloads/myfile.html".
 -:: curl succeeded.
 
 -:: decoupler.
