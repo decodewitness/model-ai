@@ -1420,16 +1420,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe104b3530)
-	- stacking header:(1)::<address>(0x7ffe104b3550)
-	- stacking header:(2)::<address>(0x7ffe104b3570)
-	- stacking header:(3)::<address>(0x7ffe104b3590)
-	- stacking header:(4)::<address>(0x7ffe104b35b0)
-	- stacking header:(5)::<address>(0x7ffe104b35d0)
-	- stacking header:(6)::<address>(0x7ffe104b35f0)
-	- stacking header:(7)::<address>(0x7ffe104b3610)
-	- stacking header:(8)::<address>(0x7ffe104b3630)
-	- stacking header:(9)::<address>(0x7ffe104b3650)
+	- stacking header:(0)::<address>(0x7ffc10a2b850)
+	- stacking header:(1)::<address>(0x7ffc10a2b870)
+	- stacking header:(2)::<address>(0x7ffc10a2b890)
+	- stacking header:(3)::<address>(0x7ffc10a2b8b0)
+	- stacking header:(4)::<address>(0x7ffc10a2b8d0)
+	- stacking header:(5)::<address>(0x7ffc10a2b8f0)
+	- stacking header:(6)::<address>(0x7ffc10a2b910)
+	- stacking header:(7)::<address>(0x7ffc10a2b930)
+	- stacking header:(8)::<address>(0x7ffc10a2b950)
+	- stacking header:(9)::<address>(0x7ffc10a2b970)
 
 
 -:: checking AI functions.
@@ -1483,11 +1483,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1564,8 +1566,8 @@ ENTER PASSCODE:
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	ai
+	[ x computation: type:char len:2 vowels:0 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!

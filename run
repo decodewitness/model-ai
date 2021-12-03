@@ -124,6 +124,12 @@ if [ -f "./doc/README.md" ]
   cp ./doc/README.md .
 fi
 
+if [ -f "./README.md.old" ]
+  then
+  echo "~:cleaning up old README.md.old"
+  rm ./README.md.old
+fi
+
 echo "done."
 exit 0
 # EOF
