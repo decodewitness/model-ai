@@ -1420,16 +1420,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc10a2b850)
-	- stacking header:(1)::<address>(0x7ffc10a2b870)
-	- stacking header:(2)::<address>(0x7ffc10a2b890)
-	- stacking header:(3)::<address>(0x7ffc10a2b8b0)
-	- stacking header:(4)::<address>(0x7ffc10a2b8d0)
-	- stacking header:(5)::<address>(0x7ffc10a2b8f0)
-	- stacking header:(6)::<address>(0x7ffc10a2b910)
-	- stacking header:(7)::<address>(0x7ffc10a2b930)
-	- stacking header:(8)::<address>(0x7ffc10a2b950)
-	- stacking header:(9)::<address>(0x7ffc10a2b970)
+	- stacking header:(0)::<address>(0x7ffef73f1af0)
+	- stacking header:(1)::<address>(0x7ffef73f1b10)
+	- stacking header:(2)::<address>(0x7ffef73f1b30)
+	- stacking header:(3)::<address>(0x7ffef73f1b50)
+	- stacking header:(4)::<address>(0x7ffef73f1b70)
+	- stacking header:(5)::<address>(0x7ffef73f1b90)
+	- stacking header:(6)::<address>(0x7ffef73f1bb0)
+	- stacking header:(7)::<address>(0x7ffef73f1bd0)
+	- stacking header:(8)::<address>(0x7ffef73f1bf0)
+	- stacking header:(9)::<address>(0x7ffef73f1c10)
 
 
 -:: checking AI functions.
@@ -1566,8 +1566,8 @@ ENTER PASSCODE:
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	ai
-	[ x computation: type:char len:2 vowels:0 consonants:2 special:0  ]
+	logic
+	[ x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### ENABLE "app=true" near the top of "/model-ai/ai/ai.cpp" ###
-echo "-/- executing \"virtual\" script."
+echo "-/- executing \"VIRTUAl\" script."
 
 ### update the cabinet (then run "maestro")
 #echo "-/- updating (fetching from repository)"
