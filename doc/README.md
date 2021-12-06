@@ -1472,16 +1472,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffef73f1af0)
-	- stacking header:(1)::<address>(0x7ffef73f1b10)
-	- stacking header:(2)::<address>(0x7ffef73f1b30)
-	- stacking header:(3)::<address>(0x7ffef73f1b50)
-	- stacking header:(4)::<address>(0x7ffef73f1b70)
-	- stacking header:(5)::<address>(0x7ffef73f1b90)
-	- stacking header:(6)::<address>(0x7ffef73f1bb0)
-	- stacking header:(7)::<address>(0x7ffef73f1bd0)
-	- stacking header:(8)::<address>(0x7ffef73f1bf0)
-	- stacking header:(9)::<address>(0x7ffef73f1c10)
+	- stacking header:(0)::<address>(0x7ffeaeb9bca0)
+	- stacking header:(1)::<address>(0x7ffeaeb9bcc0)
+	- stacking header:(2)::<address>(0x7ffeaeb9bce0)
+	- stacking header:(3)::<address>(0x7ffeaeb9bd00)
+	- stacking header:(4)::<address>(0x7ffeaeb9bd20)
+	- stacking header:(5)::<address>(0x7ffeaeb9bd40)
+	- stacking header:(6)::<address>(0x7ffeaeb9bd60)
+	- stacking header:(7)::<address>(0x7ffeaeb9bd80)
+	- stacking header:(8)::<address>(0x7ffeaeb9bda0)
+	- stacking header:(9)::<address>(0x7ffeaeb9bdc0)
 
 
 -:: checking AI functions.
@@ -1535,13 +1535,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
