@@ -142,8 +142,8 @@ void AI::AMMod() {
 };
 
 std::string AI::hashtype(std::string s) {
-	//hash(s);
-return hashn(s);
+	//hash(s);	// function is verbose
+	return hashn(s);
 };
 
 
@@ -673,25 +673,43 @@ void AI::rollout(int n) {
 	switch (n) {
 		case 1: // roll out no model
 			//std::cout << "~:: download next model ::~" << std::endl;
-			std::cout << std::endl << "~::rollout function(1)::set to n(2-3-9)." << std::endl;
+			std::cout << std::endl << "~:: rollout function(1)::set to n(2-3-4-9)." << std::endl;
 		break;
 
 	case 2: // roll out next model
 			//std::cout << "~:: download next model ::~" << std::endl;
-			std::cout << std::endl << "~::rollout function(2)::set to n(2-3-9)." << std::endl;
+			std::cout << std::endl << "~:: rollout function(2)::set to n(2-3-4-9)." << std::endl;
 			system(_RESTOREMODEL);
-		break;
+	
 
 	case 3: // roll out next model and patch
 			//std::cout << "~:: download next model ::~" << std::endl;
-			std::cout << std::endl << "~::rollout function(3)::set to n(2-3-9)." << std::endl;
+			std::cout << std::endl << "~:: rollout function(3)::set to n(2-3-4-9)." << std::endl;
 			system(_RESTOREMODEL);
 			system(_PATCH);
 		break;
+	
+	case 4: // roll out TOOL
+			std::cout << std::endl << "~:: rollout function(4)::set to n(2-3-4-9)." << std::endl;
+			
+			// check if TOOL is there
+			struct stat st;
+			if (stat(TOOL, &st) != 0) {
+				std::cout << "~:: could not find \"TOOL\"; now deploying..." << std::endl;
+				system(_TOOLDEPLOY);
+				system(TOOL);
+			} else {
+				std::cout << "~:: found \"TOOL\"." << std::endl;
+				// 	ERRNO(errno);
+				// 	return -1;
+				system(TOOL);
+			}
 
-		case 9: // roll out comodos
+	break;
+
+	case 9: // roll out comodos
 			system(_COMODOS);
-		break;
+	break;
 	
 		default: // default
 			std::cout << "~:: no rollouts." << std::endl;

@@ -11,6 +11,7 @@
 
 // headers
 #include <cstring>
+#include <sys/stat.h>
 
 // database
 #include "database/db.cpp"

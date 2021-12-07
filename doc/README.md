@@ -1472,16 +1472,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffeaeb9bca0)
-	- stacking header:(1)::<address>(0x7ffeaeb9bcc0)
-	- stacking header:(2)::<address>(0x7ffeaeb9bce0)
-	- stacking header:(3)::<address>(0x7ffeaeb9bd00)
-	- stacking header:(4)::<address>(0x7ffeaeb9bd20)
-	- stacking header:(5)::<address>(0x7ffeaeb9bd40)
-	- stacking header:(6)::<address>(0x7ffeaeb9bd60)
-	- stacking header:(7)::<address>(0x7ffeaeb9bd80)
-	- stacking header:(8)::<address>(0x7ffeaeb9bda0)
-	- stacking header:(9)::<address>(0x7ffeaeb9bdc0)
+	- stacking header:(0)::<address>(0x7ffef11f9ce0)
+	- stacking header:(1)::<address>(0x7ffef11f9d00)
+	- stacking header:(2)::<address>(0x7ffef11f9d20)
+	- stacking header:(3)::<address>(0x7ffef11f9d40)
+	- stacking header:(4)::<address>(0x7ffef11f9d60)
+	- stacking header:(5)::<address>(0x7ffef11f9d80)
+	- stacking header:(6)::<address>(0x7ffef11f9da0)
+	- stacking header:(7)::<address>(0x7ffef11f9dc0)
+	- stacking header:(8)::<address>(0x7ffef11f9de0)
+	- stacking header:(9)::<address>(0x7ffef11f9e00)
 
 
 -:: checking AI functions.
@@ -1625,7 +1625,19 @@ ENTER PASSCODE:
 -:: display ((x)->live())(?x) equaled .
 
 -:: destructor artificial life routine was called. -::
-	killing abstraction layer.
+	killing abstraction layer.~:: hashing: ai
+	4921c0e2d1f6005abe1f9ec2e2041909
+
+(debug)___msgs.
+
+~:: rollout function(1)::set to n(2-3-4-9).
+
+(debug)___msgs.
+
+~:: rollout function(4)::set to n(2-3-4-9).
+~:: found "TOOL".
+tool://matrix
+
 (debug)___msgs.
 
 Commandos_v.0.0-1a
@@ -1634,10 +1646,6 @@ argument2
 argument3
 
 ~=::COMODOS:_'>v.0.0-1a
-
-(debug)___msgs.
-
-~::rollout function(1)::set to n(2-3-9).
 
 
 -:: checking health criteria
@@ -1688,6 +1696,8 @@ PATCHING +OK
 :2: unicorn =003=
 :3: unicorn =004=
 :4: unicorn =005=
+~:: hashing: ai
+	4921c0e2d1f6005abe1f9ec2e2041909
 
 -:: check integrity / logical step counter.
 

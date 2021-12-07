@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <fstream>
 #include <unistd.h>
 
 #include "privileges.cpp"
@@ -14,21 +15,29 @@ std::string passcode = "ai";
 const std::string model_ai = "model-ai";
 
 // this decides if the function should compare the hashes (which assumably is only reasonable to both set it to "true")
-bool hashed_credentials = false;    // hashes the inputted credentials
+bool hashed_credentials = true;    // hashes the inputted credentials
 bool store_hashed_credentials = true;   // stores only hashed credentials
 
 // credentials level of the active user
 std::string level="user";
 
-
 bool check_passcode(std::string pass) {
     std::cout << "(debug) checking passcode." << std::endl;
     
     // first hash passcode into hashcode
-    std::string hashcode = hashn(passcode);
+    //std::string hashcode = hashn(passcode);
+    
+    std::ifstream filen;
+    filen.open("data");
+
+    std::string hashcode;
+    filen >> hashcode;
+
+    filen.close();
 
     if (hashed_credentials == true) {
-        if (pass.compare(hashcode) == false) {
+        std::string usecase = md5(pass);
+        if (usecase.compare(hashcode) == false) {
             std::cout << "-:: ACCESS GRANTED (level) (security_level)";
             
             // wait one second and set user access levels in the control

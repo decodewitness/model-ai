@@ -3,7 +3,7 @@
 ### SETUP SCRIPT FOR THE AI ROUTINE ###
 
 ### check for GCC compiler
-echo "~:`RUNTIME SCRIPT`"
+echo "~:RUNTIME SCRIPT:~"
 echo
 echo "~:checking for GCC compiler."
 if [ -f "/usr/bin/gcc" ]

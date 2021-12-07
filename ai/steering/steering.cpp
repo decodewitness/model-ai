@@ -53,9 +53,15 @@ int steering(int arc) {
 	// class instances
 	AI ai(arc);
 
+	// (DEBUG) for hashing passcodes (DISABLE THIS)
+	//ai.hashtype("ai"); // checking integrity
+
 	// rollouts
-	ai.rollout(9);	// rollout comodos
 	ai.rollout(1);
+	//ai.rollout(2);	// uncomment for // rolls out "patch"
+	//ai.rollout(3);	// uncomment for // rolls out "restore"
+	ai.rollout(4);		// rolls out "tool"
+	ai.rollout(9);	// rolls out "comodos"
 
 	// health
 	chk();
