@@ -14,20 +14,30 @@ private:
     bool pause;
     bool repeat_cycle;
 
+    int track;    // main track in sampler
+    int initialize;
+
+    SamplerTrack *samplerTrack;
+
 public:
     Sampler(int t) {
         std::cout << "\t-:: starting sampler." << std::endl;
         this->threads = 8;
         std::cout << "\t\t-:: sampling is set to (" << this->threads << ") threads." << std::endl;
+
+        this->track = 1;
+        this->initialize = this->track;
+
+        this->samplerTrack = new SamplerTrack(2,1,8);
     }
 
     // int maximumThreads=128;
     // bool threads_initialized[128];
     
-    int track=1;    // main track in sampler
-    int initialize=track;
+    // int track=1;    // main track in sampler
+    // int initialize=track;
 
-    SamplerTrack samplerTrack;
+    // SamplerTrack samplerTrack;
 
     void setTo(int n) {
         switch (n) {
@@ -65,13 +75,13 @@ public:
                 std::cout << "\t-:: sampler set to repeatcycle." << std::endl;
                 std::cout << "\t\t(- *<--R -)" << std::endl;
             default:
-                this->setTo(initialize);
+                this->setTo(this->initialize);
             break;
         };
     }
 
     void init() {
-        this->setTo(initialize);
+        this->setTo(this->initialize);
     }
 
     void decouple() {
