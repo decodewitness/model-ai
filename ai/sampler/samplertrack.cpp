@@ -57,7 +57,7 @@ public:
     void newThread(int trac, int y=2) {
         
         for (int i=0; i<trac; i++) {
-            std::cout << "~:: sampler :: ~ :: initializing track [" << i << "]." << std::endl;
+            std::cout << "~:: sampler :: ~ :: initializing track [" << (i+1) << "]." << std::endl;
             this->tracksInTrack[this->track++] = y;
             
             this->initialized[i] = true;
