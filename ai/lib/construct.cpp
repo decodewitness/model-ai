@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -30,6 +32,7 @@ public:
     };
 
     void preprocess() { // function opens the directives file and assigns a main file for data assimilation purposes
+
         std::cout << std::endl << "~:: preprocessing module." << std::endl;
         std::cout << "\t~:: set data infile as header->_dataFile." << std::endl;
 
@@ -42,11 +45,20 @@ public:
 
             // do logic
             std::string myFiles;
-
+            
             // inside loop here
             while (this->inFiles >> myFiles) {
-                this->_fileString = myFiles;
+                vector<string> correct_files;
 
+                this->_fileString = myFiles;
+                
+                stringstream s_stream(myFiles);
+
+                while(s_stream.good()) {
+                    string substr;
+                    getline(s_stream, substr, ',');
+                    correct_files.push_back(substr);
+                }
                 // take cabinets from string
                 this->_mainFiles = _fileString;   // change algorithm here
 
@@ -54,17 +66,22 @@ public:
                 std::cout << std::endl;
                 std::cout << "~:: files ::~" << std::endl;
                 std::cout << "    -----" << std::endl;
-                std::cout << "    (*)_mainFile(" << _mainFiles << ")." << std::endl;
+                
+                for (int i=0; i<correct_files.size(); i++) {
+                    std::cout << "    (*)_mainFile(" << correct_files.at(i) << ")." << std::endl;
+                }
+                
                 std::cout << std::endl;
 
                 // call function to process main batch of data from myFile/_mainFile
-                process();
             }
-            
+
+            this->mainset = true;
+            process();
             //this->inFiles >> myFile;
 
             // do error checking here
-            this->mainset = true;
+            
 
             // this->_mainFiles = myFiles;
             // this->mainset = true;
