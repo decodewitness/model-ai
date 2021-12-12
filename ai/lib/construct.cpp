@@ -22,6 +22,8 @@ private:
     std::string _mainFiles;
     std::string _fileString;
 
+    vector<string> correct_files;
+
 public:
 
     Construct() {
@@ -48,7 +50,6 @@ public:
             
             // inside loop here
             while (this->inFiles >> myFiles) {
-                vector<string> correct_files;
 
                 this->_fileString = myFiles;
                 
@@ -57,7 +58,7 @@ public:
                 while(s_stream.good()) {
                     string substr;
                     getline(s_stream, substr, ',');
-                    correct_files.push_back(substr);
+                    this->correct_files.push_back(substr);
                 }
                 // take cabinets from string
                 this->_mainFiles = _fileString;   // change algorithm here
@@ -67,8 +68,9 @@ public:
                 std::cout << "~:: files ::~" << std::endl;
                 std::cout << "    -----" << std::endl;
                 
-                for (int i=0; i<correct_files.size(); i++) {
-                    std::cout << "    (*)_mainFile(" << correct_files.at(i) << ")." << std::endl;
+                for (int i=0; i<this->correct_files.size(); i++) {
+                    std::cout << "    (*)_mainFile(" << this->correct_files.at(i) << ")." << std::endl;
+                    process(this->correct_files.at(i), i);
                 }
                 
                 std::cout << std::endl;
@@ -77,7 +79,9 @@ public:
             }
 
             this->mainset = true;
-            process();
+            this->inFiles.close();
+            
+
             //this->inFiles >> myFile;
 
             // do error checking here
@@ -85,36 +89,82 @@ public:
 
             // this->_mainFiles = myFiles;
             // this->mainset = true;
-
-            this->inFiles.close();
         }
     };
 
-    void process() {
-        if (this->mainset == true) {
-            std::cout << "\t~:: _mainFile is set." << std::endl;
+    void process(std::string filen, int sizedn) {
 
-            if (this->inFiles.is_open() == true) {
-                // error
-                perror("~:!: error. process()->inFiles; was already open.");
-            } else {
-                inFiles.open(_mainFiles);
-            
-                if (this->inFiles.is_open() == true) {
+        ifstream datacab;
+        std::string line;
 
-                    // process data here
-                    std::cout << "\t~:: processing batch in data." << std::endl;
-                    
-                    // (here)
-                    // data arrive in batch size from _mainFile from "infile" inside "./ai/data"
+        // for (int i=0; i < sizedn; i++) {
+        std::cout << "\t- processing file: " << sizedn << ": ";
+        std::cout << this->correct_files.at(sizedn);
 
-                    // close file headers
-                    this->inFiles.close();
-                }
-            }
-        } else {
-            perror("~:!: error. mainset is not ready.");
+        datacab.open(this->correct_files.at(sizedn));
+
+        // do data logic on main set
+        while (datacab >> line) {
+            // math or abstract logic here
+
+            std::cout << "x";
+
+            // do string logic
         }
+
+        std::cout << std::endl;
+        std::cout << "\t- closing " << this->correct_files.at(sizedn) << std::endl;
+        
+        datacab.close();
+
+
+        // for (int i=0; i < sized; i++) {
+        //     std::cout << "\t- processing file: " << (i+1) << ": ";
+        //     std::cout << this->correct_files.at(i);
+
+        //     datacab.open(this->correct_files.at(i));
+
+        //     // do data logic on main set
+        //     while (datacab >> line) {
+        //         // math or abstract logic here
+
+        //         std::cout << "x";
+
+        //         // do string logic
+        //     }
+
+        //     std::cout << std::endl;
+        //     std::cout << "\t- closing " << this->correct_files.at(i) << std::endl;
+            
+        //     datacab.close();
+        // }
+
+    //     if (this->mainset == true) {
+    //         std::cout << "\t~:: _mainFile is set." << std::endl;
+
+    //         if (this->inFiles.is_open() == true) {
+    //             // error
+    //             perror("~:!: error. process()->inFiles; was already open.");
+    //         } else {
+    //             for (int i=0; i<correct_files.size(); i++) {
+    //                 inFiles.open(this->correct_files.at(i));
+    //             }
+            
+    //             if (this->inFiles.is_open() == true) {
+
+    //                 // process data here
+    //                 std::cout << "\t~:: processing batch in data." << std::endl;
+                    
+    //                 // (here)
+    //                 // data arrive in batch size from _mainFile from "infile" inside "./ai/data"
+
+    //                 // close file headers
+    //                 this->inFiles.close();
+    //             }
+    //         }
+    //     } else {
+    //         perror("~:!: error. mainset is not ready.");
+    //     }
     };
 };
 

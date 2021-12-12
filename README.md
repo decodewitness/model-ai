@@ -1472,16 +1472,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc0d57eef0)
-	- stacking header:(1)::<address>(0x7ffc0d57ef10)
-	- stacking header:(2)::<address>(0x7ffc0d57ef30)
-	- stacking header:(3)::<address>(0x7ffc0d57ef50)
-	- stacking header:(4)::<address>(0x7ffc0d57ef70)
-	- stacking header:(5)::<address>(0x7ffc0d57ef90)
-	- stacking header:(6)::<address>(0x7ffc0d57efb0)
-	- stacking header:(7)::<address>(0x7ffc0d57efd0)
-	- stacking header:(8)::<address>(0x7ffc0d57eff0)
-	- stacking header:(9)::<address>(0x7ffc0d57f010)
+	- stacking header:(0)::<address>(0x7ffddbc4d130)
+	- stacking header:(1)::<address>(0x7ffddbc4d150)
+	- stacking header:(2)::<address>(0x7ffddbc4d170)
+	- stacking header:(3)::<address>(0x7ffddbc4d190)
+	- stacking header:(4)::<address>(0x7ffddbc4d1b0)
+	- stacking header:(5)::<address>(0x7ffddbc4d1d0)
+	- stacking header:(6)::<address>(0x7ffddbc4d1f0)
+	- stacking header:(7)::<address>(0x7ffddbc4d210)
+	- stacking header:(8)::<address>(0x7ffddbc4d230)
+	- stacking header:(9)::<address>(0x7ffddbc4d250)
 
 
 -:: checking AI functions.
@@ -1708,10 +1708,13 @@ PATCHING +OK
 ~:: files ::~
     -----
     (*)_mainFile({"cab").
+	- processing file: 0: {"cab"
+	- closing {"cab"
     (*)_mainFile("nop"}).
+	- processing file: 1: "nop"}
+	- closing "nop"}
 
-	~:: _mainFile is set.
-	~:: _mainFile is set.
+
 ~:: hashing: my string
 	2ba81a47c5512d9e23c435c1f29373cb
 

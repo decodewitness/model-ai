@@ -722,7 +722,6 @@ void AI::constr() {
 	this->construct = new Construct;
 
 	this->construct->preprocess();
-	this->construct->process();
 
 	// don't forget to delete construct
 	delete this->construct;
