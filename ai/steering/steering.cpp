@@ -75,6 +75,9 @@ int steering(int arc) {
 	//ai modules
 	ai.mod();
 
+	// construct
+	ai.constr();
+
 	// hash function checks file hashes
 	ai.hashtype("my string"); // checking integrity
 	

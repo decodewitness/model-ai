@@ -1472,16 +1472,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff11931bf0)
-	- stacking header:(1)::<address>(0x7fff11931c10)
-	- stacking header:(2)::<address>(0x7fff11931c30)
-	- stacking header:(3)::<address>(0x7fff11931c50)
-	- stacking header:(4)::<address>(0x7fff11931c70)
-	- stacking header:(5)::<address>(0x7fff11931c90)
-	- stacking header:(6)::<address>(0x7fff11931cb0)
-	- stacking header:(7)::<address>(0x7fff11931cd0)
-	- stacking header:(8)::<address>(0x7fff11931cf0)
-	- stacking header:(9)::<address>(0x7fff11931d10)
+	- stacking header:(0)::<address>(0x7ffc64cf7720)
+	- stacking header:(1)::<address>(0x7ffc64cf7740)
+	- stacking header:(2)::<address>(0x7ffc64cf7760)
+	- stacking header:(3)::<address>(0x7ffc64cf7780)
+	- stacking header:(4)::<address>(0x7ffc64cf77a0)
+	- stacking header:(5)::<address>(0x7ffc64cf77c0)
+	- stacking header:(6)::<address>(0x7ffc64cf77e0)
+	- stacking header:(7)::<address>(0x7ffc64cf7800)
+	- stacking header:(8)::<address>(0x7ffc64cf7820)
+	- stacking header:(9)::<address>(0x7ffc64cf7840)
 
 
 -:: checking AI functions.
@@ -1694,6 +1694,19 @@ PATCHING +OK
 :2: unicorn =003=
 :3: unicorn =004=
 :4: unicorn =005=
+
+~:: creating construct.
+~:: setting construct.
+
+~:: preprocessing module.
+	~:: set data infile as header->_dataFile.
+	~:: opening _dataFile.
+		~:: open.
+
+~:: files ::~
+    -----
+    (*)_mainFile("cab","nop";).
+
 ~:: hashing: my string
 	2ba81a47c5512d9e23c435c1f29373cb
 
@@ -1857,33 +1870,52 @@ PATCHING +OK
 	-:: starting sampler.
 		-:: sampling is set to (8) threads.
 	~:: main sampler track set to track (0).
-~:: sampler :: ~ :: starting new thread (8) tracks; with (2) tracks-in-track.
 
-~:: sampler :: ~ :: initializing track [0].
-	~:: initialized with (2) sampling tracks.
+~:: sampler :: ~ :: starting new thread (8) tracks; with (2) tracks-in-track.
 
 ~:: sampler :: ~ :: initializing track [1].
 	~:: initialized with (2) sampling tracks.
 
-~:: sampler :: ~ :: generated (4)  new tracks-in-track.
-	~:: total initialized tracks [3].
+~:: sampler :: ~ :: initializing track [2].
+	~:: initialized with (2) sampling tracks.
+
+~:: sampler :: ~ :: initializing track [3].
+	~:: initialized with (2) sampling tracks.
+
+~:: sampler :: ~ :: initializing track [4].
+	~:: initialized with (2) sampling tracks.
+
+~:: sampler :: ~ :: initializing track [5].
+	~:: initialized with (2) sampling tracks.
+
+~:: sampler :: ~ :: initializing track [6].
+	~:: initialized with (2) sampling tracks.
+
+~:: sampler :: ~ :: initializing track [7].
+	~:: initialized with (2) sampling tracks.
+
+~:: sampler :: ~ :: initializing track [8].
+	~:: initialized with (2) sampling tracks.
+
+~:: sampler :: ~ :: generated (16)  new tracks-in-track.
+	~:: total initialized tracks [8].
 
 ~:: setting tracks-in-track (1) to (2) tracks.
-~:: setting track [1] index to (0.00)
+~:: setting track [1] index to (00h/00m/00s)
 ~:: setting tracks-in-track (2) to (2) tracks.
-~:: setting track [2] index to (0.00)
+~:: setting track [2] index to (00h/00m/00s)
 ~:: setting tracks-in-track (3) to (2) tracks.
-~:: setting track [3] index to (0.00)
+~:: setting track [3] index to (00h/00m/00s)
 ~:: setting tracks-in-track (4) to (2) tracks.
-~:: setting track [4] index to (0.00)
+~:: setting track [4] index to (00h/00m/00s)
 ~:: setting tracks-in-track (5) to (2) tracks.
-~:: setting track [5] index to (0.00)
+~:: setting track [5] index to (00h/00m/00s)
 ~:: setting tracks-in-track (6) to (2) tracks.
-~:: setting track [6] index to (0.00)
+~:: setting track [6] index to (00h/00m/00s)
 ~:: setting tracks-in-track (7) to (2) tracks.
-~:: setting track [7] index to (0.00)
+~:: setting track [7] index to (00h/00m/00s)
 ~:: setting tracks-in-track (8) to (2) tracks.
-~:: setting track [8] index to (0.00)
+~:: setting track [8] index to (00h/00m/00s)
 	::--entropy--::
 
 	-:: sampler set to recording.

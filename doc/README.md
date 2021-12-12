@@ -1472,16 +1472,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe31ea0b70)
-	- stacking header:(1)::<address>(0x7ffe31ea0b90)
-	- stacking header:(2)::<address>(0x7ffe31ea0bb0)
-	- stacking header:(3)::<address>(0x7ffe31ea0bd0)
-	- stacking header:(4)::<address>(0x7ffe31ea0bf0)
-	- stacking header:(5)::<address>(0x7ffe31ea0c10)
-	- stacking header:(6)::<address>(0x7ffe31ea0c30)
-	- stacking header:(7)::<address>(0x7ffe31ea0c50)
-	- stacking header:(8)::<address>(0x7ffe31ea0c70)
-	- stacking header:(9)::<address>(0x7ffe31ea0c90)
+	- stacking header:(0)::<address>(0x7ffed44a3c90)
+	- stacking header:(1)::<address>(0x7ffed44a3cb0)
+	- stacking header:(2)::<address>(0x7ffed44a3cd0)
+	- stacking header:(3)::<address>(0x7ffed44a3cf0)
+	- stacking header:(4)::<address>(0x7ffed44a3d10)
+	- stacking header:(5)::<address>(0x7ffed44a3d30)
+	- stacking header:(6)::<address>(0x7ffed44a3d50)
+	- stacking header:(7)::<address>(0x7ffed44a3d70)
+	- stacking header:(8)::<address>(0x7ffed44a3d90)
+	- stacking header:(9)::<address>(0x7ffed44a3db0)
 
 
 -:: checking AI functions.
@@ -1694,6 +1694,20 @@ PATCHING +OK
 :2: unicorn =003=
 :3: unicorn =004=
 :4: unicorn =005=
+
+~:: creating construct.
+~:: setting construct.
+
+~:: preprocessing module.
+	~:: set data infile as header->_dataFile.
+	~:: opening _dataFile.
+		~:: open.
+
+~:: files ::~
+    -----
+    (*)_mainFile({"cab","nop"}).
+
+	~:: _mainFile is set.
 ~:: hashing: my string
 	2ba81a47c5512d9e23c435c1f29373cb
 
@@ -1857,10 +1871,8 @@ PATCHING +OK
 	-:: starting sampler.
 		-:: sampling is set to (8) threads.
 	~:: main sampler track set to track (0).
-~:: sampler :: ~ :: starting new thread (8) tracks; with (2) tracks-in-track.
 
-~:: sampler :: ~ :: initializing track [0].
-	~:: initialized with (2) sampling tracks.
+~:: sampler :: ~ :: starting new thread (8) tracks; with (2) tracks-in-track.
 
 ~:: sampler :: ~ :: initializing track [1].
 	~:: initialized with (2) sampling tracks.
@@ -1881,6 +1893,9 @@ PATCHING +OK
 	~:: initialized with (2) sampling tracks.
 
 ~:: sampler :: ~ :: initializing track [7].
+	~:: initialized with (2) sampling tracks.
+
+~:: sampler :: ~ :: initializing track [8].
 	~:: initialized with (2) sampling tracks.
 
 ~:: sampler :: ~ :: generated (16)  new tracks-in-track.

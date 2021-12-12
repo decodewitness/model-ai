@@ -2,8 +2,8 @@
 
 #ifndef _AI_HEADER
 #define _AI_HEADER
-#endif
 
+#define VERSION "v0.1-24"
 #define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
 
 // commandos / comodos && _varaan
@@ -27,9 +27,10 @@
 #include "al/al.cpp"
 #include "system/chk.h"
 #include "fetch/curl.cpp"
-#include "steering/splash.h"
 #include "system/gradle.h"
 #include "comodo/varaan.h"
+#include "lib/construct.cpp"
+#include "steering/splash.h"
 #include "patching/patch.cpp"
 #include "system/protocol.cpp"
 #include "entropy/b33hiv3.cpp"	// includes entropy.cpp && ltctapttclt.cpp
@@ -88,6 +89,7 @@ private:
 	Combine *cmb;
 	CombineModule *combinemodule;
 	Sampler *sampler;
+	Construct *construct;
 	
 	bool ammod;
 	bool modul;
@@ -145,6 +147,7 @@ public:
 	// modules
 	void AMMod();
 	void mod();
+	void constr();
 
 	// patching
 	void auto_patch();
@@ -168,4 +171,5 @@ public:
 	void killc(int x);
 };
 
+#endif
 // eof

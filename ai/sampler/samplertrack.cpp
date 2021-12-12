@@ -30,7 +30,10 @@ public:
         this->totalNumberOfTracks=trInTr;
         this->samplerTracks = trInTr;
         this->track = 0;
+        
         std::cout << "\t~:: main sampler track set to track (" << this->track << ")." << std::endl;
+        std::cout << std::endl;
+
         this->startAtTrack = t;
         this->startAt = 0;
 

@@ -717,6 +717,17 @@ void AI::rollout(int n) {
 	};
 };
 
+void AI::constr() {
+	std::cout << std::endl << "~:: creating construct." << std::endl;
+	this->construct = new Construct;
+
+	this->construct->preprocess();
+	this->construct->process();
+
+	// don't forget to delete construct
+	delete this->construct;
+};
+
 // OTHER FUNCTIONS
 std::string * stackmodule(int x, std::string *ar) {
 	// stacking header
