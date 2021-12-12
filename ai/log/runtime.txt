@@ -1420,16 +1420,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffed44a3c90)
-	- stacking header:(1)::<address>(0x7ffed44a3cb0)
-	- stacking header:(2)::<address>(0x7ffed44a3cd0)
-	- stacking header:(3)::<address>(0x7ffed44a3cf0)
-	- stacking header:(4)::<address>(0x7ffed44a3d10)
-	- stacking header:(5)::<address>(0x7ffed44a3d30)
-	- stacking header:(6)::<address>(0x7ffed44a3d50)
-	- stacking header:(7)::<address>(0x7ffed44a3d70)
-	- stacking header:(8)::<address>(0x7ffed44a3d90)
-	- stacking header:(9)::<address>(0x7ffed44a3db0)
+	- stacking header:(0)::<address>(0x7ffe228d8560)
+	- stacking header:(1)::<address>(0x7ffe228d8580)
+	- stacking header:(2)::<address>(0x7ffe228d85a0)
+	- stacking header:(3)::<address>(0x7ffe228d85c0)
+	- stacking header:(4)::<address>(0x7ffe228d85e0)
+	- stacking header:(5)::<address>(0x7ffe228d8600)
+	- stacking header:(6)::<address>(0x7ffe228d8620)
+	- stacking header:(7)::<address>(0x7ffe228d8640)
+	- stacking header:(8)::<address>(0x7ffe228d8660)
+	- stacking header:(9)::<address>(0x7ffe228d8680)
 
 
 -:: checking AI functions.
