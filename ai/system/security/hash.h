@@ -13,7 +13,7 @@ void hash(std::string h) {
 // function returns hashed string h
 std::string hashn(std::string h) {
 
-	std::cout << "~:: hashing: " << h << std::endl;
+	std::cout << std::endl << "~:: hashing: " << h << std::endl;
 	std::cout << "\t" << md5(h) << std::endl;
 
 	return md5(h.c_str());
