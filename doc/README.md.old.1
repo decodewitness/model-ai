@@ -1472,16 +1472,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffe61883f0)
-	- stacking header:(1)::<address>(0x7fffe6188410)
-	- stacking header:(2)::<address>(0x7fffe6188430)
-	- stacking header:(3)::<address>(0x7fffe6188450)
-	- stacking header:(4)::<address>(0x7fffe6188470)
-	- stacking header:(5)::<address>(0x7fffe6188490)
-	- stacking header:(6)::<address>(0x7fffe61884b0)
-	- stacking header:(7)::<address>(0x7fffe61884d0)
-	- stacking header:(8)::<address>(0x7fffe61884f0)
-	- stacking header:(9)::<address>(0x7fffe6188510)
+	- stacking header:(0)::<address>(0x7ffd123a1050)
+	- stacking header:(1)::<address>(0x7ffd123a1070)
+	- stacking header:(2)::<address>(0x7ffd123a1090)
+	- stacking header:(3)::<address>(0x7ffd123a10b0)
+	- stacking header:(4)::<address>(0x7ffd123a10d0)
+	- stacking header:(5)::<address>(0x7ffd123a10f0)
+	- stacking header:(6)::<address>(0x7ffd123a1110)
+	- stacking header:(7)::<address>(0x7ffd123a1130)
+	- stacking header:(8)::<address>(0x7ffd123a1150)
+	- stacking header:(9)::<address>(0x7ffd123a1170)
 
 
 -:: checking AI functions.
@@ -1535,13 +1535,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1707,17 +1705,13 @@ PATCHING +OK
 
 ~:: files ::~
     -----
-    (*)_mainFile({"cab").
-    (*)_mainFile("nop"}).
+    (*)_mainFile(data/cab).
+	- processing file: 0: data/cab
+	- closing data/cab
+    (*)_mainFile(data/nop).
+	- processing file: 1: data/nop
+	- closing data/nop
 
-	- processing file: 1: {"cab"
-	- closing {"cab"
-	- processing file: 2: "nop"}
-	- closing "nop"}
-	- processing file: 1: {"cab"
-	- closing {"cab"
-	- processing file: 2: "nop"}
-	- closing "nop"}
 
 ~:: hashing: my string
 	2ba81a47c5512d9e23c435c1f29373cb

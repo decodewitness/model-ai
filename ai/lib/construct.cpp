@@ -102,6 +102,9 @@ public:
         std::cout << this->correct_files.at(sizedn);
 
         datacab.open(this->correct_files.at(sizedn));
+        if (datacab.is_open() == true) {
+            std::cout << std::endl << "\t- opened " << this->correct_files.at(sizedn) << "." << std::endl;
+        }
 
         // do data logic on main set
         while (datacab >> line) {
