@@ -54,7 +54,7 @@ void patch_module() {
         }
 
         files_count = files_count / 2;
-        std::cout << "~:: (PATCHING FILES)::(" << files_count << "):" << std::endl;
+        std::cout << std::endl << "~:: (PATCHING FILES)::(" << files_count << "):" << std::endl;
 
         for (int i=0; i<files_count; i++) {
             std::cout << "\t* (" << (i+1) << ") * " << cabinet[i] << " ~ being patched." << std::endl;

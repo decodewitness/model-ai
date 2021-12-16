@@ -1476,16 +1476,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc319645a0)
-	- stacking header:(1)::<address>(0x7ffc319645c0)
-	- stacking header:(2)::<address>(0x7ffc319645e0)
-	- stacking header:(3)::<address>(0x7ffc31964600)
-	- stacking header:(4)::<address>(0x7ffc31964620)
-	- stacking header:(5)::<address>(0x7ffc31964640)
-	- stacking header:(6)::<address>(0x7ffc31964660)
-	- stacking header:(7)::<address>(0x7ffc31964680)
-	- stacking header:(8)::<address>(0x7ffc319646a0)
-	- stacking header:(9)::<address>(0x7ffc319646c0)
+	- stacking header:(0)::<address>(0x7ffedc789650)
+	- stacking header:(1)::<address>(0x7ffedc789670)
+	- stacking header:(2)::<address>(0x7ffedc789690)
+	- stacking header:(3)::<address>(0x7ffedc7896b0)
+	- stacking header:(4)::<address>(0x7ffedc7896d0)
+	- stacking header:(5)::<address>(0x7ffedc7896f0)
+	- stacking header:(6)::<address>(0x7ffedc789710)
+	- stacking header:(7)::<address>(0x7ffedc789730)
+	- stacking header:(8)::<address>(0x7ffedc789750)
+	- stacking header:(9)::<address>(0x7ffedc789770)
 
 
 -:: checking AI functions.
@@ -1539,13 +1539,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1658,6 +1656,7 @@ PATCHING +OK
 ~:: auto-patch routine ::~
 ~:: (DEBUG) cabinets:
 {"archive1.tar.gz","archive2.tar.gz","archive3.tar.gz","extra.txt"}
+
 ~:: (PATCHING FILES)::(4):
 	* (1) * archive1.tar.gz ~ being patched.
 	* (2) * archive2.tar.gz ~ being patched.
@@ -1684,7 +1683,6 @@ argument3
 ~=::COMODOS:_'>v.0.0-1a
 
 -__:::: ( created ) modular template ::::__-
-
 	~:: filled in modular template with generic data.
 
 ~:: setting module data in cab.
@@ -1694,12 +1692,13 @@ argument3
 ~: updated module - at index(3).
 ~: updated module - at index(4).
 ~:: getting index: 5
+
 ~:: polling data
-:0: unicorn =001=
-:1: unicorn =002=
-:2: unicorn =003=
-:3: unicorn =004=
-:4: unicorn =005=
+	:0: unicorn =001=
+	:1: unicorn =002=
+	:2: unicorn =003=
+	:3: unicorn =004=
+	:4: unicorn =005=
 
 ~:: creating construct.
 ~:: setting construct.
@@ -1728,43 +1727,37 @@ x
 
 -:: check integrity / logical step counter.
 
--:: (logical step) max pool elements: 10 :: pooling: 0 elements.
+-:: (logical step #1) max pool elements: 10 :: pooling: 0 elements.
+		~:: pooling: reserve 1.
+		(pool) (1)
 	~:: (percentage): (%): 10% +/+)
 		:(minus percentage): (-DEG.): 0.9 in degrees :.
 
  -:: step: 1 complete. (100%) / (1/10)
 
--:: (logical step) max pool elements: 10 :: pooling: 1 elements.
+-:: (logical step #2) max pool elements: 10 :: pooling: 1 elements.
 		~:: pooling: reserve 1.
-		(pool) (1)
+		(pool) (2)
+		~:: pooling: reserve 2.
+		(pool) (3)
 	~:: (percentage): (%): 20% +/+)
 		:(minus percentage): (-DEG.): 0.8 in degrees :.
 
  -:: step: 2 complete. (100%) / (2/10)
 
--:: (logical step) max pool elements: 10 :: pooling: 2 elements.
-		~:: pooling: reserve 1.
-		(pool) (2)
-		~:: pooling: reserve 2.
-		(pool) (3)
-	~:: (percentage): (%): 30% +/+)
-		:(minus percentage): (-DEG.): 0.7 in degrees :.
-
- -:: step: 3 complete. (100%) / (3/10)
-
--:: (logical step) max pool elements: 10 :: pooling: 3 elements.
+-:: (logical step #3) max pool elements: 10 :: pooling: 2 elements.
 		~:: pooling: reserve 1.
 		(pool) (4)
 		~:: pooling: reserve 2.
 		(pool) (5)
 		~:: pooling: reserve 3.
 		(pool) (6)
-	~:: (percentage): (%): 40% +/+)
-		:(minus percentage): (-DEG.): 0.6 in degrees :.
+	~:: (percentage): (%): 30% +/+)
+		:(minus percentage): (-DEG.): 0.7 in degrees :.
 
- -:: step: 4 complete. (100%) / (4/10)
+ -:: step: 3 complete. (100%) / (3/10)
 
--:: (logical step) max pool elements: 10 :: pooling: 4 elements.
+-:: (logical step #4) max pool elements: 10 :: pooling: 3 elements.
 		~:: pooling: reserve 1.
 		(pool) (7)
 		~:: pooling: reserve 2.
@@ -1773,12 +1766,12 @@ x
 		(pool) (9)
 		~:: pooling: reserve 4.
 		(pool) (10)
-	~:: (percentage): (%): 50% +/+)
-		:(minus percentage): (-DEG.): 0.5 in degrees :.
+	~:: (percentage): (%): 40% +/+)
+		:(minus percentage): (-DEG.): 0.6 in degrees :.
 
- -:: step: 5 complete. (100%) / (5/10)
+ -:: step: 4 complete. (100%) / (4/10)
 
--:: (logical step) max pool elements: 10 :: pooling: 5 elements.
+-:: (logical step #5) max pool elements: 10 :: pooling: 4 elements.
 		~:: pooling: reserve 1.
 		(pool) (11)
 		~:: pooling: reserve 2.
@@ -1789,12 +1782,12 @@ x
 		(pool) (14)
 		~:: pooling: reserve 5.
 		(pool) (15)
-	~:: (percentage): (%): 60% +/+)
-		:(minus percentage): (-DEG.): 0.4 in degrees :.
+	~:: (percentage): (%): 50% +/+)
+		:(minus percentage): (-DEG.): 0.5 in degrees :.
 
- -:: step: 6 complete. (100%) / (6/10)
+ -:: step: 5 complete. (100%) / (5/10)
 
--:: (logical step) max pool elements: 10 :: pooling: 6 elements.
+-:: (logical step #6) max pool elements: 10 :: pooling: 5 elements.
 		~:: pooling: reserve 1.
 		(pool) (16)
 		~:: pooling: reserve 2.
@@ -1807,12 +1800,12 @@ x
 		(pool) (20)
 		~:: pooling: reserve 6.
 		(pool) (21)
-	~:: (percentage): (%): 70% +/+)
-		:(minus percentage): (-DEG.): 0.3 in degrees :.
+	~:: (percentage): (%): 60% +/+)
+		:(minus percentage): (-DEG.): 0.4 in degrees :.
 
- -:: step: 7 complete. (100%) / (7/10)
+ -:: step: 6 complete. (100%) / (6/10)
 
--:: (logical step) max pool elements: 10 :: pooling: 7 elements.
+-:: (logical step #7) max pool elements: 10 :: pooling: 6 elements.
 		~:: pooling: reserve 1.
 		(pool) (22)
 		~:: pooling: reserve 2.
@@ -1827,12 +1820,12 @@ x
 		(pool) (27)
 		~:: pooling: reserve 7.
 		(pool) (28)
-	~:: (percentage): (%): 80% +/+)
-		:(minus percentage): (-DEG.): 0.2 in degrees :.
+	~:: (percentage): (%): 70% +/+)
+		:(minus percentage): (-DEG.): 0.3 in degrees :.
 
- -:: step: 8 complete. (100%) / (8/10)
+ -:: step: 7 complete. (100%) / (7/10)
 
--:: (logical step) max pool elements: 10 :: pooling: 8 elements.
+-:: (logical step #8) max pool elements: 10 :: pooling: 7 elements.
 		~:: pooling: reserve 1.
 		(pool) (29)
 		~:: pooling: reserve 2.
@@ -1849,12 +1842,12 @@ x
 		(pool) (35)
 		~:: pooling: reserve 8.
 		(pool) (36)
-	~:: (percentage): (%): 90% +/+)
-		:(minus percentage): (-DEG.): 0.1 in degrees :.
+	~:: (percentage): (%): 80% +/+)
+		:(minus percentage): (-DEG.): 0.2 in degrees :.
 
- -:: step: 9 complete. (100%) / (9/10)
+ -:: step: 8 complete. (100%) / (8/10)
 
--:: (logical step) max pool elements: 10 :: pooling: 9 elements.
+-:: (logical step #9) max pool elements: 10 :: pooling: 8 elements.
 		~:: pooling: reserve 1.
 		(pool) (37)
 		~:: pooling: reserve 2.
@@ -1873,11 +1866,36 @@ x
 		(pool) (44)
 		~:: pooling: reserve 9.
 		(pool) (45)
+	~:: (percentage): (%): 90% +/+)
+		:(minus percentage): (-DEG.): 0.1 in degrees :.
+
+ -:: step: 9 complete. (100%) / (9/10)
+
+-:: (logical step #10) max pool elements: 10 :: pooling: 9 elements.
+		~:: pooling: reserve 1.
+		(pool) (46)
+		~:: pooling: reserve 2.
+		(pool) (47)
+		~:: pooling: reserve 3.
+		(pool) (48)
+		~:: pooling: reserve 4.
+		(pool) (49)
+		~:: pooling: reserve 5.
+		(pool) (50)
+		~:: pooling: reserve 6.
+		(pool) (51)
+		~:: pooling: reserve 7.
+		(pool) (52)
+		~:: pooling: reserve 8.
+		(pool) (53)
+		~:: pooling: reserve 9.
+		(pool) (54)
+		~:: pooling: reserve 10.
+		(pool) (55)
 	~:: (percentage): (%): 100% +/+)
 		:(minus percentage): (-DEG.): 0 in degrees :.
 
  -:: step: 10 complete. (100%) / (10/10)
-
 
 	-:: steps completed: 10
 

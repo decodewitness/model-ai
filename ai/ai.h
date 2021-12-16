@@ -113,6 +113,7 @@ private:
 	bool combm;
 	bool smpl;
 
+	int step;
 	int element;
 	int elements;
 

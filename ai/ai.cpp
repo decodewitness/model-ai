@@ -417,11 +417,11 @@ bool AI::stepping() {	// integrity checking
 
 	if (hashesCheckOut == true) {
 		// steps completed
-		std::cout << std::endl <<"\t-:: steps completed: " << steps_completed << std::endl;
+		std::cout << "\t-:: steps completed: " << steps_completed << std::endl;
 		return true;
 	} else {
 		// steps did not complete
-		std::cout << std::endl << "\t-:: steps completed: " << steps_completed << std::endl;
+		std::cout << "\t-:: steps completed: " << steps_completed << std::endl;
 		std::cout << "\t\t-:: steps incomplete: " << (count-steps_completed) << std::endl;
 		return false;
 	}
@@ -471,6 +471,8 @@ void AI::init() {
 	this->testrun = false;
 	this->run_checks();
 	
+	// used by pooling
+	this->step = 1;
 	this->pool = 0;
 
 	// set "this->crlurl" to resource URL.
@@ -621,7 +623,7 @@ void AI::mod() {
 	std::cout << "~:: getting index: ";
 	std::cout << this->mdl->get_index() << std::endl;
 	
-	std::cout << "~:: polling data" << std::endl;
+	std::cout << std::endl << "~:: polling data" << std::endl;
 	this->mdl->polldata();
 	
 	//this->mdl->query();
@@ -640,10 +642,11 @@ void AI::combmod(moduleContainer a, moduleContainer b) {
 
 bool AI::pooling(int x) {
 	this->elements = 10;
-	std::cout << "-:: (logical step) max pool elements: " << this->elements << " :: pooling: " << x << " elements." << std::endl;
+	
+	std::cout << "-:: (logical step #" << this->step++ << ") max pool elements: " << this->elements << " :: pooling: " << x << " elements." << std::endl;
 
-	for (int i=1; i<=x && i<this->elements; i++) {
-		std::cout << "\t\t~:: pooling: reserve " << i << "." << std::endl;
+	for (int i=0; i<=x && i<this->elements; i++) {
+		std::cout << "\t\t~:: pooling: reserve " << (i+1) << "." << std::endl;
 
 		// pool reserve here from data
 		this->pool++;
