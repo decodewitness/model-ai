@@ -15,24 +15,25 @@ bool initialize_runtime_check() { // actually should be staged and recursive / n
         switch (i) {
             case 0: // redundant cycle
                 std::cout << "\t- checking redundancy." << std::endl;
-
+                break;
                 // do logic here
             case 1: // files complete
                 std::cout << "\t- file hierarchy." << std::endl;
-
+                break;
                 // do logic here
             case 2: // file integrity && hashing
                 std::cout << "\t- file integrity." << std::endl;
-
+                break;
                 // do logic here
             case 3: // compensate
                 std::cout << "\t- compensating measures." << std::endl;
-
+                break;
                 // do logic here
             default: // skipping step 0 (or implement) as well as any additional steps.
 
                 // do logic here
                 std::cout << "\t- (debug) skipping redundant casing." << std::endl;
+                break;
         };
     }
 

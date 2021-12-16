@@ -34,7 +34,7 @@ bool logging_is_enabled = true;
 
 // main function
 int steering(int arc) {
-
+	initialize_runtime_check();
 	int loopvar=0; 	// use loopvar in recounting xl[1024]
 	char * xl[1024];
 

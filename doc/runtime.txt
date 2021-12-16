@@ -1,3 +1,7 @@
+~:: ** &initialize_runtime_check() **
+	- checking redundancy.
+	- file hierarchy.
+	- file integrity.
 
 -:: enabled logging.
 
@@ -1420,16 +1424,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff7e34ce60)
-	- stacking header:(1)::<address>(0x7fff7e34ce80)
-	- stacking header:(2)::<address>(0x7fff7e34cea0)
-	- stacking header:(3)::<address>(0x7fff7e34cec0)
-	- stacking header:(4)::<address>(0x7fff7e34cee0)
-	- stacking header:(5)::<address>(0x7fff7e34cf00)
-	- stacking header:(6)::<address>(0x7fff7e34cf20)
-	- stacking header:(7)::<address>(0x7fff7e34cf40)
-	- stacking header:(8)::<address>(0x7fff7e34cf60)
-	- stacking header:(9)::<address>(0x7fff7e34cf80)
+	- stacking header:(0)::<address>(0x7ffcaed6dc70)
+	- stacking header:(1)::<address>(0x7ffcaed6dc90)
+	- stacking header:(2)::<address>(0x7ffcaed6dcb0)
+	- stacking header:(3)::<address>(0x7ffcaed6dcd0)
+	- stacking header:(4)::<address>(0x7ffcaed6dcf0)
+	- stacking header:(5)::<address>(0x7ffcaed6dd10)
+	- stacking header:(6)::<address>(0x7ffcaed6dd30)
+	- stacking header:(7)::<address>(0x7ffcaed6dd50)
+	- stacking header:(8)::<address>(0x7ffcaed6dd70)
+	- stacking header:(9)::<address>(0x7ffcaed6dd90)
 
 
 -:: checking AI functions.
