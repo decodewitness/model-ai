@@ -1476,16 +1476,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffcaed6dc70)
-	- stacking header:(1)::<address>(0x7ffcaed6dc90)
-	- stacking header:(2)::<address>(0x7ffcaed6dcb0)
-	- stacking header:(3)::<address>(0x7ffcaed6dcd0)
-	- stacking header:(4)::<address>(0x7ffcaed6dcf0)
-	- stacking header:(5)::<address>(0x7ffcaed6dd10)
-	- stacking header:(6)::<address>(0x7ffcaed6dd30)
-	- stacking header:(7)::<address>(0x7ffcaed6dd50)
-	- stacking header:(8)::<address>(0x7ffcaed6dd70)
-	- stacking header:(9)::<address>(0x7ffcaed6dd90)
+	- stacking header:(0)::<address>(0x7ffc319645a0)
+	- stacking header:(1)::<address>(0x7ffc319645c0)
+	- stacking header:(2)::<address>(0x7ffc319645e0)
+	- stacking header:(3)::<address>(0x7ffc31964600)
+	- stacking header:(4)::<address>(0x7ffc31964620)
+	- stacking header:(5)::<address>(0x7ffc31964640)
+	- stacking header:(6)::<address>(0x7ffc31964660)
+	- stacking header:(7)::<address>(0x7ffc31964680)
+	- stacking header:(8)::<address>(0x7ffc319646a0)
+	- stacking header:(9)::<address>(0x7ffc319646c0)
 
 
 -:: checking AI functions.
@@ -1539,11 +1539,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -2070,7 +2072,7 @@ holytapltcltcttapishholytaptapishltct
   <h3 class="zeromargin">Your Artificial Intelligence</h3>
 </div>
 
-<sub>website last updated: 12:15 07/12/2021</sub>
+<sub>website last updated: 08:18AM 07/12/2021</sub>
 
 <hr />
 

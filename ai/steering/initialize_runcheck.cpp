@@ -32,7 +32,7 @@ bool initialize_runtime_check() { // actually should be staged and recursive / n
             default: // skipping step 0 (or implement) as well as any additional steps.
 
                 // do logic here
-                std::cout << "\t- (debug) skipping redundant casing." << std::endl;
+                std::cout << "\t- (debug) skipping redundant caching." << std::endl;
                 break;
         };
     }
