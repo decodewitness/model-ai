@@ -1,5 +1,9 @@
 // (inside AI directory) "AI/AI.H" - MAIN HEADER FILE FOR AI MODEL CLASS (USED BY AI.CPP)
 
+#ifndef _SPLASH
+#include "steering/splash.h"
+#endif
+
 #ifndef _AI_HEADER
 #define _AI_HEADER
 
@@ -12,9 +16,10 @@
 // headers
 #include <cstring>
 #include <sys/stat.h>
+#include <thread>
 
 // database
-#include "database/db.cpp"
+#include "lib/database/db.cpp"
 
 // asterisktab & amnesia splashing routines
 #include "system/logic/ascii/amnesia.h"
@@ -26,33 +31,36 @@
 // headers
 #include "al/al.cpp"
 #include "system/chk.h"
+#include "lib/data.cpp"
 #include "fetch/curl.cpp"
+// #include "lib/testing.cpp"
 #include "system/gradle.h"
 #include "comodo/varaan.h"
 #include "lib/construct.cpp"
-#include "steering/splash.h"
 #include "patching/patch.cpp"
 #include "system/protocol.cpp"
 #include "entropy/b33hiv3.cpp"	// includes entropy.cpp && ltctapttclt.cpp
 #include "sampler/sampler.cpp"
+// #include "steering/splash.h"
 #include "language/concepts.cpp"
 #include "drum_machine/drums.cpp"
+#include "language/speech/saying.cpp"
+#include "system/modules/modular.cpp"
+#include "system/security/security.cpp"
+#include "system/definitions/encoder.cpp"
 #include "system/logic/analysis/learn.cpp"
 #include "system/logic/assembly/input.cpp"
-#include "system/logic/analysis/limits.cpp"
-#include "system/modules/modular.cpp"
-#include "language/speech/saying.cpp"
-#include "system/logic/analysis/interpret.cpp"
-#include "system/security/security.cpp"
-#include "system/logic/analysis/algorithms.cpp"
-#include "system/definitions/encoder.cpp"
 #include "system/definitions/routines.cpp"
-#include "system/logic/transponder/transponder.cpp"
+#include "system/logic/analysis/limits.cpp"
+// #include "steering/initialize_runcheck.cpp"
 #include "system/modules/combine/combine.cpp"
+#include "system/logic/analysis/interpret.cpp"
+#include "system/logic/analysis/algorithms.cpp"
+#include "system/logic/transponder/transponder.cpp"
 #include "system/modules/modular_bay/modular_bay.cpp"
 
-// linked to above modules
-const int nr_modules = 24;	// equal to the number of includes in "modules" (above this)
+// linked to the modules here above
+const int nr_modules = 25;	// equal to the number of includes in "modules" (above this)
 
 // FOR OTHER MODULES
 const int module_limits = 1024;
@@ -86,11 +94,19 @@ private:
 
 	AMModule *ammodule;
 	Modular *mdl;
+	Sampler *sampler;
 	Combine *cmb;
 	CombineModule *combinemodule;
-	Sampler *sampler;
 	Construct *construct;
 	
+	bool ddLck;
+	bool d1Lck;
+	bool d2Lck;
+
+	Data *dd;
+	Data *d1;
+	Data *d2;
+
 	bool ammod;
 	bool modul;
 	bool comb;
@@ -154,7 +170,15 @@ public:
 
 	// combineModule
 	void combmod(moduleContainer a, moduleContainer b);
+	
+	// allocate && allocateData
+	void allocate(Data d);	// allocates new set of Data object to pointer "dd"
+	void allocatData(int pipeline, Data d);	// allocates Data to pointer "pipeline" a.k.a. "d1" or "d2".
 
+	// deallocate && deallocateData
+	void deallocate();	// deallocates "dd" data object
+	void deallocatData(int pipeline);	// deallocates Data pipeline "d1" or "d2".
+	
 	// curl and fetch links
 	std::string curl_url() { return this->crlurl; }
 	int curl(std::string f);
@@ -163,6 +187,11 @@ public:
 	// hashing and security
 	void enforce_security();
 	std::string hashtype(std::string h); // checking integrity
+
+	// testing
+	bool testing1();
+	bool testing2();
+	bool testing3();
 
 	// killchain
 	void destroy_msg();

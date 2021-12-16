@@ -2,7 +2,6 @@
 
 #ifndef _AI_DEFINITION_INCLUDED
 #define _AI_DEFINITION_INCLUDED
-#endif
 
 #include <iostream>
 #include <fstream>
@@ -727,6 +726,115 @@ void AI::constr() {
 	delete this->construct;
 };
 
+// allocate
+	void AI::allocate(Data d) { // allocates new set of Data object to pointer "dd"
+		
+		// create new Data object in "dd"
+		if (ddLck == true) {
+			std::cout << "~:!: (dd) data already allocated." << std::endl;
+		} else {
+			this->dd = new Data();
+			std::cout << "\t~:: data (dd) allocated" << std::endl;
+		}
+
+		// uncomment once you've written the copy constructor in Data class object.
+		//this->dd = d;	// need to handle copy constructor
+		
+		// lock in data object
+		this->ddLck = true;	
+	};	
+
+// allocateData
+void AI::allocatData(int pipeline, Data d) { // allocates Data to pointer "pipeline" a.k.a. "d1" or "d2"
+	switch (pipeline) {
+
+		case 1:	// allocate to pipeline "d1"
+			if (d1Lck == true) {
+				// do logic
+				std::cout << "~:!: (d1) data already allocated." << std::endl;
+				
+			} else { // allocate data
+				this->d1 = new Data;
+				std::cout << "~:: (d1) is free." << std::endl;
+				// need the copy constructor first
+			}
+			break;
+
+		case 2: // allocate to pipeline "d2"
+			if (d2Lck == true) {
+				// do logic
+				std::cout << "~:!: (d2) data already allocated." << std::endl;
+				
+			} else { // allocate data
+				this->d2 = new Data;
+				std::cout << "~:: (d2) is free." << std::endl;
+				// need the copy constructor first
+			}
+			break;
+
+		default: // allocate to "dd" and handle automatically
+			if (ddLck == true) {
+								// do logic
+				std::cout << "~:!: (dd) data already allocated." << std::endl;
+				
+			} else { // allocate data
+				this->dd = new Data;
+				
+				std::cout << "\t~:: data (dd) allocated." << std::endl;
+				// need to allocate the data first!!!
+			}
+			break;
+	};
+};
+
+// deallocates "dd" data object
+void AI::deallocate() {
+	std::cout << "~:: deallocate:" << std::endl;
+
+	if (this->ddLck == true) {
+		delete this->dd;
+		this->ddLck = false;
+		std::cout << "\t~:: data (dd) deallocated." << std::endl;
+	}
+};	
+
+// deallocates Data pipeline "d1" or "d2".
+void AI::deallocatData(int pipeline) {
+	
+	std::cout << "~:: deallocating:" << std::endl;
+
+	switch (pipeline) {
+
+		case 1:	// deallocate to pipeline "d1"
+			if (d1Lck == true) {
+				// do logic
+				delete this->d1;
+				this->d1Lck = false;
+				std::cout << "\t~:: data (d2) deallocated." << std::endl;
+			}
+			break;
+
+		case 2: // deallocate to pipeline "d2"
+			if (d2Lck == true) {
+				// do logic
+				delete this->d2;
+				this->d2Lck = false;
+				std::cout << "\t~:: data (d2) deallocated." << std::endl;
+			}
+			break;
+
+		default: // no such implementation
+			std::cout << ":!: ~:: no data to deallocate." << std::endl;
+
+			if (d1Lck == true) // insert an option to force deallocating and add boolean here
+				std::cout << "\t- pipeline (d1) data is ready." << std::endl;
+			if (d2Lck == true)
+				std::cout << "\t- pipeline (d2) data is ready." << std::endl;
+			break;
+	};
+};
+
+
 // OTHER FUNCTIONS
 std::string * stackmodule(int x, std::string *ar) {
 	// stacking header
@@ -748,3 +856,6 @@ std::string * stackmodule(int x, std::string *ar) {
 
 	return mystr;
 };
+
+#endif
+// eof

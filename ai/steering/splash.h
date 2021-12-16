@@ -4,10 +4,14 @@
 // splashes logical prompt for information
 // should be handled by a gradle routine
 
+#ifndef _SPLASH
+#define _SPLASH
+
 #include <iostream>
 
 void splash(void) {
 	std::cout << " ** ][][ **" << std::endl << std::endl;
 }
 
+#endif
 // eof

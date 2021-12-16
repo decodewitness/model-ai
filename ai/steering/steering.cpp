@@ -9,6 +9,9 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#include "splash.h"
+#include "initialize_runcheck.cpp"
+
 //#include "splash.h"
 
 // CLASS LIBRARIES HEADERS
@@ -48,20 +51,16 @@ int steering(int arc) {
 	// splash AI model
 	splash();
 
-	// pass arguments here
+	// check files and such things / environment
+	// testing1();	// testing 1
 
-	// class instances
+
+	// class instances are main function
 	AI ai(arc);
+
 
 	// (DEBUG) for hashing passcodes (DISABLE THIS)
 	//ai.hashtype("ai"); // checking integrity
-
-	// rollouts
-	ai.rollout(1);
-	//ai.rollout(2);	// uncomment for // rolls out "patch"
-	//ai.rollout(3);	// uncomment for // rolls out "restore"
-	ai.rollout(4);		// rolls out "tool"
-	ai.rollout(9);	// rolls out "comodos"
 
 	// health
 	chk();
@@ -71,6 +70,15 @@ int steering(int arc) {
 
 	// checking AI functions
 	//ai.check_functions();
+
+	// rollouts
+	ai.rollout(1);
+	//ai.rollout(2);	// uncomment for // rolls out "patch"
+	//ai.rollout(3);	// uncomment for // rolls out "restore"
+	ai.rollout(4);		// rolls out "tool"
+	ai.rollout(9);	// rolls out "comodos"
+
+	// testing2();	// testing 2
 
 	//ai modules
 	ai.mod();
@@ -104,7 +112,8 @@ int steering(int arc) {
 	// curl attempt site "curled_url" [std::string]
 	int x = ai.curl("https://model-ai.com");
 	
-	
+	// testing3();	// testing 3
+
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();
 

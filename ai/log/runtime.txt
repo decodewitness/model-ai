@@ -1420,16 +1420,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff4b133150)
-	- stacking header:(1)::<address>(0x7fff4b133170)
-	- stacking header:(2)::<address>(0x7fff4b133190)
-	- stacking header:(3)::<address>(0x7fff4b1331b0)
-	- stacking header:(4)::<address>(0x7fff4b1331d0)
-	- stacking header:(5)::<address>(0x7fff4b1331f0)
-	- stacking header:(6)::<address>(0x7fff4b133210)
-	- stacking header:(7)::<address>(0x7fff4b133230)
-	- stacking header:(8)::<address>(0x7fff4b133250)
-	- stacking header:(9)::<address>(0x7fff4b133270)
+	- stacking header:(0)::<address>(0x7fff7e34ce60)
+	- stacking header:(1)::<address>(0x7fff7e34ce80)
+	- stacking header:(2)::<address>(0x7fff7e34cea0)
+	- stacking header:(3)::<address>(0x7fff7e34cec0)
+	- stacking header:(4)::<address>(0x7fff7e34cee0)
+	- stacking header:(5)::<address>(0x7fff7e34cf00)
+	- stacking header:(6)::<address>(0x7fff7e34cf20)
+	- stacking header:(7)::<address>(0x7fff7e34cf40)
+	- stacking header:(8)::<address>(0x7fff7e34cf60)
+	- stacking header:(9)::<address>(0x7fff7e34cf80)
 
 
 -:: checking AI functions.
@@ -1483,13 +1483,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1576,25 +1574,6 @@ ENTER PASSCODE:
 
 -:: destructor artificial life routine was called. -::
 	killing abstraction layer.
-(debug)___msgs.
-
-~:: rollout function(1)::set to n(2-3-4-9).
-
-(debug)___msgs.
-
-~:: rollout function(4)::set to n(2-3-4-9).
-~:: found "TOOL".
-tool://matrix
-
-(debug)___msgs.
-
-Commandos_v.0.0-1a
-argument1
-argument2
-argument3
-
-~=::COMODOS:_'>v.0.0-1a
-
 
 -:: checking health criteria
 	-:: health monitoring. (10) criteria.
@@ -1627,6 +1606,25 @@ PATCHING +OK
 	* (3) * archive3.tar.gz ~ being patched.
 	* (4) * extra.txt ~ being patched.
 
+(debug)___msgs.
+
+~:: rollout function(1)::set to n(2-3-4-9).
+
+(debug)___msgs.
+
+~:: rollout function(4)::set to n(2-3-4-9).
+~:: found "TOOL".
+tool://matrix
+
+(debug)___msgs.
+
+Commandos_v.0.0-1a
+argument1
+argument2
+argument3
+
+~=::COMODOS:_'>v.0.0-1a
+
 -__:::: ( created ) modular template ::::__-
 
 	~:: filled in modular template with generic data.
@@ -1656,11 +1654,13 @@ PATCHING +OK
 ~:: files ::~
     -----
     (*)_mainFile(ai/data/cab).
-	- processing file: 0: ai/data/cabopened ai/data/cab.
+	- processing file: 0: ai/data/cab
+	- opened ai/data/cab.
 xxxxxxx
 	- closing ai/data/cab
     (*)_mainFile(ai/data/nop).
-	- processing file: 1: ai/data/nopopened ai/data/nop.
+	- processing file: 1: ai/data/nop
+	- opened ai/data/nop.
 x
 	- closing ai/data/nop
 
