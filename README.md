@@ -1476,16 +1476,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffedc789650)
-	- stacking header:(1)::<address>(0x7ffedc789670)
-	- stacking header:(2)::<address>(0x7ffedc789690)
-	- stacking header:(3)::<address>(0x7ffedc7896b0)
-	- stacking header:(4)::<address>(0x7ffedc7896d0)
-	- stacking header:(5)::<address>(0x7ffedc7896f0)
-	- stacking header:(6)::<address>(0x7ffedc789710)
-	- stacking header:(7)::<address>(0x7ffedc789730)
-	- stacking header:(8)::<address>(0x7ffedc789750)
-	- stacking header:(9)::<address>(0x7ffedc789770)
+	- stacking header:(0)::<address>(0x7ffeccb3e580)
+	- stacking header:(1)::<address>(0x7ffeccb3e5a0)
+	- stacking header:(2)::<address>(0x7ffeccb3e5c0)
+	- stacking header:(3)::<address>(0x7ffeccb3e5e0)
+	- stacking header:(4)::<address>(0x7ffeccb3e600)
+	- stacking header:(5)::<address>(0x7ffeccb3e620)
+	- stacking header:(6)::<address>(0x7ffeccb3e640)
+	- stacking header:(7)::<address>(0x7ffeccb3e660)
+	- stacking header:(8)::<address>(0x7ffeccb3e680)
+	- stacking header:(9)::<address>(0x7ffeccb3e6a0)
 
 
 -:: checking AI functions.
@@ -1950,8 +1950,8 @@ x
 ~:: setting track [7] index to (00h/00m/00s)
 ~:: setting tracks-in-track (8) to (2) tracks.
 ~:: setting track [8] index to (00h/00m/00s)
-	::--entropy--::
 
+::--entropy--::
 	-:: sampler set to recording.
 		(- >iO -)
 
@@ -1966,7 +1966,8 @@ HEREDOC:more
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 
@@ -1978,7 +1979,8 @@ HEREDOC:lorem
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 
@@ -1990,7 +1992,8 @@ HEREDOC:ipsum
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 
@@ -2002,7 +2005,8 @@ HEREDOC:more
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 
@@ -2014,7 +2018,8 @@ HEREDOC:lorem
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 
@@ -2026,7 +2031,8 @@ HEREDOC:ipsum
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 
@@ -2038,7 +2044,8 @@ HEREDOC:more
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 
@@ -2050,7 +2057,8 @@ HEREDOC:lorem
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 
@@ -2062,7 +2070,8 @@ HEREDOC:ipsum
 	-:: -:: psht -:: <tap>
 holytapltcltcttapishholytaptapishltct
 ::- insert the tam tam reading -::
--:: swapping sequence. x=3;
+-:: swapping sequence.
+x=1; y=1; z=3; 
 
 	-:: -:: psht -:: <tap>
 

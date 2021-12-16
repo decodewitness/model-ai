@@ -13,6 +13,7 @@ void commands(int x, std::string param) {
 
     // list attributes of string
     std::cout << "\t[ ";
+    
     switch(x) {
         case 1: // param length
             std::cout << "len: " << param.length();
@@ -24,7 +25,7 @@ void commands(int x, std::string param) {
             break;
 
         case 3: // computations for x coordinate
-            std::cout << "x computation: ";
+            std::cout << "simple x computation: ";
             
             // formulate x computations
             for (int i=0, j=0; i<param.length(); i++) {

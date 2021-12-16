@@ -9,7 +9,11 @@
 //#include "entropy.cpp"        // already included in this file
 //#include "ltctapttclt.cpp"    // already included in this file
 
+
 int x=42;
+int y=42;
+int z=42;
+
 int t=1;
 char c=x;
 
@@ -88,11 +92,14 @@ void run() {
     lt1tlt1(); t1tl(); tl();
     int x=0;
     x=t1(); lt1tlt1(); tlt1(t);
-    x=t1(); x=tl(c);
+    y=t1(); z=tl(c);
 	std::cout << std::endl << "::- insert the tam tam reading -::" << std::endl;
 
     fcltaptaptap();
-    std::cout << "-:: swapping sequence. x=" << x << ";" << std::endl << std::endl;
+
+    std::cout << "-:: swapping sequence." << std::endl;
+    std::cout << "x=" << x << "; " << "y=" << y << "; " << "z=" << z << "; " << std::endl;
+    std::cout << std::endl;
 }
 
 void addData() {

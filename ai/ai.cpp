@@ -435,7 +435,7 @@ void AI::sample() {
 	// start a new sampler device
 	this->sampler = new Sampler(SAMPLER_THREADS);
 	
-	std::cout << "\t::--entropy--::" << std::endl << std::endl;
+	std::cout << std::endl << "::--entropy--::" << std::endl;
 	
 	// initialize sampler and is set to recording
 	this->sampler->init();
@@ -449,7 +449,7 @@ void AI::sample() {
 		std::cout << "-::: sampler thread ::#" << i << ":: :::-" << std::endl;
 		
 		// ltctap / fcltaptaptap()
-		run();	// run ltctap / fcltaptaptap() / entropyr() / entropyw() :: from "entropy/header.h"
+		run();	// run ltctap / fcltaptaptap() / entropyr() / entropyw() :: from "entropy/b33hiv3.cpp"
 		
 		std::cout << "\t-:: -:: psht -:: <tap>" << std::endl;
 	}
