@@ -124,10 +124,10 @@ if [ -f "./ai/bin/runtime" ]
     exit 1
 fi
 
-if [ -f "a.out" ]
-  then
-  rm ./a.out
-fi
+# if [ -f "a.out" ]
+#   then
+#   rm ./a.out
+# fi
 
 if [ -f "ai/bin/TL/t1" ]
   then
