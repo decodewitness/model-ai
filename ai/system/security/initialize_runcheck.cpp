@@ -11,6 +11,12 @@ const int nrsteps=3;
 bool initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
     std::cout << "~:: ** &initialize_runtime_check() **" << std::endl;
 
+    // // moved to runtime script --> "/run"
+    // // compile sha1 program from external library.
+    // std::cout << "(debugging symbol here)" << std::endl;
+    // system("ai/system/security/sha1/sha1.sh");
+    // std::cout << "(debugging symbol here)" << std::endl;
+
     for (int i=0; i<nrsteps; i++) {
         switch (i) {
             case 0: // redundant cycle

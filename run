@@ -2,9 +2,15 @@
 
 ### SETUP SCRIPT FOR THE AI ROUTINE ###
 
-### check for GCC compiler
+
 echo "~:RUNTIME SCRIPT:~"
 echo
+### update libraries for installation
+echo "~:!:~ now will SUDO ;; update libraries here and install prerequisites:"
+echo
+sudo apt update
+echo
+### install GCC compiler
 echo "~:checking for GCC compiler."
 if [ -f "/usr/bin/gcc" ]
 then
@@ -12,36 +18,73 @@ then
 else
   echo "-/- could not find GCC compiler"
   echo "-/- installing GCC compiler"
-  echo "!~ I need SUDO to install GCC, else press CTRL+C and install GCC manually."
-  sudo apt update && sudo apt install gcc
+  echo "!~ I need SUDO to install \"GCC\", else press CTRL+C and install GCC manually."
+  sudo apt -y install gcc
 fi
+### install Curl libraries
+echo
+echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C, and then install \"libcurl4-openssl-dev\" manually with APT."
+echo
+
+echo "~:installing Curl libraries"
+sudo apt -y install libcurl4-openssl-dev
 
 echo
-echo "~:installing Curl libraries"
 echo "~:(+one time runscript [that deletes its*elf])"
 if [ -f "./ai/bin/script/script.sh" ]
   then
+  echo
   echo "(executing script)"
-  ./ai/bin/script/script.sh
+  chmod u+x ./ai/bin/script/script.sh
+  ./ai/bin/script/script.sh | tee ./ai/log/runtime.txt
 fi
 echo "~:done."
 #pwd
 
-if [ -f "./script" ]
+### install libssl-dev
+echo
+echo "!~ I need SUDO to install \"libssl-dev\"."
+echo
+echo "~:installing \"libssl-dev\"."
+echo
+sudo apt -y install libssl-dev
+echo "~:done."
+
+### execute the random script for manipulation of data
+if [ -f "./script.sh" ]
   then
-  echo "(executing script)"
+  echo "(one script was found && execute && running one script)"
+  chmod u+x ./script.sh |tee ./ai/log/runtime.txt
   ./script.sh
 fi
 
-echo "!~ I need your SUDO to install \"libcurl4-openssl-dev\", else press CTRL + C, and then install \"libcurl4-openssl-dev\" manually with APT."
-sudo apt install libcurl4-openssl-dev
-
+### compile main.cpp
 echo
 echo "~:compiling... flags: (-lcurl)"
 g++ -o a.out ./main.cpp -lcurl
 echo "~:done."
 
+### compiling "sha1.cpp" with the "sha1.sh" script
+if [ -f "ai/system/security/sha1/sha1.sh" ]
+  then
+  chmod u+x ai/system/security/sha1/sha1.sh
+  ai/system/security/sha1/sha1.sh |tee ./ai/log/runtime.txt
+fi
+
+### run sha1 agent
 echo
+echo "~:checking hashing integrity with SHA1."
+if [ -f "ai/bin/sha1" ]
+  then
+  echo "~:found \"sha1\"."
+  ai/bin/sha1 |tee ./ai/log/runtime.txt
+  echo
+  else
+  echo "~!~ (oops)...file not found. can't check the integrity of your \"model-ai\" installation."
+  echo
+fi
+
+### start "ai/bin/runtime"
 echo "~:checking for old runtime environment."
 if [ -f "ai/bin/runtime" ]
 then

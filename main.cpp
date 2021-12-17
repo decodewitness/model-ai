@@ -8,9 +8,9 @@
 using namespace std;
 
 // main function
-
 int main(int argc, char *argv[]) {
-	steering(1);
+	initialize_runtime_check();	// checks file integrity
+	steering(1);	// steers the AI (class) code 
 	//steering(2);
 return 0;
 }
