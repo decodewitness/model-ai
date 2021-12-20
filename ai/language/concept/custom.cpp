@@ -1,6 +1,6 @@
 // CUSTOM.CPP - SOME BASIC ACTIONS AND REFERRALS FOR YOUR AI MODEL (USED BY DICTIONARY.CPP)
 
-#include <cstring>
+#include <string>
 
 
 // assignment

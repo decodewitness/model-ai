@@ -1,6 +1,6 @@
 // DICTIONARY.CPP - USED BY "CONCEPTS.CPP" FOR MODEL AI
 // DICTIONARY WITH VOCABULARY FOR YOUR AI MODEL
-#include <cstring>
+#include <string>
 
 // measures arrays
 const int minlength = 48;

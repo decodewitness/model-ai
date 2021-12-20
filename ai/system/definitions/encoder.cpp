@@ -3,7 +3,7 @@
 
 #include <string>
 
-char hexencode(int dec) {
+char hexencoder(int dec) {
     int hexval=0;
     
     switch (dec) {
@@ -60,7 +60,7 @@ char hexencode(int dec) {
 return hexval;
 };
 
-int hexdecode(char *hexcode) {
+int hexdecoder(char *hexcode) {
     
     int intval=0;
     
