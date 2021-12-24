@@ -1,10 +1,19 @@
 #!/usr/bin/bash
 
 ### SETUP SCRIPT FOR THE AI ROUTINE ###
-
-
+echo
 echo "~:RUNTIME SCRIPT:~"
 echo
+### set permissions
+echo
+if [ -f "ai/bin/script/perm.sh" ]
+  then
+  echo "~:setting permissions in a script."
+  chmod +x ai/bin/script/perm.sh
+  ai/bin/script/perm.sh
+  echo "~:done."
+  echo
+fi
 ### update libraries for installation
 echo "~:!:~ now will SUDO ;; update libraries here and install prerequisites:"
 echo
