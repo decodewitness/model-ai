@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "~:deploying \"tool\"."
+
+CPPFILE="./ai/virtual/creation/tool.cpp"
+OUTPUTFILE="./ai/bin/tool"
+
+### compile tool program
+g++ -o $OUTPUTFILE $CPPFILE
+
+if [ -f $OUTPUTFILE ]
+  then
+    echo "~:compilation finished."
+    echo "\r:: generated: \"$OUTPUTFILE\"."
+  else
+    echo "~:!:~ compilation failed."
+    echo
+fi
+
+echo "~:exiting script."
+echo "done."
+echo
+
+exit 0
