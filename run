@@ -26,7 +26,7 @@ then
 else
   echo "-/- could not find GCC compiler"
   echo "-/- installing GCC compiler"
-  echo "!~ I need SUDO to install \"GCC\", else press CTRL+C and install GCC manually."
+  echo "~!~ I need SUDO to install \"GCC\", else press CTRL+C and install GCC manually."
   sudo apt -y install gcc
 fi
 ### install Curl libraries
@@ -51,7 +51,7 @@ echo "~:done."
 
 ### install libssl-dev
 echo
-echo "!~ I need SUDO to install \"libssl-dev\"."
+echo "~!~ I need SUDO to install \"libssl-dev\"."
 echo
 echo "~:installing \"libssl-dev\"."
 echo

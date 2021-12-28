@@ -1476,16 +1476,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe74c39690)
-	- stacking header:(1)::<address>(0x7ffe74c396b0)
-	- stacking header:(2)::<address>(0x7ffe74c396d0)
-	- stacking header:(3)::<address>(0x7ffe74c396f0)
-	- stacking header:(4)::<address>(0x7ffe74c39710)
-	- stacking header:(5)::<address>(0x7ffe74c39730)
-	- stacking header:(6)::<address>(0x7ffe74c39750)
-	- stacking header:(7)::<address>(0x7ffe74c39770)
-	- stacking header:(8)::<address>(0x7ffe74c39790)
-	- stacking header:(9)::<address>(0x7ffe74c397b0)
+	- stacking header:(0)::<address>(0x7ffcbfc7ee40)
+	- stacking header:(1)::<address>(0x7ffcbfc7ee60)
+	- stacking header:(2)::<address>(0x7ffcbfc7ee80)
+	- stacking header:(3)::<address>(0x7ffcbfc7eea0)
+	- stacking header:(4)::<address>(0x7ffcbfc7eec0)
+	- stacking header:(5)::<address>(0x7ffcbfc7eee0)
+	- stacking header:(6)::<address>(0x7ffcbfc7ef00)
+	- stacking header:(7)::<address>(0x7ffcbfc7ef20)
+	- stacking header:(8)::<address>(0x7ffcbfc7ef40)
+	- stacking header:(9)::<address>(0x7ffcbfc7ef60)
 
 
 -:: checking AI functions.
@@ -1539,13 +1539,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1706,8 +1704,8 @@ argument3
 ~:: setting construct.
 
 ~:: preprocessing module.
-	~:: set data infile as header->_dataFile.
-	~:: opening _dataFile.
+	~:: set data-in-file as header->_dataFiles.
+	~:: opening _dataFiles.
 		~:: open.
 
 ~:: files ::~
@@ -1715,7 +1713,7 @@ argument3
     (*)_mainFile(ai/data/cab).
 	- processing file: 0: ai/data/cab
 	- opened ai/data/cab.
-xxxxxxx
+xxxxxxxxxxx
 	- closing ai/data/cab
     (*)_mainFile(ai/data/nop).
 	- processing file: 1: ai/data/nop

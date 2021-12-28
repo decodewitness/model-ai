@@ -16,7 +16,7 @@
 // headers
 #include <cstring>
 #include <sys/stat.h>
-#include <thread>
+//#include <thread>
 
 // database
 #include "lib/database/db.cpp"
@@ -27,6 +27,9 @@
 
 // configurations
 #include "system/config/config.h"
+
+// handlers (for data)
+#include "data/handler/handler.cpp"
 
 // headers
 #include "al/al.cpp"
@@ -131,6 +134,12 @@ public:
 
 	// headers
 	void headers();
+
+	// print messages
+	void printn(std::string n) { std::cout << n; }
+	void printx(std::string x) { std::cout << x << std::endl; }
+	void printy(std::string y) { std::cout << std::endl << y; }
+	void printz(std::string z) { std::cout << std::endl << z << std::endl; }
 
 	// rollouts
 	void rollout(int n);

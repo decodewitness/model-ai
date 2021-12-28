@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const std::string INFILE = "./ai/data/infile";
+const std::string INFILES = "./ai/data/infiles";
 
 class Construct {
 
@@ -18,7 +18,7 @@ private:
     bool mainset;
     bool dataset;
 
-    std::string _dataFile;
+    std::string _dataFiles;
     std::string _mainFiles;
     std::string _fileString;
 
@@ -29,18 +29,18 @@ public:
     Construct() {
         std::cout << "~:: setting construct." << std::endl;
 
-        this->_dataFile = INFILE;
+        this->_dataFiles = INFILES;
         this->dataset = true;
     };
 
     void preprocess() { // function opens the directives file and assigns a main file for data assimilation purposes
 
         std::cout << std::endl << "~:: preprocessing module." << std::endl;
-        std::cout << "\t~:: set data infile as header->_dataFile." << std::endl;
+        std::cout << "\t~:: set data-in-file as header->_dataFiles." << std::endl;
 
         // set data file here in "inFiles"
-        std::cout << "\t~:: opening _dataFile." << std::endl;
-        this->inFiles.open(_dataFile);
+        std::cout << "\t~:: opening _dataFiles." << std::endl;
+        this->inFiles.open(_dataFiles);
 
         if (this->inFiles.is_open() == true) {
             std::cout << "\t\t~:: open." << std::endl;
