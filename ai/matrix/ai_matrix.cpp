@@ -11,22 +11,7 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
         // 2  xxx  xxx  xxx
         // 3  xxx  xxx  xxx
 
-
-        float square_A[10]; // a,a1;
-        float square_B[10]; // a,b2;
-        float square_C[10]; // a,b3;
-    
-        // decimal plane
-        float decimal_A[30]; // 30 decimals
-        float decimal_B[30]; // 30 decimals
-        float decimal_C[30]; // 30 decimals
-
-        float float_A[30];      // 30 floats
-        float float_B[30];      // 30 floats
-        float float_C[30];      // 30 floats
-
-
-// legend for the matrix a,b,c[0] = N_square[n]=x,y,z
+        // legend for the matrix a,b,c[0] = N_square[n]=x,y,z
         /* 
          * case n: A_square[0] = x;     // first number
          *         A_square[1] = 0;     // second number
@@ -50,7 +35,19 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
          *         decimalC[0] = z;
          */
 
-        
+        float square_A[10]; // a,a1;
+        float square_B[10]; // a,b2;
+        float square_C[10]; // a,b3;
+    
+        // decimal plane
+        float decimal_A[30]; // 30 decimals
+        float decimal_B[30]; // 30 decimals
+        float decimal_C[30]; // 30 decimals
+
+        float float_A[30];      // 30 floats
+        float float_B[30];      // 30 floats
+        float float_C[30];      // 30 floats
+
         // alpha computations
         square_A[0] = x;
         square_A[1] = y;

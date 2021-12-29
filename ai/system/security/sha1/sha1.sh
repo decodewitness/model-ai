@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo
-echo "~:initialize script."
-echo "\t~:compiling \"sha1.cpp\"."
+echo "~:initializing script."
+echo "~:compiling \"sha1.cpp\"."
 
 # compile here
 g++ -Wall -Wextra -Werror ai/system/security/sha1/sha1.cpp -Lopenssl/openssl-0.9.8k/ -lssl -lcrypto -Iopenssl/openssl-0.9.8k/include -o ai/bin/sha1

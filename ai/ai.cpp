@@ -9,7 +9,7 @@
 #include "ai.h"
 
 // CONSTANTS
-//const char _RESTOREMODEL[32] = "ai/patching/restore";
+//const char _MODEL[32] = "ai/patching/restore";
 	// declared elsewhere
 
 // CONDITIONS FOR RUNTIME TESTING (1001 = ALL tests; or 1, or 2, or n)
@@ -681,13 +681,13 @@ void AI::rollout(int n) {
 	case 2: // roll out next model
 			//std::cout << "~:: download next model ::~" << std::endl;
 			std::cout << std::endl << "~:: rollout function(2)::set to n(2-3-4-9)." << std::endl;
-			system(_RESTOREMODEL);
+			system(_MODEL);
 	
 
 	case 3: // roll out next model and patch
 			//std::cout << "~:: download next model ::~" << std::endl;
 			std::cout << std::endl << "~:: rollout function(3)::set to n(2-3-4-9)." << std::endl;
-			system(_RESTOREMODEL);
+			system(_MODEL);
 			system(_PATCH);
 		break;
 	
@@ -696,15 +696,15 @@ void AI::rollout(int n) {
 			
 			// check if TOOL is there
 			struct stat st;
-			if (stat(TOOL, &st) != 0) {
+			if (stat(_TOOL, &st) != 0) {
 				std::cout << "~:: could not find \"TOOL\"; now deploying..." << std::endl;
-				system(_TOOLDEPLOY);
-				system(TOOL);
+				system(_DEPLOY);
+				system(_TOOL);
 			} else {
 				std::cout << "~:: found \"TOOL\"." << std::endl;
 				// 	ERRNO(errno);
 				// 	return -1;
-				system(TOOL);
+				system(_TOOL);
 			}
 
 	break;
