@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const std::string INFILES = "./ai/data/infiles";
+const std::string INFILES = "./ai/data/in/infiles";
 
 class Construct {
 
