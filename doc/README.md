@@ -1476,16 +1476,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffcbfc7ee40)
-	- stacking header:(1)::<address>(0x7ffcbfc7ee60)
-	- stacking header:(2)::<address>(0x7ffcbfc7ee80)
-	- stacking header:(3)::<address>(0x7ffcbfc7eea0)
-	- stacking header:(4)::<address>(0x7ffcbfc7eec0)
-	- stacking header:(5)::<address>(0x7ffcbfc7eee0)
-	- stacking header:(6)::<address>(0x7ffcbfc7ef00)
-	- stacking header:(7)::<address>(0x7ffcbfc7ef20)
-	- stacking header:(8)::<address>(0x7ffcbfc7ef40)
-	- stacking header:(9)::<address>(0x7ffcbfc7ef60)
+	- stacking header:(0)::<address>(0x7ffe99fdbed0)
+	- stacking header:(1)::<address>(0x7ffe99fdbef0)
+	- stacking header:(2)::<address>(0x7ffe99fdbf10)
+	- stacking header:(3)::<address>(0x7ffe99fdbf30)
+	- stacking header:(4)::<address>(0x7ffe99fdbf50)
+	- stacking header:(5)::<address>(0x7ffe99fdbf70)
+	- stacking header:(6)::<address>(0x7ffe99fdbf90)
+	- stacking header:(7)::<address>(0x7ffe99fdbfb0)
+	- stacking header:(8)::<address>(0x7ffe99fdbfd0)
+	- stacking header:(9)::<address>(0x7ffe99fdbff0)
 
 
 -:: checking AI functions.
@@ -1539,11 +1539,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1645,14 +1647,6 @@ ENTER PASSCODE:
 	-:: 10. ten:	true
 
 
--/- getting "archives_list.csv"
--/- done with downloads.
-
-~/~ patching.
-patching: "archives_list.csv" (archives)
-
-+OK
-PATCHING +OK
 ~:: auto-patch routine ::~
 ~:: (DEBUG) cabinets:
 {"archive1.tar.gz","archive2.tar.gz","archive3.tar.gz","extra.txt"}
@@ -1671,16 +1665,8 @@ PATCHING +OK
 
 ~:: rollout function(4)::set to n(2-3-4-9).
 ~:: found "TOOL".
-tool://matrix
 
 (debug)___msgs.
-
-Commandos_v.0.0-1a
-argument1
-argument2
-argument3
-
-~=::COMODOS:_'>v.0.0-1a
 
 -__:::: ( created ) modular template ::::__-
 	~:: filled in modular template with generic data.
@@ -1713,7 +1699,7 @@ argument3
     (*)_mainFile(ai/data/cab).
 	- processing file: 0: ai/data/cab
 	- opened ai/data/cab.
-xxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
 	- closing ai/data/cab
     (*)_mainFile(ai/data/nop).
 	- processing file: 1: ai/data/nop
@@ -2099,16 +2085,18 @@ x=1; y=1; z=3;
   <h3 class="zeromargin">Your Artificial Intelligence</h3>
 </div>
 
-<sub>website last updated: 08:18AM 07/12/2021</sub>
+<sub>website last updated: 08:40AM 09/1/2022</sub>
 
 <hr />
 
 
 <nav>
-  <a class="btn btn-lg btn-primary" href="/decodewitness">Decodewitness</a>  <a class="btn btn-lg btn-primary" href="/documentation">Documentation</a> <a class="btn btn-lg btn-primary" href="/downloads">Downloads</a>
+  <a class="btn btn-lg btn-primary" href="/decodewitness">Decodewitness</a>  <a class="btn btn-lg btn-primary" href="/documentation">Documentation</a> <a class="btn btn-lg btn-primary" href="/downloads">Downloads</a> <a class="btn btn-lg btn-primary" href="https://modelaidev.wordpress.com/" target="_blank">Portfolio</a>
 </nav>
 
 <hr />
+
+<img class="margeb" src="images/ai_chip.png" height="28" width="28" alt="ai chip" />
 
 <div>
   <p>Welcome to the <a class="hov" href="/"><strong>Model-Ai.com</strong></a> website, our AI hub.</p>

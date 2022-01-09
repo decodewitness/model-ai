@@ -15,7 +15,7 @@ std::string passcode = "ai";
 const std::string model_ai = "model-ai";
 
 // this decides if the function should compare the hashes (which assumably is only reasonable to both set it to "true")
-bool hashed_credentials = true;    // hashes the inputted credentials
+bool hashed_credentials = false;    // hashes the inputted credentials
 bool store_hashed_credentials = true;   // stores only hashed credentials
 
 // credentials level of the active user
