@@ -11,6 +11,9 @@ _ARC(debug): 1 --
 ~:: security routine
 ENTER PASSCODE: 
 (debug) checking passcode.
+~:: inside meta query.
+/home/bb441/Documents/0x021.BUSINESS/0.PLAN_(PROJECTS)/1x.DEV/00x00.(_RESEARCH_&_SCIENCE_)/0x1900.(AI & LAB) SCIENCE) AVIATION) ROCKETRY_)/000.(A.I.)_.Artificial Intelligence model/000.model-ai
+(debug) hashcode: 4921c0e2d1f6005abe1f9ec2e2041909 hash: 4921c0e2d1f6005abe1f9ec2e2041909
 -:: ACCESS GRANTED (level) (security_level)	~::exporting to environment.
 [2J[H
                                                                                
@@ -1424,16 +1427,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc161efac0)
-	- stacking header:(1)::<address>(0x7ffc161efae0)
-	- stacking header:(2)::<address>(0x7ffc161efb00)
-	- stacking header:(3)::<address>(0x7ffc161efb20)
-	- stacking header:(4)::<address>(0x7ffc161efb40)
-	- stacking header:(5)::<address>(0x7ffc161efb60)
-	- stacking header:(6)::<address>(0x7ffc161efb80)
-	- stacking header:(7)::<address>(0x7ffc161efba0)
-	- stacking header:(8)::<address>(0x7ffc161efbc0)
-	- stacking header:(9)::<address>(0x7ffc161efbe0)
+	- stacking header:(0)::<address>(0x7ffe3bb801f0)
+	- stacking header:(1)::<address>(0x7ffe3bb80210)
+	- stacking header:(2)::<address>(0x7ffe3bb80230)
+	- stacking header:(3)::<address>(0x7ffe3bb80250)
+	- stacking header:(4)::<address>(0x7ffe3bb80270)
+	- stacking header:(5)::<address>(0x7ffe3bb80290)
+	- stacking header:(6)::<address>(0x7ffe3bb802b0)
+	- stacking header:(7)::<address>(0x7ffe3bb802d0)
+	- stacking header:(8)::<address>(0x7ffe3bb802f0)
+	- stacking header:(9)::<address>(0x7ffe3bb80310)
 
 
 -:: checking AI functions.
@@ -1656,8 +1659,8 @@ x
 	- closing ai/data/nop
 
 
-~:: hashing: my string
-	2ba81a47c5512d9e23c435c1f29373cb
+~:: hashing: ai
+	4921c0e2d1f6005abe1f9ec2e2041909
 
 -:: check integrity / logical step counter.
 

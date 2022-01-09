@@ -89,7 +89,7 @@ int steering(int arc) {
 	ai.constr();
 
 	// hash function checks file hashes
-	ai.hashtype("my string"); // checking integrity
+	ai.hashtype("ai"); // checking integrity
 	
 	// logical kill chain (uncomment next line)
 	//ai.kill(9);
