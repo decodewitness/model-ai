@@ -30,7 +30,7 @@ bool check_passcode(std::string pass) {
     std::ifstream filen;
 
     std::cout << "~:: inside meta query." << std::endl;
-    system("pwd");
+    //system("pwd");
 
     filen.open("data");
 

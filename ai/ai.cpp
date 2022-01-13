@@ -504,10 +504,10 @@ void AI::appliance() {
 
 void AI::tsp() {
 	// create new transponder
-	this->transponder = new Transponder("test");
+	this->transponder = new Transponder(query_string);
 
 	// prep new transponder
-	this->transponder->prep();
+	this->transponder->prep(this->transponder->retVal());	// retVal() returns "initial_sentence" from "Transponder"
 
 	// do logic here !!! !!! !!!
 

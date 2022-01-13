@@ -1,6 +1,11 @@
+// "/AI/LOGIC/TRANSPONDER/PREPARE.CPP" - USED BY "/AI/LOGIC/TRANSPONDER/TRANSPONDER.CPP" // USED FOR LANGUAGE INTERPRETATION.
+
 #include <iostream>
 #include <string.h>
 #include <fstream>
+
+// include chomp as function
+#include "chomp.cpp"
 
 // the limit of the size of the dictionaries    // if you change this you must rebuild all the tables.
 const int max_sentence_length=256;  // max. length of sentence in words.
@@ -10,6 +15,7 @@ const int wordsize=20;              // max. word size.
 // counters
 int counter=0;  // used to count total number of words processed.
 int occurences=0;   // used to count the occurences of words being in the dictionary.
+int wordsInSentence;    // tracks the amount of words in the sentence being queried.
 
 // question + answer + word
 std::string aquestion;
@@ -17,13 +23,16 @@ std::string answer;
 std::string ourword;
 
 // dictionaries
-int word2int[alimit];            // contains the int value of every word in the dictionary.
-int dict2int[alimit];            // contains the int values of the keys in the dictionary.
-char our_dict[alimit][wordsize]; // contains our words.
+// char our_dict[alimit][wordsize]; // contains our words.
+std::string our_dict[alimit];    // contains our words.
 int dict[alimit];                // contains the ordered values of all the words from the dictionary and forms this new dictionary.
 
+// lists for integer values of keys and words
+int word2int[alimit];            // contains the int value of every word in the dictionary.
+int dict2int[alimit];            // contains the int values of the keys in the dictionary.
+
 // contains the int values for the occurences of every word.
-int int_occurrence[alimit];
+int int_occurrences[alimit];
 
 // char dictionaries
 char wordsFromSentence[max_sentence_length][wordsize];  // contains the words from the sentence // should contain the words from the question.
@@ -32,16 +41,16 @@ char wordsFromSentence[max_sentence_length][wordsize];  // contains the words fr
 int questions2int[alimit];   // contains the integer values of the questions list (of training data).
 int answers2int[alimit];    // contains the integer representation of the answers to the analyzed questions.
 
+// wordlists
+std::string process_data="ai/data/files/20k.txt";   // contains the data to be indexed by these functions (list of most common words).
+
 // these still need values
 std::string adictionary; // contains the location of the dictionary file with the processed (and congruent) data.
 std::string awords;      // contains the location of the dictionary with all the words and their definitions.
 std::string adata;       // contains the location of the dictionary with all the learned responses.
-std::string process_data="20k.txt";   // contains the data to be indexed by these functions (list of most common words).
 
 // start of sentence, end of sentence, end of transmission control characters.
-int SOS=':',
-    EOS=';',
-    EOT='.';
+std::string SOS="<SOS>", EOS="<EOS>", EOT="<EOT>";
 
 // file pointers
 std::ifstream dict_in;
@@ -53,12 +62,14 @@ void prepare_ints(int l) {
 
     int key=0;
     int counter=0;
+
+    // the sentence gets processed one word at a time
     std::string oneword;
 
     dict_in.open(process_data);
 
     if (dict_in.is_open() == true) {
-        std::cout << "\t:: succesfully opened dictionary: " << process_data << "." << std::endl;
+        std::cout << "\t~:: succesfully opened dictionary: " << process_data << "." << std::endl;
     } else {
         std::cout << "\t~:: failed to open dictionary: " << process_data << "." << std::endl;
         
@@ -68,14 +79,17 @@ void prepare_ints(int l) {
     }
 
     // prepare word2int containing 1 ... "alimit" (numbers)
-    std::cout << "\t~:: preparing word2int." << std::endl;
+    std::cout << "\t~:: preparing: \"word2int\"." << std::endl;
 
     for (int i=0; i<l; i++) {
         word2int[i] = i;
     }
     
-    std::cout << "\t~:: filled array with numbers." << std::endl;
-
+    std::cout << std::endl << "\t~:: filled array \"word2int\" up with numbers." << std::endl;
+    
+    std::cout << std::endl << "\t~:: listing \"[key]) [value]\" pairs:" << std::endl;
+    std::cout << std::endl;
+    
     // prepare "our_dict" containing all the words in the dictionary
     while (key < l) {
         dict_in >> oneword;
@@ -83,35 +97,49 @@ void prepare_ints(int l) {
         std::cout << key << ") " << oneword << std::endl; 
         //word2int[key] = counter++;
         
-        strncpy(our_dict[key], oneword.c_str(), wordsize);
+        our_dict[key] = oneword;
         
         counter++;
         key++;
     };
 
-    std::cout << "\t ~:: filled dictionary with words." << std::endl;
-    std::cout << "\t~:: (" << counter << ") number of words processed." << std::endl;
+    std::cout << std::endl << "\t~:: filled dictionary with words." << std::endl;
+    std::cout << "\t~:: (" << counter << ") <- words processed." << std::endl;
 
     // calculate occurences for the words in the question "wordsFromSentence"
     std::cout << "\t~:: calculate occurences from word in sentence." << std::endl;
 
     for (int i=0; i<max_sentence_length; i++) {
         for (int j=0; j<l; j++) {
-            if (strcmp(wordsFromSentence[i], our_dict[j]) != true) {
-                int_occurrence[j] += 1;
+            if (i < wordsInSentence && our_dict[j].compare(wordsFromSentence[i]) == false) {
+                int_occurrences[j] += 1;
                 occurences += 1;
             }
         }            
     }
 
-    std::cout << "~::(debug) :: (" << occurences << ") occurences found." << std::endl;
-
     // DEBUG :: list all occurences
-    std::cout << "\t~::(debug) enumerating digest:" << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "~::(debug) enumerating digest:" << std::endl;
+    std::cout << std::endl;
     
     for (int i=0; i<l; i++) {
-        std::cout << "(" << our_dict[i] << " : #" << int_occurrence[i] << ") ";
+        char bword[64];
+        // our_dict[i];
+        strncpy(bword, our_dict[i].c_str(), 64);
+
+        // std::cout << "(\"" << our_dict[i] << "\":#" << *(int_occurrences+i) << ") ";
+        std::cout << "(\"" << chomp(bword) << "\":#" << *(int_occurrences+i) << ") ";
+
+        // print endline after every 4 occurences
+        if (i%5 < 1) {
+            std::cout << std::endl;
+        }
     }
+
+    std::cout << std::endl;
+    std::cout << std::endl << "~:: number of occurences: (" << occurences << ")." << std::endl << std::endl;
 
     // for (int key=0; key<l; key++) {
     //     dict2int[key] += 1;

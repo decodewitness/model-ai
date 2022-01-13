@@ -18,6 +18,12 @@
 #include <sys/stat.h>
 //#include <thread>
 
+// additional loaded variables
+#include "data/files/variables.h"
+
+// additional functions
+// #include "system/logic/functions/chomp.cpp"
+
 // database
 #include "lib/database/db.cpp"
 
