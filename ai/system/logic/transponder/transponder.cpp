@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 
+#include "transponder.h"
+#include "prepare.cpp"
+
 class Transponder {
 private:
     std::string initial_sentence;
@@ -16,11 +19,24 @@ public:
     Transponder(std::string s);
 
     std::string respond();
+    
+    void prep() {
+        prepare_ints(limit);    // limit is declared in "prepare.cpp"
+    };
+
     void analytics();
 };
 
 Transponder::Transponder(std::string s) {
+    std::cout << std::endl << "~:: transponder queries." << std::endl;
     this->initial_sentence = s;
+
+    // fit "initial_sentence" to "question" declared in "prepare.cpp"
+    aquestion = s;
+
+    // do check if data was initialized with a library here else preprocess the data.
+
+    // CHECK !!!! !!!! !!!!
 };
 
 std::string Transponder::respond() {

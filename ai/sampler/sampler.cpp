@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "samplertrack.cpp"
+#include "sampler_track.cpp"
 
 class Sampler {
 

@@ -502,6 +502,19 @@ void AI::appliance() {
 	system("./ai/virtual/virtual");
 }
 
+void AI::tsp() {
+	// create new transponder
+	this->transponder = new Transponder("test");
+
+	// prep new transponder
+	this->transponder->prep();
+
+	// do logic here !!! !!! !!!
+
+	// delete transponder
+	delete this->transponder;
+}
+
 void AI::decouple() {
 	std::cout << std::endl;
 	std::cout << "-:: decoupler." << std::endl;

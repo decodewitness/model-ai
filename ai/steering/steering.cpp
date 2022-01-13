@@ -116,6 +116,9 @@ int steering(int arc) {
 	
 	// testing3();	// testing 3
 
+	// transponder prepare function
+	ai.tsp();
+
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();
 

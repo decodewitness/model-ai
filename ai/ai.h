@@ -101,7 +101,8 @@ private:
 	Combine *cmb;
 	CombineModule *combinemodule;
 	Construct *construct;
-	
+	Transponder *transponder;
+
 	bool ddLck;
 	bool d1Lck;
 	bool d2Lck;
@@ -197,6 +198,9 @@ public:
 	// hashing and security
 	void enforce_security();
 	std::string hashtype(std::string h); // checking integrity
+
+	// initialize transponder
+	void tsp();
 
 	// testing
 	bool testing1();
