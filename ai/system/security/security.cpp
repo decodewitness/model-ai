@@ -32,7 +32,7 @@ bool check_passcode(std::string pass) {
     std::cout << "~:: inside meta query." << std::endl;
     //system("pwd");
 
-    filen.open("data");
+    filen.open("ai/system/security/db/db");
 
     std::string hashcode;
     filen >> hashcode;

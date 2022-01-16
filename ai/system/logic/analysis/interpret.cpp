@@ -1,9 +1,12 @@
-//  "AI/LOGIC/INTERPRET.CPP" - INTERPRET TEXT MODEL FOR THE AI CLASS MODEL - USED BY "AI/AI.H"
+//  "AI/LOGIC/INTERPRET.CPP" - INTERPRETS TEXT MODEL FOR THE AI CLASS MODEL - USED BY "AI/AI.H"
 #include "interpret.h"
 
 // interprets
 std::string sos; // start of sentence
 std::string eos; // end of sentence
+std::string eot; // end of transmission
+
+// language construct
 std::string language_construct;
 
 // temporary containers

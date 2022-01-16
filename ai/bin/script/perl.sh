@@ -12,4 +12,3 @@ $filename4 = "ai/bin/TL/1tlt1tl";
 print("-- PERL / (parsing script) --\n");
 print("FILES: $filename1, $filename2, $filename3, $filename4\n");
 print("\t-- end of parsing script --\n");
-

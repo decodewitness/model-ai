@@ -11,7 +11,7 @@ g++ -o $OUTPUTFILE $CPPFILE
 if [ -f $OUTPUTFILE ]
   then
     echo "~:compilation finished."
-    echo "\r:: generated: \"$OUTPUTFILE\"."
+    echo "~:: generated: \"$OUTPUTFILE\"."
   else
     echo "~:!:~ compilation failed."
     echo

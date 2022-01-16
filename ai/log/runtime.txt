@@ -1426,16 +1426,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffe1f72f10)
-	- stacking header:(1)::<address>(0x7fffe1f72f30)
-	- stacking header:(2)::<address>(0x7fffe1f72f50)
-	- stacking header:(3)::<address>(0x7fffe1f72f70)
-	- stacking header:(4)::<address>(0x7fffe1f72f90)
-	- stacking header:(5)::<address>(0x7fffe1f72fb0)
-	- stacking header:(6)::<address>(0x7fffe1f72fd0)
-	- stacking header:(7)::<address>(0x7fffe1f72ff0)
-	- stacking header:(8)::<address>(0x7fffe1f73010)
-	- stacking header:(9)::<address>(0x7fffe1f73030)
+	- stacking header:(0)::<address>(0x7fff44890830)
+	- stacking header:(1)::<address>(0x7fff44890850)
+	- stacking header:(2)::<address>(0x7fff44890870)
+	- stacking header:(3)::<address>(0x7fff44890890)
+	- stacking header:(4)::<address>(0x7fff448908b0)
+	- stacking header:(5)::<address>(0x7fff448908d0)
+	- stacking header:(6)::<address>(0x7fff448908f0)
+	- stacking header:(7)::<address>(0x7fff44890910)
+	- stacking header:(8)::<address>(0x7fff44890930)
+	- stacking header:(9)::<address>(0x7fff44890950)
 
 
 -:: checking AI functions.
@@ -1597,6 +1597,14 @@ ENTER PASSCODE:
 	-:: 10. ten:	true
 
 
+-/- getting "archives_list.csv"
+-/- done with downloads.
+
+~/~ patching.
+patching: "archives_list.csv" (archives)
+
++OK
+PATCHING +OK
 ~:: auto-patch routine ::~
 ~:: (DEBUG) cabinets:
 {"archive1.tar.gz","archive2.tar.gz","archive3.tar.gz","extra.txt"}
@@ -1613,10 +1621,28 @@ ENTER PASSCODE:
 
 (debug)___msgs.
 
-~:: rollout function(4)::set to n(2-3-4-9).
+~:: rollout function(4)::set to n(2-3-4-5-9).
 ~:: found "TOOL".
+tool://matrix
 
 (debug)___msgs.
+
+~:: rollout function(5)::set to n(2-3-4-5-9).
+(debug) toolstr = ai/bin/tool -p
+tool://matrix
+(tool): - setting permissions.
+~:done setting permissions for executable scripts.
+
+(debug)___msgs.
+
+~:: rollout function(9)::set to n(2-3-4-5-9).
+
+Commandos_v.0.0-1a
+argument1
+argument2
+argument3
+
+~=::COMODOS:_'>v.0.0-1a
 
 -__:::: ( created ) modular template ::::__-
 	~:: filled in modular template with generic data.

@@ -1,5 +1,4 @@
 /:
-data
 files.txt
 main.cpp
 main.h
@@ -252,6 +251,9 @@ initialize_runcheck.cpp
 privileges.cpp
 security.cpp
 user.h
+
+AI/SYSTEM/SECURITY/DB:
+db
 
 AI/SYSTEM/SECURITY/MD5:
 md5.cpp

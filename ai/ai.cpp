@@ -683,6 +683,9 @@ void AI::auto_patch() {
 }
 
 void AI::rollout(int n) {
+
+	std::string toolstr;
+
 	// roll out comodos & commandos
 	std::cout << std::endl << "(debug)___msgs." << std::endl;
 	switch (n) {
@@ -691,41 +694,53 @@ void AI::rollout(int n) {
 			std::cout << std::endl << "~:: rollout function(1)::set to n(2-3-4-9)." << std::endl;
 		break;
 
-	case 2: // roll out next model
-			//std::cout << "~:: download next model ::~" << std::endl;
-			std::cout << std::endl << "~:: rollout function(2)::set to n(2-3-4-9)." << std::endl;
-			system(_MODEL);
-	
+		case 2: // roll out next model
+				//std::cout << "~:: download next model ::~" << std::endl;
+				std::cout << std::endl << "~:: rollout function(2)::set to n(2-3-4-9)." << std::endl;
+				system(_MODEL);
+		
 
-	case 3: // roll out next model and patch
-			//std::cout << "~:: download next model ::~" << std::endl;
-			std::cout << std::endl << "~:: rollout function(3)::set to n(2-3-4-9)." << std::endl;
-			system(_MODEL);
-			system(_PATCH);
+		case 3: // roll out next model and patch
+				//std::cout << "~:: download next model ::~" << std::endl;
+				std::cout << std::endl << "~:: rollout function(3)::set to n(2-3-4-5-9)." << std::endl;
+				system(_MODEL);
+				system(_PATCH);
+			break;
+		
+		case 4: // roll out TOOL
+				std::cout << std::endl << "~:: rollout function(4)::set to n(2-3-4-5-9)." << std::endl;
+				
+				// check if TOOL is there
+				struct stat st;
+				if (stat(_TOOL, &st) != 0) {
+					std::cout << "~:: could not find \"TOOL\"; now deploying..." << std::endl;
+					system(_DEPLOY);
+					system(_TOOL);
+				} else {
+					std::cout << "~:: found \"TOOL\"." << std::endl;
+					// 	ERRNO(errno);
+					// 	return -1;
+					system(_TOOL);
+				}
 		break;
-	
-	case 4: // roll out TOOL
-			std::cout << std::endl << "~:: rollout function(4)::set to n(2-3-4-9)." << std::endl;
+
+		case 5: // set permissions scripts
+			std::cout << std::endl << "~:: rollout function(5)::set to n(2-3-4-5-9)." << std::endl;
+			toolstr = _TOOL;
+			toolstr = toolstr + " -p";
+
+			std::cout << "(debug) toolstr = " << toolstr << std::endl;
+			//system("pwd");
 			
-			// check if TOOL is there
-			struct stat st;
-			if (stat(_TOOL, &st) != 0) {
-				std::cout << "~:: could not find \"TOOL\"; now deploying..." << std::endl;
-				system(_DEPLOY);
-				system(_TOOL);
-			} else {
-				std::cout << "~:: found \"TOOL\"." << std::endl;
-				// 	ERRNO(errno);
-				// 	return -1;
-				system(_TOOL);
-			}
+			system(toolstr.c_str());
+		break;
 
-	break;
+		case 9: // roll out comodos
+				std::cout << std::endl << "~:: rollout function(9)::set to n(2-3-4-5-9)." << std::endl;
 
-	case 9: // roll out comodos
-			system(_COMODOS);
-	break;
-	
+				system(_COMODOS);
+		break;
+		
 		default: // default
 			std::cout << "~:: no rollouts." << std::endl;
 		break;

@@ -78,7 +78,8 @@ int steering(int arc) {
 	//ai.rollout(2);	// uncomment for // rolls out "patch"
 	//ai.rollout(3);	// uncomment for // rolls out "restore"
 	ai.rollout(4);		// rolls out "tool"
-	ai.rollout(9);	// rolls out "comodos"
+	ai.rollout(5);		// rolls out "setting permissions scripts with tool" // already done in "run" script
+	ai.rollout(9);		// rolls out "comodos"
 
 	// testing2();	// testing 2
 
