@@ -1426,16 +1426,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff44890830)
-	- stacking header:(1)::<address>(0x7fff44890850)
-	- stacking header:(2)::<address>(0x7fff44890870)
-	- stacking header:(3)::<address>(0x7fff44890890)
-	- stacking header:(4)::<address>(0x7fff448908b0)
-	- stacking header:(5)::<address>(0x7fff448908d0)
-	- stacking header:(6)::<address>(0x7fff448908f0)
-	- stacking header:(7)::<address>(0x7fff44890910)
-	- stacking header:(8)::<address>(0x7fff44890930)
-	- stacking header:(9)::<address>(0x7fff44890950)
+	- stacking header:(0)::<address>(0x7ffcf956c500)
+	- stacking header:(1)::<address>(0x7ffcf956c520)
+	- stacking header:(2)::<address>(0x7ffcf956c540)
+	- stacking header:(3)::<address>(0x7ffcf956c560)
+	- stacking header:(4)::<address>(0x7ffcf956c580)
+	- stacking header:(5)::<address>(0x7ffcf956c5a0)
+	- stacking header:(6)::<address>(0x7ffcf956c5c0)
+	- stacking header:(7)::<address>(0x7ffcf956c5e0)
+	- stacking header:(8)::<address>(0x7ffcf956c600)
+	- stacking header:(9)::<address>(0x7ffcf956c620)
 
 
 -:: checking AI functions.
@@ -1489,13 +1489,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1643,6 +1641,25 @@ argument2
 argument3
 
 ~=::COMODOS:_'>v.0.0-1a
+
+~:: data handler
+(debug) data_filter: this
+(debug) data_filter: is
+(debug) data_filter: data
+(debug) data_filter: that
+(debug) data_filter: needs
+(debug) data_filter: to
+(debug) data_filter: be
+(debug) data_filter: processed.
+
+~:: math handler
+(debug) math_filter: 1+1
+(debug) math_filter: 3*9
+(debug) math_filter: 8+2+4
+(debug) math_filter: 1+2*3-4
+(debug) math_filter: 9/3
+(debug) math_filter: 6/2*3
+(debug) math_filter: 8+3*5/2
 
 -__:::: ( created ) modular template ::::__-
 	~:: filled in modular template with generic data.

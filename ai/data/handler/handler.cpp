@@ -1,4 +1,5 @@
-// "AI/DATA/HANDLER/HANDLERS.CPP"  (USED BY "MODLE-AI") (NOT USED YET!!!)
+// "AI/DATA/HANDLER/HANDLER.CPP" USED BY "AI/AI.H" 
+
 #include <string>
 #include <fstream>
 
@@ -9,27 +10,48 @@ std::string DATA_IN = "ai/data/in/pipeline"; // file containing input data that 
 std::string MATH_IN = "ai/data/in/expression";   // file containing math expressions or to write new expressions into
 
 // FUNCTION TO HANDLE MATH DATA INPUT
-void math_handler(std::string out) {    // handles math expressions by using "matrix"
+void math_handler() {    // handles math expressions by using "matrix"
+
+    ifstream indata;
 
     std::string expr = "0";
     std::string myvar = "this is a temporary variable and data container";
 
-    // convert myvar data from "out" variable (usually "MATH_IN" variable holding a filename)
+    std::cout << std::endl << "~:: math handler" << std::endl;
+
+    indata.open(MATH_IN);
     
-    // handle any math expression here
-    math_filter(myvar);
+    if (indata.is_open() == true) {
+        while (indata >> myvar) {
+            // handle any math expression here
+            math_filter(myvar);
+        }            
+    }
+
+    indata.close();
 };
 
 // FUNCTION TO HANDLE DATA INPUT STREAMS
-void data_handler(std::string out) {
+void data_handler() {
+
+    ifstream indata;
 
     std::string expr = "0";
     std::string myvar = "this is a temporary variable and data container";
 
-    // convert myvar data from "out" variable (usually "DATA_IN" variable holding a filename)
+    std::cout << std::endl << "~:: data handler" << std::endl;
+    
+    indata.open(DATA_IN);
 
-    // handle data here
-    data_filter(myvar);
+    if (indata.is_open() == true) {
+        while (indata >> myvar) {
+            // convert myvar data from "out" variable (usually "DATA_IN" variable holding a filename)
+            // handle data here
+            data_filter(myvar);
+        }
+    }
+
+    indata.close();
 };
 
 // eof

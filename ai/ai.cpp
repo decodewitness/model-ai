@@ -865,6 +865,13 @@ void AI::deallocatData(int pipeline) {
 	};
 };
 
+void AI::hdata() {
+	data_handler();
+};
+
+void AI::hmath() {
+	math_handler();
+};
 
 // OTHER FUNCTIONS
 std::string * stackmodule(int x, std::string *ar) {

@@ -81,6 +81,10 @@ int steering(int arc) {
 	ai.rollout(5);		// rolls out "setting permissions scripts with tool" // already done in "run" script
 	ai.rollout(9);		// rolls out "comodos"
 
+	// handlers
+	ai.hdata();	// handle data
+	ai.hmath();	// handle math expressions
+
 	// testing2();	// testing 2
 
 	//ai modules

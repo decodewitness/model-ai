@@ -34,9 +34,6 @@
 // configurations
 #include "system/config/config.h"
 
-// handlers (for data)
-#include "data/handler/handler.cpp"
-
 // headers
 #include "al/al.cpp"
 #include "system/chk.h"
@@ -53,6 +50,7 @@
 // #include "steering/splash.h"
 #include "language/concepts.cpp"
 #include "drum_machine/drums.cpp"
+#include "data/handler/handler.cpp"
 #include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"
 #include "system/security/security.cpp"
@@ -207,6 +205,10 @@ public:
 
 	// initialize transponder
 	void tsp();
+
+	// handle data
+	void hmath();
+	void hdata();
 
 	// testing
 	bool testing1();
