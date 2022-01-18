@@ -1478,16 +1478,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff570c2230)
-	- stacking header:(1)::<address>(0x7fff570c2250)
-	- stacking header:(2)::<address>(0x7fff570c2270)
-	- stacking header:(3)::<address>(0x7fff570c2290)
-	- stacking header:(4)::<address>(0x7fff570c22b0)
-	- stacking header:(5)::<address>(0x7fff570c22d0)
-	- stacking header:(6)::<address>(0x7fff570c22f0)
-	- stacking header:(7)::<address>(0x7fff570c2310)
-	- stacking header:(8)::<address>(0x7fff570c2330)
-	- stacking header:(9)::<address>(0x7fff570c2350)
+	- stacking header:(0)::<address>(0x7fff31434910)
+	- stacking header:(1)::<address>(0x7fff31434930)
+	- stacking header:(2)::<address>(0x7fff31434950)
+	- stacking header:(3)::<address>(0x7fff31434970)
+	- stacking header:(4)::<address>(0x7fff31434990)
+	- stacking header:(5)::<address>(0x7fff314349b0)
+	- stacking header:(6)::<address>(0x7fff314349d0)
+	- stacking header:(7)::<address>(0x7fff314349f0)
+	- stacking header:(8)::<address>(0x7fff31434a10)
+	- stacking header:(9)::<address>(0x7fff31434a30)
 
 
 -:: checking AI functions.
@@ -1541,11 +1541,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -2186,18 +2188,19 @@ TRANSPONDER::responding:
 
 	-----------------
 
-		* words no_#: 10
-		* length: 62
+		* words no_#: 11
+		* length: 70
 		* vowels: 21
-		* consonants: 31
+		* consonants: 38
 		* numbers: 0
-		* special chars: 10
+		* special chars: 11
 		* unknown chars: 0
 
 (debug) word :: the
 (debug) word :: in
 (debug) word :: the
 (debug) word :: in
+(debug) word :: jzhjvjv
 (debug) word :: in
 (debug) word :: losing
 (debug) word :: match
@@ -2206,10 +2209,10 @@ TRANSPONDER::responding:
 (debug) word :: succeeding
 (debug) word :: missionaries
 
-~:: (debug)::nrOfWords = 11.
-~:: (debug)::counter = 11.
+~:: (debug)::nrOfWords = 12.
+~:: (debug)::counter = 12.
 
-(debug) calling prepare_ints() -> the in the in in losing match a mixing succeeding missionaries
+(debug) calling prepare_ints() -> the in the in jzhjvjv in losing match a mixing succeeding missionaries
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 0) the
 1) of

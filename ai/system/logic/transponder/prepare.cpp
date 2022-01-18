@@ -5,9 +5,6 @@
 #include <fstream>
 #include <unistd.h>
 
-// include chomp as function
-#include "chomp.cpp"
-
 // the limit of the size of the dictionaries    // if you change this you must rebuild all the tables.
 const int max_sentence_length=256;  // max. length of sentence in words.
 const int alimit=20000;              // limit for array elements and iterations in the loop.

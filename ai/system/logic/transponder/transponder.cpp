@@ -184,24 +184,20 @@ void Transponder::analytics(std::string s) {
     std::cout << std::endl;
 };
 
-void Transponder::prep(std::string s) { // 's' is the input sentence
-    // wordsFromSentence
-
+void Transponder::prep(std::string s) { // 's' is the input sentence from "query_string"
     //int indexes = 1;
+    //bool bNo = true;    // initial word check
+
     int nrOfWords = 0;
     int counter = 0;
-
-    //bool bNo = true;    // initial word check
 
     std::string extrapolated;
     std::string word;
 
     std::vector<std::string> userString(max_sentence_length);
-
     std::istringstream iss(s);
 
     for (decltype(userString.size()) i=0; i<userString.size(); ++i) {
-        
         // split words in sentence
         while (iss >> word) {
             std::cout << "(debug) word :: " << word << std::endl;
@@ -214,12 +210,16 @@ void Transponder::prep(std::string s) { // 's' is the input sentence
     std::cout << "~:: (debug)::nrOfWords = " << nrOfWords << "." << std::endl;
     std::cout << "~:: (debug)::counter = " << counter << "." << std::endl;
     std::cout << std::endl;
+    std::cout << "(debug) calling prepare_ints() (from) -> \"" << s << "\"." << std::endl;
 
-    std::cout << "(debug) calling prepare_ints() -> " << s << std::endl;
-
+    // prepare_ints() prepares the dictionaries
     prepare_ints(alimit, counter);  // arg1: limit dictionary, arg2: limit length of filled elements in "wordsFromSentence"
 };
-    
+
+std::string Transponder::retVal() {
+    return this->initial_sentence;
+};
+
     // char strP[256][wordsize][words];
     // char *strP2;
 
@@ -261,7 +261,3 @@ void Transponder::prep(std::string s) { // 's' is the input sentence
     // set "nrOfWordsInSentence" to "counter" to get the correct number of words in the "prepare_ints()" function.
 //};
 
-std::string Transponder::retVal() {
-
-    return this->initial_sentence;
-}
