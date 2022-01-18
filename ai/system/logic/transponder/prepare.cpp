@@ -91,12 +91,15 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
 
     dict_in.close();
 
+    // check positions in words2ints[] for number of occurence of the words in the sentence 'wordsFromSentence[]'
     for (int i=0; i<arraySize; i++) { // loops over the words in the sentence
         for (int j=0; j<l; j++) {   // loops over dictionary
             if (strcmp(wordsFromSentence[i], our_dict[j].c_str()) == 0) {
                 // here one word matches
                 word2ints[j] += 1;
                 occurences++;
+
+                std::cout << "(debug) - words2ints[" << j << "]" << std::endl;
             }
         }
     }

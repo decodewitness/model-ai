@@ -1478,16 +1478,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd0579bfd0)
-	- stacking header:(1)::<address>(0x7ffd0579bff0)
-	- stacking header:(2)::<address>(0x7ffd0579c010)
-	- stacking header:(3)::<address>(0x7ffd0579c030)
-	- stacking header:(4)::<address>(0x7ffd0579c050)
-	- stacking header:(5)::<address>(0x7ffd0579c070)
-	- stacking header:(6)::<address>(0x7ffd0579c090)
-	- stacking header:(7)::<address>(0x7ffd0579c0b0)
-	- stacking header:(8)::<address>(0x7ffd0579c0d0)
-	- stacking header:(9)::<address>(0x7ffd0579c0f0)
+	- stacking header:(0)::<address>(0x7ffef7033180)
+	- stacking header:(1)::<address>(0x7ffef70331a0)
+	- stacking header:(2)::<address>(0x7ffef70331c0)
+	- stacking header:(3)::<address>(0x7ffef70331e0)
+	- stacking header:(4)::<address>(0x7ffef7033200)
+	- stacking header:(5)::<address>(0x7ffef7033220)
+	- stacking header:(6)::<address>(0x7ffef7033240)
+	- stacking header:(7)::<address>(0x7ffef7033260)
+	- stacking header:(8)::<address>(0x7ffef7033280)
+	- stacking header:(9)::<address>(0x7ffef70332a0)
 
 
 -:: checking AI functions.
@@ -1541,13 +1541,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -2188,7 +2186,7 @@ TRANSPONDER::responding:
 
 	-----------------
 
-		* words no_#: 11
+		* words no_#: 12
 		* length: 70
 		* vowels: 21
 		* consonants: 38
@@ -2212,7 +2210,7 @@ TRANSPONDER::responding:
 ~:: (debug)::nrOfWords = 12.
 ~:: (debug)::counter = 12.
 
-(debug) calling prepare_ints() -> the in the in jzhjvjv in losing match a mixing succeeding missionaries
+(debug) calling prepare_ints() (from) -> "the in the in jzhjvjv in losing match a mixing succeeding missionaries".
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 0) the
 1) of
@@ -22214,6 +22212,17 @@ TRANSPONDER::responding:
 19997) yan
 19998) succeeding
 19999) bizjournalshire
+(debug) - words2ints[0]
+(debug) - words2ints[5]
+(debug) - words2ints[0]
+(debug) - words2ints[5]
+(debug) - words2ints[5]
+(debug) - words2ints[5210]
+(debug) - words2ints[1535]
+(debug) - words2ints[4]
+(debug) - words2ints[7418]
+(debug) - words2ints[19998]
+(debug) - words2ints[19991]
 0) the
 1) of
 2) and

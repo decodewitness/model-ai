@@ -72,9 +72,11 @@ void Transponder::analytics(std::string s) {
     std::cout << "\t~:: (DEBUG) performing analytics() in {transponder}." << std::endl;
 
     for (int i=0; i<len; i++) {
+        
         if (s.at(i) == 32 || s.at(i) == '\n') {    // checks to see if char is a 'space' (32) or newline character (enter) '\n'
             wordcount++;
         }
+
         switch (s.at(i)) {
 
             case 'a':
@@ -172,7 +174,7 @@ void Transponder::analytics(std::string s) {
     std::cout << std::endl;
 
     // out put analytics data
-    std::cout << "\t\t* words no_#: " << wordcount << std::endl;
+    std::cout << "\t\t* words no_#: " << (wordcount + 1) << std::endl;
     std::cout << "\t\t* length: " << len << std::endl;
     std::cout << "\t\t* vowels: " << noun << std::endl;
     std::cout << "\t\t* consonants: " << consonant << std::endl;
