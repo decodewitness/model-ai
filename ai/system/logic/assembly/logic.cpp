@@ -8,7 +8,7 @@ void commands(int x, std::string param) {
 
     // used in x computation
     int consonants=0;
-    int vowels=0;
+    int vowelss=0;
     int special=0;
 
     // list attributes of string
@@ -32,7 +32,7 @@ void commands(int x, std::string param) {
                 if (param[i] == 'a' || param[i] == 'i' || param[i] == 'e' || param[i] == 'o' || param[i] == 'u') {
                     consonants++;
                 } else if (param[i] != '!' && param[i] != '@' && param[i] != '#' && param[i] != '$' && param[i] != '%' && param[i] != '^' && param[i] != '&' && param[i] != '*' && param[i] != '(' && param[i] != ')' && param[i] != '-' && param[i] != '_' && param[i] != '+' && param[i] != '=' && param[i] != '\\' && param[i] != '/' && param[i] != '?' && param[i] != '\'' && param[i] != '"' && param[i] != ';' && param[i] != ':' && param[i] != '[' && param[i] != ']' && param[i] != '}' && param[i] != '{' && param[i] != '|' && param[i] != '>' && param[i] != '<' && param[i] != ',' && param[i] != '.' && param[i] != '~' && param[i] != '`') {
-                    vowels++;
+                    vowelss++;
                 } else {
                     special++;
                 }
@@ -40,7 +40,7 @@ void commands(int x, std::string param) {
             
             // draw x computation here
             std::cout << "type:char" << " len:" << param.length() << " ";
-            std::cout << "vowels:" << vowels << " ";
+            std::cout << "vowelss:" << vowelss << " ";
             std::cout << "consonants:" << consonants << " ";
             std::cout << "special:" << special << " ";
 

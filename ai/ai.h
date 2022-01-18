@@ -51,6 +51,7 @@
 #include "language/concepts.cpp"
 #include "drum_machine/drums.cpp"
 #include "data/handler/handler.cpp"
+#include "autonomous/autonomous.cpp"
 #include "language/speech/saying.cpp"
 #include "system/modules/modular.cpp"
 #include "system/security/security.cpp"
@@ -67,7 +68,7 @@
 #include "system/modules/modular_bay/modular_bay.cpp"
 
 // linked to the modules here above
-const int nr_modules = 25;	// equal to the number of includes in "modules" (above this)
+const int nr_modules = 28;	// equal to the number of includes in "modules" (above this)
 
 // FOR OTHER MODULES
 const int module_limits = 1024;

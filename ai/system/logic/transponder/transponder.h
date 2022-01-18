@@ -18,7 +18,7 @@ public:
     // use boolean "b" to either use analytics (true) or else not use analytics (false)
     std::string respond(bool b);    // responds with logic
     
-    void prep(std::string s); // preps "word2int"   //  needs "this->initial_sentence" or "this->subject"
+    void prep(std::string s); // preps "ints"   //  needs "this->initial_sentence" or "this->subject"
     void analytics(std::string s);  // textual analytics function
 
     std::string retVal();

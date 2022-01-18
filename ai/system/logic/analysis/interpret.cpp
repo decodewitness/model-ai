@@ -18,7 +18,7 @@ std::string result;
 
 // grammar rules
 std::string subject;
-std::string nouns;
-std::string pronouns;
+std::string vowels;
+std::string provowels;
 std::string adjective;
 std::string numerical;

@@ -2,9 +2,12 @@
 
 #include <iostream>
 #include <string>
+#include <unistd.h>
+#include <vector>
+#include <sstream>
 
-#include "transponder.h"
 #include "prepare.cpp"
+#include "transponder.h"
 
 Transponder::Transponder(std::string s) {
     std::cout << std::endl << "~:: transponder queries." << std::endl;
@@ -160,8 +163,6 @@ void Transponder::analytics(std::string s) {
             default:
                 unknown++;
                 break;
-
-
         };
     }
 
@@ -173,7 +174,7 @@ void Transponder::analytics(std::string s) {
     // out put analytics data
     std::cout << "\t\t* words no_#: " << wordcount << std::endl;
     std::cout << "\t\t* length: " << len << std::endl;
-    std::cout << "\t\t* nouns: " << noun << std::endl;
+    std::cout << "\t\t* vowels: " << noun << std::endl;
     std::cout << "\t\t* consonants: " << consonant << std::endl;
     std::cout << "\t\t* numbers: " << number << std::endl;
     std::cout << "\t\t* special chars: " << special << std::endl;
@@ -183,41 +184,66 @@ void Transponder::analytics(std::string s) {
     std::cout << std::endl;
 };
 
-void Transponder::prep(std::string s) {
+void Transponder::prep(std::string s) { // 's' is the input sentence
     // wordsFromSentence
 
-    int indexes = 1;
+    //int indexes = 1;
     int nrOfWords = 0;
     int counter = 0;
 
-    bool bNo = true;    // initial word check
-
-    // char strP[256][wordsize][words];
-    // char *strP2;
+    //bool bNo = true;    // initial word check
 
     std::string extrapolated;
+    std::string word;
 
-    for (int i=0, indexPrev=0, indexNext=0; i<s.length(); i++) {
-        if (s.at(i) == 32 || s.at(i) == '\n') {    // checks to see if char is a 'space' (32) or newline character (enter) '\n'
-            extrapolated  = s.substr(indexPrev, (i-1));
+    std::vector<std::string> userString(max_sentence_length);
+
+    std::istringstream iss(s);
+
+    for (decltype(userString.size()) i=0; i<userString.size(); ++i) {
+        
+        // split words in sentence
+        while (iss >> word) {
+            std::cout << "(debug) word :: " << word << std::endl;
             nrOfWords++;
-            indexPrev=i;
-
-            strncpy(wordsFromSentence[++counter], extrapolated.c_str(), wordsize);
-
-            // check if next char is also '\n' or (32)
-            do { indexNext = i+indexes++; i=indexNext; std::cout << "(debug)[skipped char] * (" << indexes << ")." << std::endl; } while (s.at(i) == 32 || s.at(i) == '\n');
-        } else if (i > 0 && bNo == true) {  // adjust nrOfWords (counter)
-            nrOfWords += 1;
-            bNo = false;
+            strncpy(wordsFromSentence[counter++], word.c_str(), word.length());
         }
     }
 
     std::cout << std::endl;
     std::cout << "~:: (debug)::nrOfWords = " << nrOfWords << "." << std::endl;
-    std::cout << "\t~:: (debug)::counter = " << counter << "." << std::endl;
+    std::cout << "~:: (debug)::counter = " << counter << "." << std::endl;
     std::cout << std::endl;
+
+    std::cout << "(debug) calling prepare_ints() -> " << s << std::endl;
+
+    prepare_ints(alimit, counter);  // arg1: limit dictionary, arg2: limit length of filled elements in "wordsFromSentence"
+};
     
+    // char strP[256][wordsize][words];
+    // char *strP2;
+
+
+    // for (int i=0, indexPrev=0, indexNext=0; i<s.length(); i++) {
+    //     if (s.at(i) == 32 || s.at(i) == '\n') {    // checks to see if char is a 'space' (32) or newline character (enter) '\n'
+    //         extrapolated  = s.substr(indexPrev, (i));
+
+    //         std::cout << std::endl << "(debug) added word (" << extrapolated << ") to extrapolated." << std::endl;
+    //         sleep(1);   // debug
+
+    //         nrOfWords++;
+    //         indexPrev=i;
+
+    //         strncpy(wordsFromSentence[++counter], extrapolated.c_str(), wordsize);
+
+    //         // check if next char is also '\n' or (32)
+    //         do { indexNext = i+indexes++; i=indexNext; std::cout << "(debug)[skipped char] * (" << indexes << ")." << std::endl; } while (s.at(i) == 32 || s.at(i) == '\n');
+    //     } else if (i > 0 && bNo == true) {  // adjust nrOfWords (counter)
+    //         nrOfWords += 1;
+    //         bNo = false;
+    //     }
+    // }
+   
     // for (int i=0, indexPrev=0, indexNext=0; i<s.length(); i++) {
     //     if (s.at(i) == 32 || s.at(i) == '\n') {    // checks to see if char is a 'space' (32) or newline character (enter) '\n'
     //         extrapolated = s.substr(indexPrev, (i-1));
@@ -228,12 +254,12 @@ void Transponder::prep(std::string s) {
     //         do { indexNext = i+indexes++; i=indexNext; std::cout << "(debug)[skipped char] x (" << indexes << ")." << std::endl; } while (s.at(i) == 32 || s.at(i) == '\n');
     //     }
     // }
+    
+    //    nrOfWordsInSentence = counter;
+    //    prepare_ints(alimit);    // limit is declared in "prepare.cpp"
 
-    // set "wordsInSentence" to "counter" to get the correct number of words in the "prepare_ints()" function.
-
-    wordsInSentence = counter;
-    prepare_ints(alimit);    // limit is declared in "prepare.cpp"
-};
+    // set "nrOfWordsInSentence" to "counter" to get the correct number of words in the "prepare_ints()" function.
+//};
 
 std::string Transponder::retVal() {
 
