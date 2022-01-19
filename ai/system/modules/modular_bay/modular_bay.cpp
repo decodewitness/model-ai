@@ -73,11 +73,19 @@ class ModularBay {
 
         void globf(std::string pattern) {
             // glob all content inside the bay area
+            
+            char bay[] = "/bay";
+            
             std::cout << "\t\t~:: glob() in directory: (" << this->path_var << "):" << std::endl;
             
             // glob here
                 // handle string vector
             glob(pattern.c_str());
+        
+            // glob function 2
+                // recursive
+            std::cout << std::endl << "(debugging)" << std::endl << std::endl;
+            glob2(1, bay);
         }
 
         void scan() {

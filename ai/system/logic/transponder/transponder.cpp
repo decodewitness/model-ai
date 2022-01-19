@@ -156,7 +156,7 @@ void Transponder::analytics(std::string s) {
             case ':':
             case '`':
             case '~':
-            case 32:
+            case (32):
             case '\n':
             case '\r':
                 special++;
