@@ -27,7 +27,7 @@ public:
 
     void combine();
     void combinen();
-
+    
     // loader for modules
     bool loader(std::string filen);
 
