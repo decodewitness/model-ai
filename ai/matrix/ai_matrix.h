@@ -56,8 +56,8 @@ class AI_Matrix {
 
 // AI/MATRIX/CMD/CMD.CPP - USED BY "/AI/MATRIX/AI_MATRIX.H"
 
-char punch[9][32] = { "one", "two", "three",
+char punch[10][8] = { "one", "two", "three",
                             "four", "five", "six",
-                                "seven", "eight", "nine" };
+                                "seven", "eight", "nine", "zero" };
 
 // eof

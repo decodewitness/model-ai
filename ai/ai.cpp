@@ -492,6 +492,9 @@ void AI::init() {
 	std::cout << "\t-:: drum machine" << std::endl;
 	DrumMachine();
 
+	// track account
+	this->account = new Track_Account;
+
 	// gradle to help build cradle
 	x=gradle();
 	std::cout << "\t-:: gradle method finished. (";
@@ -871,6 +874,32 @@ void AI::hdata() {
 
 void AI::hmath() {
 	math_handler();
+};
+
+
+// accounts managed by Track_Account class
+void AI::add_account(float x) {	// adds amount x to accounts[]
+	this->account->add(x);
+};
+
+void AI::subtract_account(float x) {	// subtracts amount x in accounts[]
+	this->account->subtract(x);
+};
+
+void AI::change_account(int x) {	// changes account_nr in accounts[]
+	this->account->setAccount(x);
+};
+
+float AI::get_account() {	// gets current account
+	return this->account->getAccount();
+};
+
+float AI::get_account_nr(int x) {	// prints accounts[] amount account x
+	return this->account->getAccountNr(x);
+};
+
+void AI::print_account() {	// prints accounts[] amount
+	this->account->print();
 };
 
 // OTHER FUNCTIONS

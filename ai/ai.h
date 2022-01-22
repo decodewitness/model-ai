@@ -61,6 +61,7 @@
 #include "system/modules/combine/combine.cpp"
 #include "system/logic/analysis/interpret.cpp"
 #include "system/logic/analysis/algorithms.cpp"
+#include "system/logic/analysis/track_account.cpp"
 #include "system/logic/transponder/transponder.cpp"
 #include "system/modules/modular_bay/modular_bay.cpp"
 
@@ -104,6 +105,7 @@ private:
 	CombineModule *combinemodule;
 	Construct *construct;
 	Transponder *transponder;
+	Track_Account *account;
 
 	bool ddLck;
 	bool d1Lck;
@@ -212,6 +214,14 @@ public:
 	bool testing1();
 	bool testing2();
 	bool testing3();
+
+	// account
+	float get_account();
+	float get_account_nr(int x);
+	void add_account(float x);
+	void subtract_account(float x);
+	void change_account(int x);
+	void print_account();
 
 	// killchain
 	void destroy_msg();

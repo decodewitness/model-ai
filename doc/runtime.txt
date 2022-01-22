@@ -1426,16 +1426,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffb46e8f20)
-	- stacking header:(1)::<address>(0x7fffb46e8f40)
-	- stacking header:(2)::<address>(0x7fffb46e8f60)
-	- stacking header:(3)::<address>(0x7fffb46e8f80)
-	- stacking header:(4)::<address>(0x7fffb46e8fa0)
-	- stacking header:(5)::<address>(0x7fffb46e8fc0)
-	- stacking header:(6)::<address>(0x7fffb46e8fe0)
-	- stacking header:(7)::<address>(0x7fffb46e9000)
-	- stacking header:(8)::<address>(0x7fffb46e9020)
-	- stacking header:(9)::<address>(0x7fffb46e9040)
+	- stacking header:(0)::<address>(0x7ffd297582b0)
+	- stacking header:(1)::<address>(0x7ffd297582d0)
+	- stacking header:(2)::<address>(0x7ffd297582f0)
+	- stacking header:(3)::<address>(0x7ffd29758310)
+	- stacking header:(4)::<address>(0x7ffd29758330)
+	- stacking header:(5)::<address>(0x7ffd29758350)
+	- stacking header:(6)::<address>(0x7ffd29758370)
+	- stacking header:(7)::<address>(0x7ffd29758390)
+	- stacking header:(8)::<address>(0x7ffd297583b0)
+	- stacking header:(9)::<address>(0x7ffd297583d0)
 
 
 -:: checking AI functions.
@@ -42184,6 +42184,18 @@ TRANSPONDER::responding:
 19999) bizjournalshire
 
 ~:: (debug) number of matching occurences: (11).
+
+ACCT_NR:: 0
+ACCT:: 0
+
+- account: (10) :: $0 US dollar.
+
+
+- account: (0) :: $515 US dollar.
+
+
+- account: (1) :: $29 US dollar.
+
 
 -:: decoupler.
 	-:: decoupling sampler
