@@ -1426,16 +1426,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffd494c300)
-	- stacking header:(1)::<address>(0x7fffd494c320)
-	- stacking header:(2)::<address>(0x7fffd494c340)
-	- stacking header:(3)::<address>(0x7fffd494c360)
-	- stacking header:(4)::<address>(0x7fffd494c380)
-	- stacking header:(5)::<address>(0x7fffd494c3a0)
-	- stacking header:(6)::<address>(0x7fffd494c3c0)
-	- stacking header:(7)::<address>(0x7fffd494c3e0)
-	- stacking header:(8)::<address>(0x7fffd494c400)
-	- stacking header:(9)::<address>(0x7fffd494c420)
+	- stacking header:(0)::<address>(0x7ffc273d3e50)
+	- stacking header:(1)::<address>(0x7ffc273d3e70)
+	- stacking header:(2)::<address>(0x7ffc273d3e90)
+	- stacking header:(3)::<address>(0x7ffc273d3eb0)
+	- stacking header:(4)::<address>(0x7ffc273d3ed0)
+	- stacking header:(5)::<address>(0x7ffc273d3ef0)
+	- stacking header:(6)::<address>(0x7ffc273d3f10)
+	- stacking header:(7)::<address>(0x7ffc273d3f30)
+	- stacking header:(8)::<address>(0x7ffc273d3f50)
+	- stacking header:(9)::<address>(0x7ffc273d3f70)
 
 
 -:: checking AI functions.
@@ -1489,13 +1489,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -42212,7 +42210,7 @@ ACCT_NR:: 10
 (debugging) course: 42
 
 ~:: converter: 
-	*--> euro:10= ($12.8) dollar
+	*--> euro: 10 = ($12.8) dollar.
 
 ~:: converter: 
-	*--> euro:10= ($12.8) dollar.
+	*--> euro: 10 = ($12.8) dollar.
