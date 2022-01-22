@@ -117,7 +117,7 @@ int steering(int arc) {
 	}
 
 	// curl attempt site "curled_url" [std::string]
-	int x = ai.curl("https://model-ai.com");
+	int crl = ai.curl("https://model-ai.com");
 	
 	// testing3();	// testing 3
 
@@ -143,6 +143,10 @@ int steering(int arc) {
 
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();
+
+	std::cout << std::endl << "(debugging) course: " << x << std::endl;
+	ai.convert(10, 1);
+	ai.convertf(10.0, 1);
 
 return 0;
 }	

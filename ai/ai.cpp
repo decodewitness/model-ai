@@ -110,10 +110,27 @@ void AI::closers() {
 	rs.close();
 }
 
+// converter (INTEGRAL METHOD)
+void AI::convert(int amount, int method) {	
+	std::cout << std::endl << "~:: converter: " << std::endl;
+	std::cout << "\t*--> euro: " << amount << " = ";
+	float d = converter(amount, 1);
+	std::cout << "($" << d << ") dollar." << std::endl;
+};
+
+// converter (FLOATING POINT METHOD)
+void AI::convertf(float amount, int method) {
+	std::cout << std::endl << "~:: converter: " << std::endl;
+	std::cout << "\t*--> euro: " << amount << " = ";
+	float d = converter(amount, 1);
+	std::cout << "($" << d << ") dollar." << std::endl;
+};
+
 void AI::hal() {
 	start_hal();
 }
 
+// AMModule
 void AI::AMMod() {
 	
 	// create AMModule

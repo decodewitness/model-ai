@@ -1426,16 +1426,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc17c31f90)
-	- stacking header:(1)::<address>(0x7ffc17c31fb0)
-	- stacking header:(2)::<address>(0x7ffc17c31fd0)
-	- stacking header:(3)::<address>(0x7ffc17c31ff0)
-	- stacking header:(4)::<address>(0x7ffc17c32010)
-	- stacking header:(5)::<address>(0x7ffc17c32030)
-	- stacking header:(6)::<address>(0x7ffc17c32050)
-	- stacking header:(7)::<address>(0x7ffc17c32070)
-	- stacking header:(8)::<address>(0x7ffc17c32090)
-	- stacking header:(9)::<address>(0x7ffc17c320b0)
+	- stacking header:(0)::<address>(0x7fffd494c300)
+	- stacking header:(1)::<address>(0x7fffd494c320)
+	- stacking header:(2)::<address>(0x7fffd494c340)
+	- stacking header:(3)::<address>(0x7fffd494c360)
+	- stacking header:(4)::<address>(0x7fffd494c380)
+	- stacking header:(5)::<address>(0x7fffd494c3a0)
+	- stacking header:(6)::<address>(0x7fffd494c3c0)
+	- stacking header:(7)::<address>(0x7fffd494c3e0)
+	- stacking header:(8)::<address>(0x7fffd494c400)
+	- stacking header:(9)::<address>(0x7fffd494c420)
 
 
 -:: checking AI functions.
@@ -42208,3 +42208,11 @@ ACCT_NR:: 10
 
 -:: calling destructor for AI::Model.
 -:: done.
+
+(debugging) course: 42
+
+~:: converter: 
+	*--> euro:10= ($12.8) dollar
+
+~:: converter: 
+	*--> euro:10= ($12.8) dollar.

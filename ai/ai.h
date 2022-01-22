@@ -57,11 +57,12 @@
 #include "system/logic/assembly/input.cpp"
 #include "system/definitions/routines.cpp"
 #include "system/logic/analysis/limits.cpp"
-// #include "steering/initialize_runcheck.cpp"
+#include "system/logic/analysis/account.cpp"
 #include "system/modules/combine/combine.cpp"
+// #include "steering/initialize_runcheck.cpp"
 #include "system/logic/analysis/interpret.cpp"
 #include "system/logic/analysis/algorithms.cpp"
-#include "system/logic/analysis/track_account.cpp"
+#include "system/modules/utility.cpp"
 #include "system/logic/transponder/transponder.cpp"
 #include "system/modules/modular_bay/modular_bay.cpp"
 
@@ -165,6 +166,10 @@ public:
 	void closefs();
 	void closers();
 	
+	// converter
+	void convert(int amount, int method);
+	void convertf(float amount, int method);
+
 	// hall and functional stepping mechanism
 	void hal();
 	bool stepping();
@@ -215,12 +220,13 @@ public:
 	bool testing2();
 	bool testing3();
 
-	// account
-	void change_account(int x);
-	float get_account();
+	// account settings
 	void add_account(float x);
 	void subtract_account(float x);
 	void print_account();
+	// account;;getter and setter
+	float get_account();
+	void change_account(int x);
 
 	// killchain
 	void destroy_msg();

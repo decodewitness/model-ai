@@ -1,6 +1,6 @@
-// AI/LOGIC/ANALYSIS/TRACK_ACCOUNT.CPP    - USED BY "AI/AI.H"
+// AI/LOGIC/ANALYSIS/ACCOUNT.CPP    - USED BY "AI/AI.H"
 
-#include "track_account.h"
+#include "account.h"
 
 Track_Account::Track_Account() {
     this->account_nr = 0;

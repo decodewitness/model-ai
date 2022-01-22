@@ -9,7 +9,7 @@ using namespace std;
 
 // main function
 int main(int argc, char *argv[]) {
-	initialize_runtime_check();	// checks file integrity
+	initialize_runtime_check();	// checks for file integrity
 	steering(1);	// steers the AI (class) code 
 	//steering(2);
 return 0;
