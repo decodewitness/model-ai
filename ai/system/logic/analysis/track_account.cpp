@@ -20,11 +20,7 @@ void Track_Account::subtract(float x) {
 };
 
 float Track_Account::getAccount() {
-    return this->accounts[this->account_nr];
-};
-
-float Track_Account::getAccountNr(int x) {
-    return this->accounts[x];
+    return this->account_nr;
 };
 
 void Track_Account::setAccount(int x) {

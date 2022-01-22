@@ -216,11 +216,10 @@ public:
 	bool testing3();
 
 	// account
+	void change_account(int x);
 	float get_account();
-	float get_account_nr(int x);
 	void add_account(float x);
 	void subtract_account(float x);
-	void change_account(int x);
 	void print_account();
 
 	// killchain

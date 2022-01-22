@@ -894,10 +894,6 @@ float AI::get_account() {	// gets current account
 	return this->account->getAccount();
 };
 
-float AI::get_account_nr(int x) {	// prints accounts[] amount account x
-	return this->account->getAccountNr(x);
-};
-
 void AI::print_account() {	// prints accounts[] amount
 	this->account->print();
 };

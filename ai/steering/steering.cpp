@@ -128,11 +128,9 @@ int steering(int arc) {
 	ai.add_account(15);
 	ai.subtract_account(10);
 	ai.change_account(10);
-
+	ai.add_account(1);
 	std::cout << std::endl;
 	std::cout << "ACCT_NR:: " << ai.get_account() << std::endl;
-	std::cout << "ACCT:: " << ai.get_account_nr(1) << std::endl;
-	
 	ai.print_account();
 	ai.change_account(0);
 	ai.add_account(500);
@@ -142,7 +140,6 @@ int steering(int arc) {
 	ai.change_account(1);
 	ai.add_account(29);
 	ai.print_account();
-
 
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();

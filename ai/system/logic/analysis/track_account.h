@@ -26,6 +26,5 @@ public:
     float getAccount();
     void setAccount(int x);
     
-    float getAccountNr(int x);
     void print(); 
 };
