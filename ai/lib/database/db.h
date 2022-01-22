@@ -85,6 +85,7 @@ public:
 
     void setrc2_x(int x);
     void setrc2_y(int x);
+    
     // getters
     int getrc1_x();
     
