@@ -31,7 +31,7 @@ const int max_columns = 256;    // maximum number of columns // vertical
 
 class DB {
 private:
-    // database row and column
+    // database rows and columns
     int row;
     int column;
 
@@ -46,7 +46,7 @@ private:
     char db_xy[max_rows][max_columns][str_length];
     
     // active matrix
-    // of row and column
+    // of rows and columns
     int xy_x[max_rows*max_columns];
     int xy_y[max_rows*max_columns];
     
@@ -68,7 +68,7 @@ public:
     // constructor
     DB();
 
-    // row & colums
+    // rows & colums
     void set_xy(int x, int y);  // manually set the x and y // aka row and column
     void prep_xy();     // prepares this->xy[2] with row and column number
 
@@ -85,7 +85,7 @@ public:
 
     void setrc2_x(int x);
     void setrc2_y(int x);
-    
+
     // getters
     int getrc1_x();
     
