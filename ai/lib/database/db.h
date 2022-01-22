@@ -23,3 +23,78 @@ const std::string postgresdata = "postgres,postgres";
 const std::string db_connection_string = "connection_string_here";
 const std::string mysql_db_connection_string = "connection_string_here";
 const std::string postgres_db_connection_string = "connection_string_here";
+
+
+const int str_length = 256; // length of data in cells
+const int max_rows = 256;   // maximum number of rows // horizontal
+const int max_columns = 256;    // maximum number of columns // vertical
+
+class DB {
+private:
+    // database row and column
+    int row;
+    int column;
+
+    int xy[2];
+
+    int count;
+
+    int prev_x;
+    int prev_y;
+
+    // database content
+    char db_xy[max_rows][max_columns][str_length];
+    
+    // active matrix
+    // of row and column
+    int xy_x[max_rows*max_columns];
+    int xy_y[max_rows*max_columns];
+    
+    int xy_prev_x;
+    int xy_prev_y;
+    
+    // active cell
+    char current_cell[32];
+
+    // vector 1 and 2
+    int vector_rc_1[2];
+    int vector_rc_2[2];
+
+    std::string assign_label;
+
+
+public:
+    
+    // constructor
+    DB();
+
+    // row & colums
+    void set_xy(int x, int y);  // manually set the x and y // aka row and column
+    void prep_xy();     // prepares this->xy[2] with row and column number
+
+    void setrow(int x);
+    void setcolumn(int x);
+
+    int getrow();
+    int getcolumn();
+
+    // setters
+    void setrc1_x(int x);
+
+    void setrc1_y(int x);
+
+    void setrc2_x(int x);
+    void setrc2_y(int x);
+    // getters
+    int getrc1_x();
+    
+    int getrc1_y();
+
+    int getrc2_x();
+
+    int getrc2_y();
+
+    // assign_label
+    void set_al(std::string s);
+    std::string get_al();
+};
