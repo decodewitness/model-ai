@@ -224,9 +224,18 @@ public:
 	void add_account(float x);
 	void subtract_account(float x);
 	void print_account();
+	void printn_account();
 	// account;;getter and setter
 	float get_account();
 	void change_account(int x);
+	void combine_total();
+	// list pos/neg accounts
+	void list_positive();
+	void list_negative();
+	// store accounts
+	void store_account();
+	void store_account_detail();
+
 
 	// killchain
 	void destroy_msg();

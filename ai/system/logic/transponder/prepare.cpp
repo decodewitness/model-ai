@@ -111,7 +111,7 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
     std::cout << std::endl << "~:: (debug) number of matching occurences: (" << occurences << ")." << std::endl;
     
     // debugging option
-    sleep(2);
+    sleep(1);
 }
 
 

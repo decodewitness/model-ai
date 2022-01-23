@@ -123,30 +123,52 @@ int steering(int arc) {
 
 	// transponder prepare function
 	ai.tsp();
-
+	
+	std::cout << std::endl << "(debugging) course: " << crl << std::endl;
+	ai.convert(10, 1);
+	ai.convertf(10.0, 1);
+	
 	// accounts
-	ai.add_account(15);
-	ai.subtract_account(10);
-	ai.change_account(10);
-	ai.add_account(1);
+	// ai.add_account(15);
+	// ai.subtract_account(10);
+	// ai.change_account(10);
+	// ai.add_account(1);
+	// std::cout << std::endl;
+	// std::cout << "ACCT_NR::(" << ai.get_account() << ")." << std::endl;
+	// ai.print_account();
+	// ai.change_account(0);
+	// ai.add_account(500);
+	// ai.add_account(15);
+	// ai.subtract_account(5);
+	// ai.print_account();
+	// ai.change_account(1);
+
+	std::cout << std::endl << "accounts: " << std::endl << std::endl;
+
+	ai.subtract_account(15);
+	ai.printn_account();
+	ai.add_account(29.27);
+	ai.printn_account();
+	ai.change_account(2);
+	ai.add_account(14);
+	ai.subtract_account(7);
+	ai.change_account(600);
+	ai.add_account(800.12);
+	ai.subtract_account(900.13);
+	ai.print_account();
 	std::cout << std::endl;
-	std::cout << "ACCT_NR:: " << ai.get_account() << std::endl;
-	ai.print_account();
-	ai.change_account(0);
-	ai.add_account(500);
-	ai.add_account(15);
-	ai.subtract_account(5);
-	ai.print_account();
-	ai.change_account(1);
-	ai.add_account(29);
-	ai.print_account();
+	ai.combine_total();
+
+	ai.list_positive();
+	std::cout << "-----" << std::endl;
+	ai.list_negative();
+
+	ai.store_account_detail();
+
+	sleep(4);
 
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();
-
-	std::cout << std::endl << "(debugging) course: " << x << std::endl;
-	ai.convert(10, 1);
-	ai.convertf(10.0, 1);
 
 return 0;
 }	

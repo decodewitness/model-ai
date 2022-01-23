@@ -893,26 +893,65 @@ void AI::hmath() {
 	math_handler();
 };
 
-
 // accounts managed by Track_Account class
 void AI::add_account(float x) {	// adds amount x to accounts[]
+	std::cout << "- account (" << this->account->getAccount() << "):" << std::endl;
+	std::cout << "\tadding: +/+ " << x << " " << coin[coin_no] << "." << std::endl;
 	this->account->add(x);
+	std::cout << "\t";
+	this->account->print();
+	std::cout << ")." << std::endl << std::endl;
 };
 
 void AI::subtract_account(float x) {	// subtracts amount x in accounts[]
+	std::cout << "- account (" << this->account->getAccount() << "):" << std::endl;
+	std::cout << "\tsubtracting: -/- " << x << " " << coin[coin_no] << "." << std::endl;
 	this->account->subtract(x);
+	std::cout << "\tbalance: (";
+	this->account->print();
+	std::cout << ")." << std::endl << std::endl;
 };
 
 void AI::change_account(int x) {	// changes account_nr in accounts[]
+	std::cout << "- account changed to account (";
 	this->account->setAccount(x);
+	std::cout << this->account->getAccount() << ")." << std::endl << std::endl;
 };
 
-float AI::get_account() {	// gets current account
+float AI::get_account() {	// returns current account
 	return this->account->getAccount();
 };
 
 void AI::print_account() {	// prints accounts[] amount
 	this->account->print();
+};
+
+void AI::printn_account() {	// prints accounts[] amount
+	this->account->printn();
+};
+
+void AI::combine_total() {	// combines total amount across all accounts	// accounts[max_accounts]
+	this->account->combined_total();
+};
+
+void AI::list_negative() {
+	std::cout << std::endl;
+	this->account->list_negatives();
+	std::cout << std::endl;
+}
+
+void AI::list_positive() {
+	std::cout << std::endl;
+	this->account->list_positives();
+	std::cout << std::endl;
+}
+
+void AI::store_account() {
+	this->account->store_accounts();
+};
+
+void AI::store_account_detail() {
+	this->account->store_account_details();
 };
 
 // OTHER FUNCTIONS
