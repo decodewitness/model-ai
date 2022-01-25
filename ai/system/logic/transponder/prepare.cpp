@@ -14,6 +14,7 @@ const int wordsize=20;              // max. word size.
 int counter=0;  // used to count total number of words processed.
 int occurences=0;   // used to count the occurences of words being in the dictionary.
 int nrOfWordsInSentence;    // tracks the amount of words in the sentence being queried.
+int loopvar;    // also tracks number of words in sentence [int_occurences](int)
 
 // question + answer + word
 std::string aquestion;
@@ -22,9 +23,10 @@ std::string ourword;
 
 // dictionaries
 // char our_dict[alimit][wordsize]; // contains our words.
-std::string our_dict[alimit];    // contains our words.
-int dict[alimit];                // contains the ordered values of all the words from the dictionary and forms this new dictionary.
 
+std::string our_dict[alimit];    // contains our words.
+
+int dict[alimit];   // contains the ordered values of all the words from the dictionary and forms this new dictionary.
 // lists for integer values of keys and words
 int ints[alimit];       // integers.
 int word2ints[alimit];  // int values for the words 
@@ -33,6 +35,9 @@ int dict2int[alimit];   // contains the int values of the keys in the dictionary
 // contains the int values for the occurences of every word.
 int int_occurrences[alimit];
 
+int track_occurence;
+bool numbersToInt[alimit];
+int ints2pos[alimit];
 // char dictionaries
 char wordsFromSentence[max_sentence_length][wordsize];  // contains the words from the sentence // should contain the words from the question.
 
@@ -60,7 +65,9 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
 
     int key=0;
     int counter=0;
-
+    
+    
+    
     std::string word;
 
     dict_in.open(process_data);
@@ -98,6 +105,7 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
                 // here one word matches
                 word2ints[j] += 1;
                 occurences++;
+                // ints2pos[];
 
                 std::cout << "(debug) - words2ints[" << j << "]" << std::endl;
             }
@@ -112,62 +120,80 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
     
     // debugging option
     sleep(1);
-}
+};
 
+void prepare_occurrences(int al, int cnt) {
+    int limit=al;   // limit dictionary
+    int counter=cnt+1;    // limit wordsInSentence
+    int int_word_occurrence[al];    // list of place of occurence
+    
+    loopvar=0;
+    track_occurence=0;  // set number of occurences to 0
+
+    std::cout << std::endl << "~:: intvars int_occurences[] ::~" << std::endl;
+    
+    for (int i=0; i<=cnt; i++) { // loops over the words in the sentence
+        for (int j=0; j<al; j++) {   // loops over dictionary
+            if (strcmp(wordsFromSentence[i], our_dict[j].c_str()) == 0) {
+                // here one word matches
+                int_occurrences[loopvar++] = j;
+            } //else {
+                // loopvar++;
+            //}
+        }
+        // std::cout << wordsFromSentence[i] << " :: #" << int_occurrences[i] << std::endl;        
+    }
+
+    for (int i=0; i<=loopvar; i++) {
+        std::cout << wordsFromSentence[i] << " :: #" << int_occurrences[i] << std::endl;
+    }
+};
+
+
+// UNCOMMENT THIS NEXT 
+void dictionaries(int al, int cnt) {    // PREPARES BOTH DICTIONARIES
+    prepare_ints(al, cnt);
+    prepare_occurrences(al, cnt);
+};
+
+// OLD CODE
 
 // void prepare_ints(int l) {
-
 //     std::cout << std::endl << "~:: preparing ints." << std::endl << std::endl;
-
 //     int key=0;
 //     int counter=0;
-
 //     // the sentence gets processed one word at a time
 //     std::string oneword;
-
 //     dict_in.open(process_data);
-
 //     if (dict_in.is_open() == true) {
 //         std::cout << "\t~:: succesfully opened dictionary: " << process_data << "." << std::endl;
 //     } else {
 //         std::cout << "\t~:: failed to open dictionary: " << process_data << "." << std::endl;
-        
 //         // DEBUG OPTION !!! DEBUG OPTION !!! DEBUG OPTION
 //         //system("pwd");
 //         exit(1);
 //     }
-
 //     // prepare ints containing 1 ... "alimit" (numbers)
 //     std::cout << "\t~:: preparing: \"ints\"." << std::endl;
-
 //     for (int i=0; i<l; i++) {
 //         ints[i] = i;
 //     }
-    
 //     std::cout << std::endl << "\t~:: filled array \"ints\" up with numbers." << std::endl;
-    
 //     std::cout << std::endl << "\t~:: listing \"[key]) [value]\" pairs:" << std::endl;
 //     std::cout << std::endl;
-    
 //     // prepare "our_dict" containing all the words in the dictionary
 //     while (key < l) {
 //         dict_in >> oneword;
-        
 //         std::cout << key << ") " << oneword << std::endl; 
 //         //ints[key] = counter++;
-        
 //         our_dict[key] = oneword;
-        
 //         counter++;
 //         key++;
 //     };
-
 //     std::cout << std::endl << "\t~:: filled dictionary with words." << std::endl;
 //     std::cout << "\t~:: (" << counter << ") <- words processed." << std::endl;
-
 //     // calculate occurences for the words in the question "wordsFromSentence"
 //     std::cout << "\t~:: calculate occurences from word in sentence." << std::endl;
-
 //     for (int i=0; i<max_sentence_length; i++) {
 //         for (int j=0; j<l; j++) {
 //             if (i < nrOfWordsInSentence && our_dict[j].compare(wordsFromSentence[i]) == false) {
@@ -177,63 +203,41 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
 //             }
 //         }            
 //     }
-
 //     // DEBUG :: list all occurences
 //     std::cout << std::endl;
 //     std::cout << std::endl;
 //     std::cout << "~::(debug) enumerating digest:" << std::endl;
 //     std::cout << std::endl;
-    
 //     for (int i=0; i<l; i++) {
 //         char bword[64];
 //         // our_dict[i];
 //         strncpy(bword, our_dict[i].c_str(), 64);
-
 //         // std::cout << "(\"" << our_dict[i] << "\":#" << *(int_occurrences+i) << ") ";
 //         std::cout << "(\"" << chomp(bword) << "\":#" << *(int_occurrences+i) << ") ";
-
 //         // print endline after every 4 occurences
 //         if (i%5 < 1) {
 //             std::cout << std::endl;
 //         }
 //     }
-
 //     std::cout << std::endl;
 //     std::cout << std::endl << "~:: number of occurences: (" << occurences << ")." << std::endl << std::endl;
-
 //     // for (int key=0; key<l; key++) {
 //     //     dict2int[key] += 1;
 //     // }
-    
 // // compare digest to training set here (NEEDS FIXING/ADDING !!!)
-
 //     dict_in.close();
 // };
-
-
-
-
-
-
-
-// UNCOMMENT LATER !!!
-
 // // prepares dictionary
 // void prepare_dictionary(int l) {
 //     for (int i=0;i<l;i++) {
-
 //     }
 // };
-
 // // prepares wordsFromSentence
 // void prepare_words(int l) {
-    
 //     // prepare sentence
 //     for (int i=0; i<max_sentence_length; i++, counter++) {
 //         strncpy(wordsFromSentence[i], ourword.c_str(), wordsize);
 //     }
-
 //     std::cout << "\t~:: (" << counter << ") words processed." << std::endl;
 // };
-
 // eof

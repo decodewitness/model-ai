@@ -204,6 +204,7 @@ void Transponder::prep(std::string s) { // 's' is the input sentence from "query
         while (iss >> word) {
             std::cout << "(debug) word :: " << word << std::endl;
             nrOfWords++;
+            // at the same time counting words in sentence
             strncpy(wordsFromSentence[counter++], word.c_str(), word.length());
         }
     }
@@ -212,10 +213,16 @@ void Transponder::prep(std::string s) { // 's' is the input sentence from "query
     std::cout << "~:: (debug)::nrOfWords = " << nrOfWords << "." << std::endl;
     std::cout << "~:: (debug)::counter = " << counter << "." << std::endl;
     std::cout << std::endl;
-    std::cout << "(debug) calling prepare_ints() (from) -> \"" << s << "\"." << std::endl;
+
 
     // prepare_ints() prepares the dictionaries
-    prepare_ints(alimit, counter);  // arg1: limit dictionary, arg2: limit length of filled elements in "wordsFromSentence"
+    // dictionaries(true);
+    std::cout << "(debug) calling prepare_ints() (from) -> \"" << s << "\"." << std::endl;
+
+    // PREPARE DICTIONARIES IN THIS FUNCTION
+    dictionaries(alimit, counter);  // A1: limit dictionary A2: limit sentence
+    //prepare_ints(alimit, counter);  // arg1: limit dictionary, arg2: limit length of filled elements in "wordsFromSentence"
+    //prepare_occurrences(alimit, counter);   // prepares_occurrences array with place in the dictionary for the wordsFromSentence
 };
 
 std::string Transponder::retVal() {
