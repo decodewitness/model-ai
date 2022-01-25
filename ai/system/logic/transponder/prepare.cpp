@@ -66,8 +66,6 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
     int key=0;
     int counter=0;
     
-    
-    
     std::string word;
 
     dict_in.open(process_data);
@@ -87,7 +85,7 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
         dict_in >> word;
         
         // debugging output
-        std::cout << key << ") " << word << std::endl; 
+        //std::cout << key << ") " << word << std::endl; 
         
         //ints[key] = counter++;
         our_dict[key] = word;
@@ -107,7 +105,7 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
                 occurences++;
                 // ints2pos[];
 
-                std::cout << "(debug) - words2ints[" << j << "]" << std::endl;
+                //std::cout << "(debug) - words2ints[" << j << "]" << std::endl;
             }
         }
     }

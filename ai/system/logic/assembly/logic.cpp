@@ -1,14 +1,15 @@
 // /AI/LOGIC/ASSEMBLY/LOGIC.CPP: USED BY /AI/LOGIC/ASSEMBLY/INPUT.H
 
-#include <string>
+#include <stdio.h>
 #include <iostream>
+#include <string>
 #include "logic.h"
 
 void commands(int x, std::string param) {
 
     // used in x computation
     int consonants=0;
-    int vowelss=0;
+    int vowels=0;
     int special=0;
 
     // list attributes of string
@@ -32,7 +33,7 @@ void commands(int x, std::string param) {
                 if (param[i] == 'a' || param[i] == 'i' || param[i] == 'e' || param[i] == 'o' || param[i] == 'u') {
                     consonants++;
                 } else if (param[i] != '!' && param[i] != '@' && param[i] != '#' && param[i] != '$' && param[i] != '%' && param[i] != '^' && param[i] != '&' && param[i] != '*' && param[i] != '(' && param[i] != ')' && param[i] != '-' && param[i] != '_' && param[i] != '+' && param[i] != '=' && param[i] != '\\' && param[i] != '/' && param[i] != '?' && param[i] != '\'' && param[i] != '"' && param[i] != ';' && param[i] != ':' && param[i] != '[' && param[i] != ']' && param[i] != '}' && param[i] != '{' && param[i] != '|' && param[i] != '>' && param[i] != '<' && param[i] != ',' && param[i] != '.' && param[i] != '~' && param[i] != '`') {
-                    vowelss++;
+                    vowels++;
                 } else {
                     special++;
                 }
@@ -40,7 +41,7 @@ void commands(int x, std::string param) {
             
             // draw x computation here
             std::cout << "type:char" << " len:" << param.length() << " ";
-            std::cout << "vowelss:" << vowelss << " ";
+            std::cout << "vowels:" << vowels << " ";
             std::cout << "consonants:" << consonants << " ";
             std::cout << "special:" << special << " ";
 

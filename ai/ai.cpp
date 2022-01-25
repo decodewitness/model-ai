@@ -589,12 +589,50 @@ void AI::query() {
 	
 	// PROMPT
 	std::cout << "--? :: ";
-	std::string y;
-    std::cin >> y;
 	
+	std::string y;
+	// std::string sentence;
+	// char sentence[256];
+
+	// char c;
+    // while((c = getchar()) != 13) {  /* 13 is carriage ret in ascii, enter key */     
+    //     printf("%c\n", c);
+	// }
+
+	// while (cin.peek() != '\n') {
+	//cin >> y;
+	//query_string.append(y);
+
+	char str[80];
+	getchar();    // create buffer (1 extra for null char)
+	cin.get(str, 79);    // read up to 79 chars and place in str
+	// }
+    // std::cin >> y;
+
+	// do {
+	// 	query_string.append(y);
+	query_string.append(str);
+	// } while (cin >> y);
+
+	// std::getline(std::cin,sentence);
+    // std::istringstream iss(sentence);
+
+    // std::vector<std::string> words;
+    // std::string word;
+    // while(iss >> word) {
+    //     words.push_back(word);
+    // } 
+
+    // for(std::vector<std::string>::const_iterator it = words.begin();
+    //     it != words.end();
+    //     ++it) {
+    //     std::cout << *it << ' ';
+	// 	query_string.append(*it);
+    // }
+
 	//s = sampleX();
 	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;
-	logicalQuery(y);
+	logicalQuery(query_string);
 };
 
 void AI::killc(int x) {	// basically implies killchain handle
