@@ -129,26 +129,44 @@ void prepare_occurrences(int al, int cnt) {
     
     loopvar=0;
     track_occurence=0;  // set number of occurences to 0
+    bool match_found = false;
+    int minusadded = 0; // tracks how many words are not in the dictionary and also used to assign a negative value to those words
 
     std::cout << std::endl << "~:: intvars int_occurences[] ::~" << std::endl;
     
-    for (int i=0; i<=cnt; i++) { // loops over the words in the sentence
+    for (int i=0; i<cnt; i++) { // loops over the words in the sentence
+        
+        match_found=false;
+        
         for (int j=0; j<al; j++) {   // loops over dictionary
             if (strcmp(wordsFromSentence[i], our_dict[j].c_str()) == 0) {
                 // here one word matches
+                match_found = true;
+                
+                // std::cout << "(debug) loopvar=" << loopvar << " j=" << j << std::endl;
+                // std::cout << "\t(debug) " << wordsFromSentence[i] << " :: " << our_dict[j] << std::endl;
+                
+                // if (match_found == false && j == 19999) { std::cout << "(debug) " << "wordsFromSentence[j]: " << wordsFromSentence[j] << std::endl; }
+
+                // if (j == 5) {
+                //     std::cout << std::endl << "(debug) loopvar: " << loopvar << std::endl;
+                //     std::cout << "i=" << i << "; int_occurrences[" << loopvar << "]: " << int_occurrences[loopvar] << std::endl;
+                // }
+                
                 int_occurrences[loopvar++] = j;
-            } //else {
-                // loopvar++;
-            //}
+
+                // j=0;
+                // break;
+            }
         }
-        // std::cout << wordsFromSentence[i] << " :: #" << int_occurrences[i] << std::endl;        
+        if (match_found == false) { int_occurrences[loopvar++] = --minusadded; }
+        // std::cout << wordsFromSentence[i] << " :: #" << int_occurrences[i] << std::endl;
     }
 
-    for (int i=0; i<=loopvar; i++) {
-        std::cout << wordsFromSentence[i] << " :: #" << int_occurrences[i] << std::endl;
+    for (int i=0; i<loopvar; i++) {
+        std::cout << "(debug) " << i << ") " << wordsFromSentence[i] << " :: #" << int_occurrences[i] << std::endl;
     }
 };
-
 
 // UNCOMMENT THIS NEXT 
 void dictionaries(int al, int cnt) {    // PREPARES BOTH DICTIONARIES
