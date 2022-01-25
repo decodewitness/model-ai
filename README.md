@@ -1478,16 +1478,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffee4a9a6f0)
-	- stacking header:(1)::<address>(0x7ffee4a9a710)
-	- stacking header:(2)::<address>(0x7ffee4a9a730)
-	- stacking header:(3)::<address>(0x7ffee4a9a750)
-	- stacking header:(4)::<address>(0x7ffee4a9a770)
-	- stacking header:(5)::<address>(0x7ffee4a9a790)
-	- stacking header:(6)::<address>(0x7ffee4a9a7b0)
-	- stacking header:(7)::<address>(0x7ffee4a9a7d0)
-	- stacking header:(8)::<address>(0x7ffee4a9a7f0)
-	- stacking header:(9)::<address>(0x7ffee4a9a810)
+	- stacking header:(0)::<address>(0x7ffcb245b5d0)
+	- stacking header:(1)::<address>(0x7ffcb245b5f0)
+	- stacking header:(2)::<address>(0x7ffcb245b610)
+	- stacking header:(3)::<address>(0x7ffcb245b630)
+	- stacking header:(4)::<address>(0x7ffcb245b650)
+	- stacking header:(5)::<address>(0x7ffcb245b670)
+	- stacking header:(6)::<address>(0x7ffcb245b690)
+	- stacking header:(7)::<address>(0x7ffcb245b6b0)
+	- stacking header:(8)::<address>(0x7ffcb245b6d0)
+	- stacking header:(9)::<address>(0x7ffcb245b6f0)
 
 
 -:: checking AI functions.
@@ -1541,13 +1541,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -42238,18 +42236,18 @@ TRANSPONDER::responding:
 ~:: (debug) number of matching occurences: (11).
 
 ~:: intvars int_occurences[] ::~
-the :: #0
-in :: #5
-the :: #0
-in :: #5
-jzhjvjv :: #5
-in :: #5210
-losing :: #1535
-match :: #4
-a :: #7418
-mixing :: #19998
-succeeding :: #19991
-missionaries :: #0
+(debug) 0) the :: #0
+(debug) 1) in :: #5
+(debug) 2) the :: #0
+(debug) 3) in :: #5
+(debug) 4) jzhjvjv :: #-1
+(debug) 5) in :: #5
+(debug) 6) losing :: #5210
+(debug) 7) match :: #1535
+(debug) 8) a :: #4
+(debug) 9) mixing :: #7418
+(debug) 10) succeeding :: #19998
+(debug) 11) missionaries :: #19991
 
 (debugging) course: 0
 

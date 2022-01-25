@@ -1478,16 +1478,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff24070da0)
-	- stacking header:(1)::<address>(0x7fff24070dc0)
-	- stacking header:(2)::<address>(0x7fff24070de0)
-	- stacking header:(3)::<address>(0x7fff24070e00)
-	- stacking header:(4)::<address>(0x7fff24070e20)
-	- stacking header:(5)::<address>(0x7fff24070e40)
-	- stacking header:(6)::<address>(0x7fff24070e60)
-	- stacking header:(7)::<address>(0x7fff24070e80)
-	- stacking header:(8)::<address>(0x7fff24070ea0)
-	- stacking header:(9)::<address>(0x7fff24070ec0)
+	- stacking header:(0)::<address>(0x7ffd248f1600)
+	- stacking header:(1)::<address>(0x7ffd248f1620)
+	- stacking header:(2)::<address>(0x7ffd248f1640)
+	- stacking header:(3)::<address>(0x7ffd248f1660)
+	- stacking header:(4)::<address>(0x7ffd248f1680)
+	- stacking header:(5)::<address>(0x7ffd248f16a0)
+	- stacking header:(6)::<address>(0x7ffd248f16c0)
+	- stacking header:(7)::<address>(0x7ffd248f16e0)
+	- stacking header:(8)::<address>(0x7ffd248f1700)
+	- stacking header:(9)::<address>(0x7ffd248f1720)
 
 
 -:: checking AI functions.
@@ -1541,13 +1541,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -42238,6 +42236,92 @@ TRANSPONDER::responding:
 ~:: (debug) number of matching occurences: (11).
 
 ~:: intvars int_occurences[] ::~
+(debug) 0) the :: #0
+(debug) 1) in :: #5
+(debug) 2) the :: #0
+(debug) 3) in :: #5
+(debug) 4) jzhjvjv :: #-1
+(debug) 5) in :: #5
+(debug) 6) losing :: #5210
+(debug) 7) match :: #1535
+(debug) 8) a :: #4
+(debug) 9) mixing :: #7418
+(debug) 10) succeeding :: #19998
+(debug) 11) missionaries :: #19991
+
+(debugging) course: 0
+
+~:: converter: 
+	*--> euro: 10 = ($12.8) dollar.
+
+~:: converter: 
+	*--> euro: 10 = ($12.8) dollar.
+
+accounts: 
+
+- account (1):
+	subtracting: -/- 15 EURO.
+	balance: (-/-15 EURO).
+
+
+- account: (1) --> (EUR. -/-15 EURO).
+
+- account (1):
+	adding: +/+ 29.27 EURO.
+	14.27 EURO).
+
+
+- account: (1) --> (EUR. 14.27 EURO).
+
+- account changed to account (2).
+
+- account (2):
+	adding: +/+ 14 EURO.
+	14 EURO).
+
+- account (2):
+	subtracting: -/- 7 EURO.
+	balance: (7 EURO).
+
+- account changed to account (600).
+
+- account (600):
+	adding: +/+ 800.12 EURO.
+	800.12 EURO).
+
+- account (600):
+	subtracting: -/- 900.13 EURO.
+	balance: (-/-100.01 EURO).
+
+-/-100.01 EURO
+- total accross accounts: (EUR -/-78.74)
+
+
+#(1). --> (EUR 14.27 EURO).
+#(2). --> (EUR 7 EURO).
+
+-----
+
+#(600). --> (EUR -100.01 EURO).
+
+~:: storing accounts information --> (accounts.txt).
+	~:: writing accounts:
+		...
+	~:: closing file.
+~:: successfully stored accounts information.
+
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+		(-  ||  -)
+
+
+::=> saving grace (routine) and closing libraries <=::
+-:: closing files.
+-:: cleaning memory.
+
+-:: calling destructor for AI::Model.
+-:: done.
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).
