@@ -235,7 +235,8 @@ public:
 	// store accounts
 	void store_account();
 	void store_account_detail();
-
+	// transfer from account
+	void transfer(int src, int dst, float amount);
 
 	// killchain
 	void destroy_msg();

@@ -2,7 +2,11 @@
 
 #include <iostream>
 
+// #define _TRANSACTION_LOG "ai/log/account-transactions.txt"
+
 const int max_accounts = 1024;
+const char _TRANSACTION_LOG[] = "ai/log/account-transactions.txt";
+const char _ACCOUNT_INFORMATION[] = "ai/log/account-information.txt";
 
 // std::string coin;
 
@@ -42,5 +46,8 @@ public:
 
     void store_accounts();  // stores accounts to disk
     void store_account_details();  // stores account details to disk
+
+    void transfer_account(int src, int dst, float amount);
+    
 
 };

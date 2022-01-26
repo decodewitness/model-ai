@@ -934,26 +934,29 @@ void AI::hmath() {
 // accounts managed by Track_Account class
 void AI::add_account(float x) {	// adds amount x to accounts[]
 	std::cout << "- account (" << this->account->getAccount() << "):" << std::endl;
-	std::cout << "\tadding: +/+ " << x << " " << coin[coin_no] << "." << std::endl;
+	std::cout << "\tadding: (+/+) " << x << " " << coin[coin_no] << "." << std::endl;
 	this->account->add(x);
 	std::cout << "\t";
 	this->account->print();
-	std::cout << ")." << std::endl << std::endl;
+	std::cout << std::endl << std::endl;
 };
 
 void AI::subtract_account(float x) {	// subtracts amount x in accounts[]
 	std::cout << "- account (" << this->account->getAccount() << "):" << std::endl;
-	std::cout << "\tsubtracting: -/- " << x << " " << coin[coin_no] << "." << std::endl;
+	std::cout << "\tsubtracting: (-/-) " << x << " " << coin[coin_no] << "." << std::endl;
 	this->account->subtract(x);
-	std::cout << "\tbalance: (";
+	// std::cout << "\tbalance: (";
+	std::cout << "\t";
 	this->account->print();
-	std::cout << ")." << std::endl << std::endl;
+	std::cout << std::endl << std::endl;
 };
 
 void AI::change_account(int x) {	// changes account_nr in accounts[]
-	std::cout << "- account changed to account (";
+	
 	this->account->setAccount(x);
-	std::cout << this->account->getAccount() << ")." << std::endl << std::endl;
+	std::cout << "- account changed to account ("
+				<< this->account->getAccount() << ")."
+					<< std::endl << std::endl;
 };
 
 float AI::get_account() {	// returns current account
@@ -990,6 +993,10 @@ void AI::store_account() {
 
 void AI::store_account_detail() {
 	this->account->store_account_details();
+};
+
+void AI::transfer(int src, int dst, float amount) {
+	this->account->transfer_account(src, dst, amount);
 };
 
 // OTHER FUNCTIONS

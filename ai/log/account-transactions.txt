@@ -1,0 +1,6 @@
+Transaction:
+-----
+account: 1 new saldo: 26
+account: 200 new saldo: 20
+< - > amount transferred: 20
+

@@ -143,25 +143,24 @@ int steering(int arc) {
 	// ai.print_account();
 	// ai.change_account(1);
 
-	std::cout << std::endl << "accounts: " << std::endl << std::endl;
+	std::cout << std::endl << "~:: accounts: " << std::endl << "    -----";
+	std::cout << std::endl << std::endl;
 
-	ai.subtract_account(15);
-	ai.printn_account();
-	ai.add_account(29.27);
-	ai.printn_account();
-	ai.change_account(2);
-	ai.add_account(14);
-	ai.subtract_account(7);
-	ai.change_account(600);
-	ai.add_account(800.12);
-	ai.subtract_account(900.13);
-	ai.print_account();
-	std::cout << std::endl;
-	ai.combine_total();
+	// ai.printn_account();
+	// ai.change_account(600);
+	// ai.add_account(800.12);
+	// ai.subtract_account(900.13);
+	//ai.print_account();
+	// ai.combine_total();
+	// ai.list_positive();
+	// ai.list_negative();
 
+	ai.add_account(1.33);
+	ai.add_account(44.99);
+	ai.printn_account();
 	ai.list_positive();
-	std::cout << "-----" << std::endl;
-	ai.list_negative();
+
+	ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
 
 	ai.store_account_detail();
 

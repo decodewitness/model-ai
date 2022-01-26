@@ -30,18 +30,20 @@ void Track_Account::setAccount(int x) { // sets account number (account_nr)
 };
 
 void Track_Account::print() {   // prints balance without line break '\n'
-    if (accounts[this->account_nr] < 0) {
-        std::cout << "-/";
-    }
-    std::cout << accounts[this->account_nr] << " " << coin[coin_no];
+    std::cout << "balance: [" << accounts[this->account_nr] << " " << coin[coin_no] << "].";    
 };
 
 void Track_Account::printn() {  // prints balance receipt with additional information
-    std::cout << std::endl << "- account: (" << this->getAccount() << ") --> (" << coin_symbol[coin_no] << ". ";
-    if (accounts[this->account_nr] < 0) {
-        std::cout << "-/";
-    }
-    std::cout << accounts[this->account_nr] << " " << coin[coin_no] << ")." << std::endl << std::endl;
+
+    std::cout << std::endl << "- account: (" << this->getAccount() << ") --> ";
+
+    // if (accounts[this->account_nr] < 0) {
+    //     std::cout << "-/";
+    // }
+
+    this->print();
+    // std::cout << accounts[this->account_nr] << " " << coin[coin_no] << ").";
+    std::cout << std::endl << std::endl;
 };
 
 void Track_Account::combined_total() {  // calculates the total across all accounts
@@ -61,6 +63,10 @@ void Track_Account::combined_total() {  // calculates the total across all accou
 };
 
 void Track_Account::list_positives() {
+
+    std::cout << "- accounts with a positive balance:" << std::endl;
+    std::cout << std::endl;
+
     for (int i=0; i<max_accounts; i++) {
         if (accounts[i] > 0) {
             std::cout << "#(" << i << "). --> (" << coin_symbol[coin_no] << " "<< accounts[i] << " " << coin[coin_no] << ")." << std::endl; 
@@ -69,6 +75,10 @@ void Track_Account::list_positives() {
 };
 
 void Track_Account::list_negatives() {
+
+    std::cout << "- accounts with a negative balance:" << std::endl;
+    std::cout << std::endl;
+
     for (int i=0; i<max_accounts; i++) {
         if (accounts[i] < 0) {
             std::cout << "#(" << i << "). --> (" << coin_symbol[coin_no] << " "<< accounts[i] << " " << coin[coin_no] << ")." << std::endl; 
@@ -76,20 +86,68 @@ void Track_Account::list_negatives() {
     }
 };
 
+void Track_Account::transfer_account(int src, int dst, float amount) {
+    
+    bool logging=false;
+
+    int current_account = getAccount();
+    int saldo1 = accounts[account_nr];
+    int saldo2;
+
+    std::ofstream af;
+    af.open(_TRANSACTION_LOG);
+    if (af.is_open() == true) {
+        std::cout << "(debug) ~:: successfully opened: \"" << _TRANSACTION_LOG << "\"." << std::endl;
+        logging = true;
+    }
+
+    this->setAccount(src);  // change to src account and subtract amount
+    this->subtract(amount);
+
+    this->setAccount(dst);  // change to dst account and add amount
+    saldo2 = accounts[account_nr];
+    this->add(amount);
+
+    // check new saldo
+
+    // output
+    std::cout << std::endl;
+    std::cout << "~: transfer from account: (" << src << ")->(" << dst << ")" << std::endl << std::endl;
+    std::cout << "\tINITIAL SALDO: (#" << src << ")[" << coin_symbol[coin_no] << " " << saldo1 << "] -&- (#" << dst << ")[" << coin_symbol[coin_no] << " " << saldo2 << "]:" << std::endl;
+    std::cout << "\t\t-: amount in transfer: (" << amount << ") " << coin[coin_no] << "." << std::endl;
+    std::cout << std::endl;
+    std::cout << "\t#1 new saldo: account(" << src << ") => [[ " << coin[coin_no] << " " << (saldo1 - amount) << "]]" << std::endl;
+    std::cout << "\t\t#2 new saldo: account(" << dst << ") => [[ " << coin[coin_no] << " " << (saldo2 + amount) << "]]" << std::endl;
+    std::cout << std::endl << std::endl;
+
+    // change account back to original account
+    this->setAccount(current_account);
+
+    // log to transaction log _TRANSACTION_LOG
+    if (logging == true) {
+        af << "Transaction:" << std::endl << "-----" << std::endl;
+        af << "account: " << src << " new saldo: " << (saldo1 - amount) << std::endl;
+        af << "account: " << dst << " new saldo: " << (saldo2 + amount) << std::endl;
+        af << "< - > amount transferred: " << amount << std::endl;
+        af << std::endl;
+
+        // close file stream
+        af.close();
+    }
+};
+
 void Track_Account::store_accounts() {
     
     std::ofstream fs;
-    std::string filen = "accounts.txt";
+    //std::string filen = "accounts.txt";
 
-    fs.open(filen);
-
-    std::cout << "~:: storing accounts information --> (" << filen << ")." << std::endl;
+    fs.open(_ACCOUNT_INFORMATION);
 
     if (fs.is_open() == true) {
-        
+        std::cout << "~:: storing accounts information --> (" << _ACCOUNT_INFORMATION << ")." << std::endl;
         std::cout << "\t~:: writing accounts:" << std::endl << "\t\t";
 
-        fs << "valuta: " << coin_no << " " << coin[coin_no] << std::endl << std::endl;
+        fs << "valuta type: #" << coin_no << " --> " << coin[coin_no] << std::endl << std::endl;
 
         for (int i=0; i<max_accounts; i++) {
             if (accounts[i] < 0.00 || accounts[i] > 0.00) {
@@ -108,21 +166,22 @@ void Track_Account::store_accounts() {
 void Track_Account::store_account_details() {
     
     std::ofstream fs;
-    std::string filen = "accounts.txt";
+    // std::string filen = "accounts.txt";
 
-    fs.open(filen);
+    fs.open(_ACCOUNT_INFORMATION);
 
-    std::cout << "~:: storing accounts information --> (" << filen << ")." << std::endl;
+    std::cout << "~:: storing accounts information --> (" << _ACCOUNT_INFORMATION << ")." << std::endl;
 
     if (fs.is_open() == true) {
         
         std::cout << "\t~:: writing accounts:" << std::endl << "\t\t";
         
-        fs << "valuta: " << coin_no << " " << coin[coin_no] << std::endl << std::endl;
+        fs << "valuta type: (#" << coin_no << ") --> " << coin[coin_no] << std::endl << std::endl;
 
         for (int i=0; i<max_accounts; i++) {
             if (accounts[i] < 0.00 || accounts[i] > 0.00) {
-                fs << "account: " << i << "\tbalance: " << coin_symbol[coin_no] << " " << accounts[i] << " " << coin[coin_no] << std::endl;
+                fs << "account: (" << i << ")" << std::endl;
+                fs << "- balance: " << coin_symbol[coin_no] << " " << accounts[i] << " " << coin[coin_no] << std::endl;
                 std::cout << ".";
             }
         }

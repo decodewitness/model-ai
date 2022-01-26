@@ -1,5 +1,0 @@
-valuta: 1 EURO
-
-account: 1	balance: EUR 14.27 EURO
-account: 2	balance: EUR 7 EURO
-account: 600	balance: EUR -100.01 EURO

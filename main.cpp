@@ -9,6 +9,17 @@ using namespace std;
 
 // main function
 int main(int argc, char *argv[]) {
+
+	std::string arguments;
+
+	if (argc > 1) {
+		for (int i=1; i<argc; i++) {
+			arguments.append(argv[i]);
+			arguments.append(",");
+		}
+		std::cout << std::endl << "ARG: " << arguments << std::endl << std::endl;
+	}
+
 	initialize_runtime_check();	// checks for file integrity
 	steering(1);	// steers the AI (class) code 
 	//steering(2);

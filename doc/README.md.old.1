@@ -50,6 +50,9 @@ LOGGED OUTPUT OF THIS BETA:
 -----
 
 
+
+ARG: testing,1,2,1,2,
+
 ~:: ** &initialize_runtime_check() **
 	- checking redundancy.
 	- file hierarchy.
@@ -1478,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd355fe200)
-	- stacking header:(1)::<address>(0x7ffd355fe220)
-	- stacking header:(2)::<address>(0x7ffd355fe240)
-	- stacking header:(3)::<address>(0x7ffd355fe260)
-	- stacking header:(4)::<address>(0x7ffd355fe280)
-	- stacking header:(5)::<address>(0x7ffd355fe2a0)
-	- stacking header:(6)::<address>(0x7ffd355fe2c0)
-	- stacking header:(7)::<address>(0x7ffd355fe2e0)
-	- stacking header:(8)::<address>(0x7ffd355fe300)
-	- stacking header:(9)::<address>(0x7ffd355fe320)
+	- stacking header:(0)::<address>(0x7ffff2f57580)
+	- stacking header:(1)::<address>(0x7ffff2f575a0)
+	- stacking header:(2)::<address>(0x7ffff2f575c0)
+	- stacking header:(3)::<address>(0x7ffff2f575e0)
+	- stacking header:(4)::<address>(0x7ffff2f57600)
+	- stacking header:(5)::<address>(0x7ffff2f57620)
+	- stacking header:(6)::<address>(0x7ffff2f57640)
+	- stacking header:(7)::<address>(0x7ffff2f57660)
+	- stacking header:(8)::<address>(0x7ffff2f57680)
+	- stacking header:(9)::<address>(0x7ffff2f576a0)
 
 
 -:: checking AI functions.
@@ -1541,11 +1544,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1631,8 +1636,8 @@ downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	is there any reference to this
-	[ simple x computation: type:char len:30 vowels:20 consonants:10 special:0  ]
+	logic
+	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2195,25 +2200,20 @@ TRANSPONDER::responding:
 
 	-----------------
 
-		* words no_#: 6
-		* length: 30
-		* vowels: 10
-		* consonants: 15
+		* words no_#: 1
+		* length: 5
+		* vowels: 2
+		* consonants: 3
 		* numbers: 0
-		* special chars: 5
+		* special chars: 0
 		* unknown chars: 0
 
-(debug) word :: is
-(debug) word :: there
-(debug) word :: any
-(debug) word :: reference
-(debug) word :: to
-(debug) word :: this
+(debug) word :: logic
 
-~:: (debug)::nrOfWords = 6.
-~:: (debug)::counter = 6.
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "is there any reference to this".
+(debug) calling prepare_ints() (from) -> "logic".
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 0) the
 1) of
@@ -22216,15 +22216,10 @@ TRANSPONDER::responding:
 19998) succeeding
 19999) bizjournalshire
 
-~:: (debug) number of matching occurences: (6).
+~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) is :: #7
-(debug) 1) there :: #62
-(debug) 2) any :: #61
-(debug) 3) reference :: #665
-(debug) 4) to :: #3
-(debug) 5) this :: #11
+(debug) 0) logic :: #3197
 
 (debugging) course: 0
 
@@ -22234,58 +22229,37 @@ TRANSPONDER::responding:
 ~:: converter: 
 	*--> euro: 10 = ($12.8) dollar.
 
-accounts: 
+~:: accounts: 
+    -----
 
 - account (1):
-	subtracting: -/- 15 EURO.
-	balance: (-/-15 EURO).
-
-
-- account: (1) --> (EUR. -/-15 EURO).
+	adding: (+/+) 1.33 EURO.
+	balance: [1.33 EURO].
 
 - account (1):
-	adding: +/+ 29.27 EURO.
-	14.27 EURO).
+	adding: (+/+) 44.99 EURO.
+	balance: [46.32 EURO].
 
 
-- account: (1) --> (EUR. 14.27 EURO).
-
-- account changed to account (2).
-
-- account (2):
-	adding: +/+ 14 EURO.
-	14 EURO).
-
-- account (2):
-	subtracting: -/- 7 EURO.
-	balance: (7 EURO).
-
-- account changed to account (600).
-
-- account (600):
-	adding: +/+ 800.12 EURO.
-	800.12 EURO).
-
-- account (600):
-	subtracting: -/- 900.13 EURO.
-	balance: (-/-100.01 EURO).
-
--/-100.01 EURO
-- total accross accounts: (EUR -/-78.74)
+- account: (1) --> balance: [46.32 EURO].
 
 
-#(1). --> (EUR 14.27 EURO).
-#(2). --> (EUR 7 EURO).
+- accounts with a positive balance:
 
------
+#(1). --> (EUR 46.32 EURO).
 
-#(600). --> (EUR -100.01 EURO).
+(debug) ~:: successfully opened: "ai/log/account-transactions.txt".
 
-~:: storing accounts information --> (accounts.txt).
-	~:: writing accounts:
-		...
-	~:: closing file.
-~:: successfully stored accounts information.
+~: transfer from account: (1)->(200)
+
+	INITIAL SALDO: (#1)[EUR 46] -&- (#200)[EUR 0]:
+		-: amount in transfer: (20) EURO.
+
+	#1 new saldo: account(1) => [[ EURO 26]]
+		#2 new saldo: account(200) => [[ EURO 20]]
+
+
+~:: storing accounts information --> (ai/log/account/account-information.txt).
 
 -:: decoupler.
 	-:: decoupling sampler
