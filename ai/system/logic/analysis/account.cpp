@@ -126,9 +126,9 @@ void Track_Account::transfer_account(int src, int dst, float amount) {
     // log to transaction log _TRANSACTION_LOG
     if (logging == true) {
         af << "Transaction:" << std::endl << "-----" << std::endl;
-        af << "account: " << src << " new saldo: " << (saldo1 - amount) << std::endl;
-        af << "account: " << dst << " new saldo: " << (saldo2 + amount) << std::endl;
-        af << "< - > amount transferred: " << amount << std::endl;
+        af << "account: " << src << " ;; new saldo: " << (saldo1 - amount) << std::endl;
+        af << "account: " << dst << " ;; new saldo: " << (saldo2 + amount) << std::endl;
+        af << "< - > amount transferred: " << amount << coin[coin_no] << std::endl;
         af << std::endl;
 
         // close file stream
@@ -163,7 +163,7 @@ void Track_Account::store_accounts() {
     }
 };
 
-void Track_Account::store_account_details() {
+void Track_Account::store_accounts_details() {
     
     std::ofstream fs;
     // std::string filen = "accounts.txt";

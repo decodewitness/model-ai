@@ -991,8 +991,8 @@ void AI::store_account() {
 	this->account->store_accounts();
 };
 
-void AI::store_account_detail() {
-	this->account->store_account_details();
+void AI::store_accounts_detail() {
+	this->account->store_accounts_details();
 };
 
 void AI::transfer(int src, int dst, float amount) {

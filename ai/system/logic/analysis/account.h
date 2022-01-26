@@ -45,7 +45,7 @@ public:
     void list_negatives();  // lists accounts with negative balance
 
     void store_accounts();  // stores accounts to disk
-    void store_account_details();  // stores account details to disk
+    void store_accounts_details();  // stores account details to disk
 
     void transfer_account(int src, int dst, float amount);
     

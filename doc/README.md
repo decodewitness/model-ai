@@ -51,7 +51,7 @@ LOGGED OUTPUT OF THIS BETA:
 
 
 
-ARG: testing,1,2,1,2,
+ARG: testing,1,2,1,2,3,
 
 ~:: ** &initialize_runtime_check() **
 	- checking redundancy.
@@ -1481,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe3213e250)
-	- stacking header:(1)::<address>(0x7ffe3213e270)
-	- stacking header:(2)::<address>(0x7ffe3213e290)
-	- stacking header:(3)::<address>(0x7ffe3213e2b0)
-	- stacking header:(4)::<address>(0x7ffe3213e2d0)
-	- stacking header:(5)::<address>(0x7ffe3213e2f0)
-	- stacking header:(6)::<address>(0x7ffe3213e310)
-	- stacking header:(7)::<address>(0x7ffe3213e330)
-	- stacking header:(8)::<address>(0x7ffe3213e350)
-	- stacking header:(9)::<address>(0x7ffe3213e370)
+	- stacking header:(0)::<address>(0x7ffe281cce60)
+	- stacking header:(1)::<address>(0x7ffe281cce80)
+	- stacking header:(2)::<address>(0x7ffe281ccea0)
+	- stacking header:(3)::<address>(0x7ffe281ccec0)
+	- stacking header:(4)::<address>(0x7ffe281ccee0)
+	- stacking header:(5)::<address>(0x7ffe281ccf00)
+	- stacking header:(6)::<address>(0x7ffe281ccf20)
+	- stacking header:(7)::<address>(0x7ffe281ccf40)
+	- stacking header:(8)::<address>(0x7ffe281ccf60)
+	- stacking header:(9)::<address>(0x7ffe281ccf80)
 
 
 -:: checking AI functions.
@@ -1544,11 +1544,13 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1634,8 +1636,8 @@ downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic submission is critical diaphragm
-	[ simple x computation: type:char len:38 vowels:25 consonants:13 special:0  ]
+	logic time is in submission
+	[ simple x computation: type:char len:27 vowels:17 consonants:10 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2199,23 +2201,23 @@ TRANSPONDER::responding:
 	-----------------
 
 		* words no_#: 5
-		* length: 38
-		* vowels: 13
-		* consonants: 21
+		* length: 27
+		* vowels: 10
+		* consonants: 13
 		* numbers: 0
 		* special chars: 4
 		* unknown chars: 0
 
 (debug) word :: logic
-(debug) word :: submission
+(debug) word :: time
 (debug) word :: is
-(debug) word :: critical
-(debug) word :: diaphragm
+(debug) word :: in
+(debug) word :: submission
 
 ~:: (debug)::nrOfWords = 5.
 ~:: (debug)::counter = 5.
 
-(debug) calling prepare_ints() (from) -> "logic submission is critical diaphragm".
+(debug) calling prepare_ints() (from) -> "logic time is in submission".
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 0) the
 1) of
@@ -22218,14 +22220,14 @@ TRANSPONDER::responding:
 19998) succeeding
 19999) bizjournalshire
 
-~:: (debug) number of matching occurences: (4).
+~:: (debug) number of matching occurences: (5).
 
 ~:: intvars int_occurences[] ::~
 (debug) 0) logic :: #3197
-(debug) 1) submission :: #3429
+(debug) 1) time :: #49
 (debug) 2) is :: #7
-(debug) 3) critical :: #1782
-(debug) 4) diaphragm :: #-1
+(debug) 3) in :: #5
+(debug) 4) submission :: #3429
 
 (debugging) course: 0
 
@@ -22249,25 +22251,9 @@ TRANSPONDER::responding:
 
 - account: (1) --> balance: [46.32 EURO].
 
-
-- accounts with a positive balance:
-
-#(1). --> (EUR 46.32 EURO).
-
-(debug) ~:: successfully opened: "ai/log/account-transactions.txt".
-
-~: transfer from account: (1)->(200)
-
-	INITIAL SALDO: (#1)[EUR 46] -&- (#200)[EUR 0]:
-		-: amount in transfer: (20) EURO.
-
-	#1 new saldo: account(1) => [[ EURO 26]]
-		#2 new saldo: account(200) => [[ EURO 20]]
-
-
 ~:: storing accounts information --> (ai/log/account-information.txt).
 	~:: writing accounts:
-		..
+		.
 	~:: closing file.
 ~:: successfully stored accounts information.
 

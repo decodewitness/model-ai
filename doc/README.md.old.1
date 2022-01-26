@@ -1481,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffff2f57580)
-	- stacking header:(1)::<address>(0x7ffff2f575a0)
-	- stacking header:(2)::<address>(0x7ffff2f575c0)
-	- stacking header:(3)::<address>(0x7ffff2f575e0)
-	- stacking header:(4)::<address>(0x7ffff2f57600)
-	- stacking header:(5)::<address>(0x7ffff2f57620)
-	- stacking header:(6)::<address>(0x7ffff2f57640)
-	- stacking header:(7)::<address>(0x7ffff2f57660)
-	- stacking header:(8)::<address>(0x7ffff2f57680)
-	- stacking header:(9)::<address>(0x7ffff2f576a0)
+	- stacking header:(0)::<address>(0x7ffe3213e250)
+	- stacking header:(1)::<address>(0x7ffe3213e270)
+	- stacking header:(2)::<address>(0x7ffe3213e290)
+	- stacking header:(3)::<address>(0x7ffe3213e2b0)
+	- stacking header:(4)::<address>(0x7ffe3213e2d0)
+	- stacking header:(5)::<address>(0x7ffe3213e2f0)
+	- stacking header:(6)::<address>(0x7ffe3213e310)
+	- stacking header:(7)::<address>(0x7ffe3213e330)
+	- stacking header:(8)::<address>(0x7ffe3213e350)
+	- stacking header:(9)::<address>(0x7ffe3213e370)
 
 
 -:: checking AI functions.
@@ -1544,13 +1544,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1636,8 +1634,8 @@ downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	logic submission is critical diaphragm
+	[ simple x computation: type:char len:38 vowels:25 consonants:13 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2200,20 +2198,24 @@ TRANSPONDER::responding:
 
 	-----------------
 
-		* words no_#: 1
-		* length: 5
-		* vowels: 2
-		* consonants: 3
+		* words no_#: 5
+		* length: 38
+		* vowels: 13
+		* consonants: 21
 		* numbers: 0
-		* special chars: 0
+		* special chars: 4
 		* unknown chars: 0
 
 (debug) word :: logic
+(debug) word :: submission
+(debug) word :: is
+(debug) word :: critical
+(debug) word :: diaphragm
 
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
+~:: (debug)::nrOfWords = 5.
+~:: (debug)::counter = 5.
 
-(debug) calling prepare_ints() (from) -> "logic".
+(debug) calling prepare_ints() (from) -> "logic submission is critical diaphragm".
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 0) the
 1) of
@@ -22216,10 +22218,14 @@ TRANSPONDER::responding:
 19998) succeeding
 19999) bizjournalshire
 
-~:: (debug) number of matching occurences: (1).
+~:: (debug) number of matching occurences: (4).
 
 ~:: intvars int_occurences[] ::~
 (debug) 0) logic :: #3197
+(debug) 1) submission :: #3429
+(debug) 2) is :: #7
+(debug) 3) critical :: #1782
+(debug) 4) diaphragm :: #-1
 
 (debugging) course: 0
 
@@ -22259,7 +22265,11 @@ TRANSPONDER::responding:
 		#2 new saldo: account(200) => [[ EURO 20]]
 
 
-~:: storing accounts information --> (ai/log/account/account-information.txt).
+~:: storing accounts information --> (ai/log/account-information.txt).
+	~:: writing accounts:
+		..
+	~:: closing file.
+~:: successfully stored accounts information.
 
 -:: decoupler.
 	-:: decoupling sampler

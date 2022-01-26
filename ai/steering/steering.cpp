@@ -154,15 +154,13 @@ int steering(int arc) {
 	// ai.combine_total();
 	// ai.list_positive();
 	// ai.list_negative();
+	// ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
 
 	ai.add_account(1.33);
 	ai.add_account(44.99);
 	ai.printn_account();
-	ai.list_positive();
 
-	ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
-
-	ai.store_account_detail();
+	ai.store_accounts_detail();
 
 	sleep(4);
 

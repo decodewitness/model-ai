@@ -234,7 +234,7 @@ public:
 	void list_negative();
 	// store accounts
 	void store_account();
-	void store_account_detail();
+	void store_accounts_detail();
 	// transfer from account
 	void transfer(int src, int dst, float amount);
 
