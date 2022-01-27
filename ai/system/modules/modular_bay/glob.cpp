@@ -82,7 +82,6 @@ int stats(std::string arg) {
     }
 };
 
-
 // 3rd glob function -- used by the "Modular Bay(s)"
 int glob3c(int args, char argv[]) {
     struct dirent *entry = nullptr;
