@@ -16,9 +16,9 @@ std::string& getFile() {
 	s->reserve(1024);
 	std::fstream fp;
 
-	fp.open("ai/bin/runtime",std::ios::in);
+	fp.open("main.cpp",std::ios::in);
 	if(!(fp.is_open())){
-		fprintf(stderr,"~!~ :: Unable to open the file; sha1.cpp\n");
+		fprintf(stderr,"~!~ :: Unable to open the file; main.cpp\n");
 		exit(EXIT_FAILURE);
 	}
 	else {

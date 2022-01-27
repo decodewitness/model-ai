@@ -208,7 +208,7 @@ public:
 	// hashing and security
 	void enforce_security();
 	std::string hashtype(std::string h); // checking integrity
-	std::string hashchain(std::string s);
+	//std::string hashchain(std::string s);
 	// initialize transponder
 	void tsp();
 

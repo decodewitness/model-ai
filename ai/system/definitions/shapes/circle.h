@@ -1,7 +1,8 @@
+#include <string>
+
 const int coefficients = 640000;
 
-typedef struct Circle {
-
+struct Circle {
     // circle structure -- center formula
     std::string label;
     float circle = 1.00;    // scale in dimension

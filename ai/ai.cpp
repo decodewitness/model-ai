@@ -162,30 +162,39 @@ std::string AI::hashtype(std::string s) {
 	return hashn(s);
 };
 
-std::string AI::hashchain(std::string s) {	// 's' is the seed for the chain strength that can form a crypto
+// std::string AI::hashchain(std::string s) {	// 's' is the seed for the chain strength that can form a crypto
 	
-	std::string flow(std::string flux);
+// 	std::string flow(std::string flux);
+// 	std::string hashCipher;
+// 	hashCipher.append(flow("algorithmicsequences"));
 
-	Circle circle;
-	
-	// already define circle in "shapes"
-	// float radius = 0.5;	// (unit) measures
-	// float center[] = { 0.0, 0.0, 0.0 };	// x,y,z coordinates
-	// float circle = 360.0;				// = radius in degrees over counter clockwise over 1 second.
-	// float circumreference = 2 * pi() * radius;	// line around the cirle
-	// float diameter = 2.0;	// (unit) measures
-};
+// 	Circle circle;
 
-std::string flow(float fl) {
+// return hashCipher;
+// };
 
-	float flux = fl;
-	char ch='a', alphabet[26];
+// std::string flow(float fl) {
+// 	float flux = fl;
+// 	char ch='a', alphabet[26];
+// 	char k='0', semantics[32][256];
+// 	std::string semantic;
 
-	// alphabet gets filled with all letters
-	for (int i=0; i<26; i++) {
-		alphabet[i] = ch++;
-	}
-};
+// 	// alphabet gets filled with all letters
+// 	for (int i=0; i<26; i++) {
+// 		alphabet[i] = ch++;
+// 	}
+
+// 	ch = 'a';
+
+// 	for (int i=0; i<32; i++) {
+// 			for (int j=0; j<256; j++) {
+// 			semantics[i][j] = ch;
+// 		}
+// 		semantic.append(semantics[i]);
+// 	}
+
+// return semantic;
+// };
 
 void AI::run_checks(int args) {
 	std::cout << "-:: running checks arguments." << std::endl;
@@ -976,7 +985,6 @@ void AI::subtract_account(float x) {	// subtracts amount x in accounts[]
 };
 
 void AI::change_account(int x) {	// changes account_nr in accounts[]
-	
 	this->account->setAccount(x);
 	std::cout << "- account changed to account ("
 				<< this->account->getAccount() << ")."
