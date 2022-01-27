@@ -162,6 +162,9 @@ int steering(int arc) {
 
 	ai.store_accounts_detail();
 
+	// stat directory
+	ai.statdir("./ai");
+
 	sleep(4);
 
 	// stage down and decouple logic (graceful shutdown)

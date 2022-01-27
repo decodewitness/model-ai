@@ -999,6 +999,13 @@ void AI::transfer(int src, int dst, float amount) {
 	this->account->transfer_account(src, dst, amount);
 };
 
+// stat directory
+int AI::statdir(std::string d) {
+	int x=stats(d);	// from statx.cpp file
+	std::cout << std::endl << "\t--statdir(\"" << d << "\") (flag:" << x << ")" << std::endl;
+return x;
+};
+
 // OTHER FUNCTIONS
 std::string * stackmodule(int x, std::string *ar) {
 	// stacking header

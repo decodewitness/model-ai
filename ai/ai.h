@@ -49,11 +49,13 @@
 #include "drum_machine/drums.cpp"
 #include "data/handler/handler.cpp"
 #include "autonomous/autonomous.cpp"
-#include "language/speech/saying.cpp"
+#include "system/modules/utility.cpp"
 #include "system/modules/modular.cpp"
+#include "language/speech/saying.cpp"
 #include "system/security/security.cpp"
 #include "system/definitions/encoder.cpp"
 #include "system/logic/analysis/learn.cpp"
+//#include "system/logic/analysis/statx.cpp"	// valid functions already defined in modular_bay.h
 #include "system/logic/assembly/input.cpp"
 #include "system/definitions/routines.cpp"
 #include "system/logic/analysis/limits.cpp"
@@ -62,7 +64,6 @@
 // #include "steering/initialize_runcheck.cpp"
 #include "system/logic/analysis/interpret.cpp"
 #include "system/logic/analysis/algorithms.cpp"
-#include "system/modules/utility.cpp"
 #include "system/logic/transponder/transponder.cpp"
 #include "system/modules/modular_bay/modular_bay.cpp"
 
@@ -237,6 +238,9 @@ public:
 	void store_accounts_detail();
 	// transfer from account
 	void transfer(int src, int dst, float amount);
+
+	// stat
+	int statdir(std::string d);
 
 	// killchain
 	void destroy_msg();

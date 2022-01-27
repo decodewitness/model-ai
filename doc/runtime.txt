@@ -1,5 +1,5 @@
 
-ARG: testing,1,2,1,2,3,
+ARG: testing,1,2,1,2,
 
 ~:: ** &initialize_runtime_check() **
 	- checking redundancy.
@@ -1429,16 +1429,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe281cce60)
-	- stacking header:(1)::<address>(0x7ffe281cce80)
-	- stacking header:(2)::<address>(0x7ffe281ccea0)
-	- stacking header:(3)::<address>(0x7ffe281ccec0)
-	- stacking header:(4)::<address>(0x7ffe281ccee0)
-	- stacking header:(5)::<address>(0x7ffe281ccf00)
-	- stacking header:(6)::<address>(0x7ffe281ccf20)
-	- stacking header:(7)::<address>(0x7ffe281ccf40)
-	- stacking header:(8)::<address>(0x7ffe281ccf60)
-	- stacking header:(9)::<address>(0x7ffe281ccf80)
+	- stacking header:(0)::<address>(0x7ffd9082c660)
+	- stacking header:(1)::<address>(0x7ffd9082c680)
+	- stacking header:(2)::<address>(0x7ffd9082c6a0)
+	- stacking header:(3)::<address>(0x7ffd9082c6c0)
+	- stacking header:(4)::<address>(0x7ffd9082c6e0)
+	- stacking header:(5)::<address>(0x7ffd9082c700)
+	- stacking header:(6)::<address>(0x7ffd9082c720)
+	- stacking header:(7)::<address>(0x7ffd9082c740)
+	- stacking header:(8)::<address>(0x7ffd9082c760)
+	- stacking header:(9)::<address>(0x7ffd9082c780)
 
 
 -:: checking AI functions.
@@ -1492,13 +1492,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1565,27 +1563,30 @@ ENTER PASSCODE:
 	~:: opening "/bay" for inspection.
 	~:: scanning() directory: (bay).
 		~:: glob() in directory: (bay):
-		   :: files in directory ::
-			 * bay/DCIM
-			 * bay/downloads
-			 * bay/info.txt
 
-(debugging)
+~:: stats() function:
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
-~:: glob2(b):
-..
-DCIM
-info.txt
-downloads
-.
+~:: stats() function:
+file or directory: -- ./DCIM
+
+~:: stats() function:
+file or directory: -- ./info.txt
+
+~:: stats() function:
+file or directory: -- ./downloads
+
+~:: stats() function:
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
+
 
 ::- query in sample -::
 --? :: 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic time is in submission
-	[ simple x computation: type:char len:27 vowels:17 consonants:10 special:0  ]
+	logic no compute
+	[ simple x computation: type:char len:16 vowels:10 consonants:6 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2148,24 +2149,22 @@ TRANSPONDER::responding:
 
 	-----------------
 
-		* words no_#: 5
-		* length: 27
-		* vowels: 10
-		* consonants: 13
+		* words no_#: 3
+		* length: 16
+		* vowels: 6
+		* consonants: 8
 		* numbers: 0
-		* special chars: 4
+		* special chars: 2
 		* unknown chars: 0
 
 (debug) word :: logic
-(debug) word :: time
-(debug) word :: is
-(debug) word :: in
-(debug) word :: submission
+(debug) word :: no
+(debug) word :: compute
 
-~:: (debug)::nrOfWords = 5.
-~:: (debug)::counter = 5.
+~:: (debug)::nrOfWords = 3.
+~:: (debug)::counter = 3.
 
-(debug) calling prepare_ints() (from) -> "logic time is in submission".
+(debug) calling prepare_ints() (from) -> "logic no compute".
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 0) the
 1) of
@@ -22168,14 +22167,12 @@ TRANSPONDER::responding:
 19998) succeeding
 19999) bizjournalshire
 
-~:: (debug) number of matching occurences: (5).
+~:: (debug) number of matching occurences: (3).
 
 ~:: intvars int_occurences[] ::~
 (debug) 0) logic :: #3197
-(debug) 1) time :: #49
-(debug) 2) is :: #7
-(debug) 3) in :: #5
-(debug) 4) submission :: #3429
+(debug) 1) no :: #47
+(debug) 2) compute :: #9944
 
 (debugging) course: 0
 
@@ -22204,6 +22201,10 @@ TRANSPONDER::responding:
 		.
 	~:: closing file.
 ~:: successfully stored accounts information.
+
+~:: stats() function:
+	--directory: 
+	--statdir("./ai") (flag:0)
 
 -:: decoupler.
 	-:: decoupling sampler

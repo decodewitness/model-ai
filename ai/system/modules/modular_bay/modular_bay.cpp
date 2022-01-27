@@ -6,6 +6,7 @@
 #include <fstream>
 #include <ctime>
 #include <thread>
+#include <unistd.h>
 
 #include "modular_bay.h"
 
@@ -69,30 +70,41 @@ class ModularBay {
             std::cout << "\t~:: closing file: " << this->filename << std::endl << std::endl;
             this->file_data.close();
             this->file_is_open = false;
-        }
+        };
 
         void globf(std::string pattern) {
             // glob all content inside the bay area
             
-            char bay[] = "/bay";
+            char bay[] = "bay";
             
             std::cout << "\t\t~:: glob() in directory: (" << this->path_var << "):" << std::endl;
             
             // glob here
                 // handle string vector
-            glob(pattern.c_str());
+            //glob(pattern.c_str());    // old glob function
         
-            // glob function 2
-                // recursive
-            std::cout << std::endl << "(debugging)" << std::endl << std::endl;
-            glob2(1, bay);
-        }
+            //std::cout << std::endl << "(debugging)" << std::endl << std::endl;
+            // glob2(1, bay);
+
+            // glob4b() function
+            glob3c(1,bay);  // from statx.cpp
+            // debugging sleep
+            sleep(4);
+
+            // output
+            // std::cout << std::endl;
+            // std::cout << "(debug) flag=" << x << ";" << std::endl;
+            // std::cout << "total directories: " << dcount << std::endl;
+            // std::cout << "total files in directories: " << fcount << std::endl;
+
+            std::cout << std::endl;
+        };
 
         void scan() {
             std::cout << "\t~:: scanning() directory: (" << this->path_var << ")." << std::endl;
             // scan bay periodically based on the time ~ ca. once every 30 seconds or 60 seconds or so
             this->globf(pattern);
-        }
+        };
 
         void analyze() {
             // analyze data
@@ -104,9 +116,6 @@ class ModularBay {
 // glob bay for (new) files
 
 // format data
-
-
-
 
 // functions
 // void funct() {
