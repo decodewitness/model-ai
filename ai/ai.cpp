@@ -162,6 +162,28 @@ std::string AI::hashtype(std::string s) {
 	return hashn(s);
 };
 
+std::string AI::hashchain(std::string s) {	// 's' is the seed for the chain strength that can form a crypto
+	
+	std::string flow(std::string flux);
+
+	// already define circle in "shapes"
+	// float radius = 0.5;	// (unit) measures
+	// float center[] = { 0.0, 0.0, 0.0 };	// x,y,z coordinates
+	// float circle = 360.0;				// = radius in degrees over counter clockwise over 1 second.
+	// float circumreference = 2 * pi() * radius;	// line around the cirle
+	// float diameter = 2.0;	// (unit) measures
+};
+
+std::string flow(float fl) {
+
+	float flux = fl;
+	char ch='a', alphabet[26];
+
+	// alphabet gets filled with all letters
+	for (int i=0; i<26; i++) {
+		alphabet[i] = ch++;
+	}
+};
 
 void AI::run_checks(int args) {
 	std::cout << "-:: running checks arguments." << std::endl;
