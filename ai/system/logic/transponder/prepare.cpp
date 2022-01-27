@@ -110,9 +110,10 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
         }
     }
 
-    for (int i=0; i<l; i++) {
-        std::cout << i << ") " << our_dict[i] << std::endl; 
-    }
+    //  // for iterating through the dictionary
+    // for (int i=0; i<l; i++) {
+    //     std::cout << i << ") " << our_dict[i] << std::endl; 
+    // }
 
     std::cout << std::endl << "~:: (debug) number of matching occurences: (" << occurences << ")." << std::endl;
     

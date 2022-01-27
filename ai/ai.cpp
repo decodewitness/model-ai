@@ -166,6 +166,8 @@ std::string AI::hashchain(std::string s) {	// 's' is the seed for the chain stre
 	
 	std::string flow(std::string flux);
 
+	Circle circle;
+	
 	// already define circle in "shapes"
 	// float radius = 0.5;	// (unit) measures
 	// float center[] = { 0.0, 0.0, 0.0 };	// x,y,z coordinates

@@ -95,7 +95,7 @@ int steering(int arc) {
 
 	// hash function checks file hashes
 	ai.hashtype("ai"); // checking integrity
-	ai.hashchain();
+	ai.hashchain("artificial intelligence");
 	// logical kill chain (uncomment next line)
 	//ai.kill(9);
 
