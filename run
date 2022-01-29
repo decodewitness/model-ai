@@ -51,11 +51,11 @@ echo "~:done."
 
 ### install libssl-dev
 echo
-echo "~!~ I need SUDO to install \"libssl-dev\"."
+echo "~!~ I need SUDO to install \"libssl-dev\", \"libsdl2-dev\", \"libsdl2-mixer-dev\", \"libsdl2-net-dev\", \"libsdl2-ttf-dev\", \"libsdl2-image-dev\", \"libsdl2-gfx-dev\", and \"libasound2-dev\"."
 echo
 echo "~:installing \"libssl-dev\"."
 echo
-sudo apt -y install libssl-dev
+sudo apt -y install libssl-dev libasound2-dev libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-gfx-dev
 echo "~:done."
 
 ### execute the random script for manipulation of data
@@ -68,8 +68,10 @@ fi
 
 ### compile main.cpp
 echo
-echo "~:compiling... flags: (-lcurl)"
-g++ -o a.out ./main.cpp -lcurl
+echo "~:compiling... flags: (-lcurl -lasound -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)"
+# g++ -o a.out -lcurl -I/usr/include/SDL2 -L/usr/lib/ main.cpp -Wl,--allow-shlib-undefined -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lrt
+g++ -o a.out ./main.cpp -lcurl -lasound -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+
 echo "~:done."
 
 ### compiling "sha1.cpp" with the "sha1.sh" script

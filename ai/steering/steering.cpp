@@ -67,6 +67,10 @@ int steering(int arc) {
 	// health
 	chk();
 	
+	// audio
+	// ai.initialize_audio();
+	// ai.play_audio()
+
 	// auto patch
 	ai.auto_patch();
 
@@ -97,6 +101,9 @@ int steering(int arc) {
 	ai.hashtype("ai"); // checking integrity
 	//ai.hashchain("artificial intelligence");
 	
+	// play audio
+	ai.play_audio();
+
 	// logical kill chain (uncomment next line)
 	//ai.kill(9);
 

@@ -382,6 +382,21 @@ void run_checks(int n) {
 	std::cout << "-:: running checks" << std::endl << std::endl;
 }
 
+void AI::initialize_audio() {
+	std::cout << std::endl << "~:: preparing audio devices." << std::endl;
+	prep_audio();
+};
+
+void AI::play_audio() {
+	std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
+	play_audio_device();
+}
+
+void AI::uninitialize_audio() {
+	std::cout << std::endl << "~:: unpreparing audio devices." << std::endl;
+	unprep_audio();
+};
+
 void AI::test_run(int flag=0) {	// simulate a test run
 	std::cout << std::endl;
 	//std::cout << "- entering (test run) simulation." << std::endl;
@@ -574,7 +589,7 @@ void AI::decouple() {
 
 	std::cout << "\t-:: decoupling sampler" << std::endl;
 	this->sampler->decouple();
-	
+	// this->unprep_audio();	// unprepare audio devices
 	this->saygrace();
 }
 
@@ -583,7 +598,9 @@ void AI::destroy_msg() {
 }
 
 void AI::saygrace() {
-	std::cout  << std::endl << std::endl << "::=> saving grace (routine) and closing libraries <=::" << std::endl;
+	std::cout  << std::endl;
+	std::cout << std::endl << "::=> saving grace (routine) and closing libraries <=::" << std::endl;
+	std::cout << std::endl;
 		
 	this->nr = 0;
 	this->ch = '0';
@@ -609,6 +626,10 @@ void AI::saygrace() {
 	this->comb = false;
 	this->combm = false;
 
+	// unprep audio
+	this->uninitialize_audio();
+
+	// send destruction message
 	this->destroy_msg();
 
 	// final AI message

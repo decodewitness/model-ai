@@ -46,6 +46,7 @@
 #include "sampler/sampler.cpp"
 // #include "steering/splash.h"
 #include "language/concepts.cpp"
+#include "system/audio/audio.cpp"
 #include "drum_machine/drums.cpp"
 #include "data/handler/handler.cpp"
 #include "autonomous/autonomous.cpp"
@@ -185,6 +186,11 @@ public:
 	void AMMod();
 	void mod();
 	void constr();
+
+	// audio
+	void initialize_audio();
+	void uninitialize_audio();
+	void play_audio();
 
 	// patching
 	void auto_patch();

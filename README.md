@@ -1481,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd482373e0)
-	- stacking header:(1)::<address>(0x7ffd48237400)
-	- stacking header:(2)::<address>(0x7ffd48237420)
-	- stacking header:(3)::<address>(0x7ffd48237440)
-	- stacking header:(4)::<address>(0x7ffd48237460)
-	- stacking header:(5)::<address>(0x7ffd48237480)
-	- stacking header:(6)::<address>(0x7ffd482374a0)
-	- stacking header:(7)::<address>(0x7ffd482374c0)
-	- stacking header:(8)::<address>(0x7ffd482374e0)
-	- stacking header:(9)::<address>(0x7ffd48237500)
+	- stacking header:(0)::<address>(0x7ffec5c15990)
+	- stacking header:(1)::<address>(0x7ffec5c159b0)
+	- stacking header:(2)::<address>(0x7ffec5c159d0)
+	- stacking header:(3)::<address>(0x7ffec5c159f0)
+	- stacking header:(4)::<address>(0x7ffec5c15a10)
+	- stacking header:(5)::<address>(0x7ffec5c15a30)
+	- stacking header:(6)::<address>(0x7ffec5c15a50)
+	- stacking header:(7)::<address>(0x7ffec5c15a70)
+	- stacking header:(8)::<address>(0x7ffec5c15a90)
+	- stacking header:(9)::<address>(0x7ffec5c15ab0)
 
 
 -:: checking AI functions.
@@ -1622,13 +1622,13 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+block device: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+block device: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+block device: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1639,8 +1639,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logical contrary statement went in public
-	[ simple x computation: type:char len:41 vowels:29 consonants:12 special:0  ]
+	ai
+	[ simple x computation: type:char len:2 vowels:0 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1772,6 +1772,9 @@ x
 
 ~:: hashing: ai
 	4921c0e2d1f6005abe1f9ec2e2041909
+
+~:: playing audio device.
+
 
 -:: check integrity / logical step counter.
 
@@ -2203,36 +2206,26 @@ TRANSPONDER::responding:
 
 	-----------------
 
-		* words no_#: 6
-		* length: 41
-		* vowels: 12
-		* consonants: 24
+		* words no_#: 1
+		* length: 2
+		* vowels: 2
+		* consonants: 0
 		* numbers: 0
-		* special chars: 5
+		* special chars: 0
 		* unknown chars: 0
 
-(debug) word :: logical
-(debug) word :: contrary
-(debug) word :: statement
-(debug) word :: went
-(debug) word :: in
-(debug) word :: public
+(debug) word :: ai
 
-~:: (debug)::nrOfWords = 6.
-~:: (debug)::counter = 6.
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "logical contrary statement went in public".
+(debug) calling prepare_ints() (from) -> "ai".
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 
-~:: (debug) number of matching occurences: (6).
+~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) logical :: #5753
-(debug) 1) contrary :: #6810
-(debug) 2) statement :: #794
-(debug) 3) went :: #1178
-(debug) 4) in :: #5
-(debug) 5) public :: #161
+(debug) 0) ai :: #5319
 
 (debugging) course: 0
 
@@ -2273,11 +2266,11 @@ TRANSPONDER::responding:
 
 
 ::=> saving grace (routine) and closing libraries <=::
+
 -:: closing files.
 -:: cleaning memory.
 
--:: calling destructor for AI::Model.
--:: done.
+~:: unpreparing audio devices.
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).
