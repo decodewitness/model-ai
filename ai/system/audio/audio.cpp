@@ -19,7 +19,7 @@ int play_audio_device() {
         "ai/system/audio/samples/taptaptap.wav"
     };
 
-    SDL_Surface *screen;            //Pointer to the main screen surface
+    //SDL_Surface *screen;            //Pointer to the main screen surface
     Mix_Chunk *sound = NULL;        //Pointer to our sound, in memory
     int channel;                //Channel on which our sound is played
  
@@ -64,7 +64,7 @@ int play_audio_device() {
     //Play our sound file, and capture the channel on which it is played
     channel = Mix_PlayChannel(-1, sound, 0);
     if(channel == -1) {
-        printf("Unable to play WAV file: %s\n", Mix_GetError());
+        printf("~::!:: (error) :: unable to play WAV file: %s\n", Mix_GetError());
     }
  
  
