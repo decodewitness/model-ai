@@ -1481,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc54f13750)
-	- stacking header:(1)::<address>(0x7ffc54f13770)
-	- stacking header:(2)::<address>(0x7ffc54f13790)
-	- stacking header:(3)::<address>(0x7ffc54f137b0)
-	- stacking header:(4)::<address>(0x7ffc54f137d0)
-	- stacking header:(5)::<address>(0x7ffc54f137f0)
-	- stacking header:(6)::<address>(0x7ffc54f13810)
-	- stacking header:(7)::<address>(0x7ffc54f13830)
-	- stacking header:(8)::<address>(0x7ffc54f13850)
-	- stacking header:(9)::<address>(0x7ffc54f13870)
+	- stacking header:(0)::<address>(0x7ffd60a8e260)
+	- stacking header:(1)::<address>(0x7ffd60a8e280)
+	- stacking header:(2)::<address>(0x7ffd60a8e2a0)
+	- stacking header:(3)::<address>(0x7ffd60a8e2c0)
+	- stacking header:(4)::<address>(0x7ffd60a8e2e0)
+	- stacking header:(5)::<address>(0x7ffd60a8e300)
+	- stacking header:(6)::<address>(0x7ffd60a8e320)
+	- stacking header:(7)::<address>(0x7ffd60a8e340)
+	- stacking header:(8)::<address>(0x7ffd60a8e360)
+	- stacking header:(9)::<address>(0x7ffd60a8e380)
 
 
 -:: checking AI functions.
@@ -1544,13 +1544,11 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1769,12 +1767,13 @@ xxxxxxxxxxxxxxxxxx
 x
 	- closing ai/data/nop
 
-
 ~:: hashing: ai
 	4921c0e2d1f6005abe1f9ec2e2041909
 
 ~:: playing audio device.
 
+Unable to load WAV file: Mix_LoadWAV_RW with NULL src
+Unable to play WAV file: Tried to play a NULL chunk
 
 -:: check integrity / logical step counter.
 
@@ -2270,7 +2269,8 @@ TRANSPONDER::responding:
 -:: closing files.
 -:: cleaning memory.
 
-~:: unpreparing audio devices.
+-:: calling destructor for AI::Model.
+-:: done.
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).

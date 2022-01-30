@@ -14,7 +14,7 @@ void hash(std::string h) {
 std::string hashn(std::string h) {
 	std::string ourhash;
 	ourhash = md5(h);
-	std::cout << std::endl;
+	// std::cout << std::endl;
 	std::cout << "~:: hashing: " << h << std::endl;
 	std::cout << "\t" << ourhash << std::endl;
 

@@ -382,20 +382,10 @@ void run_checks(int n) {
 	std::cout << "-:: running checks" << std::endl << std::endl;
 }
 
-void AI::initialize_audio() {
-	std::cout << std::endl << "~:: preparing audio devices." << std::endl;
-	prep_audio();
-};
-
 void AI::play_audio() {
 	std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
 	play_audio_device();
 }
-
-void AI::uninitialize_audio() {
-	std::cout << std::endl << "~:: unpreparing audio devices." << std::endl;
-	unprep_audio();
-};
 
 void AI::test_run(int flag=0) {	// simulate a test run
 	std::cout << std::endl;
@@ -625,9 +615,6 @@ void AI::saygrace() {
 	this->modul = false;
 	this->comb = false;
 	this->combm = false;
-
-	// unprep audio
-	this->uninitialize_audio();
 
 	// send destruction message
 	this->destroy_msg();

@@ -188,8 +188,6 @@ public:
 	void constr();
 
 	// audio
-	void initialize_audio();
-	void uninitialize_audio();
 	void play_audio();
 
 	// patching

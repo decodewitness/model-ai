@@ -1429,16 +1429,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffec5c15990)
-	- stacking header:(1)::<address>(0x7ffec5c159b0)
-	- stacking header:(2)::<address>(0x7ffec5c159d0)
-	- stacking header:(3)::<address>(0x7ffec5c159f0)
-	- stacking header:(4)::<address>(0x7ffec5c15a10)
-	- stacking header:(5)::<address>(0x7ffec5c15a30)
-	- stacking header:(6)::<address>(0x7ffec5c15a50)
-	- stacking header:(7)::<address>(0x7ffec5c15a70)
-	- stacking header:(8)::<address>(0x7ffec5c15a90)
-	- stacking header:(9)::<address>(0x7ffec5c15ab0)
+	- stacking header:(0)::<address>(0x7ffe3ed24cc0)
+	- stacking header:(1)::<address>(0x7ffe3ed24ce0)
+	- stacking header:(2)::<address>(0x7ffe3ed24d00)
+	- stacking header:(3)::<address>(0x7ffe3ed24d20)
+	- stacking header:(4)::<address>(0x7ffe3ed24d40)
+	- stacking header:(5)::<address>(0x7ffe3ed24d60)
+	- stacking header:(6)::<address>(0x7ffe3ed24d80)
+	- stacking header:(7)::<address>(0x7ffe3ed24da0)
+	- stacking header:(8)::<address>(0x7ffe3ed24dc0)
+	- stacking header:(9)::<address>(0x7ffe3ed24de0)
 
 
 -:: checking AI functions.
@@ -1570,13 +1570,13 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./DCIM
+socket: -- ./DCIM
 
 ~:: stats() function:
-block device: -- ./info.txt
+socket: -- ./info.txt
 
 ~:: stats() function:
-block device: -- ./downloads
+socket: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1587,8 +1587,8 @@ block device: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	ai
-	[ simple x computation: type:char len:2 vowels:0 consonants:2 special:0  ]
+	logic
+	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1716,7 +1716,6 @@ xxxxxxxxxxxxxxxxxx
 	- opened ai/data/nop.
 x
 	- closing ai/data/nop
-
 
 ~:: hashing: ai
 	4921c0e2d1f6005abe1f9ec2e2041909
@@ -2155,25 +2154,25 @@ TRANSPONDER::responding:
 	-----------------
 
 		* words no_#: 1
-		* length: 2
+		* length: 5
 		* vowels: 2
-		* consonants: 0
+		* consonants: 3
 		* numbers: 0
 		* special chars: 0
 		* unknown chars: 0
 
-(debug) word :: ai
+(debug) word :: logic
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "ai".
+(debug) calling prepare_ints() (from) -> "logic".
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 
 ~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) ai :: #5319
+(debug) 0) logic :: #3197
 
 (debugging) course: 0
 
@@ -2218,4 +2217,5 @@ TRANSPONDER::responding:
 -:: closing files.
 -:: cleaning memory.
 
-~:: unpreparing audio devices.
+-:: calling destructor for AI::Model.
+-:: done.
