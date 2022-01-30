@@ -69,7 +69,7 @@ int steering(int arc) {
 	
 	// audio
 	// ai.initialize_audio();
-	// ai.play_audio()
+	// ai.play_audio(0)
 
 	// auto patch
 	ai.auto_patch();
@@ -99,10 +99,12 @@ int steering(int arc) {
 
 	// hash function checks file hashes
 	ai.hashtype("ai"); // checking integrity
+	//ai.play_audio(0);
+	sleep(1);
 	//ai.hashchain("artificial intelligence");
 	
 	// play audio
-	ai.play_audio();
+	// ai.play_audio(1);
 
 	// logical kill chain (uncomment next line)
 	//ai.kill(9);
@@ -173,7 +175,7 @@ int steering(int arc) {
 	// stat directory
 	ai.statdir("./ai");
 
-	sleep(4);
+	sleep(1);
 
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();

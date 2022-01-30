@@ -89,7 +89,7 @@ class ModularBay {
             // glob4b() function
             glob3c(1,bay);  // from statx.cpp
             // debugging sleep
-            sleep(4);
+            sleep(1);
 
             // output
             // std::cout << std::endl;

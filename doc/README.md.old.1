@@ -63,6 +63,9 @@ ARG: testing,1,2,1,2,
 _ARC(debug): 1 -- 
  ** ][][ **
 
+
+~:: playing audio device.
+
 ~:: security routine
 ENTER PASSCODE: 
 (debug) checking passcode.
@@ -1481,16 +1484,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd60a8e260)
-	- stacking header:(1)::<address>(0x7ffd60a8e280)
-	- stacking header:(2)::<address>(0x7ffd60a8e2a0)
-	- stacking header:(3)::<address>(0x7ffd60a8e2c0)
-	- stacking header:(4)::<address>(0x7ffd60a8e2e0)
-	- stacking header:(5)::<address>(0x7ffd60a8e300)
-	- stacking header:(6)::<address>(0x7ffd60a8e320)
-	- stacking header:(7)::<address>(0x7ffd60a8e340)
-	- stacking header:(8)::<address>(0x7ffd60a8e360)
-	- stacking header:(9)::<address>(0x7ffd60a8e380)
+	- stacking header:(0)::<address>(0x7ffebf782580)
+	- stacking header:(1)::<address>(0x7ffebf7825a0)
+	- stacking header:(2)::<address>(0x7ffebf7825c0)
+	- stacking header:(3)::<address>(0x7ffebf7825e0)
+	- stacking header:(4)::<address>(0x7ffebf782600)
+	- stacking header:(5)::<address>(0x7ffebf782620)
+	- stacking header:(6)::<address>(0x7ffebf782640)
+	- stacking header:(7)::<address>(0x7ffebf782660)
+	- stacking header:(8)::<address>(0x7ffebf782680)
+	- stacking header:(9)::<address>(0x7ffebf7826a0)
 
 
 -:: checking AI functions.
@@ -1548,7 +1551,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1620,16 +1624,19 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-character device: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-character device: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
+
+
+~:: playing audio device.
 
 
 ::- query in sample -::
@@ -1769,11 +1776,6 @@ x
 
 ~:: hashing: ai
 	4921c0e2d1f6005abe1f9ec2e2041909
-
-~:: playing audio device.
-
-Unable to load WAV file: Mix_LoadWAV_RW with NULL src
-Unable to play WAV file: Tried to play a NULL chunk
 
 -:: check integrity / logical step counter.
 
@@ -1982,7 +1984,7 @@ Unable to play WAV file: Tried to play a NULL chunk
 	~:: initialized with (2) sampling tracks.
 
 ~:: sampler :: ~ :: generated (16)  new tracks-in-track.
-	~:: total initialized tracks [8].
+	~:: total initialized tracks [-131066].
 
 ~:: setting tracks-in-track (1) to (2) tracks.
 ~:: setting track [1] index to (00h/00m/00s)

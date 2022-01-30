@@ -6,7 +6,7 @@
 #include "SDL2/SDL_image.h"
 #include <SDL2/SDL_ttf.h>
  
-int play_audio_device() {
+int play_audio_device(int s=1) {
     // if (argc != 2)
     // {
     //     fprintf(stderr, "You must enter 1 argument!");
@@ -16,6 +16,7 @@ int play_audio_device() {
     #define NUM_WAVEFORMS 1
     const char* _waveFileNames[] =
     {
+        "ai/system/audio/samples/fixing (short).wav",
         "ai/system/audio/samples/taptaptap.wav"
     };
 
@@ -45,7 +46,7 @@ int play_audio_device() {
  
  
     //Load our WAV file from disk
-    sound = Mix_LoadWAV(_waveFileNames[0]);
+    sound = Mix_LoadWAV(_waveFileNames[s]);
     if(sound == NULL) {
         printf("Unable to load WAV file: %s\n", Mix_GetError());
     }
@@ -86,6 +87,6 @@ int play_audio_device() {
 }
 
 // int main() {
-//     play_audio();
+//     ;
 // return 0;
 // }

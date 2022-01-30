@@ -188,7 +188,7 @@ public:
 	void constr();
 
 	// audio
-	void play_audio();
+	void play_audio(int s);
 
 	// patching
 	void auto_patch();

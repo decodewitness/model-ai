@@ -60,6 +60,8 @@ std::string moduleData[module_limits] = {
 // AI constructor
 AI::AI(int n) {
 
+	this->play_audio(0);
+
 	if (this->access == false) {
 		this->enforce_security();	// also draws security prompt
 	}
@@ -382,9 +384,11 @@ void run_checks(int n) {
 	std::cout << "-:: running checks" << std::endl << std::endl;
 }
 
-void AI::play_audio() {
-	std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
-	play_audio_device();
+void AI::play_audio(int s=1) {
+	// debug string
+	//std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
+	
+	play_audio_device(s);
 }
 
 void AI::test_run(int flag=0) {	// simulate a test run
@@ -625,11 +629,13 @@ void AI::saygrace() {
 
 void AI::query() {
 	// QUERY
-
-	std::cout << std::endl << "::- query in sample -::" << std::endl;
+	std::cout << std::endl << "::- type your query  -::" << std::endl;
 	
+	// play audio
+	this->play_audio(1);
+
 	// PROMPT
-	std::cout << "--? :: ";
+	std::cout << "--?:: ";
 	
 	std::string y;
 	// std::string sentence;
@@ -715,6 +721,8 @@ int AI::links(std::string url, int max) {
 };
 
 void AI::enforce_security() {
+	this->play_audio(1);
+
 	bool ack = security_prompt();
 	this->access = ack;
 };
