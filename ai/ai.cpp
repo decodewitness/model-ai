@@ -57,14 +57,53 @@ std::string moduleData[module_limits] = {
 	"__REACHED_EOM_THE_LAST_MODULE"
 }; // PLACEHOLDER INSIDE LAST MODULE AGAIN
 
+// initialize_runtime_check
+void AI::initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
+    std::cout << "~:: ** &initialize_runtime_check() **" << std::endl;
+
+	int nrsteps = 3;
+    
+	// // moved to runtime script --> "/run"
+    // // compile sha1 program from external library.
+    // std::cout << "(debugging symbol here)" << std::endl;
+    // system("ai/system/security/sha1/sha1.sh");
+    // std::cout << "(debugging symbol here)" << std::endl;
+
+    for (int i=0; i<nrsteps; i++) {
+        switch (i) {
+            case 0: // redundant cycle
+                std::cout << "\t- checking redundancy." << std::endl;
+                break;
+                // do logic here
+            case 1: // files complete
+                std::cout << "\t- file hierarchy." << std::endl;
+                break;
+                // do logic here
+            case 2: // file integrity && hashing
+                std::cout << "\t- file integrity." << std::endl;
+                break;
+                // do logic here
+            case 3: // compensate
+                std::cout << "\t- compensating measures." << std::endl;
+                break;
+                // do logic here
+            default: // skipping step 0 (or implement) as well as any additional steps.
+                // do logic here
+                std::cout << "\t- (debug) skipping redundant caching." << std::endl;
+                break;
+        };
+    }
+};
+
 // AI constructor
 AI::AI(int n) {
-
 	this->play_audio(0);
 
 	if (this->access == false) {
 		this->enforce_security();	// also draws security prompt
 	}
+
+	initialize_runtime_check();
 
 	// splash oval
 	int x=amnesia();
@@ -249,7 +288,6 @@ void AI::check_functions() {
 }
 
 void AI::headers() {
-	
 	// file streams
 	ifstream indata;
 	ofstream outdata;
@@ -390,6 +428,41 @@ void AI::play_audio(int s=1) {
 	
 	play_audio_device(s);
 }
+
+// copy function
+// must be redevised native and compatibly
+bool AI::cp(std::string src, std::string dst) {
+
+	std::cout << std::endl;
+	std::string command;
+	
+	// copy command
+	command = "cp ";
+	command = command + src;
+	command = command + " ";
+	command = command + dst;
+
+	// system command
+	bool x = system(command.c_str());
+
+	// needs stat() to verify that the file was copied
+
+	// output
+	std::cout << "~:: 1 file copied. (" << src << ") (" << dst << ")" << std::endl;
+	return x;
+};
+
+// remove function for files
+bool AI::rm(std::string f) {
+	std::cout << std::endl;
+	unlink(f.c_str());
+
+	// needs stat() to verify that the file was deleted
+
+	std::cout << "~:: removed 1 file. (" << f << ")" << std::endl;
+return true;
+};
+
 
 void AI::test_run(int flag=0) {	// simulate a test run
 	std::cout << std::endl;

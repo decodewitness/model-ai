@@ -53,10 +53,6 @@ LOGGED OUTPUT OF THIS BETA:
 
 ARG: testing,1,2,1,2,
 
-~:: ** &initialize_runtime_check() **
-	- checking redundancy.
-	- file hierarchy.
-	- file integrity.
 
 -:: enabled logging.
 
@@ -69,6 +65,10 @@ ENTER PASSCODE:
 ~:: inside meta query.
 (debug) hashcode: 4921c0e2d1f6005abe1f9ec2e2041909 hash: 4921c0e2d1f6005abe1f9ec2e2041909
 -:: ACCESS GRANTED (level) (security_level)	~::exporting to environment.
+~:: ** &initialize_runtime_check() **
+	- checking redundancy.
+	- file hierarchy.
+	- file integrity.
 
                                                                                
                                                                                
@@ -1481,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe1970ee60)
-	- stacking header:(1)::<address>(0x7ffe1970ee80)
-	- stacking header:(2)::<address>(0x7ffe1970eea0)
-	- stacking header:(3)::<address>(0x7ffe1970eec0)
-	- stacking header:(4)::<address>(0x7ffe1970eee0)
-	- stacking header:(5)::<address>(0x7ffe1970ef00)
-	- stacking header:(6)::<address>(0x7ffe1970ef20)
-	- stacking header:(7)::<address>(0x7ffe1970ef40)
-	- stacking header:(8)::<address>(0x7ffe1970ef60)
-	- stacking header:(9)::<address>(0x7ffe1970ef80)
+	- stacking header:(0)::<address>(0x7ffc388d4060)
+	- stacking header:(1)::<address>(0x7ffc388d4080)
+	- stacking header:(2)::<address>(0x7ffc388d40a0)
+	- stacking header:(3)::<address>(0x7ffc388d40c0)
+	- stacking header:(4)::<address>(0x7ffc388d40e0)
+	- stacking header:(5)::<address>(0x7ffc388d4100)
+	- stacking header:(6)::<address>(0x7ffc388d4120)
+	- stacking header:(7)::<address>(0x7ffc388d4140)
+	- stacking header:(8)::<address>(0x7ffc388d4160)
+	- stacking header:(9)::<address>(0x7ffc388d4180)
 
 
 -:: checking AI functions.
@@ -1548,8 +1548,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1621,13 +1620,13 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1638,8 +1637,8 @@ FIFO/pipe: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	logic query
+	[ simple x computation: type:char len:11 vowels:7 consonants:4 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1648,20 +1647,6 @@ FIFO/pipe: -- ./downloads
 
 -:: destructor artificial life routine was called. -::
 	killing abstraction layer.
-
--:: checking health criteria
-	-:: health monitoring. (10) criteria.
-	-:: 1. one:	true
-	-:: 2. two: Modules:	true
-	-:: 3. three:	true
-	-:: 4. four:	true
-	-:: 5. five:	false
-	-:: 6. six:	true
-	-:: 7. seven:	false
-	-:: 8. eight:	true
-	-:: 9. nine:	true
-	-:: 10. ten:	true
-
 
 -/- getting "archives_list.csv"
 -/- done with downloads.
@@ -2201,26 +2186,28 @@ TRANSPONDER::responding:
 
 	-----------------
 
-		* words no_#: 1
-		* length: 5
-		* vowels: 2
-		* consonants: 3
+		* words no_#: 2
+		* length: 11
+		* vowels: 4
+		* consonants: 6
 		* numbers: 0
-		* special chars: 0
+		* special chars: 1
 		* unknown chars: 0
 
 (debug) word :: logic
+(debug) word :: query
 
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
+~:: (debug)::nrOfWords = 2.
+~:: (debug)::counter = 2.
 
-(debug) calling prepare_ints() (from) -> "logic".
+(debug) calling prepare_ints() (from) -> "logic query".
 	~:: succesfully opened dictionary: ai/data/files/20k.txt.
 
-~:: (debug) number of matching occurences: (1).
+~:: (debug) number of matching occurences: (2).
 
 ~:: intvars int_occurences[] ::~
 (debug) 0) logic :: #3197
+(debug) 1) query :: #2547
 
 (debugging) course: 0
 
@@ -2253,6 +2240,10 @@ TRANSPONDER::responding:
 ~:: stats() function:
 	--directory: 
 	--statdir("./ai") (flag:0)
+
+~:: 1 file copied. (main.cpp) (main2.cpp.txt)
+
+~:: removed 1 file. (main2.cpp.txt)
 
 -:: decoupler.
 	-:: decoupling sampler

@@ -2,6 +2,11 @@
 
 #include <iostream>
 
+#ifndef _TESTING
+#define _TESTING
+//#include "initialize_runcheck.cpp"
+#endif
+
 #ifndef _DATAOBJECT
 #define _DATAOBJECT
 
@@ -10,7 +15,7 @@
 
 // TESTING FILES && MODEL-AI
 
-bool testing1() {initialize_runtime_check(); return true; } // before start
+bool testing1() { return true; } // before start
 bool testing2() { return true; };	// initialize threads or load modules
 bool testing3() { return true; }; // next start / optimize
 

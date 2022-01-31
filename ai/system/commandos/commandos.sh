@@ -3,10 +3,10 @@
 ### COMPILING SCRIPT ###
 
 # COMMANDOS - PROGRAM TO USE THE INTERFACE - COMODOS 
-g++ ./ai/system/commandos/src/commandos.cpp -o ./ai/bin/commandos
+g++ ./ai/system/commandos/commandos.cpp -o ./ai/bin/commandos
 ./ai/bin/commandos --version
 # COMODOS - INTERFACE - USED BY COMMANDOS TO OPERATE ON "MODEL-AI" RUNTIME
-g++ ./ai/system/commandos/src/comodos.cpp -o ./ai/bin/comodos
+g++ ./ai/system/commandos/comodos.cpp -o ./ai/bin/comodos
 ./ai/bin/comodos --version
 ### INTEGRATE INTO THE OS FROM SCRIPT (HERE) OR ENABLE FOR (PROGRAM) COMMANDOS OR IN (MODEL-AI) RUNTIME OR (RUN) ###
 ### ENABLE FOLLOWING COMMANDS BY FREEING THE "if" (to the) "fi" LINES INCLUDING "sudos" FROM THE COMMENTED '#' TO INTEGRATE INTO "/USR/BIN"

@@ -7,7 +7,7 @@
 #ifndef _AI_HEADER
 #define _AI_HEADER
 
-#define VERSION "v0.1-24"
+#define VERSION "v0.1-25"
 #define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
 
 // commandos / comodos && _varaan
@@ -16,6 +16,7 @@
 // headers
 #include <cstring>
 #include <sys/stat.h>
+#include <filesystem>
 //#include <thread>
 
 // additional loaded variables
@@ -36,7 +37,7 @@
 #include "system/chk.h"
 #include "lib/data.cpp"
 #include "fetch/curl.cpp"
-// #include "lib/testing.cpp"
+#include "lib/testing.cpp"
 #include "system/gradle.h"
 #include "comodo/varaan.h"
 #include "lib/construct.cpp"
@@ -134,11 +135,11 @@ private:
 	moduleContainer m;
 
 public:
-
 	AI(int n=1);
 
 	// round init
 	void init();
+	void initialize_runtime_check();
 
 	// headers
 	void headers();
@@ -171,6 +172,10 @@ public:
 	// converter
 	void convert(int amount, int method);
 	void convertf(float amount, int method);
+
+	// file operations
+	bool cp(std::string src, std::string dst);
+	bool rm(std::string f);
 
 	// hall and functional stepping mechanism
 	void hal();
@@ -221,9 +226,9 @@ public:
 	void hdata();
 
 	// testing
-	bool testing1();
-	bool testing2();
-	bool testing3();
+	//bool testing1();
+	//bool testing2();
+	//bool testing3();
 
 	// account settings
 	void add_account(float x);

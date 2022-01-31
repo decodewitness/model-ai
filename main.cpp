@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 		std::cout << std::endl << "ARG: " << arguments << std::endl << std::endl;
 	}
 
-	initialize_runtime_check();	// checks for file integrity
+	//initialize_runtime_check();	// checks for file integrity
 	steering(1);	// steers the AI (class) code 
 	//steering(2);
 return 0;

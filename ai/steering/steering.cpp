@@ -54,18 +54,17 @@ int steering(int arc) {
 	splash();
 
 	// check files and such things / environment
-	// testing1();	// testing 1
-
+	// need to implement this function again
+	//testing1();	// testing 1
 
 	// class instances are main function
 	AI ai(arc);
 
-
 	// (DEBUG) for hashing passcodes (DISABLE THIS)
 	//ai.hashtype("ai"); // checking integrity
 
-	// health
-	chk();
+	// health	// need to implement this function again
+	//chk();
 	
 	// audio
 	// ai.initialize_audio();
@@ -175,8 +174,15 @@ int steering(int arc) {
 	// stat directory
 	ai.statdir("./ai");
 
-	sleep(1);
+	// copy file function
+	ai.cp("main.cpp", "main2.cpp.txt");
 
+	sleep(2);
+
+	ai.rm("main2.cpp.txt");
+
+	sleep(1);
+	
 	// stage down and decouple logic (graceful shutdown)
 	ai.decouple();
 
