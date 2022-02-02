@@ -194,6 +194,7 @@ public:
 
 	// audio
 	void play_audio(int s);
+	void play_audio_file(std::string path);
 
 	// patching
 	void auto_patch();
@@ -245,6 +246,8 @@ public:
 	// store accounts
 	void store_account();
 	void store_accounts_detail();
+	void import_accounts(std::string filen);
+	void export_accounts(std::string filen);
 	// transfer from account
 	void transfer(int src, int dst, float amount);
 

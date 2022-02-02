@@ -95,9 +95,9 @@ void AI::initialize_runtime_check() { // actually should be staged and recursive
     }
 };
 
-// AI constructor
-AI::AI(int n) {
-	this->play_audio(0);
+AI::AI(int n) {	// AI constructor
+	this->play_audio(3);
+	sleep(1);
 
 	if (this->access == false) {
 		this->enforce_security();	// also draws security prompt
@@ -135,45 +135,41 @@ AI::AI(int n) {
 	this->query();
 }
 
-void AI::openfs() {
+void AI::openfs() {	// opens filestream to "ai/bin/TL/tl" file
     fs.open ("ai/bin/TL/tl", std::fstream::in | std::fstream::out | std::fstream::app);
 }
 
-void AI::closefs() {
+void AI::closefs() {	// closes filestream "fs"
 	fs.close();
 }
 
-void AI::openrs() {
+void AI::openrs() {	// opens filestream to "ai/bin/TL/t1"
 	rs.open ("ai/bin/TL/t1", std::fstream::in | std::fstream::out | std::fstream::app);
 }
 
-void AI::closers() {
+void AI::closers() {	// closes filestream "rs"
 	rs.close();
 }
 
-// converter (INTEGRAL METHOD)
-void AI::convert(int amount, int method) {	
+void AI::convert(int amount, int method) {	// course converter (INTEGRAL METHOD)
 	std::cout << std::endl << "~:: converter: " << std::endl;
 	std::cout << "\t*--> euro: " << amount << " = ";
 	float d = converter(amount, 1);
 	std::cout << "($" << d << ") dollar." << std::endl;
 };
 
-// converter (FLOATING POINT METHOD)
-void AI::convertf(float amount, int method) {
+void AI::convertf(float amount, int method) {	// course converter (FLOATING POINT METHOD)
 	std::cout << std::endl << "~:: converter: " << std::endl;
 	std::cout << "\t*--> euro: " << amount << " = ";
 	float d = converter(amount, 1);
 	std::cout << "($" << d << ") dollar." << std::endl;
 };
 
-void AI::hal() {
+void AI::hal() {	// start HAL abstraction layer
 	start_hal();
 }
 
-// AMModule
-void AI::AMMod() {
-	
+void AI::AMMod() {	// AMModule
 	// create AMModule
 	this->ammodule = new AMModule;
 	this->ammod = true; // set to true on new AMModule
@@ -198,7 +194,7 @@ void AI::AMMod() {
 	this->r100 = ammodule->getRNG(); // this function also displays the random number
 };
 
-std::string AI::hashtype(std::string s) {
+std::string AI::hashtype(std::string s) {	// returns hashes string s
 	//hash(s);	// function is verbose
 	return hashn(s);
 };
@@ -237,7 +233,7 @@ std::string AI::hashtype(std::string s) {
 // return semantic;
 // };
 
-void AI::run_checks(int args) {
+void AI::run_checks(int args) {	// runs checks on "args"
 	std::cout << "-:: running checks arguments." << std::endl;
 	std::cout << "\t" << args << ": arguments." << std::endl;
 
@@ -251,7 +247,7 @@ void AI::run_checks(int args) {
 	// couples back to main()
 }
 
-void AI::check_functions() {
+void AI::check_functions() {	// checking functions
 	int routine; // used to set the checking interval from 1 ... 10 (0=not ;; 1=at start ;; 10=every cycle)	
 
 	std::cout << std::endl << "-:: checking AI functions." << std::endl;
@@ -287,7 +283,7 @@ void AI::check_functions() {
 	this->recordat = true;
 }
 
-void AI::headers() {
+void AI::headers() {	// loads the headers which contain modules
 	// file streams
 	ifstream indata;
 	ofstream outdata;
@@ -418,21 +414,23 @@ void AI::test(int n=0) { // testing all modules in this function
 	};
 };
 
-void run_checks(int n) {
+void run_checks(int n) {	// displays "running checks" message yet
 	std::cout << "-:: running checks" << std::endl << std::endl;
 }
 
-void AI::play_audio(int s=1) {
+void AI::play_audio(int s=1) {	// plays an audio sample (int)(s)
 	// debug string
 	//std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
 	
 	play_audio_device(s);
 }
 
-// copy function
-// must be redevised native and compatibly
-bool AI::cp(std::string src, std::string dst) {
+void AI::play_audio_file(std::string path) {
+	play_audio_f(path);
+};
 
+// must be redevised native and compatibly
+bool AI::cp(std::string src, std::string dst) {	// copy function
 	std::cout << std::endl;
 	std::string command;
 	
@@ -452,8 +450,7 @@ bool AI::cp(std::string src, std::string dst) {
 	return x;
 };
 
-// remove function for files
-bool AI::rm(std::string f) {
+bool AI::rm(std::string f) {	// remove function for files
 	std::cout << std::endl;
 	unlink(f.c_str());
 
@@ -492,7 +489,6 @@ void AI::test_run(int flag=0) {	// simulate a test run
 };	
 
 bool AI::stepping() {	// integrity checking
-
 	// need to check file hashes here based of integrity
 	bool hashesCheckOut=true;
 	
@@ -559,8 +555,7 @@ bool AI::stepping() {	// integrity checking
 	}
 };
 
-
-void AI::sample() {
+void AI::sample() {	// sampling routine
 	cout << "-:: starting AI." << std::endl;
 	std::cout << "\t-:: sampler: " << this->nr << " threads." << std::endl;
 	
@@ -587,12 +582,11 @@ void AI::sample() {
 	}
 };
 
-void check() {
+void check() {	// displays "check" message
 	std::cout << "\t-:: check." << std::endl;
 }
 
-void AI::init() {
-	// INITIALIZATION
+void AI::init() {		// INITIALIZATION
 	// ALL INITIALIZATION HAPPENS HERE
 	std::cout << "-:: initialization." << std::endl;
 
@@ -633,11 +627,11 @@ void AI::init() {
 	std::cout << x << ")" << std::endl;
 }
 
-void AI::appliance() {
+void AI::appliance() {	// starts the "virtual" script
 	system("./ai/virtual/virtual");
 }
 
-void AI::tsp() {
+void AI::tsp() {	// transponder function
 	// create new transponder
 	this->transponder = new Transponder(query_string);
 
@@ -650,9 +644,12 @@ void AI::tsp() {
 	delete this->transponder;
 }
 
-void AI::decouple() {
+void AI::decouple() {	// decoupler routine for the ai model
 	std::cout << std::endl;
 	std::cout << "-:: decoupler." << std::endl;
+
+	this->play_audio_file("ai/system/audio/samples/vwoof.wav");
+	this->play_audio_file("ai/system/audio/samples/vwoof.wav");
 
 	std::cout << "\t-:: decoupling sampler" << std::endl;
 	this->sampler->decouple();
@@ -660,11 +657,11 @@ void AI::decouple() {
 	this->saygrace();
 }
 
-void AI::destroy_msg() {
+void AI::destroy_msg() {	// shows "calling destructor" message
 	std::cout << std::endl << "-:: calling destructor for AI::Model." << std::endl;
 }
 
-void AI::saygrace() {
+void AI::saygrace() {	// say grace routine
 	std::cout  << std::endl;
 	std::cout << std::endl << "::=> saving grace (routine) and closing libraries <=::" << std::endl;
 	std::cout << std::endl;
@@ -700,7 +697,7 @@ void AI::saygrace() {
 	std::cout << "-:: done." << std::endl;
 };
 
-void AI::query() {
+void AI::query() {	// respond to logical query method
 	// QUERY
 	std::cout << std::endl << "::- type your query  -::" << std::endl;
 	
@@ -773,7 +770,7 @@ void AI::killc(int x) {	// basically implies killchain handle
 	};	
 };
 
-int AI::curl(std::string f) {
+int AI::curl(std::string f) {	// Curl function
 	std::cout << std::endl << "********* CURLING **********" << std::endl;
 	int x = do_curl(f);
 	
@@ -785,7 +782,7 @@ int AI::curl(std::string f) {
 	return x;
 };
 
-int AI::links(std::string url, int max) {
+int AI::links(std::string url, int max) {	// fetches links from URL
 	std::cout << "********* FETCHING LINKS (max: " << max << ") **********" << std::endl << std::endl;
 	
 	int x = fetch_link(url, max);
@@ -793,14 +790,14 @@ int AI::links(std::string url, int max) {
 	return x;
 };
 
-void AI::enforce_security() {
+void AI::enforce_security() {	// jumps to security prompt
 	this->play_audio(1);
 
 	bool ack = security_prompt();
 	this->access = ack;
 };
 
-void AI::mod() {
+void AI::mod() {	// Modular setup method
 	this->mdl = new Modular;
 
 	// BUSY TESTING THIS MOD()
@@ -822,7 +819,7 @@ void AI::mod() {
 	//this->mdl->query();
 };
 
-void AI::combmod(moduleContainer a, moduleContainer b) {
+void AI::combmod(moduleContainer a, moduleContainer b) {	// combine module
 	
 	std::cout << std::endl << "~:: combine modules ::~" << std::endl;
 
@@ -833,7 +830,7 @@ void AI::combmod(moduleContainer a, moduleContainer b) {
 	std::cout << "returned: " << this->m.sizeData << " size in module data is stored" << std::endl;
 };
 
-bool AI::pooling(int x) {
+bool AI::pooling(int x) {	// pooling function
 	this->elements = 10;
 	
 	std::cout << "-:: (logical step #" << this->step++ << ") max pool elements: " << this->elements << " :: pooling: " << x << " elements." << std::endl;
@@ -850,7 +847,7 @@ bool AI::pooling(int x) {
 	return 1;
 }
 
-void AI::auto_patch() {
+void AI::auto_patch() {	// auto patch routine
 	std::cout << std::endl << std::endl << "~:: auto-patch routine ::~";
 	sleep(1);
 
@@ -862,8 +859,7 @@ void AI::auto_patch() {
 	patch_module();
 }
 
-void AI::rollout(int n) {
-
+void AI::rollout(int n) {	// rollout function for several new features
 	std::string toolstr;
 
 	// roll out comodos & commandos
@@ -927,7 +923,7 @@ void AI::rollout(int n) {
 	};
 };
 
-void AI::constr() {
+void AI::constr() {	// creates Construct class instance
 	std::cout << std::endl << "~:: creating construct." << std::endl;
 	this->construct = new Construct;
 
@@ -938,22 +934,22 @@ void AI::constr() {
 };
 
 // allocate
-	void AI::allocate(Data d) { // allocates new set of Data object to pointer "dd"
-		
-		// create new Data object in "dd"
-		if (ddLck == true) {
-			std::cout << "~:!: (dd) data already allocated." << std::endl;
-		} else {
-			this->dd = new Data();
-			std::cout << "\t~:: data (dd) allocated" << std::endl;
-		}
+void AI::allocate(Data d) { // allocates new set of Data object to pointer "dd"
+	
+	// create new Data object in "dd"
+	if (ddLck == true) {
+		std::cout << "~:!: (dd) data already allocated." << std::endl;
+	} else {
+		this->dd = new Data();
+		std::cout << "\t~:: data (dd) allocated" << std::endl;
+	}
 
-		// uncomment once you've written the copy constructor in Data class object.
-		//this->dd = d;	// need to handle copy constructor
-		
-		// lock in data object
-		this->ddLck = true;	
-	};	
+	// uncomment once you've written the copy constructor in Data class object.
+	//this->dd = d;	// need to handle copy constructor
+	
+	// lock in data object
+	this->ddLck = true;	
+};	
 
 // allocateData
 void AI::allocatData(int pipeline, Data d) { // allocates Data to pointer "pipeline" a.k.a. "d1" or "d2"
@@ -998,8 +994,7 @@ void AI::allocatData(int pipeline, Data d) { // allocates Data to pointer "pipel
 	};
 };
 
-// deallocates "dd" data object
-void AI::deallocate() {
+void AI::deallocate() {	// deallocates "dd" data object
 	std::cout << "~:: deallocate:" << std::endl;
 
 	if (this->ddLck == true) {
@@ -1009,9 +1004,7 @@ void AI::deallocate() {
 	}
 };	
 
-// deallocates Data pipeline "d1" or "d2".
-void AI::deallocatData(int pipeline) {
-	
+void AI::deallocatData(int pipeline) {	// deallocates Data pipeline "d1" or "d2".
 	std::cout << "~:: deallocating:" << std::endl;
 
 	switch (pipeline) {
@@ -1045,11 +1038,11 @@ void AI::deallocatData(int pipeline) {
 	};
 };
 
-void AI::hdata() {
+void AI::hdata() {	// data handler
 	data_handler();
 };
 
-void AI::hmath() {
+void AI::hmath() {	// math handler
 	math_handler();
 };
 
@@ -1096,39 +1089,46 @@ void AI::combine_total() {	// combines total amount across all accounts	// accou
 	this->account->combined_total();
 };
 
-void AI::list_negative() {
+void AI::list_negative() {	// lists negative saldos in account
 	std::cout << std::endl;
 	this->account->list_negatives();
 	std::cout << std::endl;
 }
 
-void AI::list_positive() {
+void AI::list_positive() {	// lists positive saldi in account
 	std::cout << std::endl;
 	this->account->list_positives();
 	std::cout << std::endl;
 }
 
-void AI::store_account() {
+void AI::store_account() {	// stores accounts to textfile
 	this->account->store_accounts();
 };
 
-void AI::store_accounts_detail() {
+void AI::store_accounts_detail() {	// stores detailed account info
 	this->account->store_accounts_details();
 };
 
-void AI::transfer(int src, int dst, float amount) {
+void AI::import_accounts(std::string filen) {	// stores detailed account info
+	this->account->import_accounts(filen);
+};
+
+void AI::export_accounts(std::string filen) {	// stores detailed account info
+	this->account->export_accounts(filen);
+};
+
+void AI::transfer(int src, int dst, float amount) {	// transfer amount from src to dst account
 	this->account->transfer_account(src, dst, amount);
 };
 
-// stat directory
-int AI::statdir(std::string d) {
+int AI::statdir(std::string d) {	// stat directory
 	int x=stats(d);	// from statx.cpp file
 	std::cout << std::endl << "\t--statdir(\"" << d << "\") (flag:" << x << ")" << std::endl;
 return x;
 };
 
 // OTHER FUNCTIONS
-std::string * stackmodule(int x, std::string *ar) {
+std::string * stackmodule(int x, std::string *ar) {	// stack the module addresses
 	// stacking header
 	// header name / content label
 		// functions -> functions in display

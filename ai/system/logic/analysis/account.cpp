@@ -1,6 +1,10 @@
 // AI/LOGIC/ANALYSIS/ACCOUNT.CPP    - USED BY "AI/AI.H"
 
+#include <iostream>
 #include <fstream>
+#include <string>
+#include <vector>
+#include <sstream>
 
 #include "account.h"
 
@@ -190,5 +194,75 @@ void Track_Account::store_accounts_details() {
         fs.close();
 
         std::cout << "~:: successfully stored accounts information." << std::endl;
+    }
+};
+
+void Track_Account::export_accounts(std::string filen) {
+    
+    std::ofstream fs;
+    //std::string filen = "accounts.txt";
+
+    fs.open(filen);
+
+    if (fs.is_open() == true) {
+        std::cout << "~:: exporting accounts information for later imports." << std::endl;
+        
+        int exported = 0;
+
+        for (int i=0; i<max_accounts; i++) {
+            
+            if (accounts[i] > 0.00) {
+                exported++;
+
+                fs << i << ":";
+                fs << accounts[i] << ":";
+                fs << coin_no;
+                fs << std::endl << std::endl;
+            }
+        }
+
+        fs.close();
+
+        std::cout << "~:: exported (" << exported << ") account(s) to: \"" << filen << "\"" << std::endl;
+    }
+};
+
+// needs fixing
+void Track_Account::import_accounts(std::string filen) {
+
+    std::cout << std::endl;
+    std::cout << "~:: importing account(s) from: \"" << filen << "\"." << std::endl;
+
+    std::string line;
+    std::ifstream infile;
+    std::vector<int> vect;
+
+    infile.open(filen);
+
+    if (infile.is_open() == true) {
+        while (infile >> line) {
+            std::stringstream ss(line);
+
+            for (int i; ss >> i;) {
+                vect.push_back(i);    
+                if (ss.peek() == ':') {
+                    ss.ignore();
+                }
+            }
+
+            std::cout << "\t- importing account: ";
+
+            for (std::size_t i = 0; i < vect.size(); i++) {
+                
+                // STILL need to convert this to a number!!!
+                    // AND import it into the correct account.
+                
+                std::cout << vect[i] << " ";
+            }
+        
+            std::cout << std::endl;
+        }
+
+        infile.close();
     }
 };

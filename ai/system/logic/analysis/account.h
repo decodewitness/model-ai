@@ -48,6 +48,7 @@ public:
     void store_accounts_details();  // stores account details to disk
 
     void transfer_account(int src, int dst, float amount);
-    
 
+    void import_accounts(std::string filen);    // import accounts (account #, amount, coin_nr) from importable format
+    void export_accounts(std::string filen="accounts.txt"); // export accounts in an importable format
 };
