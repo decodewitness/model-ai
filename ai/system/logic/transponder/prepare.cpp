@@ -1,9 +1,12 @@
 // "/AI/LOGIC/TRANSPONDER/PREPARE.CPP" - USED BY "/AI/LOGIC/TRANSPONDER/TRANSPONDER.CPP" // USED FOR LANGUAGE INTERPRETATION.
 
 #include <iostream>
+#include <string>
 #include <string.h>
 #include <fstream>
 #include <unistd.h>
+
+#include "meta_queries.cpp"
 
 // the limit of the size of the dictionaries    // if you change this you must rebuild all the tables.
 const int max_sentence_length=256;  // max. length of sentence in words.
@@ -71,9 +74,9 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
     dict_in.open(process_data);
 
     if (dict_in.is_open() == true) {
-        std::cout << "\t~:: succesfully opened dictionary: " << process_data << "." << std::endl;
+        std::cout << "~:: succesfully opened dictionary: \"" << process_data << "\"." << std::endl;
     } else {
-        std::cout << "\t~:: failed to open dictionary: " << process_data << "." << std::endl;
+        std::cout << "~:: failed to open dictionary: \"" << process_data << "\"." << std::endl;
             
         // DEBUG OPTION !!! DEBUG OPTION !!! DEBUG OPTION
         //system("pwd");
@@ -125,11 +128,13 @@ void prepare_occurrences(int al, int cnt) {
     int limit=al;   // limit dictionary
     int counter=cnt+1;    // limit wordsInSentence
     int int_word_occurrence[al];    // list of place of occurence
+    int minusadded = 0; // tracks how many words are not in the dictionary and also used to assign a negative value to those words
     
+    bool match_found = false;
+    bool edited_meta_query = false;
+
     loopvar=0;
     track_occurence=0;  // set number of occurences to 0
-    bool match_found = false;
-    int minusadded = 0; // tracks how many words are not in the dictionary and also used to assign a negative value to those words
 
     std::cout << std::endl << "~:: intvars int_occurences[] ::~" << std::endl;
     
@@ -164,7 +169,25 @@ void prepare_occurrences(int al, int cnt) {
 
     for (int i=0; i<loopvar; i++) {
         std::cout << "(debug) " << i << ") " << wordsFromSentence[i] << " :: #" << int_occurrences[i] << std::endl;
+    
+        // meta sequence:: intvars int_occurences[] ::
+        if (int_occurrences[i] > 0) {
+            edited_meta_query = true;
+
+    // NEEDS A FIX!!!!!!!
+            meta_sequence = meta_sequence + (char) int_occurrences[i];
+            meta_sequence = meta_sequence + ',';
+        }
     }
+
+    if (edited_meta_query == true) {
+        meta_sequence.pop_back();
+
+        std::cout << std::endl << "~:: edited :: (meta sequence) :: (\"" << meta_sequence << "\")." << std::endl;
+    }
+
+    store_meta_queries(meta_sequence);
+    reverse_meta_query_lookup(meta_sequence);
 };
 
 void dictionaries(int al, int cnt) {    // PREPARES BOTH DICTIONARIES

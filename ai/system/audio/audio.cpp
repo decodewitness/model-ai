@@ -1,3 +1,4 @@
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
@@ -7,6 +8,17 @@
 #include "SDL2/SDL_image.h"
 #include <SDL2/SDL_ttf.h>
  
+#define NUM_WAVEFORMS 17
+
+int nr_wav() {
+    int num = NUM_WAVEFORMS;
+return num;
+}
+
+void print_nr_wav() {
+    std::cout << std::endl << "~:: number of wave forms: (" << nr_wav() << ")." << std::endl;
+}
+
 int play_audio_device(int s=1) {
     // if (argc != 2)
     // {
@@ -14,15 +26,25 @@ int play_audio_device(int s=1) {
     //     exit(1);
     // }
  
-    #define NUM_WAVEFORMS 4
     const char* _waveFileNames[] =
     {
+        "ai/system/audio/samples/chirp.wav",
+        "ai/system/audio/samples/clfuh.wav",
+        "ai/system/audio/samples/clong.wav",
+        "ai/system/audio/samples/clug_clug.wav",
         "ai/system/audio/samples/fix.wav",
+        "ai/system/audio/samples/flir.wav",
+        "ai/system/audio/samples/gorge.wav",
+        "ai/system/audio/samples/krggg.wav",
+        "ai/system/audio/samples/krggg_krg_krg.wav",
+        "ai/system/audio/samples/tab.wav",
         "ai/system/audio/samples/taptaptap.wav",
+        "ai/system/audio/samples/teep.wav",
+        "ai/system/audio/samples/teep2.wav",
+        "ai/system/audio/samples/thungs.wav",
         "ai/system/audio/samples/vwoof.wav",
-        "ai/system/audio/samples/flir.wav"
-
-        
+        "ai/system/audio/samples/vworge.wav",
+        "ai/system/audio/samples/vworng.wav"  
     };
 
     //SDL_Surface *screen;            //Pointer to the main screen surface
@@ -160,7 +182,5 @@ int play_audio_f(std::string f="0") {
     //Return success!
     return 0;
 }
-// int main() {
-//     ;
-// return 0;
-// }
+
+// eof

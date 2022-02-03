@@ -32,8 +32,8 @@ std::string Transponder::respond(bool b) {
     
     // skip line and respond from mechanism
     std::cout << std::endl;
-    std::cout << "TRANSPONDER::responding:" << std::endl;
-    std::cout << std::endl;
+    std::cout << "\tTRANSPONDER::responding:" << std::endl;
+    std::cout << "\t-----" << std::endl;
 
     // std::string x;
 
@@ -81,7 +81,7 @@ void Transponder::analytics(std::string s) {
         }
 
         switch (s.at(i)) {
-
+            // nouns
             case 'a':
             case 'e':
             case 'i':
@@ -89,7 +89,7 @@ void Transponder::analytics(std::string s) {
             case 'o':
                 noun++;
                 break;
-
+            // consonants
             case 'z':
             case 'x':
             case 'c':
@@ -113,7 +113,7 @@ void Transponder::analytics(std::string s) {
             case 'p':
                 consonant++;
                 break;
-
+            // numbers
             case '1':
             case '2':
             case '3':
@@ -126,7 +126,7 @@ void Transponder::analytics(std::string s) {
             case '0':
                 number++;
                 break;
-
+            // special characters
             case '!':
             case '@':
             case '#':
@@ -165,7 +165,7 @@ void Transponder::analytics(std::string s) {
                 special++;
                 break;
             
-            default:
+            default:    // unknown characters
                 unknown++;
                 break;
         };
@@ -195,8 +195,9 @@ void Transponder::analytics(std::string s) {
     
     // answer the question
     std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
-    std::cout << std::endl << "(" << this->subject << ")" << std::endl;
-    std::cout << "-- answer: " << this->response << std::endl;
+    std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
+    std::cout << std::endl;
+    std::cout << "-- answer:" << std::endl << "\t" << this->response << std::endl;
     std::cout << std::endl;
 };
 
@@ -216,6 +217,11 @@ void Transponder::prep(std::string s) { // 's' is the input sentence from "query
     for (decltype(userString.size()) i=0; i<userString.size(); ++i) {
         // split words in sentence
         while (iss >> word) {
+
+            if (word.back() == '.' || word.back() == ',' || word.back() == '!' || word.back() == '?' || word.back() == ':' || word.back() == ';' ) {
+                word.pop_back();
+            }
+
             std::cout << "(debug) word :: " << word << std::endl;
             nrOfWords++;
             // at the same time counting words in sentence
@@ -252,22 +258,54 @@ std::string Transponder::answer(std::string s) {
     
     std::string used_file;
 
-    bool isNormal = false;
+    // question, normal, or exclamation
+    bool isDot = false;
     bool isQuestion = false;
     bool isExclamation = false;
+    // interpunction
+    bool isComma = false;
+    bool isSemicolon = false;
+    bool isColon = false;
+    // query needs followed up statement for logic
+    bool isFollowUp = false;
 
+    // open the correct file
     if (query.back() == '?') {  // open "question_answers"
         isQuestion = true;
         filen.open(question_answers);
         used_file = question_answers;
+        query.pop_back();
     } else if (query.back() == '!') {   // open "trivia_logic"
         isExclamation = true;
         filen.open(trivia_logic);
         used_file = trivia_logic;
-    } else {
-        isNormal = true;
+        query.pop_back();
+    } else if (query.back() == '.') {   // open "trivia_logic"
+        isDot = true;
         filen.open(trivia_logic);
         used_file = trivia_logic;
+        query.pop_back();
+    } else if (query.back() == ',') {   // open "trivia_logic"
+        isComma = true;
+        isFollowUp = true;
+        filen.open(trivia_logic);
+        used_file = trivia_logic;
+        // follow_up check here
+        query.pop_back();
+    } else if (query.back() == ';') {   // open "trivia_logic"
+        isSemicolon = true;
+        isFollowUp = true;
+        filen.open(trivia_logic);
+        used_file = trivia_logic;
+        // follow up check here
+        query.pop_back();
+    } else if (query.back() == ':') {   // open "trivia_logic"
+        isColon = true;
+        isFollowUp = true;
+        filen.open(trivia_logic);
+        used_file = trivia_logic;
+        // follow up check here
+        query.pop_back();
     }
 
     if (filen.is_open() == true) {
@@ -284,14 +322,16 @@ std::string Transponder::answer(std::string s) {
 
     std::cout << std::endl;
 
-    if (isExclamation == true) {
-        std::cout << "~:: (debug) query was exclamation: (!)" << std::endl;
+    if (isDot == true) {
+        std::cout << "~:: (debug) query was normal: ('.')" << std::endl;
     } else if (isQuestion == true) {
-        std::cout << "~:: (debug) query was question: (?)" << std::endl;
-    } else if (isNormal == true) {
-        std::cout << "~:: (debug) query was normal: (.)" << std::endl;
+        std::cout << "~:: (debug) query was question: ('?')" << std::endl;
+    } else if (isComma == true || isColon == true || isSemicolon == true) {
+        std::cout << "~:: (debug) query gets follow up: (','|':'|';')" << std::endl;
+    } else if (isExclamation == true) {
+        std::cout << "~:: (debug) query was exclamation: ('!')" << std::endl;
     } else {
-        std::cout << "~:: (debug) abnormal query!" << std::endl;
+        std::cout << "~:: (debug) -- (!) -- abnormal query!" << std::endl;
     }
 
     std::cout << std::endl << "~:: (debug) - answers processed: " << answers_processed << std::endl;

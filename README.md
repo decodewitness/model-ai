@@ -1481,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe5cfb69d0)
-	- stacking header:(1)::<address>(0x7ffe5cfb69f0)
-	- stacking header:(2)::<address>(0x7ffe5cfb6a10)
-	- stacking header:(3)::<address>(0x7ffe5cfb6a30)
-	- stacking header:(4)::<address>(0x7ffe5cfb6a50)
-	- stacking header:(5)::<address>(0x7ffe5cfb6a70)
-	- stacking header:(6)::<address>(0x7ffe5cfb6a90)
-	- stacking header:(7)::<address>(0x7ffe5cfb6ab0)
-	- stacking header:(8)::<address>(0x7ffe5cfb6ad0)
-	- stacking header:(9)::<address>(0x7ffe5cfb6af0)
+	- stacking header:(0)::<address>(0x7ffc44db0030)
+	- stacking header:(1)::<address>(0x7ffc44db0050)
+	- stacking header:(2)::<address>(0x7ffc44db0070)
+	- stacking header:(3)::<address>(0x7ffc44db0090)
+	- stacking header:(4)::<address>(0x7ffc44db00b0)
+	- stacking header:(5)::<address>(0x7ffc44db00d0)
+	- stacking header:(6)::<address>(0x7ffc44db00f0)
+	- stacking header:(7)::<address>(0x7ffc44db0110)
+	- stacking header:(8)::<address>(0x7ffc44db0130)
+	- stacking header:(9)::<address>(0x7ffc44db0150)
 
 
 -:: checking AI functions.
@@ -1620,13 +1620,13 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+FIFO/pipe: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+FIFO/pipe: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+FIFO/pipe: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1637,8 +1637,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logical query that needs to get analyzed
-	[ simple x computation: type:char len:40 vowels:27 consonants:13 special:0  ]
+	logic
+	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1963,7 +1963,7 @@ x
 	~:: initialized with (2) sampling tracks.
 
 ~:: sampler :: ~ :: generated (16)  new tracks-in-track.
-	~:: total initialized tracks [-65527].
+	~:: total initialized tracks [-65528].
 
 ~:: setting tracks-in-track (1) to (2) tracks.
 ~:: setting track [1] index to (00h/00m/00s)
@@ -2179,69 +2179,68 @@ x=1; y=1; z=3;
 
 ~:: transponder queries.
 
-TRANSPONDER::responding:
-
+	TRANSPONDER::responding:
+	-----
 	~:: (DEBUG) performing analytics() in {transponder}.
 	::- analytics -::
 
 	-----------------
 
-		* words no_#: 7
-		* length: 40
-		* vowels: 13
-		* consonants: 21
+		* words no_#: 1
+		* length: 5
+		* vowels: 2
+		* consonants: 3
 		* numbers: 0
-		* special chars: 6
+		* special chars: 0
 		* unknown chars: 0
 
 
 (debug) answer.
 
-(score): 0
+~::!::~ error opening file: ""
 
-(score): 0
 
-~:: (debug) query was normal: (.)
+~:: (debug) -- (!) -- abnormal query!
 
-~:: (debug) - answers processed: 2
+~:: (debug) - answers processed: 0
 
 ~:: transponder -> answer()
 
-(logical query that needs to get analyzed)
--- answer: "2","trivia_logic :: transponder is not active yet.";
++query :: (logic)
+
+-- answer:
+	
 
 ~:: transponder -> prep()
-(debug) word :: logical
-(debug) word :: query
-(debug) word :: that
-(debug) word :: needs
-(debug) word :: to
-(debug) word :: get
-(debug) word :: analyzed
+(debug) word :: logic
 
-~:: (debug)::nrOfWords = 7.
-~:: (debug)::counter = 7.
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "logical query that needs to get analyzed".
-	~:: succesfully opened dictionary: ai/data/files/20k.txt.
+(debug) calling prepare_ints() (from) -> "logic".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (7).
+~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) logical :: #5753
-(debug) 1) query :: #2547
-(debug) 2) that :: #9
-(debug) 3) needs :: #631
-(debug) 4) to :: #3
-(debug) 5) get :: #76
-(debug) 6) analyzed :: #8770
+(debug) 0) logic :: #3197
 
-(debugging) course: 0
+~:: edited :: (meta sequence) :: ("}").
 
-~:: converter: 
+~:: meta queries ~:: storing meta query sequence ~:::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequence: "}".
+
+~:: meta queries ~:: reverse_meta_query_lookup("}") ~:::~
+
+	- -empty_string-
+
+(EOT)
+
+~:: course converter: 
 	*--> euro: 10 = ($12.8) dollar.
 
-~:: converter: 
+~:: course converter: 
 	*--> euro: 10 = ($12.8) dollar.
 
 ~:: accounts: 

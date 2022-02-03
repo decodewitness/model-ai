@@ -96,13 +96,15 @@ void AI::initialize_runtime_check() { // actually should be staged and recursive
 };
 
 AI::AI(int n) {	// AI constructor
-	this->play_audio(3);
-	sleep(1);
-
+	// play audio file
+	this->play_audio_file("ai/system/audio/samples/flir.wav");
+	
+	// security
 	if (this->access == false) {
 		this->enforce_security();	// also draws security prompt
 	}
 
+	// runtime check
 	initialize_runtime_check();
 
 	// splash oval
@@ -151,15 +153,17 @@ void AI::closers() {	// closes filestream "rs"
 	rs.close();
 }
 
+// still needs to lookup actual financial unit courses online
 void AI::convert(int amount, int method) {	// course converter (INTEGRAL METHOD)
-	std::cout << std::endl << "~:: converter: " << std::endl;
+	std::cout << std::endl << "~:: course converter: " << std::endl;
 	std::cout << "\t*--> euro: " << amount << " = ";
 	float d = converter(amount, 1);
 	std::cout << "($" << d << ") dollar." << std::endl;
 };
 
+// still needs to lookup actual financial unit courses online
 void AI::convertf(float amount, int method) {	// course converter (FLOATING POINT METHOD)
-	std::cout << std::endl << "~:: converter: " << std::endl;
+	std::cout << std::endl << "~:: course converter: " << std::endl;
 	std::cout << "\t*--> euro: " << amount << " = ";
 	float d = converter(amount, 1);
 	std::cout << "($" << d << ") dollar." << std::endl;
@@ -422,10 +426,12 @@ void AI::play_audio(int s=1) {	// plays an audio sample (int)(s)
 	// debug string
 	//std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
 	
+	// audio device + sample nr
 	play_audio_device(s);
 }
 
 void AI::play_audio_file(std::string path) {
+	// audio file
 	play_audio_f(path);
 };
 
@@ -642,7 +648,9 @@ void AI::tsp() {	// transponder function
 	// answer query
 	// std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
 	//this->transponder->answer(query_string);
-	
+
+	std::cout << std::endl << "(EOT)" << std::endl;
+
 	sleep(2);
 
 	// delete transponder
@@ -653,6 +661,7 @@ void AI::decouple() {	// decoupler routine for the ai model
 	std::cout << std::endl;
 	std::cout << "-:: decoupler." << std::endl;
 
+	// play audio file
 	this->play_audio_file("ai/system/audio/samples/vwoof.wav");
 	this->play_audio_file("ai/system/audio/samples/vwoof.wav");
 
@@ -706,8 +715,8 @@ void AI::query() {	// respond to logical query method
 	// QUERY
 	std::cout << std::endl << "::- type your query  -::" << std::endl;
 	
-	// play audio
-	this->play_audio(1);
+	// play audio file
+	this->play_audio_file("ai/system/audio/samples/taptaptap.wav");
 
 	// PROMPT
 	std::cout << "--?:: ";
@@ -796,7 +805,7 @@ int AI::links(std::string url, int max) {	// fetches links from URL
 };
 
 void AI::enforce_security() {	// jumps to security prompt
-	this->play_audio(1);
+	this->play_audio(10);
 
 	bool ack = security_prompt();
 	this->access = ack;

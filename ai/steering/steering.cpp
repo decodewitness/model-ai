@@ -133,7 +133,7 @@ int steering(int arc) {
 	// transponder prepare function
 	ai.tsp();
 	
-	std::cout << std::endl << "(debugging) course: " << crl << std::endl;
+	//std::cout << std::endl << "(debugging) course converter: " << crl << std::endl;
 	ai.convert(10, 1);
 	ai.convertf(10.0, 1);
 	
