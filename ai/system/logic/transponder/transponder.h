@@ -1,26 +1,32 @@
-// "/AI/LOGIC/TRANSPONDER/TRANSPONDER.H" - USED BY "/AI/LOGIC/TRANSPONDER/TRANSPONDER.CPP" // USED FOR LANGUAGE INTERPRETATION.
+// AI/LOGIC/TRANSPONDER/TRANSPONDER.H - USED BY "/AI/LOGIC/TRANSPONDER/TRANSPONDER.CPP" // USED FOR LANGUAGE INTERPRETATION.
 
 #include <string>
 
-class Transponder {
+std::string question_answers = "ai/data/files/question_answers.txt";
+std::string trivia_logic = "ai/data/files/trivia_logic.txt";
 
+class Transponder {
 private:
     std::string initial_sentence;   // logic comparts from here
     bool analytical;    // whether to use "analytics" function
 
 protected:
     std::string subject; // same as "initial_sentence" but maybe change this later
-    std::string answer; // the original answer, queried by the transponder and then returned
+    std::string response; // the original answer, queried by the transponder and then returned
     
 public:
     Transponder(std::string s); // initialize with subject
 
     // use boolean "b" to either use analytics (true) or else not use analytics (false)
     std::string respond(bool b);    // responds with logic
+    std::string answer(std::string s);  // devise answer and return it as a string
     
+    // process answers
+    int rank_score(std::string q, std::string a);  // processes score/ranking for the answer based of similarities
+
+    // analytical functions and preparation functions
     void prep(std::string s); // preps "ints"   //  needs "this->initial_sentence" or "this->subject"
     void analytics(std::string s);  // textual analytics function
-
     std::string retVal();
 };
 

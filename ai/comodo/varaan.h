@@ -1,3 +1,5 @@
+// AI/COMODO/VARAAN.H   -   USED BY "AI/AI.H"
+
 const char COMMANDOS[] = "ai/bin/commandos";
 const char _COMODOS[]  = "ai/system/commandos/commandos.sh";
 const char _VARAAN[]   = "ai/bin/comodos";

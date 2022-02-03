@@ -1,0 +1,2 @@
+"1","question_answers :: transponder is not active yet.";
+"2","question_answers :: transponder is not active yet.";

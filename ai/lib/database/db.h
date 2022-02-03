@@ -1,3 +1,5 @@
+// AI/LIB/DATABASE/DB.H -   USED BY "AI/LIB/DATABASE/DB.CPP
+
 #include <string>
 
 // database settings

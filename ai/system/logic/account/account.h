@@ -4,9 +4,16 @@
 
 // #define _TRANSACTION_LOG "ai/log/account-transactions.txt"
 
+// maximum number of accounts
 const int max_accounts = 1024;
+
+// names for the transaction log and account information log
 const char _TRANSACTION_LOG[] = "ai/log/account-transactions.txt";
 const char _ACCOUNT_INFORMATION[] = "ai/log/account-information.txt";
+
+// name for the exported file for the accounts
+const std::string exp_account = "export_account.txt";
+const std::string imp_account = exp_account;
 
 // std::string coin;
 

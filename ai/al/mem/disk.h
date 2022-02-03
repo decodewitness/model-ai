@@ -30,7 +30,7 @@ const int leaf = 100;  // 1 node is 1KiB
 
 // create trees in "bin/forest"
 
-void create() {
+void create() { // creates forest
     std::cout << "\t\t-::" << " (" << counti++ << ") :- generate " << entities << " and pruning " << prune << " dependencies." << std::endl;
 
     // create forest class entity here
@@ -38,7 +38,7 @@ void create() {
     
 }
 
-void populate() {
+void populate() {   // populate forest  // uses create() to creates forests
     int node1 = MAX_NODES;  // total mount of nodes
     std::cout << "\t-:: max nodes (" << node1 << ")" << std::endl;
 

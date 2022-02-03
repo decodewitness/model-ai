@@ -217,7 +217,7 @@ void Track_Account::export_accounts(std::string filen) {
                 fs << i << ":";
                 fs << accounts[i] << ":";
                 fs << coin_no;
-                fs << std::endl << std::endl;
+                fs << std::endl;
             }
         }
 

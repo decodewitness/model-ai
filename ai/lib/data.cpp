@@ -31,10 +31,10 @@ private:
     std::vector<std::string> mymemory;  // contains the remembered words from mystrings
 
 public:
-    Data() { this->count=0; };
+    Data() { this->count=0; };  // constructor  // initializes with count as 0
 
     // the actual object that gets called when constructor gets called instead of super.
-    Data(std::string s) { 
+    Data(std::string s) {   // constructor  // initializes with a string s
         this->mystrings.at(0) = s;
         this->total = 1;
         Data();
@@ -47,18 +47,18 @@ public:
     void setwrdpref(int x) { this->wrdpref=x; }   // set word index
     
     // set a word at the latest index
-    void set(std::string s) {
+    void set(std::string s) {   // sets mystrings.at(this->total-1) to string s
         this->mystrings.at(this->total - 1) = s;
         this->total++;
     }
 
     // get the word at the referred index.
-    std::string get() {
+    std::string get() { // gets this->mystrings.at(this->wrdpref)
         return this->mystrings.at(this->wrdpref);
     }
 
     // get the word from the last index.
-    std::string last() {
+    std::string last() {    // gets the word from the last index
         int el=mystrings.size();
         if (el < 1) {
             return "0";

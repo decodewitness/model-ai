@@ -20,11 +20,15 @@ public:
 };
 
 
-bool Reader::dataIsText() {
+bool Reader::dataIsText() { // returns true or false if data is text
+    // insert conditions here
+    
     return true;
 }
 
-bool Reader::dataIsMath() {
+bool Reader::dataIsMath() { // returns true or false if data is math
+    // insert conditions here
+    
     return true;
 }
 
@@ -37,7 +41,7 @@ void caller(std::string f) { // f = this->filename
 
     if (myfile.is_open()) {
         std::cout << "~:: caller() function -- reading data." << std::endl;
-        while ( getline (myfile,line) ) {
+        while (getline (myfile,line)) {
             std::cout << line << std::endl;
         }
         myfile.close();

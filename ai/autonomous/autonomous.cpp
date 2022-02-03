@@ -7,8 +7,7 @@ Autonomous::Autonomous(EngineType E) {
     this->powerCycle = 0;
 };
 
-void setControl(int x) {
-    
+void Autonomous::setControl(int x) {    // control function for artificial robot
     ControlType cx;
     
     switch (x) {
@@ -167,8 +166,7 @@ void setControl(int x) {
     };
 };
 
-
-void Autonomous::setEngine(int x) {
+void Autonomous::setEngine(int x) { // set EngineType control functions
     EngineType ex;
     
     switch(x) {
@@ -229,20 +227,20 @@ void Autonomous::setEngine(int x) {
     };
 };
 
-int Autonomous::getEngine() {
+int Autonomous::getEngine() {   // gets this->enginetype
     return this->enginetype;
 };
 
-void Autonomous::setAC() { strncpy(this->acdc, "ac", 2); };
-void Autonomous::setDC() { strncpy(this->acdc, "dc", 2); };
-void Autonomous::setACDC() { strncpy(this->acdc, "ac/dc", 4); };
-char * Autonomous::getACDC() { return this->acdc; };
+void Autonomous::setAC() { strncpy(this->acdc, "ac", 2); }; // sets power mode to AC
+void Autonomous::setDC() { strncpy(this->acdc, "dc", 2); }; // sets power mode to DC
+void Autonomous::setACDC() { strncpy(this->acdc, "ac/dc", 4); };    // sets power mode to AC/DC
+char * Autonomous::getACDC() { return this->acdc; };    // gets power mode (AC/DC)
 
-void Autonomous::couples(int ic) {   // if = interfaces used as argument
+void Autonomous::couples(int ic) {   // couples device interface    // if = interfaces used as argument
 
 };
 
-void controlIC(int ic) {
+void controlIC(int ic) {    // controls interface
     
 };
 

@@ -3,7 +3,7 @@
 #include "al.h"
 
 // HAL
-void start_hal() {
+void start_hal() {	// constructs the hal object
     HAL hal;
 };
 
@@ -21,14 +21,13 @@ AL::~AL() { // AL destructor
 	std::cout << std::endl << "-:: destructor artificial life routine was called. -::" << std::endl << "\tkilling abstraction layer.";
 };
 
-void AL::kbuild(double i) {
+void AL::kbuild(double i) {	// reserves memory for kbuild
 	// reserving memory
 	std::cout << "\t-:: kbuild reserving " << i << "(DEG) bytes ::- for your additional mappings." << std::endl;
 	this->mem += i;
 };
 
-void AL::life() {	// artificial habits
-
+void AL::life() {	// artificial life habits
 	int counter=0;
 	for (int i=0; i<=60532; i++) {
 		if (i%al_top_limit) {
@@ -43,15 +42,14 @@ void AL::life() {	// artificial habits
 	//std::cout << std::endl << "-::: result :::-" << std::endl;
 };
 
-void AL::modifies_behaviour() {
+void AL::modifies_behaviour() {	// extend modular behavior
 	std::cout << std::endl;
-	std::cout << std::endl << "-:: extending module behavior." << std::endl;
+	std::cout << std::endl << "-:: extending modular behavior." << std::endl;
 
-	// extend behaviour
+	// extend behaviour here
 };
 
-int AL::live() {
-
+int AL::live() {	// running numbers sequence	// shephard
 	std::cout << std::endl << "-:: living inside that function running a numbers sequence." << std::endl << std::endl;
 	
 	int dot=5, count=0, countdown=10;
@@ -172,7 +170,7 @@ return 1;
 
 // ARTIFICIAL LIFE FUNCTIONS
 
-HAL::HAL() {
+HAL::HAL() {	// HAL constructor
 	std::cout << std::endl << "-:: starting evolving mechanic life in artificial life habits." << std::endl;
 	
 	// first throttle c with 'c' here
@@ -182,7 +180,7 @@ HAL::HAL() {
 	this->x = this->live();
 };
 
-HAL::~HAL() {
+HAL::~HAL() {	// HAL destructor
 	std::cout << std::endl << "-:: aborting artificial life sequence, and clean up gracefully!" << std::endl << std::endl;
 	std::cout << "-:: display ((x)->live())(?x) equaled " << this->x << "." << std::endl;
 };

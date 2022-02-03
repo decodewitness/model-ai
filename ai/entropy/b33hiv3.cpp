@@ -1,4 +1,4 @@
-// "/AI/ENTROPY/B3HIV3.H" :: USED BY "/AI/AI.H"
+// AI/ENTROPY/B33HIV3.H :: USED BY "AI/AI.H"
 
 //1tlt1tl
 //t1tl      (THE B3HIv3)
@@ -6,6 +6,8 @@
 //t1
 
 #include <iostream>
+#include <fstream>
+
 //#include "entropy.cpp"        // already included in this file
 //#include "ltctapttclt.cpp"    // already included in this file
 
@@ -20,9 +22,6 @@ char c=x;
 
 //  AI/ENTROPY/ENTROPY.CPP - USED BY "AI.H" FOR AI MODEL
 //  "AI/ENTROPY/ENTROPY.CPP" - USED BY "LTCTAPTTCLT.CPP" FOR AI MODELS
-
-#include <iostream>
-#include <fstream>
 
 std::fstream fs;	// written entropy data
 std::fstream rs;	// resource | read stream
@@ -55,13 +54,13 @@ int entropyw(std::string s) {  // write entropy in TL
 
 std::string main_extrapolation_data=" more lorem ipsum";
 
-// title panel
+// adaptable functions title panel
 void lt1tlt1() { std::cout << "holy"; }
 void t1tl() { std::cout << "tapltc"; }
 void tl() { std::cout << "ltct"; }
 int t1() { std::cout << "tapish"; return 1; }
 
-// trousers
+// adaptable functions trousers
 void lt1tlt1(int t) { std::cout << "tap"; }
 void tlt1(int t) { std::cout << "tap"; }
 int t1(int t) { std::cout << "tap"; return 2; }
@@ -83,8 +82,8 @@ void fcltaptaptap() {
     is.close();                // close file
 }
 
-// shoe
-void run() {
+// adaptable functions shoe
+void run() {    // runs adaptable functions in sequence
     entropyr();
     entropyw(main_extrapolation_data);
     std::cout << "\t-:: -:: psht -:: <tap>" << std::endl;
@@ -102,7 +101,8 @@ void run() {
     std::cout << std::endl;
 }
 
-void addData() {
+void addData() {    // right now sets main_extrapolation_data percentage
     main_extrapolation_data=" 100\% entropy";
 }
 
+// eof

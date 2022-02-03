@@ -1,4 +1,4 @@
-// "AI/LIB/TEST.CPP" used in "AI/AI.H" FOR TESTING OBJECTS OF "DATA" OBJECTS.
+// AI/LIB/TEST.CPP  -   used in "AI/AI.H" FOR TESTING OBJECTS OF "DATA" OBJECTS.
 
 #include <iostream>
 
@@ -39,3 +39,5 @@ bool testing3() { return true; }; // next start / optimize
 // void testData(Instruction inst, Data d1, std::string s) {
 //     std::cout << "~:: testing data objects ::~" << std::endl;
 // }
+
+//eof

@@ -1,4 +1,4 @@
-// "/AI/FETCH/CURL.CPP" - USED BY "/AI/AI.H"
+// AI/FETCH/CURL.CPP - USED BY "AI/AI.H"
     // do_curl(string url) && fetch_links(string url, int limit)
 
 #include <iostream>
@@ -10,14 +10,13 @@
 char *URLS[1024];
 bool URLS_isset = false;
 
-static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
-{
+
+static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp) {   // callback function
     ((std::string*)userp)->append((char*)contents, size * nmemb);
     return size * nmemb;
 }
 
-int do_curl(std::string my_url)
-{
+int do_curl(std::string my_url) {   // does the curl function
     CURL *curl;
     CURLcode res;
     std::string readBuffer;
@@ -51,7 +50,7 @@ int do_curl(std::string my_url)
 return 0;
 }
 
-int fetch_link(std::string &my_url, int max_links)
+int fetch_link(std::string &my_url, int max_links)  // fetches links
 {
     CURL *curl;
     CURLcode res;
@@ -128,3 +127,5 @@ int fetch_link(std::string &my_url, int max_links)
     }
 return 0;
 };
+
+// eof

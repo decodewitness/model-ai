@@ -1,4 +1,4 @@
-// AI/MATRIX/MATRIX.CPP - MATRIX / FILTER - USED BY "/AI/AI.H"
+// AI/MATRIX/MATRIX.H - MATRIX / FILTER - USED BY "AI/MATRIX/MATRIX.CPP"
 
 class AI_Matrix {
     private:
@@ -22,21 +22,18 @@ class AI_Matrix {
         float float_C[30];      // 30 floats
 
     public:
-    AI_Matrix(int x=1, int y=1, int z=1) {};
+    AI_Matrix(int x=1, int y=1, int z=1) {};    // constructor
 
-    int add(int x, int y) { return x+y; }
-    float addf(float x, float y) { return x+y; }
+    int add(int x, int y) { return x+y; }   // add x+y
+    float addf(float x, float y) { return x+y; }    // add float x+y
+    int subtract(int x, int y) { return x-y; }  // subtract x-y
+    float subtractf(float x, float y) { return x-y; }   // subtract float x-y
+    int divide(int x, int y) { return x/y; }    // divide x/y
+    float dividef(float x, float y) { return x/y; } // divide float x/y
+    int multiply(int x, int y) { return x*y; }  // multiplies x*y
+    float multiplyf(float x, float y) { return x*y; }   // multiplies float x*y
 
-    int subtract(int x, int y) { return x-y; }
-    float subtractf(float x, float y) { return x-y; }
-
-    int divide(int x, int y) { return x/y; }
-    float dividef(float x, float y) { return x/y; }
-
-    int multiply(int x, int y) { return x*y; }
-    float multiplyf(float x, float y) { return x*y; }
-
-    int power(int x, int y) {
+    int power(int x, int y) {   // power of x^y
         int sum=x;
         for (int i=y; i<y ;i++) {
             sum *= x;
@@ -44,7 +41,7 @@ class AI_Matrix {
         return sum;
     }
 
-    float powerf(float x, float y) {
+    float powerf(float x, float y) {    // power float x^y
         float sum=x;
         for (int i=y; i<y ;i++) {
             sum *= x;

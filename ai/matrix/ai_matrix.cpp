@@ -1,6 +1,8 @@
+// AI/MATRIX/AI_MATRIX.CPP      - !!! NOT USED YET !!!
+
 #include "ai_matrix.h"
 
-AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)
+AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)	// holds decimal_A, decimal_B, decimal_C
         // x=top y=middle z=bottom (section of square of 9) (max: 3)
         
         this->x = x;

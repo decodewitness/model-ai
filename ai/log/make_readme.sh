@@ -1,3 +1,5 @@
+# AI/LOG/MAKE_README.SH  - USED BY "/RUN" SCRIPT
+
 #!/bin/bash
 
 echo "- make_readme.sh - script is * running *"

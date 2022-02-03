@@ -115,7 +115,7 @@ public:
 	~AL();
 
 	// shepard notifies you when a pin is due
-	void shepard(int n, int i) {
+	void shepard(int n, int i) {	// increments sheep for shepard() function
 		if (n==i) {
 			this->sheep++;
 			std::cout << std::endl << "-:: SHEPARD @(\"" << n << "\")(sheep=\"" << sheep << "\")" << std::endl << std::endl;
@@ -123,15 +123,15 @@ public:
 		}
 	}
 
-	int how_many_sheep() { return this->sheep; }
+	int how_many_sheep() { return this->sheep; }	// returns sheep number
 
 	void kbuild(double i);	// reserve memory
 
-	int live();	// artificial life routine
+	int live();	// artificial life routine	// numbers sequence
 	void modifies_behaviour();
 	void life();	// artificial habits
 
-	void assess(int n) {
+	void assess(int n) {	// units to use in the this->live() numbers sequence
 		// bool grid[quantum*big];
 		// int xt[quantum*big]; // occurrence of time on nr. of pin
 		// int t[quantum*big];	// duration of time
@@ -207,22 +207,19 @@ public:
 		// std::string range_label_custom;	// label for range
 		// int range_custom;	// value custom range
 		// int rr;	// pin value for custom range;
-}
+	}
 
-	void check(int n) {
+	void check(int n) {	// assesses through assess() function
 		if (grid[n] == true) { assess(n);}
 	}
 };
 
-
 class HAL : public AL {
-
 private:
 	int running;
 	int runlevel;
 
 public:
-
 	HAL();
 	~HAL();
 };

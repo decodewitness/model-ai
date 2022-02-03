@@ -167,7 +167,6 @@ void prepare_occurrences(int al, int cnt) {
     }
 };
 
-// UNCOMMENT THIS NEXT 
 void dictionaries(int al, int cnt) {    // PREPARES BOTH DICTIONARIES
     prepare_ints(al, cnt);
     prepare_occurrences(al, cnt);

@@ -12,7 +12,7 @@ public:
     ~Forest();
 };
 
-Forest::Forest() {
+Forest::Forest() {  // constructor
     std::cout << "\t\t-:: forest constructor." << std::endl;
     this->label = "\t\tforest type I (label)";
     std::cout << "\t\t-:: forest " << this->label << " was created." << std::endl;
@@ -27,7 +27,7 @@ Forest::Forest() {
     }
 }
 
-Forest::~Forest() {
+Forest::~Forest() { // destructor
     std::cout << "\t-:: deleting tree." << std::endl;
     for (int i=0; i<maximum_trees; i++) {
         delete this->trees[i];

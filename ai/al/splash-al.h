@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-void splash_al(void) {
+void splash_al(void) {	// splashes artificial life logo
 	std::cout << std::endl << " oo[" << std::endl << std::endl;
 }
 

@@ -185,8 +185,8 @@ int steering(int arc) {
 	
 	// stage down and decouple logic (graceful shutdown)
 	
-	ai.export_accounts("accounts.txt");
-	ai.import_accounts("accounts.txt");
+	ai.export_accounts(exp_account);
+	ai.import_accounts(imp_account);
 	sleep(1);
 	
 	ai.decouple();

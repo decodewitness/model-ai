@@ -1,3 +1,5 @@
+// AI/LIB/CONSTRUCT.CPP -   !!! NOT USED YET !!!
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -26,7 +28,7 @@ private:
 
 public:
 
-    Construct() {
+    Construct() {   // constructor
         std::cout << "~:: setting construct." << std::endl;
 
         this->_dataFiles = INFILES;
@@ -34,7 +36,6 @@ public:
     };
 
     void preprocess() { // function opens the directives file and assigns a main file for data assimilation purposes
-
         std::cout << std::endl << "~:: preprocessing module." << std::endl;
         std::cout << "\t~:: set data-in-file as header->_dataFiles." << std::endl;
 
@@ -92,8 +93,7 @@ public:
         }
     };
 
-    void process(std::string filen, int sizedn) {
-
+    void process(std::string filen, int sizedn) {   // processes file "std::string filen"
         ifstream datacab;
         std::string line;
 

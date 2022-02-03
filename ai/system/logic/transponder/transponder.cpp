@@ -1,10 +1,11 @@
-// "/AI/LOGIC/TRANSPONDER/TRANSPONDER.CPP" - USED BY "/AI/AI.H" // USED FOR LANGUAGE INTERPRETATION.
+// AI/LOGIC/TRANSPONDER/TRANSPONDER.CPP - USED BY "/AI/AI.H" // USED FOR LANGUAGE INTERPRETATION.
 
 #include <iostream>
 #include <string>
 #include <unistd.h>
 #include <vector>
 #include <sstream>
+#include <fstream>
 
 #include "prepare.cpp"
 #include "transponder.h"
@@ -14,6 +15,8 @@ Transponder::Transponder(std::string s) {
     
     // setting both "this->initial_sentence" && "this->subject" here to parameter string, which is the sentence queried to the Transponder
     this->initial_sentence = s;
+    
+    // initial value
     this->subject = s;
 
     this->analytical = true;   // also redundant
@@ -47,11 +50,11 @@ std::string Transponder::respond(bool b) {
     // EDIT THIS!!!
     // should use transponder together with NLP processing
     // instead of just relaying the answer.
-
-    this->answer = "-:: tr :: message was relayed from transponder -- response().";
+        // use logic here
+    this->response = "~:: tr :: message was relayed from transponder -- response().";
 
     // return the answer to the question or statement/pragma/sequence/expression
-    return this->answer;
+    return this->response;
 };
 
 void Transponder::analytics(std::string s) {
@@ -184,6 +187,17 @@ void Transponder::analytics(std::string s) {
 
     // skip line
     std::cout << std::endl;
+
+    // process answers in "this->answer()"
+    
+    std::cout << std::endl << "(debug) answer." << std::endl;
+    this->response = this->answer(s);
+    
+    // answer the question
+    std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
+    std::cout << std::endl << "(" << this->subject << ")" << std::endl;
+    std::cout << "-- answer: " << this->response << std::endl;
+    std::cout << std::endl;
 };
 
 void Transponder::prep(std::string s) { // 's' is the input sentence from "query_string"
@@ -227,6 +241,75 @@ void Transponder::prep(std::string s) { // 's' is the input sentence from "query
 
 std::string Transponder::retVal() {
     return this->initial_sentence;
+};
+
+std::string Transponder::answer(std::string s) {
+    int answers_processed = 0;
+
+    std::string query = s;
+    std::string x;
+    std::ifstream filen;
+    
+    std::string used_file;
+
+    bool isNormal = false;
+    bool isQuestion = false;
+    bool isExclamation = false;
+
+    if (query.back() == '?') {  // open "question_answers"
+        isQuestion = true;
+        filen.open(question_answers);
+        used_file = question_answers;
+    } else if (query.back() == '!') {   // open "trivia_logic"
+        isExclamation = true;
+        filen.open(trivia_logic);
+        used_file = trivia_logic;
+    } else {
+        isNormal = true;
+        filen.open(trivia_logic);
+        used_file = trivia_logic;
+    }
+
+    if (filen.is_open() == true) {
+        while (getline (filen,x)) {
+            answers_processed += 1;
+
+            // convert this logic first!!!!!!!!
+            // process answers into NEW!! ARRAY!!!!!!!!
+            std::cout << std::endl << "(score): " << this->rank_score(query, x) << std::endl;
+        }
+    } else {
+        std::cout << std::endl << "~::!::~ error opening file: \"" << used_file << "\"" << std::endl << std::endl;
+    }
+
+    std::cout << std::endl;
+
+    if (isExclamation == true) {
+        std::cout << "~:: (debug) query was exclamation: (!)" << std::endl;
+    } else if (isQuestion == true) {
+        std::cout << "~:: (debug) query was question: (?)" << std::endl;
+    } else if (isNormal == true) {
+        std::cout << "~:: (debug) query was normal: (.)" << std::endl;
+    } else {
+        std::cout << "~:: (debug) abnormal query!" << std::endl;
+    }
+
+    std::cout << std::endl << "~:: (debug) - answers processed: " << answers_processed << std::endl;
+
+    // return answer to Transponder::analytics(std::string)
+    return x;
+};
+
+int Transponder::rank_score(std::string q, std::string a) { // parameters: q:query, a:answer
+    int score = 0;
+
+    // split words in query
+    // compare occurences in q -&- a
+    // add score and return it
+
+    // then compare score inside 
+
+return score;
 };
 
     // char strP[256][wordsize][words];

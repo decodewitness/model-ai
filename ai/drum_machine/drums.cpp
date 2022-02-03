@@ -1,4 +1,4 @@
-// "/AI/DRUM_MACHINE/DRUMS.CPP" - USED BY "/AI/AI.H" FOR (MODEL-AI) PROJECT
+// AI/DRUM_MACHINE/DRUMS.CPP - USED BY "AI/AI.H" FOR (MODEL-AI) PROJECT
 
 #include <iostream>
 #include <functional>
@@ -92,7 +92,7 @@ void DrumMachine::reverse() {   // reverse the drum cycles in both measures
     this->status();
 };
 
-void DrumMachine::reverseA() {   // reverse the drum cycles in both measures
+void DrumMachine::reverseA() {   // reverse the drum cycles in A track in both measures
     int x[2];
 
     std::cout << "-:: reversing drum" << std::endl;
@@ -115,7 +115,7 @@ void DrumMachine::reverseA() {   // reverse the drum cycles in both measures
     this->status();
 };
 
-void DrumMachine::reverseB() {   // reverse the drum cycles in both measures
+void DrumMachine::reverseB() {   // reverse the drum cycles in B track in both measures
     int x[2];
 
     std::cout << "-:: reversing drum" << std::endl;
@@ -139,12 +139,12 @@ void DrumMachine::reverseB() {   // reverse the drum cycles in both measures
     this->status();
 };
 
-void filter(int &x) {
+void filter(int &x) {   // sets reference variable to 0
     // xors &x array of [2]
-    memset(&x, 0, 2*sizeof(&x));
+    memset(&x, 0, sizeof(&x));
 }
 
-void DrumMachine::start() {
+void DrumMachine::start() { // starts loop in DrumMachine
     // increase time in measure to about 00:00:10 seconds (total time in sample=time_in_seconds + any time leftover in DrumMachine)
     double time_in_seconds = 10.0;  // seconds
 
@@ -155,38 +155,37 @@ void DrumMachine::start() {
     // TIME_H
 }
 
-void DrumMachine::reset() {
+void DrumMachine::reset() { // resets timer in DrumMachine
     // set timer starters to 0 seconds
     this->s1 = this->s2 = 0.00;
 }
 
-void DrumMachine::setStartStatus() {
+void DrumMachine::setStartStatus() {    // adds 1.0 second to this->s1 and this->s2 + startA or startB
     this->s1 = 1.0 + startA;    // setStartStatus initializes to startA|startB and adds 1 second
     this->s2 = 1.0 + startB;
 }
 
-void DrumMachine::setStartA() {
+void DrumMachine::setStartA() { // sets start 1 (this->s1)
     this->s1 = startA;  // make A start at the # startA time
 };
 
-void DrumMachine::setStartB() {
+void DrumMachine::setStartB() { // sets start 2 (this->s2)
     this->s2 = startB;  // make B start at the # startB time
 };
 
-void DrumMachine::setStartAB() {
+void DrumMachine::setStartAB() {    // set start A+B as the same
     this->s1 = this->s2 = startAB;  // make A+B start at the same time
 };
 
-void DrumMachine::setIntervalA() {
+void DrumMachine::setIntervalA() {  // sets intervalA
     this->intervalA = chronotrigger;    // sets intervalA to 0.75 as default (slower measure but faster than default)
 };
 
-void DrumMachine::setIntervalB() {
+void DrumMachine::setIntervalB() {  // sets intervalB
     this->intervalB = chronotrigger / 2;    // sets intervalB to 0.375 as default (faster measure)
 };
 
-void DrumMachine::status() {    // broadcast status message
-
+void DrumMachine::status() {    // broadcast DrumMachine status message
     // status
     std::cout << "~::--::(status of drum kits)::--::~" << std::endl;
         
@@ -200,3 +199,5 @@ void DrumMachine::status() {    // broadcast status message
     std::cout << "{{ -intervalA ( " << this->intervalA << " ) }} ";
     std::cout << "{{ -intervalB ( " << this->intervalB << " ) " << "}}" << std::endl;
 };
+
+// eof

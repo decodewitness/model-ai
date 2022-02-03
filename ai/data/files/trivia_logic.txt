@@ -1,0 +1,2 @@
+"1","trivia_logic :: transponder is not active yet.";
+"2","trivia_logic :: transponder is not active yet.";

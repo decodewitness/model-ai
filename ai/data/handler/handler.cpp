@@ -10,10 +10,11 @@ std::string DATA_IN = "ai/data/in/pipeline"; // file containing input data that 
 std::string MATH_IN = "ai/data/in/expression";   // file containing math expressions or to write new expressions into
 
 // FUNCTION TO HANDLE MATH DATA INPUT
-void math_handler() {    // handles math expressions by using "matrix"
-
+void math_handler() {    // handles math expressions by using "matrix"  // called from math_filter()
+    // file stream
     ifstream indata;
 
+    // variables
     std::string expr = "0";
     std::string myvar = "this is a temporary variable and data container";
 
@@ -32,10 +33,11 @@ void math_handler() {    // handles math expressions by using "matrix"
 };
 
 // FUNCTION TO HANDLE DATA INPUT STREAMS
-void data_handler() {
-
+void data_handler() {   // handles data expressions // called from data_filter()
+    // file stream
     ifstream indata;
 
+    // variables
     std::string expr = "0";
     std::string myvar = "this is a temporary variable and data container";
 

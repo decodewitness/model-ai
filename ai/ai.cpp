@@ -584,7 +584,7 @@ void AI::sample() {	// sampling routine
 
 void check() {	// displays "check" message
 	std::cout << "\t-:: check." << std::endl;
-}
+};
 
 void AI::init() {		// INITIALIZATION
 	// ALL INITIALIZATION HAPPENS HERE
@@ -625,24 +625,29 @@ void AI::init() {		// INITIALIZATION
 	x=gradle();
 	std::cout << "\t-:: gradle method finished. (";
 	std::cout << x << ")" << std::endl;
-}
+};
 
 void AI::appliance() {	// starts the "virtual" script
 	system("./ai/virtual/virtual");
-}
+};
 
 void AI::tsp() {	// transponder function
 	// create new transponder
 	this->transponder = new Transponder(query_string);
 
 	// prep new transponder
+	std::cout << "~:: transponder -> prep()" << std::endl;
 	this->transponder->prep(this->transponder->retVal());	// retVal() returns "initial_sentence" from "Transponder"
 
-	// do logic here !!! !!! !!!
+	// answer query
+	// std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
+	//this->transponder->answer(query_string);
+	
+	sleep(2);
 
 	// delete transponder
 	delete this->transponder;
-}
+};
 
 void AI::decouple() {	// decoupler routine for the ai model
 	std::cout << std::endl;
