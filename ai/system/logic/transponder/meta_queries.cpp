@@ -106,7 +106,7 @@ void reverse_meta_query_lookup(int a[], int size) {
                 continue;
             }
 
-            if (*(a+i) < 0) {
+            if (*(a+i) < 0) {   // maybe for loop here
                 i++;
                 counter=0;
                 continue;
@@ -118,12 +118,12 @@ void reverse_meta_query_lookup(int a[], int size) {
                 // new_meta = new_meta + ",";
                 //std::cout << "~copy~ :: " << word << std::endl;
 
-                std::cout << "A[I]: (" << i << ") " << *(a+i) << std::endl;
+                std::cout << "A[I]:(" << counter <<")(" << i << ") " << *(a+i) << std::endl;
                 strncpy(meta[i++],word.c_str(),word.length());
 
                 //std::cout << "+word: " << word << "." << std::endl;
                 counter = 0;
-                continue;
+                break;
             }
             counter++;
         }

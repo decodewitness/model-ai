@@ -214,15 +214,27 @@ void Track_Account::export_accounts(std::string filen) {
             if (accounts[i] > 0.00) {
                 exported++;
 
-                fs << i << ":";
-                fs << accounts[i] << ":";
+                // fs << i << " ";
+                // fs << accounts[i] << " ";
+                // fs << coin_no;
+
+                fs << i << " ";
+                
+                int x = accounts[i];    // (integral) "dollar" amount
+                float y = accounts[i] - (float) x;
+
+                // fs << accounts[i] << " ";
+                
+                // write the account
+                fs << i << " ";
+                fs << x << " ";
+                fs << y << " ";
                 fs << coin_no;
                 fs << std::endl;
             }
         }
 
         fs.close();
-
         std::cout << "~:: exported (" << exported << ") account(s) to: \"" << filen << "\"" << std::endl;
     }
 };
@@ -243,23 +255,30 @@ void Track_Account::import_accounts(std::string filen) {
         while (infile >> line) {
             std::stringstream ss(line);
 
+            // ignoring the colon
             for (int i; ss >> i;) {
                 vect.push_back(i);    
-                if (ss.peek() == ':') {
+                if (ss.peek() == ',') {
                     ss.ignore();
                 }
             }
 
+            // // write the account
+            // fs << i << " ";
+            // fs << x << " ";
+            // fs << y << " ";
+            // fs << coin_no;
+
             std::cout << "\t- importing account: ";
 
+            // // import account here
             for (std::size_t i = 0; i < vect.size(); i++) {
-                
                 // STILL need to convert this to a number!!!
                     // AND import it into the correct account.
-                
+                std::cout << "~/~ VECTOR(" << i << "){" << vect.at(i++) << "," << vect.at(i++) << "} (" << vect.at(i++) << ")" << "(" << vect.at(i++) << ")" << std::endl;
                 std::cout << vect[i] << " ";
             }
-        
+                    
             std::cout << std::endl;
         }
 

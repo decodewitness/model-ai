@@ -1,2 +1,5 @@
-"1","trivia_logic :: transponder is not active yet.";
-"2","trivia_logic :: transponder is not active yet.";
+"1","trivia_logic","transponder is not active yet.";
+"2","trivia_logic","transponder is not active yet.";
+"3","trivia_logic","transponder is not active yet.";
+"4","trivia_logic","transponder is not active yet.";
+"5","trivia_logic","transponder is not active yet.";

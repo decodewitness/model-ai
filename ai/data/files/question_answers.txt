@@ -1,2 +1,5 @@
-"1","question_answers :: transponder is not active yet.";
-"2","question_answers :: transponder is not active yet.";
+"1","question_answers","transponder is not active yet.";
+"2","question_answers","transponder is not active yet.";
+"3","question_answers","transponder is not active yet.";
+"4","question_answers","transponder is not active yet.";
+"5","question_answers","transponder is not active yet.";

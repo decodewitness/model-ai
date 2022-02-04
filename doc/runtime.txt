@@ -1,4 +1,7 @@
 
+ARG: testing,1,2,1,2,
+
+
 -:: enabled logging.
 
 _ARC(debug): 1 -- 
@@ -1426,16 +1429,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffcb11785f0)
-	- stacking header:(1)::<address>(0x7ffcb1178610)
-	- stacking header:(2)::<address>(0x7ffcb1178630)
-	- stacking header:(3)::<address>(0x7ffcb1178650)
-	- stacking header:(4)::<address>(0x7ffcb1178670)
-	- stacking header:(5)::<address>(0x7ffcb1178690)
-	- stacking header:(6)::<address>(0x7ffcb11786b0)
-	- stacking header:(7)::<address>(0x7ffcb11786d0)
-	- stacking header:(8)::<address>(0x7ffcb11786f0)
-	- stacking header:(9)::<address>(0x7ffcb1178710)
+	- stacking header:(0)::<address>(0x7ffdc846a2c0)
+	- stacking header:(1)::<address>(0x7ffdc846a2e0)
+	- stacking header:(2)::<address>(0x7ffdc846a300)
+	- stacking header:(3)::<address>(0x7ffdc846a320)
+	- stacking header:(4)::<address>(0x7ffdc846a340)
+	- stacking header:(5)::<address>(0x7ffdc846a360)
+	- stacking header:(6)::<address>(0x7ffdc846a380)
+	- stacking header:(7)::<address>(0x7ffdc846a3a0)
+	- stacking header:(8)::<address>(0x7ffdc846a3c0)
+	- stacking header:(9)::<address>(0x7ffdc846a3e0)
 
 
 -:: checking AI functions.
@@ -1493,7 +1496,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1565,13 +1569,13 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-regular file: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-regular file: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1582,8 +1586,8 @@ regular file: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic is being weighed in the transponder sequence
-	[ simple x computation: type:char len:50 vowels:33 consonants:17 special:0  ]
+	logical top influence
+	[ simple x computation: type:char len:21 vowels:13 consonants:8 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2131,12 +2135,12 @@ x=1; y=1; z=3;
 
 	-----------------
 
-		* words no_#: 8
-		* length: 50
-		* vowels: 17
-		* consonants: 26
+		* words no_#: 3
+		* length: 21
+		* vowels: 8
+		* consonants: 11
 		* numbers: 0
-		* special chars: 7
+		* special chars: 2
 		* unknown chars: 0
 
 
@@ -2151,59 +2155,42 @@ x=1; y=1; z=3;
 
 ~:: transponder -> answer()
 
-+query :: (logic is being weighed in the transponder sequence)
++query :: (logical top influence)
 
 -- answer:
 	
 
 ~:: transponder -> prep()
-(debug) word :: logic
-(debug) word :: is
-(debug) word :: being
-(debug) word :: weighed
-(debug) word :: in
-(debug) word :: the
-(debug) word :: transponder
-(debug) word :: sequence
+(debug) word :: logical
+(debug) word :: top
+(debug) word :: influence
 
-~:: (debug)::nrOfWords = 8.
-~:: (debug)::counter = 8.
+~:: (debug)::nrOfWords = 3.
+~:: (debug)::counter = 3.
 
-(debug) calling prepare_ints() (from) -> "logic is being weighed in the transponder sequence".
+(debug) calling prepare_ints() (from) -> "logical top influence".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (7).
+~:: (debug) number of matching occurences: (3).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) logic :: #3197
-(debug) 1) is :: #7
-(debug) 2) being :: #276
-(debug) 3) weighed :: #17892
-(debug) 4) in :: #5
-(debug) 5) the :: #0
-(debug) 6) transponder :: #-1
-(debug) 7) sequence :: #2259
+(debug) 0) logical :: #5753
+(debug) 1) top :: #103
+(debug) 2) influence :: #2942
 
 ~:: meta queries ~:: storing meta query sequence ~:::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 3197	- 7	- 276	- 17892	- 5	- 0	- -1	- 2259
+	- 5753	- 103	- 2942
 
-~:: meta queries ~:: reverse_meta_query_lookup("3197,7,276,17892,5,0,-1,2259,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("5753,103,2942,") ~:::~
 
 
-A[I]: (0) 3197
-A[I]: (1) 7
-A[I]: (2) 276
+A[I]:(5753)(0) 5753
 +meta queries:
-(debug) 0) logic :: 
-(debug) 1) responses :: 
-(debug) 2) affordable :: 
-(debug) 3)  :: 
-(debug) 4)  :: 
-(debug) 5)  :: 
-(debug) 6)  :: 
-(debug) 7)  :: 
+(debug) 0) logical :: logical
+(debug) 1)  :: logical
+(debug) 2)  :: logical
 
 (EOT)
 
@@ -2244,18 +2231,3 @@ A[I]: (2) 276
 ~:: exported (1) account(s) to: "export_account.txt"
 
 ~:: importing account(s) from: "export_account.txt".
-	- importing account: 1 46 
-
--:: decoupler.
-	-:: decoupling sampler
-	-:: sampler set to pause.
-		(-  ||  -)
-
-
-::=> saving grace (routine) and closing libraries <=::
-
--:: closing files.
--:: cleaning memory.
-
--:: calling destructor for AI::Model.
--:: done.
