@@ -171,23 +171,27 @@ void prepare_occurrences(int al, int cnt) {
         std::cout << "(debug) " << i << ") " << wordsFromSentence[i] << " :: #" << int_occurrences[i] << std::endl;
     
         // meta sequence:: intvars int_occurences[] ::
-        if (int_occurrences[i] > 0) {
-            edited_meta_query = true;
-
-    // NEEDS A FIX!!!!!!!
-            meta_sequence = meta_sequence + (char) int_occurrences[i];
-            meta_sequence = meta_sequence + ',';
-        }
     }
 
-    if (edited_meta_query == true) {
-        meta_sequence.pop_back();
+    // for (int i=0; i<loopvar; i++) {
+    //     if (int_occurrences[i] > 0) {
+    //         // edited_meta_query = true;
 
-        std::cout << std::endl << "~:: edited :: (meta sequence) :: (\"" << meta_sequence << "\")." << std::endl;
-    }
+    //         // meta_sequence = meta_sequence + (char) int_occurrences[i];
+    //         // meta_sequence = meta_sequence + ',';
 
-    store_meta_queries(meta_sequence);
-    reverse_meta_query_lookup(meta_sequence);
+    //         meta_nr[i] = int_occurrences[i];
+    //     } 
+    // }
+
+    // if (edited_meta_query == true) {
+    //     meta_sequence.pop_back();
+
+    //     std::cout << std::endl << "~:: edited :: (meta sequence) :: (\"" << meta_sequence << "\")." << std::endl;
+    // }
+
+    store_meta_queries(int_occurrences, loopvar);
+    reverse_meta_query_lookup(int_occurrences, loopvar);
 };
 
 void dictionaries(int al, int cnt) {    // PREPARES BOTH DICTIONARIES
