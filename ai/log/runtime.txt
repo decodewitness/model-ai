@@ -1429,16 +1429,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdc846a2c0)
-	- stacking header:(1)::<address>(0x7ffdc846a2e0)
-	- stacking header:(2)::<address>(0x7ffdc846a300)
-	- stacking header:(3)::<address>(0x7ffdc846a320)
-	- stacking header:(4)::<address>(0x7ffdc846a340)
-	- stacking header:(5)::<address>(0x7ffdc846a360)
-	- stacking header:(6)::<address>(0x7ffdc846a380)
-	- stacking header:(7)::<address>(0x7ffdc846a3a0)
-	- stacking header:(8)::<address>(0x7ffdc846a3c0)
-	- stacking header:(9)::<address>(0x7ffdc846a3e0)
+	- stacking header:(0)::<address>(0x7fff8dcc7ab0)
+	- stacking header:(1)::<address>(0x7fff8dcc7ad0)
+	- stacking header:(2)::<address>(0x7fff8dcc7af0)
+	- stacking header:(3)::<address>(0x7fff8dcc7b10)
+	- stacking header:(4)::<address>(0x7fff8dcc7b30)
+	- stacking header:(5)::<address>(0x7fff8dcc7b50)
+	- stacking header:(6)::<address>(0x7fff8dcc7b70)
+	- stacking header:(7)::<address>(0x7fff8dcc7b90)
+	- stacking header:(8)::<address>(0x7fff8dcc7bb0)
+	- stacking header:(9)::<address>(0x7fff8dcc7bd0)
 
 
 -:: checking AI functions.
@@ -1586,8 +1586,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logical top influence
-	[ simple x computation: type:char len:21 vowels:13 consonants:8 special:0  ]
+	logic one
+	[ simple x computation: type:char len:9 vowels:5 consonants:4 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2135,12 +2135,12 @@ x=1; y=1; z=3;
 
 	-----------------
 
-		* words no_#: 3
-		* length: 21
-		* vowels: 8
-		* consonants: 11
+		* words no_#: 2
+		* length: 9
+		* vowels: 4
+		* consonants: 4
 		* numbers: 0
-		* special chars: 2
+		* special chars: 1
 		* unknown chars: 0
 
 
@@ -2155,79 +2155,32 @@ x=1; y=1; z=3;
 
 ~:: transponder -> answer()
 
-+query :: (logical top influence)
++query :: (logic one)
 
 -- answer:
 	
 
 ~:: transponder -> prep()
-(debug) word :: logical
-(debug) word :: top
-(debug) word :: influence
+(debug) word :: logic
+(debug) word :: one
 
-~:: (debug)::nrOfWords = 3.
-~:: (debug)::counter = 3.
+~:: (debug)::nrOfWords = 2.
+~:: (debug)::counter = 2.
 
-(debug) calling prepare_ints() (from) -> "logical top influence".
+(debug) calling prepare_ints() (from) -> "logic one".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (3).
+~:: (debug) number of matching occurences: (2).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) logical :: #5753
-(debug) 1) top :: #103
-(debug) 2) influence :: #2942
+(debug) 0) logic :: #3198
+(debug) 1) one :: #45
 
 ~:: meta queries ~:: storing meta query sequence ~:::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 5753	- 103	- 2942
+	- 3198	- 45
 
-~:: meta queries ~:: reverse_meta_query_lookup("5753,103,2942,") ~:::~
-
-
-A[I]:(5753)(0) 5753
-+meta queries:
-(debug) 0) logical :: logical
-(debug) 1)  :: logical
-(debug) 2)  :: logical
-
-(EOT)
-
-~:: course converter: 
-	*--> euro: 10 = ($12.8) dollar.
-
-~:: course converter: 
-	*--> euro: 10 = ($12.8) dollar.
-
-~:: accounts: 
-    -----
-
-- account (1):
-	adding: (+/+) 1.33 EURO.
-	balance: [1.33 EURO].
-
-- account (1):
-	adding: (+/+) 44.99 EURO.
-	balance: [46.32 EURO].
+~:: meta queries ~:: reverse_meta_query_lookup("3198, 45, ") ~:::~
 
 
-- account: (1) --> balance: [46.32 EURO].
-
-~:: storing accounts information --> (ai/log/account-information.txt).
-	~:: writing accounts:
-		.
-	~:: closing file.
-~:: successfully stored accounts information.
-
-~:: stats() function:
-	--directory: 
-	--statdir("./ai") (flag:0)
-
-~:: 1 file copied. (main.cpp) (main2.cpp.txt)
-
-~:: removed 1 file. (main2.cpp.txt)
-~:: exporting accounts information for later imports.
-~:: exported (1) account(s) to: "export_account.txt"
-
-~:: importing account(s) from: "export_account.txt".

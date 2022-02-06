@@ -1481,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc8b401f50)
-	- stacking header:(1)::<address>(0x7ffc8b401f70)
-	- stacking header:(2)::<address>(0x7ffc8b401f90)
-	- stacking header:(3)::<address>(0x7ffc8b401fb0)
-	- stacking header:(4)::<address>(0x7ffc8b401fd0)
-	- stacking header:(5)::<address>(0x7ffc8b401ff0)
-	- stacking header:(6)::<address>(0x7ffc8b402010)
-	- stacking header:(7)::<address>(0x7ffc8b402030)
-	- stacking header:(8)::<address>(0x7ffc8b402050)
-	- stacking header:(9)::<address>(0x7ffc8b402070)
+	- stacking header:(0)::<address>(0x7ffef38afac0)
+	- stacking header:(1)::<address>(0x7ffef38afae0)
+	- stacking header:(2)::<address>(0x7ffef38afb00)
+	- stacking header:(3)::<address>(0x7ffef38afb20)
+	- stacking header:(4)::<address>(0x7ffef38afb40)
+	- stacking header:(5)::<address>(0x7ffef38afb60)
+	- stacking header:(6)::<address>(0x7ffef38afb80)
+	- stacking header:(7)::<address>(0x7ffef38afba0)
+	- stacking header:(8)::<address>(0x7ffef38afbc0)
+	- stacking header:(9)::<address>(0x7ffef38afbe0)
 
 
 -:: checking AI functions.
@@ -1548,7 +1548,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1620,13 +1621,13 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-character device: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-character device: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1637,8 +1638,8 @@ character device: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	complicated task
+	[ simple x computation: type:char len:16 vowels:11 consonants:5 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1963,7 +1964,7 @@ x
 	~:: initialized with (2) sampling tracks.
 
 ~:: sampler :: ~ :: generated (16)  new tracks-in-track.
-	~:: total initialized tracks [6].
+	~:: total initialized tracks [-65528].
 
 ~:: setting tracks-in-track (1) to (2) tracks.
 ~:: setting track [1] index to (00h/00m/00s)
@@ -2186,12 +2187,12 @@ x=1; y=1; z=3;
 
 	-----------------
 
-		* words no_#: 1
-		* length: 5
-		* vowels: 2
-		* consonants: 3
+		* words no_#: 2
+		* length: 16
+		* vowels: 5
+		* consonants: 10
 		* numbers: 0
-		* special chars: 0
+		* special chars: 1
 		* unknown chars: 0
 
 
@@ -2206,36 +2207,42 @@ x=1; y=1; z=3;
 
 ~:: transponder -> answer()
 
-+query :: (logic)
++query :: (complicated task)
 
 -- answer:
 	
 
 ~:: transponder -> prep()
-(debug) word :: logic
+(debug) word :: complicated
+(debug) word :: task
 
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
+~:: (debug)::nrOfWords = 2.
+~:: (debug)::counter = 2.
 
-(debug) calling prepare_ints() (from) -> "logic".
+(debug) calling prepare_ints() (from) -> "complicated task".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (1).
+~:: (debug) number of matching occurences: (2).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) logic :: #3197
+(debug) 0) complicated :: #7037
+(debug) 1) task :: #2035
 
 ~:: meta queries ~:: storing meta query sequence ~:::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 3197
+	- 7037	- 2035
 
-~:: meta queries ~:: reverse_meta_query_lookup("3197,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("7037, 2035, ") ~:::~
 
 
-A[I]:(3197)(0) 3197
+- assigned: (7037): chem :: chem :: 7037
+- assigned: (2035): muscles :: muscles :: 2035
+
 +meta queries:
-(debug) 0) logic :: logic
+(debug) 0) chem :: 
+(debug) 1) muscles :: 
+
 
 (EOT)
 

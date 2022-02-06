@@ -27,7 +27,7 @@ std::string ourword;
 // dictionaries
 // char our_dict[alimit][wordsize]; // contains our words.
 
-std::string our_dict[alimit];    // contains our words.
+std::string our_dict[alimit+1];    // contains our words.
 
 int dict[alimit];   // contains the ordered values of all the words from the dictionary and forms this new dictionary.
 // lists for integer values of keys and words
@@ -92,6 +92,8 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
         
         //ints[key] = counter++;
         our_dict[key] = word;
+
+        //std::cout << "(debug) word = \"" << word << "\" - key: (" << key << ")." << std::endl;
         
         counter++;
         key++;
@@ -101,7 +103,7 @@ void prepare_ints(int l, int arraySize) {  // "l" = "alimit"
 
     // check positions in words2ints[] for number of occurence of the words in the sentence 'wordsFromSentence[]'
     for (int i=0; i<arraySize; i++) { // loops over the words in the sentence
-        for (int j=0; j<l; j++) {   // loops over dictionary
+        for (int j=1; j<l+1; j++) {   // loops over dictionary
             if (strcmp(wordsFromSentence[i], our_dict[j].c_str()) == 0) {
                 // here one word matches
                 word2ints[j] += 1;
@@ -143,7 +145,7 @@ void prepare_occurrences(int al, int cnt) {
         match_found=false;
         
         for (int j=0; j<al; j++) {   // loops over dictionary
-            if (strcmp(wordsFromSentence[i], our_dict[j].c_str()) == 0) {
+            if (strcmp(wordsFromSentence[i], our_dict[j-1].c_str()) == 0) {
                 // here one word matches
                 match_found = true;
                 

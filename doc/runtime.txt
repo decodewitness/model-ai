@@ -1429,16 +1429,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdc846a2c0)
-	- stacking header:(1)::<address>(0x7ffdc846a2e0)
-	- stacking header:(2)::<address>(0x7ffdc846a300)
-	- stacking header:(3)::<address>(0x7ffdc846a320)
-	- stacking header:(4)::<address>(0x7ffdc846a340)
-	- stacking header:(5)::<address>(0x7ffdc846a360)
-	- stacking header:(6)::<address>(0x7ffdc846a380)
-	- stacking header:(7)::<address>(0x7ffdc846a3a0)
-	- stacking header:(8)::<address>(0x7ffdc846a3c0)
-	- stacking header:(9)::<address>(0x7ffdc846a3e0)
+	- stacking header:(0)::<address>(0x7ffcfe07e170)
+	- stacking header:(1)::<address>(0x7ffcfe07e190)
+	- stacking header:(2)::<address>(0x7ffcfe07e1b0)
+	- stacking header:(3)::<address>(0x7ffcfe07e1d0)
+	- stacking header:(4)::<address>(0x7ffcfe07e1f0)
+	- stacking header:(5)::<address>(0x7ffcfe07e210)
+	- stacking header:(6)::<address>(0x7ffcfe07e230)
+	- stacking header:(7)::<address>(0x7ffcfe07e250)
+	- stacking header:(8)::<address>(0x7ffcfe07e270)
+	- stacking header:(9)::<address>(0x7ffcfe07e290)
 
 
 -:: checking AI functions.
@@ -1586,8 +1586,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logical top influence
-	[ simple x computation: type:char len:21 vowels:13 consonants:8 special:0  ]
+	complicated task
+	[ simple x computation: type:char len:16 vowels:11 consonants:5 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2135,12 +2135,12 @@ x=1; y=1; z=3;
 
 	-----------------
 
-		* words no_#: 3
-		* length: 21
-		* vowels: 8
-		* consonants: 11
+		* words no_#: 2
+		* length: 16
+		* vowels: 5
+		* consonants: 10
 		* numbers: 0
-		* special chars: 2
+		* special chars: 1
 		* unknown chars: 0
 
 
@@ -2155,42 +2155,42 @@ x=1; y=1; z=3;
 
 ~:: transponder -> answer()
 
-+query :: (logical top influence)
++query :: (complicated task)
 
 -- answer:
 	
 
 ~:: transponder -> prep()
-(debug) word :: logical
-(debug) word :: top
-(debug) word :: influence
+(debug) word :: complicated
+(debug) word :: task
 
-~:: (debug)::nrOfWords = 3.
-~:: (debug)::counter = 3.
+~:: (debug)::nrOfWords = 2.
+~:: (debug)::counter = 2.
 
-(debug) calling prepare_ints() (from) -> "logical top influence".
+(debug) calling prepare_ints() (from) -> "complicated task".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (3).
+~:: (debug) number of matching occurences: (2).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) logical :: #5753
-(debug) 1) top :: #103
-(debug) 2) influence :: #2942
+(debug) 0) complicated :: #7037
+(debug) 1) task :: #2035
 
 ~:: meta queries ~:: storing meta query sequence ~:::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 5753	- 103	- 2942
+	- 7037	- 2035
 
-~:: meta queries ~:: reverse_meta_query_lookup("5753,103,2942,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("7037, 2035, ") ~:::~
 
 
-A[I]:(5753)(0) 5753
+- assigned: (7037): complicated :: complicated :: 7037
+- assigned: (2035): pasta :: pasta :: 2035
+
 +meta queries:
-(debug) 0) logical :: logical
-(debug) 1)  :: logical
-(debug) 2)  :: logical
+(debug) 0) complicated :: 
+(debug) 1) pasta :: 
+
 
 (EOT)
 
