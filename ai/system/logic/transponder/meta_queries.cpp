@@ -41,7 +41,7 @@ void store_meta_queries(int a[], int size) {
     std::cout << std::endl;
 
     if (met.is_open() == true) {
-        std::cout << "~:: meta queries ~:: storing meta query sequence ~:::~" << std::endl;
+        std::cout << "~:: meta queries ~:: storing meta query sequence ~:::: ::::~" << std::endl;
         std::cout <<"\t- path: \"" << meta_query_path << "\"." << std::endl;
         std::cout <<"\t\t- meta sequences:" << std::endl;
         
@@ -57,13 +57,11 @@ void store_meta_queries(int a[], int size) {
     std::cout << std::endl;
 };
 
-void reverse_meta_query_lookup(int a[], int size) {
+void reverse_meta_query_lookup(int a[], int size) { // looks up the words for the numbers of the meta queries
 
     std::ifstream met;
-    
     std::string new_meta;
     std::string word;
-
     bool fileWasClosed = false;
 
     std::cout << std::endl;
@@ -77,47 +75,95 @@ void reverse_meta_query_lookup(int a[], int size) {
     std::cout << "\") ~:::~" << std::endl;
     std::cout << std::endl;
 
-    met.open(reverse_path_handle);
+    //met.open(reverse_path_handle);
 
     // loop variables along with dict_size and size -> size = size of loopvar of array
     // int i=0, counter=0, iter=-1;
 
-    int counter=0, limit = 20000;  // size of dictionary
+    int counter=0, actualnumber=1, limit = 20000;  // size of dictionary
     std::string ourword;
 
     std::cout << std::endl;
     // look up meta query string here...
-    
-    if (met.is_open() == true) {
+    // int key;
+    std::fstream dict_in;
+    dict_in.open(reverse_path_handle);
+    char *our_dict[20000];
+    int counts=0;
+    int keyd=0;
+    // std::string word;
 
-        for (int i=0; i<size; i++) {
-            for (int j=1; j<limit+1; j++) {
-                met >> ourword;
-                if (*(a+i) == j) {
-                    strncpy(meta[counter++],ourword.c_str(), ourword.length());
-                    std::cout << "- assigned: (" << j << "): " << meta[counter - 1] << " :: " << ourword << " :: " << *(a+i) << std::endl;
+    while (keyd < 20000) {
+        dict_in >> ourword;
+                
+        // debugging output
+        //std::cout << key << ") " << word << std::endl; 
+        
+        strncpy(our_dict[counts], ourword.c_str(), 255);
 
-                    break;
-                }
+        //ints[key] = counter++;
+        //std::cout << "(debug) word = \"" << word << "\" - key: (" << key << ")." << std::endl;
+        
+        counts++;
+        keyd++;
+    };
+
+    //met.is_open() == true) {
+    for (int i=0, actualnumber=1; i<size; i++) {
+        for (int j=0; j<limit; j++) {
+            // met >> ourword;
+
+            std::cout << "our_dict::entry: " << our_dict[0] << std::endl;
+                
+            if (j == *(a+i)) {
+                std::cout << "j" << j << ":a*(" << *(a+i) << "):i" << i << std::endl;
+                std::string test = our_dict[j];
+                std::cout << "test:" << test << ":" << "our_dict[j]" << our_dict[j] << std::endl;
+                //     strncpy(meta[counter++],ourword.c_str(), ourword.length());
+                //     std::cout << "- assigned: (" << j << "): " << meta[counter - 1] << " :: " << ourword << " :: " << *(a+i) << std::endl;
+
+                //     break;
             }
         }
-        
-        met.close();
-    } else {
-        std::cout << std::endl;
-        std::cout << "~::!::~ error !!! (error opening file) ~:: unable to lookup this meta sequence." << std::endl;
-        fileWasClosed = true;
     }
-    
-    std::cout << std::endl << "+meta queries:" << std::endl;
+};      
+    //     met.close();
+    // } else {
+    //     std::cout << std::endl;
+    //     std::cout << "~::!::~ error !!! (error opening file) ~:: unable to lookup this meta sequence." << std::endl;
+    //     fileWasClosed = true;
+    // }
 
-    if (fileWasClosed == false) {
-        for (int k=0; k<counter; k++) {
-            std::cout << "(debug) " << k << ") " << meta[k] << std::endl;
-        }
-    }
+    // if (met.is_open() == true) {
+
+    //     for (int i=0; i<size; i++) {
+    //         for (int j=1; j<limit+1; j++) {
+    //             met >> ourword;
+    //             if (*(a+i) == j) {
+    //                 strncpy(meta[counter++],ourword.c_str(), ourword.length());
+    //                 std::cout << "- assigned: (" << j << "): " << meta[counter - 1] << " :: " << ourword << " :: " << *(a+i) << std::endl;
+
+    //                 break;
+    //             }
+    //         }
+    //     }
+        
+    //     met.close();
+    // } else {
+    //     std::cout << std::endl;
+    //     std::cout << "~::!::~ error !!! (error opening file) ~:: unable to lookup this meta sequence." << std::endl;
+    //     fileWasClosed = true;
+    // }
     
-    std::cout << std::endl;
+    // std::cout << std::endl << "+meta queries:" << std::endl;
+
+    // if (fileWasClosed == false) {
+    //     for (int k=0; k<counter; k++) {
+    //         std::cout << "(debug) " << k << ") " << meta[k] << std::endl;
+    //     }
+    // }
+    
+    // std::cout << std::endl;
 
     // if (met.is_open() == true) {
     //     // first EXTRACT data from meta query (meta)
@@ -176,4 +222,4 @@ void reverse_meta_query_lookup(int a[], int size) {
         // }
 
     // std::cout << "\t- " << word << std::endl;
-};
+// };

@@ -1,7 +1,4 @@
 
-ARG: testing,1,2,1,2,
-
-
 -:: enabled logging.
 
 _ARC(debug): 1 -- 
@@ -1429,16 +1426,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff8dcc7ab0)
-	- stacking header:(1)::<address>(0x7fff8dcc7ad0)
-	- stacking header:(2)::<address>(0x7fff8dcc7af0)
-	- stacking header:(3)::<address>(0x7fff8dcc7b10)
-	- stacking header:(4)::<address>(0x7fff8dcc7b30)
-	- stacking header:(5)::<address>(0x7fff8dcc7b50)
-	- stacking header:(6)::<address>(0x7fff8dcc7b70)
-	- stacking header:(7)::<address>(0x7fff8dcc7b90)
-	- stacking header:(8)::<address>(0x7fff8dcc7bb0)
-	- stacking header:(9)::<address>(0x7fff8dcc7bd0)
+	- stacking header:(0)::<address>(0x7ffd5c6695f0)
+	- stacking header:(1)::<address>(0x7ffd5c669610)
+	- stacking header:(2)::<address>(0x7ffd5c669630)
+	- stacking header:(3)::<address>(0x7ffd5c669650)
+	- stacking header:(4)::<address>(0x7ffd5c669670)
+	- stacking header:(5)::<address>(0x7ffd5c669690)
+	- stacking header:(6)::<address>(0x7ffd5c6696b0)
+	- stacking header:(7)::<address>(0x7ffd5c6696d0)
+	- stacking header:(8)::<address>(0x7ffd5c6696f0)
+	- stacking header:(9)::<address>(0x7ffd5c669710)
 
 
 -:: checking AI functions.
@@ -1586,8 +1583,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic one
-	[ simple x computation: type:char len:9 vowels:5 consonants:4 special:0  ]
+	logic problem money cigarette drink cheap
+	[ simple x computation: type:char len:41 vowels:28 consonants:13 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2135,52 +2132,67 @@ x=1; y=1; z=3;
 
 	-----------------
 
-		* words no_#: 2
-		* length: 9
-		* vowels: 4
-		* consonants: 4
+		* words no_#: 6
+		* length: 41
+		* vowels: 13
+		* consonants: 23
 		* numbers: 0
-		* special chars: 1
+		* special chars: 5
 		* unknown chars: 0
 
 
 (debug) answer.
 
-~::!::~ error opening file: ""
+(score): 0
 
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
 
 ~:: (debug) -- (!) -- abnormal query!
 
-~:: (debug) - answers processed: 0
+~:: (debug) - answers processed: 5
 
 ~:: transponder -> answer()
 
-+query :: (logic one)
++query :: (logic problem money cigarette drink cheap)
 
 -- answer:
-	
+	"5","trivia_logic","transponder is not active yet.";
 
 ~:: transponder -> prep()
 (debug) word :: logic
-(debug) word :: one
+(debug) word :: problem
+(debug) word :: money
+(debug) word :: cigarette
+(debug) word :: drink
+(debug) word :: cheap
 
-~:: (debug)::nrOfWords = 2.
-~:: (debug)::counter = 2.
+~:: (debug)::nrOfWords = 6.
+~:: (debug)::counter = 6.
 
-(debug) calling prepare_ints() (from) -> "logic one".
+(debug) calling prepare_ints() (from) -> "logic problem money cigarette drink cheap".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (2).
+~:: (debug) number of matching occurences: (6).
 
 ~:: intvars int_occurences[] ::~
 (debug) 0) logic :: #3198
-(debug) 1) one :: #45
+(debug) 1) problem :: #553
+(debug) 2) money :: #391
+(debug) 3) cigarette :: #8102
+(debug) 4) drink :: #2724
+(debug) 5) cheap :: #827
 
-~:: meta queries ~:: storing meta query sequence ~:::~
+~:: meta queries ~:: storing meta query sequence ~:::: ::::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 3198	- 45
+	- 3198	- 553	- 391	- 8102	- 2724	- 827
 
-~:: meta queries ~:: reverse_meta_query_lookup("3198, 45, ") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("3198, 553, 391, 8102, 2724, 827, ") ~:::~
 
 

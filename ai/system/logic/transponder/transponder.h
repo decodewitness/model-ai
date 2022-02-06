@@ -2,8 +2,8 @@
 
 #include <string>
 
-std::string question_answers = "ai/data/files/question_answers.txt";
-std::string trivia_logic = "ai/data/files/trivia_logic.txt";
+std::string question_answers = "data/files/question_answers.txt";
+std::string trivia_logic = "data/files/trivia_logic.txt";
 
 class Transponder {
 private:

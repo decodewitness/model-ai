@@ -256,7 +256,7 @@ std::string Transponder::answer(std::string s) {
     std::string x;
     std::ifstream filen;
     
-    std::string used_file;
+    std::string used_file ="trivia_logic.txt";
 
     // question, normal, or exclamation
     bool isDot = false;
@@ -272,41 +272,38 @@ std::string Transponder::answer(std::string s) {
     // open the correct file
     if (query.back() == '?') {  // open "question_answers"
         isQuestion = true;
-        filen.open(question_answers);
         used_file = question_answers;
         query.pop_back();
     } else if (query.back() == '!') {   // open "trivia_logic"
         isExclamation = true;
-        filen.open(trivia_logic);
         used_file = trivia_logic;
         query.pop_back();
     } else if (query.back() == '.') {   // open "trivia_logic"
         isDot = true;
-        filen.open(trivia_logic);
         used_file = trivia_logic;
         query.pop_back();
     } else if (query.back() == ',') {   // open "trivia_logic"
         isComma = true;
         isFollowUp = true;
-        filen.open(trivia_logic);
         used_file = trivia_logic;
         // follow_up check here
         query.pop_back();
     } else if (query.back() == ';') {   // open "trivia_logic"
         isSemicolon = true;
         isFollowUp = true;
-        filen.open(trivia_logic);
         used_file = trivia_logic;
         // follow up check here
         query.pop_back();
     } else if (query.back() == ':') {   // open "trivia_logic"
         isColon = true;
         isFollowUp = true;
-        filen.open(trivia_logic);
         used_file = trivia_logic;
         // follow up check here
         query.pop_back();
     }
+
+    filen.open(used_file);
+
 
     if (filen.is_open() == true) {
         while (getline (filen,x)) {
