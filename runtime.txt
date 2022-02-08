@@ -1429,16 +1429,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc6d0f6570)
-	- stacking header:(1)::<address>(0x7ffc6d0f6590)
-	- stacking header:(2)::<address>(0x7ffc6d0f65b0)
-	- stacking header:(3)::<address>(0x7ffc6d0f65d0)
-	- stacking header:(4)::<address>(0x7ffc6d0f65f0)
-	- stacking header:(5)::<address>(0x7ffc6d0f6610)
-	- stacking header:(6)::<address>(0x7ffc6d0f6630)
-	- stacking header:(7)::<address>(0x7ffc6d0f6650)
-	- stacking header:(8)::<address>(0x7ffc6d0f6670)
-	- stacking header:(9)::<address>(0x7ffc6d0f6690)
+	- stacking header:(0)::<address>(0x7ffec768ea40)
+	- stacking header:(1)::<address>(0x7ffec768ea60)
+	- stacking header:(2)::<address>(0x7ffec768ea80)
+	- stacking header:(3)::<address>(0x7ffec768eaa0)
+	- stacking header:(4)::<address>(0x7ffec768eac0)
+	- stacking header:(5)::<address>(0x7ffec768eae0)
+	- stacking header:(6)::<address>(0x7ffec768eb00)
+	- stacking header:(7)::<address>(0x7ffec768eb20)
+	- stacking header:(8)::<address>(0x7ffec768eb40)
+	- stacking header:(9)::<address>(0x7ffec768eb60)
 
 
 -:: checking AI functions.
@@ -1496,7 +1496,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1568,13 +1569,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-socket: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-socket: -- ./info.txt
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-socket: -- ./downloads
+file or directory: -- ./info.txt
+
+~:: stats() function:
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1585,8 +1589,8 @@ socket: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	these queries all check out
-	[ simple x computation: type:char len:27 vowels:17 consonants:10 special:0  ]
+	in this type of responder is logic
+	[ simple x computation: type:char len:34 vowels:24 consonants:10 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1911,7 +1915,7 @@ x
 	~:: initialized with (2) sampling tracks.
 
 ~:: sampler :: ~ :: generated (16)  new tracks-in-track.
-	~:: total initialized tracks [-65528].
+	~:: total initialized tracks [65544].
 
 ~:: setting tracks-in-track (1) to (2) tracks.
 ~:: setting track [1] index to (00h/00m/00s)
@@ -2134,12 +2138,12 @@ x=1; y=1; z=3;
 
 	-----------------
 
-		* words no_#: 5
-		* length: 27
+		* words no_#: 7
+		* length: 34
 		* vowels: 10
-		* consonants: 13
+		* consonants: 18
 		* numbers: 0
-		* special chars: 4
+		* special chars: 6
 		* unknown chars: 0
 
 
@@ -2161,46 +2165,52 @@ x=1; y=1; z=3;
 
 ~:: transponder -> answer()
 
-+query :: (these queries all check out)
++query :: (in this type of responder is logic)
 
 -- answer:
 	"5","trivia_logic","transponder is not active yet.";
 
 ~:: transponder -> prep()
-(debug) word :: these
-(debug) word :: queries
-(debug) word :: all
-(debug) word :: check
-(debug) word :: out
+(debug) word :: in
+(debug) word :: this
+(debug) word :: type
+(debug) word :: of
+(debug) word :: responder
+(debug) word :: is
+(debug) word :: logic
 
-~:: (debug)::nrOfWords = 5.
-~:: (debug)::counter = 5.
+~:: (debug)::nrOfWords = 7.
+~:: (debug)::counter = 7.
 
-(debug) calling prepare_ints() (from) -> "these queries all check out".
+(debug) calling prepare_ints() (from) -> "in this type of responder is logic".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (5).
+~:: (debug) number of matching occurences: (6).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) these :: #93
-(debug) 1) queries :: #4638
-(debug) 2) all :: #25
-(debug) 3) check :: #272
-(debug) 4) out :: #60
+(debug) 0) in :: #6
+(debug) 1) this :: #12
+(debug) 2) type :: #235
+(debug) 3) of :: #2
+(debug) 4) responder :: #-1
+(debug) 5) is :: #8
+(debug) 6) logic :: #3198
 
 ~:: meta queries ~:: storing meta query sequence ~:::: ::::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 93	- 4638	- 25	- 272	- 60
+	- 6	- 12	- 235	- 2	- -1	- 8	- 3198
 
-~:: meta queries ~:: reverse_meta_query_lookup("93,4638,25,272,60,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("6,12,235,2,-1,8,3198,") ~:::~
 
-~:: reverse queries lookup: 
-	- these		 --> *(a+i) = 93 - *(a+i) - 1 = 92
-	- queries		 --> *(a+i) = 4638 - *(a+i) - 1 = 4637
-	- all		 --> *(a+i) = 25 - *(a+i) - 1 = 24
-	- check		 --> *(a+i) = 272 - *(a+i) - 1 = 271
-	- out		 --> *(a+i) = 60 - *(a+i) - 1 = 59
+~:: reverse meta query lookup: 
+	- in		 --> *(a+i) = 6 - *(a+i) - 1 = 5
+	- this		 --> *(a+i) = 12 - *(a+i) - 1 = 11
+	- type		 --> *(a+i) = 235 - *(a+i) - 1 = 234
+	- of		 --> *(a+i) = 2 - *(a+i) - 1 = 1
+(skipped unregistered entry)
+	- is		 --> *(a+i) = 8 - *(a+i) - 1 = 7
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
 
 (EOT)
 

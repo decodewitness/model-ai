@@ -164,6 +164,8 @@ void AI::convert(int amount, int method) {	// course converter (INTEGRAL METHOD)
 // still needs to lookup actual financial unit courses online
 void AI::convertf(float amount, int method) {	// course converter (FLOATING POINT METHOD)
 	std::cout << std::endl << "~:: course converter: " << std::endl;
+
+	sleep(1);
 	std::cout << "\t*--> euro: " << amount << " = ";
 	float d = converter(amount, 1);
 	std::cout << "($" << d << ") dollar." << std::endl;
@@ -643,6 +645,8 @@ void AI::tsp() {	// transponder function
 
 	// prep new transponder
 	std::cout << "~:: transponder -> prep()" << std::endl;
+
+	sleep(2);
 	this->transponder->prep(this->transponder->retVal());	// retVal() returns "initial_sentence" from "Transponder"
 
 	// answer query

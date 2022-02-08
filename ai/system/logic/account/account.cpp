@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <unistd.h>
 
 #include "account.h"
 
@@ -163,7 +164,7 @@ void Track_Account::store_accounts() {
         std::cout << std::endl << "\t~:: closing file." << std::endl;
         fs.close();
 
-        std::cout << "~:: successfully stored accounts information." << std::endl;
+        std::cout << "" << std::endl;
     }
 };
 
@@ -195,6 +196,8 @@ void Track_Account::store_accounts_details() {
 
         std::cout << "~:: successfully stored accounts information." << std::endl;
     }
+
+    sleep(1);
 };
 
 void Track_Account::export_accounts(std::string filen) {

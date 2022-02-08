@@ -12,7 +12,7 @@
 
 Transponder::Transponder(std::string s) {
     std::cout << std::endl << "~:: transponder queries." << std::endl;
-    
+    sleep(2);
     // setting both "this->initial_sentence" && "this->subject" here to parameter string, which is the sentence queried to the Transponder
     this->initial_sentence = s;
     
@@ -193,6 +193,8 @@ void Transponder::analytics(std::string s) {
     std::cout << std::endl << "(debug) answer." << std::endl;
     this->response = this->answer(s);
     
+    sleep(1);
+    
     // answer the question
     std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
     std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
@@ -304,13 +306,12 @@ std::string Transponder::answer(std::string s) {
 
     filen.open(used_file);
 
-
     if (filen.is_open() == true) {
         while (getline (filen,x)) {
             answers_processed += 1;
-
             // convert this logic first!!!!!!!!
             // process answers into NEW!! ARRAY!!!!!!!!
+            // calculate score
             std::cout << std::endl << "(score): " << this->rank_score(query, x) << std::endl;
         }
     } else {
