@@ -51,6 +51,9 @@ LOGGED OUTPUT OF THIS BETA:
 
 
 
+ARG: testing,1,2,1,2,
+
+
 -:: enabled logging.
 
 _ARC(debug): 1 -- 
@@ -1478,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd5c6695f0)
-	- stacking header:(1)::<address>(0x7ffd5c669610)
-	- stacking header:(2)::<address>(0x7ffd5c669630)
-	- stacking header:(3)::<address>(0x7ffd5c669650)
-	- stacking header:(4)::<address>(0x7ffd5c669670)
-	- stacking header:(5)::<address>(0x7ffd5c669690)
-	- stacking header:(6)::<address>(0x7ffd5c6696b0)
-	- stacking header:(7)::<address>(0x7ffd5c6696d0)
-	- stacking header:(8)::<address>(0x7ffd5c6696f0)
-	- stacking header:(9)::<address>(0x7ffd5c669710)
+	- stacking header:(0)::<address>(0x7ffc6d0f6570)
+	- stacking header:(1)::<address>(0x7ffc6d0f6590)
+	- stacking header:(2)::<address>(0x7ffc6d0f65b0)
+	- stacking header:(3)::<address>(0x7ffc6d0f65d0)
+	- stacking header:(4)::<address>(0x7ffc6d0f65f0)
+	- stacking header:(5)::<address>(0x7ffc6d0f6610)
+	- stacking header:(6)::<address>(0x7ffc6d0f6630)
+	- stacking header:(7)::<address>(0x7ffc6d0f6650)
+	- stacking header:(8)::<address>(0x7ffc6d0f6670)
+	- stacking header:(9)::<address>(0x7ffc6d0f6690)
 
 
 -:: checking AI functions.
@@ -1545,8 +1548,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1618,13 +1620,13 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+socket: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+socket: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+socket: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1635,8 +1637,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic problem money cigarette drink cheap
-	[ simple x computation: type:char len:41 vowels:28 consonants:13 special:0  ]
+	these queries all check out
+	[ simple x computation: type:char len:27 vowels:17 consonants:10 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -2184,12 +2186,12 @@ x=1; y=1; z=3;
 
 	-----------------
 
-		* words no_#: 6
-		* length: 41
-		* vowels: 13
-		* consonants: 23
+		* words no_#: 5
+		* length: 27
+		* vowels: 10
+		* consonants: 13
 		* numbers: 0
-		* special chars: 5
+		* special chars: 4
 		* unknown chars: 0
 
 
@@ -2211,43 +2213,86 @@ x=1; y=1; z=3;
 
 ~:: transponder -> answer()
 
-+query :: (logic problem money cigarette drink cheap)
++query :: (these queries all check out)
 
 -- answer:
 	"5","trivia_logic","transponder is not active yet.";
 
 ~:: transponder -> prep()
-(debug) word :: logic
-(debug) word :: problem
-(debug) word :: money
-(debug) word :: cigarette
-(debug) word :: drink
-(debug) word :: cheap
+(debug) word :: these
+(debug) word :: queries
+(debug) word :: all
+(debug) word :: check
+(debug) word :: out
 
-~:: (debug)::nrOfWords = 6.
-~:: (debug)::counter = 6.
+~:: (debug)::nrOfWords = 5.
+~:: (debug)::counter = 5.
 
-(debug) calling prepare_ints() (from) -> "logic problem money cigarette drink cheap".
+(debug) calling prepare_ints() (from) -> "these queries all check out".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (6).
+~:: (debug) number of matching occurences: (5).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) logic :: #3198
-(debug) 1) problem :: #553
-(debug) 2) money :: #391
-(debug) 3) cigarette :: #8102
-(debug) 4) drink :: #2724
-(debug) 5) cheap :: #827
+(debug) 0) these :: #93
+(debug) 1) queries :: #4638
+(debug) 2) all :: #25
+(debug) 3) check :: #272
+(debug) 4) out :: #60
 
 ~:: meta queries ~:: storing meta query sequence ~:::: ::::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 3198	- 553	- 391	- 8102	- 2724	- 827
+	- 93	- 4638	- 25	- 272	- 60
 
-~:: meta queries ~:: reverse_meta_query_lookup("3198, 553, 391, 8102, 2724, 827, ") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("93,4638,25,272,60,") ~:::~
+
+~:: reverse queries lookup: 
+	- these		 --> *(a+i) = 93 - *(a+i) - 1 = 92
+	- queries		 --> *(a+i) = 4638 - *(a+i) - 1 = 4637
+	- all		 --> *(a+i) = 25 - *(a+i) - 1 = 24
+	- check		 --> *(a+i) = 272 - *(a+i) - 1 = 271
+	- out		 --> *(a+i) = 60 - *(a+i) - 1 = 59
+
+(EOT)
+
+~:: course converter: 
+	*--> euro: 10 = ($12.8) dollar.
+
+~:: course converter: 
+	*--> euro: 10 = ($12.8) dollar.
+
+~:: accounts: 
+    -----
+
+- account (1):
+	adding: (+/+) 1.33 EURO.
+	balance: [1.33 EURO].
+
+- account (1):
+	adding: (+/+) 44.99 EURO.
+	balance: [46.32 EURO].
 
 
+- account: (1) --> balance: [46.32 EURO].
+
+~:: storing accounts information --> (ai/log/account-information.txt).
+	~:: writing accounts:
+		.
+	~:: closing file.
+~:: successfully stored accounts information.
+
+~:: stats() function:
+	--directory: 
+	--statdir("./ai") (flag:0)
+
+~:: 1 file copied. (main.cpp) (main2.cpp.txt)
+
+~:: removed 1 file. (main2.cpp.txt)
+~:: exporting accounts information for later imports.
+~:: exported (1) account(s) to: "export_account.txt"
+
+~:: importing account(s) from: "export_account.txt".
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).

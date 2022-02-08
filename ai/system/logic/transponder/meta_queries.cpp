@@ -59,38 +59,31 @@ void store_meta_queries(int a[], int size) {
 
 void reverse_meta_query_lookup(int a[], int size) { // looks up the words for the numbers of the meta queries
 
-    std::ifstream met;
-    std::string new_meta;
-    std::string word;
-    bool fileWasClosed = false;
+    //std::ifstream met;
+    //std::string new_meta;
+    //std::string word;
+    //bool fileWasClosed = false;
+    std::fstream dict_in;
+    dict_in.open(reverse_path_handle);
+    char our_dict[20000][256];
+    int counts=0;
+    int keyd=0;
+    std::string ourword;
+    //int counter=0, actualnumber=1, limit = 20000;  // size of dictionary
 
     std::cout << std::endl;
     std::cout << "~:: meta queries ~:: reverse_meta_query_lookup(\"";
     
     for (int i=0; i<size; i++) {
-        std::cout << *(a+i) << ", ";
+        std::cout << *(a+i) << ",";
     }
 
     // std::cout << "\b" << (32) << "\b";
     std::cout << "\") ~:::~" << std::endl;
     std::cout << std::endl;
 
-    //met.open(reverse_path_handle);
+    //std::cout << "- (debug) *(a+i) " << std::endl;
 
-    // loop variables along with dict_size and size -> size = size of loopvar of array
-    // int i=0, counter=0, iter=-1;
-
-    int counter=0, actualnumber=1, limit = 20000;  // size of dictionary
-    std::string ourword;
-
-    std::cout << std::endl;
-    // look up meta query string here...
-    // int key;
-    std::fstream dict_in;
-    dict_in.open(reverse_path_handle);
-    char *our_dict[20000];
-    int counts=0;
-    int keyd=0;
     // std::string word;
 
     while (keyd < 20000) {
@@ -106,27 +99,48 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
         
         counts++;
         keyd++;
-    };
+    }
+    
+    std::cout << "~:: reverse meta query lookup: " << std::endl;
 
-    //met.is_open() == true) {
-    for (int i=0, actualnumber=1; i<size; i++) {
-        for (int j=0; j<limit; j++) {
-            // met >> ourword;
-
-            std::cout << "our_dict::entry: " << our_dict[0] << std::endl;
-                
-            if (j == *(a+i)) {
-                std::cout << "j" << j << ":a*(" << *(a+i) << "):i" << i << std::endl;
-                std::string test = our_dict[j];
-                std::cout << "test:" << test << ":" << "our_dict[j]" << our_dict[j] << std::endl;
-                //     strncpy(meta[counter++],ourword.c_str(), ourword.length());
-                //     std::cout << "- assigned: (" << j << "): " << meta[counter - 1] << " :: " << ourword << " :: " << *(a+i) << std::endl;
-
-                //     break;
-            }
+    for (int i=0; i<size; i++) {
+        if (*(a+i) > 0) {
+            std::cout << "\t- " << our_dict[(*(a+i) - 1)] << "\t\t --> *(a+i) = "  << *(a+i) << " - *(a+i) - 1 = " << (*(a+i) - 1) << std::endl;
+        } else {
+            std::cout << "(skipped unregistered entry)" << std::endl;
         }
     }
-};      
+
+    sleep(3);
+};
+    //met.open(reverse_path_handle);
+
+    // loop variables along with dict_size and size -> size = size of loopvar of array
+    // int i=0, counter=0, iter=-1;
+
+    // std::cout << std::endl;
+    // look up meta query string here...
+    // int key;
+
+//     //met.is_open() == true) {
+//     for (int i=0, actualnumber=1; i<size; i++) {
+//         for (int j=0; j<limit; j++) {
+//             // met >> ourword;
+
+//             std::cout << "our_dict::entry: " << our_dict[0] << std::endl;
+                
+//             if (j == *(a+i)) {
+//                 std::cout << "j" << j << ":a*(" << *(a+i) << "):i" << i << std::endl;
+//                 std::string test = our_dict[j];
+//                 std::cout << "test:" << test << ":" << "our_dict[j]" << our_dict[j] << std::endl;
+//                 //     strncpy(meta[counter++],ourword.c_str(), ourword.length());
+//                 //     std::cout << "- assigned: (" << j << "): " << meta[counter - 1] << " :: " << ourword << " :: " << *(a+i) << std::endl;
+
+//                 //     break;
+//             }
+//         }
+//     }
+// };      
     //     met.close();
     // } else {
     //     std::cout << std::endl;
