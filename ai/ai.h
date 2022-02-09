@@ -54,6 +54,7 @@
 #include "system/modules/utility.cpp"
 #include "system/modules/modular.cpp"
 #include "language/speech/saying.cpp"
+//#include "system/logic/math/tables.cpp"
 #include "system/security/security.cpp"
 #include "system/definitions/encoder.cpp"
 #include "system/logic/analysis/learn.cpp"
@@ -202,6 +203,10 @@ public:
 	// combineModule
 	void combmod(moduleContainer a, moduleContainer b);
 	
+	// math tables
+	void table(float x);
+	void tableTo(float x, float y);
+
 	// allocate && allocateData
 	void allocate(Data d);	// allocates new set of Data object to pointer "dd"
 	void allocatData(int pipeline, Data d);	// allocates Data to pointer "pipeline" a.k.a. "d1" or "d2".

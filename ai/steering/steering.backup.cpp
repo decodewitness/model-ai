@@ -71,35 +71,35 @@ int steering(int arc) {
 	// ai.play_audio(0)
 
 	// auto patch
-	//ai.auto_patch();
+	ai.auto_patch();
 
 	// checking AI functions
 	//ai.check_functions();
 
 	// rollouts
-	//ai.rollout(1);
+	ai.rollout(1);
 	//ai.rollout(2);	// uncomment for // rolls out "patch"
 	//ai.rollout(3);	// uncomment for // rolls out "restore"
-	//ai.rollout(4);		// rolls out "tool"
-	//ai.rollout(5);		// rolls out "setting permissions scripts with tool" // already done in "run" script
-	//ai.rollout(9);		// rolls out "comodos"
+	ai.rollout(4);		// rolls out "tool"
+	ai.rollout(5);		// rolls out "setting permissions scripts with tool" // already done in "run" script
+	ai.rollout(9);		// rolls out "comodos"
 
 	// handlers
-	//ai.hdata();	// handle data
-	//ai.hmath();	// handle math expressions
+	ai.hdata();	// handle data
+	ai.hmath();	// handle math expressions
 
 	// testing2();	// testing 2
 
 	//ai modules
-	//ai.mod();
+	ai.mod();
 
 	// construct
-	//ai.constr();
+	ai.constr();
 
 	// hash function checks file hashes
-	//ai.hashtype("ai"); // checking integrity
+	ai.hashtype("ai"); // checking integrity
 	//ai.play_audio(0);
-	//sleep(1);
+	sleep(1);
 	//ai.hashchain("artificial intelligence");
 	
 	// play audio
@@ -109,33 +109,33 @@ int steering(int arc) {
 	//ai.kill(9);
 
 	// stepping engine
-	//ai.stepping();
+	ai.stepping();
 	
-	//bool crc32=true;
+	bool crc32=true;
 	// check bool conditional
-	//if (crc32 == true) {
-	//	cout << endl;
+	if (crc32 == true) {
+		cout << endl;
 		
 		// starting AI
-	//	ai.sample();
+		ai.sample();
 		
 		// test run (NEXT LINE IS BETA TESTING)
 		// ai.test_run(runtime_testing);	// 1001 = All modules (module: 1-5)
-	//} else {
-	//	exit(1);
-	//}
+	} else {
+		exit(1);
+	}
 
 	// curl attempt site "curled_url" [std::string]
-	//int crl = ai.curl("https://model-ai.com");
+	int crl = ai.curl("https://model-ai.com");
 	
 	// testing3();	// testing 3
 
 	// transponder prepare function
-	//ai.tsp();
+	ai.tsp();
 	
 	//std::cout << std::endl << "(debugging) course converter: " << crl << std::endl;
-	//ai.convert(10, 1);
-	//ai.convertf(10.0, 1);
+	ai.convert(10, 1);
+	ai.convertf(10.0, 1);
 	
 	// accounts
 	// ai.add_account(15);
@@ -152,12 +152,12 @@ int steering(int arc) {
 	// ai.print_account();
 	// ai.change_account(1);
 
-	//std::cout << std::endl << "~:: accounts: " << std::endl << "    -----";
-	//std::cout << std::endl << std::endl;
+	std::cout << std::endl << "~:: accounts: " << std::endl << "    -----";
+	std::cout << std::endl << std::endl;
 
 	// ai.printn_account();
 	// ai.change_account(600);
-	 ai.add_account(800.12);
+	// ai.add_account(800.12);
 	// ai.subtract_account(900.13);
 	//ai.print_account();
 	// ai.combine_total();
@@ -165,33 +165,33 @@ int steering(int arc) {
 	// ai.list_negative();
 	// ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
 
-	//ai.add_account(1.33);
-	//ai.add_account(44.99);
-	//ai.printn_account();
+	ai.add_account(1.33);
+	ai.add_account(44.99);
+	ai.printn_account();
 
-	//ai.store_accounts_detail();
+	ai.store_accounts_detail();
 
 	// stat directory
-	//ai.statdir("./ai");
+	ai.statdir("./ai");
 
 	// copy file function
-	//ai.cp("main.cpp", "main2.cpp.txt");
+	ai.cp("main.cpp", "main2.cpp.txt");
 
-	//sleep(2);
+	sleep(2);
 
-	//ai.rm("main2.cpp.txt");
+	ai.rm("main2.cpp.txt");
 
-	//sleep(1);
+	sleep(1);
 	
 	// stage down and decouple logic (graceful shutdown)
 	
 	ai.export_accounts(exp_account);
 	ai.import_accounts(imp_account);
-	//sleep(1);
+	sleep(1);
 
 	// math tables
-	//ai.table(6);
-	//ai.tableTo(6, 20);
+	ai.table(6);
+	ai.tableTo(6, 20);
 
 	ai.decouple();
 

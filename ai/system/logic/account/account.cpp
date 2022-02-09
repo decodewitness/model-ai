@@ -221,7 +221,7 @@ void Track_Account::export_accounts(std::string filen) {
                 // fs << accounts[i] << " ";
                 // fs << coin_no;
 
-                fs << i << " ";
+                fs << i << ",";
                 
                 int x = accounts[i];    // (integral) "dollar" amount
                 float y = accounts[i] - (float) x;
@@ -229,9 +229,9 @@ void Track_Account::export_accounts(std::string filen) {
                 // fs << accounts[i] << " ";
                 
                 // write the account
-                fs << i << " ";
-                fs << x << " ";
-                fs << y << " ";
+                fs << i << ",";
+                fs << x << ",";
+                fs << y << ",";
                 fs << coin_no;
                 fs << std::endl;
             }

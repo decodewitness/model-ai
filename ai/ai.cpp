@@ -1167,5 +1167,29 @@ std::string * stackmodule(int x, std::string *ar) {	// stack the module addresse
 	return mystr;
 };
 
+
+void AI::table(float x) {	// displays table of number x to 10
+
+    std::cout << "- table of: " << x << std::endl;
+    std::cout << "  -----" << std::endl;
+
+    for (int i = 1; i<11; i++) {
+        std::cout << x << " * " << i << " = " << (x*i) << std::endl;
+    }
+
+    std::cout << std::endl;
+}
+
+void AI::tableTo(float x, float y=10) {	// displays table of number x to y
+
+    std::cout << "- table of: " << x << " to: " << y << std::endl;
+    std::cout << "  -----" << std::endl;
+
+    for (int i = 1; i<=y; i++) {
+        std::cout << x << " * " << i << " = " << (x*i) << std::endl;
+    }
+
+    std::cout << std::endl;
+}
 #endif
 // eof
