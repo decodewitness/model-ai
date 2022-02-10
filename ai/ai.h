@@ -32,6 +32,9 @@
 // configurations
 #include "system/config/config.h"
 
+// math
+#include "system/logic/math/math.h"
+
 // headers
 #include "al/al.cpp"
 #include "system/chk.h"
@@ -52,9 +55,9 @@
 #include "data/handler/handler.cpp"
 #include "autonomous/autonomous.cpp"
 #include "system/modules/utility.cpp"
+// #include "system/logic/math/tables.h"
 #include "system/modules/modular.cpp"
 #include "language/speech/saying.cpp"
-//#include "system/logic/math/tables.cpp"
 #include "system/security/security.cpp"
 #include "system/definitions/encoder.cpp"
 #include "system/logic/analysis/learn.cpp"
@@ -206,6 +209,17 @@ public:
 	// math tables
 	void table(float x);
 	void tableTo(float x, float y);
+
+	// math functions
+	void add(float x, float y);
+	void subtract(float x, float y);
+	void multiply(float x, float y);
+	void divide(float x, float y);
+	void power(float x, float y);
+
+	// math calculator
+	float return_punch(float s, char c, float x);
+	void print_punch(float s, char c, float x);
 
 	// allocate && allocateData
 	void allocate(Data d);	// allocates new set of Data object to pointer "dd"

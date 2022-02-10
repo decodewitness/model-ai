@@ -1481,16 +1481,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc521ed8f0)
-	- stacking header:(1)::<address>(0x7ffc521ed910)
-	- stacking header:(2)::<address>(0x7ffc521ed930)
-	- stacking header:(3)::<address>(0x7ffc521ed950)
-	- stacking header:(4)::<address>(0x7ffc521ed970)
-	- stacking header:(5)::<address>(0x7ffc521ed990)
-	- stacking header:(6)::<address>(0x7ffc521ed9b0)
-	- stacking header:(7)::<address>(0x7ffc521ed9d0)
-	- stacking header:(8)::<address>(0x7ffc521ed9f0)
-	- stacking header:(9)::<address>(0x7ffc521eda10)
+	- stacking header:(0)::<address>(0x7ffc4157f6c0)
+	- stacking header:(1)::<address>(0x7ffc4157f6e0)
+	- stacking header:(2)::<address>(0x7ffc4157f700)
+	- stacking header:(3)::<address>(0x7ffc4157f720)
+	- stacking header:(4)::<address>(0x7ffc4157f740)
+	- stacking header:(5)::<address>(0x7ffc4157f760)
+	- stacking header:(6)::<address>(0x7ffc4157f780)
+	- stacking header:(7)::<address>(0x7ffc4157f7a0)
+	- stacking header:(8)::<address>(0x7ffc4157f7c0)
+	- stacking header:(9)::<address>(0x7ffc4157f7e0)
 
 
 -:: checking AI functions.
@@ -1620,16 +1620,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+symlink: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+symlink: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+symlink: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+symlink: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1640,8 +1640,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic inno type
-	[ simple x computation: type:char len:15 vowels:10 consonants:5 special:0  ]
+	logical query one
+	[ simple x computation: type:char len:17 vowels:10 consonants:7 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1653,12 +1653,27 @@ file or directory: -- ./downloads
 	adding: (+/+) 800.12 EURO.
 	balance: [800.12 EURO].
 
-~:: exporting accounts information for later imports.
-~:: exported (1) account(s) to: "export_account.txt"
+adds (4+3): 7
+subtracts (4-3): 1
+multiplies (4*3): 12
+divides (4/3): 1.33333
+powers (4^3): 64
+7
+1
+12
+1.33333
 
-~:: importing account(s) from: "export_account.txt".
-	- importing account: ~/~ VECTOR(0){1,1} (800)(0)
-204192 
+
+7
+
+
+1
+
+
+12
+
+
+1.33333
 
 -:: decoupler.
 	-:: decoupling sampler

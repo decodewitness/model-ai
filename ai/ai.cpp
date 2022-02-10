@@ -1191,5 +1191,47 @@ void AI::tableTo(float x, float y=10) {	// displays table of number x to y
 
     std::cout << std::endl;
 }
+
+void AI::add(float x, float y) {	// function adds arguments x + y
+	std::cout << "adds (" << x << "+" << y << "): ";
+	add_pr(x, y);
+	std::cout << std::endl;
+};
+
+void AI::subtract(float x, float y) {	// function subtracts arguments x minus y
+	std::cout << "subtracts (" << x << "-" << y << "): ";
+	subtract_pr(x, y);
+	std::cout << std::endl;
+};
+
+void AI::multiply(float x, float y) {	// function multiplies arguments x by y
+	std::cout << "multiplies (" << x << "*" << y << "): ";
+	multiply_pr(x, y);
+	std::cout << std::endl;
+};
+
+void AI::divide(float x, float y) {	// function divides argument x by y
+	std::cout << "divides (" << x << "/" << y << "): ";
+	divide_pr(x, y);
+	std::cout << std::endl;
+};
+
+void AI::power(float x, float y) {	// function powers argument x by power of y
+	std::cout << "powers (" << x << "^" << y << "): ";
+	power_pr(x, y);
+	std::cout << std::endl;
+};
+
+void AI::print_punch(float s, char c, float x) {	// function prints s calculated with operator c and arguments x
+	std::cout << std::endl;
+	float sum = punch(s,c,x);
+	std::cout << std::endl << sum << std::endl;
+};
+
+float AI::return_punch(float s, char c, float x) {	// function returns sum = s according to operator = c = (+,-,/,*) and operand x=float number
+	float sum = punch(s,c,x);
+	return sum;
+};
+
 #endif
 // eof

@@ -10,6 +10,10 @@
 #include <unistd.h>
 
 #include "splash.h"
+
+// other includes
+//#include "../system/logic/math/math.h"
+
 // #include "initialize_runcheck.cpp"
 
 //#include "splash.h"
@@ -37,18 +41,17 @@ int steering(int arc) {
 	
 	// initialize_runtime_check();
 
-	int loopvar=0; 	// use loopvar in recounting xl[1024]
-	char * xl[1024];
+	//int loopvar=0; 	// use loopvar in recounting xl[1024]
+	//char * xl[1024];
 
-	if (logging_is_enabled==true) {
-		cout << std::endl << "-:: enabled logging." << std::endl;
-	}
+	//if (logging_is_enabled==true) {
+	//	cout << std::endl << "-:: enabled logging." << std::endl;
+	//}
 
 	// arguments
-	for (int i=0, loopvar=0; i<arc && i<1024; i++, loopvar++) {
-
-		std::cout << std::endl << "_ARC(debug): " << arc << " -- " << std::endl;
-	}
+	//for (int i=0, loopvar=0; i<arc && i<1024; i++, loopvar++) {
+	//	std::cout << std::endl << "_ARC(debug): " << arc << " -- " << std::endl;
+	//}
 
 	// splash AI model
 	splash();
@@ -157,7 +160,7 @@ int steering(int arc) {
 
 	// ai.printn_account();
 	// ai.change_account(600);
-	 ai.add_account(800.12);
+	//ai.add_account(800.12);
 	// ai.subtract_account(900.13);
 	//ai.print_account();
 	// ai.combine_total();
@@ -185,15 +188,35 @@ int steering(int arc) {
 	
 	// stage down and decouple logic (graceful shutdown)
 	
-	ai.export_accounts(exp_account);
-	ai.import_accounts(imp_account);
+//ai.export_accounts(exp_account);
+//ai.import_accounts(imp_account);
 	//sleep(1);
 
-	// math tables
-	//ai.table(6);
-	//ai.tableTo(6, 20);
+// ai.add(4, 3);
+// ai.subtract(4, 3);
+// ai.multiply(4, 3);
+// ai.divide(4, 3);
+// ai.power(4, 3);
 
-	ai.decouple();
+// std::cout << ai.return_punch(4, '+', 3) << std::endl;
+// std::cout << ai.return_punch(4, '-', 3) << std::endl;
+// std::cout << ai.return_punch(4, '*', 3) << std::endl;
+// std::cout << ai.return_punch(4, '/', 3) << std::endl;
+
+// sleep(3);
+
+// ai.print_punch(4, '+', 3);
+// ai.print_punch(4, '-', 3);
+// ai.print_punch(4, '*', 3);
+// ai.print_punch(4, '/', 3);
+
+// sleep(3);
+
+// math tables
+//ai.table(6);
+//ai.tableTo(6, 20);
+
+ai.decouple();
 
 return 0;
 }	
