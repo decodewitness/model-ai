@@ -38,7 +38,6 @@ bool logging_is_enabled = true;
 
 // main function
 int steering(int arc) {
-	
 	// initialize_runtime_check();
 
 	//int loopvar=0; 	// use loopvar in recounting xl[1024]
@@ -148,8 +147,8 @@ int steering(int arc) {
 	// std::cout << std::endl;
 	// std::cout << "ACCT_NR::(" << ai.get_account() << ")." << std::endl;
 	// ai.print_account();
-	// ai.change_account(0);
-	// ai.add_account(500);
+	// ai.add_account(500.11);
+	// ai.change_account(2);
 	// ai.add_account(15);
 	// ai.subtract_account(5);
 	// ai.print_account();
@@ -188,35 +187,41 @@ int steering(int arc) {
 	
 	// stage down and decouple logic (graceful shutdown)
 	
-//ai.export_accounts(exp_account);
-//ai.import_accounts(imp_account);
 	//sleep(1);
 
-// ai.add(4, 3);
-// ai.subtract(4, 3);
-// ai.multiply(4, 3);
-// ai.divide(4, 3);
-// ai.power(4, 3);
+	// ai.add(4, 3);
+	// ai.subtract(4, 3);
+	// ai.multiply(4, 3);
+	// ai.divide(4, 3);
+	// ai.power(4, 3);
 
-// std::cout << ai.return_punch(4, '+', 3) << std::endl;
-// std::cout << ai.return_punch(4, '-', 3) << std::endl;
-// std::cout << ai.return_punch(4, '*', 3) << std::endl;
-// std::cout << ai.return_punch(4, '/', 3) << std::endl;
+	// std::cout << ai.return_punch(4, '+', 3) << std::endl;
+	// std::cout << ai.return_punch(4, '-', 3) << std::endl;
+	// std::cout << ai.return_punch(4, '*', 3) << std::endl;
+	// std::cout << ai.return_punch(4, '/', 3) << std::endl;
 
-// sleep(3);
+	// sleep(3);
 
-// ai.print_punch(4, '+', 3);
-// ai.print_punch(4, '-', 3);
-// ai.print_punch(4, '*', 3);
-// ai.print_punch(4, '/', 3);
+	// ai.print_punch(4, '+', 3);
+	// ai.print_punch(4, '-', 3);
+	// ai.print_punch(4, '*', 3);
+	// ai.print_punch(4, '/', 3);
 
-// sleep(3);
+	// sleep(3);
 
-// math tables
-//ai.table(6);
-//ai.tableTo(6, 20);
+	// math tables
+	//ai.table(6);
+	//ai.tableTo(6, 20);
 
-ai.decouple();
+	// ai.dice_pr();
+	// ai.dice_npr(100);
+
+	// ai.export_accounts(exp_account);
+	// sleep(1);
+	// ai.import_accounts(imp_account);
+	// sleep(3);
+
+	ai.decouple();
 
 return 0;
 }	

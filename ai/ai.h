@@ -217,6 +217,12 @@ public:
 	void divide(float x, float y);
 	void power(float x, float y);
 
+	// random dice
+	int dice();
+	void dice_pr();
+	int dice_n(int i);
+	void dice_npr(int i);
+
 	// math calculator
 	float return_punch(float s, char c, float x);
 	void print_punch(float s, char c, float x);

@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <ctime>
 
 #include "ai.h"
 
@@ -1167,6 +1168,29 @@ std::string * stackmodule(int x, std::string *ar) {	// stack the module addresse
 	return mystr;
 };
 
+int AI::dice() {
+	srand(time(NULL));
+	int x = rand() % 6 + 1;
+	return x;
+};
+
+void AI::dice_pr() {
+	srand(time(NULL));
+	int x = rand() % 6 + 1;
+	std::cout << std::endl << "~:: dice: " << x << std::endl;
+};
+
+int AI::dice_n(int i=6) {
+	srand(time(NULL));
+	int x = rand() % i + 1;
+	return x;
+};
+
+void AI::dice_npr(int i=6) {
+	srand(time(NULL));
+	int x = rand() % i + 1;
+	std::cout << std::endl << "~:: dice: " << x << std::endl;
+};
 
 void AI::table(float x) {	// displays table of number x to 10
 

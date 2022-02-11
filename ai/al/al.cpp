@@ -18,7 +18,7 @@ AL::AL() { // AL constructor
 };
 
 AL::~AL() { // AL destructor
-	std::cout << std::endl << "-:: destructor artificial life routine was called. -::" << std::endl << "\tkilling abstraction layer.";
+	std::cout << std::endl << "-:: destructor artificial life routine was called. -::" << std::endl << "\tkilling abstraction layer." << std::endl;
 };
 
 void AL::kbuild(double i) {	// reserves memory for kbuild

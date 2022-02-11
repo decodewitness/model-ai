@@ -12,7 +12,7 @@ const char _TRANSACTION_LOG[] = "ai/log/account-transactions.txt";
 const char _ACCOUNT_INFORMATION[] = "ai/log/account-information.txt";
 
 // name for the exported file for the accounts
-const std::string exp_account = "export_account.txt";
+const std::string exp_account = "ai/log/export_account.txt";
 const std::string imp_account = exp_account;
 
 // std::string coin;

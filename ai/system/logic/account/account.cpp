@@ -221,22 +221,24 @@ void Track_Account::export_accounts(std::string filen) {
                 // fs << accounts[i] << " ";
                 // fs << coin_no;
 
-                fs << i << ",";
+                // fs << i << ",";
                 
-                int x = accounts[i];    // (integral) "dollar" amount
-                float y = accounts[i] - (float) x;
+                // int x = accounts[i];    // (integral) "dollar" amount
+                // float y = accounts[i] - (float) x;
+
+                float x = accounts[i];    // "dollar" amount
+                
 
                 // fs << accounts[i] << " ";
                 
                 // write the account
-                fs << i << ",";
-                fs << x << ",";
-                fs << y << ",";
+                fs << i << " ";
+                fs << x << " ";
+                // fs << y << ",";
                 fs << coin_no;
                 fs << std::endl;
             }
         }
-
         fs.close();
         std::cout << "~:: exported (" << exported << ") account(s) to: \"" << filen << "\"" << std::endl;
     }
@@ -245,46 +247,75 @@ void Track_Account::export_accounts(std::string filen) {
 // needs fixing
 void Track_Account::import_accounts(std::string filen) {
 
+    int c,x;
+    float f;
+
     std::cout << std::endl;
     std::cout << "~:: importing account(s) from: \"" << filen << "\"." << std::endl;
 
-    std::string line;
+    // std::string line;
     std::ifstream infile;
-    std::vector<int> vect;
+    // std::vector<int> vect;
 
     infile.open(filen);
 
     if (infile.is_open() == true) {
-        while (infile >> line) {
-            std::stringstream ss(line);
 
-            // ignoring the colon
-            for (int i; ss >> i;) {
-                vect.push_back(i);    
-                if (ss.peek() == ',') {
-                    ss.ignore();
-                }
+        for (int i=0; i<max_accounts; i++) {
+            infile >> x;
+            if (x == -1) {
+                std::cout << "(debug) breaking." << std::endl;
+                std::cout << "~:: done." << std::endl;
+                break;
             }
+            infile >> f;
+            infile >> c;
+            
 
-            // // write the account
-            // fs << i << " ";
-            // fs << x << " ";
-            // fs << y << " ";
-            // fs << coin_no;
-
-            std::cout << "\t- importing account: ";
-
-            // // import account here
-            for (std::size_t i = 0; i < vect.size(); i++) {
-                // STILL need to convert this to a number!!!
-                    // AND import it into the correct account.
-                std::cout << "~/~ VECTOR(" << i << "){" << vect.at(i++) << "," << vect.at(i++) << "} (" << vect.at(i++) << ")" << "(" << vect.at(i++) << ")" << std::endl;
-                std::cout << vect[i] << " ";
-            }
-                    
+            std::cout << "\t~:: importing account #: " << x << std::endl;
+            std::cout << "\t~:: valuta amount: " << f << " " << coin[c] << std::endl;
             std::cout << std::endl;
-        }
 
+            accounts[x] = f;
+            coin_no = c;
+
+            x=-1;
+        }
+        
         infile.close();
     }
 };
+    // if (infile.is_open() == true) {
+    //     while (infile >> line) {
+    //         std::stringstream ss(line);
+
+    //         // ignoring the colon
+    //         for (int i; ss >> i;) {
+    //             vect.push_back(i);    
+    //             if (ss.peek() == ',') {
+    //                 ss.ignore();
+    //             }
+    //         }
+
+    //         // // write the account
+    //         // fs << i << " ";
+    //         // fs << x << " ";
+    //         // fs << y << " ";
+    //         // fs << coin_no;
+
+    //         std::cout << "\t- importing account: ";
+
+    //         // // import account here
+    //         for (std::size_t i = 0; i < vect.size(); i++) {
+    //             // STILL need to convert this to a number!!!
+    //                 // AND import it into the correct account.
+    //             std::cout << "~/~ VECTOR(" << i << "){" << vect.at(i++) << "," << vect.at(i++) << "} (" << vect.at(i++) << ")" << "(" << vect.at(i++) << ")" << std::endl;
+    //             std::cout << vect[i] << " ";
+    //         }
+                    
+    //         std::cout << std::endl;
+    //     }
+
+    //     infile.close();
+    // }
+// };
