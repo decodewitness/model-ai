@@ -1,3 +1,5 @@
+// NOT USED YET
+
 #include <string>
 
 enum ModuleType { init1, init2, init3, init4, methods, functions, data_verification, enhance_metrics, process_data, assemble_module, check_modules, entropy, statistics, reset, halting, halt, reroute_power_cycle, halting, halt, router, control_sequence } moduleType; 

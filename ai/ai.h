@@ -141,6 +141,9 @@ private:
 public:
 	AI(int n=1);
 
+	// splash
+	void splash(void);
+
 	// round init
 	void init();
 	void initialize_runtime_check();
@@ -275,6 +278,8 @@ public:
 	void export_accounts(std::string filen);
 	// transfer from account
 	void transfer(int src, int dst, float amount);
+	void total_account();
+	void average_account();
 
 	// stat
 	int statdir(std::string d);

@@ -285,6 +285,44 @@ void Track_Account::import_accounts(std::string filen) {
         infile.close();
     }
 };
+
+void Track_Account::average() {
+
+    float average;
+    float total=0.00;
+    int counter=0;
+
+    for (int i=0; i<max_accounts; i++) {
+        if (accounts[i] > 0.00 || accounts[i] < 0.00) {
+            total += accounts[i];
+            counter++;
+        }
+    }
+
+    average = total / counter;
+
+    std::cout << std::endl;
+    std::cout << "~:: accounts total: " << coin[coin_no] << " " << total << std::endl;
+    std::cout << "    accounts average: " << coin[coin_no] << " " << average << " over " << counter << " accounts." << std::endl;
+}
+
+void Track_Account::total() {
+
+    float total=0.00;
+    int counter=0;
+
+    for (int i=0; i<max_accounts; i++) {
+        if (accounts[i] > 0.00 || accounts[i] < 0.00) {
+            total += accounts[i];
+            counter++;
+        }
+    }
+
+    // average = total / counter;
+
+    std::cout << std::endl << "~:: accounts total: " << coin[coin_no] << " " << total << " over " << counter << " accounts." << std::endl;
+    // std::cout << "    accounts average: " << coin[coin_no] << " " << average << std::endl;
+}
     // if (infile.is_open() == true) {
     //     while (infile >> line) {
     //         std::stringstream ss(line);

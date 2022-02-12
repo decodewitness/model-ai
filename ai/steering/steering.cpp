@@ -53,7 +53,7 @@ int steering(int arc) {
 	//}
 
 	// splash AI model
-	splash();
+	// splash();
 
 	// check files and such things / environment
 	// need to implement this function again
@@ -140,15 +140,15 @@ int steering(int arc) {
 	//ai.convertf(10.0, 1);
 	
 	// accounts
-	// ai.add_account(15);
+	ai.add_account(15);
 	// ai.subtract_account(10);
-	// ai.change_account(10);
-	// ai.add_account(1);
+	ai.change_account(10);
+	ai.add_account(1);
 	// std::cout << std::endl;
 	// std::cout << "ACCT_NR::(" << ai.get_account() << ")." << std::endl;
 	// ai.print_account();
 	// ai.add_account(500.11);
-	// ai.change_account(2);
+	ai.change_account(2);
 	// ai.add_account(15);
 	// ai.subtract_account(5);
 	// ai.print_account();
@@ -158,7 +158,7 @@ int steering(int arc) {
 	//std::cout << std::endl << std::endl;
 
 	// ai.printn_account();
-	// ai.change_account(600);
+	ai.change_account(600);
 	//ai.add_account(800.12);
 	// ai.subtract_account(900.13);
 	//ai.print_account();
@@ -167,9 +167,12 @@ int steering(int arc) {
 	// ai.list_negative();
 	// ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
 
-	//ai.add_account(1.33);
-	//ai.add_account(44.99);
+	ai.add_account(1.33);
+	ai.add_account(44.99);
 	//ai.printn_account();
+
+	ai.total_account();
+	ai.average_account();
 
 	//ai.store_accounts_detail();
 

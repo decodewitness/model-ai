@@ -58,6 +58,10 @@ std::string moduleData[module_limits] = {
 	"__REACHED_EOM_THE_LAST_MODULE"
 }; // PLACEHOLDER INSIDE LAST MODULE AGAIN
 
+void AI::splash(void) {
+	std::cout << " ** ][][ **" << std::endl << std::endl;
+}
+
 // initialize_runtime_check
 void AI::initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
     std::cout << "~:: ** &initialize_runtime_check() **" << std::endl;
@@ -99,7 +103,8 @@ void AI::initialize_runtime_check() { // actually should be staged and recursive
 AI::AI(int n) {	// AI constructor
 	// play audio file
 	this->play_audio_file("ai/system/audio/samples/flir.wav");
-	
+	this->splash();
+
 	// security
 	if (this->access == false) {
 		this->enforce_security();	// also draws security prompt
@@ -1140,6 +1145,15 @@ void AI::transfer(int src, int dst, float amount) {	// transfer amount from src 
 	this->account->transfer_account(src, dst, amount);
 };
 
+void AI::total_account() {
+	this->account->total();
+};
+
+void AI::average_account() {
+	this->account->average();
+};
+
+// stat
 int AI::statdir(std::string d) {	// stat directory
 	int x=stats(d);	// from statx.cpp file
 	std::cout << std::endl << "\t--statdir(\"" << d << "\") (flag:" << x << ")" << std::endl;

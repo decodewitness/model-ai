@@ -58,4 +58,7 @@ public:
 
     void import_accounts(std::string filen);    // import accounts (account #, amount, coin_nr) from importable format
     void export_accounts(std::string filen="accounts.txt"); // export accounts in an importable format
+
+    void total();   // displays total amount in accounts[]
+    void average(); // displays average number of funds in accounts[]
 };

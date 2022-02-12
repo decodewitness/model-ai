@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd43b33110)
-	- stacking header:(1)::<address>(0x7ffd43b33130)
-	- stacking header:(2)::<address>(0x7ffd43b33150)
-	- stacking header:(3)::<address>(0x7ffd43b33170)
-	- stacking header:(4)::<address>(0x7ffd43b33190)
-	- stacking header:(5)::<address>(0x7ffd43b331b0)
-	- stacking header:(6)::<address>(0x7ffd43b331d0)
-	- stacking header:(7)::<address>(0x7ffd43b331f0)
-	- stacking header:(8)::<address>(0x7ffd43b33210)
-	- stacking header:(9)::<address>(0x7ffd43b33230)
+	- stacking header:(0)::<address>(0x7ffcd6d11dd0)
+	- stacking header:(1)::<address>(0x7ffcd6d11df0)
+	- stacking header:(2)::<address>(0x7ffcd6d11e10)
+	- stacking header:(3)::<address>(0x7ffcd6d11e30)
+	- stacking header:(4)::<address>(0x7ffcd6d11e50)
+	- stacking header:(5)::<address>(0x7ffcd6d11e70)
+	- stacking header:(6)::<address>(0x7ffcd6d11e90)
+	- stacking header:(7)::<address>(0x7ffcd6d11eb0)
+	- stacking header:(8)::<address>(0x7ffcd6d11ed0)
+	- stacking header:(9)::<address>(0x7ffcd6d11ef0)
 
 
 -:: checking AI functions.
@@ -1595,26 +1595,32 @@ file or directory: -- ./downloads
 -:: destructor artificial life routine was called. -::
 	killing abstraction layer.
 - account (1):
-	adding: (+/+) 500.11 EURO.
-	balance: [500.11 EURO].
-
-- account changed to account (2).
-
-- account (2):
 	adding: (+/+) 15 EURO.
 	balance: [15 EURO].
 
-~:: exporting accounts information for later imports.
-~:: exported (2) account(s) to: "export_account.txt"
+- account changed to account (10).
 
-~:: importing account(s) from: "export_account.txt".
-	~:: importing account #: 1
-	~:: valuta amount: 500.11 EURO
+- account (10):
+	adding: (+/+) 1 EURO.
+	balance: [1 EURO].
 
-	~:: importing account #: 2
-	~:: valuta amount: 15 EURO
+- account changed to account (2).
 
-(debug) breaking.
+- account changed to account (600).
+
+- account (600):
+	adding: (+/+) 1.33 EURO.
+	balance: [1.33 EURO].
+
+- account (600):
+	adding: (+/+) 44.99 EURO.
+	balance: [46.32 EURO].
+
+
+~:: accounts total: EURO 62.32 over 3 accounts.
+
+~:: accounts total: EURO 62.32
+    accounts average: EURO 20.7733 over 3 accounts.
 
 -:: decoupler.
 	-:: decoupling sampler
