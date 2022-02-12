@@ -1062,6 +1062,17 @@ void AI::deallocatData(int pipeline) {	// deallocates Data pipeline "d1" or "d2"
 	};
 };
 
+void AI::startSim() {
+	std::cout << std::endl << "~:: starting simulation." << std::endl << std::endl;
+	this->simulation = new Simulation;
+};
+
+void AI::stopSim() {
+	std::cout << "~:: deleting simulation." << std::endl << std::endl;
+	delete this->simulation;
+};
+
+
 void AI::hdata() {	// data handler
 	data_handler();
 };

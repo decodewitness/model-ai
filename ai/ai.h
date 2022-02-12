@@ -66,6 +66,7 @@
 #include "system/logic/account/account.cpp"
 #include "system/logic/analysis/limits.cpp"
 //#include "system/logic/analysis/statx.cpp"	// valid functions already defined in modular_bay.h
+#include "system/modules/simulation/sim.cpp"
 #include "system/modules/combine/combine.cpp"
 // #include "steering/initialize_runcheck.cpp"
 #include "system/logic/analysis/interpret.cpp"
@@ -114,6 +115,7 @@ private:
 	Construct *construct;
 	Transponder *transponder;
 	Track_Account *account;
+	Simulation *simulation;
 
 	bool ddLck;
 	bool d1Lck;
@@ -250,9 +252,13 @@ public:
 	// initialize transponder
 	void tsp();
 
+	// simulation
+	void startSim();
+	void stopSim();
+	
 	// handle data
-	void hmath();
 	void hdata();
+	void hmath();
 
 	// testing
 	//bool testing1();
