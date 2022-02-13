@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc3bdb85a0)
-	- stacking header:(1)::<address>(0x7ffc3bdb85c0)
-	- stacking header:(2)::<address>(0x7ffc3bdb85e0)
-	- stacking header:(3)::<address>(0x7ffc3bdb8600)
-	- stacking header:(4)::<address>(0x7ffc3bdb8620)
-	- stacking header:(5)::<address>(0x7ffc3bdb8640)
-	- stacking header:(6)::<address>(0x7ffc3bdb8660)
-	- stacking header:(7)::<address>(0x7ffc3bdb8680)
-	- stacking header:(8)::<address>(0x7ffc3bdb86a0)
-	- stacking header:(9)::<address>(0x7ffc3bdb86c0)
+	- stacking header:(0)::<address>(0x7fff46f62850)
+	- stacking header:(1)::<address>(0x7fff46f62870)
+	- stacking header:(2)::<address>(0x7fff46f62890)
+	- stacking header:(3)::<address>(0x7fff46f628b0)
+	- stacking header:(4)::<address>(0x7fff46f628d0)
+	- stacking header:(5)::<address>(0x7fff46f628f0)
+	- stacking header:(6)::<address>(0x7fff46f62910)
+	- stacking header:(7)::<address>(0x7fff46f62930)
+	- stacking header:(8)::<address>(0x7fff46f62950)
+	- stacking header:(9)::<address>(0x7fff46f62970)
 
 
 -:: checking AI functions.
@@ -1616,16 +1616,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+regular file: -- ./DCIM
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+regular file: -- ./module_bay
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+regular file: -- ./info.txt
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+regular file: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1636,8 +1636,8 @@ FIFO/pipe: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	logic sequence
+	[ simple x computation: type:char len:14 vowels:8 consonants:6 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1646,33 +1646,15 @@ FIFO/pipe: -- ./downloads
 
 -:: destructor artificial life routine was called. -::
 	killing abstraction layer.
-- account (1):
-	adding: (+/+) 15 EURO.
-	balance: [15 EURO].
 
-- account changed to account (10).
-
-- account (10):
-	adding: (+/+) 1 EURO.
-	balance: [1 EURO].
-
-- account changed to account (2).
-
-- account changed to account (600).
-
-- account (600):
-	adding: (+/+) 1.33 EURO.
-	balance: [1.33 EURO].
-
-- account (600):
-	adding: (+/+) 44.99 EURO.
-	balance: [46.32 EURO].
+~:: starting simulation.
 
 
-~:: accounts total: EURO 62.32 over 3 accounts.
+	~:: sim construct(){}:
+		~:: initialized sim.
+	~:: sim running.
+~:: deleting simulation.
 
-~:: accounts total: EURO 62.32
-    accounts average: EURO 20.7733 over 3accounts.
 
 -:: decoupler.
 	-:: decoupling sampler

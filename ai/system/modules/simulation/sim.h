@@ -30,8 +30,8 @@ public:
 
     Simulation();
 
-    void createEntity(int x, int y, int z) {}
-    void createObject(int x, int y, int z) {}
+    void createEntity(int x, int y, int z, int n) { this->entity[n] = new Entity; }
+    void createObject(int x, int y, int z, int n) { this->object[n] = new Object; }
 
     int killEntity(int n) { delete this->entity[n]; }   // put in bounds checks
     int killObject(int n) { delete this->object[n]; }

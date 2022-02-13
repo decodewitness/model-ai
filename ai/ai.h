@@ -255,7 +255,14 @@ public:
 	// simulation
 	void startSim();
 	void stopSim();
-	
+	void runSim();
+
+	void addSimEntity(int x, int y, int z, int n=1);
+	void deleteSimEntity(int x);
+
+	void addSimObject(int x, int y, int z, int n=1);
+	void deleteSimObject(int x);
+
 	// handle data
 	void hdata();
 	void hmath();

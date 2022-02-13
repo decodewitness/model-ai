@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffcd6d11dd0)
-	- stacking header:(1)::<address>(0x7ffcd6d11df0)
-	- stacking header:(2)::<address>(0x7ffcd6d11e10)
-	- stacking header:(3)::<address>(0x7ffcd6d11e30)
-	- stacking header:(4)::<address>(0x7ffcd6d11e50)
-	- stacking header:(5)::<address>(0x7ffcd6d11e70)
-	- stacking header:(6)::<address>(0x7ffcd6d11e90)
-	- stacking header:(7)::<address>(0x7ffcd6d11eb0)
-	- stacking header:(8)::<address>(0x7ffcd6d11ed0)
-	- stacking header:(9)::<address>(0x7ffcd6d11ef0)
+	- stacking header:(0)::<address>(0x7fff4cf7e470)
+	- stacking header:(1)::<address>(0x7fff4cf7e490)
+	- stacking header:(2)::<address>(0x7fff4cf7e4b0)
+	- stacking header:(3)::<address>(0x7fff4cf7e4d0)
+	- stacking header:(4)::<address>(0x7fff4cf7e4f0)
+	- stacking header:(5)::<address>(0x7fff4cf7e510)
+	- stacking header:(6)::<address>(0x7fff4cf7e530)
+	- stacking header:(7)::<address>(0x7fff4cf7e550)
+	- stacking header:(8)::<address>(0x7fff4cf7e570)
+	- stacking header:(9)::<address>(0x7fff4cf7e590)
 
 
 -:: checking AI functions.
@@ -1492,7 +1492,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1584,8 +1585,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	logic sequence
+	[ simple x computation: type:char len:14 vowels:8 consonants:6 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1594,33 +1595,21 @@ file or directory: -- ./downloads
 
 -:: destructor artificial life routine was called. -::
 	killing abstraction layer.
-- account (1):
-	adding: (+/+) 15 EURO.
-	balance: [15 EURO].
 
-- account changed to account (10).
-
-- account (10):
-	adding: (+/+) 1 EURO.
-	balance: [1 EURO].
-
-- account changed to account (2).
-
-- account changed to account (600).
-
-- account (600):
-	adding: (+/+) 1.33 EURO.
-	balance: [1.33 EURO].
-
-- account (600):
-	adding: (+/+) 44.99 EURO.
-	balance: [46.32 EURO].
+~:: starting simulation.
 
 
-~:: accounts total: EURO 62.32 over 3 accounts.
+	~:: sim construct(){}:
+		~:: initialized sim.
+	~:: sim running.
+	~:: adding sim entity.
+- (Entity) was created.
+	~:: adding sim object.
+- {Object} was created.
+	~:: deleting sim entity.
+	~:: deleting sim object.
+~:: deleting simulation.
 
-~:: accounts total: EURO 62.32
-    accounts average: EURO 20.7733 over 3 accounts.
 
 -:: decoupler.
 	-:: decoupling sampler

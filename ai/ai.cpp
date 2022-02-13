@@ -1072,6 +1072,39 @@ void AI::stopSim() {
 	delete this->simulation;
 };
 
+// should be loaded from external file.
+void AI::runSim() {	// sim objects and such go here
+	this->startSim();
+	std::cout << "\t~:: sim running." << std::endl;
+	sleep(3);
+	this->addSimEntity(0,0,0,0);
+	this->addSimObject(0,0,0,0);
+	sleep(3);
+	this->deleteSimEntity(0);
+	this->deleteSimObject(0);
+	this->stopSim();
+	sleep(1);
+};
+
+void AI::addSimEntity(int x, int y, int z, int n) {
+	std::cout << "\t~:: adding sim {entity}." << std::endl;
+	this->simulation->createEntity(x,y,z,n);	// still needs n
+};
+
+void AI::deleteSimEntity(int x) {
+	std::cout << "\t~:: deleting sim {entity}." << std::endl;
+	this->simulation->killEntity(x);
+};
+
+void AI::addSimObject(int x, int y, int z, int n) {
+	std::cout << "\t~:: adding sim {object}." << std::endl;
+	this->simulation->createObject(x,y,z,n);
+};
+
+void AI::deleteSimObject(int x) {
+	std::cout << "\t~:: deleting sim {object}." << std::endl;
+	this->simulation->killObject(x);
+};
 
 void AI::hdata() {	// data handler
 	data_handler();
