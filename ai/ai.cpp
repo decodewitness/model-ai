@@ -1072,14 +1072,27 @@ void AI::stopSim() {
 	delete this->simulation;
 };
 
+void AI::listEntity() {
+	this->simulation->listEntities();
+}
+
+void AI::listObject() {
+	this->simulation->listObjects();
+}
+
 // should be loaded from external file.
 void AI::runSim() {	// sim objects and such go here
 	this->startSim();
+	this->play_audio_file("ai/system/audio/samples/vworge.wav");
 	std::cout << "\t~:: sim running." << std::endl;
 	sleep(3);
 	this->addSimEntity(0,0,0,0);
 	this->addSimObject(0,0,0,0);
 	sleep(3);
+
+	this->listObject();
+	this->listEntity();
+
 	this->deleteSimEntity(0);
 	this->deleteSimObject(0);
 	this->stopSim();

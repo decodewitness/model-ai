@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff46f62850)
-	- stacking header:(1)::<address>(0x7fff46f62870)
-	- stacking header:(2)::<address>(0x7fff46f62890)
-	- stacking header:(3)::<address>(0x7fff46f628b0)
-	- stacking header:(4)::<address>(0x7fff46f628d0)
-	- stacking header:(5)::<address>(0x7fff46f628f0)
-	- stacking header:(6)::<address>(0x7fff46f62910)
-	- stacking header:(7)::<address>(0x7fff46f62930)
-	- stacking header:(8)::<address>(0x7fff46f62950)
-	- stacking header:(9)::<address>(0x7fff46f62970)
+	- stacking header:(0)::<address>(0x7fff88fdbfc0)
+	- stacking header:(1)::<address>(0x7fff88fdbfe0)
+	- stacking header:(2)::<address>(0x7fff88fdc000)
+	- stacking header:(3)::<address>(0x7fff88fdc020)
+	- stacking header:(4)::<address>(0x7fff88fdc040)
+	- stacking header:(5)::<address>(0x7fff88fdc060)
+	- stacking header:(6)::<address>(0x7fff88fdc080)
+	- stacking header:(7)::<address>(0x7fff88fdc0a0)
+	- stacking header:(8)::<address>(0x7fff88fdc0c0)
+	- stacking header:(9)::<address>(0x7fff88fdc0e0)
 
 
 -:: checking AI functions.
@@ -1544,7 +1544,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1616,16 +1617,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-regular file: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-regular file: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-regular file: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1636,8 +1637,8 @@ regular file: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic sequence
-	[ simple x computation: type:char len:14 vowels:8 consonants:6 special:0  ]
+	logical query
+	[ simple x computation: type:char len:13 vowels:8 consonants:5 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1653,6 +1654,22 @@ regular file: -- ./downloads
 	~:: sim construct(){}:
 		~:: initialized sim.
 	~:: sim running.
+	~:: adding sim {entity}.
+~:: added sim {entity}(0)
+	~:: adding sim {object}.
+~:: added sim {object}(0)
+
+~:: objects:
+obj(0) obj(21) obj(61) obj(70) obj(71) 
+
+
+~:: entities:
+entity(0) entity(21) entity(61) entity(70) entity(71) 
+
+	~:: deleting sim {entity}.
+~:: deleted sim {entity}(0)
+	~:: deleting sim {object}.
+~:: deleted sim {object}(0)
 ~:: deleting simulation.
 
 

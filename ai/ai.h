@@ -262,7 +262,9 @@ public:
 
 	void addSimObject(int x, int y, int z, int n=1);
 	void deleteSimObject(int x);
-
+	
+	void listEntity();
+	void listObject();
 	// handle data
 	void hdata();
 	void hmath();

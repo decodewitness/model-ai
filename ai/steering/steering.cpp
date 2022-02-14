@@ -224,7 +224,7 @@ int steering(int arc) {
 	// ai.import_accounts(imp_account);
 	// sleep(3);
 
-	ai.runSim();
+	ai.runSim();	// is edited in the ai.cpp file for now
 
 	ai.decouple();
 

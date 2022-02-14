@@ -26,15 +26,22 @@ private:
     Entity *entity[MAX_ENTITIES];
     Object *object[MAX_OBJECTS];
 
+    bool entityList[MAX_ENTITIES];
+    bool objectList[MAX_OBJECTS];
+
 public:
 
     Simulation();
 
-    void createEntity(int x, int y, int z, int n) { if (n>0 && n<MAX_ENTITIES) this->entity[n] = new Entity; }
-    void createObject(int x, int y, int z, int n) { if (n>0 && n<MAX_ENTITIES) this->object[n] = new Object; }
+    void createEntity(int x, int y, int z, int n);
+    void createObject(int x, int y, int z, int n);
 
-    int killEntity(int n) { if (n>0 && n<MAX_ENTITIES) delete this->entity[n]; }   // put in bounds checks
-    int killObject(int n) { if (n>0 && n<MAX_ENTITIES) delete this->object[n]; }
+    void listEntities();
+    void listObjects();
+    void listAll();
+
+    int killEntity(int n);
+    int killObject(int n);
 
 };
 
