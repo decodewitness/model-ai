@@ -1063,7 +1063,7 @@ void AI::deallocatData(int pipeline) {	// deallocates Data pipeline "d1" or "d2"
 };
 
 void AI::startSim() {
-	std::cout << std::endl << "~:: starting simulation." << std::endl << std::endl;
+	std::cout << std::endl << "~:: starting simulation." << std::endl;
 	this->simulation = new Simulation;
 };
 
@@ -1073,12 +1073,16 @@ void AI::stopSim() {
 };
 
 void AI::listEntity() {
-	this->simulation->listEntities();
+	this->simulation->listEntities();	// needs fixing
 }
 
 void AI::listObject() {
-	this->simulation->listObjects();
+	this->simulation->listObjects();	// needs fixing
 }
+
+void AI::listAllEO() {
+		this->simulation->listAll();
+	};
 
 // should be loaded from external file.
 void AI::runSim() {	// sim objects and such go here
@@ -1090,9 +1094,12 @@ void AI::runSim() {	// sim objects and such go here
 	this->addSimObject(0,0,0,0);
 	sleep(3);
 
-	this->listObject();
-	this->listEntity();
+	//this->listObject();
+	//this->listEntity();
 
+	this->listAllEO();
+
+	sleep(3);
 	this->deleteSimEntity(0);
 	this->deleteSimObject(0);
 	this->stopSim();
@@ -1100,7 +1107,7 @@ void AI::runSim() {	// sim objects and such go here
 };
 
 void AI::addSimEntity(int x, int y, int z, int n) {
-	std::cout << "\t~:: adding sim {entity}." << std::endl;
+	std::cout << std::endl << "\t~:: adding sim {entity}." << std::endl;
 	this->simulation->createEntity(x,y,z,n);	// still needs n
 };
 
@@ -1110,7 +1117,7 @@ void AI::deleteSimEntity(int x) {
 };
 
 void AI::addSimObject(int x, int y, int z, int n) {
-	std::cout << "\t~:: adding sim {object}." << std::endl;
+	std::cout << std::endl << "\t~:: adding sim {object}." << std::endl;
 	this->simulation->createObject(x,y,z,n);
 };
 

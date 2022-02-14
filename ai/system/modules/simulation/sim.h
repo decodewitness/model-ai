@@ -23,11 +23,11 @@ private:
 
     int objects;
     
-    Entity *entity[MAX_ENTITIES];
-    Object *object[MAX_OBJECTS];
-
     bool entityList[MAX_ENTITIES];
     bool objectList[MAX_OBJECTS];
+    
+    Entity *entity[MAX_ENTITIES];
+    Object *object[MAX_OBJECTS];
 
 public:
 

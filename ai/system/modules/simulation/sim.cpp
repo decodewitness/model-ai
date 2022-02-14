@@ -2,7 +2,7 @@
 
 Simulation::Simulation() {
 
-    std::cout << std::endl << "\t~:: sim construct(){}:" << std::endl;
+    std::cout << std::endl << "\t~:: sim construct()" << std::endl;
 
     this->x=0;
     this->y=0;
@@ -28,7 +28,7 @@ void Simulation::createEntity(int x, int y, int z, int n) {
     if (n>0 && n<MAX_ENTITIES) {
         this->entity[n] = new Entity;
     }
-    std::cout << "~:: added sim {entity}(" << n << ")" << std::endl;
+    std::cout << "\t\t~:: added sim {entity}(" << n << ")" << std::endl;
     entityList[n] = true;
 };
     
@@ -36,7 +36,7 @@ void Simulation::createObject(int x, int y, int z, int n) {
     if (n>0 && n<MAX_ENTITIES) {
         this->object[n] = new Object;
     }
-    std::cout << "~:: added sim {object}(" << n << ")"  << std::endl;
+    std::cout << "\t\t~:: added sim {object}(" << n << ")"  << std::endl;
     objectList[n] = true;
 };
 
@@ -63,8 +63,8 @@ int Simulation::killObject(int n) {
 void Simulation::listEntities() {
     std::cout << std::endl << "~:: entities:" << std::endl;
     for (int i=0; i<MAX_ENTITIES; i++) {
-        if (objectList[i] == true) {
-            std::cout << "entity(" << i << ") ";
+        if (this->entityList[i] == true) {
+            std::cout << "entity(" << i << ") " << this->entity[i]->getLabel() << " : ";
         }
     }
     std::cout << std::endl << std::endl;
@@ -73,8 +73,8 @@ void Simulation::listEntities() {
 void Simulation::listObjects() {
     std::cout << std::endl << "~:: objects:" << std::endl;
     for (int i=0; i<MAX_OBJECTS; i++) {
-        if (objectList[i] == true) {
-            std::cout << "object(" << i << ") ";
+        if (this->objectList[i] == true) {
+            std::cout << "object(" << i << ") " << this->object[i]->getLabel() << " : ";
         }
     }
     std::cout << std::endl << std::endl;
@@ -86,14 +86,14 @@ void Simulation::listAll() {
 
     for (int i=0; i<MAX_ENTITIES; i++) {
         if (entityList[i] == true) {
-            std::cout << "entity(" << i << ") ";
+            std::cout << std::endl << "\tentity(" << i << ") {" << this->entity[i]->getLabel() << "} ";
         }
     }
     std::cout << std::endl;
 
     for (int i=0; i<MAX_OBJECTS; i++) {
         if (objectList[i] == true) {
-            std::cout << "obj(" << i << ") ";
+            std::cout << "\tobj(" << i << ")  {" << this->object[i]->getLabel() << "}";
         }
     }
     std::cout << std::endl;

@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc028aec60)
-	- stacking header:(1)::<address>(0x7ffc028aec80)
-	- stacking header:(2)::<address>(0x7ffc028aeca0)
-	- stacking header:(3)::<address>(0x7ffc028aecc0)
-	- stacking header:(4)::<address>(0x7ffc028aece0)
-	- stacking header:(5)::<address>(0x7ffc028aed00)
-	- stacking header:(6)::<address>(0x7ffc028aed20)
-	- stacking header:(7)::<address>(0x7ffc028aed40)
-	- stacking header:(8)::<address>(0x7ffc028aed60)
-	- stacking header:(9)::<address>(0x7ffc028aed80)
+	- stacking header:(0)::<address>(0x7fffc1501380)
+	- stacking header:(1)::<address>(0x7fffc15013a0)
+	- stacking header:(2)::<address>(0x7fffc15013c0)
+	- stacking header:(3)::<address>(0x7fffc15013e0)
+	- stacking header:(4)::<address>(0x7fffc1501400)
+	- stacking header:(5)::<address>(0x7fffc1501420)
+	- stacking header:(6)::<address>(0x7fffc1501440)
+	- stacking header:(7)::<address>(0x7fffc1501460)
+	- stacking header:(8)::<address>(0x7fffc1501480)
+	- stacking header:(9)::<address>(0x7fffc15014a0)
 
 
 -:: checking AI functions.
@@ -1565,16 +1565,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+block device: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+block device: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+block device: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+block device: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1585,8 +1585,8 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logical query
-	[ simple x computation: type:char len:13 vowels:8 consonants:5 special:0  ]
+	logic
+	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1598,28 +1598,15 @@ file or directory: -- ./downloads
 
 ~:: starting simulation.
 
-
-	~:: sim construct(){}:
+	~:: sim construct()
 		~:: initialized sim.
 	~:: sim running.
+
 	~:: adding sim {entity}.
-~:: added sim {entity}(0)
+		~:: added sim {entity}(0)
+
 	~:: adding sim {object}.
-~:: added sim {object}(0)
+		~:: added sim {object}(0)
 
-~:: objects:
-obj(0) 
+Listing entities & objects:
 
-
-~:: entities:
-entity(0) 
-
-	~:: deleting sim {entity}.
-~:: deleted sim {entity}(0)
-	~:: deleting sim {object}.
-~:: deleted sim {object}(0)
-~:: deleting simulation.
-
-
--:: decoupler.
-	-:: decoupling sampler

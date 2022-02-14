@@ -265,6 +265,9 @@ public:
 	
 	void listEntity();
 	void listObject();
+
+	void listAllEO();
+
 	// handle data
 	void hdata();
 	void hmath();
