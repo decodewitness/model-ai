@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffc1501380)
-	- stacking header:(1)::<address>(0x7fffc15013a0)
-	- stacking header:(2)::<address>(0x7fffc15013c0)
-	- stacking header:(3)::<address>(0x7fffc15013e0)
-	- stacking header:(4)::<address>(0x7fffc1501400)
-	- stacking header:(5)::<address>(0x7fffc1501420)
-	- stacking header:(6)::<address>(0x7fffc1501440)
-	- stacking header:(7)::<address>(0x7fffc1501460)
-	- stacking header:(8)::<address>(0x7fffc1501480)
-	- stacking header:(9)::<address>(0x7fffc15014a0)
+	- stacking header:(0)::<address>(0x7fffd4108b00)
+	- stacking header:(1)::<address>(0x7fffd4108b20)
+	- stacking header:(2)::<address>(0x7fffd4108b40)
+	- stacking header:(3)::<address>(0x7fffd4108b60)
+	- stacking header:(4)::<address>(0x7fffd4108b80)
+	- stacking header:(5)::<address>(0x7fffd4108ba0)
+	- stacking header:(6)::<address>(0x7fffd4108bc0)
+	- stacking header:(7)::<address>(0x7fffd4108be0)
+	- stacking header:(8)::<address>(0x7fffd4108c00)
+	- stacking header:(9)::<address>(0x7fffd4108c20)
 
 
 -:: checking AI functions.
@@ -1492,8 +1492,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1565,16 +1564,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-block device: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-block device: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-block device: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1585,8 +1584,8 @@ block device: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	logical type query
+	[ simple x computation: type:char len:18 vowels:12 consonants:6 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1597,16 +1596,57 @@ block device: -- ./downloads
 	killing abstraction layer.
 
 ~:: starting simulation.
-
 	~:: sim construct()
 		~:: initialized sim.
 	~:: sim running.
 
 	~:: adding sim {entity}.
+- (Entity) was created.
 		~:: added sim {entity}(0)
 
 	~:: adding sim {object}.
+- {Object} was created.
 		~:: added sim {object}(0)
 
-Listing entities & objects:
+	~:: sim::entering cycle -1-.
+	~:: sim::entering cycle -2-.
+	~:: sim::entering cycle -3-.
+	~:: sim::entering cycle -4-.
+	~:: sim::entering cycle -5-.
+	~:: sim::entering cycle -6-.
+	~:: sim::entering cycle -7-.
+	~:: sim::entering cycle -8-.
+	~:: sim::entering cycle -9-.
+	~:: sim::entering cycle -10-.
+	~:: sim::entering cycle -11-.
+	~:: sim::entering cycle -12-.
+	~:: sim::entering cycle -13-.
+	~:: sim::entering cycle -14-.
+	~:: sim::entering cycle -15-.
+	~:: sim::entering cycle -16-.
+	~:: sim::entering cycle -17-.
+	~:: sim::entering cycle -18-.
+- {Object} <<empty object>> got destroyed.
+		~:: deleted sim {object}(0)
 
+- {Object}(0) reached mortality.
+- {Entity} <<empty label>> died.
+		~:: deleted sim {entity}(0)
+
+- {Entity}(0) reached mortality.
+#1 entities perished.
+#1 objects got destroyed.
+	~:: sim::entering cycle -19-.
+	~:: sim::entering cycle -20-.
+	~:: sim::entering cycle -21-.
+	~:: sim::entering cycle -22-.
+	~:: sim::entering cycle -23-.
+	~:: sim::entering cycle -24-.
+	~:: sim::entering cycle -25-.
+
+~:: listing entities & objects:
+	- 
+	- 
+
+	~:: deleting sim {entity}.
+- {Entity} <<empty label>> died.

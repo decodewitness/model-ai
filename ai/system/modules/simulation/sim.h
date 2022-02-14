@@ -43,6 +43,8 @@ public:
     int killEntity(int n);
     int killObject(int n);
 
+    void cycle(int n=1);
+    void mortality(int n);
 };
 
 // eof

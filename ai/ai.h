@@ -267,6 +267,7 @@ public:
 	void listObject();
 
 	void listAllEO();
+	void cycle(int n);
 
 	// handle data
 	void hdata();

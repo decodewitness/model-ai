@@ -1,25 +1,44 @@
 #include <iostream>
 
+#define OBJECT_LIFESPAN 18
+
 class Object {
 private:
     int x;
     int y;
     int z;
 
+    int nr;
+
     int width;
     int length;
     int height;
 
+    int age;
+    int lifespan;
+
     std::string name;
     std::string label;
 
+    bool dying;
+
 public:
 
-    Object() {
+    Object(int n) {
         std::cout << "- {Object} was created." << std::endl;
         this->name = "<object>";
         this->label = "<empty object>";
+
+        this->nr = n;
+
+        this->age = 0;
+        this->lifespan = OBJECT_LIFESPAN;
+        this->dying = false;
     };
+
+    ~Object() {
+        std::cout << "- {Object} <" << this->label << "> got destroyed." << std::endl;
+    }
 
     void setName(std::string n) { this->name = n; };
     void setLabel(std::string l) { this->label = l; };
@@ -57,4 +76,16 @@ public:
         this->y = m;
         this->z = n;
     };
+
+    void incrementAge(int n=1) {
+        this->age += n;
+
+        if (this->age == this->lifespan) {
+            this->dying = true;
+        }
+    };
+
+    bool getMortality() {
+        return this->dying;
+    }
 };

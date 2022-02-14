@@ -1081,9 +1081,14 @@ void AI::listObject() {
 }
 
 void AI::listAllEO() {
-		this->simulation->listAll();
-	};
+	this->simulation->listAll();
+};
 
+void AI::cycle(int n) {
+	this->simulation->cycle(n);
+}
+
+// simulation;
 // should be loaded from external file.
 void AI::runSim() {	// sim objects and such go here
 	this->startSim();
@@ -1092,6 +1097,7 @@ void AI::runSim() {	// sim objects and such go here
 	sleep(3);
 	this->addSimEntity(0,0,0,0);
 	this->addSimObject(0,0,0,0);
+	this->cycle(25);
 	sleep(3);
 
 	//this->listObject();
@@ -1108,7 +1114,7 @@ void AI::runSim() {	// sim objects and such go here
 
 void AI::addSimEntity(int x, int y, int z, int n) {
 	std::cout << std::endl << "\t~:: adding sim {entity}." << std::endl;
-	this->simulation->createEntity(x,y,z,n);	// still needs n
+	this->simulation->createEntity(x,y,z,n);
 };
 
 void AI::deleteSimEntity(int x) {

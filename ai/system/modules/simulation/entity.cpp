@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+#define ENTITY_LIFESPAN 18
+
 class Entity {
 
 private:
@@ -8,19 +10,35 @@ private:
     int y;
     int z;
 
+    int nr;
+
+    int age;
+    int lifespan;
+    bool dying;
+    
     std::string name;
     std::string label;
-public:
 
-    Entity() {
+public:
+    Entity(int n) {
         std::cout << "- (Entity) was created." << std::endl;
         
         this->x=0;
         this->y=0;
         this->z=0;
+
+        this->nr = n;
     
+        this->age=0;
+        this->lifespan = ENTITY_LIFESPAN;
+        this->dying = false;
+
         this->name = "<empty>";
         this->label="<empty label>";
+    }
+
+    ~Entity() {
+        std::cout << "- {Entity} <" << this->label << "> died." << std::endl;
     }
 
     void setName(std::string n) { this->name = n; };
@@ -59,6 +77,18 @@ public:
         this->y = m;
         this->z = n;
     };
+
+    void incrementAge(int n=1) {
+        this->age += n;
+
+        if (this->age == this->lifespan) {
+            this->dying = true;
+        }
+    };
+
+    bool getMortality() {
+        return this->dying;
+    }
 };
 
 // eof

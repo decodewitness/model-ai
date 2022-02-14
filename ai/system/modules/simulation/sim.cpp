@@ -2,7 +2,7 @@
 
 Simulation::Simulation() {
 
-    std::cout << std::endl << "\t~:: sim construct()" << std::endl;
+    std::cout << "\t~:: sim construct()" << std::endl;
 
     this->x=0;
     this->y=0;
@@ -25,38 +25,42 @@ Simulation::Simulation() {
 };
 
 void Simulation::createEntity(int x, int y, int z, int n) {
-    if (n>0 && n<MAX_ENTITIES) {
-        this->entity[n] = new Entity;
+    if (n>=0 && n<MAX_ENTITIES) {
+        this->entity[n] = new Entity(n);
+        entityList[n] = true;
     }
     std::cout << "\t\t~:: added sim {entity}(" << n << ")" << std::endl;
-    entityList[n] = true;
 };
     
 void Simulation::createObject(int x, int y, int z, int n) {
-    if (n>0 && n<MAX_ENTITIES) {
-        this->object[n] = new Object;
+    if (n>=0 && n<MAX_ENTITIES) {
+        this->object[n] = new Object(n);
+        objectList[n] = true;
     }
     std::cout << "\t\t~:: added sim {object}(" << n << ")"  << std::endl;
-    objectList[n] = true;
 };
 
 int Simulation::killEntity(int n) {
-    if (n>0 && n<MAX_ENTITIES) {
+    if (n>=0 && n<MAX_ENTITIES) {
         delete this->entity[n];
+        entityList[n] = false;
+    } else {
+        std::cout << "~::!::~ error! out of bounds." << std::endl;
     }
 
-    std::cout << "~:: deleted sim {entity}(" << n << ")"  << std::endl;
-    entityList[n] = false;
-
+    std::cout << "\t\t~:: deleted sim {entity}(" << n << ")"  << std::endl;
     return 0;
-};   // put in bounds checks
+};
 
 int Simulation::killObject(int n) {
-    if (n>0 && n<MAX_ENTITIES) {
+    if (n>=0 && n<MAX_ENTITIES) {
         delete this->object[n];
+        objectList[n] = false;
+    } else {
+        std::cout << "~::!::~ error! out of bounds." << std::endl;
     }
-    std::cout << "~:: deleted sim {object}(" << n << ")"  << std::endl;
-    objectList[n] = false;
+
+    std::cout << "\t\t~:: deleted sim {object}(" << n << ")"  << std::endl;
     return 0;
 };
 
@@ -82,21 +86,70 @@ void Simulation::listObjects() {
 
 void Simulation::listAll() {
     
-    std::cout << std::endl << "Listing entities & objects:" << std::endl;
+    std::cout << std::endl << "~:: listing entities & objects:" << std::endl;
+    std::cout << "\t- ";
 
     for (int i=0; i<MAX_ENTITIES; i++) {
         if (entityList[i] == true) {
-            std::cout << std::endl << "\tentity(" << i << ") {" << this->entity[i]->getLabel() << "} ";
+            std::cout << "entity(" << i << ") {" << this->entity[i]->getLabel() << "} ";
         }
     }
-    std::cout << std::endl;
+
+    std::cout << std::endl << "\t- ";
 
     for (int i=0; i<MAX_OBJECTS; i++) {
         if (objectList[i] == true) {
-            std::cout << "\tobj(" << i << ")  {" << this->object[i]->getLabel() << "}";
+            std::cout << "obj(" << i << ")  {" << this->object[i]->getLabel() << "}";
         }
     }
-    std::cout << std::endl;
+    std::cout << std::endl << std::endl;
 }
+
+void Simulation::cycle(int n) {
+    std::cout << std::endl;
+    for (int i=1; i<=n; i++) {
+        std::cout << "\t~:: sim::entering cycle -" << i << "-." << std::endl;
+        
+        // reduces lifetime expectancy
+        this->mortality(1);
+    }
+};
+
+void Simulation::mortality(int n) { // n is not used yet
+
+    int entityCount=0;
+    int objectCount=0;
+
+    for (int i=0; i<MAX_OBJECTS; i++) {
+        if (objectList[i] == true) {
+            this->object[i]->incrementAge();
+            if (this->object[i]->getMortality() == true) {
+                this->killObject(i);
+                std::cout << std::endl << "- {Object}(" << i << ") reached mortality." << std::endl;
+                objectCount++;
+            }
+        }
+    }
+
+    for (int i=0; i<MAX_ENTITIES; i++) {
+        if (entityList[i] == true) {
+            this->entity[i]->incrementAge();
+            if (this->entity[i]->getMortality() == true) {
+                this->killEntity(i);
+                std::cout << std::endl << "- {Entity}(" << i << ") reached mortality." << std::endl;
+
+                entityCount++;
+            }
+        }
+    }
+
+    if (entityCount>0) {
+        std::cout << "#" << entityCount << " entities perished." << std::endl;
+    }
+    
+    if (objectCount>0) {
+        std::cout << "#" << objectCount << " objects got destroyed." << std::endl;
+    }
+};
 
 // eof
