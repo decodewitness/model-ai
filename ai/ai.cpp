@@ -1097,17 +1097,17 @@ void AI::runSim() {	// sim objects and such go here
 	sleep(3);
 	this->addSimEntity(0,0,0,0);
 	this->addSimObject(0,0,0,0);
+	this->listAllEO();
+
 	this->cycle(25);
 	sleep(3);
 
 	//this->listObject();
 	//this->listEntity();
 
-	this->listAllEO();
-
 	sleep(3);
-	this->deleteSimEntity(0);
-	this->deleteSimObject(0);
+	//this->deleteSimEntity(0);
+	//this->deleteSimObject(0);
 	this->stopSim();
 	sleep(1);
 };

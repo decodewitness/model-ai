@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <unistd.h>
 
+#include "vertex.h"
 #include "entity.cpp"
 #include "object.cpp"
 
@@ -11,30 +12,36 @@
 
 class Simulation {
 private:
-    int x;
-    int y;
-    int z;
+    double x;
+    double y;
+    double z;
 
-    int coordinates[3];
+    double coordinates[3];
 
     int registered_entities[MAX_ENTITIES];
     int entity_focus_area;
+    
     int entity_count;
-
     int objects;
     
     bool entityList[MAX_ENTITIES];
     bool objectList[MAX_OBJECTS];
     
+    bool entityVertexList[MAX_ENTITIES];
+    bool objectVertexList[MAX_OBJECTS];
+
     Entity *entity[MAX_ENTITIES];
     Object *object[MAX_OBJECTS];
+
+    Vertex *entityVertex[MAX_ENTITIES];
+    Vertex *objectVertex[MAX_OBJECTS];
 
 public:
 
     Simulation();
 
-    void createEntity(int x, int y, int z, int n);
-    void createObject(int x, int y, int z, int n);
+    void createEntity(double x, double y, double z, int n);
+    void createObject(double x, double y, double z, int n);
 
     void listEntities();
     void listObjects();

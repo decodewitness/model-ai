@@ -4,9 +4,9 @@
 
 class Object {
 private:
-    int x;
-    int y;
-    int z;
+    double x;
+    double y;
+    double z;
 
     int nr;
 
@@ -49,27 +49,27 @@ public:
     void printName() { std::cout << "- name = " << this->getName() << std::endl; };
     void printLabel() { std::cout << "- label = " << this->getLabel() << std::endl; };
 
-    int getX() { return this->x; };
-    int getY() { return this->y; };
-    int getZ() { return this->z; };
+    double getX() { return this->x; };
+    double getY() { return this->y; };
+    double getZ() { return this->z; };
 
-    void setX(int n) {
+    void setX(double n) {
         std::cout << "\t-- moving to (x:" << n << ")." << std::endl;
         this->x = n;
     };
     
-    void setY(int n) {
+    void setY(double n) {
         std::cout << "\t-- moving to (y:" << n << ")." << std::endl;
         this->y = n;
         
     };   
     
-    void setZ(int n) {
+    void setZ(double n) {
         std::cout << "\t-- moving to (z:" << n << ")." << std::endl;
         this->z = n;
     };
 
-    void setXYZ(int l, int m, int n) {
+    void setXYZ(double l, double m, double n) {
         std::cout << "\t-- setting coordinates to (x:" << l << " y:" << m << " z:" << n << ")." << std::endl;
     
         this->x = l;

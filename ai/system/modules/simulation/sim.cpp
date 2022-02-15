@@ -1,7 +1,6 @@
 #include "sim.h"
 
 Simulation::Simulation() {
-
     std::cout << "\t~:: sim construct()" << std::endl;
 
     this->x=0;
@@ -24,18 +23,22 @@ Simulation::Simulation() {
     std::cout << "\t\t~:: initialized sim." << std::endl;
 };
 
-void Simulation::createEntity(int x, int y, int z, int n) {
+void Simulation::createEntity(double x, double y, double z, int n) {
     if (n>=0 && n<MAX_ENTITIES) {
         this->entity[n] = new Entity(n);
         entityList[n] = true;
+
+        this->entityVertex[n] = new Vertex(x,y,z);
     }
     std::cout << "\t\t~:: added sim {entity}(" << n << ")" << std::endl;
 };
     
-void Simulation::createObject(int x, int y, int z, int n) {
+void Simulation::createObject(double x, double y, double z, int n) {
     if (n>=0 && n<MAX_ENTITIES) {
         this->object[n] = new Object(n);
         objectList[n] = true;
+
+        this->objectVertex[n] = new Vertex(x,y,z);
     }
     std::cout << "\t\t~:: added sim {object}(" << n << ")"  << std::endl;
 };
@@ -44,6 +47,9 @@ int Simulation::killEntity(int n) {
     if (n>=0 && n<MAX_ENTITIES) {
         delete this->entity[n];
         entityList[n] = false;
+
+        delete this->entityVertex[n];
+        this->entityVertexList[n] = false;
     } else {
         std::cout << "~::!::~ error! out of bounds." << std::endl;
     }
@@ -56,6 +62,9 @@ int Simulation::killObject(int n) {
     if (n>=0 && n<MAX_ENTITIES) {
         delete this->object[n];
         objectList[n] = false;
+
+        delete this->entityVertex[n];
+        this->objectVertexList[n] = false;
     } else {
         std::cout << "~::!::~ error! out of bounds." << std::endl;
     }
@@ -85,13 +94,14 @@ void Simulation::listObjects() {
 };
 
 void Simulation::listAll() {
-    
     std::cout << std::endl << "~:: listing entities & objects:" << std::endl;
     std::cout << "\t- ";
 
     for (int i=0; i<MAX_ENTITIES; i++) {
         if (entityList[i] == true) {
-            std::cout << "entity(" << i << ") {" << this->entity[i]->getLabel() << "} ";
+            std::cout << "entity(" << i << ") (";
+            this->entityVertex[i]->getXYZ();
+            std::cout <<") {" << this->entity[i]->getLabel() << "} ";
         }
     }
 
@@ -99,7 +109,9 @@ void Simulation::listAll() {
 
     for (int i=0; i<MAX_OBJECTS; i++) {
         if (objectList[i] == true) {
-            std::cout << "obj(" << i << ")  {" << this->object[i]->getLabel() << "}";
+            std::cout << "obj(" << i << ") (";
+            this->objectVertex[i]->getXYZ();
+            std::cout << ") {" << this->object[i]->getLabel() << "}";
         }
     }
     std::cout << std::endl << std::endl;
@@ -116,10 +128,10 @@ void Simulation::cycle(int n) {
 };
 
 void Simulation::mortality(int n) { // n is not used yet
-
     int entityCount=0;
     int objectCount=0;
 
+    // this will increment age for entities and objects
     for (int i=0; i<MAX_OBJECTS; i++) {
         if (objectList[i] == true) {
             this->object[i]->incrementAge();
@@ -143,6 +155,7 @@ void Simulation::mortality(int n) { // n is not used yet
         }
     }
 
+    // this will show when more than 0 entities died that round of cycle
     if (entityCount>0) {
         std::cout << "#" << entityCount << " entities perished." << std::endl;
     }
