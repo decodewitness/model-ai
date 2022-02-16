@@ -269,6 +269,9 @@ public:
 	void listAllEO();
 	void cycle(int n);
 
+	void printEntityCount();
+	void printObjectCount();
+
 	// handle data
 	void hdata();
 	void hmath();

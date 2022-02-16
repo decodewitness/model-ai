@@ -8,6 +8,7 @@
 #include <ctime>
 
 #include "ai.h"
+#include "simulation.cpp"
 
 // CONSTANTS
 //const char _MODEL[32] = "ai/patching/restore";
@@ -1088,29 +1089,17 @@ void AI::cycle(int n) {
 	this->simulation->cycle(n);
 }
 
+void AI::printEntityCount() {
+	std::cout << "- entity count: " << this->simulation->returnEntityCount() << std::endl;
+
+};
+
+void AI::printObjectCount() {
+	std::cout << "- object count: " << this->simulation->returnObjectCount() << std::endl;
+};
+
 // simulation;
 // should be loaded from external file.
-void AI::runSim() {	// sim objects and such go here
-	this->startSim();
-	this->play_audio_file("ai/system/audio/samples/vworge.wav");
-	std::cout << "\t~:: sim running." << std::endl;
-	sleep(3);
-	this->addSimEntity(0,0,0,0);
-	this->addSimObject(0,0,0,0);
-	this->listAllEO();
-
-	this->cycle(25);
-	sleep(3);
-
-	//this->listObject();
-	//this->listEntity();
-
-	sleep(3);
-	//this->deleteSimEntity(0);
-	//this->deleteSimObject(0);
-	this->stopSim();
-	sleep(1);
-};
 
 void AI::addSimEntity(int x, int y, int z, int n) {
 	std::cout << std::endl << "\t~:: adding sim {entity}." << std::endl;

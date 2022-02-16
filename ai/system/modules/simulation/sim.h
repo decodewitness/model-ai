@@ -22,7 +22,7 @@ private:
     int entity_focus_area;
     
     int entity_count;
-    int objects;
+    int object_count;
     
     bool entityList[MAX_ENTITIES];
     bool objectList[MAX_OBJECTS];
@@ -52,6 +52,9 @@ public:
 
     void cycle(int n=1);
     void mortality(int n);
+
+    int returnEntityCount() { return entity_count; }
+    int returnObjectCount() { return object_count; }
 };
 
 // eof

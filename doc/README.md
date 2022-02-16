@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe81ae2c20)
-	- stacking header:(1)::<address>(0x7ffe81ae2c40)
-	- stacking header:(2)::<address>(0x7ffe81ae2c60)
-	- stacking header:(3)::<address>(0x7ffe81ae2c80)
-	- stacking header:(4)::<address>(0x7ffe81ae2ca0)
-	- stacking header:(5)::<address>(0x7ffe81ae2cc0)
-	- stacking header:(6)::<address>(0x7ffe81ae2ce0)
-	- stacking header:(7)::<address>(0x7ffe81ae2d00)
-	- stacking header:(8)::<address>(0x7ffe81ae2d20)
-	- stacking header:(9)::<address>(0x7ffe81ae2d40)
+	- stacking header:(0)::<address>(0x7ffe5c0576b0)
+	- stacking header:(1)::<address>(0x7ffe5c0576d0)
+	- stacking header:(2)::<address>(0x7ffe5c0576f0)
+	- stacking header:(3)::<address>(0x7ffe5c057710)
+	- stacking header:(4)::<address>(0x7ffe5c057730)
+	- stacking header:(5)::<address>(0x7ffe5c057750)
+	- stacking header:(6)::<address>(0x7ffe5c057770)
+	- stacking header:(7)::<address>(0x7ffe5c057790)
+	- stacking header:(8)::<address>(0x7ffe5c0577b0)
+	- stacking header:(9)::<address>(0x7ffe5c0577d0)
 
 
 -:: checking AI functions.
@@ -1617,16 +1617,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+symlink: -- ./DCIM
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+symlink: -- ./module_bay
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+symlink: -- ./info.txt
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+symlink: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1637,8 +1637,8 @@ FIFO/pipe: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
+	logi
+	[ simple x computation: type:char len:4 vowels:2 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1665,6 +1665,8 @@ FIFO/pipe: -- ./downloads
 	- entity(0) (x:0 y:0 z:0) {<empty label>} 
 	- obj(0) (x:0 y:0 z:0) {<empty object>}
 
+- entity count: 1
+- object count: 1
 
 	~:: sim::entering cycle -1-.
 	~:: sim::entering cycle -2-.

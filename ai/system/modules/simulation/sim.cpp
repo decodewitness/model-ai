@@ -10,7 +10,8 @@ Simulation::Simulation() {
     //this->entities=0;
     this->entity_focus_area=1;
 
-    //this->entity = 0;
+    this->entity_count = 0;
+    this->object_count = 0;
 
     for (int i=0; i<MAX_ENTITIES; i++) {
         entityList[i] = false;
@@ -29,6 +30,7 @@ void Simulation::createEntity(double x, double y, double z, int n) {
         entityList[n] = true;
 
         this->entityVertex[n] = new Vertex(x,y,z);
+        this->entity_count += 1;
     }
     std::cout << "\t\t~:: added sim {entity}(" << n << ")" << std::endl;
 };
@@ -39,6 +41,7 @@ void Simulation::createObject(double x, double y, double z, int n) {
         objectList[n] = true;
 
         this->objectVertex[n] = new Vertex(x,y,z);
+        this->object_count += 1;
     }
     std::cout << "\t\t~:: added sim {object}(" << n << ")"  << std::endl;
 };
@@ -50,6 +53,7 @@ int Simulation::killEntity(int n) {
 
         delete this->entityVertex[n];
         this->entityVertexList[n] = false;
+        this->entity_count -= 1;
     } else {
         std::cout << "~::!::~ error! out of bounds." << std::endl;
     }
@@ -65,6 +69,7 @@ int Simulation::killObject(int n) {
 
         delete this->entityVertex[n];
         this->objectVertexList[n] = false;
+        this->object_count -= 1;
     } else {
         std::cout << "~::!::~ error! out of bounds." << std::endl;
     }

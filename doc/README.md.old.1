@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffe0362620)
-	- stacking header:(1)::<address>(0x7fffe0362640)
-	- stacking header:(2)::<address>(0x7fffe0362660)
-	- stacking header:(3)::<address>(0x7fffe0362680)
-	- stacking header:(4)::<address>(0x7fffe03626a0)
-	- stacking header:(5)::<address>(0x7fffe03626c0)
-	- stacking header:(6)::<address>(0x7fffe03626e0)
-	- stacking header:(7)::<address>(0x7fffe0362700)
-	- stacking header:(8)::<address>(0x7fffe0362720)
-	- stacking header:(9)::<address>(0x7fffe0362740)
+	- stacking header:(0)::<address>(0x7ffd1aebefa0)
+	- stacking header:(1)::<address>(0x7ffd1aebefc0)
+	- stacking header:(2)::<address>(0x7ffd1aebefe0)
+	- stacking header:(3)::<address>(0x7ffd1aebf000)
+	- stacking header:(4)::<address>(0x7ffd1aebf020)
+	- stacking header:(5)::<address>(0x7ffd1aebf040)
+	- stacking header:(6)::<address>(0x7ffd1aebf060)
+	- stacking header:(7)::<address>(0x7ffd1aebf080)
+	- stacking header:(8)::<address>(0x7ffd1aebf0a0)
+	- stacking header:(9)::<address>(0x7ffd1aebf0c0)
 
 
 -:: checking AI functions.
@@ -1544,7 +1544,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1616,16 +1617,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1661,9 +1662,11 @@ FIFO/pipe: -- ./downloads
 		~:: added sim {object}(0)
 
 ~:: listing entities & objects:
-	- entity(0) (x: y:0 z:0) {<empty label>} 
-	- obj(0) (x: y:0 z:0) {<empty object>}
+	- entity(0) (x:0 y:0 z:0) {<empty label>} 
+	- obj(0) (x:0 y:0 z:0) {<empty object>}
 
+- entity count: 1
+- object count: 1
 
 	~:: sim::entering cycle -1-.
 	~:: sim::entering cycle -2-.
