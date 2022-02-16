@@ -7,7 +7,10 @@
 #include <fstream>
 #include <ctime>
 
+// AI.H main header file
 #include "ai.h"
+
+// simulation run
 #include "simulation.cpp"
 
 // CONSTANTS

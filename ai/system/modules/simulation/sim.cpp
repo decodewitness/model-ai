@@ -51,14 +51,14 @@ int Simulation::killEntity(int n) {
         delete this->entity[n];
         entityList[n] = false;
 
-        delete this->entityVertex[n];
+        //delete this->entityVertex[n];
         this->entityVertexList[n] = false;
         this->entity_count -= 1;
     } else {
         std::cout << "~::!::~ error! out of bounds." << std::endl;
     }
 
-    std::cout << "\t\t~:: deleted sim {entity}(" << n << ")"  << std::endl;
+    std::cout << "\t~:: deleted sim {entity}(" << n << ")"  << std::endl;
     return 0;
 };
 
@@ -67,14 +67,14 @@ int Simulation::killObject(int n) {
         delete this->object[n];
         objectList[n] = false;
 
-        delete this->entityVertex[n];
+        //delete this->entityVertex[n];
         this->objectVertexList[n] = false;
         this->object_count -= 1;
     } else {
         std::cout << "~::!::~ error! out of bounds." << std::endl;
     }
 
-    std::cout << "\t\t~:: deleted sim {object}(" << n << ")"  << std::endl;
+    std::cout << "\t~:: deleted sim {object}(" << n << ")"  << std::endl;
     return 0;
 };
 
@@ -142,7 +142,7 @@ void Simulation::mortality(int n) { // n is not used yet
             this->object[i]->incrementAge();
             if (this->object[i]->getMortality() == true) {
                 this->killObject(i);
-                std::cout << std::endl << "- {Object}(" << i << ") reached mortality." << std::endl;
+                std::cout << "- {Object}(" << i << ") reached mortality." << std::endl;
                 objectCount++;
             }
         }
@@ -153,11 +153,15 @@ void Simulation::mortality(int n) { // n is not used yet
             this->entity[i]->incrementAge();
             if (this->entity[i]->getMortality() == true) {
                 this->killEntity(i);
-                std::cout << std::endl << "- {Entity}(" << i << ") reached mortality." << std::endl;
+                std::cout << "- {Entity}(" << i << ") reached mortality." << std::endl;
 
                 entityCount++;
             }
         }
+    }
+
+    if (objectCount>0 || entityCount>0) {
+        std::cout << std::endl;
     }
 
     // this will show when more than 0 entities died that round of cycle
@@ -167,6 +171,10 @@ void Simulation::mortality(int n) { // n is not used yet
     
     if (objectCount>0) {
         std::cout << "#" << objectCount << " objects got destroyed." << std::endl;
+    }
+
+    if (objectCount>0 || entityCount>0) {
+        std::cout << std::endl;
     }
 };
 

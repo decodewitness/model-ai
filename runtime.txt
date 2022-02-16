@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe5c0576b0)
-	- stacking header:(1)::<address>(0x7ffe5c0576d0)
-	- stacking header:(2)::<address>(0x7ffe5c0576f0)
-	- stacking header:(3)::<address>(0x7ffe5c057710)
-	- stacking header:(4)::<address>(0x7ffe5c057730)
-	- stacking header:(5)::<address>(0x7ffe5c057750)
-	- stacking header:(6)::<address>(0x7ffe5c057770)
-	- stacking header:(7)::<address>(0x7ffe5c057790)
-	- stacking header:(8)::<address>(0x7ffe5c0577b0)
-	- stacking header:(9)::<address>(0x7ffe5c0577d0)
+	- stacking header:(0)::<address>(0x7ffc44c612c0)
+	- stacking header:(1)::<address>(0x7ffc44c612e0)
+	- stacking header:(2)::<address>(0x7ffc44c61300)
+	- stacking header:(3)::<address>(0x7ffc44c61320)
+	- stacking header:(4)::<address>(0x7ffc44c61340)
+	- stacking header:(5)::<address>(0x7ffc44c61360)
+	- stacking header:(6)::<address>(0x7ffc44c61380)
+	- stacking header:(7)::<address>(0x7ffc44c613a0)
+	- stacking header:(8)::<address>(0x7ffc44c613c0)
+	- stacking header:(9)::<address>(0x7ffc44c613e0)
 
 
 -:: checking AI functions.
@@ -1492,8 +1492,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1565,16 +1564,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-symlink: -- ./DCIM
+regular file: -- ./DCIM
 
 ~:: stats() function:
-symlink: -- ./module_bay
+regular file: -- ./module_bay
 
 ~:: stats() function:
-symlink: -- ./info.txt
+regular file: -- ./info.txt
 
 ~:: stats() function:
-symlink: -- ./downloads
+regular file: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1585,8 +1584,8 @@ symlink: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logi
-	[ simple x computation: type:char len:4 vowels:2 consonants:2 special:0  ]
+	logic
+	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
 -:: finished computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1639,3 +1638,20 @@ symlink: -- ./downloads
 
 - {Object}(0) reached mortality.
 - {Entity} <<empty label>> died.
+		~:: deleted sim {entity}(0)
+
+- {Entity}(0) reached mortality.
+#1 entities perished.
+#1 objects got destroyed.
+	~:: sim::entering cycle -19-.
+	~:: sim::entering cycle -20-.
+	~:: sim::entering cycle -21-.
+	~:: sim::entering cycle -22-.
+	~:: sim::entering cycle -23-.
+	~:: sim::entering cycle -24-.
+	~:: sim::entering cycle -25-.
+~:: deleting simulation.
+
+
+-:: decoupler.
+	-:: decoupling sampler
