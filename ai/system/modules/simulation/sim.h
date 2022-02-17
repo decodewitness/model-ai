@@ -1,7 +1,12 @@
+// AI/SYSTEM/MODULES/SIMULATION/SIM.H   -- USED BY "AI/AI.H"
+
 #include <iostream>
 #include <string>
 #include <cstdlib>
 #include <unistd.h>
+#include <chrono>
+
+// #include <time.h>
 
 #include "vertex.h"
 #include "entity.cpp"
@@ -10,11 +15,25 @@
 #define MAX_ENTITIES 100
 #define MAX_OBJECTS 100
 
+#define MAX_X 9999999
+#define MAX_Y 9999999
+#define MAX_Z 9999999
+
 class Simulation {
 private:
     double x;
     double y;
     double z;
+
+    double max_x;
+    double max_y;
+    double max_z;
+
+    // statistics
+    int cycle_round;
+    int max_entities;
+    int max_objects;
+    double run_time_simulation;
 
     double coordinates[3];
 
@@ -40,6 +59,8 @@ public:
 
     Simulation();
 
+    void init();
+
     void createEntity(double x, double y, double z, int n);
     void createObject(double x, double y, double z, int n);
 
@@ -55,6 +76,8 @@ public:
 
     int returnEntityCount() { return entity_count; }
     int returnObjectCount() { return object_count; }
+
+    void statistics();
 };
 
 // eof

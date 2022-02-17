@@ -11,7 +11,7 @@
 #include "ai.h"
 
 // simulation run
-#include "simulation.cpp"
+#include "simulation.cpp"	// simulation.h is included in "ai.h"
 
 // CONSTANTS
 //const char _MODEL[32] = "ai/patching/restore";
@@ -1067,9 +1067,15 @@ void AI::deallocatData(int pipeline) {	// deallocates Data pipeline "d1" or "d2"
 };
 
 void AI::startSim() {
+	// this->play_audio_file("ai/system/audio/samples/vworge.wav");
 	std::cout << std::endl << "~:: starting simulation." << std::endl;
 	this->simulation = new Simulation;
 };
+
+void AI::sim_stats() {
+	std::cout << std::endl << "~:: generating stats ::~" << std::endl;
+	this->simulation->statistics();
+}
 
 void AI::stopSim() {
 	std::cout << "~:: deleting simulation." << std::endl << std::endl;

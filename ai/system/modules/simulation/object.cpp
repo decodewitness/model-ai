@@ -1,6 +1,9 @@
+// AI/SYSTEM/MODULES/SIMULATION/OBJECT.CPP -- USED BY "AI/SYSTEM/MODULES/SIMULATION/SIM.H"
+
 #include <iostream>
 
-#define OBJECT_LIFESPAN 18
+#define LIMIT_XYZ 9999999
+#define OBJECT_LIFESPAN 7
 
 class Object {
 private:
@@ -37,7 +40,7 @@ public:
     };
 
     ~Object() {
-        std::cout << "- {Object} <" << this->label << "> got destroyed." << std::endl;
+        std::cout << std::endl << "- {Object} " << this->label << " got destroyed." << std::endl;
     }
 
     void setName(std::string n) { this->name = n; };
@@ -54,27 +57,33 @@ public:
     double getZ() { return this->z; };
 
     void setX(double n) {
-        std::cout << "\t-- moving to (x:" << n << ")." << std::endl;
-        this->x = n;
+        if (n <= LIMIT_XYZ) {
+            std::cout << "\t-- moving to (x:" << n << ")." << std::endl;
+            this->x = n;
+        }
     };
     
     void setY(double n) {
-        std::cout << "\t-- moving to (y:" << n << ")." << std::endl;
-        this->y = n;
-        
+        if (n <= LIMIT_XYZ) {
+            std::cout << "\t-- moving to (y:" << n << ")." << std::endl;
+            this->y = n;
+        }
     };   
     
     void setZ(double n) {
-        std::cout << "\t-- moving to (z:" << n << ")." << std::endl;
-        this->z = n;
+        if (n <= LIMIT_XYZ) {
+            std::cout << "\t-- moving to (z:" << n << ")." << std::endl;
+            this->z = n;
+        }
     };
 
     void setXYZ(double l, double m, double n) {
-        std::cout << "\t-- setting coordinates to (x:" << l << " y:" << m << " z:" << n << ")." << std::endl;
-    
-        this->x = l;
-        this->y = m;
-        this->z = n;
+        if (n <= LIMIT_XYZ) {
+            std::cout << "\t-- setting coordinates to (x:" << l << " y:" << m << " z:" << n << ")." << std::endl;
+            this->x = l;
+            this->y = m;
+            this->z = n;
+        }
     };
 
     void incrementAge(int n=1) {

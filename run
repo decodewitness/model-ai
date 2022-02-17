@@ -106,29 +106,30 @@ fi
 echo "~:copying \"runtime.txt\" log file to \"./doc\""
 cp ./ai/log/runtime.txt ./doc/runtime.1.txt
 
-echo "~:filling README.md"
-cat ./ai/log/runtime.txt > runtime.txt
+#echo "~:filling README.md"
+#cat ./ai/log/runtime.txt > runtime.txt
 
-echo "~:creating README.md in ./doc and ./"
+echo "~:copying \"make_readme.sh\""
 cp ./ai/log/make_readme.sh ./
 chmod +x ./make_readme.sh
 
-echo "~:cleaning up"
+echo "~:creating README.md -> ./doc/README.md"
 if [ -f "./make_readme.sh" ]
   then
   ./make_readme.sh
 fi
-if [ -f "./doc/make_readme.sh" ]
-  then
-  rm ./doc/make_readme.sh
-fi
 
-if [ -f "./doc/README.md" ]
-  then
-  cp ./doc/README.md .
-fi
+#if [ -f "./doc/make_readme.sh" ]
+#  then
+#  rm ./doc/make_readme.sh
+#fi
 
-if [ -f "./README.md.old" ]
+#if [ -f "./doc/README.md" ]
+#  then
+#  cp ./doc/README.md .
+#fi
+
+if [ -f "./doc/README.md.old" ]
   then
   echo "~:cleaning up old README.md.old"
   rm ./README.md.old

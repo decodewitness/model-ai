@@ -39,6 +39,7 @@
 #include "al/al.cpp"
 #include "system/chk.h"
 #include "lib/data.cpp"
+//#include "simulation.cpp"	// already included in "ai.cpp"
 #include "fetch/curl.cpp"
 #include "lib/testing.cpp"
 #include "system/gradle.h"
@@ -63,10 +64,10 @@
 #include "system/logic/analysis/learn.cpp"
 #include "system/logic/assembly/input.cpp"
 #include "system/definitions/routines.cpp"
+#include "system/modules/simulation/sim.h"	// simulation
 #include "system/logic/account/account.cpp"
 #include "system/logic/analysis/limits.cpp"
 //#include "system/logic/analysis/statx.cpp"	// valid functions already defined in modular_bay.h
-#include "system/modules/simulation/sim.cpp"
 #include "system/modules/combine/combine.cpp"
 // #include "steering/initialize_runcheck.cpp"
 #include "system/logic/analysis/interpret.cpp"
@@ -256,6 +257,7 @@ public:
 	void startSim();
 	void stopSim();
 	void runSim();
+	void sim_stats();
 
 	void addSimEntity(int x, int y, int z, int n=1);
 	void deleteSimEntity(int x);

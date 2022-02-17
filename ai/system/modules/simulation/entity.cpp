@@ -1,3 +1,5 @@
+// AI/SYSTEM/MODULES/SIMULATION/ENTITY.CPP -- USED BY "AI/SYSTEM/MODULES/SIMULATION/SIM.H"
+
 #include <iostream>
 #include <string>
 
@@ -38,7 +40,7 @@ public:
     }
 
     ~Entity() {
-        std::cout << "- {Entity} <" << this->label << "> died." << std::endl;
+        std::cout << std::endl << "- {Entity} " << this->label << " died." << std::endl;
     }
 
     void setName(std::string n) { this->name = n; };

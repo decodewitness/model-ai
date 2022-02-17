@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc44c612c0)
-	- stacking header:(1)::<address>(0x7ffc44c612e0)
-	- stacking header:(2)::<address>(0x7ffc44c61300)
-	- stacking header:(3)::<address>(0x7ffc44c61320)
-	- stacking header:(4)::<address>(0x7ffc44c61340)
-	- stacking header:(5)::<address>(0x7ffc44c61360)
-	- stacking header:(6)::<address>(0x7ffc44c61380)
-	- stacking header:(7)::<address>(0x7ffc44c613a0)
-	- stacking header:(8)::<address>(0x7ffc44c613c0)
-	- stacking header:(9)::<address>(0x7ffc44c613e0)
+	- stacking header:(0)::<address>(0x7ffefd051f40)
+	- stacking header:(1)::<address>(0x7ffefd051f60)
+	- stacking header:(2)::<address>(0x7ffefd051f80)
+	- stacking header:(3)::<address>(0x7ffefd051fa0)
+	- stacking header:(4)::<address>(0x7ffefd051fc0)
+	- stacking header:(5)::<address>(0x7ffefd051fe0)
+	- stacking header:(6)::<address>(0x7ffefd052000)
+	- stacking header:(7)::<address>(0x7ffefd052020)
+	- stacking header:(8)::<address>(0x7ffefd052040)
+	- stacking header:(9)::<address>(0x7ffefd052060)
 
 
 -:: checking AI functions.
@@ -1616,16 +1616,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./DCIM
+block device: -- ./DCIM
 
 ~:: stats() function:
-regular file: -- ./module_bay
+block device: -- ./module_bay
 
 ~:: stats() function:
-regular file: -- ./info.txt
+block device: -- ./info.txt
 
 ~:: stats() function:
-regular file: -- ./downloads
+block device: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1636,9 +1636,9 @@ regular file: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:char len:5 vowels:3 consonants:2 special:0  ]
--:: finished computation.
+	logical type query one
+	[ simple x computation: type:char len:22 vowels:14 consonants:8 special:0  ]
+-:: finished x computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
 
@@ -1649,8 +1649,9 @@ regular file: -- ./downloads
 
 ~:: starting simulation.
 	~:: sim construct()
-		~:: initialized sim.
-	~:: sim running.
+	~:: initializing simulation run.
+		~:: ready | initialized sim.
+	~:: simulation is running.
 
 	~:: adding sim {entity}.
 - (Entity) was created.
@@ -1674,6 +1675,13 @@ regular file: -- ./downloads
 	~:: sim::entering cycle -5-.
 	~:: sim::entering cycle -6-.
 	~:: sim::entering cycle -7-.
+
+- {Object} <empty object> got destroyed.
+	~:: deleted sim {object}(0)
+- {Object}(0) reached mortality.
+
+#1 objects got destroyed.
+
 	~:: sim::entering cycle -8-.
 	~:: sim::entering cycle -9-.
 	~:: sim::entering cycle -10-.
@@ -1685,16 +1693,13 @@ regular file: -- ./downloads
 	~:: sim::entering cycle -16-.
 	~:: sim::entering cycle -17-.
 	~:: sim::entering cycle -18-.
-- {Object} <<empty object>> got destroyed.
-		~:: deleted sim {object}(0)
 
-- {Object}(0) reached mortality.
-- {Entity} <<empty label>> died.
-		~:: deleted sim {entity}(0)
-
+- {Entity} <empty label> died.
+	~:: deleted sim {entity}(0)
 - {Entity}(0) reached mortality.
+
 #1 entities perished.
-#1 objects got destroyed.
+
 	~:: sim::entering cycle -19-.
 	~:: sim::entering cycle -20-.
 	~:: sim::entering cycle -21-.
@@ -1702,6 +1707,17 @@ regular file: -- ./downloads
 	~:: sim::entering cycle -23-.
 	~:: sim::entering cycle -24-.
 	~:: sim::entering cycle -25-.
+40265ns
+
+~:: generating stats ::~
+
+STATISTICS :: SIMULATION RUN:
+-----
+- simulation # cycles: 25
+- number of entities: 1
+- number of objects: 1
+- total time simulation run (nano seconds): 40265 ns.
+
 ~:: deleting simulation.
 
 
