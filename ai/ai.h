@@ -58,7 +58,7 @@
 #include "system/modules/utility.cpp"
 // #include "system/logic/math/tables.h"
 #include "system/modules/modular.cpp"
-#include "language/speech/saying.cpp"
+// #include "language/speech/saying.cpp"
 #include "system/security/security.cpp"
 #include "system/definitions/encoder.cpp"
 #include "system/logic/analysis/learn.cpp"

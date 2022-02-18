@@ -9,7 +9,7 @@
 
 #include <iostream>
 
-void splash(void) {
+void splash(void) {	// used to "splash" Ai logo
 	std::cout << " ** ][][ **" << std::endl << std::endl;
 }
 

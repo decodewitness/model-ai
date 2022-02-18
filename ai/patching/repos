@@ -1,5 +1,7 @@
 #!/bin/bash
 
+### FETCH MODEL-AI REPOS
+
 ### DOWNLOADS ###
 LOGDIR="./ai/log"
 DESTINATION="./ai/patch/dl"

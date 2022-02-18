@@ -36,6 +36,11 @@ sudo apt -y install libcurl4-openssl-dev
 
 echo
 echo "~:(+one time runscript [that deletes its*elf])"
+#!/bin/bash
+
+# // AI/BIN/SCRIPT/APT.SH -- USED BY "MODEL-AI/RUN" (MAIN RUN SCRIPT)
+  # // runs libraries from apt  # // installs libraries
+
 if [ -f "./ai/bin/script/script.sh" ]
   then
   echo

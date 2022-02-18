@@ -57,6 +57,7 @@ public:
 
     void couples(int ic);   // couple interface inside this function
     void controlIC(int ic);
+    void controllerInterface(int ic);
 };
 
 // eof

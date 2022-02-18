@@ -4,25 +4,12 @@
 #include <iostream>
 #include <cstring>
 
-// newline character
-void carry() { std::cout << std::endl; }
-
-// skip a line
+void carry() { std::cout << std::endl; }    // newline character
 void skipline() { std::cout << std::endl << std::endl; }	// 1x "skip()" is the same as two times: "carry(); carry();"
-
-// space
-void space() { std::cout << (32); }
-
-// interpunction
-void dot() { std::cout << "."; }
-
-// comma and space
-void comma() { std::cout << ","; }
-
-// question 
-void question() { std::cout << "?"; }
-
-// exclamation
-void exclaim() { std::cout << "!"; }
+void space() { std::cout << (32); } // space
+void dot() { std::cout << "."; }    // interpunction
+void comma() { std::cout << ","; }  // comma
+void question() { std::cout << "?"; }   // question
+void exclaim() { std::cout << "!"; }    // exclamation point
 
 // eof

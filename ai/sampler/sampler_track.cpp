@@ -53,11 +53,11 @@ public:
         }
     }
 
-    void len(int n=0, int tracknr=1) {
+    void len(int n=0, int tracknr=1) {  // sets track length in variable
         this->trackLength[tracknr] = n;
     }
 
-    void newThread(int trac, int y=2) {
+    void newThread(int trac, int y=2) { // initialize track record
         
         for (int i=0; i<trac; i++) {
             std::cout << "~:: sampler :: ~ :: initializing track [" << (i+1) << "]." << std::endl;
@@ -73,7 +73,7 @@ public:
         std::cout << "\t~:: total initialized tracks [" << (this->total) << "]." << std::endl << std::endl;
     }
 
-    int totalTracks() {
+    int totalTracks() { // returns the total tracks
         int x=0;
     
         for (int i=0; this->initialized[i] == true; i++) {

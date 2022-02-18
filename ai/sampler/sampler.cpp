@@ -20,7 +20,7 @@ private:
     SamplerTrack *samplerTrack;
 
 public:
-    Sampler(int t) {
+    Sampler(int t) {    // Sampler object
         std::cout << "\t-:: starting sampler." << std::endl;
         this->threads = 8;
         std::cout << "\t\t-:: sampling is set to (" << this->threads << ") threads." << std::endl;
@@ -39,7 +39,7 @@ public:
 
     // SamplerTrack samplerTrack;
 
-    void setTo(int n) {
+    void setTo(int n) { // set sampler device mode to: recording, pause, repeat_cycle, or promiscuous
         switch (n) {
             case 0:
                 this->recording=false;
@@ -80,11 +80,11 @@ public:
         };
     }
 
-    void init() {
+    void init() {   // initializes the sampler device
         this->setTo(this->initialize);
     }
 
-    void decouple() {
+    void decouple() {   // decouple device and set modus
         this->setTo(2);
     }
 };

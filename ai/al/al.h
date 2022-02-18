@@ -132,6 +132,11 @@ public:
 	void life();	// artificial habits
 
 	void assess(int n) {	// units to use in the this->live() numbers sequence
+	/*
+	 *	UNITS ARE COMMENTED SO YOU CAN UNCOMMENT THE ONES YOU NEED
+	 *	IN THE IMPLEMENTATION OF THE LOGICAL SEQUENCE IN YOUR NUMBERS.
+	 */
+	
 		// bool grid[quantum*big];
 		// int xt[quantum*big]; // occurrence of time on nr. of pin
 		// int t[quantum*big];	// duration of time

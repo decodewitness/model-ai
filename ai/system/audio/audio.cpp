@@ -10,16 +10,16 @@
  
 #define NUM_WAVEFORMS 17
 
-int nr_wav() {
+int nr_wav() {  // number of wave forms
     int num = NUM_WAVEFORMS;
 return num;
 }
 
-void print_nr_wav() {
+void print_nr_wav() {   // displays the nr of wave files
     std::cout << std::endl << "~:: number of wave forms: (" << nr_wav() << ")." << std::endl;
 }
 
-int play_audio_device(int s=1) {
+int play_audio_device(int s=1) {    // plays s = sample() by number int
     // if (argc != 2)
     // {
     //     fprintf(stderr, "You must enter 1 argument!");
@@ -113,7 +113,7 @@ int play_audio_device(int s=1) {
     return 0;
 }
 
-int play_audio_f(std::string f="0") {
+int play_audio_f(std::string f="0") {   // plays audio file by name string f
      #define NUM_WAVEFORM 1
     const char* _waveFileNames[] = { f.c_str() };
     

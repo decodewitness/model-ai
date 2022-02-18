@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void draw_banking_menu() {
+void draw_banking_menu() {  // draws the banking menu inside of the void AI::query() function
     std::cout << std::endl << std::endl;
     std::cout << "(banking engine) function() : " << std::endl;
     std::cout << "\t( 1) // ai.add_account(1);" << std::endl;

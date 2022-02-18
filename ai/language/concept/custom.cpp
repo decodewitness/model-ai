@@ -2,10 +2,9 @@
 
 #include <string>
 
-
 // assignment
 std::string us[6] = { "I", "me", "you", "we", "us", "they" };
-std::string properyt[10] = { "my", "mine", "your", "yours", "their", "theirs" };
+std::string property[10] = { "my", "mine", "your", "yours", "their", "theirs" };
 
 // appreciation
 std::string thanks[3] = { "thanks", "thank", "thank you" };

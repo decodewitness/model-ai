@@ -11,16 +11,16 @@ private:
 
 public:
     Leaf();
-    void neighbor(int n);
+    void neighbor(int neigh);   // neighbor object
 };
 
-Leaf::Leaf() {
+Leaf::Leaf() {	// constructor for leaf objects
     int neigh=1;
     this->active=true;
     this->neighbor(neigh);
 };
 
-void Leaf::neighbor(int neigh) {
+void Leaf::neighbor(int neigh) {    // neigh=neighbor Leaf  // should return Leaf object
     this->length=1;
     this->neighbours=neigh;
     this->color_variation=1;

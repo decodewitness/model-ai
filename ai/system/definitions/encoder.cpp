@@ -3,7 +3,7 @@
 
 #include <string>
 
-char hexencoder(int dec) {
+char hexencoder(int dec) {  // will convert decimal to hexadecimal
     int hexval=0;
     
     switch (dec) {
@@ -60,7 +60,7 @@ char hexencoder(int dec) {
 return hexval;
 };
 
-int hexdecoder(char *hexcode) {
+int hexdecoder(char *hexcode) { // will create ints from hexadecimal code
     
     int intval=0;
     

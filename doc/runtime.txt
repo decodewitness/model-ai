@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe0ba6a9d0)
-	- stacking header:(1)::<address>(0x7ffe0ba6a9f0)
-	- stacking header:(2)::<address>(0x7ffe0ba6aa10)
-	- stacking header:(3)::<address>(0x7ffe0ba6aa30)
-	- stacking header:(4)::<address>(0x7ffe0ba6aa50)
-	- stacking header:(5)::<address>(0x7ffe0ba6aa70)
-	- stacking header:(6)::<address>(0x7ffe0ba6aa90)
-	- stacking header:(7)::<address>(0x7ffe0ba6aab0)
-	- stacking header:(8)::<address>(0x7ffe0ba6aad0)
-	- stacking header:(9)::<address>(0x7ffe0ba6aaf0)
+	- stacking header:(0)::<address>(0x7ffd7dacc020)
+	- stacking header:(1)::<address>(0x7ffd7dacc040)
+	- stacking header:(2)::<address>(0x7ffd7dacc060)
+	- stacking header:(3)::<address>(0x7ffd7dacc080)
+	- stacking header:(4)::<address>(0x7ffd7dacc0a0)
+	- stacking header:(5)::<address>(0x7ffd7dacc0c0)
+	- stacking header:(6)::<address>(0x7ffd7dacc0e0)
+	- stacking header:(7)::<address>(0x7ffd7dacc100)
+	- stacking header:(8)::<address>(0x7ffd7dacc120)
+	- stacking header:(9)::<address>(0x7ffd7dacc140)
 
 
 -:: checking AI functions.
@@ -1492,8 +1492,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1565,16 +1564,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+socket: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+socket: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+socket: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+socket: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1588,58 +1587,10 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	bank
-	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 
-~:: parameter request: track_account().
- ]
+	transform into logic sequence
+	[ simple x computation: type:[char]: len:29 vowels:19 consonants:10 special:0  ]
 -:: finished x computation.
 
-
-(banking engine) function() : 
-	( 1) // ai.add_account(1);
-	( 2) // ai.subtract_account(10);
-	( 3) // ai.change_account(10);
-	( 4) // ai.printn_account();
-	( 5) // ai.total_account();
-	( 6) // ai.list_positive();
-	( 7) // ai.list_negative();
-	( 8) // ai.average_account();
-	( 9) // ai.transfer(1,200,20.00);
-	(10) // ai.store_accounts_detail();
-	(11) // ai.export_accounts(exp_account);
-	(12) // ai.import_accounts(imp_account);
-
-	(99) QUIT();
-
-:: 
-~:: importing account(s) from: "ai/log/export_account.txt".
-	~:: importing account #: 1
-	~:: valuta amount: 47 EURO
-
-	~:: importing account #: 2
-	~:: valuta amount: 50 EURO
-
-(debug) breaking.
-~:: done.
-
-
-(banking engine) function() : 
-	( 1) // ai.add_account(1);
-	( 2) // ai.subtract_account(10);
-	( 3) // ai.change_account(10);
-	( 4) // ai.printn_account();
-	( 5) // ai.total_account();
-	( 6) // ai.list_positive();
-	( 7) // ai.list_negative();
-	( 8) // ai.average_account();
-	( 9) // ai.transfer(1,200,20.00);
-	(10) // ai.store_accounts_detail();
-	(11) // ai.export_accounts(exp_account);
-	(12) // ai.import_accounts(imp_account);
-
-	(99) QUIT();
-
-:: 
 -:: aborting artificial life sequence, and clean up gracefully!
 
 -:: display ((x)->live())(?x) equaled .

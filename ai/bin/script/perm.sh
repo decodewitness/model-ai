@@ -1,5 +1,7 @@
 #!/bin/bash
 
+### // AI/BIN/SCRIPT/PERM.SH    ### // USED BY "/RUN" (MAIN RUN/COMPILE SCRIPT FOR THE MODEL)
+    ### // THIS SCRIPT SETS PERMISSIONS ON EXECUTABLE SCRIPTS
 chmod +x ai/bin/script/perl.pl
 chmod +x ai/bin/script/script.sh
 chmod +x ai/log/make_readme.sh

@@ -1,0 +1,421 @@
+(MODEL-AI) :: FUNCTIONS/OPTIONS/SCRIPTS/PROGRAMS:
+-----
+
+SCRIPT FOR COMPILING THE MODEL-AI (C/C++) PROGRAM AND RUNNING IT:
+-----
+$ ./run						// runscript which runs and first compiles the model-ai program.
+
+SCRIPTS:	(MODEL-AI)
+-----
+$ ./ai/bin/script/apt.sh	// script runs libraries from apt  # // installs libraries
+$ ./ai/bin/script/script.sh	// script which runs /ai/bin/script/perl.sh
+$ ./ai/bin/script/perl.sh	//    --- PARSING - CGI - SCRIPT ---
+$ ./ai/bin/script/perm.sh	// SCRIPT SETS PERMISSIONS ON EXECUTABLE SCRIPTS
+$ ./ai/log/make_readme.sh	// script that puts together the readme from components.
+$ ./ai/patching/patch		// script that writes the updated model from a (model-ai.tar.gz) cabinet.
+$ ./ai/patching/repos		// script that patches the ai model.
+$ ./ai/patching/restore		// script which reinstalls the model.
+$ ./ai/system/commandos/commandos.sh	// script that compiles the "/ai/bin/commandos" program.
+$ ./ai/system/security/sha1/sha1.sh		// script that compiles the "/ai/bin/sha1" program.
+$ ./ai/virtual/creation/compile_tool	// script that compiles the "/ai/bin/tool" program.
+$ ./ai/virtual/virtual		// script that will assemble the "virtual ai module" (virtual-cd).
+
+PROGRAMS:
+-----
+$ ./ai/bin/tool				// program able to fix execute permissions for all scripts.
+$ ./ai/bin/commandos		// program with no real function yet.
+$ ./ai/bin/comodos			// program with no real function yet.
+$ ./ai/bin/sha1				// program that hashes files.
+$ ./ai/bin/runtime			// model-ai executable program.
+
+FUNCTIONS:	(AI/AI.CPP)
+-----
+void AI::initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
+AI::AI(int n) {	// AI constructor
+void AI::openfs() {	// opens filestream to "ai/bin/TL/tl" file
+void AI::closefs() {	// closes filestream "fs"
+void AI::openrs() {	// opens filestream to "ai/bin/TL/t1"
+void AI::closers() {	// closes filestream "rs"
+void AI::convert(int amount, int method) {	// course converter (INTEGRAL METHOD)
+void AI::convertf(float amount, int method) {	// course converter (FLOATING POINT METHOD)
+void AI::hal() {	// start HAL abstraction layer
+void AI::AMMod() {	// AMModule
+std::string AI::hashtype(std::string s) {	// returns hashes string s
+void AI::run_checks(int args) {	// runs checks on "args"
+void AI::check_functions() {	// checking functions
+void AI::headers() {	// loads the headers which contain modules
+void AI::test(int n=0) { // testing all modules in this function
+void run_checks(int n) {	// displays "running checks" message yet
+void AI::play_audio(int s=1) {	// plays an audio sample (int)(s)
+bool AI::cp(std::string src, std::string dst) {	// copy function
+bool AI::rm(std::string f) {	// remove function for files
+void AI::test_run(int flag=0) {	// simulate a test run
+bool AI::stepping() {	// integrity checking
+void AI::sample() {	// sampling routine
+void check() {	// displays "check" message
+void AI::init() {		// INITIALIZATION
+void AI::appliance() {	// starts the "virtual" script
+void AI::tsp() {	// transponder function
+void AI::decouple() {	// decoupler routine for the ai model
+void AI::destroy_msg() {	// shows "calling destructor" message
+void AI::saygrace() {	// say grace routine
+void AI::query() {	// respond to logical query method
+void AI::killc(int x) {	// basically implies killchain handle
+int AI::curl(std::string f) {	// Curl function
+int AI::links(std::string url, int max) {	// fetches links from URL
+void AI::enforce_security() {	// jumps to security prompt
+void AI::mod() {	// Modular setup method
+void AI::combmod(moduleContainer a, moduleContainer b) {	// combine module
+bool AI::pooling(int x) {	// pooling function
+void AI::auto_patch() {	// auto patch routine
+void AI::rollout(int n) {	// rollout function for several new features
+void AI::constr() {	// creates Construct class instance
+void AI::allocate(Data d) { // allocates new set of Data object to pointer "dd"
+void AI::allocatData(int pipeline, Data d) { // allocates Data to pointer "pipeline" a.k.a. "d1" or "d2"
+void AI::deallocate() {	// deallocates "dd" data object
+void AI::deallocatData(int pipeline) {	// deallocates Data pipeline "d1" or "d2".
+void AI::hdata() {	// data handler
+void AI::hmath() {	// math handler
+void AI::add_account(float x) {	// adds amount x to accounts[]
+void AI::subtract_account(float x) {	// subtracts amount x in accounts[]
+void AI::change_account(int x) {	// changes account_nr in accounts[]
+float AI::get_account() {	// returns current account
+void AI::print_account() {	// prints accounts[] amount
+void AI::printn_account() {	// prints accounts[] amount
+void AI::combine_total() {	// combines total amount across all accounts	// accounts[max_accounts]
+void AI::list_negative() {	// lists negative saldos in account
+void AI::list_positive() {	// lists positive saldi in account
+void AI::store_account() {	// stores accounts to textfile
+void AI::store_accounts_detail() {	// stores detailed account info
+void AI::transfer(int src, int dst, float amount) {	// transfer amount from src to dst account
+int AI::statdir(std::string d) {	// stat directory
+std::string * stackmodule(int x, std::string *ar) {	// stack the module addresses
+
+FUNCTIONS:	(AI/AL/MEM/DISK.H)
+-----
+void create() { // creates forest
+void populate() {   // populate forest  // uses create() to creates forests
+
+FUNCTIONS:	(AI/AL/MEM/FOREST.CPP)
+-----
+Forest::Forest() {  // constructor
+Forest::~Forest() { // destructor
+
+FUNCTIONS:	(AI/AL/MEM/LEAF.CPP)
+-----
+Leaf::Leaf() {	// constructor for leaf objects
+void Leaf::neighbor(int neigh);    // neigh=neighbor Leaf  // should return Leaf object
+
+FUNCTIONS:	(AI/AL/MEM/TREE.CPP)
+-----
+Tree::Tree(std::string label) { // constructor  // uses this->grow()
+Tree::~Tree() { // destructor
+int Tree::increment(int y) {    // function is used for increments of leafs in another function
+void Tree::prune() {    // prunes trees // uses this->increment() to increment leafs
+void Tree::grow() { // grows trees  // uses this->increment() -&- this->prune()
+
+FUNCTIONS:	(AI/AL/AL.CPP)
+-----
+void start_hal() {	// constructs the hal object
+AL::AL() { // AL constructor
+AL::~AL() { // AL destructor
+void AL::kbuild(double i) {	// reserves memory for kbuild
+void AL::life() {	// artificial life habits
+void AL::modifies_behaviour() {	// extend modular behavior
+int AL::live() {	// running numbers sequence	// shephard
+HAL::HAL() {	// HAL constructor
+HAL::~HAL() {	// HAL destructor
+
+
+FUNCTIONS:	(AI/AL/AL.H)
+-----
+void shepard(int n, int i) {	// increments sheep for shepard() function
+int how_many_sheep() { return this->sheep; }	// returns sheep number
+void assess(int n) {	// units to use in the this->live() numbers sequence
+void check(int n) {	// assesses through assess() function
+
+FUNCTIONS:	(AI/AL/SPLASH-AL.H)
+-----
+void splash_al(void) {	// splashes artificial life logo
+
+FUNCTIONS:	(AI/AUTONOMOUS/AUTONOMOUS.CPP)
+-----
+Autonomous::Autonomous(EngineType E) {  // Autonomous class object fitting type engine
+void Autonomous::setControl(int x) {    // control function for artificial robot
+void Autonomous::setEngine(int x) { // set EngineType control functions
+int Autonomous::getEngine() {   // gets this->enginetype
+void Autonomous::setAC() { strncpy(this->acdc, "ac", 2); }; // sets power to AC
+void Autonomous::setDC() { strncpy(this->acdc, "dc", 2); }; // sets power mode to DC
+void Autonomous::setACDC() { strncpy(this->acdc, "ac/dc", 4); };    // sets power mode to AC/DC
+char * Autonomous::getACDC() { return this->acdc; };    // gets power mode (AC/DC)
+void Autonomous::couples(int ic) {   // couples device interface    // if = interfaces used as argument
+void Autonomous::controlIC(int ic) {    // controls interface
+void Autonomous::controllerInterface(int ic) {  // controller type interface handle
+
+FUNCTIONS:	(AI/DATA/HANDLER/FILTER.CPP)
+-----
+void data_filter(std::string dat) {    // filters data expressions to categorize data (later move to filter file)
+
+void math_filter(std::string exp) {    // filters math expressions from input (later move to filter file)
+
+
+FUNCTIONS:	(AI/DATA/HANDLER/HANDLER.CPP)
+-----
+void math_handler() {    // handles math expressions by using "matrix"  // called from math_filter()
+
+void data_handler() {   // handles data expressions // called from data_filter()
+
+FUNCTIONS:	(AI/DATA/HANDLER/READER.CPP)
+-----
+bool Reader::dataIsText() { // returns true or false if data is text
+bool Reader::dataIsMath() { // returns true or false if data is math
+void caller(std::string f) { // f = this->filename
+
+FUNCTIONS:	(AI/DRUM_MACHINE/DRUMS.CPP)
+-----
+DrumMachine::DrumMachine() {    // cycle_###[] are either drum_cycle_one, drum_cycle_two, or drum_cycle_three
+DrumMachine::DrumMachine(int z, int x, int y) { // PARAMS: ((cycle 1 or 2), (cycle #1 measure), (cycle #2 measure))
+void DrumMachine::reverse() {   // reverse the drum cycles in both measures
+void DrumMachine::reverseA() {   // reverse the drum cycles in A track in both measures
+void DrumMachine::reverseB() {   // reverse the drum cycles in B track in both measures
+void filter(int &x) {   // sets reference variable to 0
+void DrumMachine::start() { // starts loop in DrumMachine
+void DrumMachine::reset() { // resets timer in DrumMachine
+void DrumMachine::setStartStatus() {    // adds 1.0 second to this->s1 and this->s2 + startA or startB
+void DrumMachine::setStartA() { // sets start 1 (this->s1)
+void DrumMachine::setStartB() { // sets start 2 (this->s2)
+void DrumMachine::setStartAB() {    // set start A+B as the same
+void DrumMachine::setIntervalA() {  // sets intervalA
+void DrumMachine::setIntervalB() {  // sets intervalB
+void DrumMachine::status() {    // broadcast DrumMachine status message
+
+FUNCTIONS:	(AI/ENTROPY/B33HIV3.H)
+-----
+int entropyr() {  // read entropy from T1
+int entropyw(std::string s) {  // write entropy in TL
+	// adaptable functions title panel
+void lt1tlt1() { std::cout << "holy"; }
+void t1tl() { std::cout << "tapltc"; }
+void tl() { std::cout << "ltct"; }
+int t1() { std::cout << "tapish"; return 1; }
+	// adaptable functions trousers
+void lt1tlt1(int t) { std::cout << "tap"; }
+void tlt1(int t) { std::cout << "tap"; }
+int t1(int t) { std::cout << "tap"; return 2; }
+int tl(char x) { std::cout << "ltct"; return 3;}
+void fcltaptaptap() {
+	// adaptable functions shoe
+void run() {    // runs adaptable functions in sequence
+void addData() {    // right now sets main_extrapolation_data percentage
+
+
+FUNCTIONS:	(AI/FETCH/CURL.CPP)
+-----
+static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp) {   // callback function
+int do_curl(std::string my_url) {   // does the curl function
+int fetch_link(std::string &my_url, int max_links)  // fetches links
+
+FUNCTIONS:	(AI/LANGUAGE/CONCEPT/DICTIONARY.CPP)
+-----
+void sayHello() { std::cout << "Hi."; }  // says "Hi"
+void sayGoodbye() { std::cout << "Goodbye."; }   // says "Goodbye"
+void askComfy() { std::cout << "How are you?"; } // asks "How are you"
+
+FUNCTIONS:	(AI/LIB/DATABASE/DB.CPP)								//		///////	NOT USED YET	////////
+-----
+DB::DB() {  // database constructor
+void DB::setrow(int x) {    // sets a row to a size
+void DB::setcolumn(int x) {    // sets a column to a size
+int DB::getrow() {  // gets row size
+int DB::getcolumn() {  // gets column size
+void DB::setrc1_x(int x) {  // sets this->vector_rc_1[0]
+void DB::setrc1_y(int x) {  // sets this->vector_rc_1[1]
+void DB::setrc2_x(int x) {  // sets this->vector_rc_2[0]
+void DB::setrc2_y(int x) {  // sets this->vector_rc_2[1]
+int DB::getrc1_x() {    // gets this->vector_rc_1[0]
+int DB::getrc1_y() {    // gets this->vector_rc_1[1]
+int DB::getrc2_x() {    // gets this->vector_rc_2[0]
+int DB::getrc2_y() {    // gets this->vector_rc_2[1]
+void DB::set_al(std::string s) {    // assigns label s to this->assign_label
+std::string DB::get_al() {  // gets the assigned label of this->assign_label
+void DB::set_xy(int x, int y){  // sets all "xy" variables
+void DB::prep_xy() {    // sets this->xy[2] to [0]row + [1]column
+
+FUNCTIONS:	(AI/LIB/DATABASE/CONSTRUCT.CPP)
+-----
+Construct() {   // constructor
+void preprocess() { // function opens the directives file and assigns a main file for data assimilation purposes
+
+void process(std::string filen, int sizedn) {   // processes file "std::string filen"
+
+FUNCTIONS:	(AI/LIB/DATABASE/DATA.CPP)
+-----
+Data() { this->count=0; };  // constructor  // initializes with count as 0
+Data(std::string s) {   // constructor  // initializes with a string s
+int getpref() { return this->pref; }  // referred index
+void setpref(int x) { this->pref=x; } // set referred index
+int getwrdpref() { return this->wrdpref; }    // word index
+void setwrdpref(int x) { this->wrdpref=x; }   // set word index
+void set(std::string s) {   // sets mystrings.at(this->total-1) to string s
+std::string get() { // gets this->mystrings.at(this->wrdpref)
+std::string last() {    // gets the word from the last index
+
+FUNCTIONS:	(AI/LIB/TEST.CPP)
+-----
+bool testing1() { return true; } // before start
+bool testing2() { return true; };	// initialize threads or load modules
+bool testing3() { return true; }; // next start / optimize
+
+FUNCTIONS:	(AI/MATRIX/AI_MATRIX.CPP)
+-----
+AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)	// holds decimal_A, decimal_B, decimal_C
+
+FUNCTIONS:	(AI/MATRIX/AI_MATRIX.H)
+-----
+AI_Matrix(int x=1, int y=1, int z=1) {};    // constructor
+
+FUNCTIONS:	(AI/PATCHING/PATCH.CPP)
+-----
+void patch_module() {   // used to patch from repository
+
+FUNCTIONS:	(AI/SAMPLER/SAMPLER_TRACK.CPP)
+-----
+SamplerTrack(int trInTr=2, double tl=1.00, int t=1) { // t should at least be 1; trInTr should be equal or higher than "t=1"
+void len(int n=0, int tracknr=1) {  // sets track length in variable
+void newThread(int trac, int y=2) { // initialize track record
+int totalTracks() { // returns the total tracks
+
+FUNCTIONS:	(AI/SAMPLER/SAMPLER.CPP)
+-----
+Sampler(int t) {    // Sampler object
+void setTo(int n) { // set sampler device mode to: recording, pause, repeat_cycle, or promiscuous
+void init() {   // initializes the sampler device
+void decouple() {   // decouple device and set modus
+
+FUNCTIONS:	(AI/STEERING/SPLASH.H)
+-----
+void splash(void) {	// used to "splash" Ai logo
+
+FUNCTIONS:	(AI/STEERING/STEERING.CPP)
+-----
+int steering(int arc) {	// used as main function for the driver of the Model-Ai and spin the program cycle (encapsulation).
+
+FUNCTIONS:	(AI/SYSTEM/AUDIO/AUDIO.CPP)
+-----
+int nr_wav() {  // number of wave forms
+void print_nr_wav() {   // displays the nr of wave files
+int play_audio_device(int s=1) {    // plays s = sample() by number int
+int play_audio_f(std::string f="0") {   // plays audio file by name string f
+
+FUNCTIONS:	(AI/SYSTEM/DEFINITIONS/ENCODER.CPP)
+-----
+char hexencoder(int dec) {  // will convert decimal to hexadecimal
+int hexdecoder(char *hexcode) { // will create ints from hexadecimal code
+
+
+
+FUNCTIONS:	(AI/SYSTEM/DEFINITIONS/ROUTINES.CPP)
+-----
+void carry() { std::cout << std::endl; }    // newline character
+void skipline() { std::cout << std::endl << std::endl; }	// 1x "skip()" is the same as two times: "carry(); carry();"
+void space() { std::cout << (32); } // space
+void dot() { std::cout << "."; }    // interpunction
+void comma() { std::cout << ","; }  // comma
+void question() { std::cout << "?"; }   // question
+void exclaim() { std::cout << "!"; }    // exclamation point
+
+FUNCTIONS:	(AI/SYSTEM/LOGIC/ACCOUNT/ACCOUNT.CPP)
+-----
+Track_Account::Track_Account() {    // initializes and sets account nr to 1
+void Track_Account::add(float x) {  // add money to account
+void Track_Account::subtract(float x) { // substract money from account
+int Track_Account::getAccount() { // returns account number (account_nr)
+void Track_Account::setAccount(int x) { // sets account number (account_nr)
+void Track_Account::print() {   // prints balance without line break '\n'
+void Track_Account::printn() {  // prints balance receipt with additional information
+void Track_Account::combined_total() {  // calculates the total across all accounts
+void Track_Account::list_positives() {  // lists all positive saldo accounts
+void Track_Account::list_negatives() {  // lists all negative sali accounts
+void Track_Account::transfer_account(int src, int dst, float amount) {  // transfer amount from account // src - dst - amount
+void Track_Account::store_accounts() {  // stores accounts to "ai/log/account-information.txt" 
+void Track_Account::store_accounts_details() {  // stores detail in accounts to "void Track_Account::store_accounts() {  // stores accounts to "ai/log/account-information.txt" 
+void Track_Account::export_accounts(std::string filen) {    // export all accounts to a file
+void Track_Account::import_accounts(std::string filen) {    // imports accounts from a file
+void Track_Account::average() { // calculates the average over all accounts
+void Track_Account::total() {   // calculates total amount over accounts
+
+FUNCTIONS:	(AI/SYSTEM/LOGIC/ACCOUNT/BANKING.H)
+-----
+void draw_banking_menu() {  // draws the banking menu inside of the void AI::query() function
+
+FUNCTIONS:	(AI/LOGIC/ANALYSIS/ALGORITHMS.CPP)
+
+>>>>
+	>>>>
+		>>>>
+			>>>>
+
+
+FUNCTIONS / STRUCT:	(AI/SYSTEM/DEFINITIONS/SHAPES/CIRCLE.H)
+-----
+void float_degrees() {  // used to initialize the readings on all the 360 degrees into a maximum of 2.00, and minus of 0.00, with 1.0 = nominal
+void geometry_in_circle() { // still empty
+float golden_ratio() {  // gives golden ratio in return
+
+STANDALONE C++ FILES:
+-----
+ai/system/commandos/commandos.cpp
+ai/system/commandos/comodos.cpp
+
+FILES FOR USE BY BUILD MODEL IN THE RUNTIME:
+-----
+ai/lib/queries/meta_queries					// stores meta_queries here from Transponder->(func)()
+
+SAMPLE FILES WITH AUDIO:
+-----
+ai/system/audio/samples/chirp.wav
+ai/system/audio/samples/clfuh.wav
+ai/system/audio/samples/clong.wav
+ai/system/audio/samples/clug_clug.wav
+ai/system/audio/samples/fix.wav
+ai/system/audio/samples/flir.wav
+ai/system/audio/samples/gorge.wav
+ai/system/audio/samples/krggg_krg_krg.wav
+ai/system/audio/samples/krggg.wav
+ai/system/audio/samples/tab.wav
+ai/system/audio/samples/taptaptap.wav
+ai/system/audio/samples/teep.wav
+ai/system/audio/samples/teep2.wav
+ai/system/audio/samples/thungs.wav
+ai/system/audio/samples/vwoof.wav
+ai/system/audio/samples/vworge.wav
+ai/system/audio/samples/vworng.wav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

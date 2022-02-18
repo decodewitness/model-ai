@@ -23,7 +23,7 @@ struct Circle {
     float center[3] = { 0.00, 0.00, 0.00 };	// x,y,z coordinates
     float diameter_measure = 2.0 * radius;	        // (unit) measures
     float integral_number_of_geometry_on_all_sides = 6.66 * 6.66 * 6.66; // total measures of the spherical object
-    void geometry_in_circle() {
+    void geometry_in_circle() { // still empty
 
     }
 
@@ -54,7 +54,7 @@ struct Circle {
     float dotsize[coefficients] = { 1.00 };       // size of points for tiny measures
 
     // (1 + Square root of√5)/2     // exponentiation
-    float golden_ratio() {
+    float golden_ratio() {  // gives golden ratio in return
         float ratios = 1.00 + (5.00 / (5.00*5.00/2.00));
     return ratios;
     };// (1 + Square root of√5)/2     // exponentiation 

@@ -7,7 +7,7 @@
 
 const int max_cabinets = 1024;
 
-void patch_module() {
+void patch_module() {   // used to patch from repository
 
     std::string ARCHIVE_LIST  = "./ai/patching/files/archives_list.csv";
     std::string REPOSITORY = "https://model-ai.com/archive";

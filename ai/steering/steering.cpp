@@ -37,7 +37,7 @@ using namespace std;
 bool logging_is_enabled = true;
 
 // main function
-int steering(int arc) {
+int steering(int arc) {	// used as main function for the driver of the Model-Ai and spin the program cycle (encapsulation).
 	// initialize_runtime_check();
 
 	//int loopvar=0; 	// use loopvar in recounting xl[1024]

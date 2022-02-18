@@ -2,7 +2,7 @@
 
 #include "autonomous.h"
 
-Autonomous::Autonomous(EngineType E) {
+Autonomous::Autonomous(EngineType E) {  // Autonomous class object  fitting type engine
     this->powerState = 0;
     this->powerCycle = 0;
 };
@@ -240,8 +240,12 @@ void Autonomous::couples(int ic) {   // couples device interface    // if = inte
 
 };
 
-void controlIC(int ic) {    // controls interface
+void Autonomous::controlIC(int ic) {    // controls interface
     
+};
+
+void Autonomous::controllerInterface(int ic) {  // controller type interface handle
+
 };
 
 // eof

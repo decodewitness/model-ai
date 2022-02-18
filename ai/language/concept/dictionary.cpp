@@ -1,6 +1,13 @@
 // DICTIONARY.CPP - USED BY "CONCEPTS.CPP" FOR MODEL AI
 // DICTIONARY WITH VOCABULARY FOR YOUR AI MODEL
+
+#include <iostream>
 #include <string>
+
+// greetings
+void sayHello() { std::cout << "Hi."; }  // says "Hi"
+void sayGoodbye() { std::cout << "Goodbye."; }   // says "Goodbye"
+void askComfy() { std::cout << "How are you?"; } // asks "How are you"
 
 // measures arrays
 const int minlength = 48;
