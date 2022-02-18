@@ -84,6 +84,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("curl") == false) {
         std::cout << std::endl << "~:: parameter request: curl()." << std::endl;
         isCurl = true;   // triggers rollout function in AI/AI.CPP
+    } else if (str.compare("bank") == false) {
+        std::cout << std::endl << "~:: parameter request: track_account()." << std::endl;
+        isBank = true;   // triggers rollout function in AI/AI.CPP
     }
 };
 

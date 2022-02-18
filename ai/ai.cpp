@@ -733,7 +733,8 @@ void AI::query() {	// respond to logical query method
 	
 	double x;	// used to compute logic
 	std::string y;	// used to compute strings
-	
+	int z, zz;
+
 	// QUERY
 	std::cout << std::endl << "::- type your query  -::" << std::endl;
 	
@@ -798,23 +799,105 @@ void AI::query() {	// respond to logical query method
 		cin >> y;
 		this->curl(y);
 		isCurl = false;
+	} else if (isBank == true) {	// hash function
+
+		for (int i=0; isBank==true ; i++) {
+			
+			std::cout << std::endl << std::endl;
+			std::cout << "(banking engine) function() : " << std::endl;
+			std::cout << "\t( 1) // ai.add_account(1);" << std::endl;
+			std::cout << "\t( 2) // ai.subtract_account(10);" << std::endl;
+			std::cout << "\t( 3) // ai.change_account(10);" << std::endl;
+			std::cout << "\t( 4) // ai.printn_account();" << std::endl;
+			std::cout << "\t( 5) // ai.total_account();" << std::endl;
+			std::cout << "\t( 6) // ai.list_positive();" << std::endl;
+			std::cout << "\t( 7) // ai.list_negative();" << std::endl;
+			std::cout << "\t( 8) // ai.average_account();" << std::endl;
+			std::cout << "\t( 9) // ai.transfer(1,200,20.00);" << std::endl;
+			std::cout << "\t(10) // ai.store_accounts_detail();" << std::endl;
+			std::cout << "\t(11) // ai.export_accounts(exp_account);" << std::endl;
+			std::cout << "\t(12) // ai.import_accounts(imp_account);" << std::endl;
+			std::cout << std::endl;
+			std::cout << "\t(99) QUIT();" << std::endl;
+
+			std::cout << std::endl << ":: ";
+			cin >> z;
+			
+			switch (z) {
+				case 1:
+					std::cout << "(amount) : ";
+					cin >> x;
+					// ai.add_account(1);
+					this->add_account(x);
+					break;
+				case 2:
+				// ai.subtract_account(10);
+					std::cout << "(amount) : ";
+					cin >> x;
+					this->subtract_account(x);
+					break;
+				case 3:
+				// ai.change_account(10);
+					std::cout << "(change to account) #: ";
+					cin >> z;
+					this->change_account(z);
+					break;
+				case 4:
+				// ai.printn_account();
+					// ai.print_account();
+					this->printn_account();
+					break;
+				case 5:
+				// ai.total_account();
+					// ai.combine_total();
+					this->total_account();
+					break;
+				case 6:
+				// ai.list_positive();
+					this->list_positive();
+					break;
+				case 7:
+				// ai.list_negative();
+					this->list_negative();
+					break;
+				case 8:
+				// ai.average_account();
+					this->average_account();
+					break;
+				case 9:
+				// ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
+					std::cout << "(source account) :# ";
+					cin >> z;
+					std::cout << "(target account) :# ";
+					cin >> zz;
+					std::cout << "(amount):# ";
+					cin >> x;
+					this->transfer(z,zz,x);
+					break;
+				case 10:
+				// ai.store_accounts_detail();
+					this->store_accounts_detail();
+					break;
+				case 11:
+				// ai.export_accounts(exp_account);
+					this->export_accounts(exp_account);
+					break;
+				case 12:
+				// ai.import_accounts(imp_account);
+					this->import_accounts(imp_account);
+					break;
+				
+				case 99:
+					isBank = false;
+					break;
+
+				default:
+					std::cout << std::endl << "-( )skipped user input)." << std::endl;
+					break;
+			};
+		}
 	}
 
-	// ai.change_account(10);
-	// ai.add_account(1);
-	// ai.subtract_account(10);
-	// ai.print_account();
-	// ai.printn_account();
-	// ai.combine_total();
-	// ai.list_positive();
-	// ai.list_negative();
-	// ai.total_account();
-	// ai.average_account();
-	// ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
-	// ai.store_accounts_detail();
-	// ai.export_accounts(exp_account);
-	// ai.import_accounts(imp_account);
-	
 	//ai.table(6);
 	//ai.tableTo(6, 20);
 

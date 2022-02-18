@@ -17,3 +17,4 @@ bool isKill=false;
 bool isStepping=false;
 bool isRollout=false;
 bool isCurl=false;
+bool isBank=false;

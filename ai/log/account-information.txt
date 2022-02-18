@@ -1,4 +1,6 @@
 valuta type: (#1) --> EURO
 
 account: (1)
-- balance: EUR 46.32 EURO
+- balance: EUR 47 EURO
+account: (2)
+- balance: EUR 50 EURO
