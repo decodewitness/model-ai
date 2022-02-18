@@ -1,4 +1,4 @@
-// (inside AI directory) AI/LOGIC/ALGORITHMS.CPP - USED BY "AI/AI.H" FOR THE MODEL AI
+// (inside AI directory) AI/LOGIC/ANALYSIS/ALGORITHMS.CPP - USED BY "AI/AI.H" FOR THE MODEL AI
 
 #include <cmath>
 #include <algorithm>

@@ -9,7 +9,7 @@
 
 #include "account.h"
 
-Track_Account::Track_Account() {
+Track_Account::Track_Account() {    // initializes and sets account nr to 1
     this->account_nr = 1;   // sets account number (account_nr)
     coin_no = 1;    // changes valuta { 1=dollar; 2=euro; 3=yen; 4=canadian dollar; 5=kroons; }
 
@@ -67,7 +67,7 @@ void Track_Account::combined_total() {  // calculates the total across all accou
     std::cout << sum << ")" << std::endl << std::endl;
 };
 
-void Track_Account::list_positives() {
+void Track_Account::list_positives() {  // lists all positive saldo accounts
 
     std::cout << "- accounts with a positive balance:" << std::endl;
     std::cout << std::endl;
@@ -79,7 +79,7 @@ void Track_Account::list_positives() {
     }
 };
 
-void Track_Account::list_negatives() {
+void Track_Account::list_negatives() {  // lists all negative sali accounts
 
     std::cout << "- accounts with a negative balance:" << std::endl;
     std::cout << std::endl;
@@ -91,7 +91,7 @@ void Track_Account::list_negatives() {
     }
 };
 
-void Track_Account::transfer_account(int src, int dst, float amount) {
+void Track_Account::transfer_account(int src, int dst, float amount) {  // transfer amount from account // src - dst - amount
     
     bool logging=false;
 
@@ -141,7 +141,7 @@ void Track_Account::transfer_account(int src, int dst, float amount) {
     }
 };
 
-void Track_Account::store_accounts() {
+void Track_Account::store_accounts() {  // stores accounts to "ai/log/account-information.txt" 
     
     std::ofstream fs;
     //std::string filen = "accounts.txt";
@@ -168,7 +168,7 @@ void Track_Account::store_accounts() {
     }
 };
 
-void Track_Account::store_accounts_details() {
+void Track_Account::store_accounts_details() {  // stores detail in accounts to "void Track_Account::store_accounts() {  // stores accounts to "ai/log/account-information.txt" 
     
     std::ofstream fs;
     // std::string filen = "accounts.txt";
@@ -200,7 +200,7 @@ void Track_Account::store_accounts_details() {
     sleep(1);
 };
 
-void Track_Account::export_accounts(std::string filen) {
+void Track_Account::export_accounts(std::string filen) {    // export all accounts to a file
     
     std::ofstream fs;
     //std::string filen = "accounts.txt";
@@ -245,7 +245,7 @@ void Track_Account::export_accounts(std::string filen) {
 };
 
 // needs fixing
-void Track_Account::import_accounts(std::string filen) {
+void Track_Account::import_accounts(std::string filen) {    // imports accounts from a file
 
     int c,x;
     float f;
@@ -286,7 +286,7 @@ void Track_Account::import_accounts(std::string filen) {
     }
 };
 
-void Track_Account::average() {
+void Track_Account::average() { // calculates the average over all accounts
 
     float average;
     float total=0.00;
@@ -306,7 +306,7 @@ void Track_Account::average() {
     std::cout << "    accounts average: " << coin[coin_no] << " " << average << " over " << counter << " accounts." << std::endl;
 }
 
-void Track_Account::total() {
+void Track_Account::total() {   // calculates total amount over accounts
 
     float total=0.00;
     int counter=0;
