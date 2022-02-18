@@ -8,3 +8,12 @@
 
 const int yy = 3;
 const int logic = yy;
+
+bool isSim=false;
+bool isConvert=false;
+bool isConvertUSD=false;
+bool isHash=false;
+bool isKill=false;
+bool isStepping=false;
+bool isRollout=false;
+bool isCurl=false;

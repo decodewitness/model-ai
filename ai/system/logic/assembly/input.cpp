@@ -16,7 +16,6 @@ void logicalQuery(std::string &x) {
     // ========= DEFAULT TO NO LOGIC =========
 
     switch (y) {
-
         case 0: // no logic
             break;
 

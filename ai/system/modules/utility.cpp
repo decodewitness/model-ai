@@ -12,7 +12,9 @@ float converter(float x, int mode=1) {
 
     // course exchange
     if (mode == 1) {
-        return x * denominator; // EURO x COURSE DOLLAR
+        return x * denominator; // EURO -> COURSE DOLLAR
+    } else if (mode == 2) {
+        return x / denominator; // DOLLAR -> EURO
     }
 
      // measure

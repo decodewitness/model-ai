@@ -53,7 +53,7 @@ LOGGED OUTPUT OF THIS BETA:
 
 ARG: testing,1,2,1,2,
 
- ** ][][ **
+~:: how many queries to run? :  ** ][][ **
 
 ~:: security routine
 ENTER PASSCODE: 
@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffefd051f40)
-	- stacking header:(1)::<address>(0x7ffefd051f60)
-	- stacking header:(2)::<address>(0x7ffefd051f80)
-	- stacking header:(3)::<address>(0x7ffefd051fa0)
-	- stacking header:(4)::<address>(0x7ffefd051fc0)
-	- stacking header:(5)::<address>(0x7ffefd051fe0)
-	- stacking header:(6)::<address>(0x7ffefd052000)
-	- stacking header:(7)::<address>(0x7ffefd052020)
-	- stacking header:(8)::<address>(0x7ffefd052040)
-	- stacking header:(9)::<address>(0x7ffefd052060)
+	- stacking header:(0)::<address>(0x7fff9ef8aaf0)
+	- stacking header:(1)::<address>(0x7fff9ef8ab10)
+	- stacking header:(2)::<address>(0x7fff9ef8ab30)
+	- stacking header:(3)::<address>(0x7fff9ef8ab50)
+	- stacking header:(4)::<address>(0x7fff9ef8ab70)
+	- stacking header:(5)::<address>(0x7fff9ef8ab90)
+	- stacking header:(6)::<address>(0x7fff9ef8abb0)
+	- stacking header:(7)::<address>(0x7fff9ef8abd0)
+	- stacking header:(8)::<address>(0x7fff9ef8abf0)
+	- stacking header:(9)::<address>(0x7fff9ef8ac10)
 
 
 -:: checking AI functions.
@@ -1544,7 +1544,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1616,19 +1617,22 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./DCIM
+symlink: -- ./DCIM
 
 ~:: stats() function:
-block device: -- ./module_bay
+symlink: -- ./module_bay
 
 ~:: stats() function:
-block device: -- ./info.txt
+symlink: -- ./info.txt
 
 ~:: stats() function:
-block device: -- ./downloads
+symlink: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
+
+
+~:: running (2) queries.
 
 
 ::- type your query  -::
@@ -1636,9 +1640,309 @@ block device: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logical type query one
-	[ simple x computation: type:char len:22 vowels:14 consonants:8 special:0  ]
+	stepping
+	[ simple x computation: type:[char]: len:8 vowels:6 consonants:2 special:0 
+~:: parameter request: stepping_engine().
+ ]
 -:: finished x computation.
+
+(stepping engine) function() : 
+
+-:: check integrity / logical step counter.
+
+-:: (logical step #1) max pool elements: 10 :: pooling: 0 elements.
+		~:: pooling: reserve 1.
+		(pool) (1)
+	~:: (percentage): (%): 10% +/+)
+		:(minus percentage): (-DEG.): 0.9 in degrees :.
+
+ -:: step: 1 complete. (100%) / (1/10)
+
+-:: (logical step #2) max pool elements: 10 :: pooling: 1 elements.
+		~:: pooling: reserve 1.
+		(pool) (2)
+		~:: pooling: reserve 2.
+		(pool) (3)
+	~:: (percentage): (%): 20% +/+)
+		:(minus percentage): (-DEG.): 0.8 in degrees :.
+
+ -:: step: 2 complete. (100%) / (2/10)
+
+-:: (logical step #3) max pool elements: 10 :: pooling: 2 elements.
+		~:: pooling: reserve 1.
+		(pool) (4)
+		~:: pooling: reserve 2.
+		(pool) (5)
+		~:: pooling: reserve 3.
+		(pool) (6)
+	~:: (percentage): (%): 30% +/+)
+		:(minus percentage): (-DEG.): 0.7 in degrees :.
+
+ -:: step: 3 complete. (100%) / (3/10)
+
+-:: (logical step #4) max pool elements: 10 :: pooling: 3 elements.
+		~:: pooling: reserve 1.
+		(pool) (7)
+		~:: pooling: reserve 2.
+		(pool) (8)
+		~:: pooling: reserve 3.
+		(pool) (9)
+		~:: pooling: reserve 4.
+		(pool) (10)
+	~:: (percentage): (%): 40% +/+)
+		:(minus percentage): (-DEG.): 0.6 in degrees :.
+
+ -:: step: 4 complete. (100%) / (4/10)
+
+-:: (logical step #5) max pool elements: 10 :: pooling: 4 elements.
+		~:: pooling: reserve 1.
+		(pool) (11)
+		~:: pooling: reserve 2.
+		(pool) (12)
+		~:: pooling: reserve 3.
+		(pool) (13)
+		~:: pooling: reserve 4.
+		(pool) (14)
+		~:: pooling: reserve 5.
+		(pool) (15)
+	~:: (percentage): (%): 50% +/+)
+		:(minus percentage): (-DEG.): 0.5 in degrees :.
+
+ -:: step: 5 complete. (100%) / (5/10)
+
+-:: (logical step #6) max pool elements: 10 :: pooling: 5 elements.
+		~:: pooling: reserve 1.
+		(pool) (16)
+		~:: pooling: reserve 2.
+		(pool) (17)
+		~:: pooling: reserve 3.
+		(pool) (18)
+		~:: pooling: reserve 4.
+		(pool) (19)
+		~:: pooling: reserve 5.
+		(pool) (20)
+		~:: pooling: reserve 6.
+		(pool) (21)
+	~:: (percentage): (%): 60% +/+)
+		:(minus percentage): (-DEG.): 0.4 in degrees :.
+
+ -:: step: 6 complete. (100%) / (6/10)
+
+-:: (logical step #7) max pool elements: 10 :: pooling: 6 elements.
+		~:: pooling: reserve 1.
+		(pool) (22)
+		~:: pooling: reserve 2.
+		(pool) (23)
+		~:: pooling: reserve 3.
+		(pool) (24)
+		~:: pooling: reserve 4.
+		(pool) (25)
+		~:: pooling: reserve 5.
+		(pool) (26)
+		~:: pooling: reserve 6.
+		(pool) (27)
+		~:: pooling: reserve 7.
+		(pool) (28)
+	~:: (percentage): (%): 70% +/+)
+		:(minus percentage): (-DEG.): 0.3 in degrees :.
+
+ -:: step: 7 complete. (100%) / (7/10)
+
+-:: (logical step #8) max pool elements: 10 :: pooling: 7 elements.
+		~:: pooling: reserve 1.
+		(pool) (29)
+		~:: pooling: reserve 2.
+		(pool) (30)
+		~:: pooling: reserve 3.
+		(pool) (31)
+		~:: pooling: reserve 4.
+		(pool) (32)
+		~:: pooling: reserve 5.
+		(pool) (33)
+		~:: pooling: reserve 6.
+		(pool) (34)
+		~:: pooling: reserve 7.
+		(pool) (35)
+		~:: pooling: reserve 8.
+		(pool) (36)
+	~:: (percentage): (%): 80% +/+)
+		:(minus percentage): (-DEG.): 0.2 in degrees :.
+
+ -:: step: 8 complete. (100%) / (8/10)
+
+-:: (logical step #9) max pool elements: 10 :: pooling: 8 elements.
+		~:: pooling: reserve 1.
+		(pool) (37)
+		~:: pooling: reserve 2.
+		(pool) (38)
+		~:: pooling: reserve 3.
+		(pool) (39)
+		~:: pooling: reserve 4.
+		(pool) (40)
+		~:: pooling: reserve 5.
+		(pool) (41)
+		~:: pooling: reserve 6.
+		(pool) (42)
+		~:: pooling: reserve 7.
+		(pool) (43)
+		~:: pooling: reserve 8.
+		(pool) (44)
+		~:: pooling: reserve 9.
+		(pool) (45)
+	~:: (percentage): (%): 90% +/+)
+		:(minus percentage): (-DEG.): 0.1 in degrees :.
+
+ -:: step: 9 complete. (100%) / (9/10)
+
+-:: (logical step #10) max pool elements: 10 :: pooling: 9 elements.
+		~:: pooling: reserve 1.
+		(pool) (46)
+		~:: pooling: reserve 2.
+		(pool) (47)
+		~:: pooling: reserve 3.
+		(pool) (48)
+		~:: pooling: reserve 4.
+		(pool) (49)
+		~:: pooling: reserve 5.
+		(pool) (50)
+		~:: pooling: reserve 6.
+		(pool) (51)
+		~:: pooling: reserve 7.
+		(pool) (52)
+		~:: pooling: reserve 8.
+		(pool) (53)
+		~:: pooling: reserve 9.
+		(pool) (54)
+		~:: pooling: reserve 10.
+		(pool) (55)
+	~:: (percentage): (%): 100% +/+)
+		:(minus percentage): (-DEG.): 0 in degrees :.
+
+ -:: step: 10 complete. (100%) / (10/10)
+
+	-:: steps completed: 10
+
+~:: running (2) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	curl
+	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 
+~:: parameter request: curl().
+ ]
+-:: finished x computation.
+
+(curl engine) function() : 
+********* CURLING **********
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+<!DOCTYPE html>
+<head>
+<title>MODEL-AI.COM |Artificial Intelligence</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;700&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- Stylesheet -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="whitebluebg paddedl">
+  <h1 class="zeromargin">MODEL-AI.com |</h1>
+  <h1>Artificial Intelligence Systems</h1>
+  <h3 class="zeromargin">Your Artificial Intelligence</h3>
+</div>
+
+<sub>website last updated: 23:05PM 16/02/2022</sub>
+
+<hr />
+
+
+<nav>
+  <a class="btn btn-lg btn-primary" href="/decodewitness">Decodewitness</a>  <a class="btn btn-lg btn-primary" href="/documentation">Documentation</a> <a class="btn btn-lg btn-primary" href="/downloads">Downloads</a> <a class="btn btn-lg btn-primary" href="https://modelaidev.wordpress.com/" target="_blank">Portfolio</a>
+</nav>
+<hr />
+<div>
+  <p>Welcome to the <a class="hov" href="/"><strong>Model-Ai.com</strong></a> website, our AI hub.</p>
+  <p class="nomargbot"><strong>Shape intelligence different</strong></p>
+</div>
+<div class="paddedl">
+  <img class="margeb" src="images/ai_chip.png" height="28" width="28" alt="ai chip" />
+</div>
+<div class="paddedl">
+  <a href="/downloads"><img class="rounder" src="images/Model-Ai.png" height="355" width="355" alt="MODEL-AI Logo" /></a>
+</div>
+<div class="padded1">
+  <hr />
+</div>
+<div class="padded1">
+    <p>
+      At <strong>Model-Ai</strong> we are trying to build an <strong>artificial intelligence</strong> which is tailored to your needs.
+      </p>
+    <p>
+      It will carry audio support, a model for a simulation, math functions, and natural speech, among other things.<br />
+      We have started on this mission in last year's November in 2021.<br />
+      So, we are still building the preliminary model fitted by our needs.
+      </p>
+    <p>
+      You can <strong>register your e-mail address</strong> with <strong>Model-Ai</strong>, under this heading on this page, if you want to be kept up-to-date about the model's status,<br />
+      or if you would like to receive news regarding out Ai model <strong>(Model-Ai)</strong>.
+      </p>
+</div>
+<div class="paddedl">
+  <hr />
+</div>
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://model-ai.us14.list-manage.com/subscribe/post?u=868ab24019f49cb67c9b6d0ad&amp;id=b186a43da8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_868ab24019f49cb67c9b6d0ad_b186a43da8" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" value="Subscribe" name="subscribe" class="btn btn-lg btn-primary" id="mc-embedded-subscribe" class="button">
+                <p class="brandingLogo"><a href="http://eepurl.com/hUU_rf" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+
+<hr />
+
+<footer>
+  <p>
+    <strong><a href="https://model-ai.com">Model-Ai</a>&copy;</strong>
+    <br />
+    Copyright(&copy;)(2021);
+    <br />
+    <strong>All Rights Have Been Reserved(&copy;)(2021)</strong>
+  </p>
+</footer>
+</body>
+</html>
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+~:: file stored at : "bay/downloads/page.html".
+-:: curl succeeded.
 
 -:: aborting artificial life sequence, and clean up gracefully!
 
@@ -1646,80 +1950,6 @@ block device: -- ./downloads
 
 -:: destructor artificial life routine was called. -::
 	killing abstraction layer.
-
-~:: starting simulation.
-	~:: sim construct()
-	~:: initializing simulation run.
-		~:: ready | initialized sim.
-	~:: simulation is running.
-
-	~:: adding sim {entity}.
-- (Entity) was created.
-		~:: added sim {entity}(0)
-
-	~:: adding sim {object}.
-- {Object} was created.
-		~:: added sim {object}(0)
-
-~:: listing entities & objects:
-	- entity(0) (x:0 y:0 z:0) {<empty label>} 
-	- obj(0) (x:0 y:0 z:0) {<empty object>}
-
-- entity count: 1
-- object count: 1
-
-	~:: sim::entering cycle -1-.
-	~:: sim::entering cycle -2-.
-	~:: sim::entering cycle -3-.
-	~:: sim::entering cycle -4-.
-	~:: sim::entering cycle -5-.
-	~:: sim::entering cycle -6-.
-	~:: sim::entering cycle -7-.
-
-- {Object} <empty object> got destroyed.
-	~:: deleted sim {object}(0)
-- {Object}(0) reached mortality.
-
-#1 objects got destroyed.
-
-	~:: sim::entering cycle -8-.
-	~:: sim::entering cycle -9-.
-	~:: sim::entering cycle -10-.
-	~:: sim::entering cycle -11-.
-	~:: sim::entering cycle -12-.
-	~:: sim::entering cycle -13-.
-	~:: sim::entering cycle -14-.
-	~:: sim::entering cycle -15-.
-	~:: sim::entering cycle -16-.
-	~:: sim::entering cycle -17-.
-	~:: sim::entering cycle -18-.
-
-- {Entity} <empty label> died.
-	~:: deleted sim {entity}(0)
-- {Entity}(0) reached mortality.
-
-#1 entities perished.
-
-	~:: sim::entering cycle -19-.
-	~:: sim::entering cycle -20-.
-	~:: sim::entering cycle -21-.
-	~:: sim::entering cycle -22-.
-	~:: sim::entering cycle -23-.
-	~:: sim::entering cycle -24-.
-	~:: sim::entering cycle -25-.
-40265ns
-
-~:: generating stats ::~
-
-STATISTICS :: SIMULATION RUN:
------
-- simulation # cycles: 25
-- number of entities: 1
-- number of objects: 1
-- total time simulation run (nano seconds): 40265 ns.
-
-~:: deleting simulation.
-
 
 -:: decoupler.
 	-:: decoupling sampler

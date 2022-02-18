@@ -3,9 +3,12 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+
 #include "logic.h"
 
 void commands(int x, std::string param) {
+
+    void compare_query_str(std::string str);
 
     // used in x computation
     int consonants=0;
@@ -40,12 +43,13 @@ void commands(int x, std::string param) {
             }
             
             // draw x computation here
-            std::cout << "type:char" << " len:" << param.length() << " ";
+            std::cout << "type:[char]: len:" << param.length() << " ";
             std::cout << "vowels:" << vowels << " ";
             std::cout << "consonants:" << consonants << " ";
             std::cout << "special:" << special << " ";
 
             //std::cout << " " << std::endl;
+            compare_query_str(param);
             break;
 
         default:
@@ -54,3 +58,33 @@ void commands(int x, std::string param) {
     };
     std::cout << " ]" << std::endl;
 };
+
+void compare_query_str(std::string str) {   // handles the commands for the logic input
+    if (str.compare("simulation") == false) {
+        std::cout << std::endl << "~:: parameter request: simulation()." << std::endl;
+        isSim = true;   // triggers Simulation in AI/AI.CPP
+    } else if (str.compare("convert") == false) {
+        std::cout << std::endl << "~:: parameter request: converter EURO()." << std::endl;
+        isConvert = true;   // triggers converter EURO -> USD in AI/AI.CPP
+    } else if (str.compare("convertd") == false) {
+        std::cout << std::endl << "~:: parameter request: converter USD()." << std::endl;
+        isConvertUSD = true;   // triggers converter from USD -> EURO in AI/AI.CPP
+    } else if (str.compare("hash") == false) {
+        std::cout << std::endl << "~:: parameter request: hash()." << std::endl;
+        isHash = true;   // triggers hashing function in AI/AI.CPP
+    } else if (str.compare("killc") == false) {
+        std::cout << std::endl << "~:: parameter request: kill_chain()." << std::endl;
+        isKill = true;   // triggers kill chain in AI/AI.CPP
+    } else if (str.compare("stepping") == false) {
+        std::cout << std::endl << "~:: parameter request: stepping_engine()." << std::endl;
+        isStepping = true;   // triggers stepping() engine in AI/AI.CPP
+    } else if (str.compare("rollout") == false) {
+        std::cout << std::endl << "~:: parameter request: rollout()." << std::endl;
+        isRollout = true;   // triggers rollout function in AI/AI.CPP
+    } else if (str.compare("curl") == false) {
+        std::cout << std::endl << "~:: parameter request: curl()." << std::endl;
+        isCurl = true;   // triggers rollout function in AI/AI.CPP
+    }
+};
+
+// eof

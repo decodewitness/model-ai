@@ -108,7 +108,7 @@ int steering(int arc) {
 	// ai.play_audio(1);
 
 	// logical kill chain (uncomment next line)
-	//ai.kill(9);
+	//ai.killc(9);
 
 	// stepping engine
 	//ai.stepping();
@@ -143,9 +143,12 @@ int steering(int arc) {
 	// ai.add_account(15);
 	// ai.subtract_account(10);
 	// ai.change_account(10);
-	//ai.add_account(1);
+	// ai.add_account(1);
 	// std::cout << std::endl;
 	// std::cout << "ACCT_NR::(" << ai.get_account() << ")." << std::endl;
+	// ai.change_account(10);
+	// ai.add_account(1);
+	// ai.subtract_account(10);
 	// ai.print_account();
 	// ai.add_account(500.11);
 	//ai.change_account(2);
@@ -162,10 +165,19 @@ int steering(int arc) {
 	//ai.add_account(800.12);
 	// ai.subtract_account(900.13);
 	//ai.print_account();
+	
+	// ai.change_account(10);
+	// ai.add_account(1);
+	// ai.subtract_account(10);
+	// ai.print_account();
+	// ai.printn_account();
 	// ai.combine_total();
 	// ai.list_positive();
 	// ai.list_negative();
+	// ai.total_account();
+	// ai.average_account();
 	// ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
+	// ai.store_accounts_detail();
 
 	//ai.add_account(1.33);
 	//ai.add_account(44.99);
@@ -184,6 +196,7 @@ int steering(int arc) {
 
 	//sleep(2);
 
+	//ai.statdir("./ai");
 	//ai.rm("main2.cpp.txt");
 
 	//sleep(1);
@@ -224,7 +237,7 @@ int steering(int arc) {
 	// ai.import_accounts(imp_account);
 	// sleep(3);
 
-	ai.runSim();	// is edited in the ai.cpp file for now
+	//ai.runSim();	// is edited in the ai.cpp file for now
 
 	ai.decouple();
 

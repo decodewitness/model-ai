@@ -10,6 +10,7 @@ using namespace std;
 // main function
 int main(int argc, char *argv[]) {
 
+	int q;
 	std::string arguments;
 
 	if (argc > 1) {
@@ -20,9 +21,12 @@ int main(int argc, char *argv[]) {
 		std::cout << std::endl << "ARG: " << arguments << std::endl << std::endl;
 	}
 
+	std::cout << "~:: how many queries to run? : ";
+	cin >> q;	// number of queries for steering
+
 	//initialize_runtime_check();	// checks for file integrity
-	steering(1);	// steers the AI (class) code 
-	//steering(2);
+	steering(q);	// steers the AI (class) code 
+	//steering(1);
 return 0;
 }
 

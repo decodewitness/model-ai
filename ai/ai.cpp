@@ -144,7 +144,10 @@ AI::AI(int n) {	// AI constructor
 		this->appliance(); // this->appliance(); runs the virtual instance
 	}
 	// perform query sampling
-	this->query();
+	for (int i=0; i<n; i++) {
+		std::cout << std::endl << "~:: running (" << n << ") queries." << std::endl << std::endl;
+		this->query();
+	}
 }
 
 void AI::openfs() {	// opens filestream to "ai/bin/TL/tl" file
@@ -725,7 +728,12 @@ void AI::saygrace() {	// say grace routine
 	std::cout << "-:: done." << std::endl;
 };
 
+//QUERY
 void AI::query() {	// respond to logical query method
+	
+	double x;	// used to compute logic
+	std::string y;	// used to compute strings
+	
 	// QUERY
 	std::cout << std::endl << "::- type your query  -::" << std::endl;
 	
@@ -735,7 +743,108 @@ void AI::query() {	// respond to logical query method
 	// PROMPT
 	std::cout << "--?:: ";
 	
-	std::string y;
+
+	char str[255];
+	getchar();    // create buffer (1 extra for null char)
+	cin.get(str, 255);    // read up to 79 chars and place in str
+	query_string = str;
+	str[0] = '\0';
+
+	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;
+	logicalQuery(query_string);
+
+	// process commands	// compute logic and strings
+	if (isSim == true) {	// run simulation
+		std::cout << std::endl << "(simulation) entities: ";
+		cin >> x;
+
+		// still need to add entities (or) objects to Simulation
+
+		this->runSim();
+		isSim = false;
+	} else if (isConvert == true) {	// run converter EURO
+		std::cout << std::endl << "(converter) (EURO->USD) : ";
+		cin >> x;
+		this->convertf(x, 1);
+		isConvert = false;
+	} else if (isConvertUSD == true) {	// run converter USD
+		std::cout << std::endl << "(converter) (USD->EURO) : ";
+		cin >> x;
+		this->convertf(x, 2);
+		isConvertUSD = false;
+	} else if (isHash == true) {	// hash function
+		std::cout << std::endl << "(hash) function() : ";
+		cin >> y;
+		std::cout << std::endl << this->hashtype(y.c_str()) << std::endl;
+		isHash = false;
+	} else if (isKill == true) {	// hash function
+		std::cout << std::endl << "(kill chain) function() : 9" << std::endl;
+		isKill = false;
+		this->killc(9);
+	} else if (isStepping == true) {	// hash function
+		std::cout << std::endl << "(stepping engine) function() : " << std::endl;
+		this->stepping();		
+		isStepping = false;
+	} else if (isRollout == true) {	// hash function
+		std::cout << std::endl << "(rollout) function(#) : ";
+		cin >> x;
+		// rollout functions numbers:
+			// no_model1 next_model2 patch3
+			// TOOL4 permissions5 comodos9
+		this->rollout(x);	// don't do the restore rollout function
+		isRollout = false;
+	} else if (isCurl == true) {	// hash function
+		std::cout << std::endl << "(curl engine) function() : ";
+		cin >> y;
+		this->curl(y);
+		isCurl = false;
+	}
+
+	// ai.change_account(10);
+	// ai.add_account(1);
+	// ai.subtract_account(10);
+	// ai.print_account();
+	// ai.printn_account();
+	// ai.combine_total();
+	// ai.list_positive();
+	// ai.list_negative();
+	// ai.total_account();
+	// ai.average_account();
+	// ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
+	// ai.store_accounts_detail();
+	// ai.export_accounts(exp_account);
+	// ai.import_accounts(imp_account);
+	
+	//ai.table(6);
+	//ai.tableTo(6, 20);
+
+	// ai.dice_pr();
+	// ai.dice_npr(100);
+
+	//ai.statdir("./ai");
+	//ai.rm("main2.cpp.txt");
+
+	// ai.add(4, 3);
+	// ai.subtract(4, 3);
+	// ai.multiply(4, 3);
+	// ai.divide(4, 3);
+	// ai.power(4, 3);
+
+	// std::cout << ai.return_punch(4, '+', 3) << std::endl;
+	// std::cout << ai.return_punch(4, '-', 3) << std::endl;
+	// std::cout << ai.return_punch(4, '*', 3) << std::endl;
+	// std::cout << ai.return_punch(4, '/', 3) << std::endl;
+
+	// sleep(3);
+
+	// ai.print_punch(4, '+', 3);
+	// ai.print_punch(4, '-', 3);
+	// ai.print_punch(4, '*', 3);
+	// ai.print_punch(4, '/', 3);
+
+	// ai.play_audio(1);
+
+};
 	// std::string sentence;
 	// char sentence[256];
 
@@ -748,15 +857,16 @@ void AI::query() {	// respond to logical query method
 	//cin >> y;
 	//query_string.append(y);
 
-	char str[80];
-	getchar();    // create buffer (1 extra for null char)
-	cin.get(str, 79);    // read up to 79 chars and place in str
-	// }
+	// QUERY STRING
+
+	// // }
     // std::cin >> y;
 
 	// do {
 	// 	query_string.append(y);
-	query_string.append(str);
+	// std::string str;
+	// std::getline(std::cin,str);
+
 	// } while (cin >> y);
 
 	// std::getline(std::cin,sentence);
@@ -776,9 +886,6 @@ void AI::query() {	// respond to logical query method
     // }
 
 	//s = sampleX();
-	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;
-	logicalQuery(query_string);
-};
 
 void AI::killc(int x) {	// basically implies killchain handle
 	switch (x) {
@@ -790,6 +897,9 @@ void AI::killc(int x) {	// basically implies killchain handle
 			if (this->modul == true) { delete this->mdl; }
 			if (this->comb == true)  { delete this->cmb; }
 			if (this->combm == true) { delete this->combinemodule; }
+			
+			// double check these modules for escaping modules
+			
 			exit(0);
 			break;
 		default:
@@ -894,15 +1004,15 @@ void AI::rollout(int n) {	// rollout function for several new features
 	std::cout << std::endl << "(debug)___msgs." << std::endl;
 	switch (n) {
 		case 1: // roll out no model
-			//std::cout << "~:: download next model ::~" << std::endl;
-			std::cout << std::endl << "~:: rollout function(1)::set to n(2-3-4-9)." << std::endl;
-		break;
+				//std::cout << "~:: download next model ::~" << std::endl;
+				std::cout << std::endl << "~:: rollout function(1)::set to n(2-3-4-9)." << std::endl;
+			break;
 
 		case 2: // roll out next model
 				//std::cout << "~:: download next model ::~" << std::endl;
 				std::cout << std::endl << "~:: rollout function(2)::set to n(2-3-4-9)." << std::endl;
 				system(_MODEL);
-		
+			break;
 
 		case 3: // roll out next model and patch
 				//std::cout << "~:: download next model ::~" << std::endl;
@@ -926,28 +1036,28 @@ void AI::rollout(int n) {	// rollout function for several new features
 					// 	return -1;
 					system(_TOOL);
 				}
-		break;
+			break;
 
 		case 5: // set permissions scripts
-			std::cout << std::endl << "~:: rollout function(5)::set to n(2-3-4-5-9)." << std::endl;
-			toolstr = _TOOL;
-			toolstr = toolstr + " -p";
+				std::cout << std::endl << "~:: rollout function(5)::set to n(2-3-4-5-9)." << std::endl;
+				toolstr = _TOOL;
+				toolstr = toolstr + " -p";
 
-			std::cout << "(debug) toolstr = " << toolstr << std::endl;
-			//system("pwd");
-			
-			system(toolstr.c_str());
-		break;
+				std::cout << "(debug) toolstr = " << toolstr << std::endl;
+				//system("pwd");
+				
+				system(toolstr.c_str());
+			break;
 
 		case 9: // roll out comodos
 				std::cout << std::endl << "~:: rollout function(9)::set to n(2-3-4-5-9)." << std::endl;
 
 				system(_COMODOS);
-		break;
+			break;
 		
 		default: // default
-			std::cout << "~:: no rollouts." << std::endl;
-		break;
+				std::cout << "~:: no rollouts." << std::endl;
+			break;
 	};
 };
 
