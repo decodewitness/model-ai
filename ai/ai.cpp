@@ -730,9 +730,12 @@ void AI::saygrace() {	// say grace routine
 
 //QUERY
 void AI::query() {	// respond to logical query method
-	double x;	// used to compute logic
+	double x, xx;	// used to compute logic
+	double sum;
 	std::string y;	// used to compute strings
+	std::string yy;
 	int z, zz;
+	char ch;
 
 	// QUERY
 	std::cout << std::endl << "::- type your query  -::" << std::endl;
@@ -743,7 +746,6 @@ void AI::query() {	// respond to logical query method
 	// PROMPT
 	std::cout << "--?:: ";
 	
-
 	char str[255];
 	getchar();    // create buffer (1 extra for null char)
 	cin.get(str, 255);    // read up to 79 chars and place in str
@@ -801,7 +803,6 @@ void AI::query() {	// respond to logical query method
 	} else if (isBank == true) {	// hash function
 
 		for (int i=0; isBank==true ; i++) {
-			
 			draw_banking_menu();	// draws banking menu on the screen
 			cin >> z;
 			
@@ -868,7 +869,6 @@ void AI::query() {	// respond to logical query method
 				// ai.import_accounts(imp_account);
 					this->import_accounts(imp_account);
 					break;
-				
 				case 99:
 					isBank = false;
 					break;
@@ -878,38 +878,104 @@ void AI::query() {	// respond to logical query method
 					break;
 			};
 		}
+	} else if (isTable == true) {
+		std::cout << "(table): of :# ";
+		cin >> z;
+		this->table(z);
+		isTable = false;
+	} else if (isTableTo == true) {
+		std::cout << "(table): of :# ";
+		cin >> z;
+		std::cout << "(to maximal): :# ";
+		cin >> zz;
+		this->tableTo(z,zz);
+		isTableTo = false;
+	} else if (isDice == true) {
+		this->dice_pr();
+		isDice = false;
+	} else if (isDice2 == true) {
+		std::cout << "(dice): number of eyes :# ";
+		cin >> z;
+		this->dice_npr(z);
+		isDice2 = false;
+	} else if (isStat == true) {
+		std::cout << "(stat): dir : ";
+		cin >> y;
+		this->statdir(y.c_str());
+		isStat = false;
+	} else if (isRm == true) {
+		std::cout << "(rm): filename : ";
+		cin >> y;
+		this->rm(y.c_str());
+		isRm = false;
+	} else if (isCp == true) {
+		std::cout << "(cp): src dst: ";
+		cin >> y >> yy;
+		this->cp(y.c_str(), yy.c_str());
+		isCp = false;
+	} else if (isAdd == true) {
+		std::cout << "(add): number1 number2 + # #: ";
+		cin >> x >> xx;
+		this->add(x, xx);
+		isAdd = false;
+	} else if (isSubtract == true) {
+		std::cout << "(subtract): number1 number2 -/- # #: ";
+		cin >> x >> xx;
+		this->subtract(x, xx);
+		isSubtract = false;
+	} else if (isMultiply == true) {
+		std::cout << "(multiply): number1 number2 * # #: ";
+		cin >> x >> xx;
+		this->multiply(x, xx);
+		isMultiply = false;
+	} else if (isDivide == true) {
+		std::cout << "(divide): number1 number2 / # #: ";
+		cin >> x >> xx;
+		this->divide(x, xx);
+		isDivide = false;
+	} else if (isPower == true) {
+		std::cout << "(power of): \"number1\" to power of \"number2\" ^ # #: ";
+		cin >> x >> xx;
+		this->power(x, xx);
+		isPower = false;
+	} else if (isPlayAudio == true) {
+		std::cout << "(play audio file): file : ";
+		cin >> y;
+		this->play_audio_file(y.c_str());
+		isPlayAudio = false;
+	} else if (isReturnPunch == true) {
+		sum=0;
+		for (int i=0;; i++) {
+			std::cout << "(punch): number :# ";
+			cin >> x;
+			std::cout << "(operator or: 'Q')::(+,-,*,/) : ";
+			cin >> ch;
+			if (ch == 'q' || ch == 'Q') {
+				std::cout << "(FINAL RESULT) = " << sum << std::endl << std::endl;
+				break;
+			} else if (ch=='+' || ch=='-' || ch=='/' || ch=='*') {
+				std::cout << std::endl << this->return_punch(sum,ch,x) << std::endl << std::endl;
+			}
+		}
+		isReturnPunch = false;
+	} else if (isPrintPunch == true) {
+		sum=0;
+		for (int i=0;; i++) {
+			std::cout << "(punch): number :# ";
+			cin >> x;
+			std::cout << "(operator or: 'Q')::(+,-,*,/) : ";
+			cin >> ch;
+			if (ch == 'q' || ch == 'Q') {
+				std::cout << "(FINAL RESULT) = " << sum << std::endl << std::endl;
+				break;
+			} else if (ch=='+' || ch=='-' || ch=='/' || ch=='*') {
+				this->print_punch(sum, ch, x);
+			}
+		}
+		isPrintPunch = false;
 	}
-
-	//ai.table(6);
-	//ai.tableTo(6, 20);
-
-	// ai.dice_pr();
-	// ai.dice_npr(100);
-
-	//ai.statdir("./ai");
-	//ai.rm("main2.cpp.txt");
-
-	// ai.add(4, 3);
-	// ai.subtract(4, 3);
-	// ai.multiply(4, 3);
-	// ai.divide(4, 3);
-	// ai.power(4, 3);
-
-	// std::cout << ai.return_punch(4, '+', 3) << std::endl;
-	// std::cout << ai.return_punch(4, '-', 3) << std::endl;
-	// std::cout << ai.return_punch(4, '*', 3) << std::endl;
-	// std::cout << ai.return_punch(4, '/', 3) << std::endl;
-
-	// sleep(3);
-
-	// ai.print_punch(4, '+', 3);
-	// ai.print_punch(4, '-', 3);
-	// ai.print_punch(4, '*', 3);
-	// ai.print_punch(4, '/', 3);
-
-	// ai.play_audio(1);
-
 };
+
 	// std::string sentence;
 	// char sentence[256];
 
