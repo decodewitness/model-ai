@@ -1,0 +1,7 @@
+# store values
+# structure { keywd <tab> description <tab> reference_file_in_cabinet }
+
+logic   logic is my only type of relation with this algorithm.  0000001
+intelligence    deciphering algorithms.                         0000002
+
+eof             end of file                                     9999999

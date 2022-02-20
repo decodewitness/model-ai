@@ -66,6 +66,17 @@ void AI::splash(void) {
 	std::cout << " ** ][][ **" << std::endl << std::endl;
 }
 
+void AI::help(int n=1) {
+	// the help menu for the interactive menu structure
+		// more function	// press a key
+	// functions alphabetic
+		
+	// help
+	// 
+
+	// list of arguments
+};
+
 // initialize_runtime_check
 void AI::initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
     std::cout << "~:: ** &initialize_runtime_check() **" << std::endl;
@@ -730,6 +741,8 @@ void AI::saygrace() {	// say grace routine
 
 //QUERY
 void AI::query() {	// respond to logical query method
+						// HANDLES COMMANDS
+	// variables for commands structure		
 	double x, xx;	// used to compute logic
 	double sum;
 	std::string y;	// used to compute strings

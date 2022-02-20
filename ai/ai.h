@@ -147,6 +147,9 @@ public:
 	// splash
 	void splash(void);
 
+	// help
+	void help(int n);
+
 	// round init
 	void init();
 	void initialize_runtime_check();
