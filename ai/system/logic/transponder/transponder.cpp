@@ -315,7 +315,7 @@ std::string Transponder::answer(std::string s) {
             std::cout << std::endl << "(score): " << this->rank_score(query, x) << std::endl;
         }
     } else {
-        std::cout << std::endl << "~::!::~ error opening file: \"" << used_file << "\"" << std::endl << std::endl;
+        std::cout << std::endl << "~::!::~ error opening file (Transponder::answer()): \"" << used_file << "\"" << std::endl << std::endl;
     }
 
     std::cout << std::endl;

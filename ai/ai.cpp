@@ -70,11 +70,18 @@ void AI::help(int n=1) {
 	// the help menu for the interactive menu structure
 		// more function	// press a key
 	// functions alphabetic
-		
+	std::cout << std::endl;
+	std::cout << "--Help Function--" << std::endl << std::endl;
+	std::cout << "\tCOMMANDS:" << std::endl;
+	std::cout << "-----" << std::endl << std::endl;
+
+	std::cout << "- logic" << std::endl;
 	// help
 	// 
 
 	// list of arguments
+
+	std::cout << std::endl;
 };
 
 // initialize_runtime_check
@@ -725,12 +732,14 @@ void AI::saygrace() {	// say grace routine
 	if (this->modul == true) { delete this->mdl; }
 	if (this->comb == true)  { delete this->cmb; }
 	if (this->combm == true) { delete this->combinemodule; }
+	if (this->brn == true) 	 { delete this->brain; }
 
 	this->smpl = false;
 	this->ammod = false;
 	this->modul = false;
 	this->comb = false;
 	this->combm = false;
+	this->brn = false;
 
 	// send destruction message
 	this->destroy_msg();
@@ -1390,6 +1399,15 @@ void AI::hdata() {	// data handler
 
 void AI::hmath() {	// math handler
 	math_handler();
+};
+
+void AI::assembleBrain() {
+	this->brain = new Brain;
+
+	// move this logic somewhere else
+	this->brain->useBrain("logic");
+
+	this->brn = true;
 };
 
 // accounts managed by Track_Account class

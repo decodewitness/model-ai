@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffcb05f2cb0)
-	- stacking header:(1)::<address>(0x7ffcb05f2cd0)
-	- stacking header:(2)::<address>(0x7ffcb05f2cf0)
-	- stacking header:(3)::<address>(0x7ffcb05f2d10)
-	- stacking header:(4)::<address>(0x7ffcb05f2d30)
-	- stacking header:(5)::<address>(0x7ffcb05f2d50)
-	- stacking header:(6)::<address>(0x7ffcb05f2d70)
-	- stacking header:(7)::<address>(0x7ffcb05f2d90)
-	- stacking header:(8)::<address>(0x7ffcb05f2db0)
-	- stacking header:(9)::<address>(0x7ffcb05f2dd0)
+	- stacking header:(0)::<address>(0x7ffdc7763880)
+	- stacking header:(1)::<address>(0x7ffdc77638a0)
+	- stacking header:(2)::<address>(0x7ffdc77638c0)
+	- stacking header:(3)::<address>(0x7ffdc77638e0)
+	- stacking header:(4)::<address>(0x7ffdc7763900)
+	- stacking header:(5)::<address>(0x7ffdc7763920)
+	- stacking header:(6)::<address>(0x7ffdc7763940)
+	- stacking header:(7)::<address>(0x7ffdc7763960)
+	- stacking header:(8)::<address>(0x7ffdc7763980)
+	- stacking header:(9)::<address>(0x7ffdc77639a0)
 
 
 -:: checking AI functions.
@@ -1617,22 +1617,22 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+character device: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+character device: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+character device: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+character device: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (6) queries.
+~:: running (1) queries.
 
 
 ::- type your query  -::
@@ -1640,88 +1640,9 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	+
-	[ simple x computation: type:[char]: len:1 vowels:0 consonants:0 special:1 
-~:: parameter request: add().
- ]
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
 -:: finished x computation.
-(add): number1 number2 + # #: adds (1+2): 3
-
-~:: running (6) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	-
-	[ simple x computation: type:[char]: len:1 vowels:0 consonants:0 special:1 
-~:: parameter request: subtract().
- ]
--:: finished x computation.
-(subtract): number1 number2 -/- # #: subtracts (5-2): 3
-
-~:: running (6) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/
-	[ simple x computation: type:[char]: len:1 vowels:0 consonants:0 special:1 
-~:: parameter request: divide().
- ]
--:: finished x computation.
-(divide): number1 number2 / # #: divides (7/3): 2.33333
-
-~:: running (6) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	*
-	[ simple x computation: type:[char]: len:1 vowels:0 consonants:0 special:1 
-~:: parameter request: multiply().
- ]
--:: finished x computation.
-(multiply): number1 number2 * # #: multiplies (10*10): 100
-
-~:: running (6) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	pow
-	[ simple x computation: type:[char]: len:3 vowels:2 consonants:1 special:0 
-~:: parameter request: power().
- ]
--:: finished x computation.
-(power of): "number1" to power of "number2" ^ # #: powers (7^7): 823543
-
-~:: running (6) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	dice
-	[ simple x computation: type:[char]: len:4 vowels:2 consonants:2 special:0 
-~:: parameter request: dice_pr().
- ]
--:: finished x computation.
-
-~:: dice: 4
 
 -:: aborting artificial life sequence, and clean up gracefully!
 
@@ -1729,6 +1650,17 @@ file or directory: -- ./downloads
 
 -:: destructor artificial life routine was called. -::
 	killing abstraction layer.
+
+~:: searching indexes.
+	:: hit(1)
+
+--Help Function--
+
+	COMMANDS:
+-----
+
+- logic
+
 
 -:: decoupler.
 	-:: decoupling sampler

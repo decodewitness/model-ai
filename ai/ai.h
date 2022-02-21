@@ -43,6 +43,7 @@
 #include "fetch/curl.cpp"
 #include "lib/testing.cpp"
 #include "system/gradle.h"
+#include "brain/brain.cpp"
 #include "comodo/varaan.h"
 #include "lib/construct.cpp"
 #include "patching/patch.cpp"
@@ -110,6 +111,7 @@ private:
 
 	AMModule *ammodule;
 	Modular *mdl;
+	Brain *brain;
 	Sampler *sampler;
 	Combine *cmb;
 	CombineModule *combinemodule;
@@ -131,6 +133,7 @@ private:
 	bool comb;
 	bool combm;
 	bool smpl;
+	bool brn;
 
 	int step;
 	int element;
@@ -156,6 +159,9 @@ public:
 
 	// headers
 	void headers();
+
+	// brain
+	void assembleBrain();
 
 	// print messages
 	void printn(std::string n) { std::cout << n; }
