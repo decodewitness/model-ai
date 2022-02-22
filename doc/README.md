@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdc7763880)
-	- stacking header:(1)::<address>(0x7ffdc77638a0)
-	- stacking header:(2)::<address>(0x7ffdc77638c0)
-	- stacking header:(3)::<address>(0x7ffdc77638e0)
-	- stacking header:(4)::<address>(0x7ffdc7763900)
-	- stacking header:(5)::<address>(0x7ffdc7763920)
-	- stacking header:(6)::<address>(0x7ffdc7763940)
-	- stacking header:(7)::<address>(0x7ffdc7763960)
-	- stacking header:(8)::<address>(0x7ffdc7763980)
-	- stacking header:(9)::<address>(0x7ffdc77639a0)
+	- stacking header:(0)::<address>(0x7ffc27e893a0)
+	- stacking header:(1)::<address>(0x7ffc27e893c0)
+	- stacking header:(2)::<address>(0x7ffc27e893e0)
+	- stacking header:(3)::<address>(0x7ffc27e89400)
+	- stacking header:(4)::<address>(0x7ffc27e89420)
+	- stacking header:(5)::<address>(0x7ffc27e89440)
+	- stacking header:(6)::<address>(0x7ffc27e89460)
+	- stacking header:(7)::<address>(0x7ffc27e89480)
+	- stacking header:(8)::<address>(0x7ffc27e894a0)
+	- stacking header:(9)::<address>(0x7ffc27e894c0)
 
 
 -:: checking AI functions.
@@ -1544,8 +1544,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1617,16 +1616,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./DCIM
+symlink: -- ./DCIM
 
 ~:: stats() function:
-character device: -- ./module_bay
+symlink: -- ./module_bay
 
 ~:: stats() function:
-character device: -- ./info.txt
+symlink: -- ./info.txt
 
 ~:: stats() function:
-character device: -- ./downloads
+symlink: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1640,8 +1639,8 @@ character device: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
+	artificial
+	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0  ]
 -:: finished x computation.
 
 -:: aborting artificial life sequence, and clean up gracefully!
@@ -1652,7 +1651,15 @@ character device: -- ./downloads
 	killing abstraction layer.
 
 ~:: searching indexes.
-	:: hit(1)
+	:: hit(0)      something real or artificial made up out of a matter construct.
+ hit(1)      something real or artificial made up out of a matter construct.
+ hit(2)      something real or artificial made up out of a matter construct.
+
+
+- (debug) data is open.
+
+HMAC : string_next_logic() :: artificial :-L|| , 
+
 
 --Help Function--
 

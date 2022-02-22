@@ -9,9 +9,10 @@ Brain::Brain() {
     this->keep_alive = false;
     this->set1 = 0;
     this->set2 = 0;
+    this->done[0] = false;
 
 // inside of canopy
-    this->file_access(1);
+    this->file_access(3);
 };
 
 Brain::~Brain() {
@@ -19,16 +20,32 @@ Brain::~Brain() {
         this->access.close();
         this->access_is_open = false;
     }
-    if (this->outfile.is_open() == true) {
-        this->outfile.close();
+
+    // flush any last data here
+
+    if (this->output.is_open() == true) {
+        this->output.close();
     }
 };
 
 // technicalities
 void Brain::file_access(int level) {
 
-    if (level == 2) {
-        this->outfile.open(store_file);
+    if (level == 0) {   // open references (ai/brain/intelligence/cabinet)
+        this->access.open(store_reference_file);
+    }
+    
+    if (level == 1) {   // opens write database (ai/brain/intelligence/store)
+        this->output.open(store_file);
+    }
+
+    if (level == 2) { // opens "cabinet" and "store"
+        this->access.open(store_reference_file);
+        this->output.open(store_file);
+    }
+
+    if (level == 3) { // opens data collection
+        this->data.open(data_collection);
     }
 
     if (this->access_is_open == false) {
@@ -37,8 +54,8 @@ void Brain::file_access(int level) {
     
     if (this->access.is_open()) {
         this->access_is_open = true;
-    } else {
-        system("pwd");
+    } else if (level < 3) {
+        // debugging option   // system("pwd");
         std::cout << std::endl << "~::!::~ Error :: (Brain::file_access)->" << store_file << " ~:: error opening file." << std::endl;
     }
 
@@ -129,7 +146,7 @@ int Brain::procure(int nr) {    // nr = this->set1
     if (this->access.is_open() == true) {
         this->access_is_open = true; 
     } else {
-        this->file_access(3);
+        this->file_access(0);
     }
 
     // process data // read to this->handles line number
@@ -177,7 +194,19 @@ void Brain::useBrain(std::string query) {
 
     std::string logic = query;
     this->search(logic, 3);
-}
+    //this->search_catalogue_index(logic);
+
+    // options
+        // stepping engine
+        // artificial life extrapolation in numbers
+        // modular filters
+        // string NLP
+        // machine learning
+            // models linear regression
+            // model classification
+            // model polynomial regression
+            // other machine learning modules
+};
 
 // access
 void Brain::store_reference(std::string s) { // handles data // resonate_index
@@ -185,9 +214,13 @@ void Brain::store_reference(std::string s) { // handles data // resonate_index
     this->store_filename = store_reference_file;
     this->file_access(2);
     
+    // sanitize input here
+
+
+
     // store string s in temporary catalogue or vector
-    outfile << s << std::endl;
-    outfile.close();
+    output << s << std::endl;
+    output.close();
 };
 
 // data
@@ -205,7 +238,7 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
 
     // has access cabinet
     if (!this->access_is_open && this->access.is_open() == false) {
-        this->file_access(3);
+        this->file_access(0);
     }
 
     // start from index in cabinet
@@ -222,6 +255,10 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
         // read rest of line here
         std::getline(access, line);
 
+        // debug section (std::cout ;; sleep(1))
+        //std::cout << line << std::endl;
+        //sleep(1);
+
         // continue
         if (search.compare(search_string) == 0) {
             std::cout << " hit(" << i << ")";
@@ -229,6 +266,10 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
 
             // do logic
             this->store_reference(line);    // stores the line in temporary catalogue or vector
+
+            // give option
+            std::cout << line << std::endl;
+            sleep(1);
         }
     }
 
@@ -240,8 +281,12 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
     std::cout << std::endl;
 };
 
-void Brain::recall() {  // recalls events
-
+void Brain::recall(std::string s) {  // recalls events
+    std::string h;
+    
+    //this->search_catalogue_index(s);
+    //this->search_index_code(h);
+    //this->neural_net(s, h, 1); //neural_net(std::string s, std::string h, int cumulator)
 };
 
 void Brain::add_data() {    // adds data to a stored reference (store_reference())

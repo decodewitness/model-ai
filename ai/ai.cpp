@@ -1401,11 +1401,12 @@ void AI::hmath() {	// math handler
 	math_handler();
 };
 
-void AI::assembleBrain() {
+void AI::assembleBrain() {	// uses logic // useBrain && neural_net
 	this->brain = new Brain;
 
 	// move this logic somewhere else
-	this->brain->useBrain("logic");
+	this->brain->useBrain(query_string);
+	this->brain->neural_net(query_string);
 
 	this->brn = true;
 };

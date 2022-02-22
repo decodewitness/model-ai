@@ -37,13 +37,14 @@
 
 // headers
 #include "al/al.cpp"
+#include "brain/nn.h"
 #include "system/chk.h"
 #include "lib/data.cpp"
 //#include "simulation.cpp"	// already included in "ai.cpp"
 #include "fetch/curl.cpp"
 #include "lib/testing.cpp"
 #include "system/gradle.h"
-#include "brain/brain.cpp"
+//#include "brain/brain.cpp"	// use "nn.cpp" instead
 #include "comodo/varaan.h"
 #include "lib/construct.cpp"
 #include "patching/patch.cpp"
@@ -160,8 +161,9 @@ public:
 	// headers
 	void headers();
 
-	// brain
+	// brain & neural net
 	void assembleBrain();
+	//void neural_net(std::string s, std::string h, int); 
 
 	// print messages
 	void printn(std::string n) { std::cout << n; }
