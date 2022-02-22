@@ -30,23 +30,33 @@ std::string Brain::search_index_code(std::string l) {
 }
 
 std::string Brain::sorter(std::string st, int level) {
+
+    std::cout << "~:: debug :: sorter()." << std::endl;
+
     // std::string combined = st;
     std::string combined = "sorter :: needs \"combine\".";
     std::string word;
     std::string line;
     int counter=0;
+    int line_count=0;
 
     // file access to data
     this->file_access(3);
     this->data.seekg(SEEK_SET);
 
     if (this->data.is_open() == true) {
-        std::cout << std::endl << "- (debug) data is open." << std::endl;
+        std::cout << std::endl << "- (debug)::sorter() data is open." << std::endl;
     } else {
-        std::cout << std::endl << "- (debug) Error! data DID NOT open." << std::endl;
+        std::cout << std::endl << "- (debug)::sorter() Error! data DID NOT open." << std::endl;
     }
 
-    for (int i=0; i<1; i++) {
+    for (int i=0; std::getline(data, line); i++) {
+        line_count++;
+    }
+
+    data.seekg(SEEK_SET);
+
+    for (int i=0; i<line_count; i++) {
         this->data >> word;
         
         // read rest of line here
@@ -57,7 +67,7 @@ std::string Brain::sorter(std::string st, int level) {
         //sleep(1);
 
         // continue
-        if (line.compare(st) == 0) {
+        if (word.compare(st) == 0) {
             std::cout << " hit(" << i << ")";
             counter++;
 
@@ -147,13 +157,11 @@ std::string Brain::string_next_logic(std::string ssh) {
     std::string hmac = this->sorter(ssh, 1);
     // 2nd layer in neural net
     
-    
+    // debugging
+    std::cout << ss << " ssh: " << ssh << std::endl;
     
     
     //std::string chmac = search_index_code(hmac);
-
-    
-    
     
     ss.append(hmac);
     ss.append(", ");

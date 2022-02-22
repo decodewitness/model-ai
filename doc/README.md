@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc27e893a0)
-	- stacking header:(1)::<address>(0x7ffc27e893c0)
-	- stacking header:(2)::<address>(0x7ffc27e893e0)
-	- stacking header:(3)::<address>(0x7ffc27e89400)
-	- stacking header:(4)::<address>(0x7ffc27e89420)
-	- stacking header:(5)::<address>(0x7ffc27e89440)
-	- stacking header:(6)::<address>(0x7ffc27e89460)
-	- stacking header:(7)::<address>(0x7ffc27e89480)
-	- stacking header:(8)::<address>(0x7ffc27e894a0)
-	- stacking header:(9)::<address>(0x7ffc27e894c0)
+	- stacking header:(0)::<address>(0x7ffec81d9b70)
+	- stacking header:(1)::<address>(0x7ffec81d9b90)
+	- stacking header:(2)::<address>(0x7ffec81d9bb0)
+	- stacking header:(3)::<address>(0x7ffec81d9bd0)
+	- stacking header:(4)::<address>(0x7ffec81d9bf0)
+	- stacking header:(5)::<address>(0x7ffec81d9c10)
+	- stacking header:(6)::<address>(0x7ffec81d9c30)
+	- stacking header:(7)::<address>(0x7ffec81d9c50)
+	- stacking header:(8)::<address>(0x7ffec81d9c70)
+	- stacking header:(9)::<address>(0x7ffec81d9c90)
 
 
 -:: checking AI functions.
@@ -1616,16 +1616,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-symlink: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-symlink: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-symlink: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-symlink: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1655,8 +1655,10 @@ symlink: -- ./downloads
  hit(1)      something real or artificial made up out of a matter construct.
  hit(2)      something real or artificial made up out of a matter construct.
 
+~:: debug :: sorter().
 
-- (debug) data is open.
+- (debug)::sorter() data is open.
+string_next_logic() ::  ssh: artificial
 
 HMAC : string_next_logic() :: artificial :-L|| , 
 
