@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffec81d9b70)
-	- stacking header:(1)::<address>(0x7ffec81d9b90)
-	- stacking header:(2)::<address>(0x7ffec81d9bb0)
-	- stacking header:(3)::<address>(0x7ffec81d9bd0)
-	- stacking header:(4)::<address>(0x7ffec81d9bf0)
-	- stacking header:(5)::<address>(0x7ffec81d9c10)
-	- stacking header:(6)::<address>(0x7ffec81d9c30)
-	- stacking header:(7)::<address>(0x7ffec81d9c50)
-	- stacking header:(8)::<address>(0x7ffec81d9c70)
-	- stacking header:(9)::<address>(0x7ffec81d9c90)
+	- stacking header:(0)::<address>(0x7fff9cec7080)
+	- stacking header:(1)::<address>(0x7fff9cec70a0)
+	- stacking header:(2)::<address>(0x7fff9cec70c0)
+	- stacking header:(3)::<address>(0x7fff9cec70e0)
+	- stacking header:(4)::<address>(0x7fff9cec7100)
+	- stacking header:(5)::<address>(0x7fff9cec7120)
+	- stacking header:(6)::<address>(0x7fff9cec7140)
+	- stacking header:(7)::<address>(0x7fff9cec7160)
+	- stacking header:(8)::<address>(0x7fff9cec7180)
+	- stacking header:(9)::<address>(0x7fff9cec71a0)
 
 
 -:: checking AI functions.
@@ -1492,7 +1492,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1564,22 +1565,22 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+symlink: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+symlink: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+symlink: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+symlink: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (1) queries.
+~:: running (2) queries.
 
 
 ::- type your query  -::
@@ -1587,9 +1588,44 @@ file or directory: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	artificial
-	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0  ]
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
 -:: finished x computation.
+
+~:: searching indexes.
+	:: hit(2)           logic is my only type of relation inside this algorithm.        + 2
+
+~:: debug :: sorter().
+
+- (debug)::sorter() data is open.
+string_next_logic() ::  ssh: logic
+
+HMAC : string_next_logic() :: logic :-L|| artificial          being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event., 
+
+
+~:: running (2) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
+-:: finished x computation.
+
+~:: searching indexes.
+	:: hit(1)    deciphering algorithms.                                         + 1
+ hit(2)    deciphering algorithms.                                         + 1
+
+~:: debug :: sorter().
+
+- (debug)::sorter() data is open.
+string_next_logic() ::  ssh: intelligence
+
+HMAC : string_next_logic() :: intelligence :-L|| artificial          being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event., 
+
 
 -:: aborting artificial life sequence, and clean up gracefully!
 
@@ -1597,19 +1633,6 @@ file or directory: -- ./downloads
 
 -:: destructor artificial life routine was called. -::
 	killing abstraction layer.
-
-~:: searching indexes.
-	:: hit(0)      something real or artificial made up out of a matter construct.
- hit(1)      something real or artificial made up out of a matter construct.
- hit(2)      something real or artificial made up out of a matter construct.
-
-~:: debug :: sorter().
-
-- (debug)::sorter() data is open.
-string_next_logic() ::  ssh: artificial
-
-HMAC : string_next_logic() :: artificial :-L|| , 
-
 
 --Help Function--
 

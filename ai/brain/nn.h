@@ -40,6 +40,11 @@ std::string Brain::sorter(std::string st, int level) {
     int counter=0;
     int line_count=0;
 
+    // close this.access file
+    if (this->access.is_open() == true) {
+        this->access.close();
+    }
+    
     // file access to data
     this->file_access(3);
     this->data.seekg(SEEK_SET);
@@ -50,14 +55,17 @@ std::string Brain::sorter(std::string st, int level) {
         std::cout << std::endl << "- (debug)::sorter() Error! data DID NOT open." << std::endl;
     }
 
-    for (int i=0; std::getline(data, line); i++) {
-        line_count++;
+    do { line_count++;}
+    while (std::getline(data, line));
+    
+    if (this->data.is_open()) {
+        this->data.close();
     }
-
+    file_access(3);
     data.seekg(SEEK_SET);
 
     for (int i=0; i<line_count; i++) {
-        this->data >> word;
+        //this->data >> word;
         
         // read rest of line here
         std::getline(data, line);

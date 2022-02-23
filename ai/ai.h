@@ -204,6 +204,7 @@ public:
 	bool pooling(int x=1);
 
 	// queries, sampler & appliance
+	// void search(std::string s);
 	void query();
 	void sample();
 	void appliance();

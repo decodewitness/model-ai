@@ -239,7 +239,7 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 
 	//ai.runSim();	// is edited in the ai.cpp file for now
 	
-	ai.assembleBrain();
+	//ai.assembleBrain();
 	ai.help(1);
 
 	ai.decouple();

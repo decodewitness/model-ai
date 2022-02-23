@@ -161,10 +161,11 @@ AI::AI(int n) {	// AI constructor
 		std::cout << "\t -:: loading virtual instance" << std::endl << std::endl;
 		this->appliance(); // this->appliance(); runs the virtual instance
 	}
-	// perform query sampling
+	// perform query sampling and nlp query
 	for (int i=0; i<n; i++) {
 		std::cout << std::endl << "~:: running (" << n << ") queries." << std::endl << std::endl;
 		this->query();
+		this->assembleBrain();
 	}
 }
 
@@ -785,6 +786,7 @@ void AI::query() {	// respond to logical query method
 		// still need to add entities (or) objects to Simulation
 
 		this->runSim();
+		// create this->simAdd(int n)
 		isSim = false;
 	} else if (isConvert == true) {	// run converter EURO
 		std::cout << std::endl << "(converter) (EURO->USD) : ";
