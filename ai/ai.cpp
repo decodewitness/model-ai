@@ -164,8 +164,8 @@ AI::AI(int n) {	// AI constructor
 	// perform query sampling and nlp query
 	for (int i=0; i<n; i++) {
 		std::cout << std::endl << "~:: running (" << n << ") queries." << std::endl << std::endl;
+		// this->assembleBrain();
 		this->query();
-		this->assembleBrain();
 	}
 }
 
@@ -820,7 +820,7 @@ void AI::query() {	// respond to logical query method
 		this->rollout(x);	// don't do the restore rollout function
 		isRollout = false;
 	} else if (isCurl == true) {	// hash function
-		std::cout << std::endl << "(curl engine) function() : ";
+		std::cout << std::endl << "(curl engine function) (provide an URL) :: ";
 		cin >> y;
 		this->curl(y);
 		isCurl = false;
@@ -997,6 +997,8 @@ void AI::query() {	// respond to logical query method
 			}
 		}
 		isPrintPunch = false;
+	} else {
+		this->assembleBrain();
 	}
 };
 

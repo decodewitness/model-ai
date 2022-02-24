@@ -181,7 +181,7 @@ void Brain::neural_net(std::string s, std::string h="h", int cumulator=1) {   //
     std::string hmac = string_next_logic(s);
     std::cout << std::endl << "HMAC : " << hmac << std::endl << std::endl;
 
-    this->search(query_string, 3);
+    this->search(query_string, 7);
 
     // for (int i=0; i<cumulator; i++) {
         // hmac.append(string_next_logic(s));
