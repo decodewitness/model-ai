@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff9cec7080)
-	- stacking header:(1)::<address>(0x7fff9cec70a0)
-	- stacking header:(2)::<address>(0x7fff9cec70c0)
-	- stacking header:(3)::<address>(0x7fff9cec70e0)
-	- stacking header:(4)::<address>(0x7fff9cec7100)
-	- stacking header:(5)::<address>(0x7fff9cec7120)
-	- stacking header:(6)::<address>(0x7fff9cec7140)
-	- stacking header:(7)::<address>(0x7fff9cec7160)
-	- stacking header:(8)::<address>(0x7fff9cec7180)
-	- stacking header:(9)::<address>(0x7fff9cec71a0)
+	- stacking header:(0)::<address>(0x7ffc84644820)
+	- stacking header:(1)::<address>(0x7ffc84644840)
+	- stacking header:(2)::<address>(0x7ffc84644860)
+	- stacking header:(3)::<address>(0x7ffc84644880)
+	- stacking header:(4)::<address>(0x7ffc846448a0)
+	- stacking header:(5)::<address>(0x7ffc846448c0)
+	- stacking header:(6)::<address>(0x7ffc846448e0)
+	- stacking header:(7)::<address>(0x7ffc84644900)
+	- stacking header:(8)::<address>(0x7ffc84644920)
+	- stacking header:(9)::<address>(0x7ffc84644940)
 
 
 -:: checking AI functions.
@@ -1565,16 +1565,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-symlink: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-symlink: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-symlink: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-symlink: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1591,17 +1591,16 @@ symlink: -- ./downloads
 	logic
 	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
 -:: finished x computation.
-
-~:: searching indexes.
-	:: hit(2)           logic is my only type of relation inside this algorithm.        + 2
-
 ~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
 
-- (debug)::sorter() data is open.
 string_next_logic() ::  ssh: logic
 
-HMAC : string_next_logic() :: logic :-L|| artificial          being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event., 
+HMAC : string_next_logic() :: >> logic is 
 
+
+~:: searching indexes:
+           logic is my only type of relation inside this algorithm.        + 2
 
 ~:: running (2) queries.
 
@@ -1611,20 +1610,27 @@ HMAC : string_next_logic() :: logic :-L|| artificial          being artificial, 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	intelligence
-	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
+	example
+	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0  ]
 -:: finished x computation.
-
-~:: searching indexes.
-	:: hit(1)    deciphering algorithms.                                         + 1
- hit(2)    deciphering algorithms.                                         + 1
-
 ~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
 
-- (debug)::sorter() data is open.
-string_next_logic() ::  ssh: intelligence
+string_next_logic() ::  ssh: example
 
-HMAC : string_next_logic() :: intelligence :-L|| artificial          being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event., 
+HMAC : string_next_logic() :: >> example is 
+
+
+~:: searching indexes:
+LINE II:          [artificial.dat]   
+
+(debug): search_index_code(line2) :: search_index:article :: [artificial.dat]   
+[artificial.dat]   
+
+LINE II:      sometimes we need an example of an example to illustrate what it is we are trying to point out by example references, comparing examples with the outcome to approve of a concept, exemplary, lead by example.
+
+(debug): search_index_code(line2) :: search_index:article :: 
+
 
 
 -:: aborting artificial life sequence, and clean up gracefully!

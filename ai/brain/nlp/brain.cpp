@@ -44,7 +44,7 @@ void Brain::file_access(int level) {
         this->output.open(store_file);
     }
 
-    if (level == 3) { // opens data collection
+    if (level == 3 || level == 0) { // opens data collection
         this->data.open(data_collection);
     }
 
@@ -191,9 +191,10 @@ int Brain::procure(int nr) {    // nr = this->set1
 void Brain::useBrain(std::string query) {
     // logic think
     // access cabinet with search method
-
     std::string logic = query;
-    this->search(logic, 3);
+    this->neural_net(query, logic, 1);
+
+    //this->search(logic, 3);
     //this->search_catalogue_index(logic);
 
     // options
@@ -228,13 +229,45 @@ void Brain::arrange() { // arranges data in cabinet // alphabetical sequence
     // arrange here
 };
 
+std::string Brain::search_index_code(std::string l) {
+    
+    int counter;
+
+    // std::string combined;    // used later   // see down
+    std::string code;
+
+    // s+l = word + line
+    ////////////////////
+
+    // separate code from line
+    for (int i=0; i<l.length(); i++){ 
+        if (l.at(i) != '[') {
+            counter++;
+        } else {
+            break;
+        }
+    }
+
+    // this should be the words between [brackets] inside "intelligence/data_collection"
+    code = l.substr(counter, (l.length()-1));
+
+    std::cout << "search_index:article :: " << code << std::endl;
+
+    // use variable "combined" here (see above) here to actually link the refreshed article from data_collection
+
+    return code;
+}
+
 void Brain::search(std::string logic, int n) { // search cabinet    // n is default 1   // n is resonate index
     std::string line;
+    std::string line2;
     std::string search;
+    std::string search2;
     std::string search_string = logic;
     int counter=0;
     int resonate_index = 0;
     int resonate_index_max = n;  // last index in cabinet according to reference
+    bool displayed=false;
 
     // has access cabinet
     if (!this->access_is_open && this->access.is_open() == false) {
@@ -245,15 +278,21 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
     this->access.seekg(SEEK_SET);
 
     std::cout << std::endl;
-    std::cout << "~:: searching indexes." << std::endl;
-    std::cout << "\t::";
+    std::cout << "~:: searching indexes:" << std::endl;
+    //std::cout << "\t::";
 
     // mark search term
     for (int i=0; i<resonate_index_max; i++) {
         this->access >> search;
-        
+        this->data >> search2;
+
         // read rest of line here
         std::getline(access, line);
+        std::getline(data, line2);
+
+        // "line" is going to hold the value from
+            // "intelligence/cabinet_collection"
+
 
         // debug section (std::cout ;; sleep(1))
         //std::cout << line << std::endl;
@@ -261,25 +300,51 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
 
         // continue
         if (search.compare(search_string) == 0) {
-            std::cout << " hit(" << i << ")";
+            // debug
+            // std::cout << " hit(" << i << ")";
             counter++;
 
             // do logic
             this->store_reference(line);    // stores the line in temporary catalogue or vector
 
+            if (displayed == false) {
+                // give option
+                std::cout << line << std::endl;
+
+                // search_index_code(line);
+                //std::cout << std::endl;
+                //std::cout << "(debug): search_index_code(line) :: " << search_index_code(line) << std::endl << std::endl;
+                sleep(2);
+
+                displayed = true;
+            }
+        }
+
+        if (search2.compare(search_string) == 0) {
+            // debug
+            // std::cout << " hit(" << i << ")";
+            counter++;
+
+            // do logic
+                //this->store_reference(line);    // stores the line in temporary catalogue or vector
+
             // give option
-            std::cout << line << std::endl;
-            sleep(1);
+            std::cout << "LINE II: " << line2 << std::endl;
+
+            // search_index_code(line);
+            std::cout << std::endl;
+            std::cout << "(debug): search_index_code(line2) :: " << search_index_code(line2) << std::endl << std::endl;
+            sleep(2);
         }
     }
+};
 
     // count to index resonate_frequency_max
-    for (int i=0; i<resonate_index_max; i++) {
+    // for (int i=0; i<resonate_index_max; i++) {
 
-    }
+    // }
 
-    std::cout << std::endl;
-};
+    // std::cout << std::endl;
 
 void Brain::recall(std::string s) {  // recalls events
     std::string h;
