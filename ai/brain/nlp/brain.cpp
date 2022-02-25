@@ -33,6 +33,7 @@ void Brain::file_access(int level) {
 
     if (level == 0) {   // open references (ai/brain/intelligence/cabinet)
         this->access.open(store_reference_file);
+        this->data.open(data_collection);
     }
     
     if (level == 1) {   // opens write database (ai/brain/intelligence/store)
@@ -270,12 +271,13 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
     bool displayed=false;
 
     // has access cabinet
-    if (!this->access_is_open && this->access.is_open() == false) {
+    if (!this->access_is_open && this->access.is_open() == false || this->data.is_open() == false) {
         this->file_access(0);
     }
 
     // start from index in cabinet
     this->access.seekg(SEEK_SET);
+    this->data.seekg(SEEK_SET);
 
     std::cout << std::endl;
     std::cout << "~:: searching indexes:" << std::endl;
@@ -285,6 +287,10 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
     for (int i=0; i<resonate_index_max; i++) {
         this->access >> search;
         this->data >> search2;
+
+        // debug
+        std::cout << "search: " << search << std::endl;
+        std::cout << "search2: " << search2 << std::endl;
 
         // read rest of line here
         std::getline(access, line);
