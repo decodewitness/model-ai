@@ -12,6 +12,9 @@ const char store_reference_file[] = "ai/brain/nlp/intelligence/cabinet_collectio
 const char data_collection[] = "ai/brain/nlp/intelligence/data_collection";
 const char store_file[] = "ai/brain/nlp/intelligence/store_file";
 
+std::string code;   // used by std::string Brain::search_index_code(std::string l)  // in file brain.cpp
+
+
 class Brain {
 private:
 // variables
@@ -65,7 +68,7 @@ public:
     void research(int x);   // research sets
     void arrange(); // arranges data in cabinet // alphabetical sequence
     void add_data();    // adds data to a stored reference (store_reference())
-    void search(std::string logic, int n=1); // search cabinet
+    std::string search(std::string logic, int n=1); // search cabinet
     // signal
     void done_with_query(); // creates done sequence in array done[]
 };

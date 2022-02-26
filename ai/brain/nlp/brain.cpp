@@ -254,34 +254,43 @@ void Brain::arrange() { // arranges data in cabinet // alphabetical sequence
 
 std::string Brain::search_index_code(std::string l) {
     
-    int counter;
-
-    // std::string combined;    // used later   // see down
-    std::string code;
-
-    // s+l = word + line
-    ////////////////////
+    // counters initialized with {0}
+    int counter1 = 0;
+    int counter2 = 0;
+    int counter3 = 0;
+    
+    bool stop = false;
+    bool tagIsComplete = false;
 
     // separate code from line
     for (int i=0; i<l.length(); i++){ 
-        if (l.at(i) != '[') {
-            counter++;
+        if (l.at(i) != '[' && stop == false) {
+            continue;
+        } else if (stop == false && l.at(i) == '[') {
+            stop=true;
+            counter1=i;
+        }
+
+        if (stop == true && l.at(i) != ']') {
+            counter2++;
+            continue;
         } else {
+            tagIsComplete = true;
+            counter3=i;
             break;
         }
     }
 
     // this should be the words between [brackets] inside "intelligence/data_collection"
-    code = l.substr(counter, (l.length()-1));
-
-    std::cout << "search_index:article :: " << code << std::endl;
+    code = l.substr(counter1);
+    std::cout << "search_index_code::[article] : [ " << code << " ]." << std::endl;
 
     // use variable "combined" here (see above) here to actually link the refreshed article from data_collection
 
     return code;
 }
 
-void Brain::search(std::string logic, int n) { // search cabinet    // n is default 1   // n is resonate index
+std::string Brain::search(std::string logic, int n) { // search cabinet    // n is default 1   // n is resonate index
     // has access cabinet
     this->file_access(0);
 
@@ -382,8 +391,31 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
         std::cout << line1 << std::endl;
         std::cout << std::endl;
         std::cout << line2 << std::endl;
-    } 
+    }
+
+    // return the broad definitions from line2
+        // later return article codes
+            // print article code for now...
+
+    return line2;
 };
+
+void Brain::recall(std::string s) {  // recalls events
+    std::string h;
+    
+    //this->search_catalogue_index(s);
+    //this->search_index_code(h);
+    //this->neural_net(s, h, 1); //neural_net(std::string s, std::string h, int cumulator)
+};
+
+void Brain::add_data() {    // adds data to a stored reference (store_reference())
+
+};
+
+void Brain::done_with_query() {
+    this->done[0] = true;
+};
+
     // if (this->access.is_open() == true) {
     //     this->access_is_open = true;
     // }
@@ -467,18 +499,4 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
 
     // std::cout << std::endl;
 
-void Brain::recall(std::string s) {  // recalls events
-    std::string h;
-    
-    //this->search_catalogue_index(s);
-    //this->search_index_code(h);
-    //this->neural_net(s, h, 1); //neural_net(std::string s, std::string h, int cumulator)
-};
-
-void Brain::add_data() {    // adds data to a stored reference (store_reference())
-
-};
-
-void Brain::done_with_query() {
-    this->done[0] = true;
-};
+// eof

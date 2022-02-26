@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc19bd0e40)
-	- stacking header:(1)::<address>(0x7ffc19bd0e60)
-	- stacking header:(2)::<address>(0x7ffc19bd0e80)
-	- stacking header:(3)::<address>(0x7ffc19bd0ea0)
-	- stacking header:(4)::<address>(0x7ffc19bd0ec0)
-	- stacking header:(5)::<address>(0x7ffc19bd0ee0)
-	- stacking header:(6)::<address>(0x7ffc19bd0f00)
-	- stacking header:(7)::<address>(0x7ffc19bd0f20)
-	- stacking header:(8)::<address>(0x7ffc19bd0f40)
-	- stacking header:(9)::<address>(0x7ffc19bd0f60)
+	- stacking header:(0)::<address>(0x7fff52bbc9d0)
+	- stacking header:(1)::<address>(0x7fff52bbc9f0)
+	- stacking header:(2)::<address>(0x7fff52bbca10)
+	- stacking header:(3)::<address>(0x7fff52bbca30)
+	- stacking header:(4)::<address>(0x7fff52bbca50)
+	- stacking header:(5)::<address>(0x7fff52bbca70)
+	- stacking header:(6)::<address>(0x7fff52bbca90)
+	- stacking header:(7)::<address>(0x7fff52bbcab0)
+	- stacking header:(8)::<address>(0x7fff52bbcad0)
+	- stacking header:(9)::<address>(0x7fff52bbcaf0)
 
 
 -:: checking AI functions.
@@ -1544,7 +1544,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1616,43 +1617,22 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-regular file: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-regular file: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-regular file: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	abc
-	[ simple x computation: type:[char]: len:3 vowels:2 consonants:1 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: abc
-
-HMAC : string_next_logic() :: >> abc is >> 
-
-
-~:: searching indexes:
-
-~:: running (10) queries.
+~:: running (20) queries.
 
 
 ::- type your query  -::
@@ -1663,29 +1643,29 @@ HMAC : string_next_logic() :: >> abc is >>
 	intelligence
 	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
 -:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
 
-string_next_logic() ::  ssh: intelligence
-
-HMAC : string_next_logic() :: >> intelligence is >> 
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ intelligence ].
+intelligence
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
 
 
 ~:: searching indexes:
 	search1 : intelligence
 	search2 : intelligence
-	line1 :     deciphering algorithms. + 3
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 3
 	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
 ~:: resonate_index::match found on line: (3).
 ~:: done.
 	~:: querymatches search string: "intelligence".
 
 -* intelligence is:
-    deciphering algorithms. + 3
+    deciphering algorithms, and using strategies to solve the inherent problem. + 3
 
     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
 
-~:: running (10) queries.
+~:: running (20) queries.
 
 
 ::- type your query  -::
@@ -1693,52 +1673,32 @@ HMAC : string_next_logic() :: >> intelligence is >>
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	eof
-	[ simple x computation: type:[char]: len:3 vowels:1 consonants:2 special:0  ]
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
 -:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
 
-string_next_logic() ::  ssh: eof
-
-HMAC : string_next_logic() :: >> eof is >> 
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ logic ].
+logic
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
 
 
 ~:: searching indexes:
-	search1 : eof
-	search2 : eof
-	line1 :  end of file.    + 999
-	line2 :      end of file, eof    [eof.dat]
-~:: resonate_index::match found on line: (7).
-	~:: querymatches search string: "eof".
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 4
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+~:: resonate_index::match found on line: (4).
+~:: done.
+	~:: querymatches search string: "logic".
 
--* eof is:
- end of file.    + 999
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 4
 
-     end of file, eof    [eof.dat]
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
 
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	lalala
-	[ simple x computation: type:[char]: len:6 vowels:3 consonants:3 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: lalala
-
-HMAC : string_next_logic() :: >> lalala is >> 
-
-
-~:: searching indexes:
-
-~:: running (10) queries.
+~:: running (20) queries.
 
 
 ::- type your query  -::
@@ -1746,31 +1706,48 @@ HMAC : string_next_logic() :: >> lalala is >>
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/bank
+	/help
 	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: parameter request: track_account().
+~:: parameter request: help().
  ]
 -:: finished x computation.
 
+--Help Function--
 
-(banking engine) function() : 
-	( 1) // ai.add_account(1);
-	( 2) // ai.subtract_account(10);
-	( 3) // ai.change_account(10);
-	( 4) // ai.printn_account();
-	( 5) // ai.total_account();
-	( 6) // ai.list_positive();
-	( 7) // ai.list_negative();
-	( 8) // ai.average_account();
-	( 9) // ai.transfer(1,200,20.00);
-	(10) // ai.store_accounts_detail();
-	(11) // ai.export_accounts(exp_account);
-	(12) // ai.import_accounts(imp_account);
+MODEL-AI: when the Ai asks you for Logic you can enter a string to trigger natural language processing,
+		or you can enter one of the following commands.
 
-	(99) QUIT();
+	COMMANDS:
+-----
 
-:: 
-~:: running (10) queries.
+
+help -- trigger this help function.
+killc -- Built in killchain(1).
+bank -- Starts accounting.
+hash -- Hashes a string in MD5.
+curl -- Curls a website of choice from your machine.
+table -- Prints the table in numbers of your chosen number.
+tableto -- Prints the table in numbers of your chosen number up to max chosen number.
+dice -- Print a random dice number. (1...6)
+dice2 -- Print a random dice number. (1...nr_of_eyes)
+stat -- Stat() function stats directory/file.
+cp -- cp() copies file1 into file2. (src) -> (dst)
+rm -- rm() remove function / removes file.
++ -- add() adds 2 numbers.
+- -- subtract() subtracts 2 numbers.
+/ -- divide() divides number 1 by number 2.
+* -- multiply() multiplies number 1 by number 2.
+pow -- power() does number 1 to power of number 2.
+punch -- return_punch() punch numbers like in a calculator.
+prpunch -- print_punch() punch numbers like in a calculator.
+simulation -- Runs a simulation for enities from the Entity class -&- objects from the Object class.
+convert -- Converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
+convertd -- Converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
+stepping -- Will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
+rollout -- the rollout() function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
+
+
+~:: running (20) queries.
 
 
 ::- type your query  -::
@@ -1778,20 +1755,20 @@ HMAC : string_next_logic() :: >> lalala is >>
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	killc
-	[ simple x computation: type:[char]: len:5 vowels:4 consonants:1 special:0  ]
+	simulation
+	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0  ]
 -:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
 
-string_next_logic() ::  ssh: killc
-
-HMAC : string_next_logic() :: >> killc is >> 
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ simulation ].
+simulation
+*string_next_logic() :: ssh: "simulation".
+	- HMAC string :: *string_next_logic() ::  (simulation) is >> 
 
 
 ~:: searching indexes:
 
-~:: running (10) queries.
+~:: running (20) queries.
 
 
 ::- type your query  -::
@@ -1799,16 +1776,17 @@ HMAC : string_next_logic() :: >> killc is >>
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
+	/simulation
+	[ simple x computation: type:[char]: len:11 vowels:5 consonants:5 special:1 
+~:: parameter request: simulation().
  ]
 -:: finished x computation.
 
-(kill chain) function() : 9
+(simulation) entities: 
+	SIM::adding {entity}.
 
--/- initializing killchain(1) sequence.
-
+	~:: adding sim {entity}.
+- (Entity) was created.
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).
