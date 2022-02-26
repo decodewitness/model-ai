@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe831060d0)
-	- stacking header:(1)::<address>(0x7ffe831060f0)
-	- stacking header:(2)::<address>(0x7ffe83106110)
-	- stacking header:(3)::<address>(0x7ffe83106130)
-	- stacking header:(4)::<address>(0x7ffe83106150)
-	- stacking header:(5)::<address>(0x7ffe83106170)
-	- stacking header:(6)::<address>(0x7ffe83106190)
-	- stacking header:(7)::<address>(0x7ffe831061b0)
-	- stacking header:(8)::<address>(0x7ffe831061d0)
-	- stacking header:(9)::<address>(0x7ffe831061f0)
+	- stacking header:(0)::<address>(0x7ffc9cd38500)
+	- stacking header:(1)::<address>(0x7ffc9cd38520)
+	- stacking header:(2)::<address>(0x7ffc9cd38540)
+	- stacking header:(3)::<address>(0x7ffc9cd38560)
+	- stacking header:(4)::<address>(0x7ffc9cd38580)
+	- stacking header:(5)::<address>(0x7ffc9cd385a0)
+	- stacking header:(6)::<address>(0x7ffc9cd385c0)
+	- stacking header:(7)::<address>(0x7ffc9cd385e0)
+	- stacking header:(8)::<address>(0x7ffc9cd38600)
+	- stacking header:(9)::<address>(0x7ffc9cd38620)
 
 
 -:: checking AI functions.
@@ -1565,22 +1565,22 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./DCIM
+socket: -- ./DCIM
 
 ~:: stats() function:
-regular file: -- ./module_bay
+socket: -- ./module_bay
 
 ~:: stats() function:
-regular file: -- ./info.txt
+socket: -- ./info.txt
 
 ~:: stats() function:
-regular file: -- ./downloads
+socket: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (100) queries.
+~:: running (10) queries.
 
 
 ::- type your query  -::
@@ -1588,14 +1588,87 @@ regular file: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	simulation
-	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0 
-~:: parameter request: simulation().
- ]
+	abc
+	[ simple x computation: type:[char]: len:3 vowels:2 consonants:1 special:0  ]
 -:: finished x computation.
+~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
 
-(simulation) entities: 
-	SIM::adding {entity}.
+string_next_logic() ::  ssh: abc
 
-	~:: adding sim {entity}.
-- (Entity) was created.
+HMAC : string_next_logic() :: >> abc is 
+
+
+~:: searching indexes:
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
+-:: finished x computation.
+~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
+
+string_next_logic() ::  ssh: intelligence
+
+HMAC : string_next_logic() :: >> intelligence is 
+
+
+~:: searching indexes:
+search1 : intelligence
+search2 : intelligence
+line1 :     deciphering algorithms. + 3
+line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+	~:: resonate_index::match found on line: (3).
+~:: done.
+	~:: querymatches search string: "intelligence".
+
+intelligence is:
+    deciphering algorithms. + 3
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
+-:: finished x computation.
+~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
+
+string_next_logic() ::  ssh: logic
+
+HMAC : string_next_logic() :: >> logic is 
+
+
+~:: searching indexes:
+search1 : logic
+search2 : logic
+line1 :    logic is my only type of relation inside this algorithm.    + 4
+line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+	~:: resonate_index::match found on line: (4).
+~:: done.
+	~:: querymatches search string: "logic".
+
+logic is:
+   logic is my only type of relation inside this algorithm.    + 4
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 

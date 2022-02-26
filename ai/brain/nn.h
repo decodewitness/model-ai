@@ -1,5 +1,8 @@
 #include "nlp/brain.cpp"
 
+// automate this next statement
+const int numberOfIndexes = 13; // number of indexes in cabinets    // must match both cabinets
+
 std::string Brain::sorter(std::string st, int level) {
 
     std::string combined;
@@ -14,6 +17,53 @@ std::string Brain::sorter(std::string st, int level) {
 
     return combined;
 };
+
+
+std::string Brain::string_next_logic(std::string ssh) {
+    // std::string sorter(std::string st, int level);
+    
+    std::string ss = "string_next_logic() :: ";
+    // ss = ssh;
+    
+    // 1st layer in neural net
+    std::string hmac = this->sorter(ssh, 1);
+    // 2nd layer in neural net
+    
+    // debugging
+    std::cout << ss << " ssh: " << ssh << std::endl;
+    
+    
+    //std::string chmac = search_index_code(hmac);
+    
+    ss.append(hmac);
+    // ss.append(" ");
+    ss.append(ssh);
+    ss.append(" is >> ");
+
+    // indexes here
+
+
+    //ss.append(", ");
+    //ss.append(chmac);
+
+    return ss;
+};
+
+void Brain::neural_net(std::string s, std::string h="h", int cumulator=1) {   // acts like a neural net
+
+    std::string hmac = string_next_logic(s);
+    std::cout << std::endl << "HMAC : " << hmac << std::endl << std::endl;
+
+    this->search(query_string, numberOfIndexes);    // numberOfIndexes must be consistent across all databases.
+
+    // for (int i=0; i<cumulator; i++) {
+        // hmac.append(string_next_logic(s));
+        // hmac.append(search_index_code(s));
+        //hmac.append(string_next_logic(s));
+        //hmac.append(string_next_logic(h));
+    // }
+};
+
 
 // std::string Brain::sorter(std::string st, int level) {
 
@@ -149,45 +199,4 @@ std::string Brain::sorter(std::string st, int level) {
 //     return combined;
 // };
 
-std::string Brain::string_next_logic(std::string ssh) {
-    // std::string sorter(std::string st, int level);
-    
-    std::string ss = "string_next_logic() :: ";
-    // ss = ssh;
-    
-    // 1st layer in neural net
-    std::string hmac = this->sorter(ssh, 1);
-    // 2nd layer in neural net
-    
-    // debugging
-    std::cout << ss << " ssh: " << ssh << std::endl;
-    
-    
-    //std::string chmac = search_index_code(hmac);
-    
-    ss.append(hmac);
-    // ss.append(" ");
-    ss.append(ssh);
-    ss.append(" is ");
-
-    //ss.append(", ");
-    //ss.append(chmac);
-
-    return ss;
-};
-
-void Brain::neural_net(std::string s, std::string h="h", int cumulator=1) {   // acts like a neural net
-
-    std::string hmac = string_next_logic(s);
-    std::cout << std::endl << "HMAC : " << hmac << std::endl << std::endl;
-
-    this->search(query_string, 13);
-
-    // for (int i=0; i<cumulator; i++) {
-        // hmac.append(string_next_logic(s));
-        // hmac.append(search_index_code(s));
-        //hmac.append(string_next_logic(s));
-        //hmac.append(string_next_logic(h));
-    // }
-};
-
+// eof

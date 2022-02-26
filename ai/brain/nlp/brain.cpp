@@ -6,7 +6,7 @@ Brain::Brain() {
     //int resonate iNumber
     this->resonate_index = starting_index;
     this->descriptor = false;
-    this->keep_alive = false;
+    // this->keep_alive = false;        // obsolete
     this->set1 = 0;
     this->set2 = 0;
     this->done[0] = false;
@@ -293,9 +293,10 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
     std::string empty;
 
     // int counter=0;
+    bool found=false;
     bool not_found=true;
-    int resonate_index = n;
-    int resonate_index_max = n;  // last index in cabinet according to reference
+    int resonate_index=n;
+    int resonate_index_max=n;  // last index in cabinet according to reference
 
     // bool displayed=false;
     std::cout << std::endl;
@@ -315,49 +316,73 @@ void Brain::search(std::string logic, int n) { // search cabinet    // n is defa
         this->access.seekg(SEEK_SET);
     }
 
-    for (int i=0;i<resonate_index_max; i++) {
+    for (int i=0;search1.compare(search_string) != 0 && i<resonate_index_max; i++) {
         
         if (not_found == true) {
+            // getting the search terms in the cabinets
             this->access >> search1;
             this->data >> search2;
 
-            std::cout << "search1 : " << search1 << std::endl;
-            std::cout << "search2 : " << search2 << std::endl;
+            if (search1.compare(search_string) == 0) {
+                found = true;
 
-            std::getline(access, line1);
-            std::getline(data, line2);
+                std::cout << "\tsearch1 : " << search1 << std::endl;
+                std::cout << "\tsearch2 : " << search2 << std::endl;
 
-            std::cout << "line1 : " << line1 << std::endl;
-            std::cout << "line2 : " << line2 << std::endl;
+                // getting the description in the cabinets
+                std::getline(access, line1);
+                std::getline(data, line2);
 
-            std::getline(access, empty);
-            std::getline(data, empty);
+                std::cout << "\tline1 : " << line1 << std::endl;
+                std::cout << "\tline2 : " << line2 << std::endl;
+                
+                // getting the empty lines in the cabinet
+                std::getline(access, empty);
+                std::getline(data, empty);
+            } else {
+                // skipping lines in the cabinets
+                std::getline(access, empty);
+                std::getline(access, empty);
+                // skipping empty lines in the cabinets
+                std::getline(data, empty);
+                std::getline(data, empty);
+            }
         }
 
-        if (search1.compare("") != 0 && search2.compare("") != 0 && search1.compare(search2) == 0) {
-            std::cout << "\t~:: searches match from cabinets." << std::endl;
+        if (search1.compare("") != 0 && search2.compare("") != 0 && search1.compare(search2) == 0 && found == true) {
             resonate_index = i;
-            std::cout << "\t~:: resonate_index::match found on line: " << (resonate_index+1) << std::endl;
-            
-            if (search1.compare(search_string) == 0) {
-                std::cout << "\t~:: matches search string." << std::endl;
-                not_found = false;
-                break;
-            }
+            std::cout << "~:: resonate_index::match found on line: (" << (resonate_index+1) << ")." << std::endl;
+
         } else {
             // std::cout << "~::!::~ error: search does not match search / cabinet is corrupted!" << std::endl;
             not_found = true;
             continue;
         }
+
+        if (search1.compare("eof") == 0) {
+            break;
+        }
+
+        if (found == true) {
+            std::cout << "~:: done." << std::endl;
+        }
+    }
+
+    if (search1.compare(search_string) == 0) {
+        if (search1.compare(search2)) {
+            std::cout << "\t~:: matches found accross files in database." << std::endl;
+        }
+        std::cout << "\t~:: querymatches search string: \"" << search_string << "\"." << std::endl;
+        not_found = false;
     }
 
     if (not_found == false) {
         std::cout << std::endl;
-        std::cout << search_string << " is:" << std::endl;
+        std::cout << "-* " << search_string << " is:" << std::endl;
         std::cout << line1 << std::endl;
         std::cout << std::endl;
         std::cout << line2 << std::endl;
-    }
+    } 
 };
     // if (this->access.is_open() == true) {
     //     this->access_is_open = true;
