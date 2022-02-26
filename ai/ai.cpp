@@ -1047,7 +1047,7 @@ void AI::query() {	// respond to logical query method
 void AI::killc(int x) {	// basically implies killchain handle
 	switch (x) {
 		case 9:
-			std::cout << std::endl << "-/- initializing sequence." << std::endl << std::endl;
+			std::cout << std::endl << "-/- initializing killchain(1) sequence." << std::endl << std::endl;
 			//system("pwd");
 			if (this->smpl == true)  { delete this->sampler; }
 			if (this->ammod == true) { delete this->ammodule; }

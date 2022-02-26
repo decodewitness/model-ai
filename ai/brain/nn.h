@@ -46,7 +46,7 @@ std::string Brain::sorter(std::string st, int level) {
 //     if (this->data.is_open()) {
 //         this->data.close();
 //     }
-//     file_access(3);
+//     file_access(0);
 //     data.seekg(SEEK_SET);
 
 //     for (int i=0; i<line_count; i++) {
@@ -181,7 +181,7 @@ void Brain::neural_net(std::string s, std::string h="h", int cumulator=1) {   //
     std::string hmac = string_next_logic(s);
     std::cout << std::endl << "HMAC : " << hmac << std::endl << std::endl;
 
-    this->search(query_string, 7);
+    this->search(query_string, 13);
 
     // for (int i=0; i<cumulator; i++) {
         // hmac.append(string_next_logic(s));

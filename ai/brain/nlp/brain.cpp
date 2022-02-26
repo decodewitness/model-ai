@@ -12,7 +12,7 @@ Brain::Brain() {
     this->done[0] = false;
 
 // inside of canopy
-    this->file_access(3);
+    this->file_access(0);
 };
 
 Brain::~Brain() {
@@ -30,38 +30,60 @@ Brain::~Brain() {
 
 // technicalities
 void Brain::file_access(int level) {
-
     if (level == 0) {   // open references (ai/brain/intelligence/cabinet)
-        this->access.open(store_reference_file);
-        this->data.open(data_collection);
+        if (this->access.is_open() == false) {
+            this->access.open(store_reference_file);
+        }
+        if (this->data.is_open() == false) {
+            this->data.open(data_collection);
+        }
+        if (this->output.is_open() == false) {
+            this->output.open(store_file);
+        }
     }
-    
-    if (level == 1) {   // opens write database (ai/brain/intelligence/store)
-        this->output.open(store_file);
-    }
-
-    if (level == 2) { // opens "cabinet" and "store"
-        this->access.open(store_reference_file);
-        this->output.open(store_file);
-    }
-
-    if (level == 3 || level == 0) { // opens data collection
-        this->data.open(data_collection);
-    }
-
-    if (this->access_is_open == false) {
-        this->access.open(store_reference_file);
-    }
-    
-    if (this->access.is_open()) {
+   
+    if (this->access.is_open() == true) {
         this->access_is_open = true;
-    } else if (level < 3) {
-        // debugging option   // system("pwd");
-        std::cout << std::endl << "~::!::~ Error :: (Brain::file_access)->" << store_file << " ~:: error opening file." << std::endl;
+    } else {
+        this->access_is_open = false;
+        std::cout << "~::!::~ error! could not open \"access\"." << std::endl;
     }
+
+    if (this->data.is_open() == true) {
+        this->data_is_open = true;
+    } else {
+        this->access_is_open = false;
+        std::cout << "~::!::~ error! could not open \"data\"." << std::endl;
+    }
+
+    if (this->output.is_open() == true) {
+        this->output_is_open = true;
+    } else {
+        this->output_is_open = false;
+        std::cout << "~::!::~ error! could not open \"output\"." << std::endl;
+    }
+};
+
+// if (level == 1) {   // opens write database (ai/brain/intelligence/store)
+    //     this->output.open(store_file);
+    // }
+
+    // if (level == 2) { // opens "cabinet" and "store"
+    //     this->access.open(store_reference_file);
+    //     this->output.open(store_file);
+    // }
+
+    // if (level == 3 || level == 0) { // opens data collection
+    //     this->data.open(data_collection);
+    // }
+
+
+    // else if (level < 3) {
+    //     // debugging option   // system("pwd");
+    //     std::cout << std::endl << "~::!::~ Error :: (Brain::file_access)->" << store_file << " ~:: error opening file." << std::endl;
+    // }
 
     // logic with "level" access here
-};   
 
     // if (access.is_open() == true) {
     //     this->access_is_open = true;
@@ -214,7 +236,7 @@ void Brain::useBrain(std::string query) {
 void Brain::store_reference(std::string s) { // handles data // resonate_index
     // inside of brain (cabinet)
     this->store_filename = store_reference_file;
-    this->file_access(2);
+    this->file_access(0);
     
     // sanitize input here
 
@@ -260,90 +282,158 @@ std::string Brain::search_index_code(std::string l) {
 }
 
 void Brain::search(std::string logic, int n) { // search cabinet    // n is default 1   // n is resonate index
-    std::string line;
-    std::string line2;
-    std::string search;
-    std::string search2;
-    std::string search_string = logic;
-    int counter=0;
-    int resonate_index = 0;
-    int resonate_index_max = n;  // last index in cabinet according to reference
-    bool displayed=false;
-
     // has access cabinet
-    if (!this->access_is_open && this->access.is_open() == false || this->data.is_open() == false) {
-        this->file_access(0);
-    }
+    this->file_access(0);
 
-    // start from index in cabinet
-    this->access.seekg(SEEK_SET);
-    this->data.seekg(SEEK_SET);
+    std::string search_string = logic;
+    std::string line1;
+    std::string line2;
+    std::string search1;
+    std::string search2;
+    std::string empty;
 
+    // int counter=0;
+    bool not_found=true;
+    int resonate_index = n;
+    int resonate_index_max = n;  // last index in cabinet according to reference
+
+    // bool displayed=false;
     std::cout << std::endl;
     std::cout << "~:: searching indexes:" << std::endl;
     //std::cout << "\t::";
 
-    // mark search term
-    for (int i=0; i<resonate_index_max; i++) {
-        this->access >> search;
-        this->data >> search2;
+    if (this->data_is_open == false) {
+        std::cout << "~::!::~ error! \"data\" is not open." << std::endl;
+        this->file_access(0);
+    } else {
+        this->data.seekg(SEEK_SET);
+    }
+    if (this->access_is_open == false) {
+        std::cout << "~::!::~ error! \"access\" is not open." << std::endl;
+        this->file_access(0);
+    } else {
+        this->access.seekg(SEEK_SET);
+    }
 
-        // debug
-        std::cout << "search: " << search << std::endl;
-        std::cout << "search2: " << search2 << std::endl;
+    for (int i=0;i<resonate_index_max; i++) {
+        
+        if (not_found == true) {
+            this->access >> search1;
+            this->data >> search2;
 
-        // read rest of line here
-        std::getline(access, line);
-        std::getline(data, line2);
+            std::cout << "search1 : " << search1 << std::endl;
+            std::cout << "search2 : " << search2 << std::endl;
 
-        // "line" is going to hold the value from
-            // "intelligence/cabinet_collection"
+            std::getline(access, line1);
+            std::getline(data, line2);
 
+            std::cout << "line1 : " << line1 << std::endl;
+            std::cout << "line2 : " << line2 << std::endl;
 
-        // debug section (std::cout ;; sleep(1))
-        //std::cout << line << std::endl;
-        //sleep(1);
-
-        // continue
-        if (search.compare(search_string) == 0) {
-            // debug
-            // std::cout << " hit(" << i << ")";
-            counter++;
-
-            // do logic
-            this->store_reference(line);    // stores the line in temporary catalogue or vector
-
-            if (displayed == false) {
-                // give option
-                std::cout << line << std::endl;
-
-                // search_index_code(line);
-                //std::cout << std::endl;
-                //std::cout << "(debug): search_index_code(line) :: " << search_index_code(line) << std::endl << std::endl;
-                sleep(2);
-
-                displayed = true;
-            }
+            std::getline(access, empty);
+            std::getline(data, empty);
         }
 
-        if (search2.compare(search_string) == 0) {
-            // debug
-            // std::cout << " hit(" << i << ")";
-            counter++;
-
-            // do logic
-                //this->store_reference(line);    // stores the line in temporary catalogue or vector
-
-            // give option
-            std::cout << "LINE II: " << line2 << std::endl;
-
-            // search_index_code(line);
-            std::cout << std::endl;
-            std::cout << "(debug): search_index_code(line2) :: " << search_index_code(line2) << std::endl << std::endl;
-            sleep(2);
+        if (search1.compare("") != 0 && search2.compare("") != 0 && search1.compare(search2) == 0) {
+            std::cout << "\t~:: searches match from cabinets." << std::endl;
+            resonate_index = i;
+            std::cout << "\t~:: resonate_index::match found on line: " << (resonate_index+1) << std::endl;
+            
+            if (search1.compare(search_string) == 0) {
+                std::cout << "\t~:: matches search string." << std::endl;
+                not_found = false;
+                break;
+            }
+        } else {
+            // std::cout << "~::!::~ error: search does not match search / cabinet is corrupted!" << std::endl;
+            not_found = true;
+            continue;
         }
     }
+
+    if (not_found == false) {
+        std::cout << std::endl;
+        std::cout << search_string << " is:" << std::endl;
+        std::cout << line1 << std::endl;
+        std::cout << std::endl;
+        std::cout << line2 << std::endl;
+    }
 };
+    // if (this->access.is_open() == true) {
+    //     this->access_is_open = true;
+    // }
+    // if (this->data.is_open() == true) {
+    //     this->data_is_open = true;
+    // }
+
+    // mark search term
+//     for (int i=0; i<resonate_index_max; i++) {
+//         // start from index in cabinet
+//         this->access.seekg(SEEK_SET);
+//         this->data.seekg(SEEK_SET);
+
+//         this->access >> search;
+//         sleep(1);
+//         this->data >> search2;
+
+//         // debug
+//         std::cout << "search: " << search << std::endl;
+//         std::cout << "search2: " << search2 << std::endl;
+
+//         // read rest of line here
+//         std::getline(access, line);
+//         std::getline(data, line2);
+
+//         // "line" is going to hold the value from
+//             // "intelligence/cabinet_collection"
+
+
+//         // debug section (std::cout ;; sleep(1))
+//         //std::cout << line << std::endl;
+//         //sleep(1);
+
+//         // continue
+//         if (search.compare(search_string) == 0) {
+//             // debug
+//             // std::cout << " hit(" << i << ")";
+//             counter++;
+
+//             // do logic
+//             this->store_reference(line);    // stores the line in temporary catalogue or vector
+
+//             if (displayed == false) {
+//                 // give option
+//                 std::cout << line << std::endl;
+
+//                 // search_index_code(line);
+//                 //std::cout << std::endl;
+//                 //std::cout << "(debug): search_index_code(line) :: " << search_index_code(line) << std::endl << std::endl;
+//                 sleep(2);
+
+//                 displayed = true;
+//             }
+//         } else {
+//             continue;
+//         }
+
+//         if (search2.compare(search_string) == 0) {
+//             // debug
+//             // std::cout << " hit(" << i << ")";
+//             counter++;
+
+//             // do logic
+//                 //this->store_reference(line);    // stores the line in temporary catalogue or vector
+
+//             // give option
+//             std::cout << "LINE II: " << line2 << std::endl;
+
+//             // search_index_code(line);
+//             std::cout << std::endl;
+//             std::cout << "(debug): search_index_code(line2) :: " << search_index_code(line2) << std::endl << std::endl;
+//             sleep(2);
+//         }
+//     }
+// };
 
     // count to index resonate_frequency_max
     // for (int i=0; i<resonate_index_max; i++) {

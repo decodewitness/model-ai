@@ -24,7 +24,9 @@ private:
 
     bool done[batch_size];
     bool descriptor;
+    bool output_is_open;
     bool access_is_open;
+    bool data_is_open;
     bool keep_alive;    // keeps access open
     
     ifstream access;
