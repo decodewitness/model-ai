@@ -124,10 +124,10 @@ if [ -f "./README.md.1" ]
   then
   mv ./README.md.1 ./doc/README.md.old.1
 fi
-if [ -f "./doc/README.md" ]
-  then
-  cp ./doc/README.md ./README.md
-fi
+# if [ -f "./doc/README.md" ]
+#   then
+#   cp ./doc/README.md ./README.md
+# fi
 ### do your clean up here ###
 
 
