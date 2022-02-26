@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe831060d0)
-	- stacking header:(1)::<address>(0x7ffe831060f0)
-	- stacking header:(2)::<address>(0x7ffe83106110)
-	- stacking header:(3)::<address>(0x7ffe83106130)
-	- stacking header:(4)::<address>(0x7ffe83106150)
-	- stacking header:(5)::<address>(0x7ffe83106170)
-	- stacking header:(6)::<address>(0x7ffe83106190)
-	- stacking header:(7)::<address>(0x7ffe831061b0)
-	- stacking header:(8)::<address>(0x7ffe831061d0)
-	- stacking header:(9)::<address>(0x7ffe831061f0)
+	- stacking header:(0)::<address>(0x7ffc19bd0e40)
+	- stacking header:(1)::<address>(0x7ffc19bd0e60)
+	- stacking header:(2)::<address>(0x7ffc19bd0e80)
+	- stacking header:(3)::<address>(0x7ffc19bd0ea0)
+	- stacking header:(4)::<address>(0x7ffc19bd0ec0)
+	- stacking header:(5)::<address>(0x7ffc19bd0ee0)
+	- stacking header:(6)::<address>(0x7ffc19bd0f00)
+	- stacking header:(7)::<address>(0x7ffc19bd0f20)
+	- stacking header:(8)::<address>(0x7ffc19bd0f40)
+	- stacking header:(9)::<address>(0x7ffc19bd0f60)
 
 
 -:: checking AI functions.
@@ -1492,8 +1492,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1580,7 +1579,7 @@ regular file: -- ./downloads
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (100) queries.
+~:: running (10) queries.
 
 
 ::- type your query  -::
@@ -1588,14 +1587,173 @@ regular file: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	simulation
-	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0 
-~:: parameter request: simulation().
+	abc
+	[ simple x computation: type:[char]: len:3 vowels:2 consonants:1 special:0  ]
+-:: finished x computation.
+~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
+
+string_next_logic() ::  ssh: abc
+
+HMAC : string_next_logic() :: >> abc is >> 
+
+
+~:: searching indexes:
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
+-:: finished x computation.
+~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
+
+string_next_logic() ::  ssh: intelligence
+
+HMAC : string_next_logic() :: >> intelligence is >> 
+
+
+~:: searching indexes:
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms. + 3
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+~:: resonate_index::match found on line: (3).
+~:: done.
+	~:: querymatches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms. + 3
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	eof
+	[ simple x computation: type:[char]: len:3 vowels:1 consonants:2 special:0  ]
+-:: finished x computation.
+~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
+
+string_next_logic() ::  ssh: eof
+
+HMAC : string_next_logic() :: >> eof is >> 
+
+
+~:: searching indexes:
+	search1 : eof
+	search2 : eof
+	line1 :  end of file.    + 999
+	line2 :      end of file, eof    [eof.dat]
+~:: resonate_index::match found on line: (7).
+	~:: querymatches search string: "eof".
+
+-* eof is:
+ end of file.    + 999
+
+     end of file, eof    [eof.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	lalala
+	[ simple x computation: type:[char]: len:6 vowels:3 consonants:3 special:0  ]
+-:: finished x computation.
+~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
+
+string_next_logic() ::  ssh: lalala
+
+HMAC : string_next_logic() :: >> lalala is >> 
+
+
+~:: searching indexes:
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/bank
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: track_account().
  ]
 -:: finished x computation.
 
-(simulation) entities: 
-	SIM::adding {entity}.
 
-	~:: adding sim {entity}.
-- (Entity) was created.
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: 
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	killc
+	[ simple x computation: type:[char]: len:5 vowels:4 consonants:1 special:0  ]
+-:: finished x computation.
+~:: debug :: sorter().
+	~:: sorter() :: search_index:article :: 
+
+string_next_logic() ::  ssh: killc
+
+HMAC : string_next_logic() :: >> killc is >> 
+
+
+~:: searching indexes:
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
+ ]
+-:: finished x computation.
+
+(kill chain) function() : 9
+
+-/- initializing killchain(1) sequence.
+
