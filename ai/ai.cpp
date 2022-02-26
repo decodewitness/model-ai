@@ -485,7 +485,7 @@ void AI::test(int n=0) { // testing all modules in this function
 
 void run_checks(int n) {	// displays "running checks" message yet
 	std::cout << "-:: running checks" << std::endl << std::endl;
-}
+};
 
 void AI::play_audio(int s=1) {	// plays an audio sample (int)(s)
 	// debug string
@@ -493,11 +493,13 @@ void AI::play_audio(int s=1) {	// plays an audio sample (int)(s)
 	
 	// audio device + sample nr
 	play_audio_device(s);
-}
+	sleep(1);
+};
 
 void AI::play_audio_file(std::string path) {
 	// audio file
 	play_audio_f(path);
+	sleep(1);
 };
 
 // must be redevised native and compatibly
@@ -818,10 +820,15 @@ void AI::query() {	// respond to logical query method
 		cin >> x;
 		std::cout << std::endl;
 
+		// start Simulation
+	this->startSim();
+
 		// still need to add entities (or) objects to Simulation
-		for (int i=0; i<x; i++) {
+		for (int i=1; i<x; i++) {
 			std::cout << "\tSIM::adding {entity}." << std::endl;
-			this->addSimEntity(0,0,0,(i+1));
+			//this->addSimEntity(0,0,0,(i+1));
+			this->addSimEntity(0,0,0,i);
+
 		}
 
 		std::cout << std::endl << "(simulation) objects: ";
@@ -829,9 +836,10 @@ void AI::query() {	// respond to logical query method
 		std::cout << std::endl;
 
 		// still need to add entities (or) objects to Simulation
-		for (int i=0; i<x; i++) {
+		for (int i=1; i<x; i++) {
 			std::cout << "\tSIM::adding {object}." << std::endl;
-			this->addSimObject(0,0,0,(i+1));
+			//this->addSimObject(0,0,0,(i+1));
+			this->addSimObject(0,0,0,0);
 		}
 		// run simulation
 		this->runSim();

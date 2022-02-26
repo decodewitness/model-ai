@@ -73,7 +73,7 @@ void Simulation::createObject(double x, double y, double z, int n) {
 
 int Simulation::killEntity(int n) {
     if (n>=0 && n<MAX_ENTITIES) {
-        delete this->entity[n];
+        //delete this->entity[n];
         entityList[n] = false;
 
         //delete this->entityVertex[n];
@@ -89,7 +89,7 @@ int Simulation::killEntity(int n) {
 
 int Simulation::killObject(int n) {
     if (n>=0 && n<MAX_ENTITIES) {
-        delete this->object[n];
+        //delete this->object[n];
         objectList[n] = false;
 
         //delete this->entityVertex[n];

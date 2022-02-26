@@ -7,15 +7,15 @@
 
 void AI::runSim() {	// sim objects and such go here
 	// start the sim	// should be 1st statement in the function "runSim()"
-	this->startSim();
+	// this->startSim();
 	
 	// play audio file -- already done in "startSim()"
 	this->play_audio_file("ai/system/audio/samples/vworge.wav");
 	sleep(1);
 	std::cout << "\t~:: simulation is running." << std::endl;
 	
-	//this->addSimEntity(0,0,0,0);
-	//this->addSimObject(0,0,0,0);
+	// this->addSimEntity(0,0,0,0);
+	// this->addSimObject(0,0,0,0);
 	this->listAllEO();
 	this->printEntityCount();
 	this->printObjectCount();
