@@ -71,11 +71,42 @@ void AI::help(int n=1) {
 		// more function	// press a key
 	// functions alphabetic
 	std::cout << std::endl;
-	std::cout << "--Help Function--" << std::endl << std::endl;
+	std::cout << "--Help Function--" << std::endl;
+	std::cout << std::endl;
+
+	std::cout << "MODEL-AI: when the Ai asks you for Logic you can enter a string to trigger natural language processing," << std::endl;
+	std::cout << "\t\tor you can enter one of the following commands." << std::endl;
+	std::cout << std::endl;
+
 	std::cout << "\tCOMMANDS:" << std::endl;
 	std::cout << "-----" << std::endl << std::endl;
+	std::cout << std::endl;
 
-	std::cout << "- logic" << std::endl;
+	std::cout << "help -- trigger this help function." << std::endl;
+	std::cout << "killc -- Built in killchain(1)." << std::endl;
+	std::cout << "bank -- Starts accounting." << std::endl;
+	std::cout << "hash -- Hashes a string in MD5." << std::endl;
+	std::cout << "curl -- Curls a website of choice from your machine." << std::endl;
+	std::cout << "table -- Prints the table in numbers of your chosen number." << std::endl;
+	std::cout << "tableto -- Prints the table in numbers of your chosen number up to max chosen number." << std::endl;
+	std::cout << "dice -- Print a random dice number. (1...6)" << std::endl;
+	std::cout << "dice2 -- Print a random dice number. (1...nr_of_eyes)" << std::endl;
+	std::cout << "stat -- Stat() function stats directory/file." << std::endl;
+	std::cout << "cp -- cp() copies file1 into file2. (src) -> (dst)" << std::endl;
+	std::cout << "rm -- rm() remove function / removes file." << std::endl;
+	std::cout << "+ -- add() adds 2 numbers." << std::endl;
+	std::cout << "- -- subtract() subtracts 2 numbers." << std::endl;
+	std::cout << "/ -- divide() divides number 1 by number 2." << std::endl;
+	std::cout << "* -- multiply() multiplies number 1 by number 2." << std::endl;
+	std::cout << "pow -- power() does number 1 to power of number 2." << std::endl;
+	std::cout << "punch -- return_punch() punch numbers like in a calculator." << std::endl;
+	std::cout << "prpunch -- print_punch() punch numbers like in a calculator." << std::endl;
+	std::cout << "simulation -- Runs a simulation for enities from the Entity class -&- objects from the Object class." << std::endl;
+	std::cout << "convert -- Converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated)." << std::endl;
+	std::cout << "convertd -- Converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated)." << std::endl;
+	std::cout << "stepping -- Will start the (incremental for now) \"stepping engine\" in which you could potentially stack any type of: math, algorithm, or data." << std::endl;
+	std::cout << "rollout -- the rollout() function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way." << std::endl;
+	
 	// help
 	// 
 
@@ -779,14 +810,31 @@ void AI::query() {	// respond to logical query method
 	logicalQuery(query_string);
 
 	// process commands	// compute logic and strings
-	if (isSim == true) {	// run simulation
+	if (isHelp == true) {
+		this->help(1);
+		isHelp = false;
+	} else if (isSim == true) {	// run simulation
 		std::cout << std::endl << "(simulation) entities: ";
 		cin >> x;
+		std::cout << std::endl;
 
 		// still need to add entities (or) objects to Simulation
+		for (int i=0; i<x; i++) {
+			std::cout << "\tSIM::adding {entity}." << std::endl;
+			this->addSimEntity(0,0,0,(i+1));
+		}
 
+		std::cout << std::endl << "(simulation) objects: ";
+		cin >> x;
+		std::cout << std::endl;
+
+		// still need to add entities (or) objects to Simulation
+		for (int i=0; i<x; i++) {
+			std::cout << "\tSIM::adding {object}." << std::endl;
+			this->addSimObject(0,0,0,(i+1));
+		}
+		// run simulation
 		this->runSim();
-		// create this->simAdd(int n)
 		isSim = false;
 	} else if (isConvert == true) {	// run converter EURO
 		std::cout << std::endl << "(converter) (EURO->USD) : ";

@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffd9ea74a0)
-	- stacking header:(1)::<address>(0x7fffd9ea74c0)
-	- stacking header:(2)::<address>(0x7fffd9ea74e0)
-	- stacking header:(3)::<address>(0x7fffd9ea7500)
-	- stacking header:(4)::<address>(0x7fffd9ea7520)
-	- stacking header:(5)::<address>(0x7fffd9ea7540)
-	- stacking header:(6)::<address>(0x7fffd9ea7560)
-	- stacking header:(7)::<address>(0x7fffd9ea7580)
-	- stacking header:(8)::<address>(0x7fffd9ea75a0)
-	- stacking header:(9)::<address>(0x7fffd9ea75c0)
+	- stacking header:(0)::<address>(0x7ffe831060d0)
+	- stacking header:(1)::<address>(0x7ffe831060f0)
+	- stacking header:(2)::<address>(0x7ffe83106110)
+	- stacking header:(3)::<address>(0x7ffe83106130)
+	- stacking header:(4)::<address>(0x7ffe83106150)
+	- stacking header:(5)::<address>(0x7ffe83106170)
+	- stacking header:(6)::<address>(0x7ffe83106190)
+	- stacking header:(7)::<address>(0x7ffe831061b0)
+	- stacking header:(8)::<address>(0x7ffe831061d0)
+	- stacking header:(9)::<address>(0x7ffe831061f0)
 
 
 -:: checking AI functions.
@@ -1617,16 +1617,16 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./DCIM
+regular file: -- ./DCIM
 
 ~:: stats() function:
-character device: -- ./module_bay
+regular file: -- ./module_bay
 
 ~:: stats() function:
-character device: -- ./info.txt
+regular file: -- ./info.txt
 
 ~:: stats() function:
-character device: -- ./downloads
+regular file: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1640,361 +1640,17 @@ character device: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	artificial
-	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: artificial
-
-HMAC : string_next_logic() :: >> artificial is 
-
-
-~:: searching indexes:
-search1 : artificial
-search2 : artificial
-line1 :   something real or artificial made up out of a matter construct. +1
-line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 1
-	~:: matches search string.
-
-artificial is:
-  something real or artificial made up out of a matter construct. +1
-
-  being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
-
-~:: running (100) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	intelligence
-	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: intelligence
-
-HMAC : string_next_logic() :: >> intelligence is 
-
-
-~:: searching indexes:
-search1 : artificial
-search2 : artificial
-line1 :   something real or artificial made up out of a matter construct. +1
-line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 1
-search1 : example
-search2 : example
-line1 :  example of a random string.  + 2 
-line2 :      sometimes we need an example of an example to illustrate what it is we are trying to point out by example references, comparing examples with the outcome to approve of a concept, exemplary, lead by example.  [example.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 2
-search1 : intelligence
-search2 : intelligence
-line1 :     deciphering algorithms. + 3
-line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 3
-	~:: matches search string.
-
-intelligence is:
-    deciphering algorithms. + 3
-
-    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-
-~:: running (100) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: logic
-
-HMAC : string_next_logic() :: >> logic is 
-
-
-~:: searching indexes:
-search1 : artificial
-search2 : artificial
-line1 :   something real or artificial made up out of a matter construct. +1
-line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 1
-search1 : example
-search2 : example
-line1 :  example of a random string.  + 2 
-line2 :      sometimes we need an example of an example to illustrate what it is we are trying to point out by example references, comparing examples with the outcome to approve of a concept, exemplary, lead by example.  [example.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 2
-search1 : intelligence
-search2 : intelligence
-line1 :     deciphering algorithms. + 3
-line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 3
-search1 : logic
-search2 : logic
-line1 :    logic is my only type of relation inside this algorithm.    + 4
-line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 4
-	~:: matches search string.
-
-logic is:
-   logic is my only type of relation inside this algorithm.    + 4
-
-   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
-
-~:: running (100) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	manual
-	[ simple x computation: type:[char]: len:6 vowels:3 consonants:3 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: manual
-
-HMAC : string_next_logic() :: >> manual is 
-
-
-~:: searching indexes:
-search1 : artificial
-search2 : artificial
-line1 :   something real or artificial made up out of a matter construct. +1
-line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 1
-search1 : example
-search2 : example
-line1 :  example of a random string.  + 2 
-line2 :      sometimes we need an example of an example to illustrate what it is we are trying to point out by example references, comparing examples with the outcome to approve of a concept, exemplary, lead by example.  [example.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 2
-search1 : intelligence
-search2 : intelligence
-line1 :     deciphering algorithms. + 3
-line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 3
-search1 : logic
-search2 : logic
-line1 :    logic is my only type of relation inside this algorithm.    + 4
-line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 4
-search1 : manual
-search2 : manual
-line1 :   document with proper instructions.   + 5
-line2 :   manual instructions or information for last reference or reference studies, example 1: this AI uses the first instruction inside the data_collection to assign data which is most fitting in describing the essence of the content which is extrapolated after assigning that variable, example 2: the lines are separated with a newline character after which the search term and respectively there are usually myriad relating concepts behind the commas, example 3: the search term is described after the tab and several or minimally one resolution of a concept are explained next, example 4: the enhanced resolution combines the distributed weights of the concepts into a proper resolution we call PHRASES inside this model.   [manual.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 5
-	~:: matches search string.
-
-manual is:
-  document with proper instructions.   + 5
-
-  manual instructions or information for last reference or reference studies, example 1: this AI uses the first instruction inside the data_collection to assign data which is most fitting in describing the essence of the content which is extrapolated after assigning that variable, example 2: the lines are separated with a newline character after which the search term and respectively there are usually myriad relating concepts behind the commas, example 3: the search term is described after the tab and several or minimally one resolution of a concept are explained next, example 4: the enhanced resolution combines the distributed weights of the concepts into a proper resolution we call PHRASES inside this model.   [manual.dat]
-
-~:: running (100) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: logic
-
-HMAC : string_next_logic() :: >> logic is 
-
-
-~:: searching indexes:
-search1 : artificial
-search2 : artificial
-line1 :   something real or artificial made up out of a matter construct. +1
-line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 1
-search1 : example
-search2 : example
-line1 :  example of a random string.  + 2 
-line2 :      sometimes we need an example of an example to illustrate what it is we are trying to point out by example references, comparing examples with the outcome to approve of a concept, exemplary, lead by example.  [example.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 2
-search1 : intelligence
-search2 : intelligence
-line1 :     deciphering algorithms. + 3
-line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 3
-search1 : logic
-search2 : logic
-line1 :    logic is my only type of relation inside this algorithm.    + 4
-line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 4
-	~:: matches search string.
-
-logic is:
-   logic is my only type of relation inside this algorithm.    + 4
-
-   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
-
-~:: running (100) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	eof
-	[ simple x computation: type:[char]: len:3 vowels:1 consonants:2 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: eof
-
-HMAC : string_next_logic() :: >> eof is 
-
-
-~:: searching indexes:
-search1 : artificial
-search2 : artificial
-line1 :   something real or artificial made up out of a matter construct. +1
-line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 1
-search1 : example
-search2 : example
-line1 :  example of a random string.  + 2 
-line2 :      sometimes we need an example of an example to illustrate what it is we are trying to point out by example references, comparing examples with the outcome to approve of a concept, exemplary, lead by example.  [example.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 2
-search1 : intelligence
-search2 : intelligence
-line1 :     deciphering algorithms. + 3
-line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 3
-search1 : logic
-search2 : logic
-line1 :    logic is my only type of relation inside this algorithm.    + 4
-line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 4
-search1 : manual
-search2 : manual
-line1 :   document with proper instructions.   + 5
-line2 :   manual instructions or information for last reference or reference studies, example 1: this AI uses the first instruction inside the data_collection to assign data which is most fitting in describing the essence of the content which is extrapolated after assigning that variable, example 2: the lines are separated with a newline character after which the search term and respectively there are usually myriad relating concepts behind the commas, example 3: the search term is described after the tab and several or minimally one resolution of a concept are explained next, example 4: the enhanced resolution combines the distributed weights of the concepts into a proper resolution we call PHRASES inside this model.   [manual.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 5
-search1 : model-ai
-search2 : model-ai
-line1 :     Model-Ai client.    + 6
-line2 :     MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 6
-search1 : eof
-search2 : eof
-line1 :  end of file.    + 999
-line2 :      end of file, eof    [eof.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 7
-	~:: matches search string.
-
-eof is:
- end of file.    + 999
-
-     end of file, eof    [eof.dat]
-
-~:: running (100) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	example
-	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0  ]
--:: finished x computation.
-~:: debug :: sorter().
-	~:: sorter() :: search_index:article :: 
-
-string_next_logic() ::  ssh: example
-
-HMAC : string_next_logic() :: >> example is 
-
-
-~:: searching indexes:
-search1 : artificial
-search2 : artificial
-line1 :   something real or artificial made up out of a matter construct. +1
-line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 1
-search1 : example
-search2 : example
-line1 :  example of a random string.  + 2 
-line2 :      sometimes we need an example of an example to illustrate what it is we are trying to point out by example references, comparing examples with the outcome to approve of a concept, exemplary, lead by example.  [example.dat]
-	~:: searches match from cabinets.
-	~:: resonate_index::match found on line: 2
-	~:: matches search string.
-
-example is:
- example of a random string.  + 2 
-
-     sometimes we need an example of an example to illustrate what it is we are trying to point out by example references, comparing examples with the outcome to approve of a concept, exemplary, lead by example.  [example.dat]
-
-~:: running (100) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	killc
-	[ simple x computation: type:[char]: len:5 vowels:4 consonants:1 special:0 
-~:: parameter request: kill_chain().
+	simulation
+	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0 
+~:: parameter request: simulation().
  ]
 -:: finished x computation.
 
-(kill chain) function() : 9
+(simulation) entities: 
+	SIM::adding {entity}.
 
--/- initializing sequence.
-
+	~:: adding sim {entity}.
+- (Entity) was created.
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).

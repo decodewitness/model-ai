@@ -14,8 +14,8 @@ void AI::runSim() {	// sim objects and such go here
 	sleep(1);
 	std::cout << "\t~:: simulation is running." << std::endl;
 	
-	this->addSimEntity(0,0,0,0);
-	this->addSimObject(0,0,0,0);
+	//this->addSimEntity(0,0,0,0);
+	//this->addSimObject(0,0,0,0);
 	this->listAllEO();
 	this->printEntityCount();
 	this->printObjectCount();
