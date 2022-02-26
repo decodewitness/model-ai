@@ -7,7 +7,9 @@
 #ifndef _AI_HEADER
 #define _AI_HEADER
 
-#define VERSION "v0.1-25"
+#define PROGRAM "model-Ai"
+#define VERSION "v0.1-25c"
+
 #define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
 
 // commandos / comodos && _varaan
@@ -151,8 +153,9 @@ public:
 	// splash
 	void splash(void);
 
-	// help
+	// help && version
 	void help(int n);
+	void version();
 
 	// round init
 	void init();

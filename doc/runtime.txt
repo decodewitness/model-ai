@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe6e6c6310)
-	- stacking header:(1)::<address>(0x7ffe6e6c6330)
-	- stacking header:(2)::<address>(0x7ffe6e6c6350)
-	- stacking header:(3)::<address>(0x7ffe6e6c6370)
-	- stacking header:(4)::<address>(0x7ffe6e6c6390)
-	- stacking header:(5)::<address>(0x7ffe6e6c63b0)
-	- stacking header:(6)::<address>(0x7ffe6e6c63d0)
-	- stacking header:(7)::<address>(0x7ffe6e6c63f0)
-	- stacking header:(8)::<address>(0x7ffe6e6c6410)
-	- stacking header:(9)::<address>(0x7ffe6e6c6430)
+	- stacking header:(0)::<address>(0x7ffd180d8870)
+	- stacking header:(1)::<address>(0x7ffd180d8890)
+	- stacking header:(2)::<address>(0x7ffd180d88b0)
+	- stacking header:(3)::<address>(0x7ffd180d88d0)
+	- stacking header:(4)::<address>(0x7ffd180d88f0)
+	- stacking header:(5)::<address>(0x7ffd180d8910)
+	- stacking header:(6)::<address>(0x7ffd180d8930)
+	- stacking header:(7)::<address>(0x7ffd180d8950)
+	- stacking header:(8)::<address>(0x7ffd180d8970)
+	- stacking header:(9)::<address>(0x7ffd180d8990)
 
 
 -:: checking AI functions.
@@ -1565,22 +1565,22 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-symlink: -- ./DCIM
+FIFO/pipe: -- ./DCIM
 
 ~:: stats() function:
-symlink: -- ./module_bay
+FIFO/pipe: -- ./module_bay
 
 ~:: stats() function:
-symlink: -- ./info.txt
+FIFO/pipe: -- ./info.txt
 
 ~:: stats() function:
-symlink: -- ./downloads
+FIFO/pipe: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (20) queries.
+~:: running (10) queries.
 
 
 ::- type your query  -::
@@ -1588,20 +1588,220 @@ symlink: -- ./downloads
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	simulation
+	/help
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: help().
+ ]
+-:: finished x computation.
+
+--Help Function--
+
+MODEL-AI: v0.1-25c :
+		When the Ai asks you for Logic you can enter a string to trigger natural language processing,
+		or you can enter one of the following commands.
+
+	COMMANDS:
+-----
+
+
+help -- trigger this help function.
+killc -- Built in killchain(1).
+bank -- Starts accounting.
+hash -- Hashes a string in MD5.
+curl -- Curls a website of choice from your machine.
+table -- Prints the table in numbers of your chosen number.
+tableto -- Prints the table in numbers of your chosen number up to max chosen number.
+dice -- Print a random dice number. (1...6)
+dice2 -- Print a random dice number. (1...nr_of_eyes)
+stat -- Stat() function stats directory/file.
+cp -- cp() copies file1 into file2. (src) -> (dst)
+rm -- rm() remove function / removes file.
++ -- add() adds 2 numbers.
+- -- subtract() subtracts 2 numbers.
+/ -- divide() divides number 1 by number 2.
+* -- multiply() multiplies number 1 by number 2.
+pow -- power() does number 1 to power of number 2.
+punch -- return_punch() punch numbers like in a calculator.
+prpunch -- print_punch() punch numbers like in a calculator.
+simulation -- Runs a simulation for enities from the Entity class -&- objects from the Object class.
+convert -- Converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
+convertd -- Converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
+stepping -- Will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
+rollout -- the rollout() function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
+
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/version
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
+~:: parameter request: version().
+ ]
+-:: finished x computation.
+
+model-Ai version: v0.1-25c
+https://model-ai.com/archive/model-ai.tar.gz
+
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	artificial
 	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0  ]
 -:: finished x computation.
 
 	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [ simulation ].
-simulation
-*string_next_logic() :: ssh: "simulation".
-	- HMAC string :: *string_next_logic() ::  (simulation) is >> 
+		~:: sorter() :: search_index_code::[article] : [ artificial ].
+artificial
+*string_next_logic() :: ssh: "artificial".
+	- HMAC string :: *string_next_logic() ::  (artificial) is >> 
+
+
+~:: searching indexes:
+	search1 : artificial
+	search2 : artificial
+	line1 :   something real or artificial made up out of a matter construct. + 1
+	line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
+~:: resonate_index::match found on line: (1).
+~:: done.
+	~:: querymatches search string: "artificial".
+
+-* artificial is:
+  something real or artificial made up out of a matter construct. + 1
+
+  being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
+-:: finished x computation.
+
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ intelligence ].
+intelligence
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+
+
+~:: searching indexes:
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 3
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+~:: resonate_index::match found on line: (3).
+~:: done.
+	~:: querymatches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 3
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	example
+	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0  ]
+-:: finished x computation.
+
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ example ].
+example
+*string_next_logic() :: ssh: "example".
+	- HMAC string :: *string_next_logic() ::  (example) is >> 
+
+
+~:: searching indexes:
+	search1 : example
+	search2 : example
+	line1 :  example of a random string to illustrate or describe a similar object.  + 2 
+	line2 :      sometimes we need an example of an example to illustrate what it is that we are trying to point out by examplar references, comparing examples with the outcome to approve of a concept to illustrate the 1st example, exemplary, leading by example, an illustration.  [example.dat]
+~:: resonate_index::match found on line: (2).
+~:: done.
+	~:: querymatches search string: "example".
+
+-* example is:
+ example of a random string to illustrate or describe a similar object.  + 2 
+
+     sometimes we need an example of an example to illustrate what it is that we are trying to point out by examplar references, comparing examples with the outcome to approve of a concept to illustrate the 1st example, exemplary, leading by example, an illustration.  [example.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	calc
+	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0  ]
+-:: finished x computation.
+
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ calc ].
+calc
+*string_next_logic() :: ssh: "calc".
+	- HMAC string :: *string_next_logic() ::  (calc) is >> 
 
 
 ~:: searching indexes:
 
-~:: running (20) queries.
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
+-:: finished x computation.
+
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ logic ].
+logic
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+
+
+~:: searching indexes:
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 4
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+~:: resonate_index::match found on line: (4).
+~:: done.
+	~:: querymatches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 4
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+
+~:: running (10) queries.
 
 
 ::- type your query  -::
@@ -1616,7 +1816,176 @@ simulation
 -:: finished x computation.
 
 (simulation) entities: 
+
+~:: starting simulation.
+	~:: sim construct()
+	~:: initializing simulation run.
+		~:: ready | initialized sim.
 	SIM::adding {entity}.
 
 	~:: adding sim {entity}.
 - (Entity) was created.
+		~:: added sim {entity}(1)
+	SIM::adding {entity}.
+
+	~:: adding sim {entity}.
+- (Entity) was created.
+		~:: added sim {entity}(2)
+	SIM::adding {entity}.
+
+	~:: adding sim {entity}.
+- (Entity) was created.
+		~:: added sim {entity}(3)
+	SIM::adding {entity}.
+
+	~:: adding sim {entity}.
+- (Entity) was created.
+		~:: added sim {entity}(4)
+	SIM::adding {entity}.
+
+	~:: adding sim {entity}.
+- (Entity) was created.
+		~:: added sim {entity}(5)
+
+(simulation) objects: 
+	SIM::adding {object}.
+
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(0)
+	SIM::adding {object}.
+
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(0)
+	SIM::adding {object}.
+
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(0)
+	SIM::adding {object}.
+
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(0)
+	SIM::adding {object}.
+
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(0)
+	SIM::adding {object}.
+
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(0)
+	~:: simulation is running.
+
+~:: listing entities & objects:
+	- entity(1) (x:0 y:0 z:0) {<empty label>} entity(2) (x:0 y:0 z:0) {<empty label>} entity(3) (x:0 y:0 z:0) {<empty label>} entity(4) (x:0 y:0 z:0) {<empty label>} entity(5) (x:0 y:0 z:0) {<empty label>} 
+	- obj(0) (x:0 y:0 z:0) {<empty object>}
+
+- entity count: 5
+- object count: 6
+
+	~:: sim::entering cycle -1-.
+	~:: sim::entering cycle -2-.
+	~:: sim::entering cycle -3-.
+	~:: sim::entering cycle -4-.
+	~:: sim::entering cycle -5-.
+	~:: sim::entering cycle -6-.
+	~:: sim::entering cycle -7-.
+	~:: deleted sim {object}(0)
+- {Object}(0) reached mortality.
+
+#1 objects got destroyed.
+
+	~:: sim::entering cycle -8-.
+	~:: sim::entering cycle -9-.
+	~:: sim::entering cycle -10-.
+	~:: sim::entering cycle -11-.
+	~:: sim::entering cycle -12-.
+	~:: sim::entering cycle -13-.
+	~:: sim::entering cycle -14-.
+	~:: sim::entering cycle -15-.
+	~:: sim::entering cycle -16-.
+	~:: sim::entering cycle -17-.
+	~:: sim::entering cycle -18-.
+	~:: deleted sim {entity}(1)
+- {Entity}(1) reached mortality.
+	~:: deleted sim {entity}(2)
+- {Entity}(2) reached mortality.
+	~:: deleted sim {entity}(3)
+- {Entity}(3) reached mortality.
+	~:: deleted sim {entity}(4)
+- {Entity}(4) reached mortality.
+	~:: deleted sim {entity}(5)
+- {Entity}(5) reached mortality.
+
+#5 entities perished.
+
+	~:: sim::entering cycle -19-.
+	~:: sim::entering cycle -20-.
+	~:: sim::entering cycle -21-.
+	~:: sim::entering cycle -22-.
+	~:: sim::entering cycle -23-.
+	~:: sim::entering cycle -24-.
+	~:: sim::entering cycle -25-.
+35356ns
+
+~:: generating stats ::~
+
+STATISTICS :: SIMULATION RUN:
+-----
+- simulation # cycles: 25
+- number of entities: 5
+- number of objects: 6
+- total time simulation run (nano seconds): 35356 ns.
+
+~:: deleting simulation.
+
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	+
+	[ simple x computation: type:[char]: len:1 vowels:0 consonants:0 special:1  ]
+-:: finished x computation.
+
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ + ].
++
+*string_next_logic() :: ssh: "+".
+	- HMAC string :: *string_next_logic() ::  (+) is >> 
+
+
+~:: searching indexes:
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/+
+	[ simple x computation: type:[char]: len:2 vowels:0 consonants:0 special:2 
+~:: parameter request: add().
+ ]
+-:: finished x computation.
+(add): number1 number2 + # #: adds (7.46456e+06+8.36464e+06): 1.58292e+07
+
+-:: aborting artificial life sequence, and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled .
+
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
+
+-:: decoupler.
+	-:: decoupling sampler

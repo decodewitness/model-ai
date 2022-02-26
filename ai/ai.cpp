@@ -74,7 +74,8 @@ void AI::help(int n=1) {
 	std::cout << "--Help Function--" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "MODEL-AI: when the Ai asks you for Logic you can enter a string to trigger natural language processing," << std::endl;
+	std::cout << "MODEL-AI: " << VERSION << " :" << std::endl;
+	std::cout << "\t\tWhen the Ai asks you for Logic you can enter a string to trigger natural language processing," << std::endl;
 	std::cout << "\t\tor you can enter one of the following commands." << std::endl;
 	std::cout << std::endl;
 
@@ -114,6 +115,13 @@ void AI::help(int n=1) {
 
 	std::cout << std::endl;
 };
+
+void AI::version() {
+	std::cout << std::endl;
+	std::cout << PROGRAM << " version: " << VERSION << std::endl;
+	std::cout << DOWNLOADURL << std::endl;
+	std::cout << std::endl;
+}
 
 // initialize_runtime_check
 void AI::initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
@@ -802,9 +810,9 @@ void AI::query() {	// respond to logical query method
 	// PROMPT
 	std::cout << "--?:: ";
 	
-	char str[255];
+	char str[1024];
 	getchar();    // create buffer (1 extra for null char)
-	cin.get(str, 255);    // read up to 79 chars and place in str
+	cin.get(str, 1024);    // read up to 79 chars and place in str
 	query_string = str;
 	str[0] = '\0';
 
@@ -812,16 +820,13 @@ void AI::query() {	// respond to logical query method
 	logicalQuery(query_string);
 
 	// process commands	// compute logic and strings
-	if (isHelp == true) {
-		this->help(1);
-		isHelp = false;
-	} else if (isSim == true) {	// run simulation
+	if (isSim == true) {	// run simulation
 		std::cout << std::endl << "(simulation) entities: ";
 		cin >> x;
 		std::cout << std::endl;
 
 		// start Simulation
-	this->startSim();
+		this->startSim();
 
 		// still need to add entities (or) objects to Simulation
 		for (int i=1; i<x; i++) {
@@ -830,7 +835,6 @@ void AI::query() {	// respond to logical query method
 			this->addSimEntity(0,0,0,i);
 
 		}
-
 		std::cout << std::endl << "(simulation) objects: ";
 		cin >> x;
 		std::cout << std::endl;
@@ -1053,6 +1057,12 @@ void AI::query() {	// respond to logical query method
 			}
 		}
 		isPrintPunch = false;
+	} else if (isHelp == true) {
+		this->help(1);
+		isHelp = false;
+	} else if (isVersion == true) {
+		this->version();
+		isVersion = false;
 	} else {
 		this->assembleBrain();
 	}

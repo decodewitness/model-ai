@@ -11,6 +11,7 @@ const int logic = yy;
 
 // booleans for in "AI/AI.CPP" -- query() function
 bool isHelp=false;
+bool isVersion=false;
 bool isSim=false;
 bool isConvert=false;
 bool isConvertUSD=false;
