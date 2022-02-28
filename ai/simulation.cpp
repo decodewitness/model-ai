@@ -19,9 +19,10 @@ void AI::runSim() {	// sim objects and such go here
 	this->listAllEO();
 	this->printEntityCount();
 	this->printObjectCount();
-	sleep(3);
+	sleep(1);
 
 	// return count
+	this->simulation->manipulateSessions(3);
 	this->cycle(25);
 
 	//this->listObject();

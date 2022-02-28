@@ -28,6 +28,19 @@ void Simulation::init() {
     //this->entities=0;
     this->entity_focus_area=1;
 
+    // session counter with max value for manipulateOn[]
+    this->eSession = 0;
+    this->oSession = 0;
+
+    for (int i=0; i<MAX_CYCLE; i++) {
+        eSessions[i]=false;    // sessions to manipulate
+        oSessions[i]=false;    // sessions to manipulate
+        sessionsE[i]=0;    // sessions entities to manipulate
+        sessionsO[i]=0;    // sessions objects to manipulate
+        manipulateOnEntity[i]=0;    // values to manipulate entity in session
+        manipulateOnObject[i]=0;    // values to manipulate objects in session
+    }
+
     // counters in sim
     this->entity_count = 0;
     this->object_count = 0;
@@ -42,6 +55,53 @@ void Simulation::init() {
 
     std::cout << "\t\t~:: ready | initialized sim." << std::endl;
 }
+
+void Simulation::manipulateSessions(int n) {
+    int x;
+    int y;
+
+    // n = number of sessions to manipulate
+    // x = session number to manipulate
+
+    // entities
+    for (int i=0; i<n; i++) {
+        std::cout << "~:: manipulate session #: ";
+        cin >> x;
+        std::cout << "~:: number of entity to modify #: ";
+        cin >> y;
+
+        this->manipulateOnEntity[x] = y;    // x=session # / y=entities #
+        this->eSessions[x] = true;
+        this->sessionsE[this->eSession] = y;
+        
+        this->eSession++;
+    }
+
+    // objects
+    for (int i=0; i<n; i++) {
+        std::cout << "~:: manipulate session #: ";
+        cin >> x;
+        std::cout << "~:: number of object to modify #: ";
+        cin >> y;
+
+        this->manipulateOnObject[x] = y;    // x=session # / y=entities #
+        this->oSessions[this->oSession] = x;
+        this->sessionsE[this->oSession] = y;
+        
+        this->oSession++;
+    }
+
+    std::cout << std::endl;
+    std::cout << "~:: manipulating sessions: " << std::endl;
+    std::cout << "entities : " << this->eSession << std::endl;
+    std::cout << "object   : " << this->oSession << std::endl;
+    std::cout << std::endl;
+
+};
+
+    // for (int i=0; i<this->session; i++) {
+    //     std::cout << "\t- #" << i << ": " << this->manipulateOnEntity[i] << std::endl;
+    // }
 
 void Simulation::createEntity(double x, double y, double z, int n) {
     if (n>=0 && n<MAX_ENTITIES) {
@@ -147,6 +207,34 @@ void Simulation::listAll() {
     std::cout << std::endl << std::endl;
 }
 
+/*
+    int eSession;    // value for manipulateOn[] value set to max sessions for entities to perform
+    int oSession;
+    int sessions[MAX_CYCLE];    // sessions to manipulate
+    int sessionsE[MAX_CYCLE];    // sessions entities to manipulate
+    int sessionsO[MAX_CYCLE];    // sessions objects to manipulate
+    int manipulateOnEntity[MAX_CYCLE];    // values to manipulate entity in session
+    int manipulateOnObject[MAX_CYCLE];    // values to manipulate objects in session
+*/
+
+void Simulation::checkManipulationOnEntity() {
+    if (this->eSession > 0) {
+        if (this->eSessions[this->cycle_round] == true) {
+            std::cout << "\t~:: manipulating on Entity." << std::endl;
+
+        }
+    }
+};
+
+void Simulation::checkManipulationOnObject() {
+    if (this->oSession > 0) {
+        if (this->oSessions[this->cycle_round] == true) {
+            std::cout << "\t~:: manipulating on Object." << std::endl;
+
+        }
+    }
+};
+
 void Simulation::cycle(int n) {
 
     std::cout << std::endl;
@@ -171,6 +259,8 @@ void Simulation::cycle(int n) {
 
         // reduces lifetime expectancy
         this->mortality(1);
+        this->checkManipulationOnEntity();
+        this->checkManipulationOnObject();
     }
 
     // add end time here

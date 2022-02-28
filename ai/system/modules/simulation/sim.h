@@ -14,6 +14,7 @@
 
 #define MAX_ENTITIES 100
 #define MAX_OBJECTS 100
+#define MAX_CYCLE 100
 
 #define MAX_X 9999999
 #define MAX_Y 9999999
@@ -36,6 +37,15 @@ private:
     double run_time_simulation;
 
     double coordinates[3];
+
+    int eSession;    // value for manipulateOn[] value set to max sessions for entities to perform
+    int oSession;
+    bool eSessions[MAX_CYCLE];    // entity sessions to manipulate
+    bool oSessions[MAX_CYCLE];    // object sessions to manipulate
+    int sessionsE[MAX_CYCLE];    // sessions entities to manipulate
+    int sessionsO[MAX_CYCLE];    // sessions objects to manipulate
+    int manipulateOnEntity[MAX_CYCLE];    // values to manipulate entity in session
+    int manipulateOnObject[MAX_CYCLE];    // values to manipulate objects in session
 
     int registered_entities[MAX_ENTITIES];
     int entity_focus_area;
@@ -78,6 +88,10 @@ public:
     int returnObjectCount() { return object_count; }
 
     void statistics();
+
+    void manipulateSessions(int n);
+    void checkManipulationOnEntity();
+    void checkManipulationOnObject();
 };
 
 // eof
