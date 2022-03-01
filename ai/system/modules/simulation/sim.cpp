@@ -44,6 +44,8 @@ void Simulation::init() {
     // counters in sim
     this->entity_count = 0;
     this->object_count = 0;
+    this->nr_of_manipulated_entities = 0;
+    this->nr_of_manipulated_objects = 0;
 
     for (int i=0; i<MAX_ENTITIES; i++) {
         this->entityList[i] = false;
@@ -53,21 +55,28 @@ void Simulation::init() {
         this->objectList[i] = false;
     }
 
+    for (int i=0; i<MAX_MANIPULATED; i++) {
+        this->manipulatedEntityList[i] = false;
+        this->manipulatedObjectList[i] = false;
+    }
+
     std::cout << "\t\t~:: ready | initialized sim." << std::endl;
 }
 
 void Simulation::manipulateSessions(int n) {
     int x;
     int y;
+    int z;
 
     // n = number of sessions to manipulate
     // x = session number to manipulate
 
     // entities
     for (int i=0; i<n; i++) {
+        std::cout << std::endl;
         std::cout << "~:: manipulate session #: ";
         cin >> x;
-        std::cout << "~:: number of entity to modify #: ";
+        std::cout << "\t~:: number of entities to modify in session #: ";
         cin >> y;
 
         this->manipulateOnEntity[x] = y;    // x=session # / y=entities #
@@ -75,26 +84,57 @@ void Simulation::manipulateSessions(int n) {
         this->sessionsE[this->eSession] = y;
         
         this->eSession++;
+        this->nr_of_manipulated_entities = y;
     }
 
     // objects
     for (int i=0; i<n; i++) {
-        std::cout << "~:: manipulate session #: ";
-        cin >> x;
-        std::cout << "~:: number of object to modify #: ";
+        // std::cout << "~:: manipulate session #: ";
+        // cin >> x;
+        std::cout << "\t~:: number of objects to modify in session #: ";
         cin >> y;
 
         this->manipulateOnObject[x] = y;    // x=session # / y=entities #
-        this->oSessions[this->oSession] = x;
-        this->sessionsE[this->oSession] = y;
-        
+        this->oSessions[x] = true;
+        this->sessionsO[this->oSession] = y;
+
         this->oSession++;
+        this->nr_of_manipulated_objects = y;
+    }
+
+    if (this->nr_of_manipulated_entities > 0) {
+        cout << "~:: manipulate on entity (end with a negative number e.g. '-9') :: (entity_number_1, entity_number_n, ...) #: " << std::endl;
+
+        for (int i=0; i<this->nr_of_manipulated_entities; i++) {
+            std::cout << ":: ";
+            std::cin >> z;
+
+            if (z >= 0) {
+                manipulatedEntityList[i] = z;
+            } else {
+                break;
+            }
+        }
+    }
+    
+    if (this->nr_of_manipulated_objects > 0) {
+        std::cout << "~:: manipulate on object (end with a negative number e.g. '-9') :: (object_number_1, object_number_n, ...) #: " << std::endl;
+        for (int i=0; i<this->nr_of_manipulated_objects; i++) {
+            std::cout << ":: ";
+            std::cin >> z;
+
+            if (z >= 0) {
+                manipulatedObjectList[i] = z;
+            } else {
+                break;
+            }
+        }
     }
 
     std::cout << std::endl;
-    std::cout << "~:: manipulating sessions: " << std::endl;
-    std::cout << "entities : " << this->eSession << std::endl;
-    std::cout << "object   : " << this->oSession << std::endl;
+    std::cout << "~:: manipulating sessions: " << x << std::endl;
+    std::cout << "\t* modifying entities : " << this->nr_of_manipulated_entities << std::endl;
+    std::cout << "\t* modifying objects   : " << this->nr_of_manipulated_objects << std::endl;
     std::cout << std::endl;
 
 };
@@ -205,7 +245,47 @@ void Simulation::listAll() {
         }
     }
     std::cout << std::endl << std::endl;
-}
+};
+
+void Simulation::shortList() {
+    std::cout << std::endl << "(E): ";
+    for (int i=0; i<MAX_ENTITIES; i++) {
+        if (entityList[i] == true) {
+            std::cout << "(" << i << ") ";
+        }
+    }
+
+    std::cout << std::endl << "(O): ";
+    for (int i=0; i<MAX_OBJECTS; i++) {
+        if (objectList[i] == true) {
+            std::cout << "(" << i << ") ";
+        }
+    }
+
+    std::cout << std::endl;
+    std::cout << std::endl;
+
+    std::cout << "(manipulated Entity): ";
+    for (int i=0; i<MAX_MANIPULATED; i++) {
+        if (manipulatedEntityList[i] == true) {
+            std::cout << "(" << i << ") ";
+        }
+    }
+    std::cout << std::endl;
+
+    std::cout << "(manipulated Object): ";
+    for (int i=0; i<this->object_count; i++) {
+        if (manipulatedObjectList[i] == true) {
+            std::cout << "(" << i << ") ";
+        }
+    }
+    std::cout << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "(nr of manipulated entities): " << this->nr_of_manipulated_entities << std::endl;
+    std::cout << "(nr of manipulated objects): " << this->nr_of_manipulated_objects << std::endl;
+    std::cout << std::endl;
+};
 
 /*
     int eSession;    // value for manipulateOn[] value set to max sessions for entities to perform
@@ -217,19 +297,19 @@ void Simulation::listAll() {
     int manipulateOnObject[MAX_CYCLE];    // values to manipulate objects in session
 */
 
-void Simulation::checkManipulationOnEntity() {
+void Simulation::checkManipulationOnEntities(int n) {
     if (this->eSession > 0) {
         if (this->eSessions[this->cycle_round] == true) {
-            std::cout << "\t~:: manipulating on Entity." << std::endl;
+            std::cout << "\t\t~:: manipulating on {Entities} (" << n << ")." << std::endl;
 
         }
     }
 };
 
-void Simulation::checkManipulationOnObject() {
+void Simulation::checkManipulationOnObjects(int n) {
     if (this->oSession > 0) {
         if (this->oSessions[this->cycle_round] == true) {
-            std::cout << "\t~:: manipulating on Object." << std::endl;
+            std::cout << "\t\t~:: manipulating on {Objects} (" << n << ")." << std::endl;
 
         }
     }
@@ -259,8 +339,8 @@ void Simulation::cycle(int n) {
 
         // reduces lifetime expectancy
         this->mortality(1);
-        this->checkManipulationOnEntity();
-        this->checkManipulationOnObject();
+        this->checkManipulationOnEntities(1);
+        this->checkManipulationOnObjects(1);
     }
 
     // add end time here

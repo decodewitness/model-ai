@@ -12,9 +12,10 @@
 #include "entity.cpp"
 #include "object.cpp"
 
-#define MAX_ENTITIES 100
-#define MAX_OBJECTS 100
-#define MAX_CYCLE 100
+#define MAX_ENTITIES 2048
+#define MAX_OBJECTS 2048
+#define MAX_CYCLE 2048
+#define MAX_MANIPULATED 2048
 
 #define MAX_X 9999999
 #define MAX_Y 9999999
@@ -46,18 +47,23 @@ private:
     int sessionsO[MAX_CYCLE];    // sessions objects to manipulate
     int manipulateOnEntity[MAX_CYCLE];    // values to manipulate entity in session
     int manipulateOnObject[MAX_CYCLE];    // values to manipulate objects in session
-
-    int registered_entities[MAX_ENTITIES];
     int entity_focus_area;
     
     int entity_count;
     int object_count;
+    int registered_entities[MAX_ENTITIES];
+
+    int nr_of_manipulated_entities;
+    int nr_of_manipulated_objects;
     
     bool entityList[MAX_ENTITIES];
     bool objectList[MAX_OBJECTS];
     
     bool entityVertexList[MAX_ENTITIES];
     bool objectVertexList[MAX_OBJECTS];
+
+    bool manipulatedEntityList[MAX_MANIPULATED];
+    bool manipulatedObjectList[MAX_MANIPULATED];
 
     Entity *entity[MAX_ENTITIES];
     Object *object[MAX_OBJECTS];
@@ -76,6 +82,7 @@ public:
 
     void listEntities();
     void listObjects();
+    void shortList();
     void listAll();
 
     int killEntity(int n);
@@ -90,8 +97,8 @@ public:
     void statistics();
 
     void manipulateSessions(int n);
-    void checkManipulationOnEntity();
-    void checkManipulationOnObject();
+    void checkManipulationOnEntities(int n);
+    void checkManipulationOnObjects(int n);
 };
 
 // eof

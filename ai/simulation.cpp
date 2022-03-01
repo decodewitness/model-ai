@@ -9,6 +9,8 @@ void AI::runSim() {	// sim objects and such go here
 	// start the sim	// should be 1st statement in the function "runSim()"
 	// this->startSim();
 	
+	int x=0;
+
 	// play audio file -- already done in "startSim()"
 	this->play_audio_file("ai/system/audio/samples/vworge.wav");
 	sleep(1);
@@ -22,7 +24,14 @@ void AI::runSim() {	// sim objects and such go here
 	sleep(1);
 
 	// return count
-	this->simulation->manipulateSessions(3);
+	this->simulation->shortList();
+
+	std::cout << std::endl;
+	std::cout << "~:: (manipulate sessions) : ";
+	cin >> x;	// number of sessions to manipulate
+	std::cout << std::endl;
+	
+	this->simulation->manipulateSessions(x);
 	this->cycle(25);
 
 	//this->listObject();

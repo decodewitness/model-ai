@@ -16,6 +16,8 @@ private:
 
     int age;
     int lifespan;
+
+    bool manipulated;
     bool dying;
     
     std::string name;
@@ -23,20 +25,18 @@ private:
 
 public:
     Entity(int n) {
-        std::cout << "- (Entity) was created." << std::endl;
+        std::cout << "\t- (Entity) was created." << std::endl;
         
         this->x=0;
         this->y=0;
         this->z=0;
-
         this->nr = n;
-    
         this->age=0;
         this->lifespan = ENTITY_LIFESPAN;
         this->dying = false;
-
         this->name = "<empty>";
         this->label="<empty label>";
+        this->manipulated = false;
     }
 
     ~Entity() {
@@ -90,7 +90,15 @@ public:
 
     bool getMortality() {
         return this->dying;
-    }
+    };
+
+    void manipulate() {
+        this->manipulated = true;
+    };
+
+    void unmanipulate() {
+        this->manipulated = false;
+    };
 };
 
 // eof

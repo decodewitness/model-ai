@@ -32,6 +32,7 @@ int play_audio_device(int s=1) {    // plays s = sample() by number int
         "ai/system/audio/samples/clfuh.wav",
         "ai/system/audio/samples/clong.wav",
         "ai/system/audio/samples/clug_clug.wav",
+        "ai/system/audio/samples/et.wav",
         "ai/system/audio/samples/fix.wav",
         "ai/system/audio/samples/flir.wav",
         "ai/system/audio/samples/gorge.wav",

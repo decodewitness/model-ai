@@ -23,6 +23,7 @@ private:
     std::string name;
     std::string label;
 
+    bool manipulated;
     bool dying;
 
 public:
@@ -31,17 +32,16 @@ public:
         std::cout << "- {Object} was created." << std::endl;
         this->name = "<object>";
         this->label = "<empty object>";
-
         this->nr = n;
-
         this->age = 0;
         this->lifespan = OBJECT_LIFESPAN;
         this->dying = false;
+        this->manipulated = false;
     };
 
     ~Object() {
         std::cout << std::endl << "- {Object} " << this->label << " got destroyed." << std::endl;
-    }
+    };
 
     void setName(std::string n) { this->name = n; };
     void setLabel(std::string l) { this->label = l; };
@@ -96,5 +96,13 @@ public:
 
     bool getMortality() {
         return this->dying;
-    }
+    };
+
+    void manipulate() {
+        this->manipulated = true;
+    };
+
+    void unmanipulate() {
+        this->manipulated = false;
+    };
 };

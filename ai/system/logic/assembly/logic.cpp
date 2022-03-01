@@ -60,7 +60,7 @@ void commands(int x, std::string param) {
 };
 
 void compare_query_str(std::string str) {   // handles the commands for the logic input
-    if (str.compare("/simulation") == false) {
+    if (str.compare("/sim") == false || str.compare("/simulation") == false) {
         std::cout << std::endl << "~:: parameter request: simulation()." << std::endl;
         isSim = true;   // triggers Simulation in AI/AI.CPP
     } else if (str.compare("/convert") == false) {

@@ -64,6 +64,7 @@ std::string moduleData[module_limits] = {
 
 void AI::splash(void) {
 	std::cout << " ** ][][ **" << std::endl << std::endl;
+	this->play_audio(4);
 }
 
 void AI::help(int n=1) {
@@ -164,7 +165,7 @@ void AI::initialize_runtime_check() { // actually should be staged and recursive
 
 AI::AI(int n) {	// AI constructor
 	// play audio file
-	this->play_audio_file("ai/system/audio/samples/flir.wav");
+	//this->play_audio_file("ai/system/audio/samples/flir.wav");
 	this->splash();
 
 	// security
@@ -830,21 +831,24 @@ void AI::query() {	// respond to logical query method
 		this->startSim();
 
 		// still need to add entities (or) objects to Simulation
-		for (int i=1; i<x; i++) {
+		for (int i=1; i<x+1; i++) {
+			std::cout << std::endl;
 			std::cout << "\tSIM::adding {entity}." << std::endl;
 			//this->addSimEntity(0,0,0,(i+1));
 			this->addSimEntity(0,0,0,i);
 
 		}
+		
 		std::cout << std::endl << "(simulation) objects: ";
 		cin >> x;
 		std::cout << std::endl;
 
 		// still need to add entities (or) objects to Simulation
-		for (int i=1; i<x; i++) {
+		for (int i=1; i<x+1; i++) {
+			std::cout << std::endl;
 			std::cout << "\tSIM::adding {object}." << std::endl;
 			//this->addSimObject(0,0,0,(i+1));
-			this->addSimObject(0,0,0,0);
+			this->addSimObject(0,0,0,i);
 		}
 		// run simulation
 		this->runSim();
@@ -1445,7 +1449,7 @@ void AI::printObjectCount() {
 // should be loaded from external file.
 
 void AI::addSimEntity(int x, int y, int z, int n) {
-	std::cout << std::endl << "\t~:: adding sim {entity}." << std::endl;
+	std::cout << "\t~:: adding sim {entity}." << std::endl;
 	this->simulation->createEntity(x,y,z,n);
 };
 
@@ -1455,7 +1459,7 @@ void AI::deleteSimEntity(int x) {
 };
 
 void AI::addSimObject(int x, int y, int z, int n) {
-	std::cout << std::endl << "\t~:: adding sim {object}." << std::endl;
+	std::cout << "\t~:: adding sim {object}." << std::endl;
 	this->simulation->createObject(x,y,z,n);
 };
 
