@@ -103,7 +103,7 @@ void Simulation::manipulateSessions(int n) {
     }
 
     if (this->nr_of_manipulated_entities > 0) {
-        cout << "~:: manipulate on entity (end with a negative number e.g. '-9') :: (entity_number_1, entity_number_n, ...) #: " << std::endl;
+        std::cout << std::endl << "~:: manipulate on entity (end with a negative number e.g. '-9') :: (entity_number_1, entity_number_n, ...) #: " << std::endl;
 
         for (int i=0; i<this->nr_of_manipulated_entities; i++) {
             std::cout << ":: ";
@@ -118,9 +118,9 @@ void Simulation::manipulateSessions(int n) {
     }
     
     if (this->nr_of_manipulated_objects > 0) {
-        std::cout << "~:: manipulate on object (end with a negative number e.g. '-9') :: (object_number_1, object_number_n, ...) #: " << std::endl;
+        std::cout << std::endl << "~:: manipulate on object (end with a negative number e.g. '-9') :: (object_number_1, object_number_n, ...) #: " << std::endl;
         for (int i=0; i<this->nr_of_manipulated_objects; i++) {
-            std::cout << ":: ";
+            std::cout << "\t:: ";
             std::cin >> z;
 
             if (z >= 0) {
