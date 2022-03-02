@@ -36,7 +36,6 @@ private:
     int max_entities;
     int max_objects;
     double run_time_simulation;
-
     double coordinates[3];
 
     int eSession;    // value for manipulateOn[] value set to max sessions for entities to perform
@@ -71,6 +70,7 @@ private:
     Vertex *entityVertex[MAX_ENTITIES];
     Vertex *objectVertex[MAX_OBJECTS];
 
+    bool end_simulation;
 public:
 
     Simulation();
@@ -88,7 +88,7 @@ public:
     int killEntity(int n);
     int killObject(int n);
 
-    void cycle(int n=1);
+    // void cycle(int n=1);
     void mortality(int n);
 
     int returnEntityCount() { return entity_count; }
@@ -99,6 +99,14 @@ public:
     void manipulateSessions(int n);
     void checkManipulationOnEntities(int n);
     void checkManipulationOnObjects(int n);
+
+    void stats_is_measured(int n);
+    
+    void run_cycle(int n=25);
+    void advance_cycle() { this->cycle_round++; };
+
+    int retManipE() { return this->nr_of_manipulated_entities; };
+    int retManipO() { return this->nr_of_manipulated_objects; };
 };
 
 // eof

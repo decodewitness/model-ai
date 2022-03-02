@@ -11,7 +11,7 @@
 #include "ai.h"
 
 // simulation run
-#include "simulation.cpp"	// simulation.h is included in "ai.h"
+//#include "simulation.cpp"	// simulation.h is included in "ai.h"
 
 // CONSTANTS
 //const char _MODEL[32] = "ai/patching/restore";
@@ -1433,7 +1433,8 @@ void AI::listAllEO() {
 };
 
 void AI::cycle(int n) {
-	this->simulation->cycle(n);
+	//this->simulation->cycle(n);
+	std::cout << std::endl << "(!) cycle() is disabled." << std::endl;
 }
 
 void AI::printEntityCount() {
@@ -1687,5 +1688,49 @@ float AI::return_punch(float s, char c, float x) {	// function returns sum = s a
 	return sum;
 };
 
+// simulation run
+void AI::runSim() {	// sim objects and such go here
+	// start the sim	// should be 1st statement in the function "runSim()"
+	// this->startSim();
+	
+	int x=0;
+
+	// play audio file -- already done in "startSim()"
+	this->play_audio_file("ai/system/audio/samples/vworge.wav");
+	sleep(1);
+	std::cout << "\t~:: simulation is running." << std::endl;
+	
+	// this->addSimEntity(0,0,0,0);
+	// this->addSimObject(0,0,0,0);
+	// this->listAllEO();
+	// this->printEntityCount();
+	// this->printObjectCount();
+	sleep(1);
+
+	// return count
+	this->simulation->shortList();
+
+	std::cout << std::endl;
+	std::cout << "~:: (manipulate in session #) :: ";
+	cin >> x;	// number of sessions to manipulate
+	std::cout << std::endl;
+	
+	this->simulation->manipulateSessions(x);
+	this->simulation->run_cycle(25);
+	// this->simulation->stats_is_measured(x);
+
+	//this->listObject();
+	//this->listEntity();
+
+	//this->deleteSimEntity(0);
+	//this->deleteSimObject(0);
+	sleep(1);
+
+	this->sim_stats();
+	sleep(3);
+
+	// this next "stopSim()" should be the last statement in this function
+	this->stopSim();
+};
 #endif
 // eof

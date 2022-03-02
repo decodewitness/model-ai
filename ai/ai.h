@@ -68,10 +68,11 @@
 #include "system/logic/analysis/learn.cpp"
 #include "system/logic/assembly/input.cpp"
 #include "system/definitions/routines.cpp"
-#include "system/modules/simulation/sim.h"	// simulation
+// #include "system/modules/simulation/sim.h"	// simulation
 #include "system/logic/account/account.cpp"
 #include "system/logic/analysis/limits.cpp"
 //#include "system/logic/analysis/statx.cpp"	// valid functions already defined in modular_bay.h
+#include "system/modules/simulation/sim.cpp"	// simulation
 #include "system/modules/combine/combine.cpp"
 // #include "steering/initialize_runcheck.cpp"
 #include "system/logic/analysis/interpret.cpp"

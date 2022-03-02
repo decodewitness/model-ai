@@ -1,6 +1,7 @@
 // AI/SYSTEM/MODULES/SIMULATION/SIM.CPP -- USED BY "AI/SIMULATION.CPP"
 
-#include <iostream>
+#include "sim.h"
+
 //#include "sim.h"  // already included in "AI/AI.H"
 
 Simulation::Simulation() {
@@ -14,6 +15,8 @@ void Simulation::init() {
     // this->max_x = MAX_X;
     // this->max_y = MAX_Y;
     // this->max_z = MAX_Z;
+
+    this->end_simulation = false;
 
     this->x=0;
     this->y=0;
@@ -61,78 +64,89 @@ void Simulation::init() {
     }
 
     std::cout << "\t\t~:: ready | initialized sim." << std::endl;
+
+    for (int i=0; i<MAX_CYCLE; i++) {
+        if (this->end_simulation==false) {
+            this->run_cycle();
+        }
+    }
 }
 
 void Simulation::manipulateSessions(int n) {
     int x;
     int y;
     int z;
+    std::string s;
 
     // n = number of sessions to manipulate
     // x = session number to manipulate
 
     // entities
-    for (int i=0; i<n; i++) {
-        std::cout << std::endl;
-        std::cout << "~:: manipulate session #: ";
-        cin >> x;
-        std::cout << "\t~:: number of entities to modify in session #: ";
-        cin >> y;
+    // for (int i=0; i<n; i++) {
+    std::cout << std::endl;
+    // std::cout << "~:: manipulate session #: ";
+    // cin >> x;
+    std::cout << "\t~:: entity to modify in session #" << n << ": ";
+    std::cin >> y;
 
-        this->manipulateOnEntity[x] = y;    // x=session # / y=entities #
-        this->eSessions[x] = true;
-        this->sessionsE[this->eSession] = y;
-        
-        this->eSession++;
-        this->nr_of_manipulated_entities = y;
-    }
+    this->manipulateOnEntity[n] = y;    // n=session # / y=entities #
+
+    this->eSessions[n] = true;
+    this->sessionsE[this->eSession] = y;
+    this->eSession++;
+    this->nr_of_manipulated_entities = y;
+    // }
 
     // objects
-    for (int i=0; i<n; i++) {
+    // for (int i=0; i<n; i++) {
         // std::cout << "~:: manipulate session #: ";
         // cin >> x;
-        std::cout << "\t~:: number of objects to modify in session #: ";
-        cin >> y;
+    std::cout << "\t~:: object to modify in session #" << n << ": ";
+    std::cin >> y;
 
-        this->manipulateOnObject[x] = y;    // x=session # / y=entities #
-        this->oSessions[x] = true;
-        this->sessionsO[this->oSession] = y;
-
-        this->oSession++;
-        this->nr_of_manipulated_objects = y;
-    }
-
-    if (this->nr_of_manipulated_entities > 0) {
-        std::cout << std::endl << "~:: manipulate on entity (end with a negative number e.g. '-9') :: (entity_number_1, entity_number_n, ...) #: " << std::endl;
-
-        for (int i=0; i<this->nr_of_manipulated_entities; i++) {
-            std::cout << ":: ";
-            std::cin >> z;
-
-            if (z >= 0) {
-                manipulatedEntityList[i] = z;
-            } else {
-                break;
-            }
-        }
-    }
+    this->manipulateOnObject[n] = y;    // x=session # / y=entities #
     
-    if (this->nr_of_manipulated_objects > 0) {
-        std::cout << std::endl << "~:: manipulate on object (end with a negative number e.g. '-9') :: (object_number_1, object_number_n, ...) #: " << std::endl;
-        for (int i=0; i<this->nr_of_manipulated_objects; i++) {
-            std::cout << "\t:: ";
-            std::cin >> z;
+    this->oSessions[n] = true;
+    this->sessionsO[this->oSession] = y;
+    this->oSession++;
+    this->nr_of_manipulated_objects = y;
+    // }
 
-            if (z >= 0) {
-                manipulatedObjectList[i] = z;
-            } else {
-                break;
-            }
-        }
-    }
+    this->stats_is_measured(n);
+};
 
+    // if (this->nr_of_manipulated_entities > 0) {
+    //     std::cout << std::endl << "~:: manipulate on entity (end with a negative number e.g. '-9') :: #" << std::endl;
+
+    //     for (int i=0; i<this->nr_of_manipulated_entities; i++) {
+    //         std::cout << ":: ";
+    //         std::cin >> z;
+
+    //         if (z >= 0) {
+    //             manipulatedEntityList[i] = z;
+    //         } else {
+    //             break;
+    //         }
+    //     }
+    // }
+    
+    // if (this->nr_of_manipulated_objects > 0) {
+    //     std::cout << std::endl << "~:: manipulate on object (end with a negative number e.g. '-9') :: (object_number_1, object_number_n, ...) #: " << std::endl;
+    //     for (int i=0; i<this->nr_of_manipulated_objects; i++) {
+    //         std::cout << "\t:: ";
+    //         std::cin >> z;
+
+    //         if (z >= 0) {
+    //             manipulatedObjectList[i] = z;
+    //         } else {
+    //             break;
+    //         }
+    //     }
+    // }
+
+void Simulation::stats_is_measured(int n) {
     std::cout << std::endl;
-    std::cout << "~:: manipulating sessions: " << x << std::endl;
+    std::cout << "\t~:: manipulating sessions: " << x << std::endl;
     std::cout << "\t* modifying entities : " << this->nr_of_manipulated_entities << std::endl;
     std::cout << "\t* modifying objects   : " << this->nr_of_manipulated_objects << std::endl;
     std::cout << std::endl;
@@ -300,7 +314,7 @@ void Simulation::shortList() {
 void Simulation::checkManipulationOnEntities(int n) {
     if (this->eSession > 0) {
         if (this->eSessions[this->cycle_round] == true) {
-            std::cout << "\t\t~:: manipulating on {Entities} (" << n << ")." << std::endl;
+            std::cout << "\t\t~:: manipulating on {Entities} #(" << n << ")." << std::endl;
 
         }
     }
@@ -309,54 +323,54 @@ void Simulation::checkManipulationOnEntities(int n) {
 void Simulation::checkManipulationOnObjects(int n) {
     if (this->oSession > 0) {
         if (this->oSessions[this->cycle_round] == true) {
-            std::cout << "\t\t~:: manipulating on {Objects} (" << n << ")." << std::endl;
+            std::cout << "\t\t~:: manipulating on {Objects} #(" << n << ")." << std::endl;
 
         }
     }
 };
 
-void Simulation::cycle(int n) {
+// void Simulation::cycle(int n) {
 
-    std::cout << std::endl;
+//     std::cout << std::endl;
 
-    using std::chrono::duration_cast;
-    using std::chrono::nanoseconds;
-    typedef std::chrono::high_resolution_clock clock;
+//     using std::chrono::duration_cast;
+//     using std::chrono::nanoseconds;
+//     typedef std::chrono::high_resolution_clock clock;
 
-    auto start = clock::now();
+//     auto start = clock::now();
         
-    // add starting time here
-        // STARTING TIME
-    //time_t endtime;
-    //time_t timer = time(NULL);
+//     // add starting time here
+//         // STARTING TIME
+//     //time_t endtime;
+//     //time_t timer = time(NULL);
 
-    // auto start = clock::now();
-    // std::cout << std::endl << "~:: simulation starting @ START TIME: " << start << std::endl;
+//     // auto start = clock::now();
+//     // std::cout << std::endl << "~:: simulation starting @ START TIME: " << start << std::endl;
 
-    for (int i=1; i<=n; i++) {
-        std::cout << "\t~:: sim::entering cycle -" << i << "-." << std::endl;
-        this->cycle_round = i;
+//     for (int i=1; i<=n; i++) {
+//         std::cout << "\t~:: sim::entering cycle -" << i << "-." << std::endl;
+//         this->cycle_round = i;
 
-        // reduces lifetime expectancy
-        this->mortality(1);
-        this->checkManipulationOnEntities(1);
-        this->checkManipulationOnObjects(1);
-    }
+//         // reduces lifetime expectancy
+//         // this->mortality(1);
+//         // this->checkManipulationOnEntities(1);
+//         // this->checkManipulationOnObjects(1);
+//     }
 
-    // add end time here
-        // ENDING TIME
-    //endtime = time(NULL);
+//     // add end time here
+//         // ENDING TIME
+//     //endtime = time(NULL);
 
-    //this->run_time_simulation = endtime;
+//     //this->run_time_simulation = endtime;
 
-    //std::cout << std::endl << "~:: simulation @ END TIME: " << endtime << std::endl;
+//     //std::cout << std::endl << "~:: simulation @ END TIME: " << endtime << std::endl;
 
-    auto end = clock::now();
+//     auto end = clock::now();
     
-    this->run_time_simulation = duration_cast<nanoseconds>(end-start).count();
+//     this->run_time_simulation = duration_cast<nanoseconds>(end-start).count();
     
-    std::cout << duration_cast<nanoseconds>(end-start).count() << "ns\n";
-};
+//     std::cout << duration_cast<nanoseconds>(end-start).count() << "ns\n";
+// };
 
 void Simulation::mortality(int n) { // n is not used yet
     int entityCount=0;
@@ -413,5 +427,48 @@ void Simulation::statistics() {
     std::cout << "- total time simulation run (nano seconds): " << this->run_time_simulation << " ns." << std::endl;
 
     std::cout << std::endl;
+};
+
+void Simulation::run_cycle(int n) {
+
+    using std::chrono::duration_cast;
+    using std::chrono::nanoseconds;
+    typedef std::chrono::high_resolution_clock clock;
+
+    auto start = clock::now();
+        
+    // add starting time here
+        // STARTING TIME
+    // time_t endtime;
+    // time_t timer = time(NULL);
+
+    // auto start = clock::now();
+
+    // std::cout << std::endl << "~:: simulation run -- starting @ START TIME: " << start << std::endl;
+
+    this->mortality(1);
+    this->checkManipulationOnEntities(retManipE());
+    this->checkManipulationOnObjects(retManipO());
+
+    // add end time here
+        // ENDING TIME
+    auto endtime = time(NULL);
+
+    this->run_time_simulation = endtime;
+
+    // std::cout << std::endl << "~:: simulation run -- ending @ END TIME: " << endtime << std::endl;
+
+    auto end = clock::now();
+    
+    this->run_time_simulation = duration_cast<nanoseconds>(end-start).count();
+    
+    std::cout << duration_cast<nanoseconds>(end-start).count() << "ns\n";
+    
+    // advance to next cycle
+    this->advance_cycle();
+
+    if (this->cycle_round == n) {
+        this->end_simulation = true;
+    }
 };
 // eof

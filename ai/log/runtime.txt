@@ -1,5 +1,5 @@
 
-ARG: 12,123,
+ARG: 12123,
 
 ~:: how many queries to run? :  ** ][][ **
 
@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe35e423a0)
-	- stacking header:(1)::<address>(0x7ffe35e423c0)
-	- stacking header:(2)::<address>(0x7ffe35e423e0)
-	- stacking header:(3)::<address>(0x7ffe35e42400)
-	- stacking header:(4)::<address>(0x7ffe35e42420)
-	- stacking header:(5)::<address>(0x7ffe35e42440)
-	- stacking header:(6)::<address>(0x7ffe35e42460)
-	- stacking header:(7)::<address>(0x7ffe35e42480)
-	- stacking header:(8)::<address>(0x7ffe35e424a0)
-	- stacking header:(9)::<address>(0x7ffe35e424c0)
+	- stacking header:(0)::<address>(0x7ffca8bf6fe0)
+	- stacking header:(1)::<address>(0x7ffca8bf7000)
+	- stacking header:(2)::<address>(0x7ffca8bf7020)
+	- stacking header:(3)::<address>(0x7ffca8bf7040)
+	- stacking header:(4)::<address>(0x7ffca8bf7060)
+	- stacking header:(5)::<address>(0x7ffca8bf7080)
+	- stacking header:(6)::<address>(0x7ffca8bf70a0)
+	- stacking header:(7)::<address>(0x7ffca8bf70c0)
+	- stacking header:(8)::<address>(0x7ffca8bf70e0)
+	- stacking header:(9)::<address>(0x7ffca8bf7100)
 
 
 -:: checking AI functions.
@@ -1493,8 +1493,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1601,6 +1600,31 @@ file or directory: -- ./DCIM
 	~:: sim construct()
 	~:: initializing simulation run.
 		~:: ready | initialized sim.
+8381ns
+7263ns
+7543ns
+7823ns
+7264ns
+7264ns
+7264ns
+7263ns
+7264ns
+7263ns
+7264ns
+7543ns
+7263ns
+7263ns
+7543ns
+7264ns
+7263ns
+7263ns
+7822ns
+7264ns
+7823ns
+8380ns
+7542ns
+7542ns
+7543ns
 
 	SIM::adding {entity}.
 	~:: adding sim {entity}.
@@ -1705,13 +1729,6 @@ file or directory: -- ./DCIM
 		~:: added sim {object}(10)
 	~:: simulation is running.
 
-~:: listing entities & objects:
-	- entity(1) (x:0 y:0 z:0) {<empty label>} entity(2) (x:0 y:0 z:0) {<empty label>} entity(3) (x:0 y:0 z:0) {<empty label>} entity(4) (x:0 y:0 z:0) {<empty label>} entity(5) (x:0 y:0 z:0) {<empty label>} entity(6) (x:0 y:0 z:0) {<empty label>} entity(7) (x:0 y:0 z:0) {<empty label>} entity(8) (x:0 y:0 z:0) {<empty label>} entity(9) (x:0 y:0 z:0) {<empty label>} entity(10) (x:0 y:0 z:0) {<empty label>} 
-	- obj(1) (x:0 y:0 z:0) {<empty object>}obj(2) (x:0 y:0 z:0) {<empty object>}obj(3) (x:0 y:0 z:0) {<empty object>}obj(4) (x:0 y:0 z:0) {<empty object>}obj(5) (x:0 y:0 z:0) {<empty object>}obj(6) (x:0 y:0 z:0) {<empty object>}obj(7) (x:0 y:0 z:0) {<empty object>}obj(8) (x:0 y:0 z:0) {<empty object>}obj(9) (x:0 y:0 z:0) {<empty object>}obj(10) (x:0 y:0 z:0) {<empty object>}
-
-- entity count: 10
-- object count: 10
-
 (E): (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
 (O): (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
 
@@ -1722,8 +1739,29 @@ file or directory: -- ./DCIM
 (nr of manipulated objects): 0
 
 
-~:: (manipulate sessions) : 
+~:: (manipulate in session #) :: 
 
-~:: manipulate session #: 	~:: number of entities to modify in session #: 
-~:: manipulate session #: 	~:: number of entities to modify in session #: 	~:: number of objects to modify in session #: 	~:: number of objects to modify in session #: ~:: manipulate on entity (end with a negative number e.g. '-9') :: (entity_number_1, entity_number_n, ...) #: 
-:: 
+	~:: entity to modify in session #4: 	~:: object to modify in session #4: 
+	~:: manipulating sessions: 0
+	* modifying entities : 1
+	* modifying objects   : 2
+
+9777ns
+
+~:: generating stats ::~
+
+STATISTICS :: SIMULATION RUN:
+-----
+- simulation # cycles: 26
+- number of entities: 10
+- number of objects: 10
+- total time simulation run (nano seconds): 9777 ns.
+
+~:: deleting simulation.
+
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
