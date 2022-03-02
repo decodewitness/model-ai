@@ -20,6 +20,8 @@ private:
 // variables
     std::string store_filename;
     
+    int index;
+
     int set1;   // tracks research queue # of research batches
     int set2;   // number of research batches processed internally
     long int resonate_index;
@@ -31,11 +33,13 @@ private:
     bool data_is_open;
     bool access_is_open;
     bool output_is_open;
-    
+    bool cabinet_is_open;
+
     // bool keep_alive;    // keeps access open     // obsolete
     
     ifstream access;
     ifstream data;
+    ofstream cabinet;
     ofstream output;
     ofstream collection;
 
@@ -67,7 +71,9 @@ public:
     void recall(std::string s);  // recalls events
     void research(int x);   // research sets
     void arrange(); // arranges data in cabinet // alphabetical sequence
-    void add_data();    // adds data to a stored reference (store_reference())
+    void add_data(std::string h, std::string s, std::string c);    // adds data to a stored reference (store_reference())
+    void add_cabinet(std::string d, std::string desc);
+    void flush_data(int n);
     std::string search(std::string logic, int n=1); // search cabinet
     // signal
     void done_with_query(); // creates done sequence in array done[]

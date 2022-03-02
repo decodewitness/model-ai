@@ -167,6 +167,8 @@ public:
 
 	// brain & neural net
 	void assembleBrain();
+	void add_to_brain(std::string h, std::string s, std::string c);
+	void add_to_cabinet(std::string d, std::string desc);
 	//void neural_net(std::string s, std::string h, int); 
 
 	// print messages

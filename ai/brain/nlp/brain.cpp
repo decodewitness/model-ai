@@ -4,6 +4,10 @@
 Brain::Brain() {
 // store_reference
     //int resonate iNumber
+
+    // index should still get updated automatically
+    this->index = 5;
+
     this->resonate_index = starting_index;
     this->descriptor = false;
     // this->keep_alive = false;        // obsolete
@@ -40,27 +44,57 @@ void Brain::file_access(int level) {
         if (this->output.is_open() == false) {
             this->output.open(store_file);
         }
-    }
+    
    
-    if (this->access.is_open() == true) {
-        this->access_is_open = true;
-    } else {
-        this->access_is_open = false;
-        std::cout << "~::!::~ error! could not open \"access\"." << std::endl;
+        if (this->access.is_open() == true) {
+            this->access_is_open = true;
+        } else {
+            this->access_is_open = false;
+            std::cout << "~::!::~ error! could not open \"access\"." << std::endl;
+        }
+
+        if (this->data.is_open() == true) {
+            this->data_is_open = true;
+        } else {
+            this->access_is_open = false;
+            std::cout << "~::!::~ error! could not open \"data\"." << std::endl;
+        }
+
+        if (this->output.is_open() == true) {
+            this->output_is_open = true;
+        } else {
+            this->output_is_open = false;
+            std::cout << "~::!::~ error! could not open \"output\"." << std::endl;
+        }
     }
 
-    if (this->data.is_open() == true) {
-        this->data_is_open = true;
-    } else {
-        this->access_is_open = false;
-        std::cout << "~::!::~ error! could not open \"data\"." << std::endl;
+    if (level == 3) {
+        this->cabinet.open("ai/brain/nlp/intelligence/cabinet2");
+        if (this->cabinet.is_open()) {
+            cabinet_is_open = true;
+        }
     }
 
-    if (this->output.is_open() == true) {
-        this->output_is_open = true;
-    } else {
-        this->output_is_open = false;
-        std::cout << "~::!::~ error! could not open \"output\"." << std::endl;
+    if (level == 9) {
+        // close files
+        if (output.is_open()) {
+            output.close();
+            output_is_open = false;
+        }
+        if (access.is_open()) {
+            access.close();
+            access_is_open = false;
+        }
+        if (data.is_open()) {
+            data.close();
+            data_is_open = false;
+        }
+        if (cabinet.is_open()) {
+            cabinet.close();
+            cabinet_is_open = false;
+        }
+
+        std::cout << std::endl << "~:: closed all files." << std::endl;
     }
 };
 
@@ -408,8 +442,28 @@ void Brain::recall(std::string s) {  // recalls events
     //this->neural_net(s, h, 1); //neural_net(std::string s, std::string h, int cumulator)
 };
 
-void Brain::add_data() {    // adds data to a stored reference (store_reference())
+void Brain::add_data(std::string h, std::string s, std::string c) {    // adds data to a stored reference (store_reference())
+    this->file_access(0);
+    this->output << h << "\t" << s << "\t[" << c << "]" << std::endl;
+    this->flush_data(1);
+};
 
+void Brain::add_cabinet(std::string d, std::string desc) {
+    this->file_access(3);
+    this->cabinet << d << "\t" << desc << "\t" << "+ " << this->index++ << std::endl;
+    this->file_access(9);
+    this->flush_data(2);
+}
+
+void Brain::flush_data(int n) {  // consolidates data
+    this->file_access(9); // closes files
+    if (n == 1) {
+        system("cat ai/brain/nlp/intelligence/store_file >> ai/brain/nlp/intelligence/data_collection_2");
+    }
+    if (n == 2) {
+        system("cat ai/brain/nlp/intelligence/cabinet2 >> ai/brain/nlp/intelligence/cabinet_collection_2");
+    }
+    std::cout << std::endl << "~:: flushed and consolidated data." << std::endl;
 };
 
 void Brain::done_with_query() {

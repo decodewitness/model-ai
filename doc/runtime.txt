@@ -1,5 +1,5 @@
 
-ARG: 12,123,
+ARG: 12123,
 
 ~:: how many queries to run? :  ** ][][ **
 
@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffef8dde000)
-	- stacking header:(1)::<address>(0x7ffef8dde020)
-	- stacking header:(2)::<address>(0x7ffef8dde040)
-	- stacking header:(3)::<address>(0x7ffef8dde060)
-	- stacking header:(4)::<address>(0x7ffef8dde080)
-	- stacking header:(5)::<address>(0x7ffef8dde0a0)
-	- stacking header:(6)::<address>(0x7ffef8dde0c0)
-	- stacking header:(7)::<address>(0x7ffef8dde0e0)
-	- stacking header:(8)::<address>(0x7ffef8dde100)
-	- stacking header:(9)::<address>(0x7ffef8dde120)
+	- stacking header:(0)::<address>(0x7fffc5a51430)
+	- stacking header:(1)::<address>(0x7fffc5a51450)
+	- stacking header:(2)::<address>(0x7fffc5a51470)
+	- stacking header:(3)::<address>(0x7fffc5a51490)
+	- stacking header:(4)::<address>(0x7fffc5a514b0)
+	- stacking header:(5)::<address>(0x7fffc5a514d0)
+	- stacking header:(6)::<address>(0x7fffc5a514f0)
+	- stacking header:(7)::<address>(0x7fffc5a51510)
+	- stacking header:(8)::<address>(0x7fffc5a51530)
+	- stacking header:(9)::<address>(0x7fffc5a51550)
 
 
 -:: checking AI functions.
@@ -1588,431 +1588,46 @@ file or directory: -- ./DCIM
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/sim
-	[ simple x computation: type:[char]: len:4 vowels:2 consonants:1 special:1 
-~:: parameter request: simulation().
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
+-:: finished x computation.
+
+	~:: debug :: sorter().
+		~:: sorter() :: search_index_code::[article] : [ logic ].
+logic
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+
+
+~:: searching indexes:
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 4
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+~:: resonate_index::match found on line: (4).
+~:: done.
+	~:: querymatches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 4
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
  ]
 -:: finished x computation.
 
-(simulation) entities: 
+(kill chain) function() : 9
 
-~:: starting simulation.
-	~:: sim construct()
-	~:: initializing simulation run.
-		~:: ready | initialized sim.
+-/- initializing killchain(1) sequence.
 
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-		~:: added sim {entity}(1)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-		~:: added sim {entity}(2)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-		~:: added sim {entity}(3)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-		~:: added sim {entity}(4)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-		~:: added sim {entity}(5)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-		~:: added sim {entity}(6)
-
-(simulation) objects: 
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-		~:: added sim {object}(1)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-		~:: added sim {object}(2)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-		~:: added sim {object}(3)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-		~:: added sim {object}(4)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-		~:: added sim {object}(5)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-		~:: added sim {object}(6)
-	~:: simulation is running.
-
-~:: listing entities & objects:
-	- entity(1) (x:0 y:0 z:0) {<empty label>} entity(2) (x:0 y:0 z:0) {<empty label>} entity(3) (x:0 y:0 z:0) {<empty label>} entity(4) (x:0 y:0 z:0) {<empty label>} entity(5) (x:0 y:0 z:0) {<empty label>} entity(6) (x:0 y:0 z:0) {<empty label>} 
-	- obj(1) (x:0 y:0 z:0) {<empty object>}obj(2) (x:0 y:0 z:0) {<empty object>}obj(3) (x:0 y:0 z:0) {<empty object>}obj(4) (x:0 y:0 z:0) {<empty object>}obj(5) (x:0 y:0 z:0) {<empty object>}obj(6) (x:0 y:0 z:0) {<empty object>}
-
-- entity count: 6
-- object count: 6
-
-(E): (1) (2) (3) (4) (5) (6) 
-(O): (1) (2) (3) (4) (5) (6) 
-
-(manipulated Entity): 
-(manipulated Object): 
-
-(nr of manipulated entities): 0
-(nr of manipulated objects): 0
-
-
-~:: (manipulate sessions) : 
-
-~:: manipulate session #: 	~:: number of entities to modify in session #: 	~:: number of objects to modify in session #: 
-~:: manipulate on entity (end with a negative number e.g. '-9') :: (entity_number_1, entity_number_n, ...) #: 
-:: :: :: 
-~:: manipulate on object (end with a negative number e.g. '-9') :: (object_number_1, object_number_n, ...) #: 
-	:: 	:: 
-~:: manipulating sessions: 2
-	* modifying entities : 3
-	* modifying objects   : 2
-
-
-	~:: sim::entering cycle -1-.
-	~:: sim::entering cycle -2-.
-		~:: manipulating on {Entities} (1).
-		~:: manipulating on {Objects} (1).
-	~:: sim::entering cycle -3-.
-	~:: sim::entering cycle -4-.
-	~:: sim::entering cycle -5-.
-	~:: sim::entering cycle -6-.
-	~:: sim::entering cycle -7-.
-	~:: deleted sim {object}(1)
-- {Object}(1) reached mortality.
-	~:: deleted sim {object}(2)
-- {Object}(2) reached mortality.
-	~:: deleted sim {object}(3)
-- {Object}(3) reached mortality.
-	~:: deleted sim {object}(4)
-- {Object}(4) reached mortality.
-	~:: deleted sim {object}(5)
-- {Object}(5) reached mortality.
-	~:: deleted sim {object}(6)
-- {Object}(6) reached mortality.
-
-#6 objects got destroyed.
-
-	~:: sim::entering cycle -8-.
-	~:: sim::entering cycle -9-.
-	~:: sim::entering cycle -10-.
-	~:: sim::entering cycle -11-.
-	~:: sim::entering cycle -12-.
-	~:: sim::entering cycle -13-.
-	~:: sim::entering cycle -14-.
-	~:: sim::entering cycle -15-.
-	~:: sim::entering cycle -16-.
-	~:: sim::entering cycle -17-.
-	~:: sim::entering cycle -18-.
-	~:: deleted sim {entity}(1)
-- {Entity}(1) reached mortality.
-	~:: deleted sim {entity}(2)
-- {Entity}(2) reached mortality.
-	~:: deleted sim {entity}(3)
-- {Entity}(3) reached mortality.
-	~:: deleted sim {entity}(4)
-- {Entity}(4) reached mortality.
-	~:: deleted sim {entity}(5)
-- {Entity}(5) reached mortality.
-	~:: deleted sim {entity}(6)
-- {Entity}(6) reached mortality.
-
-#6 entities perished.
-
-	~:: sim::entering cycle -19-.
-	~:: sim::entering cycle -20-.
-	~:: sim::entering cycle -21-.
-	~:: sim::entering cycle -22-.
-	~:: sim::entering cycle -23-.
-	~:: sim::entering cycle -24-.
-	~:: sim::entering cycle -25-.
-169295ns
-
-~:: generating stats ::~
-
-STATISTICS :: SIMULATION RUN:
------
-- simulation # cycles: 25
-- number of entities: 6
-- number of objects: 6
-- total time simulation run (nano seconds): 169295 ns.
-
-~:: deleting simulation.
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	
-	[ simple x computation: type:[char]: len:0 vowels:0 consonants:0 special:0  ]
--:: finished x computation.
-
-	~:: debug :: sorter().
-		~:: sorter() :: search_index_code::[article] : [  ].
-
-*string_next_logic() :: ssh: "".
-	- HMAC string :: *string_next_logic() ::  () is >> 
-
-
-~:: searching indexes:
-	~:: querymatches search string: "".
-
--*  is:
-
-
-
-
--:: aborting artificial life sequence, and clean up gracefully!
-
--:: display ((x)->live())(?x) equaled .
-
--:: destructor artificial life routine was called. -::
-	killing abstraction layer.
-
--:: decoupler.
-	-:: decoupling sampler

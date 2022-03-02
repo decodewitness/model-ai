@@ -1487,6 +1487,23 @@ void AI::assembleBrain() {	// uses logic // useBrain && neural_net
 	this->brn = true;
 };
 
+void AI::add_to_brain(std::string h, std::string s, std::string c) {
+	std::string desc;
+
+	std::cout << std::endl << "~:: give a data description : ";
+	cin >> desc;
+
+	// add to data_collection 
+	this->brain->add_data(h, s, c);
+
+	// add to logical cabinet in "intelligence/cabinet_collection" file here
+
+};
+
+void AI::add_to_cabinet(std::string d, std::string desc) {
+	this->brain->add_cabinet(d, desc);
+};
+
 // accounts managed by Track_Account class
 void AI::add_account(float x) {	// adds amount x to accounts[]
 	std::cout << "- account (" << this->account->getAccount() << "):" << std::endl;
