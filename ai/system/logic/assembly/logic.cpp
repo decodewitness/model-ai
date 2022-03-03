@@ -138,6 +138,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/version") == false) {
         std::cout << std::endl << "~:: parameter request: version()." << std::endl;
         isVersion = true;   // triggers displaying version
+    } else if (str.compare("/add_data") == false) {
+        std::cout << std::endl << "~:: parameter request: add_data()." << std::endl;
+        isAddData = true;   // triggers the add_data_to_brain_manually method
     }
 };
 

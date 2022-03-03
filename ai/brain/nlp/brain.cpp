@@ -69,7 +69,7 @@ void Brain::file_access(int level) {
     }
 
     if (level == 3) {
-        this->cabinet.open("ai/brain/nlp/intelligence/cabinet2");
+        this->cabinet.open("ai/brain/nlp/intelligence/store_file");
         if (this->cabinet.is_open()) {
             cabinet_is_open = true;
         }
@@ -444,24 +444,24 @@ void Brain::recall(std::string s) {  // recalls events
 
 void Brain::add_data(std::string h, std::string s, std::string c) {    // adds data to a stored reference (store_reference())
     this->file_access(0);
-    this->output << h << "\t" << s << "\t[" << c << "]" << std::endl;
+    this->output << h << "\t" << s << "\t[" << c << "]" << std::endl << std::endl;
     this->flush_data(1);
 };
 
 void Brain::add_cabinet(std::string d, std::string desc) {
     this->file_access(3);
-    this->cabinet << d << "\t" << desc << "\t" << "+ " << this->index++ << std::endl;
-    this->file_access(9);
+    this->cabinet << d << "\t" << desc << "\t" << "+ " << this->index++ << std::endl << std::endl;
+    // this->file_access(9);
     this->flush_data(2);
 }
 
 void Brain::flush_data(int n) {  // consolidates data
     this->file_access(9); // closes files
     if (n == 1) {
-        system("cat ai/brain/nlp/intelligence/store_file >> ai/brain/nlp/intelligence/data_collection_2");
+        system("cat ai/brain/nlp/intelligence/store_file >> ai/brain/nlp/intelligence/data_collection");
     }
     if (n == 2) {
-        system("cat ai/brain/nlp/intelligence/cabinet2 >> ai/brain/nlp/intelligence/cabinet_collection_2");
+        system("cat ai/brain/nlp/intelligence/store_file >> ai/brain/nlp/intelligence/cabinet_collection");
     }
     std::cout << std::endl << "~:: flushed and consolidated data." << std::endl;
 };

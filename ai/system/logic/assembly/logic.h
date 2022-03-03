@@ -36,4 +36,5 @@ bool isPower=false;
 bool isPlayAudio=false;
 bool isReturnPunch=false;
 bool isPrintPunch=false;
+bool isAddData=false;
 // eof

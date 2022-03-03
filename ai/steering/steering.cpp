@@ -241,10 +241,12 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	
 	//ai.assembleBrain();
 	// ai.help(1);
-	ai.add_to_brain("test", "test", "test");
-	ai.add_to_cabinet("test", "test");
-	ai.decouple();
+	// ai.add_to_brain("test", "test", "test");
+	// ai.add_to_cabinet("test", "test");
 
+	//ai.add_to_brain_manually();
+
+	ai.decouple();
 
 return 0;
 }	

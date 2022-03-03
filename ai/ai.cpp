@@ -109,12 +109,9 @@ void AI::help(int n=1) {
 	std::cout << "/convertd -- Converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated)." << std::endl;
 	std::cout << "/stepping -- Will start the (incremental for now) \"stepping engine\" in which you could potentially stack any type of: math, algorithm, or data." << std::endl;
 	std::cout << "/rollout -- the rollout() function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way." << std::endl;
-	
-	// help
-	// 
+	std::cout << "/add_data -- add data to the logical cabinets manually." << std::endl;
 
 	// list of arguments
-
 	std::cout << std::endl;
 };
 
@@ -127,9 +124,9 @@ void AI::version() {
 
 // initialize_runtime_check
 void AI::initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
-    std::cout << "~:: ** &initialize_runtime_check() **" << std::endl;
-
 	int nrsteps = 3;
+
+    std::cout << "~:: ** &initialize_runtime_check() **" << std::endl;
     
 	// // moved to runtime script --> "/run"
     // // compile sha1 program from external library.
@@ -1068,6 +1065,9 @@ void AI::query() {	// respond to logical query method
 	} else if (isVersion == true) {
 		this->version();
 		isVersion = false;
+	} else if (isAddData == true) {
+		this->add_to_brain_manually();
+		isAddData = false;
 	} else {
 		this->assembleBrain();
 	}
@@ -1500,8 +1500,51 @@ void AI::add_to_brain(std::string h, std::string s, std::string c) {
 
 };
 
+void AI::add_to_brain_manually() {
+	std::string handle;
+	std::string desc;
+	std::string code;
+	char ch;
+
+	std::cout << std::endl;
+	std::cout << "~:: give a handle for the data : ";
+	cin >> handle;
+
+	std::cout << std::endl;
+	std::cout << "~:: give a data description : ";
+	ch = getchar();
+	std::getline(cin, desc);
+
+	// code = "[";
+	code.append(handle);
+	// code.append("]");
+
+	// add to data_collection 
+	this->brain->add_data(handle, desc, code);
+	
+	// add to logical cabinet in "intelligence/cabinet_collection" file here
+	this->add_to_cabinet_manually();
+};
+
 void AI::add_to_cabinet(std::string d, std::string desc) {
 	this->brain->add_cabinet(d, desc);
+};
+
+void AI::add_to_cabinet_manually() {
+	std::string handle;
+	std::string desc;
+	char ch;
+
+	std::cout << std::endl;
+	std::cout << "~:: give a handle for the data in cabinet : ";
+
+	cin >> handle;
+
+	std::cout << "~:: give a description for the data : ";
+	ch = getchar();
+	std::getline(cin, desc);
+
+	this->brain->add_cabinet(handle, desc);
 };
 
 // accounts managed by Track_Account class
