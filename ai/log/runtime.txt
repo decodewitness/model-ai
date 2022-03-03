@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffe29b91b0)
-	- stacking header:(1)::<address>(0x7fffe29b91d0)
-	- stacking header:(2)::<address>(0x7fffe29b91f0)
-	- stacking header:(3)::<address>(0x7fffe29b9210)
-	- stacking header:(4)::<address>(0x7fffe29b9230)
-	- stacking header:(5)::<address>(0x7fffe29b9250)
-	- stacking header:(6)::<address>(0x7fffe29b9270)
-	- stacking header:(7)::<address>(0x7fffe29b9290)
-	- stacking header:(8)::<address>(0x7fffe29b92b0)
-	- stacking header:(9)::<address>(0x7fffe29b92d0)
+	- stacking header:(0)::<address>(0x7fff97eed3c0)
+	- stacking header:(1)::<address>(0x7fff97eed3e0)
+	- stacking header:(2)::<address>(0x7fff97eed400)
+	- stacking header:(3)::<address>(0x7fff97eed420)
+	- stacking header:(4)::<address>(0x7fff97eed440)
+	- stacking header:(5)::<address>(0x7fff97eed460)
+	- stacking header:(6)::<address>(0x7fff97eed480)
+	- stacking header:(7)::<address>(0x7fff97eed4a0)
+	- stacking header:(8)::<address>(0x7fff97eed4c0)
+	- stacking header:(9)::<address>(0x7fff97eed4e0)
 
 
 -:: checking AI functions.
@@ -1580,19 +1580,8 @@ file or directory: -- ./downloads
 file or directory: -- ./DCIM
 
 
-~:: running (1) queries.
+~:: running (10) queries.
 
 
 ::- type your query  -::
 --?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/add_data
-	[ simple x computation: type:[char]: len:9 vowels:4 consonants:3 special:2 
-~:: parameter request: add_data().
- ]
--:: finished x computation.
-
-~:: give a handle for the data : 
-~:: give a data description : 

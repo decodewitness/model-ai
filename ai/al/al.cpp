@@ -33,7 +33,7 @@ void AL::life() {	// artificial life habits
 		if (i%al_top_limit) {
 			counter++;
 		}
-		if (counter==30000 || counter==60000) { // runs 2 times
+		if (counter==30000 || counter==60000) { // runs 2 times	// (increase/decrease)
 			// do action to start extending behavior
 		}
 	}
