@@ -1482,7 +1482,7 @@ void AI::assembleBrain() {	// uses logic // useBrain && neural_net
 
 	// move this logic somewhere else
 	this->brain->useBrain(query_string);
-	//this->brain->neural_net(query_string);
+	this->brain->neural_net(query_string);
 
 	this->brn = true;
 };
