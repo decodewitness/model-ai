@@ -1425,16 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffe29b91b0)
-	- stacking header:(1)::<address>(0x7fffe29b91d0)
-	- stacking header:(2)::<address>(0x7fffe29b91f0)
-	- stacking header:(3)::<address>(0x7fffe29b9210)
-	- stacking header:(4)::<address>(0x7fffe29b9230)
-	- stacking header:(5)::<address>(0x7fffe29b9250)
-	- stacking header:(6)::<address>(0x7fffe29b9270)
-	- stacking header:(7)::<address>(0x7fffe29b9290)
-	- stacking header:(8)::<address>(0x7fffe29b92b0)
-	- stacking header:(9)::<address>(0x7fffe29b92d0)
+	- stacking header:(0)::<address>(0x7ffd1eadfba0)
+	- stacking header:(1)::<address>(0x7ffd1eadfbc0)
+	- stacking header:(2)::<address>(0x7ffd1eadfbe0)
+	- stacking header:(3)::<address>(0x7ffd1eadfc00)
+	- stacking header:(4)::<address>(0x7ffd1eadfc20)
+	- stacking header:(5)::<address>(0x7ffd1eadfc40)
+	- stacking header:(6)::<address>(0x7ffd1eadfc60)
+	- stacking header:(7)::<address>(0x7ffd1eadfc80)
+	- stacking header:(8)::<address>(0x7ffd1eadfca0)
+	- stacking header:(9)::<address>(0x7ffd1eadfcc0)
 
 
 -:: checking AI functions.
@@ -1580,7 +1580,7 @@ file or directory: -- ./downloads
 file or directory: -- ./DCIM
 
 
-~:: running (1) queries.
+~:: running (10) queries.
 
 
 ::- type your query  -::
@@ -1588,11 +1588,31 @@ file or directory: -- ./DCIM
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/add_data
-	[ simple x computation: type:[char]: len:9 vowels:4 consonants:3 special:2 
-~:: parameter request: add_data().
- ]
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
 -:: finished x computation.
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
 
-~:: give a handle for the data : 
-~:: give a data description : 
+
+~:: searching indexes:
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 5
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+
+[]:: logic.dat
+~:: resonate_index::match found on line: (5).
+~:: done.
+	~:: querymatches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 5
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 

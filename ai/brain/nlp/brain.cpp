@@ -334,6 +334,7 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
     std::string search1;
     std::string search2;
     std::string empty;
+    std::string sorted;
 
     // int counter=0;
     bool found=false;
@@ -382,6 +383,10 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 // getting the empty lines in the cabinet
                 std::getline(access, empty);
                 std::getline(data, empty);
+
+                sorted = this->sorter(line2, 1);
+
+                std::cout << std::endl << "[]:: " << sorted << std::endl;
             } else {
                 // skipping lines in the cabinets
                 std::getline(access, empty);

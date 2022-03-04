@@ -5,25 +5,28 @@ const int numberOfIndexes = 13; // number of indexes in cabinets    // must matc
 
 std::string Brain::sorter(std::string st, int level) {
 
-    std::string combined;
+    unsigned open = st.find("[") + 1;
+    unsigned close = st.find("]");
+    std::string combined = st.substr(open, close-open);
 
-    std::cout << std::endl;
-    std::cout << "\t~:: debug :: sorter()." << std::endl;
+    // std::string combined;
 
-    //this->search(query_string, 3);
-    std::cout << "\t\t~:: sorter() :: " << this->search_index_code(st) << std::endl;
+    // std::cout << std::endl;
+    // std::cout << "\t~:: debug :: sorter()." << std::endl;
 
-    // combine label
-    combined = ">> ";
-    combined.append(code);
+    // //this->search(query_string, 3);
+    // std::cout << "\t\t~:: sorter() :: " << this->search_index_code(st) << std::endl;
+
+    // // combine label
+    // combined = ">> ";
+    // combined.append(code);
 
     return combined;
 };
 
 
 std::string Brain::string_next_logic(std::string ssh) {
-    // std::string sorter(std::string st, int level);
-    
+    // std::string sorter(std::string st, int level); 
     // sign
     std::string ss = "*string_next_logic() :: ";
     // ss = ssh;
