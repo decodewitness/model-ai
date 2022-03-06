@@ -1068,7 +1068,7 @@ void AI::query() {	// respond to logical query method
 	} else if (isAddData == true) {
 		this->add_to_brain_manually();
 		isAddData = false;
-	} else {
+	} else if (isLogic == true) {
 		this->assembleBrain();
 	}
 };
@@ -1483,7 +1483,6 @@ void AI::assembleBrain() {	// uses logic // useBrain && neural_net
 	// move this logic somewhere else
 	this->brain->useBrain(query_string);
 	this->brain->neural_net(query_string);
-	this->
 	this->brn = true;
 };
 

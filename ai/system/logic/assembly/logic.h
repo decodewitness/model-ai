@@ -37,4 +37,8 @@ bool isPlayAudio=false;
 bool isReturnPunch=false;
 bool isPrintPunch=false;
 bool isAddData=false;
+
+// when not a command but language
+bool isLogic=false;
+
 // eof

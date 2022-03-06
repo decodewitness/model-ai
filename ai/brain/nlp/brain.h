@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <unistd.h>
+#include <vector>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ const char store_reference_file[] = "ai/brain/nlp/intelligence/cabinet_collectio
 const char data_collection[] = "ai/brain/nlp/intelligence/data_collection";
 const char store_file[] = "ai/brain/nlp/intelligence/store_file";
 
+std::string information_file;   // will poke into the file with the information
 std::string code;   // used by std::string Brain::search_index_code(std::string l)  // in file brain.cpp
 
 
@@ -19,7 +21,8 @@ class Brain {
 private:
 // variables
     std::string store_filename;
-    
+    std::string info;
+
     int index;
 
     int set1;   // tracks research queue # of research batches
@@ -34,11 +37,13 @@ private:
     bool access_is_open;
     bool output_is_open;
     bool cabinet_is_open;
+    bool information_is_open;
 
     // bool keep_alive;    // keeps access open     // obsolete
     
     ifstream access;
     ifstream data;
+    ifstream information;
     ofstream cabinet;
     ofstream output;
     ofstream collection;

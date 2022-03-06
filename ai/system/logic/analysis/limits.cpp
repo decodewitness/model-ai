@@ -1,6 +1,5 @@
 // "AI/LOGIC/LIMITS.CPP" - USED BY "/AI/AI.H" -- SOME OPPOSING LIMITS FOR THE AI MODEL
 
-
 // limits char arrays
 const int med=1024;
 const int max=4096;

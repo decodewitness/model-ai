@@ -75,6 +75,15 @@ void Brain::file_access(int level) {
         }
     }
 
+    if (level == 7) {
+        if (information_file.length() >= 5) { // check if file has extension
+            this->information.open(information_file);
+        }        
+        if (this->information.is_open()) {
+            this->information_is_open = true;
+        }
+    }
+
     if (level == 9) {
         // close files
         if (output.is_open()) {
@@ -92,6 +101,10 @@ void Brain::file_access(int level) {
         if (cabinet.is_open()) {
             cabinet.close();
             cabinet_is_open = false;
+        }
+        if (information.is_open()) {
+            information.close();
+            information_is_open = false;
         }
 
         std::cout << std::endl << "~:: closed all files." << std::endl;
@@ -334,11 +347,18 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
     std::string search1;
     std::string search2;
     std::string empty;
-    std::string sorted;
-
+    std::string sorted="n";
+    std::string i_string;   // string with information
+    std::string b_string;   // string with various tags in information_file
+    std::string story;
+    
+    vector<std::string> story_index;
+    std::vector<vector<std::string>> mystrings; // use to store weights
+    
     // int counter=0;
     bool found=false;
     bool not_found=true;
+    int wordCount=0;
     int resonate_index=n;
     int resonate_index_max=n;  // last index in cabinet according to reference
 
@@ -384,9 +404,56 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 std::getline(access, empty);
                 std::getline(data, empty);
 
-                sorted = this->sorter(line2, 1);
+                // sorter function
+                if (search2.compare(search_string) == 0) {
+                    sorted = this->sorter(line2, 1);
+                }
+                
+                // process file data
+                if (sorted.compare("n") == false) {
+                    this->file_access(7);
+                    if (this->information_is_open == true) {
+                        std::cout << std::endl << ":: information ::" << std::endl;
+                        this->information >> i_string;
 
+                        std::cout << i_string << " :::_]{ ";
+                        // print at least 10 results
+                        while (this->information >> b_string) {
+                                // streaming information
+                                std::cout << b_string << ",";
+                                story_index.push_back(b_string);
+                        }
+                        std::cout << std::endl << "- adding (" << wordCount <<") weights." << std::endl;
+                    }
+                } else {
+                    std::cout << "[n]" << std::endl;
+                    std::cout << "- could not access the file." << std::endl;
+                    std::cout << std::endl;
+                }
+                
                 std::cout << std::endl << "[]:: " << sorted << std::endl;
+
+                // process weights
+                if (wordCount > 0) {
+                    for (std::vector<std::string>::iterator it = story_index.begin() ; it != story_index.end(); ++it) {
+                        std::cout << " " << *it;
+
+                        // use weights function
+                        
+                        // use vvec
+                    }
+                    
+                    // need to find numbers
+                        // weights
+                    // std::cout << i_string << "=" << number;
+
+                    // for (int i=0; i<wordCount; i++) {
+                        // lookup weights in story from vector instead
+                            // make vector
+                    // }
+                } else {
+                    std::cout << "- no data is available." << std::endl;
+                }
             } else {
                 // skipping lines in the cabinets
                 std::getline(access, empty);

@@ -15,12 +15,10 @@ void Learn::process() {
 	this->items++;	// actually increment items
 };
 
-void Learn::assess() {
-	// asses information and next categorize
-	char arr[256];
-		strncpy(arr, this->information.c_str(), 255); 
-//	for (int i=0; i<255; i++) {
-		
+// void Learn::assess() {
+// 	// asses information and next categorize
+// 	char arr[256];
+// 		strncpy(arr, this->information.c_str(), 255); 
+//	for (int i=0; i<255; i++) {		
 //	}
-
-};
+// };

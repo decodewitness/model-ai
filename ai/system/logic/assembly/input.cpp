@@ -27,14 +27,12 @@ void logicalQuery(std::string &x) {
         case 2: // readln +/+ (length indication)
             std::cout << "-:: :logic: (read line)::-" << std::endl;
             std::cout << "\t" << x << " (" << x.length() << ")" << std::endl;
-            
             commands(y, x);
             break;
 
         case 3: // compute x computation
             std::cout << "-:: :logic: (compute x computation)::-" << std::endl;
             std::cout << "\t" << x << std::endl;
-
             commands(y, x);
             break;
 
