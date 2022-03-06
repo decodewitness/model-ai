@@ -1483,6 +1483,10 @@ void AI::assembleBrain() {	// uses logic // useBrain && neural_net
 	// move this logic somewhere else
 	this->brain->useBrain(query_string);
 	this->brain->neural_net(query_string);
+<<<<<<< HEAD
+=======
+
+>>>>>>> e59d4a4c42f39b1668ad7d9db4e52761e08e4e33
 	this->brn = true;
 };
 

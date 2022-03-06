@@ -1425,6 +1425,7 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
+<<<<<<< HEAD
 	- stacking header:(0)::<address>(0x7ffec022fe80)
 	- stacking header:(1)::<address>(0x7ffec022fea0)
 	- stacking header:(2)::<address>(0x7ffec022fec0)
@@ -1435,6 +1436,18 @@ ENTER PASSCODE:
 	- stacking header:(7)::<address>(0x7ffec022ff60)
 	- stacking header:(8)::<address>(0x7ffec022ff80)
 	- stacking header:(9)::<address>(0x7ffec022ffa0)
+=======
+	- stacking header:(0)::<address>(0x7fffdcea78b0)
+	- stacking header:(1)::<address>(0x7fffdcea78d0)
+	- stacking header:(2)::<address>(0x7fffdcea78f0)
+	- stacking header:(3)::<address>(0x7fffdcea7910)
+	- stacking header:(4)::<address>(0x7fffdcea7930)
+	- stacking header:(5)::<address>(0x7fffdcea7950)
+	- stacking header:(6)::<address>(0x7fffdcea7970)
+	- stacking header:(7)::<address>(0x7fffdcea7990)
+	- stacking header:(8)::<address>(0x7fffdcea79b0)
+	- stacking header:(9)::<address>(0x7fffdcea79d0)
+>>>>>>> e59d4a4c42f39b1668ad7d9db4e52761e08e4e33
 
 
 -:: checking AI functions.
@@ -1566,12 +1579,17 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
+<<<<<<< HEAD
 symlink: -- ./module_bay
+=======
+	--directory: -- ./module_bay
+>>>>>>> e59d4a4c42f39b1668ad7d9db4e52761e08e4e33
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
+<<<<<<< HEAD
 symlink: -- ./info.txt
 
 ~:: stats() function:
@@ -1579,6 +1597,15 @@ symlink: -- ./downloads
 
 ~:: stats() function:
 symlink: -- ./DCIM
+=======
+	--directory: -- ./info.txt
+
+~:: stats() function:
+	--directory: -- ./downloads
+
+~:: stats() function:
+	--directory: -- ./DCIM
+>>>>>>> e59d4a4c42f39b1668ad7d9db4e52761e08e4e33
 
 
 ~:: running (10) queries.
@@ -1589,6 +1616,7 @@ symlink: -- ./DCIM
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
+<<<<<<< HEAD
 	blah
 	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 ]
 		[ -- you're asking my input -- ]
@@ -1605,6 +1633,53 @@ sorter() :: (){ai/brain/data/blah}
 
 
 ~:: searching indexes:
+=======
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
+-:: finished x computation.
+sorter() :: (){ai/brain/data/intelligence}
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+
+
+~:: searching indexes:
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 4
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+sorter() :: (blah){ai/brain/data/intelligence.dat}
+
+[]:: ai/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (4).
+~:: done.
+	~:: querymatches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 4
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+sorter() :: (){ai/brain/data/intelligence}
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+
+
+~:: searching indexes:
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 4
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+sorter() :: (blah){ai/brain/data/intelligence.dat}
+
+[]:: ai/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (4).
+~:: done.
+	~:: querymatches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 4
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+>>>>>>> e59d4a4c42f39b1668ad7d9db4e52761e08e4e33
 
 ~:: running (10) queries.
 

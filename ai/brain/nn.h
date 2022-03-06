@@ -12,11 +12,6 @@ std::string Brain::sorter(std::string st, int level) {
     unsigned close = st.find("]");
     combined.append(st.substr(open, close - open));
 
-
-    // need to fix this
-
-
-
     fileObject.open(combined);
 
     fileObject >> line;
