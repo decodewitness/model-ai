@@ -4,10 +4,22 @@
 const int numberOfIndexes = 13; // number of indexes in cabinets    // must match both cabinets
 
 std::string Brain::sorter(std::string st, int level) {
+    ifstream fileObject;
+    std::string line;
+    std::string combined = "ai/brain/data/";
 
     unsigned open = st.find("[") + 1;
     unsigned close = st.find("]");
-    std::string combined = st.substr(open, close-open);
+    combined.append(st.substr(open, close - open));
+
+    fileObject.open(combined);
+
+    fileObject >> line;
+    std::cout << "sorter() :: (" << line << "){" << combined << "}" << std::endl;
+
+    fileObject.close();
+return combined;
+};
 
     // std::string combined;
 
@@ -21,8 +33,6 @@ std::string Brain::sorter(std::string st, int level) {
     // combined = ">> ";
     // combined.append(code);
 
-    return combined;
-};
 
 
 std::string Brain::string_next_logic(std::string ssh) {
@@ -60,7 +70,6 @@ std::string Brain::string_next_logic(std::string ssh) {
 };
 
 void Brain::neural_net(std::string s, std::string h="h", int cumulator=1) {   // acts like a neural net
-
     std::string hmac = string_next_logic(s);
     std::cout << "\t- HMAC string :: " << hmac << std::endl << std::endl;
 

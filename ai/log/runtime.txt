@@ -1425,29 +1425,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-<<<<<<< HEAD
-	- stacking header:(0)::<address>(0x7ffd1eadfba0)
-	- stacking header:(1)::<address>(0x7ffd1eadfbc0)
-	- stacking header:(2)::<address>(0x7ffd1eadfbe0)
-	- stacking header:(3)::<address>(0x7ffd1eadfc00)
-	- stacking header:(4)::<address>(0x7ffd1eadfc20)
-	- stacking header:(5)::<address>(0x7ffd1eadfc40)
-	- stacking header:(6)::<address>(0x7ffd1eadfc60)
-	- stacking header:(7)::<address>(0x7ffd1eadfc80)
-	- stacking header:(8)::<address>(0x7ffd1eadfca0)
-	- stacking header:(9)::<address>(0x7ffd1eadfcc0)
-=======
-	- stacking header:(0)::<address>(0x7fff97eed3c0)
-	- stacking header:(1)::<address>(0x7fff97eed3e0)
-	- stacking header:(2)::<address>(0x7fff97eed400)
-	- stacking header:(3)::<address>(0x7fff97eed420)
-	- stacking header:(4)::<address>(0x7fff97eed440)
-	- stacking header:(5)::<address>(0x7fff97eed460)
-	- stacking header:(6)::<address>(0x7fff97eed480)
-	- stacking header:(7)::<address>(0x7fff97eed4a0)
-	- stacking header:(8)::<address>(0x7fff97eed4c0)
-	- stacking header:(9)::<address>(0x7fff97eed4e0)
->>>>>>> 6e1b10a25bd8892b1eb920c3073affeb32a0b8f1
+	- stacking header:(0)::<address>(0x7fffdcea78b0)
+	- stacking header:(1)::<address>(0x7fffdcea78d0)
+	- stacking header:(2)::<address>(0x7fffdcea78f0)
+	- stacking header:(3)::<address>(0x7fffdcea7910)
+	- stacking header:(4)::<address>(0x7fffdcea7930)
+	- stacking header:(5)::<address>(0x7fffdcea7950)
+	- stacking header:(6)::<address>(0x7fffdcea7970)
+	- stacking header:(7)::<address>(0x7fffdcea7990)
+	- stacking header:(8)::<address>(0x7fffdcea79b0)
+	- stacking header:(9)::<address>(0x7fffdcea79d0)
 
 
 -:: checking AI functions.
@@ -1578,57 +1565,77 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+	--directory: -- ./module_bay
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+	--directory: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+	--directory: -- ./downloads
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+	--directory: -- ./DCIM
 
 
 ~:: running (10) queries.
 
 
 ::- type your query  -::
-<<<<<<< HEAD
 --?:: 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0  ]
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0  ]
 -:: finished x computation.
-*string_next_logic() :: ssh: "logic".
-	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+sorter() :: (){ai/brain/data/intelligence}
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
 
 
 ~:: searching indexes:
-	search1 : logic
-	search2 : logic
-	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 5
-	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 4
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+sorter() :: (blah){ai/brain/data/intelligence.dat}
 
-[]:: logic.dat
-~:: resonate_index::match found on line: (5).
+[]:: ai/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (4).
 ~:: done.
-	~:: querymatches search string: "logic".
+	~:: querymatches search string: "intelligence".
 
--* logic is:
-   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 5
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 4
 
-   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+sorter() :: (){ai/brain/data/intelligence}
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+
+
+~:: searching indexes:
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 4
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+sorter() :: (blah){ai/brain/data/intelligence.dat}
+
+[]:: ai/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (4).
+~:: done.
+	~:: querymatches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 4
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
 
 ~:: running (10) queries.
 
 
 ::- type your query  -::
-=======
->>>>>>> 6e1b10a25bd8892b1eb920c3073affeb32a0b8f1
 --?:: 
