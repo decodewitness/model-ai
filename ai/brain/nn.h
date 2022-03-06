@@ -15,6 +15,12 @@ std::string Brain::sorter(std::string st, int level) {
     fileObject.open(combined);
 
     fileObject >> line;
+
+
+    // NEED TO FIX THIS
+
+
+    
     std::cout << "sorter() :: (" << line << "){" << combined << "}" << std::endl;
 
     fileObject.close();
