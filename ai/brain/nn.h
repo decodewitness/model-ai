@@ -21,7 +21,7 @@ std::string Brain::sorter(std::string st, int level) {
 
 
     
-    std::cout << "sorter() :: (" << line << "){" << combined << "}" << std::endl;
+    std::cout << "sorter() :: (" << line << "){ " << combined << " }" << std::endl;
 
     fileObject.close();
 return combined;

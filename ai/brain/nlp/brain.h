@@ -13,8 +13,9 @@ const char store_reference_file[] = "ai/brain/nlp/intelligence/cabinet_collectio
 const char data_collection[] = "ai/brain/nlp/intelligence/data_collection";
 const char store_file[] = "ai/brain/nlp/intelligence/store_file";
 
-std::string information_file;   // will poke into the file with the information
+std::string information_file = "ai/brain/nlp/intelligence/intelligence.dat";   // will poke into the file with the information
 std::string code;   // used by std::string Brain::search_index_code(std::string l)  // in file brain.cpp
+std::string b_string;   // string with various tags in information_file
 
 
 class Brain {

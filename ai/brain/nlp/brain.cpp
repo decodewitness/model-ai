@@ -76,11 +76,23 @@ void Brain::file_access(int level) {
     }
 
     if (level == 7) {
-        if (information_file.length() >= 5) { // check if file has extension
-            this->information.open(information_file);
-        }        
+        // if (information_file.length() >= 5) { // check if file has extension
+        this->information.open(information_file);
+
+        //system("pwd");
+        // }
+
+        sleep(1);        
         if (this->information.is_open()) {
+            std::cout << "<<< - opened \"ai/brain/data/intelligence.dat\"." << std::endl;
             this->information_is_open = true;
+        }
+    }
+
+    if (level == 8) {
+        if (information.is_open()) {
+            information.close();
+            information_is_open = false;
         }
     }
 
@@ -102,11 +114,6 @@ void Brain::file_access(int level) {
             cabinet.close();
             cabinet_is_open = false;
         }
-        if (information.is_open()) {
-            information.close();
-            information_is_open = false;
-        }
-
         std::cout << std::endl << "~:: closed all files." << std::endl;
     }
 };
@@ -348,8 +355,8 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
     std::string search2;
     std::string empty;
     std::string sorted="n";
-    std::string i_string;   // string with information
-    std::string b_string;   // string with various tags in information_file
+    std::string i_string="0";   // string with information
+    // std::string b_string;   // string with various tags in information_file
     std::string story;
     
     vector<std::string> story_index;
@@ -361,6 +368,8 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
     int wordCount=0;
     int resonate_index=n;
     int resonate_index_max=n;  // last index in cabinet according to reference
+
+    bool condition=false;
 
     // bool displayed=false;
     std::cout << std::endl;
@@ -407,30 +416,57 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 // sorter function
                 if (search2.compare(search_string) == 0) {
                     sorted = this->sorter(line2, 1);
+                    std::cout << std::endl << "sorted: " << sorted << std::endl;
                 }
                 
                 // process file data
-                if (sorted.compare("n") == false) {
+                if (!condition) {
                     this->file_access(7);
-                    if (this->information_is_open == true) {
+                    if (this->information_is_open == true && this->information.is_open() == true) {
+                        std::cout << "- information is open." << std::endl;
                         std::cout << std::endl << ":: information ::" << std::endl;
-                        this->information >> i_string;
 
-                        std::cout << i_string << " :::_]{ ";
-                        // print at least 10 results
-                        while (this->information >> b_string) {
-                                // streaming information
-                                std::cout << b_string << ",";
-                                story_index.push_back(b_string);
+                        information.seekg(SEEK_SET);
+                        sleep(1);
+                        while (std::getline(this->information, i_string)) {
+                            std::cout << ":::_]{ (" << i_string << ")." << std::endl;
+                            wordCount++;
+                            condition=true;
+
+                            b_string.append(i_string);
+                            b_string.append(". ");
                         }
+                        if (condition == true) {    // remove trailing space on b_string
+                            b_string.pop_back();
+                        }
+                        
+
+                        this->file_access(8);
+
+                        // this->information >> i_string;
+                        // print at least 10 results
+                        // for (int i=0; i<32; i++) {   // this conditional is still tested
+                        //     this->information >> b_string;
+                        //     // streaming information
+                            
+                        //     std::cout << "b_string: " << b_string << std::endl;
+                        //     story_index.push_back(b_string);
+                        //     wordCount++;
+
+                        //     if (condition) {
+                        //         break;
+                        //     }
+                        // }
                         std::cout << std::endl << "- adding (" << wordCount <<") weights." << std::endl;
+                    } else {
+                        std::cout << "- information is closed." << std::endl;
                     }
                 } else {
                     std::cout << "[n]" << std::endl;
                     std::cout << "- could not access the file." << std::endl;
                     std::cout << std::endl;
                 }
-                
+
                 std::cout << std::endl << "[]:: " << sorted << std::endl;
 
                 // process weights
