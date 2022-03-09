@@ -1,7 +1,8 @@
 
 ARG: 12123,
 
-~:: how many queries to run? :  ** ][][ **
+~:: how many queries to run? : 
+	** ][][ **
 
 ~:: security routine
 ENTER PASSCODE: 
@@ -1425,16 +1426,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd483da7a0)
-	- stacking header:(1)::<address>(0x7ffd483da7c0)
-	- stacking header:(2)::<address>(0x7ffd483da7e0)
-	- stacking header:(3)::<address>(0x7ffd483da800)
-	- stacking header:(4)::<address>(0x7ffd483da820)
-	- stacking header:(5)::<address>(0x7ffd483da840)
-	- stacking header:(6)::<address>(0x7ffd483da860)
-	- stacking header:(7)::<address>(0x7ffd483da880)
-	- stacking header:(8)::<address>(0x7ffd483da8a0)
-	- stacking header:(9)::<address>(0x7ffd483da8c0)
+	- stacking header:(0)::<address>(0x7ffdc1c49eb0)
+	- stacking header:(1)::<address>(0x7ffdc1c49ed0)
+	- stacking header:(2)::<address>(0x7ffdc1c49ef0)
+	- stacking header:(3)::<address>(0x7ffdc1c49f10)
+	- stacking header:(4)::<address>(0x7ffdc1c49f30)
+	- stacking header:(5)::<address>(0x7ffdc1c49f50)
+	- stacking header:(6)::<address>(0x7ffdc1c49f70)
+	- stacking header:(7)::<address>(0x7ffdc1c49f90)
+	- stacking header:(8)::<address>(0x7ffdc1c49fb0)
+	- stacking header:(9)::<address>(0x7ffdc1c49fd0)
 
 
 -:: checking AI functions.
@@ -1493,7 +1494,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1565,19 +1567,19 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./module_bay
+regular file: -- ./module_bay
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./info.txt
+regular file: -- ./info.txt
 
 ~:: stats() function:
-block device: -- ./downloads
+regular file: -- ./downloads
 
 ~:: stats() function:
-block device: -- ./DCIM
+regular file: -- ./DCIM
 
 
 ~:: running (10) queries.
@@ -1585,81 +1587,3 @@ block device: -- ./DCIM
 
 ::- type your query  -::
 --?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/help
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: parameter request: help().
- ]
-
--:: finished x computation.
-
---Help Function--
-
-MODEL-AI: 
-v0.1-26a : https://model-ai.com/archive/model-ai.tar.gz
-
-		When the Ai asks you for Logic you can enter a string to trigger natural language processing,
-		or you can enter one of the following commands.
-
-	COMMANDS:
------
-
-
-/help -- Triggers this help function.
-/help -- Displays version information.
-/killc -- Built in killchain(1).
-/bank -- Starts accounting.
-/hash -- Hashes a string in MD5.
-/curl -- Curls a website of choice from your machine.
-/table -- Prints the table in numbers of your chosen number.
-/tableto -- Prints the table in numbers of your chosen number up to max chosen number.
-/dice -- Print a random dice number. (1...6)
-/dice2 -- Print a random dice number. (1...nr_of_eyes)
-/stat -- Stat() function stats directory/file.
-/cp -- cp() copies file1 into file2. (src) -> (dst)
-/rm -- rm() remove function / removes file.
-/+ -- add() adds 2 numbers.
-/- -- subtract() subtracts 2 numbers.
-// -- divide() divides number 1 by number 2.
-/* -- multiply() multiplies number 1 by number 2.
-/pow -- power() does number 1 to power of number 2.
-/punch -- return_punch() punch numbers like in a calculator.
-/prpunch -- print_punch() punch numbers like in a calculator.
-/simulation -- Runs a simulation for enities from the Entity class -&- objects from the Object class.
-/convert -- Converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
-/convertd -- Converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
-/stepping -- Will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
-/rollout -- the rollout() function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
-/add_data -- add data to the logical cabinets manually.
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/version
-	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
-~:: parameter request: version().
- ]
-
--:: finished x computation.
-
-model-Ai version: v0.1-26a
-https://model-ai.com/archive/model-ai.tar.gz
-
-
-~:: running (10) queries.
-
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	

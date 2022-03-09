@@ -74,6 +74,7 @@
 //#include "system/logic/analysis/statx.cpp"	// valid functions already defined in modular_bay.h
 #include "system/modules/simulation/sim.cpp"	// simulation
 #include "system/modules/combine/combine.cpp"
+#include "system/modules/service/service.cpp"
 // #include "steering/initialize_runcheck.cpp"
 #include "system/logic/analysis/interpret.cpp"
 #include "system/logic/analysis/algorithms.cpp"

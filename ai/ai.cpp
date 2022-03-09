@@ -63,7 +63,7 @@ std::string moduleData[module_limits] = {
 }; // PLACEHOLDER INSIDE LAST MODULE AGAIN
 
 void AI::splash(void) {
-	std::cout << " ** ][][ **" << std::endl << std::endl;
+	std::cout << std::endl << "\t** ][][ **" << std::endl << std::endl;
 	this->play_audio(4);
 }
 

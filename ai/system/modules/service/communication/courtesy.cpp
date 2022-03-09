@@ -1,3 +1,5 @@
+// AI/SYSTEM/MODULES/SERVICE/COMMUNICATION/COURTESY.CPP -   USED BY "AI/SYSTEM/MODULES/SERVICE/SERVICE.CPP"
+
 /* Courtesy
 * 
 * 1. the showing of politeness in one's attitude and behaviour towards others.
@@ -56,10 +58,10 @@ public:
     ~Courtesy() {};
 
     int doHandshake(std::string peer);
-    int sendAck() { /*ACK*/ };
-    int sendSyn() { /*SYN*/ };
-    int sendRst() { /*RST*/ };
-    int sendNop() { /*NOP*/ };
+    int sendAck() { /*ACK*/ return 1; };
+    int sendSyn() { /*SYN*/ return 1; };
+    int sendRst() { /*RST*/ return 1; };
+    int sendNop() { /*NOP*/ return 1; };
 
     void switchProt(std::string prot){
         for (size_t t=0; t<5; t++) {
@@ -71,7 +73,8 @@ public:
             }
         }
     };
-    void switchProtocol(int n) { this->prot = n; };
+
+    void switchProtocol(int n);
     
     void switchLang(std::string lang) {
         for (size_t t=0; t<5; t++) {
@@ -83,7 +86,8 @@ public:
             }
         }
     };
-    void switchLanguage(int n) { this->lang = n; };
+    
+    void switchLanguage(int n);
 };
 
 
@@ -99,9 +103,13 @@ Courtesy::Courtesy() {    // main constructor function for the Courtesy class
 };
 
 int Courtesy::doHandshake(std::string peer) {   // three-way-handshake
-
+    return 1;
 };
 
 void Courtesy::switchProtocol(int n) {
     this->prot = n;
+};
+
+void Courtesy::switchLanguage(int n) {
+    this->lang = n;
 };
