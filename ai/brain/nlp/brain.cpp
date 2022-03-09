@@ -14,6 +14,7 @@ Brain::Brain() {
     this->set1 = 0;
     this->set2 = 0;
     this->done[0] = false;
+    this->subject = "none";
 
 // inside of canopy
     this->file_access(0);
@@ -76,24 +77,25 @@ void Brain::file_access(int level) {
     }
 
     if (level == 7) {
-        // if (information_file.length() >= 5) { // check if file has extension
-        this->information.open(information_file);
+        // if (intelligence_file.length() >= 5) { // check if file has extension
+        this->intelligence.open(intelligence_file);   // ai/brain/nlp/intelligence/intelligence
 
         //system("pwd");
         // }
 
         sleep(1);        
-        if (this->information.is_open()) {
-            std::cout << "<<< - opened \"ai/brain/data/intelligence.dat\"." << std::endl;
-            this->information_is_open = true;
+        if (this->intelligence.is_open()) {
+            std::cout << "<<<" << std::endl << "- opened \"" << intelligence_file << "\"." << std::endl;
+            this->intelligence_is_open = true;
         }
     }
 
     if (level == 8) {
-        if (information.is_open()) {
-            information.close();
-            information_is_open = false;
+        if (intelligence.is_open()) {
+            intelligence.close();
+            intelligence_is_open = false;
         }
+        std::cout << "~:: closed file \"" << intelligence_file << "\"." << std::endl;
     }
 
     if (level == 9) {
@@ -355,14 +357,16 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
     std::string search2;
     std::string empty;
     std::string sorted="n";
-    std::string i_string="0";   // string with information
-    // std::string b_string;   // string with various tags in information_file
+    std::string tmp;
+    std::string i_string="0";   // string with intelligence
+    // std::string b_string;   // string with various tags in intelligence_file
     std::string story;
     
     vector<std::string> story_index;
     std::vector<vector<std::string>> mystrings; // use to store weights
     
     // int counter=0;
+    bool hit=false;
     bool found=false;
     bool not_found=true;
     int wordCount=0;
@@ -389,7 +393,7 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
         this->access.seekg(SEEK_SET);
     }
 
-    for (int i=0;search1.compare(search_string) != 0 && i<resonate_index_max; i++) {
+    for (int i=0;search1.compare(search_string) != 0; i++) {
         
         if (not_found == true) {
             // getting the search terms in the cabinets
@@ -422,32 +426,55 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 // process file data
                 if (!condition) {
                     this->file_access(7);
-                    if (this->information_is_open == true && this->information.is_open() == true) {
-                        std::cout << "- information is open." << std::endl;
-                        std::cout << std::endl << ":: information ::" << std::endl;
+                    if (this->intelligence_is_open == true && this->intelligence.is_open() == true) {
+                        std::cout << "\t- intelligence is open." << std::endl;
+                        std::cout << std::endl << ":: artificial intelligence ::" << std::endl << std::endl;
 
-                        information.seekg(SEEK_SET);
+                        intelligence.seekg(SEEK_SET);
                         sleep(1);
-                        while (std::getline(this->information, i_string)) {
-                            std::cout << ":::_]{ (" << i_string << ")." << std::endl;
-                            wordCount++;
-                            condition=true;
 
-                            b_string.append(i_string);
-                            b_string.append(". ");
-                        }
-                        if (condition == true) {    // remove trailing space on b_string
-                            b_string.pop_back();
+                        while (std::getline(this->intelligence, i_string)) {
+                            if (!condition && i_string.length() > 0 && i_string.at(0) == '[' && i_string.back() == ']') {
+                                tmp = i_string.substr(1);
+                                tmp.pop_back();
+                                std::cout << "TMP: " << tmp << std::endl;
+
+                                if (tmp.compare(search1) == 0) {
+                                    hit = true;
+                                    std::cout << "~:: found index [" << tmp << "]." << std::endl;
+                                    break;
+                                }
+                            }
                         }
                         
+                        while (std::getline(this->intelligence, i_string)) {
+                            if (!condition && i_string.length() > 0 && i_string.at(0) == '[' && i_string.back() == ']') {
+                                // std::cout << "~:: found extra index: " << i_string << std::endl; // debug option
+                                condition=true;
+                                break;
+                            } else if (i_string.length() > 0) {
+                                std::cout << ":::_]{ (" << i_string << ")" << std::endl;
+                                wordCount++;
+                                b_string.append(i_string);
+                                b_string.append(" ");
+                                // b_string.append(". ");
+                            } else {
+                                std::cout << "(!) omitted empty line." << std::endl;
+                            }
+                        }
+                        if (wordCount > 0) {    // remove trailing space on b_string
+                            b_string.pop_back();
+                        }
 
-                        this->file_access(8);
+                        this->file_access(8);   // closes "this->intelligence" file 
 
-                        // this->information >> i_string;
+                        std::cout << std::endl << "- adding (" << wordCount <<") weights." << std::endl;
+
+                        // this->intelligence >> i_string;
                         // print at least 10 results
                         // for (int i=0; i<32; i++) {   // this conditional is still tested
-                        //     this->information >> b_string;
-                        //     // streaming information
+                        //     this->intelligence >> b_string;
+                        //     // streaming intelligence
                             
                         //     std::cout << "b_string: " << b_string << std::endl;
                         //     story_index.push_back(b_string);
@@ -457,9 +484,8 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                         //         break;
                         //     }
                         // }
-                        std::cout << std::endl << "- adding (" << wordCount <<") weights." << std::endl;
                     } else {
-                        std::cout << "- information is closed." << std::endl;
+                        std::cout << "- intelligence is closed." << std::endl;
                     }
                 } else {
                     std::cout << "[n]" << std::endl;
@@ -468,28 +494,6 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 }
 
                 std::cout << std::endl << "[]:: " << sorted << std::endl;
-
-                // process weights
-                if (wordCount > 0) {
-                    for (std::vector<std::string>::iterator it = story_index.begin() ; it != story_index.end(); ++it) {
-                        std::cout << " " << *it;
-
-                        // use weights function
-                        
-                        // use vvec
-                    }
-                    
-                    // need to find numbers
-                        // weights
-                    // std::cout << i_string << "=" << number;
-
-                    // for (int i=0; i<wordCount; i++) {
-                        // lookup weights in story from vector instead
-                            // make vector
-                    // }
-                } else {
-                    std::cout << "- no data is available." << std::endl;
-                }
             } else {
                 // skipping lines in the cabinets
                 std::getline(access, empty);
@@ -499,10 +503,34 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 std::getline(data, empty);
             }
         }
+                // process weights
+                // if (wordCount > 0) {
+                //     for (std::vector<std::string>::iterator it = story_index.begin() ; it != story_index.end(); ++it) {
+                //         std::cout << " " << *it;
 
-        if (search1.compare("") != 0 && search2.compare("") != 0 && search1.compare(search2) == 0 && found == true) {
+                //         // use weights function
+                        
+                //         // use vvec
+                //     }
+                    
+                //     // need to find numbers
+                //         // weights
+                //     // std::cout << i_string << "=" << number;
+
+                //     // for (int i=0; i<wordCount; i++) {
+                //         // lookup weights in story from vector instead
+                //             // make vector
+                //     // }
+                // } else {
+                //     std::cout << "- no data is available." << std::endl;
+                // }
+        
+
+        if (search1.length() > 0 && search2.length() > 0 && search1.compare(search2) == 0 && found == true) {
             resonate_index = i;
             std::cout << "~:: resonate_index::match found on line: (" << (resonate_index+1) << ")." << std::endl;
+
+            // store reference here
 
         } else {
             // std::cout << "~::!::~ error: search does not match search / cabinet is corrupted!" << std::endl;
@@ -510,12 +538,17 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
             continue;
         }
 
-        if (search1.compare("eof") == 0) {
-            break;
-        }
+        // if (search1.compare("eof") == 0) {
+        //     break;
+        // }
 
         if (found == true) {
             std::cout << "~:: done." << std::endl;
+        }
+
+        if (b_string.length() > 0) {
+            std::cout << std::endl << "b_string:" << std::endl;
+            std::cout << "!~ " << b_string << std::endl;
         }
     }
 
@@ -523,7 +556,7 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
         if (search1.compare(search2)) {
             std::cout << "\t~:: matches found accross files in database." << std::endl;
         }
-        std::cout << "\t~:: querymatches search string: \"" << search_string << "\"." << std::endl;
+        std::cout << "\t~:: query matches search string: \"" << search_string << "\"." << std::endl;
         not_found = false;
     }
 

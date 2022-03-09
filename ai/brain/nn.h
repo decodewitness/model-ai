@@ -21,7 +21,7 @@ std::string Brain::sorter(std::string st, int level) {
 
 
     
-    std::cout << "sorter() :: (" << line << "){ " << combined << " }" << std::endl;
+    std::cout << std::endl << "sorter() :: (" << line << "){ " << combined << " }" << std::endl;
 
     fileObject.close();
 return combined;
@@ -77,7 +77,7 @@ std::string Brain::string_next_logic(std::string ssh) {
 
 void Brain::neural_net(std::string s, std::string h="h", int cumulator=1) {   // acts like a neural net
     std::string hmac = string_next_logic(s);
-    std::cout << "\t- HMAC string :: " << hmac << std::endl << std::endl;
+    std::cout << "\t- HMAC string :: " << hmac << std::endl;
 
     this->search(query_string, numberOfIndexes);    // numberOfIndexes must be consistent across all databases.
 

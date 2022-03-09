@@ -12,10 +12,10 @@ const int batch_size = 1024;
 const char store_reference_file[] = "ai/brain/nlp/intelligence/cabinet_collection";
 const char data_collection[] = "ai/brain/nlp/intelligence/data_collection";
 const char store_file[] = "ai/brain/nlp/intelligence/store_file";
+std::string intelligence_file = "ai/brain/nlp/intelligence/intelligence";   // will poke into the file with the intelligence
 
-std::string information_file = "ai/brain/nlp/intelligence/intelligence.dat";   // will poke into the file with the information
 std::string code;   // used by std::string Brain::search_index_code(std::string l)  // in file brain.cpp
-std::string b_string;   // string with various tags in information_file
+std::string b_string;   // string with various tags in intelligence_file
 
 
 class Brain {
@@ -23,7 +23,8 @@ private:
 // variables
     std::string store_filename;
     std::string info;
-
+    std::string subject;
+    
     int index;
 
     int set1;   // tracks research queue # of research batches
@@ -38,13 +39,13 @@ private:
     bool access_is_open;
     bool output_is_open;
     bool cabinet_is_open;
-    bool information_is_open;
+    bool intelligence_is_open;
 
     // bool keep_alive;    // keeps access open     // obsolete
     
     ifstream access;
     ifstream data;
-    ifstream information;
+    ifstream intelligence;
     ofstream cabinet;
     ofstream output;
     ofstream collection;

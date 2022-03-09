@@ -1477,16 +1477,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffef6feb270)
-	- stacking header:(1)::<address>(0x7ffef6feb290)
-	- stacking header:(2)::<address>(0x7ffef6feb2b0)
-	- stacking header:(3)::<address>(0x7ffef6feb2d0)
-	- stacking header:(4)::<address>(0x7ffef6feb2f0)
-	- stacking header:(5)::<address>(0x7ffef6feb310)
-	- stacking header:(6)::<address>(0x7ffef6feb330)
-	- stacking header:(7)::<address>(0x7ffef6feb350)
-	- stacking header:(8)::<address>(0x7ffef6feb370)
-	- stacking header:(9)::<address>(0x7ffef6feb390)
+	- stacking header:(0)::<address>(0x7ffc12182470)
+	- stacking header:(1)::<address>(0x7ffc12182490)
+	- stacking header:(2)::<address>(0x7ffc121824b0)
+	- stacking header:(3)::<address>(0x7ffc121824d0)
+	- stacking header:(4)::<address>(0x7ffc121824f0)
+	- stacking header:(5)::<address>(0x7ffc12182510)
+	- stacking header:(6)::<address>(0x7ffc12182530)
+	- stacking header:(7)::<address>(0x7ffc12182550)
+	- stacking header:(8)::<address>(0x7ffc12182570)
+	- stacking header:(9)::<address>(0x7ffc12182590)
 
 
 -:: checking AI functions.
@@ -1545,7 +1545,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1617,20 +1618,77 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+regular file: -- ./module_bay
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+regular file: -- ./info.txt
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+regular file: -- ./downloads
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+regular file: -- ./DCIM
 
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+
+sorter() :: (){ ai/brain/data/logic }
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+
+~:: searching indexes:
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 5
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+
+sorter() :: (logical){ ai/brain/data/logic.dat }
+
+sorted: ai/brain/data/logic.dat
+<<<
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+(!) omitted empty line.
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/logic.dat
+~:: resonate_index::match found on line: (5).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 5
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
 
 ~:: running (10) queries.
 
@@ -1642,70 +1700,233 @@ FIFO/pipe: -- ./DCIM
 -:: :logic: (compute x computation)::-
 	intelligence
 	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
-		[ -- you're asking my input -- ]
+
+[ -- you're asking my input -- ]
+
 -:: finished x computation.
+
 sorter() :: (){ ai/brain/data/intelligence }
 *string_next_logic() :: ssh: "intelligence".
 	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
-
 
 ~:: searching indexes:
 	search1 : intelligence
 	search2 : intelligence
 	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 4
 	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+
 sorter() :: (){ ai/brain/data/intelligence.dat }
 
 sorted: ai/brain/data/intelligence.dat
-<<< - opened "ai/brain/data/intelligence.dat".
-- information is open.
+<<<
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
 
-:: information ::
-:::_]{ (intelligence can be used to manipulate objects).
-:::_]{ (intelligent manners could be manners that would be described.).
+:: artificial intelligence ::
+
+TMP: intelligence
+~:: found index [intelligence].
+:::_]{ (intelligence can be used to manipulate objects.)
+:::_]{ (intelligent manners could be manners that would be described.)
+(!) omitted empty line.
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
 
 - adding (2) weights.
 
 []:: ai/brain/data/intelligence.dat
 ~:: resonate_index::match found on line: (4).
 ~:: done.
-	~:: querymatches search string: "intelligence".
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
+	~:: query matches search string: "intelligence".
 
 -* intelligence is:
     deciphering algorithms, and using strategies to solve the inherent problem. + 4
 
     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-sorter() :: (){ ai/brain/data/intelligence }
-*string_next_logic() :: ssh: "intelligence".
-	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
 
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	model-ai
+	[ simple x computation: type:[char]: len:8 vowels:3 consonants:4 special:1 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+
+sorter() :: (){ ai/brain/data/model-ai }
+*string_next_logic() :: ssh: "model-ai".
+	- HMAC string :: *string_next_logic() ::  (model-ai) is >> 
 
 ~:: searching indexes:
-	search1 : intelligence
-	search2 : intelligence
-	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 4
-	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-sorter() :: (){ ai/brain/data/intelligence.dat }
+	search1 : model-ai
+	search2 : model-ai
+	line1 :     model-Ai. could we fashion this arithmetic sequence?   + 7
+	line2 :     MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]
 
-sorted: ai/brain/data/intelligence.dat
-<<< - opened "ai/brain/data/intelligence.dat".
-- information is open.
+sorter() :: (){ ai/brain/data/model-ai.dat }
 
-:: information ::
-:::_]{ (intelligence can be used to manipulate objects).
-:::_]{ (intelligent manners could be manners that would be described.).
+sorted: ai/brain/data/model-ai.dat
+<<<
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
 
-- adding (2) weights.
+:: artificial intelligence ::
 
-[]:: ai/brain/data/intelligence.dat
-~:: resonate_index::match found on line: (4).
+TMP: intelligence
+TMP: logic
+TMP: model-ai
+~:: found index [model-ai].
+:::_]{ (model-ai - artificial intelligence.)
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (1) weights.
+
+[]:: ai/brain/data/model-ai.dat
+~:: resonate_index::match found on line: (7).
 ~:: done.
-	~:: querymatches search string: "intelligence".
 
--* intelligence is:
-    deciphering algorithms, and using strategies to solve the inherent problem. + 4
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.model-ai - artificial intelligence.
+	~:: query matches search string: "model-ai".
 
-    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
+-* model-ai is:
+    model-Ai. could we fashion this arithmetic sequence?   + 7
+
+    MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]
+
+~:: running (10) queries.
+
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/sim
+	[ simple x computation: type:[char]: len:4 vowels:2 consonants:1 special:1 
+~:: parameter request: simulation().
+ ]
+
+-:: finished x computation.
+
+(simulation) entities: 
+
+~:: starting simulation.
+	~:: sim construct()
+	~:: initializing simulation run.
+		~:: ready | initialized sim.
+5588ns
+5308ns
+5587ns
+5029ns
+5867ns
+5308ns
+4749ns
+5029ns
+5308ns
+5308ns
+5029ns
+5308ns
+5029ns
+4749ns
+5028ns
+5028ns
+5028ns
+4749ns
+4749ns
+4750ns
+4750ns
+4750ns
+4749ns
+4749ns
+4749ns
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(1)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(2)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(3)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(4)
+
+(simulation) objects: 
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(1)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(2)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(3)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(4)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(5)
+	~:: simulation is running.
+
+(E): (1) (2) (3) (4) 
+(O): (1) (2) (3) (4) (5) 
+
+(manipulated Entity): 
+(manipulated Object): 
+
+(nr of manipulated entities): 0
+(nr of manipulated objects): 0
+
+
+~:: (manipulate in session #) :: 
+
+	~:: entity to modify in session #3: 	~:: object to modify in session #3: 
+	~:: manipulating sessions: 0
+	* modifying entities : 1
+	* modifying objects   : 4
+
+9778ns
+
+~:: generating stats ::~
+
+STATISTICS :: SIMULATION RUN:
+-----
+- simulation # cycles: 26
+- number of entities: 4
+- number of objects: 5
+- total time simulation run (nano seconds): 9778 ns.
+
+~:: deleting simulation.
+
 
 ~:: running (10) queries.
 
@@ -1719,6 +1940,7 @@ sorted: ai/brain/data/intelligence.dat
 	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
 ~:: parameter request: kill_chain().
  ]
+
 -:: finished x computation.
 
 (kill chain) function() : 9

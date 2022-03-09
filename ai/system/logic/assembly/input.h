@@ -4,5 +4,5 @@
 #include "logic.cpp"
 
 void finished() {
-    std::cout << "-:: finished x computation." << std::endl;
+    std::cout << std::endl << "-:: finished x computation." << std::endl;
 }

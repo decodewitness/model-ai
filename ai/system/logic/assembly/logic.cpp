@@ -145,8 +145,8 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
         std::cout << std::endl << "~:: parameter request: add_data()." << std::endl;
         isAddData = true;   // triggers the add_data_to_brain_manually method
     } else if (str.at(0) != '/') {
-        std::cout << "]" << std::endl << "\t\t[ ";
-        std::cout << "-- you're asking my input --";
+        std::cout << "]" << std::endl << std::endl;
+        std::cout << "[ -- you're asking my input --";
         isLogic = true;
     }
 };
