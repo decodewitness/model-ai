@@ -2,11 +2,7 @@
 AUTHOR: Vera Lo
 DATE: 01:19AM 19/11/2021# model-ai
 
-<<<<<<< HEAD
-Latest branch in Artificial Intelligence (A.I) software. Version (v.0.1-26a) (07:44PM CET) (August 21 2021)
-=======
-Latest branch in Artificial Intelligence (A.I) software. Version (v.0.1-25b) (07:44PM CET) (August 21 2021)
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
+Latest branch in Artificial Intelligence (A.I) software. Version (v.0.0-1b) (07:44PM CET) (August 21 2021)
 
 ░▄▄▄▄░
 ▀▀▄██►
@@ -1481,7 +1477,6 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-<<<<<<< HEAD
 	- stacking header:(0)::<address>(0x7ffc12182470)
 	- stacking header:(1)::<address>(0x7ffc12182490)
 	- stacking header:(2)::<address>(0x7ffc121824b0)
@@ -1492,18 +1487,6 @@ ENTER PASSCODE:
 	- stacking header:(7)::<address>(0x7ffc12182550)
 	- stacking header:(8)::<address>(0x7ffc12182570)
 	- stacking header:(9)::<address>(0x7ffc12182590)
-=======
-	- stacking header:(0)::<address>(0x7ffef6feb270)
-	- stacking header:(1)::<address>(0x7ffef6feb290)
-	- stacking header:(2)::<address>(0x7ffef6feb2b0)
-	- stacking header:(3)::<address>(0x7ffef6feb2d0)
-	- stacking header:(4)::<address>(0x7ffef6feb2f0)
-	- stacking header:(5)::<address>(0x7ffef6feb310)
-	- stacking header:(6)::<address>(0x7ffef6feb330)
-	- stacking header:(7)::<address>(0x7ffef6feb350)
-	- stacking header:(8)::<address>(0x7ffef6feb370)
-	- stacking header:(9)::<address>(0x7ffef6feb390)
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 
 
 -:: checking AI functions.
@@ -1562,12 +1545,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-<<<<<<< HEAD
 	:: (2 leafs) ::	:: increment(2)
 	.: plants 2 trees. trees labeled 		forest type I (label).
-=======
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1639,17 +1618,12 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-<<<<<<< HEAD
 regular file: -- ./module_bay
-=======
-FIFO/pipe: -- ./module_bay
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-<<<<<<< HEAD
 regular file: -- ./info.txt
 
 ~:: stats() function:
@@ -1657,15 +1631,6 @@ regular file: -- ./downloads
 
 ~:: stats() function:
 regular file: -- ./DCIM
-=======
-FIFO/pipe: -- ./info.txt
-
-~:: stats() function:
-FIFO/pipe: -- ./downloads
-
-~:: stats() function:
-FIFO/pipe: -- ./DCIM
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 
 
 ~:: running (10) queries.
@@ -1676,7 +1641,6 @@ FIFO/pipe: -- ./DCIM
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-<<<<<<< HEAD
 	logic
 	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
 
@@ -1741,26 +1705,15 @@ b_string:
 
 -:: finished x computation.
 
-=======
-	intelligence
-	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
-		[ -- you're asking my input -- ]
--:: finished x computation.
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 sorter() :: (){ ai/brain/data/intelligence }
 *string_next_logic() :: ssh: "intelligence".
 	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 ~:: searching indexes:
 	search1 : intelligence
 	search2 : intelligence
 	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 4
 	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-<<<<<<< HEAD
 
 sorter() :: (){ ai/brain/data/intelligence.dat }
 
@@ -1777,37 +1730,21 @@ TMP: intelligence
 :::_]{ (intelligent manners could be manners that would be described.)
 (!) omitted empty line.
 ~:: closed file "ai/brain/nlp/intelligence/intelligence".
-=======
-sorter() :: (){ ai/brain/data/intelligence.dat }
-
-sorted: ai/brain/data/intelligence.dat
-<<< - opened "ai/brain/data/intelligence.dat".
-- information is open.
-
-:: information ::
-:::_]{ (intelligence can be used to manipulate objects).
-:::_]{ (intelligent manners could be manners that would be described.).
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 
 - adding (2) weights.
 
 []:: ai/brain/data/intelligence.dat
 ~:: resonate_index::match found on line: (4).
 ~:: done.
-<<<<<<< HEAD
 
 b_string:
 !~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
 	~:: query matches search string: "intelligence".
-=======
-	~:: querymatches search string: "intelligence".
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 
 -* intelligence is:
     deciphering algorithms, and using strategies to solve the inherent problem. + 4
 
     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-<<<<<<< HEAD
 
 ~:: running (10) queries.
 
@@ -1990,39 +1927,6 @@ STATISTICS :: SIMULATION RUN:
 
 ~:: deleting simulation.
 
-=======
-sorter() :: (){ ai/brain/data/intelligence }
-*string_next_logic() :: ssh: "intelligence".
-	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
-
-
-~:: searching indexes:
-	search1 : intelligence
-	search2 : intelligence
-	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 4
-	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
-sorter() :: (){ ai/brain/data/intelligence.dat }
-
-sorted: ai/brain/data/intelligence.dat
-<<< - opened "ai/brain/data/intelligence.dat".
-- information is open.
-
-:: information ::
-:::_]{ (intelligence can be used to manipulate objects).
-:::_]{ (intelligent manners could be manners that would be described.).
-
-- adding (2) weights.
-
-[]:: ai/brain/data/intelligence.dat
-~:: resonate_index::match found on line: (4).
-~:: done.
-	~:: querymatches search string: "intelligence".
-
--* intelligence is:
-    deciphering algorithms, and using strategies to solve the inherent problem. + 4
-
-    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 
 ~:: running (10) queries.
 
@@ -2036,10 +1940,7 @@ sorted: ai/brain/data/intelligence.dat
 	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
 ~:: parameter request: kill_chain().
  ]
-<<<<<<< HEAD
 
-=======
->>>>>>> 5a64c77223eba60c5e372c1c7b6c009e47aa8f55
 -:: finished x computation.
 
 (kill chain) function() : 9

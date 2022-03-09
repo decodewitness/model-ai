@@ -72,15 +72,17 @@ void AI::help(int n=1) {
 		// more function	// press a key
 	// functions alphabetic
 	std::cout << std::endl;
-	std::cout << "--Help Function--" << std::endl;
+	std::cout << "Help Function" << std::endl << "-----" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "MODEL-AI: " << VERSION << " :" << std::endl;
-	std::cout << "\t\tWhen the Ai asks you for Logic you can enter a string to trigger natural language processing," << std::endl;
-	std::cout << "\t\tor you can enter one of the following commands." << std::endl;
+	std::cout << PROGRAM << ": " << VERSION << std::endl;
+	std::cout << "Download: " << DOWNLOADURL << std::endl;
+	std::cout << std::endl;
+	std::cout << "When the Ai asks you for Logic you can enter a string to trigger natural language processing," << std::endl;
+	std::cout << "or you can enter one of the following commands." << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "\tCOMMANDS:" << std::endl;
+	std::cout << "COMMANDS:" << std::endl;
 	std::cout << "-----" << std::endl << std::endl;
 	std::cout << std::endl;
 

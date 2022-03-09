@@ -7,7 +7,7 @@
 #ifndef _AI_HEADER
 #define _AI_HEADER
 
-#define PROGRAM "model-Ai"
+#define PROGRAM "MODEL-AI"
 #define VERSION "v0.1-26a"
 
 #define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
