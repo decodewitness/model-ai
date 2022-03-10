@@ -35,6 +35,6 @@ Service::~Service() {
 
 int Service::initiateService(int ls) {
     // this->courtesy = new Courtesy;
-    this->courtesy->doHandshake(std::string peer);
+    this->courtesy->doHandshake("localhost");
     return 1;
 };
