@@ -72,7 +72,22 @@ void Brain::file_access(int level) {
     if (level == 3) {
         this->cabinet.open("ai/brain/nlp/intelligence/store_file");
         if (this->cabinet.is_open()) {
-            cabinet_is_open = true;
+            this->cabinet_is_open = true;
+        }
+    }
+
+    if (level == 5) {
+        if (intelligence_is_open == true) {
+            this->intelligence.close();
+            this->intelligence_is_open = false;
+        }
+
+        if (this->intel.is_open() == false) {
+            this->intel.open("ai/brain/nlp/intelligence/intelligence");
+            if (this->intel.is_open()) {
+                this->intel_is_open = true;
+                std::cout << std::endl << "- opened \"intelligence\" database for writing." << std::endl;
+            }
         }
     }
 
@@ -117,6 +132,14 @@ void Brain::file_access(int level) {
             cabinet_is_open = false;
         }
         std::cout << std::endl << "~:: closed all files." << std::endl;
+    }
+
+    if (level == 10) {
+        if (this->intel.is_open() == true) {
+            this->intel.close();
+            this->intel_is_open = false;
+            std::cout << std::endl << "~:: closed \"intelligence\" database." << std::endl;
+        }
     }
 };
 
@@ -369,6 +392,11 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
     bool hit=false;
     bool found=false;
     bool not_found=true;
+
+    bool nobreaky1=false;
+    bool nobreaky2=false;
+    int breaky=0;
+
     int wordCount=0;
     int resonate_index=n;
     int resonate_index_max=n;  // last index in cabinet according to reference
@@ -390,18 +418,36 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
         std::cout << "~::!::~ error! \"access\" is not open." << std::endl;
         this->file_access(0);
     } else {
+        std::cout << "\t- rewinding file index." << std::endl;
         this->access.seekg(SEEK_SET);
     }
 
-    for (int i=0;search1.compare(search_string) != 0; i++) {
-        
+    for (int i=0; search1.compare(search_string) != 0; i++) {
+
         if (not_found == true) {
+            //std::cout << "(debug) hit search function." << std::endl;
+
             // getting the search terms in the cabinets
-            this->access >> search1;
-            this->data >> search2;
+            if (nobreaky1 == false) this->access >> search1;
+            if (nobreaky2 == false) this->data >> search2;
+
+            if (search1.compare("eof") == 0 && nobreaky1 == false) {
+                breaky++;
+                nobreaky1 = true;
+            }
+
+            if (search2.compare("eof") == 0 && nobreaky2 == false) {
+                breaky++;
+                nobreaky2 = true;
+            }
+
+            if (nobreaky1 && nobreaky2 && breaky == 2) break;
 
             if (search1.compare(search_string) == 0) {
                 found = true;
+                not_found = false;
+
+                std::cout << "(debug) hit search function." << std::endl;
 
                 std::cout << "\tsearch1 : " << search1 << std::endl;
                 std::cout << "\tsearch2 : " << search2 << std::endl;
@@ -462,10 +508,14 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                                 std::cout << "(!) omitted empty line." << std::endl;
                             }
                         }
+
                         if (wordCount > 0) {    // remove trailing space on b_string
                             b_string.pop_back();
+                        } else {
+                            break;
                         }
 
+                        std::cout << "(debug) file_access()." << std::endl;
                         this->file_access(8);   // closes "this->intelligence" file 
 
                         std::cout << std::endl << "- adding (" << wordCount <<") weights." << std::endl;
@@ -494,13 +544,15 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 }
 
                 std::cout << std::endl << "[]:: " << sorted << std::endl;
-            } else {
+            } else if (!nobreaky1 && !nobreaky2) {
                 // skipping lines in the cabinets
                 std::getline(access, empty);
                 std::getline(access, empty);
                 // skipping empty lines in the cabinets
                 std::getline(data, empty);
                 std::getline(data, empty);
+            } else {
+                break;
             }
         }
                 // process weights
@@ -525,7 +577,6 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 //     std::cout << "- no data is available." << std::endl;
                 // }
         
-
         if (search1.length() > 0 && search2.length() > 0 && search1.compare(search2) == 0 && found == true) {
             resonate_index = i;
             std::cout << "~:: resonate_index::match found on line: (" << (resonate_index+1) << ")." << std::endl;
@@ -594,7 +645,14 @@ void Brain::add_cabinet(std::string d, std::string desc) {
     this->cabinet << d << "\t" << desc << "\t" << "+ " << this->index++ << std::endl << std::endl;
     // this->file_access(9);
     this->flush_data(2);
-}
+};
+
+void Brain::add_intel(std::string t, std::string d) {
+    this->file_access(5);   // opens "ai/brain/nlp/intelligence/intelligence" for writing
+    sleep(1);
+    this->intel << std::endl << "[" << t << "]\t" << std::endl << d << std::endl;
+    this->file_access(10);  // closes "ai/brain/nlp/intelligence/intelligence" database
+};
 
 void Brain::flush_data(int n) {  // consolidates data
     this->file_access(9); // closes files

@@ -19,10 +19,15 @@ char languages[11][16] = { "robot", "english", "german", "french", "russian", "d
 
 class Courtesy { // acts as filter for peer or device
 private:
+
+    int peers;  // number of peers in communication
+
     bool areFriend; // are speaking with authorized figure
     bool arePeer; // are speaking with anyone
     bool arePeerRelation; // peer referral to peer or device
     bool areDevice; // peer is device
+    bool arePerson; // peer is a person
+    bool areRobot;  // peer is a robot
     bool areTalking; // in communication
     bool areTalkingWithRobot; // peer (or friend)
     bool areTalkingWithPerson; // peer (or friend)
@@ -63,31 +68,11 @@ public:
     int sendRst() { /*RST*/ return 1; };
     int sendNop() { /*NOP*/ return 1; };
 
-    void switchProt(std::string prot){
-        for (size_t t=0; t<5; t++) {
-            if (strncmp(protocols[t],prot.c_str(), 16) == 0) {
-                this->prot = t;
-                this->protocol = prot;
-            } else {
-                std::cout << "(!) - (error) no matching protocol!" << std::endl;
-            }
-        }
-    };
+    void switchLang(std::string lang);
+    void switchProt(std::string prot);
 
-    void switchProtocol(int n);
-    
-    void switchLang(std::string lang) {
-        for (size_t t=0; t<5; t++) {
-            if (strncmp(languages[t],lang.c_str(), 16) == 0) {
-                this->lang = t;
-                this->language = lang;
-            } else {
-                std::cout << "(!) - (error) no matching protocol!" << std::endl;
-            }
-        }
-    };
-    
     void switchLanguage(int n);
+    void switchProtocol(int n);
 };
 
 
@@ -100,6 +85,9 @@ Courtesy::Courtesy() {    // main constructor function for the Courtesy class
     // set language instructions
     this->lang = 1;
     this->language = "english";
+
+    // initialization
+    this->peers = 0;
 };
 
 int Courtesy::doHandshake(std::string peer) {   // three-way-handshake
@@ -108,8 +96,34 @@ int Courtesy::doHandshake(std::string peer) {   // three-way-handshake
 
 void Courtesy::switchProtocol(int n) {
     this->prot = n;
+    this->protocol = protocols[n];
 };
 
 void Courtesy::switchLanguage(int n) {
     this->lang = n;
+    this->language = languages[n];
 };
+
+void Courtesy::switchProt(std::string prot){
+    for (size_t t=0; t<5; t++) {
+        if (strncmp(protocols[t],prot.c_str(), 16) == 0) {
+            this->prot = t;
+            this->protocol = prot;
+        } else {
+            std::cout << "(!) - (error) no matching protocol!" << std::endl;
+        }
+    }
+};
+
+void Courtesy::switchLang(std::string lang) {
+    for (size_t t=0; t<5; t++) {
+        if (strncmp(languages[t],lang.c_str(), 16) == 0) {
+            this->lang = t;
+            this->language = lang;
+        } else {
+            std::cout << "(!) - (error) no matching protocol!" << std::endl;
+        }
+    }
+};
+
+// eof

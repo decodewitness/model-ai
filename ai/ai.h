@@ -172,6 +172,7 @@ public:
 	void add_to_cabinet(std::string d, std::string desc);
 	void add_to_brain_manually();
 	void add_to_cabinet_manually();
+	void add_intelligence(std::string tag, std::string desc);
 	//void neural_net(std::string s, std::string h, int); 
 
 	// print messages

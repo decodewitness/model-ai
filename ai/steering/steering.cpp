@@ -9,6 +9,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#include "../ai.cpp"
 #include "splash.h"
 
 // other includes
@@ -61,7 +62,11 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 
 	// class instances are main function
 	AI ai(arc);
+	//ai.add_intelligence("try", "try out sample as input to derive or verify the output of a function.");
+	ai.decouple();
 
+return 0;
+}
 	// (DEBUG) for hashing passcodes (DISABLE THIS)
 	//ai.hashtype("ai"); // checking integrity
 
@@ -245,11 +250,7 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	// ai.add_to_cabinet("test", "test");
 
 	//ai.add_to_brain_manually();
-
-	ai.decouple();
-
-return 0;
-}	
+	
 	
 	//cout << "Working Directory: ";
 	//system("pwd");

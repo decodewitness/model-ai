@@ -803,7 +803,7 @@ void AI::query() {	// respond to logical query method
 	char ch;
 
 	// QUERY
-	std::cout << std::endl << "::- type your query  -::" << std::endl;
+	std::cout << "::- type your query  -::" << std::endl;
 	
 	// play audio file
 	this->play_audio_file("ai/system/audio/samples/taptaptap.wav");
@@ -1500,6 +1500,10 @@ void AI::add_to_brain(std::string h, std::string s, std::string c) {
 	// add to logical cabinet in "intelligence/cabinet_collection" file here
 
 };
+
+void AI::add_intelligence(std::string tag, std::string desc) {
+	this->brain->add_intel(tag, desc);	
+}
 
 void AI::add_to_brain_manually() {
 	std::string handle;

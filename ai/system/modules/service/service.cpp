@@ -17,6 +17,7 @@
 class Service {
 private:
     Courtesy *courtesy;
+
 public:
     Service();
     ~Service();

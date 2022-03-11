@@ -4,12 +4,18 @@ assembly	logical assembly, construing data, assembler generated code, building u
 
 example example of a random string to illustrate or describe a similar object.  + 3
 
-intelligence    deciphering algorithms, and using strategies to solve the inherent problem. + 4
+help    type "/help" to access the help function.   + 4
 
-logic   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 5
+intelligence    deciphering algorithms, and using strategies to solve the inherent problem. + 5
 
-manual  document with proper instructions for using e.g. a device, or object.   + 6
+logic   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
 
-model-ai    model-Ai. could we fashion this arithmetic sequence?   + 7
+manual  document with proper instructions for using e.g. a device, or object.   + 7
 
-test	testing concepts, testing an outcome, trying out methods to oppose logic to its function, trying out new or old concepts	+ 5
+model-ai    model-Ai. could we fashion this arithmetic sequence?   + 8
+
+test	testing concepts, testing an outcome, trying out methods to oppose logic to its function, trying out new or old concepts	+ 9
+
+story   either a fabulated or real sequence of events shared by speech or in writing    + 10
+
+eof

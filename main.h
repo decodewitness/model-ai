@@ -8,7 +8,6 @@
 #include <unistd.h>
 
 // CLASS LIBRARIES HEADERS
-#include "ai/ai.cpp"
 #include "ai/steering/steering.cpp"
 //#include "ai/system/security/initialize_runcheck.cpp"
 

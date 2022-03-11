@@ -1426,16 +1426,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdc1c49eb0)
-	- stacking header:(1)::<address>(0x7ffdc1c49ed0)
-	- stacking header:(2)::<address>(0x7ffdc1c49ef0)
-	- stacking header:(3)::<address>(0x7ffdc1c49f10)
-	- stacking header:(4)::<address>(0x7ffdc1c49f30)
-	- stacking header:(5)::<address>(0x7ffdc1c49f50)
-	- stacking header:(6)::<address>(0x7ffdc1c49f70)
-	- stacking header:(7)::<address>(0x7ffdc1c49f90)
-	- stacking header:(8)::<address>(0x7ffdc1c49fb0)
-	- stacking header:(9)::<address>(0x7ffdc1c49fd0)
+	- stacking header:(0)::<address>(0x7fff3f6bc090)
+	- stacking header:(1)::<address>(0x7fff3f6bc0b0)
+	- stacking header:(2)::<address>(0x7fff3f6bc0d0)
+	- stacking header:(3)::<address>(0x7fff3f6bc0f0)
+	- stacking header:(4)::<address>(0x7fff3f6bc110)
+	- stacking header:(5)::<address>(0x7fff3f6bc130)
+	- stacking header:(6)::<address>(0x7fff3f6bc150)
+	- stacking header:(7)::<address>(0x7fff3f6bc170)
+	- stacking header:(8)::<address>(0x7fff3f6bc190)
+	- stacking header:(9)::<address>(0x7fff3f6bc1b0)
 
 
 -:: checking AI functions.
@@ -1494,8 +1494,7 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	:: increment(2)
-	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1567,23 +1566,107 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./module_bay
+	--directory: -- ./module_bay
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./info.txt
+	--directory: -- ./info.txt
 
 ~:: stats() function:
-regular file: -- ./downloads
+	--directory: -- ./downloads
 
 ~:: stats() function:
-regular file: -- ./DCIM
+	--directory: -- ./DCIM
 
 
-~:: running (10) queries.
-
+~:: running (2) queries.
 
 ::- type your query  -::
 --?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	blah
+	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+
+sorter() :: (){ ai/brain/data/blah }
+*string_next_logic() :: ssh: "blah".
+	- HMAC string :: *string_next_logic() ::  (blah) is >> 
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: running (2) queries.
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+
+sorter() :: (){ ai/brain/data/logic }
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+
+sorter() :: (logical){ ai/brain/data/logic.dat }
+
+sorted: ai/brain/data/logic.dat
+<<<
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+(!) omitted empty line.
+(debug) file_access().
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/logic.dat
+~:: resonate_index::match found on line: (6).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat]
+
+-:: aborting artificial life sequence, and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled .
+
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
+
+-:: decoupler.
+	-:: decoupling sampler

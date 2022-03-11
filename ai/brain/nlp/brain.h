@@ -40,6 +40,7 @@ private:
     bool output_is_open;
     bool cabinet_is_open;
     bool intelligence_is_open;
+    bool intel_is_open; // used when writing to "intelligence"
 
     // bool keep_alive;    // keeps access open     // obsolete
     
@@ -49,6 +50,7 @@ private:
     ofstream cabinet;
     ofstream output;
     ofstream collection;
+    ofstream intel;
 
     // std::string
 // references
@@ -80,8 +82,10 @@ public:
     void arrange(); // arranges data in cabinet // alphabetical sequence
     void add_data(std::string h, std::string s, std::string c);    // adds data to a stored reference (store_reference())
     void add_cabinet(std::string d, std::string desc);
+    void add_intel(std::string t, std::string d);   // t=tag, d=description // adds data to intelligence    // use with care because changes might propagate into the data/logic
     void flush_data(int n);
     std::string search(std::string logic, int n=1); // search cabinet
+    
     // signal
     void done_with_query(); // creates done sequence in array done[]
 };
