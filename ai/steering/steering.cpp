@@ -40,7 +40,13 @@ bool logging_is_enabled = true;
 // main function
 int steering(int arc) {	// used as main function for the driver of the Model-Ai and spin the program cycle (encapsulation).
 	// initialize_runtime_check();
+	// class instances are main function
+	AI ai(arc);
+	//ai.add_intelligence("try", "try out sample as input to derive or verify the output of a function.");
+	ai.decouple();
 
+return 0;
+}
 	//int loopvar=0; 	// use loopvar in recounting xl[1024]
 	//char * xl[1024];
 
@@ -60,13 +66,7 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	// need to implement this function again
 	//testing1();	// testing 1
 
-	// class instances are main function
-	AI ai(arc);
-	//ai.add_intelligence("try", "try out sample as input to derive or verify the output of a function.");
-	ai.decouple();
 
-return 0;
-}
 	// (DEBUG) for hashing passcodes (DISABLE THIS)
 	//ai.hashtype("ai"); // checking integrity
 

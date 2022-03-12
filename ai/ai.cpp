@@ -1797,5 +1797,11 @@ void AI::runSim() {	// sim objects and such go here
 	// this next "stopSim()" should be the last statement in this function
 	this->stopSim();
 };
+
+void AI::convert_data(std::string f, int l) {
+	std::cout << std::endl << "~:: converting metrical data." << std::endl;
+	convert_data(f, l);
+};
+
 #endif
 // eof

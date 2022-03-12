@@ -57,6 +57,7 @@
 #include "language/concepts.cpp"
 #include "system/audio/audio.cpp"
 #include "drum_machine/drums.cpp"
+#include "data/convert/convert.cpp"
 #include "data/handler/handler.cpp"
 #include "autonomous/autonomous.cpp"
 #include "system/modules/utility.cpp"
@@ -329,6 +330,9 @@ public:
 
 	// stat
 	int statdir(std::string d);
+
+	// data conversion
+	void convert_data(std::string f, int l);
 
 	// killchain
 	void destroy_msg();
