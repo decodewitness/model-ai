@@ -100,7 +100,11 @@ void Brain::file_access(int level) {
 
         sleep(1);        
         if (this->intelligence.is_open()) {
-            std::cout << "<<<" << std::endl << "- opened \"" << intelligence_file << "\"." << std::endl;
+            std::cout << std::endl;
+            std::cout << "\t<<<" << std::endl;
+            std::cout << std::endl;
+
+            std::cout << "- opened \"" << intelligence_file << "\"." << std::endl;
             this->intelligence_is_open = true;
         }
     }

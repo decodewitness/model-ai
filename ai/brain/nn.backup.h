@@ -4,77 +4,26 @@
 const int numberOfIndexes = 13; // number of indexes in cabinets    // must match both cabinets
 
 std::string Brain::sorter(std::string st, int level) {
-    // variables   
-    unsigned open;
-    unsigned close;
-    unsigned open2;
-    unsigned close2;
-    
-    std::string initstr = "ai/brain/data/";
-    std::string linea;
-    std::string lineb;
-    std::string combined;
-    std::string combined2;
- 
     ifstream fileObject;
+    std::string line;
+    std::string combined = "ai/brain/data/";
 
-    // function
-        // announce function for debugging and print line
-    std::cout << std::endl << "sorter():" << std::endl; 
-
-    // for (int i=0; i<2; i++) {
-    open = st.find("[") + 1;
-    close = st.find("]");
-    combined = initstr;
+    unsigned open = st.find("[") + 1;
+    unsigned close = st.find("]");
     combined.append(st.substr(open, close - open));
-    if (combined.compare(initstr) != 0) {
-        std::cout << "{ " << combined << " }" << std::endl;
-    }
 
-    open2 = st.find("{") + 1;
-    close2 = st.find("}");
-    combined2 = initstr;
-    combined2.append(st.substr(open2, close2 - open2));
-    if (combined2.compare(initstr) != 0) {
-        std::cout << "{ " << combined2 << " }" << std::endl;
-    }
+    fileObject.open(combined);
 
-    if (combined2.compare(initstr) != 0) {
-        std::cout << "::" << std::endl;
-    }
+    fileObject >> line;
 
-    // first check to see if the string actually differs from the original declared value
-    if (combined.compare(initstr) != 0) {
-        std::cout << "- opening: " << combined << "." << std::endl;
-        fileObject.open(combined);
-        if (fileObject.is_open() == true) {
-            std::cout << "\t- " << combined << " : is open." << std::endl;
-            std::getline(fileObject, linea);
-            std::cout << "\t\t-- :: ( " << linea << " )" << std::endl;
-            fileObject.close();
-        } else {
-            std::cout << "\t- unable to open : " << combined << std::endl;
-        }
-    }
 
-    // again first check to see if the string actually differs from the original declared value
-    if (combined2.compare(initstr) != 0) {
-        std::cout << "- opening: " << combined2 << "." << std::endl;
-        fileObject.open(combined2);
-        if (fileObject.is_open() == true) {
-            std::cout << "\t- " << combined2 << " : is open." << std::endl;
-            std::getline(fileObject, lineb);
-            std::cout << "\t\t-- :: ( " << lineb << " )" << std::endl;
-            fileObject.close();
-        } else {
-            std::cout << "\t- unable to open : " << combined << std::endl;
-        }
-    }
-  
-    // combined && combined2
-
-    // }
     // NEED TO FIX THIS
+
+
+    
+    std::cout << std::endl << "sorter() :: (" << line << "){ " << combined << " }" << std::endl;
+
+    fileObject.close();
 return combined;
 };
 
@@ -99,7 +48,7 @@ std::string Brain::string_next_logic(std::string ssh) {
     // ss = ssh;
     
     // 1st layer in neural net
-    // std::string hmac = this->sorter(ssh, 1);
+    std::string hmac = this->sorter(ssh, 1);
 
     // 2nd layer in neural net
     // hmac = this->linker(hmac);

@@ -18,7 +18,6 @@ fi
 
 echo
 echo "done."
-echo
 # end of script
 exit 0
 
