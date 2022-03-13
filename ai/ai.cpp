@@ -112,6 +112,7 @@ void AI::help(int n=1) {
 	std::cout << "/stepping -- Will start the (incremental for now) \"stepping engine\" in which you could potentially stack any type of: math, algorithm, or data." << std::endl;
 	std::cout << "/rollout -- the rollout() function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way." << std::endl;
 	std::cout << "/add_data -- add data to the logical cabinets manually." << std::endl;
+	std::cout << "/convert_data -- convert data from file." << std::endl;
 
 	// list of arguments
 	std::cout << std::endl;
@@ -821,6 +822,8 @@ void AI::query() {	// respond to logical query method
 	logicalQuery(query_string);
 
 	// process commands	// compute logic and strings
+		// is declared in AI/LOGIC/ASSEMBLY/LOGIC.H
+		// functions in AI/LOGIC/ASSEMBLY/LOGIC.CPP
 	if (isSim == true) {	// run simulation
 		std::cout << std::endl << "(simulation) entities: ";
 		cin >> x;
@@ -1072,6 +1075,16 @@ void AI::query() {	// respond to logical query method
 		isAddData = false;
 	} else if (isLogic == true) {
 		this->assembleBrain();
+	} else if (isConvertData) {
+		int l;
+		std::string f;
+		std::cout << "~:: file carrying definitions : ";
+		cin >> f;
+		std::cout << "~:: nr. of lines : ";
+		cin >> l;
+		this->convert_data(f, l);	// change length
+		data_handler();
+		isConvertData = false;
 	}
 };
 
@@ -1800,7 +1813,7 @@ void AI::runSim() {	// sim objects and such go here
 
 void AI::convert_data(std::string f, int l) {
 	std::cout << std::endl << "~:: converting metrical data." << std::endl;
-	convert_data(f, l);
+	convert_datas(f, l);
 };
 
 #endif

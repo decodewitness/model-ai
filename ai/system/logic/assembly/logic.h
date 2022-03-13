@@ -37,6 +37,7 @@ bool isPlayAudio=false;
 bool isReturnPunch=false;
 bool isPrintPunch=false;
 bool isAddData=false;
+bool isConvertData=false;
 
 // when not a command but language
 bool isLogic=false;

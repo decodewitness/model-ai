@@ -1,5 +1,6 @@
 // "AI/DATA/HANDLER/HANDLER.CPP" USED BY "AI/AI.H" 
 
+#include <iostream>
 #include <string>
 #include <fstream>
 
@@ -12,7 +13,7 @@ std::string MATH_IN = "ai/data/in/expression";   // file containing math express
 // FUNCTION TO HANDLE MATH DATA INPUT
 void math_handler() {    // handles math expressions by using "matrix"  // called from math_filter()
     // file stream
-    ifstream indata;
+    std::ifstream indata;
 
     // variables
     std::string expr = "0";
@@ -35,7 +36,7 @@ void math_handler() {    // handles math expressions by using "matrix"  // calle
 // FUNCTION TO HANDLE DATA INPUT STREAMS
 void data_handler() {   // handles data expressions // called from data_filter()
     // file stream
-    ifstream indata;
+    std::ifstream indata;
 
     // variables
     std::string expr = "0";

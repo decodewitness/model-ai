@@ -1478,16 +1478,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc2d51de90)
-	- stacking header:(1)::<address>(0x7ffc2d51deb0)
-	- stacking header:(2)::<address>(0x7ffc2d51ded0)
-	- stacking header:(3)::<address>(0x7ffc2d51def0)
-	- stacking header:(4)::<address>(0x7ffc2d51df10)
-	- stacking header:(5)::<address>(0x7ffc2d51df30)
-	- stacking header:(6)::<address>(0x7ffc2d51df50)
-	- stacking header:(7)::<address>(0x7ffc2d51df70)
-	- stacking header:(8)::<address>(0x7ffc2d51df90)
-	- stacking header:(9)::<address>(0x7ffc2d51dfb0)
+	- stacking header:(0)::<address>(0x7ffd92b61f50)
+	- stacking header:(1)::<address>(0x7ffd92b61f70)
+	- stacking header:(2)::<address>(0x7ffd92b61f90)
+	- stacking header:(3)::<address>(0x7ffd92b61fb0)
+	- stacking header:(4)::<address>(0x7ffd92b61fd0)
+	- stacking header:(5)::<address>(0x7ffd92b61ff0)
+	- stacking header:(6)::<address>(0x7ffd92b62010)
+	- stacking header:(7)::<address>(0x7ffd92b62030)
+	- stacking header:(8)::<address>(0x7ffd92b62050)
+	- stacking header:(9)::<address>(0x7ffd92b62070)
 
 
 -:: checking AI functions.
@@ -1546,7 +1546,8 @@ ENTER PASSCODE:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 2 trees. trees labeled 		forest type I (label).
 	-:: deleting tree.
 		-:: tree got deleted.
 		-:: tree got deleted.
@@ -1618,20 +1619,83 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-character device: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
-character device: -- ./DCIM
+file or directory: -- ./DCIM
 
+
+~:: running (10) queries.
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/convert_data
+	[ simple x computation: type:[char]: len:13 vowels:7 consonants:4 special:2 
+~:: parameter request: convert_data().
+ ]
+
+-:: finished x computation.
+~:: file carrying definitions : ~:: nr. of lines : 
+~:: converting metrical data.
+(!) error - convert_data() - error opening files for reading/writing.
+
+~:: data handler
+
+~:: running (10) queries.
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/convert_data
+	[ simple x computation: type:[char]: len:13 vowels:7 consonants:4 special:2 
+~:: parameter request: convert_data().
+ ]
+
+-:: finished x computation.
+~:: file carrying definitions : ~:: nr. of lines : 
+~:: converting metrical data.
+~:: passthrough_filter() : 
+
+	-> (mutable):
+		"instructionset ?? testing this data ! ok.".
+
+	-> (mutated):
+		"instructionset  testing this data  ok."
+
+~:: passthrough_filter() : 
+
+	-> (mutable):
+		"pass in 2 lines of data.".
+
+	-> (mutated):
+		"pass in 2 lines of data."
+
+
+~:: data handler
+(debug) data_filter: instructionset
+(debug) data_filter: testing
+(debug) data_filter: this
+(debug) data_filter: data
+(debug) data_filter: ok.pass
+(debug) data_filter: in
+(debug) data_filter: 2
+(debug) data_filter: lines
+(debug) data_filter: of
+(debug) data_filter: data.
 
 ~:: running (10) queries.
 
@@ -1695,79 +1759,6 @@ b_string:
    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
 
    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
-
-~:: running (10) queries.
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	artificial
-	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "artificial".
-	- HMAC string :: *string_next_logic() ::  (artificial) is >> 
-
-~:: searching indexes:
-	- rewinding file index.
-(debug) hit search function.
-	search1 : artificial
-	search2 : artificial
-	line1 :   something real or artificial made up out of a matter construct. + 1
-	line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
-
-sorter():
-{ ai/brain/data/artificial.dat }
-{ ai/brain/data/artificial2.dat }
-::
-- opening: ai/brain/data/artificial.dat.
-	- ai/brain/data/artificial.dat : is open.
-		-- :: ( artificial assembly, model-ai. )
-- opening: ai/brain/data/artificial2.dat.
-	- ai/brain/data/artificial2.dat : is open.
-		-- :: ( artificial data. artificial encounters. artificial life. artificial measure. artificial object. artificial reality. artificial or logical conduit. )
-
-sorted: ai/brain/data/artificial.dat
-
-	<<<
-
-- opened "ai/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-TMP: logic
-TMP: model-ai
-	~:: query matches search string: "artificial".
-
--* artificial is:
-  something real or artificial made up out of a matter construct. + 1
-
-  being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
-
-~:: running (10) queries.
-
-::- type your query  -::
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	blah
-	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "blah".
-	- HMAC string :: *string_next_logic() ::  (blah) is >> 
-
-~:: searching indexes:
-	- rewinding file index.
 
 ~:: running (10) queries.
 
