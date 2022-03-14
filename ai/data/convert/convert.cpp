@@ -56,7 +56,7 @@ void convert_datas(std::string filename, int lines) {
             std::getline(file, data);
 
             filtered = passthrough_filter(data);
-            output << filtered;
+            output << filtered << " ";
 
             // process tags
             //output << "\t[]\t{}";
