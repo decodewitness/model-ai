@@ -164,6 +164,7 @@ void AI::initialize_runtime_check() { // actually should be staged and recursive
 };
 
 AI::AI(int n) {	// AI constructor
+	//char ch;
 	// play audio file
 	//this->play_audio_file("ai/system/audio/samples/flir.wav");
 	this->splash();
@@ -204,9 +205,11 @@ AI::AI(int n) {	// AI constructor
 	}
 	// perform query sampling and nlp query
 	for (int i=0; i<n; i++) {
-		std::cout << std::endl << "~:: running (" << n << ") queries." << std::endl << std::endl;
-		// this->assembleBrain();
+		std::cout << std::endl << "~:: running (" << (n-i) << ") queries." << std::endl << std::endl;
+		//this->assembleBrain();
 		this->query();
+		//std::cout << "- catching single character to continue..." << std::endl;
+		//ch = getchar();
 	}
 }
 
@@ -794,7 +797,7 @@ void AI::saygrace() {	// say grace routine
 
 //QUERY
 void AI::query() {	// respond to logical query method
-						// HANDLES COMMANDS
+				// HANDLES COMMANDS
 	// variables for commands structure		
 	double x, xx;	// used to compute logic
 	double sum;
@@ -811,10 +814,15 @@ void AI::query() {	// respond to logical query method
 
 	// PROMPT
 	std::cout << "--?:: ";
-	
+
+	// std::getline(cin, query_string);
+	// ch = getchar();
+	// EDITED THIS
+
 	char str[1024];
-	getchar();    // create buffer (1 extra for null char)
-	cin.get(str, 1024);    // read up to 79 chars and place in str
+	// std::getch();    // create buffer (1 extra for null char)
+	ch = getchar();
+	std::cin.get(str, 1024);    // read up to 79 chars and place in str
 	query_string = str;
 	str[0] = '\0';
 
@@ -1071,10 +1079,9 @@ void AI::query() {	// respond to logical query method
 		this->version();
 		isVersion = false;
 	} else if (isAddData == true) {
+		this->assembleBrain();	// added after latest debug	// shapes Brain object
 		this->add_to_brain_manually();
 		isAddData = false;
-	} else if (isLogic == true) {
-		this->assembleBrain();
 	} else if (isConvertData) {
 		int l;
 		std::string f;
@@ -1085,7 +1092,10 @@ void AI::query() {	// respond to logical query method
 		this->convert_data(f, l);	// change length
 		data_handler();
 		isConvertData = false;
-	}
+	} else if (isLogic == true) {
+		this->assembleBrain();
+		this->brain->useBrain(query_string);
+	} 
 };
 
 	// std::string sentence;
@@ -1493,13 +1503,15 @@ void AI::hmath() {	// math handler
 };
 
 void AI::assembleBrain() {	// uses logic // useBrain && neural_net
-	this->brain = new Brain;
-
-	// move this logic somewhere else
-	this->brain->useBrain(query_string);
-	//this->brain->neural_net(query_string);
-	this->brn = true;
+	std::cout << "~:: assembling brain object." << std::endl;
+	if (this->brn == false) {
+		this->brain = new Brain;
+		this->brn = true;
+	}
 };
+	// move this logic somewhere else
+	// this->brain->useBrain(query_string);
+	//this->brain->neural_net(query_string);
 
 void AI::add_to_brain(std::string h, std::string s, std::string c) {
 	std::string desc;
@@ -1523,25 +1535,28 @@ void AI::add_to_brain_manually() {
 	std::string desc;
 	std::string code;
 	char ch;
-
+	
 	std::cout << std::endl;
 	std::cout << "~:: give a handle for the data : ";
 	cin >> handle;
 
 	std::cout << std::endl;
 	std::cout << "~:: give a data description : ";
+	
 	ch = getchar();
 	std::getline(cin, desc);
 
-	// code = "[";
-	code.append(handle);
-	// code.append("]");
+	std::cout << "(debug) " << handle << " " << desc << std::endl;
+
+	code = "[";
+	code.append(handle);	// commented out for debugging
+	code.append("]");
 
 	// add to data_collection 
-	this->brain->add_data(handle, desc, code);
+	this->brain->add_data(handle, desc, code);	// commented out for debugging
 	
 	// add to logical cabinet in "intelligence/cabinet_collection" file here
-	this->add_to_cabinet_manually();
+	this->add_to_cabinet_manually();	// commented out for debugging
 };
 
 void AI::add_to_cabinet(std::string d, std::string desc) {

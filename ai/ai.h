@@ -17,6 +17,7 @@
 
 // headers
 #include <cstring>
+#include <iostream>
 #include <sys/stat.h>
 #include <filesystem>
 //#include <thread>

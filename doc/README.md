@@ -1478,16 +1478,16 @@ ENTER PASSCODE:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc77108d40)
-	- stacking header:(1)::<address>(0x7ffc77108d60)
-	- stacking header:(2)::<address>(0x7ffc77108d80)
-	- stacking header:(3)::<address>(0x7ffc77108da0)
-	- stacking header:(4)::<address>(0x7ffc77108dc0)
-	- stacking header:(5)::<address>(0x7ffc77108de0)
-	- stacking header:(6)::<address>(0x7ffc77108e00)
-	- stacking header:(7)::<address>(0x7ffc77108e20)
-	- stacking header:(8)::<address>(0x7ffc77108e40)
-	- stacking header:(9)::<address>(0x7ffc77108e60)
+	- stacking header:(0)::<address>(0x7ffcfe6fdae0)
+	- stacking header:(1)::<address>(0x7ffcfe6fdb00)
+	- stacking header:(2)::<address>(0x7ffcfe6fdb20)
+	- stacking header:(3)::<address>(0x7ffcfe6fdb40)
+	- stacking header:(4)::<address>(0x7ffcfe6fdb60)
+	- stacking header:(5)::<address>(0x7ffcfe6fdb80)
+	- stacking header:(6)::<address>(0x7ffcfe6fdba0)
+	- stacking header:(7)::<address>(0x7ffcfe6fdbc0)
+	- stacking header:(8)::<address>(0x7ffcfe6fdbe0)
+	- stacking header:(9)::<address>(0x7ffcfe6fdc00)
 
 
 -:: checking AI functions.
@@ -1619,19 +1619,19 @@ ENTER PASSCODE:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-symlink: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-symlink: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-symlink: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
-symlink: -- ./DCIM
+file or directory: -- ./DCIM
 
 
 ~:: running (10) queries.
@@ -1647,9 +1647,253 @@ symlink: -- ./DCIM
  ]
 
 -:: finished x computation.
+~:: assembling brain object.
+~:: file_access()
+(debug) file_access(level=0).
+~:: opened store_reference_file / ai/brain/nlp/intelligence/cabinet_collection.
+~:: opened data_collection / ai/brain/nlp/intelligence/data_collection.
+~:: opened output / ai/brain/nlp/intelligence/store_file.
 
 ~:: give a handle for the data : 
-~:: give a data description : # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
+~:: give a data description : (debug) testing going through the testing procedure
+(debug) entering "add_data():".
+~:: file_access()
+(debug) file_access(level=0).
+(debug) output is open.
+~:: added data.
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+~:: give a handle for the data in cabinet : ~:: give a description for the data : (debug) entering "add_cabinet():".
+~:: file_access()
+(debug) file_access(level=3).
+~:: opened store_file / cabinet.
+~:: added cabinet data.
+
+~:: running (9) queries.
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+~:: assembling brain object.
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+sorter():
+{ ai/brain/data/logic.dat }
+- opening: ai/brain/data/logic.dat.
+	- ai/brain/data/logic.dat : is open.
+		-- :: ( logical assembly, model-ai. )
+
+sorted: ai/brain/data/logic.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/logic.dat
+~:: resonate_index::match found on line: (6).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+~:: running (8) queries.
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/add_data
+	[ simple x computation: type:[char]: len:9 vowels:4 consonants:3 special:2 
+~:: parameter request: add_data().
+ ]
+
+-:: finished x computation.
+~:: assembling brain object.
+
+~:: give a handle for the data : 
+~:: give a data description : (debug) sun sol 3.
+(debug) entering "add_data():".
+~:: file_access()
+(debug) file_access(level=0).
+(debug) output is open.
+~:: added data.
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+~:: give a handle for the data in cabinet : ~:: give a description for the data : (debug) entering "add_cabinet():".
+~:: file_access()
+(debug) file_access(level=3).
+~:: opened store_file / cabinet.
+~:: added cabinet data.
+
+~:: running (7) queries.
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/add_data
+	[ simple x computation: type:[char]: len:9 vowels:4 consonants:3 special:2 
+~:: parameter request: add_data().
+ ]
+
+-:: finished x computation.
+~:: assembling brain object.
+
+~:: give a handle for the data : 
+~:: give a data description : (debug) sol our sun.
+(debug) entering "add_data():".
+~:: file_access()
+(debug) file_access(level=0).
+(debug) output is open.
+~:: added data.
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+~:: give a handle for the data in cabinet : ~:: give a description for the data : (debug) entering "add_cabinet():".
+~:: file_access()
+(debug) file_access(level=3).
+~:: opened store_file / cabinet.
+~:: added cabinet data.
+
+~:: running (6) queries.
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+~:: assembling brain object.
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+sorter():
+{ ai/brain/data/logic.dat }
+- opening: ai/brain/data/logic.dat.
+	- ai/brain/data/logic.dat : is open.
+		-- :: ( logical assembly, model-ai. )
+
+sorted: ai/brain/data/logic.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/logic.dat
+~:: resonate_index::match found on line: (6).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+~:: running (5) queries.
+
+::- type your query  -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
+ ]
+
+-:: finished x computation.
+
+(kill chain) function() : 9
+
+-/- initializing killchain(1) sequence.
+
+# model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).
 

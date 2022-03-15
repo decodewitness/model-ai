@@ -21,9 +21,13 @@ Brain::Brain() {
 };
 
 Brain::~Brain() {
-    if (this->access.is_open()) {
+    if (this->access.is_open() == true) {
         this->access.close();
         this->access_is_open = false;
+        
+        if (this->access.is_open() == false) {
+            std::cout << "~:: closed access." << std::endl;
+        }
     }
 
     // flush any last data here
@@ -35,128 +39,205 @@ Brain::~Brain() {
 
 // technicalities
 void Brain::file_access(int level) {
-    if (level == 0) {   // open references (ai/brain/intelligence/cabinet)
+
+   /*
+    *    const char store_reference_file[] = "ai/brain/nlp/intelligence/cabinet_collection";
+    *    const char data_collection[] = "ai/brain/nlp/intelligence/data_collection";
+    *    const char store_file[] = "ai/brain/nlp/intelligence/store_file";
+    *    std::string intelligence_file = "ai/brain/nlp/intelligence/intelligence";   // will poke into the file with the intelligence
+    *    std::string intel_file = "ai/brain/nlp/intelligence/intelligence";
+    */
+
+    std::cout << "~:: file_access()" << std::endl;
+
+    if (level == 0) {   // open store references (ai/brain/intelligence/cabinet)
+        std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
         if (this->access.is_open() == false) {
             this->access.open(store_reference_file);
-        }
-        if (this->data.is_open() == false) {
-            this->data.open(data_collection);
-        }
-        if (this->output.is_open() == false) {
-            this->output.open(store_file);
+            if (this->access.is_open() == true) {
+                std::cout << "~:: opened store_reference_file / " << store_reference_file << "." << std::endl;
+                this->access_is_open = true;
+            } else {
+                this->access_is_open = false;
+                std::cout << "~::!::~ error! could not open \"access\" (" << store_reference_file << ")." << std::endl;
+            }
         }
     
-   
-        if (this->access.is_open() == true) {
-            this->access_is_open = true;
-        } else {
-            this->access_is_open = false;
-            std::cout << "~::!::~ error! could not open \"access\"." << std::endl;
+        if (this->data.is_open() == false) {
+            this->data.open(data_collection);
+            if (this->data.is_open() == true) {
+                std::cout << "~:: opened data_collection / " << data_collection << "." << std::endl;
+                this->data_is_open = true;
+            } else {
+                this->output_is_open = false;
+                std::cout << "~::!::~ error! could not open \"data_collection\" (" << data_collection << ")." << std::endl;
+            }
         }
-
-        if (this->data.is_open() == true) {
-            this->data_is_open = true;
-        } else {
-            this->access_is_open = false;
-            std::cout << "~::!::~ error! could not open \"data\"." << std::endl;
-        }
-
-        if (this->output.is_open() == true) {
-            this->output_is_open = true;
-        } else {
-            this->output_is_open = false;
-            std::cout << "~::!::~ error! could not open \"output\"." << std::endl;
+    
+        if (this->output.is_open() == false) {
+            this->output.open(store_file);
+            if (this->output.is_open() == true) {
+                std::cout << "~:: opened output / " << store_file << "." << std::endl;
+                this->output_is_open = true;
+            } else {
+                this->output_is_open = false;
+                std::cout << "~::!::~ error! could not open \"output\" (" << store_file << ")." << std::endl;
+            }
         }
     }
 
     if (level == 3) {
+        std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
         this->cabinet.open("ai/brain/nlp/intelligence/store_file");
         if (this->cabinet.is_open()) {
             this->cabinet_is_open = true;
+            std::cout << "~:: opened store_file / cabinet." << std::endl;
+        } else {
+            this->cabinet_is_open = false;
+            std::cout << "~::!::~ error! could not open \"cabinet\" (" << store_file << ")." << std::endl;
         }
     }
 
-    if (level == 5) {
+    if (level == 5) {   // closes this->intelligence
+        std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
         if (intelligence_is_open == true) {
             this->intelligence.close();
+            if (this->intelligence.is_open() == false) {
+                this->intelligence_is_open = false;
+            }
+        } else {
             this->intelligence_is_open = false;
+            std::cout << "~::!::~ error! could not open \"intelligence\" (" << intelligence_file << ")." << std::endl;
         }
 
-        if (this->intel.is_open() == false) {
-            this->intel.open("ai/brain/nlp/intelligence/intelligence");
+        if (this->intel.is_open() == false) {   // opens this->intel
+            this->intel.open(intel_file);
             if (this->intel.is_open()) {
                 this->intel_is_open = true;
                 std::cout << std::endl << "- opened \"intelligence\" database for writing." << std::endl;
+            } else {
+                this->intel_is_open = false;
+                std::cout << "~::!::~ error! could not open \"intel\" (" << intel_file << ")." << std::endl;
             }
         }
     }
 
     if (level == 6) {
+        std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
         // close cabinet and data
         if (this->cabinet.is_open() == true) {
             this->cabinet.close();
-            this->cabinet_is_open = false;
+            if (this->cabinet.is_open() == false) {
+                this->cabinet_is_open = false;
+                std::cout << "~:: closed \"cabinet\"." << std::endl;    // needs filename
+            }
+
         }
 
         if (this->data.is_open() == true) {
             this->data.close();
             this->data_is_open = false;
+            if (this->data.is_open() == false) {
+                std::cout << "~:: closed \"data\"." << std::endl;   // needs filename
+            }
         }
     }
 
 
     if (level == 7) {
+        std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
         // if (intelligence_file.length() >= 5) { // check if file has extension
-        this->intelligence.open(intelligence_file);   // ai/brain/nlp/intelligence/intelligence
+        if (this->intelligence.is_open() == false) {
+            this->intelligence.open(intelligence_file);   // ai/brain/nlp/intelligence/intelligence
+        }
+
 
         //system("pwd");
         // }
 
         sleep(1);        
-        if (this->intelligence.is_open()) {
+        
+        if (this->intelligence.is_open() == true) {
             std::cout << std::endl;
             std::cout << "\t<<<" << std::endl;
             std::cout << std::endl;
 
             std::cout << "- opened \"" << intelligence_file << "\"." << std::endl;
             this->intelligence_is_open = true;
+        } else {
+            std::cout << "~::!::~ error! could not open \"intel\" (" << intelligence_file << ")." << std::endl;
         }
     }
 
     if (level == 8) {
-        if (intelligence.is_open()) {
+        std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
+        if (intelligence.is_open() == true) {
             intelligence.close();
             intelligence_is_open = false;
         }
-        std::cout << "~:: closed file \"" << intelligence_file << "\"." << std::endl;
+
+        if (intelligence.is_open() == false) {
+            std::cout << "~:: closed file \"" << intelligence_file << "\"." << std::endl;
+        }
     }
 
     if (level == 9) {
+        std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
         // close files
-        if (output.is_open()) {
-            output.close();
-            output_is_open = false;
+        bool o = false;
+        bool c = false;
+        bool d = false;
+        bool a = false;
+
+        if (this->output.is_open()) {
+            this->output.close();
+            if (this->output.is_open() == false) {
+                this->output_is_open = false;
+                std::cout << "~:: closed \"output\"." << std::endl;
+                o = true;
+            }
         }
-        if (access.is_open()) {
-            access.close();
-            access_is_open = false;
+        if (this->access.is_open()) {
+            this->access.close();
+            this->access_is_open = false;
+            if (this->access.is_open() == false) {
+                this->access_is_open = false;
+                std::cout << "~:: closed \"access\"." << std::endl;
+                a = true;
+            }
         }
-        if (data.is_open()) {
-            data.close();
-            data_is_open = false;
+        if (this->data.is_open()) {
+            this->data.close();
+            this->data_is_open = false;
+            if (this->data.is_open() == false) {
+                this->data_is_open = false;
+                std::cout << "~:: closed \"data\"." << std::endl;
+                d = true;
+            }
         }
-        if (cabinet.is_open()) {
-            cabinet.close();
-            cabinet_is_open = false;
+        if (this->cabinet.is_open()) {
+            this->cabinet.close();
+            this->cabinet_is_open = false;
+            if (this->cabinet.is_open() == false) {
+                this->cabinet_is_open = false;
+                std::cout << "~:: closed \"cabinet\"." << std::endl;
+                c = true;
+            }
         }
-        std::cout << std::endl << "~:: closed all files." << std::endl;
+
+        if (o && c && d && a) {
+            std::cout << std::endl << "~:: closed all files." << std::endl;
+        }
     }
 
     if (level == 10) {
+        std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
         if (this->intel.is_open() == true) {
             this->intel.close();
-            this->intel_is_open = false;
-            std::cout << std::endl << "~:: closed \"intelligence\" database." << std::endl;
+            if (this->intel.is_open()) {
+                std::cout << std::endl << "~:: closed \"intelligence\" database." << std::endl;
+                this->intel_is_open = false;
+            }
         }
     }
 };
@@ -653,21 +734,44 @@ void Brain::recall(std::string s) {  // recalls events
 };
 
 void Brain::add_data(std::string h, std::string s, std::string c) {    // adds data to a stored reference (store_reference())
+    std::cout << "(debug) entering \"add_data():\"." << std::endl;
     this->file_access(0);
-    sleep(1);
-    this->output << std::endl << h << "\t" << s << "\t[" << c << "]" << std::endl << std::endl;
-    //this->file_access(6);
-    sleep(1);
-    this->flush_data(1);
+    // this->file_access(7);
+    //sleep(1);
+    if (this->output.is_open() == true) {
+        std::cout << "(debug) output is open." << std::endl;
+    } else {
+        std::cout << "(error) - \"output\" is closed / opening \"output\" (" << store_file << ")." << std::endl;
+        this->output.open(store_file);
+    }
+
+    if (this->output.is_open() == true) {
+        // adding data
+        sleep(2);
+        this->output << std::endl << h << "\t" << s << "\t[" << c << "]" << std::endl << std::endl;
+        std::cout << "~:: added data." << std::endl;
+    }
+    //sleep(1);
+
+    this->file_access(8);
+    // need to flush data here
+    //this->flush_data(1);  // commented out for debugging
+    // if (this->output.is_open() == true) {
+    //     std::cout << "~:: closing \"output\"" << std::endl;
+    //     this->output.close();
+    //     std::cout << "~:: closed \"output\" (" << store_file << ")." << std::endl;
+    // }
 };
 
 void Brain::add_cabinet(std::string d, std::string desc) {
+    std::cout << "(debug) entering \"add_cabinet():\"." << std::endl;
     this->file_access(3);
     sleep(1);
     this->cabinet << std::endl << d << "\t" << desc << "\t" << "+ " << this->index++ << std::endl << std::endl;
     //this->file_access(6);
     sleep(1);
-    this->flush_data(2);
+    //this->flush_data(2);
+    std::cout << "~:: added cabinet data." << std::endl;
 };
 
 void Brain::add_intel(std::string t, std::string d) {

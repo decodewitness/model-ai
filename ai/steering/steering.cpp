@@ -42,6 +42,9 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	// initialize_runtime_check();
 	// class instances are main function
 	AI ai(arc);
+	
+	// need to fix file_access(0)
+
 	//ai.add_intelligence("try", "try out sample as input to derive or verify the output of a function.");
 	ai.decouple();
 
