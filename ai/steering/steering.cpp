@@ -45,7 +45,7 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	
 	// need to fix file_access(0)
 
-	ai.run_tube("https://www.youtube.com/watch?v=nH_bEtbfB9U");
+	//ai.run_tube("https://www.youtube.com/watch?v=nH_bEtbfB9U");
 
 	//ai.add_intelligence("try", "try out sample as input to derive or verify the output of a function.");
 	ai.decouple();
