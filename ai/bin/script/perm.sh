@@ -13,6 +13,7 @@ chmod +x ai/system/security/sha1/sha1.sh
 chmod +x ai/virtual/creation/compile_tool
 chmod +x ai/virtual/virtual
 chmod +x ai/bin/script/compile.sh
+chmod +x ai/bin/script/setup_pytube.sh
 
 echo "~:done setting permissions for executable scripts."
 

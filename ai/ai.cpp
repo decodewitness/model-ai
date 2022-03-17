@@ -691,8 +691,20 @@ void AI::init() {		// INITIALIZATION
 	this->crlurl = DOWNLOADURL;
 	this->cmb = new Combine;
 
-	int x=0;
+	// int x=0;
 
+	this->pytubeRan = false;
+	int x = statdir("ai/lib/.pyt");	// check for signs of pytube installation
+
+	if (x == 0) {
+		// "ai/lib/.pyt" exists
+		this->pytubeRan = true;
+	} else {
+		// "ai/lib/.pyt" doesn't exist
+	}
+
+	// if x ==
+	
 	// file streams
 	std::cout << "\t-:: opening file streams." << std::endl;
 	// open file streams for tl
@@ -1540,7 +1552,7 @@ void AI::add_to_brain_manually() {
 	std::cout << "~:: give a handle for the data : ";
 	cin >> handle;
 
-	std::cout << std::endl;
+	// std::cout << std::endl;
 	std::cout << "~:: give a data description : ";
 	
 	ch = getchar();
@@ -1829,6 +1841,43 @@ void AI::runSim() {	// sim objects and such go here
 void AI::convert_data(std::string f, int l) {
 	std::cout << std::endl << "~:: converting metrical data." << std::endl;
 	convert_datas(f, l);
+};
+
+void AI::install_pytube() {
+	std::cout << std::endl << "~:: installing the \"Pytube\" program." << std::endl;
+	system("ai/bin/script/setup_pytube.sh");
+};
+
+bool AI::chk_pytube() {
+	int x = statdir("ai/lib/.pyt");
+
+	std::cout << "~:: checking for \"pytube\"." << std::endl;
+
+	if (x==0) {
+		// "ai/lib/.pyt" exists
+		std::cout << "\t~:: old installation found." << std::endl;
+		return true;
+	} else {
+		// "ai/lib/.pyt" does not exist
+		std::cout << "\t~:: no old installation found." << std::endl;
+		return false;
+	}
+}
+
+void AI::run_tube(std::string url) {
+	std::string command = "/usr/bin/pytube " + url;
+	bool chk = chk_pytube();
+	if (chk==true) {
+		std::cout << std::endl;
+		std::cout << "~:: running \"pytube\" command." << std::endl;
+		system(command.c_str());
+	} else {
+		std::cout << std::endl;
+		std::cout << "~:: first installing \"pytube\"." << std::endl;
+		this->install_pytube();
+		std::cout << "~:: running \"pytube\" command." << std::endl;
+		system(command.c_str());
+	}
 };
 
 #endif

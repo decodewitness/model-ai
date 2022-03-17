@@ -734,7 +734,7 @@ void Brain::recall(std::string s) {  // recalls events
 };
 
 void Brain::add_data(std::string h, std::string s, std::string c) {    // adds data to a stored reference (store_reference())
-    std::cout << "(debug) entering \"add_data():\"." << std::endl;
+    std::cout << std::endl << "(debug) entering \"add_data():\"." << std::endl;
     this->file_access(0);
     // this->file_access(7);
     //sleep(1);
@@ -764,7 +764,7 @@ void Brain::add_data(std::string h, std::string s, std::string c) {    // adds d
 };
 
 void Brain::add_cabinet(std::string d, std::string desc) {
-    std::cout << "(debug) entering \"add_cabinet():\"." << std::endl;
+    std::cout << std::endl << "(debug) entering \"add_cabinet():\"." << std::endl;
     this->file_access(3);
     sleep(1);
     this->cabinet << std::endl << d << "\t" << desc << "\t" << "+ " << this->index++ << std::endl << std::endl;

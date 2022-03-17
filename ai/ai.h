@@ -151,6 +151,8 @@ private:
 
 	moduleContainer m;
 
+	bool pytubeRan;
+
 public:
 	AI(int n=1);
 
@@ -340,6 +342,11 @@ public:
 	void saygrace();
 	void decouple();
 	void killc(int x);
+
+	// pytube
+	void install_pytube();
+	bool chk_pytube();
+	void run_tube(std::string url);
 };
 
 #endif
