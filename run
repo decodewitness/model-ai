@@ -6,8 +6,8 @@ echo "~:RUNTIME SCRIPT:~"
 echo
 
 ### UPDATE APT REPOS  (FIRST ENABLE BY REMOVING '#' POUND SIGN TO ALLOW "AI/BIN/SCRIPT/APT.SH" TO EXECUTE)
-#chmod +x ai/bin/script/apt.sh
-#ai/bin/script/apt.sh
+chmod +x ai/bin/script/apt.sh
+ai/bin/script/apt.sh
 
 ### execute the random script for manipulation of data
 if [ -f "./script.sh" ]
