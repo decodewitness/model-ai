@@ -676,6 +676,9 @@ void AI::init() {		// INITIALIZATION
 	// ALL INITIALIZATION HAPPENS HERE
 	std::cout << "-:: initialization." << std::endl;
 
+	// create brain instance
+	this->assembleBrain();
+
 	this->nr = 8;
 	this->ch = 'c';
 	this->check_routine = 1;
@@ -818,11 +821,11 @@ void AI::query() {	// respond to logical query method
 	int z, zz;
 	char ch;
 
-	// QUERY
-	std::cout << "::- type your query  -::" << std::endl;
-	
 	// play audio file
 	this->play_audio_file("ai/system/audio/samples/taptaptap.wav");
+
+	// QUERY
+	std::cout << "::- type your query -::" << std::endl;
 
 	// PROMPT
 	std::cout << "--?:: ";
@@ -1094,7 +1097,7 @@ void AI::query() {	// respond to logical query method
 		this->assembleBrain();	// added after latest debug	// shapes Brain object
 		this->add_to_brain_manually();
 		isAddData = false;
-	} else if (isConvertData) {
+	} else if (isConvertData == true) {
 		int l;
 		std::string f;
 		std::cout << "~:: file carrying definitions : ";
@@ -1104,11 +1107,17 @@ void AI::query() {	// respond to logical query method
 		this->convert_data(f, l);	// change length
 		data_handler();
 		isConvertData = false;
+	} else if (isRunPytube == true) {
+		std::string uri;
+		std::cout << "~:: (pytube) give an URL? : ";
+		cin >> uri;
+		this->run_tube(uri);
+		isRunPytube = false;
 	} else if (isLogic == true) {
-		this->assembleBrain();
+		// this->assembleBrain();
 		this->brain->useBrain(query_string);
 	} 
-};
+};	// functions are being recognised in AI/LOGIC/ASSEMBLY/LOGIC.CPP
 
 	// std::string sentence;
 	// char sentence[256];

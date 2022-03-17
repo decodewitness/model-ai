@@ -151,6 +151,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/convert_data") == false) {
         std::cout << std::endl << "~:: parameter request: convert_data()." << std::endl;
         isConvertData = true;   // triggers the convert_datas function
+    } else if (str.compare("/run_tube") == false) {
+        std::cout << std::endl << "~:: parameter request: run_tube()." << std::endl;
+        isRunPytube = true;     // triggers the AI::run_tube() method
     }
 };
 

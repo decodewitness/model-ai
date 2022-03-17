@@ -1280,6 +1280,12 @@ ENTER PASSCODE:
                        ++~~~~~~+~+++,,....                                     
                          ....,.......                                          
 -:: initialization.
+~:: assembling brain object.
+~:: file_access()
+(debug) file_access(level=0).
+~:: opened store_reference_file / ai/brain/nlp/intelligence/cabinet_collection.
+~:: opened data_collection / ai/brain/nlp/intelligence/data_collection.
+~:: opened output / ai/brain/nlp/intelligence/store_file.
 -:: running checks arguments.
 	0: arguments.
 
@@ -1430,16 +1436,16 @@ file or directory:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc69d53a60)
-	- stacking header:(1)::<address>(0x7ffc69d53a80)
-	- stacking header:(2)::<address>(0x7ffc69d53aa0)
-	- stacking header:(3)::<address>(0x7ffc69d53ac0)
-	- stacking header:(4)::<address>(0x7ffc69d53ae0)
-	- stacking header:(5)::<address>(0x7ffc69d53b00)
-	- stacking header:(6)::<address>(0x7ffc69d53b20)
-	- stacking header:(7)::<address>(0x7ffc69d53b40)
-	- stacking header:(8)::<address>(0x7ffc69d53b60)
-	- stacking header:(9)::<address>(0x7ffc69d53b80)
+	- stacking header:(0)::<address>(0x7ffdec57c690)
+	- stacking header:(1)::<address>(0x7ffdec57c6b0)
+	- stacking header:(2)::<address>(0x7ffdec57c6d0)
+	- stacking header:(3)::<address>(0x7ffdec57c6f0)
+	- stacking header:(4)::<address>(0x7ffdec57c710)
+	- stacking header:(5)::<address>(0x7ffdec57c730)
+	- stacking header:(6)::<address>(0x7ffdec57c750)
+	- stacking header:(7)::<address>(0x7ffdec57c770)
+	- stacking header:(8)::<address>(0x7ffdec57c790)
+	- stacking header:(9)::<address>(0x7ffdec57c7b0)
 
 
 -:: checking AI functions.
@@ -1567,27 +1573,27 @@ file or directory:
 		~:: glob() in directory: (bay):
 
 ~:: stats() function:
-character device: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-character device: -- ./info.txt
-
-~:: stats() function:
-	--directory: (debug) xcomp=true; skipping "." -&- ".."
+file or directory: -- ./info.txt
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./downloads
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./DCIM
+file or directory: -- ./downloads
+
+~:: stats() function:
+file or directory: -- ./DCIM
 
 
 ~:: running (10) queries.
 
-::- type your query  -::
+::- type your query -::
 --?:: 
 
 -:: testing sample ::-
@@ -1598,12 +1604,6 @@ character device: -- ./DCIM
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-~:: assembling brain object.
-~:: file_access()
-(debug) file_access(level=0).
-~:: opened store_reference_file / ai/brain/nlp/intelligence/cabinet_collection.
-~:: opened data_collection / ai/brain/nlp/intelligence/data_collection.
-~:: opened output / ai/brain/nlp/intelligence/store_file.
 *string_next_logic() :: ssh: "logic".
 	- HMAC string :: *string_next_logic() ::  (logic) is >> 
 ~:: file_access()
@@ -1662,9 +1662,141 @@ b_string:
 
 ~:: running (9) queries.
 
-::- type your query  -::
+::- type your query -::
 --?:: 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 5
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+
+sorter():
+{ ai/brain/data/intelligence.dat }
+- opening: ai/brain/data/intelligence.dat.
+	- unable to open : ai/brain/data/intelligence.dat
+
+sorted: ai/brain/data/intelligence.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+~:: found index [intelligence].
+:::_]{ (intelligence can be used to manipulate objects.)
+:::_]{ (intelligent manners could be manners that would be described.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (5).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
+	~:: query matches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 5
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+
+~:: running (8) queries.
+
+::- type your query -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+sorter():
+{ ai/brain/data/logic.dat }
+- opening: ai/brain/data/logic.dat.
+	- ai/brain/data/logic.dat : is open.
+		-- :: ( logical assembly, model-ai. )
+
+sorted: ai/brain/data/logic.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/logic.dat
+~:: resonate_index::match found on line: (6).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+~:: running (7) queries.
+
+::- type your query -::
+--?:: 
