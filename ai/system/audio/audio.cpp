@@ -8,7 +8,7 @@
 #include "SDL2/SDL_image.h"
 #include <SDL2/SDL_ttf.h>
  
-#define NUM_WAVEFORMS 18    // starts with sample [0]...
+#define NUM_WAVEFORMS 17    // starts with sample [0]...
 
 int nr_wav() {  // number of wave forms
     int num = NUM_WAVEFORMS;

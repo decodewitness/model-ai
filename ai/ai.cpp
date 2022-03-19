@@ -64,7 +64,9 @@ std::string moduleData[module_limits] = {
 
 void AI::splash(void) {
 	std::cout << std::endl << "\t** ][][ **" << std::endl << std::endl;
-	this->play_audio(4);
+	if (this->disableAudio != true) {
+		this->play_audio(4);
+	}
 }
 
 void AI::help(int n=1) {
@@ -170,7 +172,7 @@ AI::AI(int n) {	// AI constructor
 	//this->play_audio_file("ai/system/audio/samples/flir.wav");
 	
 	// audio
-	this->disableAudio = false;
+	this->disableAudio = true;
 	
 	this->splash();
 
@@ -837,6 +839,7 @@ void AI::query() {	// respond to logical query method
 	std::cout << "::- type your query -::" << std::endl;
 
 	// PROMPT
+	std::cout << "punch." << std::endl;
 	std::cout << "--?:: ";
 
 	// std::getline(cin, query_string);
@@ -856,7 +859,6 @@ void AI::query() {	// respond to logical query method
 	
 
 	// input
-	std::cout << "punch." << std::endl;
 	ch = getchar();
 	
 	
