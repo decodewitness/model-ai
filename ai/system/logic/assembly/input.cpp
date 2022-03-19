@@ -3,7 +3,7 @@
 // #include "commands.h" // already included in logic.h
 #include "input.h"
 
-void logicalQuery(std::string &x) {
+void logicalQuery(std::string x) {
 
     // set logic to 0 for automatic override of logic function
 

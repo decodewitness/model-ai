@@ -113,6 +113,7 @@ void AI::help(int n=1) {
 	std::cout << "/rollout -- the rollout() function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way." << std::endl;
 	std::cout << "/add_data -- add data to the logical cabinets manually." << std::endl;
 	std::cout << "/convert_data -- convert data from file." << std::endl;
+	std::cout << "/run_tube -- download YouTube file or playlist." << std::endl;
 
 	// list of arguments
 	std::cout << std::endl;
@@ -167,6 +168,10 @@ AI::AI(int n) {	// AI constructor
 	//char ch;
 	// play audio file
 	//this->play_audio_file("ai/system/audio/samples/flir.wav");
+	
+	// audio
+	this->disableAudio = false;
+	
 	this->splash();
 
 	// security
@@ -505,13 +510,17 @@ void AI::play_audio(int s=1) {	// plays an audio sample (int)(s)
 	//std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
 	
 	// audio device + sample nr
-	play_audio_device(s);
+	if (this->disableAudio != true) {
+		play_audio_device(s);
+	}
 	//sleep(1);
 };
 
 void AI::play_audio_file(std::string path) {
 	// audio file
-	play_audio_f(path);
+	if (this->disableAudio != true) {
+		play_audio_f(path);
+	}
 	//sleep(1);
 };
 
@@ -832,14 +841,28 @@ void AI::query() {	// respond to logical query method
 
 	// std::getline(cin, query_string);
 	// ch = getchar();
-	// EDITED THIS
 
+	// EDITED THIS
+/*
 	char str[1024];
 	// std::getch();    // create buffer (1 extra for null char)
 	ch = getchar();
 	std::cin.get(str, 1024);    // read up to 79 chars and place in str
 	query_string = str;
 	str[0] = '\0';
+*/
+	// Ignore to the end of line
+	//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	
+
+	// input
+	std::cout << "punch." << std::endl;
+	ch = getchar();
+	
+	
+	std::string str;
+	std::getline(cin, str);
+	query_string = str;
 
 	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;
 	logicalQuery(query_string);
@@ -1113,7 +1136,11 @@ void AI::query() {	// respond to logical query method
 		cin >> uri;
 		this->run_tube(uri);
 		isRunPytube = false;
-	} else if (isLogic == true) {
+	} else if (isToggleAudio == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
+		// this->assembleBrain();
+		this->audioToggle();
+		isToggleAudio = false;
+	} else if (isLogic == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
 		// this->assembleBrain();
 		this->brain->useBrain(query_string);
 	} 

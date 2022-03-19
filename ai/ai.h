@@ -115,6 +115,7 @@ private:
 	bool recordat;
 
 	bool access;
+	bool disableAudio;
 
 	AMModule *ammodule;
 	Modular *mdl;
@@ -231,6 +232,7 @@ public:
 	// audio
 	void play_audio(int s);
 	void play_audio_file(std::string path);
+	void audioToggle() { this->disableAudio = !this->disableAudio; }
 
 	// patching
 	void auto_patch();

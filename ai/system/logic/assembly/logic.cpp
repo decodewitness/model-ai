@@ -144,7 +144,7 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/add_data") == false) {
         std::cout << std::endl << "~:: parameter request: add_data()." << std::endl;
         isAddData = true;   // triggers the add_data_to_brain_manually method
-    } else if (str.at(0) != '/') {
+    } else if (str.front() != '/') {
         std::cout << "]" << std::endl << std::endl;
         std::cout << "[ -- you're asking my input --";
         isLogic = true;
@@ -154,6 +154,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/run_tube") == false) {
         std::cout << std::endl << "~:: parameter request: run_tube()." << std::endl;
         isRunPytube = true;     // triggers the AI::run_tube() method
+    } else if (str.compare("/audio_toggle") == false) {
+        std::cout << std::endl << "~:: parameter request: toggle_audio()." << std::endl;
+        isToggleAudio = true;
     }
 };
 

@@ -18,6 +18,7 @@ int main(int argc, char *argv[]) {
 			arguments.append(argv[i]);
 			arguments.append(",");
 		}
+		arguments.pop_back();
 		std::cout << std::endl << "ARG: " << arguments << std::endl << std::endl;
 	}
 

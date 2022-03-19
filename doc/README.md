@@ -51,7 +51,7 @@ LOGGED OUTPUT OF THIS BETA:
 
 
 
-ARG: 12,123,
+ARG: 12321
 
 ~:: how many queries to run? : 
 	** ][][ **
@@ -1342,8 +1342,8 @@ ENTER PASSCODE:
 	0: arguments.
 
 ~:: stats() function:
-file or directory: 
-	--statdir("ai/lib/.pyt") (flag:1)
+regular file: 
+	--statdir("ai/lib/.pyt") (flag:0)
 	-:: opening file streams.
 	-:: drum machine
 
@@ -1488,16 +1488,16 @@ file or directory:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdabf6eeb0)
-	- stacking header:(1)::<address>(0x7ffdabf6eed0)
-	- stacking header:(2)::<address>(0x7ffdabf6eef0)
-	- stacking header:(3)::<address>(0x7ffdabf6ef10)
-	- stacking header:(4)::<address>(0x7ffdabf6ef30)
-	- stacking header:(5)::<address>(0x7ffdabf6ef50)
-	- stacking header:(6)::<address>(0x7ffdabf6ef70)
-	- stacking header:(7)::<address>(0x7ffdabf6ef90)
-	- stacking header:(8)::<address>(0x7ffdabf6efb0)
-	- stacking header:(9)::<address>(0x7ffdabf6efd0)
+	- stacking header:(0)::<address>(0x7ffe29b484c0)
+	- stacking header:(1)::<address>(0x7ffe29b484e0)
+	- stacking header:(2)::<address>(0x7ffe29b48500)
+	- stacking header:(3)::<address>(0x7ffe29b48520)
+	- stacking header:(4)::<address>(0x7ffe29b48540)
+	- stacking header:(5)::<address>(0x7ffe29b48560)
+	- stacking header:(6)::<address>(0x7ffe29b48580)
+	- stacking header:(7)::<address>(0x7ffe29b485a0)
+	- stacking header:(8)::<address>(0x7ffe29b485c0)
+	- stacking header:(9)::<address>(0x7ffe29b485e0)
 
 
 -:: checking AI functions.
@@ -1624,83 +1624,123 @@ file or directory:
 		~:: glob() in directory: (bay):
 
 ~:: stats() function:
-character device: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-character device: -- ./info.txt
-
-~:: stats() function:
-	--directory: (debug) xcomp=true; skipping "." -&- ".."
+file or directory: -- ./info.txt
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./downloads
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./DCIM
+file or directory: -- ./downloads
+
+~:: stats() function:
+file or directory: -- ./DCIM
 
 
-~:: running (1) queries.
+~:: running (10) queries.
 
 ::- type your query -::
 --?:: 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/run_tube
-	[ simple x computation: type:[char]: len:9 vowels:4 consonants:3 special:2 
-~:: parameter request: run_tube().
+	/toggle_audio
+	[ simple x computation: type:[char]: len:13 vowels:5 consonants:6 special:2  ]
+
+-:: finished x computation.
+
+~:: running (9) queries.
+
+::- type your query -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+sorter():
+{ ai/brain/data/logic.dat }
+- opening: ai/brain/data/logic.dat.
+	- ai/brain/data/logic.dat : is open.
+		-- :: ( logical assembly, model-ai. )
+
+sorted: ai/brain/data/logic.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/logic.dat
+~:: resonate_index::match found on line: (6).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+~:: running (8) queries.
+
+::- type your query -::
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
  ]
 
 -:: finished x computation.
-~:: (pytube) give an URL? : 
-~:: stats() function:
-file or directory: 
-	--statdir("ai/lib/.pyt") (flag:1)
-~:: checking for "pytube".
-	~:: no old installation found.
 
-~:: first installing "pytube".
+(kill chain) function() : 9
 
-~:: installing the "Pytube" program.
+-/- initializing killchain(1) sequence.
 
-~!~ I need SUDO to install "Python3" and "python3-pip".
-
-Reading package lists...
-Building dependency tree...
-Reading state information...
-python3 is already the newest version (3.9.8-1).
-python3-pip is already the newest version (22.0.2+dfsg-1).
-The following packages were automatically installed and are no longer required:
-  fonts-roboto-slab libmms0 libofa0 libperl5.32 libwmf-0.2-7 libwmf0.2-7
-  libx264-160 libyara8 perl-modules-5.32 python3-ipaddr python3-twisted-bin
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-~:now running "pip" to install "Pytube".
-Defaulting to user installation because normal site-packages is not writeable
-Requirement already satisfied: pytube in /home/bb222/.local/lib/python3.9/site-packages (12.0.0)
-
-~:moving pytube to the "/usr/bin" directory.
-
-~:done.
-
-~:: running "pytube" command.
-Loading video...
-Splits & Backbends Flexibility Flow [Advanced Stretching].mp4 | 110 MB
- ↳ |████                                        | 8.1% ↳ |███████                                     | 16.2% ↳ |███████████                                 | 24.3% ↳ |██████████████                              | 32.4% ↳ |██████████████████                          | 40.6% ↳ |█████████████████████                       | 48.7% ↳ |█████████████████████████                   | 56.8% ↳ |█████████████████████████████               | 64.9% ↳ |████████████████████████████████            | 73.0% ↳ |████████████████████████████████████        | 81.1% ↳ |███████████████████████████████████████     | 89.2% ↳ |███████████████████████████████████████████ | 97.3% ↳ |████████████████████████████████████████████| 100.0%
-
--:: aborting artificial life sequence, and clean up gracefully!
-
--:: display ((x)->live())(?x) equaled .
-
--:: destructor artificial life routine was called. -::
-	killing abstraction layer.
-
--:: decoupler.
-	-:: decoupling sampler
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).

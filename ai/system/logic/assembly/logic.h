@@ -41,5 +41,6 @@ bool isConvertData=false;
 bool isRunPytube=false;
 // when not a command but language
 bool isLogic=false;
+bool isToggleAudio=false;
 
 // eof
