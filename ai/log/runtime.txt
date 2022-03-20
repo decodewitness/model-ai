@@ -1436,16 +1436,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd8fdbdcc0)
-	- stacking header:(1)::<address>(0x7ffd8fdbdce0)
-	- stacking header:(2)::<address>(0x7ffd8fdbdd00)
-	- stacking header:(3)::<address>(0x7ffd8fdbdd20)
-	- stacking header:(4)::<address>(0x7ffd8fdbdd40)
-	- stacking header:(5)::<address>(0x7ffd8fdbdd60)
-	- stacking header:(6)::<address>(0x7ffd8fdbdd80)
-	- stacking header:(7)::<address>(0x7ffd8fdbdda0)
-	- stacking header:(8)::<address>(0x7ffd8fdbddc0)
-	- stacking header:(9)::<address>(0x7ffd8fdbdde0)
+	- stacking header:(0)::<address>(0x7fff87388630)
+	- stacking header:(1)::<address>(0x7fff87388650)
+	- stacking header:(2)::<address>(0x7fff87388670)
+	- stacking header:(3)::<address>(0x7fff87388690)
+	- stacking header:(4)::<address>(0x7fff873886b0)
+	- stacking header:(5)::<address>(0x7fff873886d0)
+	- stacking header:(6)::<address>(0x7fff873886f0)
+	- stacking header:(7)::<address>(0x7fff87388710)
+	- stacking header:(8)::<address>(0x7fff87388730)
+	- stacking header:(9)::<address>(0x7fff87388750)
 
 
 -:: checking AI functions.
@@ -1499,7 +1499,8 @@ regular file:
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
+	:: (2 leafs) ::	:: increment(2)
+	.: plants 1 trees. trees labeled 		forest type I (label).
 		-:: 1 tree ::label-> (		forest type I (label)).
 		-:: growing leafs.
 	:: increment(2)
@@ -1572,25 +1573,302 @@ regular file:
 		~:: glob() in directory: (bay):
 
 ~:: stats() function:
-character device: -- ./module_bay
+socket: -- ./module_bay
 
 ~:: stats() function:
-character device: -- ./info.txt
-
-~:: stats() function:
-	--directory: (debug) xcomp=true; skipping "." -&- ".."
+socket: -- ./info.txt
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./downloads
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./DCIM
+socket: -- ./downloads
+
+~:: stats() function:
+socket: -- ./DCIM
 
 
 ~:: running (10) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/sim
+	[ simple x computation: type:[char]: len:4 vowels:2 consonants:1 special:1 
+~:: parameter request: simulation().
+ ]
+
+-:: finished x computation.
+
+(simulation) entities: 
+
+~:: starting simulation.
+	~:: sim construct()
+	~:: initializing simulation run.
+		~:: ready | initialized sim.
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(1)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(2)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(3)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(4)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(5)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(6)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(7)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(8)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(9)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+		~:: added sim {entity}(10)
+
+(simulation) objects: 
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(1)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(2)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(3)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(4)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(5)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(6)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(7)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(8)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(9)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+		~:: added sim {object}(10)
+	~:: simulation is running.
+
+(E): (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
+(O): (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
+
+(manipulated Entity): 
+(manipulated Object): 
+
+
+
+~:: (manipulate in session #) :: 
+~:: manipulating session: 6.
+(e|o)? : (entity #)? : 
+	~:: modifying entity #6.
+	~:: added to list (6)
+
+	* manipulating sessions : 1
+	* modifying entities : 1
+	* modifying objects  : 0
+
+
+- cycle round : 1 -
+9524ns
+
+- cycle round : 2 -
+4526ns
+
+- cycle round : 3 -
+4376ns
+
+- cycle round : 4 -
+4316ns
+
+- cycle round : 5 -
+4306ns
+
+- cycle round : 6 -
+4306ns
+
+- cycle round : 7 -
+	~:: deleted sim {object}(1)
+- {Object}(1) reached mortality.
+	~:: deleted sim {object}(2)
+- {Object}(2) reached mortality.
+	~:: deleted sim {object}(3)
+- {Object}(3) reached mortality.
+	~:: deleted sim {object}(4)
+- {Object}(4) reached mortality.
+	~:: deleted sim {object}(5)
+- {Object}(5) reached mortality.
+	~:: deleted sim {object}(6)
+- {Object}(6) reached mortality.
+	~:: deleted sim {object}(7)
+- {Object}(7) reached mortality.
+	~:: deleted sim {object}(8)
+- {Object}(8) reached mortality.
+	~:: deleted sim {object}(9)
+- {Object}(9) reached mortality.
+	~:: deleted sim {object}(10)
+- {Object}(10) reached mortality.
+
+#10 objects got destroyed.
+
+10124ns
+
+- cycle round : 8 -
+4326ns
+
+- cycle round : 9 -
+4276ns
+
+- cycle round : 10 -
+4306ns
+
+- cycle round : 11 -
+4316ns
+
+- cycle round : 12 -
+4286ns
+
+- cycle round : 13 -
+4286ns
+
+- cycle round : 14 -
+4266ns
+
+- cycle round : 15 -
+4256ns
+
+- cycle round : 16 -
+4246ns
+
+- cycle round : 17 -
+4246ns
+
+- cycle round : 18 -
+	~:: deleted sim {entity}(1)
+- {Entity}(1) reached mortality.
+	~:: deleted sim {entity}(2)
+- {Entity}(2) reached mortality.
+	~:: deleted sim {entity}(3)
+- {Entity}(3) reached mortality.
+	~:: deleted sim {entity}(4)
+- {Entity}(4) reached mortality.
+	~:: deleted sim {entity}(5)
+- {Entity}(5) reached mortality.
+	~:: deleted sim {entity}(6)
+- {Entity}(6) reached mortality.
+	~:: deleted sim {entity}(7)
+- {Entity}(7) reached mortality.
+	~:: deleted sim {entity}(8)
+- {Entity}(8) reached mortality.
+	~:: deleted sim {entity}(9)
+- {Entity}(9) reached mortality.
+	~:: deleted sim {entity}(10)
+- {Entity}(10) reached mortality.
+
+#10 entities perished.
+
+9985ns
+
+- cycle round : 19 -
+4266ns
+
+- cycle round : 20 -
+4226ns
+
+- cycle round : 21 -
+4236ns
+
+- cycle round : 22 -
+4216ns
+
+- cycle round : 23 -
+4206ns
+
+- cycle round : 24 -
+4226ns
+
+- cycle round : 25 -
+4226ns
+
+~:: generating stats ::~
+
+STATISTICS :: SIMULATION RUN:
+-----
+- simulation # cycles: 25
+- number of entities: 10
+- number of objects: 10
+- total time simulation run (nano seconds): 4226 ns.
+
+~:: deleting simulation.
+
+
+~:: running (9) queries.
 
 ::- type your query -::
 punch.
