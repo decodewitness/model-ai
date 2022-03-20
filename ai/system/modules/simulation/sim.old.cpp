@@ -523,7 +523,7 @@ void Simulation::statistics() {
 
 void Simulation::run_cycle(int n) {
 
-    this->max_cycles = n;
+    if (n != 0) { this->max_cycles = n; }
 
     using std::chrono::duration_cast;
     using std::chrono::nanoseconds;
