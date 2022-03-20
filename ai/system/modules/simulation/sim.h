@@ -55,8 +55,10 @@ private:
     int entity_count;
     int object_count;
     int session_count;
-    int active_session;
+    int active_cycle;
     int total_manipulated_sessions;
+    int total_manipulated_e_sessions;
+    int total_manipulated_o_sessions;
     int total_manipulated_entities;
     int total_manipulated_objects;
     int total_manipulations;
@@ -69,6 +71,10 @@ private:
     
     int list_of_manipulated_entities[MAX_ENTITIES];
     int list_of_manipulated_objects[MAX_OBJECTS];
+    
+    int list_of_manipulated_sessions[MAX_SESSIONS];
+    int list_of_manipulated_e_sessions[MAX_SESSIONS];
+    int list_of_manipulated_o_sessions[MAX_SESSIONS];
 
     int e_manipulate_in_session[MAX_ENTITIES][MAX_SESSIONS];
     int o_manipulate_in_session[MAX_OBJECTS][MAX_SESSIONS];
@@ -78,6 +84,12 @@ private:
     
     bool manipulatedEntityList[MAX_MANIPULATED_ENTITIES];
     bool manipulatedObjectList[MAX_MANIPULATED_OBJECTS];
+
+    bool session_has_entities[MAX_SESSIONS][MAX_MANIPULATED_ENTITIES];
+    bool session_has_objects[MAX_SESSIONS][MAX_MANIPULATED_OBJECTS];
+    int has_entities[MAX_SESSIONS];
+    int has_objects[MAX_SESSIONS];
+
 
     bool entityVertexList[MAX_ENTITIES];
     bool objectVertexList[MAX_OBJECTS];
@@ -118,16 +130,21 @@ public:
 
     void statistics();
 
+    void setEntity(bool ar);    // ar = add/rome; respectively 0 or 1
+    void setObject(bool ar);    // ar = add/rome; respectively 0 or 1
+
     void manipulateSessions(int n);
     void checkManipulationOnEntities(int n);
     void checkManipulationOnObjects(int n);
     void manipulateEntity(int n, int session);
     void manipulateObject(int n, int session);
-
+    void checkManipulationOnCycle();
     void stats_is_measured(int n);
+    void listManipulated();
     
     void run_cycle(int n=25);
     void set_max_cycle(int n=25) {this->max_cycles = n; }
+
 
     void advance_cycle() {
         std::cout << std::endl;

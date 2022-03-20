@@ -69,10 +69,12 @@ void Simulation::init() {
     this->entity_count = 0;
     this->object_count = 0;
     this->session_count = 0;
-    this->active_session = 0;
+    this->active_cycle = 0;
     this->total_manipulated_entities = 0;
     this->total_manipulated_objects = 0;
     this->total_manipulations = 0;
+    this->total_manipulated_e_sessions = 0;
+    this->total_manipulated_o_sessions = 0;
 
     memset(this->sessions_with_manipulated_entities,'\0',MAX_SESSIONS);
     memset(this->sessions_with_manipulated_objects,'\0',MAX_SESSIONS);
@@ -80,6 +82,13 @@ void Simulation::init() {
     memset(this->nr_manipulated_objects_in_session,'\0',MAX_SESSIONS);
     memset(this->list_of_manipulated_entities,'\0',MAX_ENTITIES);
     memset(this->list_of_manipulated_objects,'\0',MAX_OBJECTS);
+    memset(this->session_has_entities, '\0', MAX_MANIPULATED_ENTITIES);
+    memset(this->session_has_objects, '\0', MAX_MANIPULATED_OBJECTS);
+    memset(this->has_entities, '\0', MAX_SESSIONS);
+    memset(this->has_objects, '\0', MAX_SESSIONS);
+    memset(this->list_of_manipulated_e_sessions, '\0', MAX_SESSIONS);
+    memset(this->list_of_manipulated_o_sessions, '\0', MAX_SESSIONS);
+    memset(this->list_of_manipulated_sessions, '\0', MAX_SESSIONS);
 
     for (int i=0; i<MAX_ENTITIES; i++) {
         memset(this->e_manipulate_in_session[MAX_ENTITIES], '\0', MAX_SESSIONS);
@@ -89,14 +98,17 @@ void Simulation::init() {
         memset(this->o_manipulate_in_session[MAX_OBJECTS], '\0', MAX_SESSIONS);
     }
 
+    for (int i=0; i<MAX_SESSIONS; i++) {
+        memset(this->session_has_entities[i], '\0', MAX_MANIPULATED_ENTITIES);
+        memset(this->session_has_objects[i], '\0', MAX_MANIPULATED_OBJECTS);
+    }
+    
 // bool entityList[MAX_ENTITIES];
 // bool objectList[MAX_OBJECTS];
 // bool manipulatedEntityList[MAX_MANIPULATED];
 // bool manipulatedObjectList[MAX_MANIPULATED];
 // bool entityVertexList[MAX_ENTITIES];
 // bool objectVertexList[MAX_OBJECTS];
-
-
 
     // counters in sim
     this->entity_count = 0;
@@ -126,6 +138,27 @@ void Simulation::init() {
     // }
 }
 
+void Simulation::setEntity(bool ar) {
+    if (ar == true) {
+            this->entity_count++;
+            std::cout << "~:: increased entity nr." << std::endl;
+    } else {
+        this->entity_count--;
+        std::cout << "~:: decreased entity nr." << std::endl;
+    }
+};    
+
+void Simulation::setObject(bool ar) {
+    if (ar == true) {
+            this->object_count++;
+            std::cout << "~:: increased objects nr." << std::endl;
+    } else {
+        this->object_count--;
+        std::cout << "~:: decreased objects nr." << std::endl;
+    }
+};    // ar = add/rome; respectively 0 or 1
+
+
 void Simulation::manipulate() {
     int x=0;
 	
@@ -140,6 +173,7 @@ void Simulation::manipulate() {
 void Simulation::manipulateSessions(int n) {
     char ch='x';
     int z=0;
+    bool notContained=true;
 
     this->total_manipulated_sessions += 1;
 
@@ -170,9 +204,22 @@ void Simulation::manipulateSessions(int n) {
                 this->manipulateEntity(z, n);
                 
                 this->total_manipulations += 1;
+                // this->total_manipulated_e_sessions += 1;
                 this->sessions_with_manipulated_entities[n] += 1;
                 this->list_of_manipulated_entities[this->total_manipulated_entities] = z;
                 this->total_manipulated_entities += 1;
+                
+                for (int i=0; i<MAX_SESSIONS; i++) {
+                    if (list_of_manipulated_e_sessions[i] == n) {
+                        notContained = false;
+                    }
+                }
+                if (notContained == true) {
+                    this->list_of_manipulated_e_sessions[this->total_manipulated_e_sessions++] = n;
+                    // std::cout << std::endl << "(debug) ~:: added session to list of sessions." << std::endl;
+                    // std::cout << "\t\t- total number of sessions manipulated = " << this->total_manipulated_e_sessions << std::endl;
+                }
+                
                 std::cout << "\t~:: added to list (" << z << ")" << std::endl;
             } else {
                 std::cout << "\t~:: cancelled." << std::endl;
@@ -188,10 +235,21 @@ void Simulation::manipulateSessions(int n) {
                 this->manipulateObject(z, n);
 
                 this->total_manipulations += 1;
+                // this->total_manipulated_o_sessions += 1;
                 this->sessions_with_manipulated_objects[n] += 1;
                 this->list_of_manipulated_objects[this->total_manipulated_objects] = z;
                 this->total_manipulated_objects += 1;
                 
+                for (int i=0; i<MAX_SESSIONS; i++) {
+                    if (list_of_manipulated_o_sessions[i] == n) {
+                        notContained = false;
+                    }
+                }
+                if (notContained == true) {
+                    this->list_of_manipulated_o_sessions[this->total_manipulated_o_sessions++] = n;
+                    // std::cout << std::endl << "(debug) ~:: added session to list of sessions." << std::endl;
+                    // std::cout << "\t\t- total number of sessions manipulated = " << this->total_manipulated_o_sessions << std::endl;
+                }
                 std::cout << "\t~:: added to list (" << z << ")" << std::endl;
             } else {
                 std::cout << "\t~:: cancelled." << std::endl;
@@ -286,7 +344,50 @@ void Simulation::manipulateObject(int n, int session) {
     this->manipulatedObjectList[session] = n;
     
     this->stats_is_measured(n);
-};  
+};
+
+    // bool manipulatedEntityList[MAX_MANIPULATED_ENTITIES];
+    // bool manipulatedObjectList[MAX_MANIPULATED_OBJECTS];
+    // bool session_has_entities[MAX_MANIPULATED_ENTITIES];
+    // bool session_has_objects[MAX_MANIPULATED_OBJECTS];
+    // int has_entities[MAX_SESSIONS];
+    // int has_objects[MAX_SESSIONS];
+
+void Simulation::checkManipulationOnCycle() {
+    // if (this->has_entities[this->active_cycle] == true) {
+    //     std::cout << "- session has entities: " << this->session_has_entities[this->active_cycle][0] << std::endl;
+    // }
+
+}
+
+void Simulation::listManipulated() {
+
+    std::cout << std::endl;
+
+    // DEBUG OPTION
+    std::cout << "(debug) manipulated eo sessions: ES:" << this->total_manipulated_e_sessions << " OS:" << this->total_manipulated_o_sessions << std::endl;
+
+    std::cout << "~:: listing manipulated targets: " << std::endl << "\t";
+
+    for (int i=0; i<this->total_manipulated_e_sessions; i++) {
+        std::cout << "e(" << this->list_of_manipulated_entities[i] << ") ";
+    }
+
+    for (int i=0; i<this->total_manipulated_o_sessions; i++) {
+        std::cout << "o(" << this->list_of_manipulated_objects[i] << ") ";
+    }
+
+    std::cout << std::endl;
+}
+
+void performManipulationEntity() {
+
+}
+
+void performManipulationObject() {
+
+}
+
     // std::cout << "\t~:: object to modify in session #" << n << ": ";
     // std::cin >> y;
 
@@ -330,17 +431,59 @@ void Simulation::manipulateObject(int n, int session) {
 
 void Simulation::stats_is_measured(int n) {
     std::cout << std::endl;
-    std::cout << "\t* manipulating sessions : " << this->total_manipulated_sessions << std::endl;
+    std::cout << "\t* nr of manipulating sessions : " << this->total_manipulated_sessions << std::endl;
 
-    std::cout << "\t* modifying entities : " << this->total_manipulated_entities << std::endl;
+    // entities and objects in per session
+    if (this->total_manipulated_e_sessions > 0) {
+        std::cout << "\t* manipulating (entities) in # session : ";
+        for (int i=0; i<this->total_manipulated_e_sessions; i++) {
+            std::cout << this->list_of_manipulated_e_sessions[i] << " ";
+        }
+        std::cout << std::endl;
+    }
 
+    if (this->total_manipulated_o_sessions > 0) {
+        std::cout << "\t* manipulating (objects) in # session : ";
+        for (int i=0; i<this->total_manipulated_o_sessions; i++) {
+            std::cout << this->list_of_manipulated_o_sessions[i] << " ";
+        }
+        std::cout << std::endl;
+    }
 
-    std::cout << "\t* modifying objects  : " << this->total_manipulated_objects << std::endl;
+        // this->total_manipulations += 1;
+        // this->sessions_with_manipulated_entities[n] += 1;
+        // this->list_of_manipulated_entities[this->total_manipulated_entities] = z;
+        // this->total_manipulated_entities += 1;
 
+    if (this->total_manipulated_entities > 0) {
+        std::cout << "\t* modifying entities # : " << this->total_manipulated_entities << std::endl;
+    }
 
+    if (this->total_manipulated_objects > 0) {
+        std::cout << "\t* modifying objects # : " << this->total_manipulated_objects << std::endl;
+    }
 
     std::cout << std::endl;
 
+    if (this->total_manipulated_entities > 0) {
+        std::cout << "\t* manipulated entities : ";
+
+        for (int i=0; i<total_manipulated_entities; i++) {
+            std::cout << "e(" << this->list_of_manipulated_entities[i] <<") ";
+        }
+
+        std::cout << std::endl;
+    }
+
+    if (this->total_manipulated_objects > 0) {
+        std::cout << "\t* manipulated objects : ";
+
+        for (int i=0; i<total_manipulated_objects; i++) {
+            std::cout << "o(" << this->list_of_manipulated_objects[i] <<") ";
+        }
+
+        std::cout << std::endl;
+    }
 };
 
     // for (int i=0; i<this->session; i++) {
@@ -352,13 +495,14 @@ void Simulation::createEntity(double x, double y, double z, int n) {
         if (x<=MAX_X && y<=MAX_Y && z<=MAX_Z) {
             this->entity[n] = new Entity(n);
             entityList[n] = true;
-
             this->entityVertex[n] = new Vertex(x,y,z);
-            this->entity_count += 1;
-            this->max_entities += 1;
+            this->setEntity(true);  // increments entity_count
+            // this->entity_count += 1;
+            // this->max_entities += 1;
         }
+        
+        std::cout << "\t\t~:: added sim {entity}(" << n << ")" << std::endl;
     }
-    std::cout << "\t\t~:: added sim {entity}(" << n << ")" << std::endl;
 };
     
 void Simulation::createObject(double x, double y, double z, int n) {
@@ -368,11 +512,13 @@ void Simulation::createObject(double x, double y, double z, int n) {
             objectList[n] = true;
 
             this->objectVertex[n] = new Vertex(x,y,z);
-            this->object_count += 1;
-            this->max_objects += 1;
+            this->setObject(true);
+            // this->object_count += 1;
+            // this->max_objects += 1;
         }
+        
+        std::cout << "\t\t~:: added sim {object}(" << n << ")"  << std::endl;
     }
-    std::cout << "\t\t~:: added sim {object}(" << n << ")"  << std::endl;
 };
 
 int Simulation::killEntity(int n) {
@@ -452,43 +598,44 @@ void Simulation::listAll() {
 };
 
 void Simulation::shortList() {
-    std::cout << std::endl << "(E): ";
+    std::cout << std::endl << "[E]: ";
     for (int i=0; i<MAX_ENTITIES; i++) {
         if (entityList[i] == true) {
             std::cout << "(" << i << ") ";
         }
     }
 
-    std::cout << std::endl << "(O): ";
+    std::cout << std::endl << "[O]: ";
     for (int i=0; i<MAX_OBJECTS; i++) {
         if (objectList[i] == true) {
             std::cout << "(" << i << ") ";
         }
     }
 
-    std::cout << std::endl;
-    std::cout << std::endl;
-
-    std::cout << "(manipulated Entity): ";
-    for (int i=0; i<MAX_MANIPULATED_ENTITIES; i++) {
-        if (manipulatedEntityList[i] == true) {
-            std::cout << "(" << i << ") ";
-        }
-    }
+    // std::cout << std::endl;
     std::cout << std::endl;
 
-    std::cout << "(manipulated Object): ";
-    for (int i=0; i<this->object_count; i++) {
-        if (manipulatedObjectList[i] == true) {
-            std::cout << "(" << i << ") ";
-        }
-    }
-    std::cout << std::endl;
+    // std::cout << "(manipulated Entity): ";
+    // for (int i=0; i<MAX_MANIPULATED_ENTITIES; i++) {
+    //     if (manipulatedEntityList[i] == true) {
+    //         std::cout << "(" << i << ") ";
+    //     }
+    // }
+    // std::cout << std::endl;
 
-    std::cout << std::endl;
+    // std::cout << "(manipulated Object): ";
+    // for (int i=0; i<this->object_count; i++) {
+    //     if (manipulatedObjectList[i] == true) {
+    //         std::cout << "(" << i << ") ";
+    //     }
+    // }
+
+    // std::cout << std::endl;
+
+    // std::cout << std::endl;
     // std::cout << "(nr of manipulated entities): " << this->nr_of_manipulated_entities << std::endl;
     // std::cout << "(nr of manipulated objects): " << this->nr_of_manipulated_objects << std::endl;
-    std::cout << std::endl;
+    // std::cout << std::endl;
 };
 
 /*
@@ -573,7 +720,7 @@ void Simulation::mortality(int n) { // n is not used yet
             if (this->object[i]->getMortality() == true) {
                 this->killObject(i);
                 std::cout << "- {Object}(" << i << ") reached mortality." << std::endl;
-                objectCount++;
+                this->object_count -= 1;
             }
         }
     }
@@ -584,7 +731,7 @@ void Simulation::mortality(int n) { // n is not used yet
             if (this->entity[i]->getMortality() == true) {
                 this->killEntity(i);
                 std::cout << "- {Entity}(" << i << ") reached mortality." << std::endl;
-                entityCount++;
+                this->entity_count -= 1;                
             }
         }
     }
@@ -619,7 +766,7 @@ void Simulation::statistics() {
     std::cout << std::endl;
 };
 
-void Simulation::run_cycle(int n) {
+void Simulation::run_cycle(int n) { // this happens in 1 cycle round instance
 
     //this->max_cycles = n;
 
@@ -654,15 +801,11 @@ void Simulation::run_cycle(int n) {
         // ENDING TIME
    
     auto endtime = time(NULL);
-
     this->run_time_simulation = endtime;
-
     // std::cout << std::endl << "~:: simulation run -- ending @ END TIME: " << endtime << std::endl;
-
-    auto end = clock::now();
-    
+    auto end = clock::now();    
     this->run_time_simulation = duration_cast<nanoseconds>(end-start).count();
-    
     std::cout << duration_cast<nanoseconds>(end-start).count() << "ns\n";
 };
+
 // eof

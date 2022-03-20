@@ -6,6 +6,7 @@ echo
 echo "~:start."
 echo
 ./start $@  # runs the Ai model
+echo
 echo "~:completing readme."
 echo
 ./readme.sh # copies README.md from ./doc

@@ -1853,6 +1853,7 @@ void AI::runSim() {	// sim objects and such go here
 	this->simulation->shortList();
 
 	this->simulation->manipulate();
+	this->simulation->listManipulated();
 	
 	// int x=0;
 	// std::cout << std::endl;
