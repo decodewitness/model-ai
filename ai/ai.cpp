@@ -9,7 +9,7 @@
 
 // AI.H main header file
 #include "ai.h"
-
+#include "system/security/credentials/credentials.cpp"
 // simulation run
 //#include "simulation.cpp"	// simulation.h is included in "ai.h"
 
@@ -1143,9 +1143,19 @@ void AI::query() {	// respond to logical query method
 		// this->assembleBrain();
 		this->audioToggle();
 		isToggleAudio = false;
-	} else if (isLogic == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
+	} else if (isListCred == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
+		this->list_credentials();
+		isListCred = false;
+	} else if (isNewCred == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
+		this->store_new_credentials();
+		isNewCred = false;
+	}
+	
+	// DEFAULT TO LOGIC
+	if (isLogic == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
 		// this->assembleBrain();
 		this->brain->useBrain(query_string);
+		isLogic = false;
 	} 
 };	// functions are being recognised in AI/LOGIC/ASSEMBLY/LOGIC.CPP
 

@@ -1,5 +1,5 @@
 
-ARG: 12321
+ARG: 123231
 
 ~:: how many queries to run? : 
 	** ][][ **
@@ -1436,16 +1436,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc1af1e8b0)
-	- stacking header:(1)::<address>(0x7ffc1af1e8d0)
-	- stacking header:(2)::<address>(0x7ffc1af1e8f0)
-	- stacking header:(3)::<address>(0x7ffc1af1e910)
-	- stacking header:(4)::<address>(0x7ffc1af1e930)
-	- stacking header:(5)::<address>(0x7ffc1af1e950)
-	- stacking header:(6)::<address>(0x7ffc1af1e970)
-	- stacking header:(7)::<address>(0x7ffc1af1e990)
-	- stacking header:(8)::<address>(0x7ffc1af1e9b0)
-	- stacking header:(9)::<address>(0x7ffc1af1e9d0)
+	- stacking header:(0)::<address>(0x7ffc6b491150)
+	- stacking header:(1)::<address>(0x7ffc6b491170)
+	- stacking header:(2)::<address>(0x7ffc6b491190)
+	- stacking header:(3)::<address>(0x7ffc6b4911b0)
+	- stacking header:(4)::<address>(0x7ffc6b4911d0)
+	- stacking header:(5)::<address>(0x7ffc6b4911f0)
+	- stacking header:(6)::<address>(0x7ffc6b491210)
+	- stacking header:(7)::<address>(0x7ffc6b491230)
+	- stacking header:(8)::<address>(0x7ffc6b491250)
+	- stacking header:(9)::<address>(0x7ffc6b491270)
 
 
 -:: checking AI functions.
@@ -1479,115 +1479,28 @@ regular file:
 	-:: kbuild reserving 1024(DEG) bytes ::- for your additional mappings.
 
 -:: starting evolving mechanic life in artificial life habits.
-
--:: living inside that function running a numbers sequence.
-
-	-:: max nodes (1)
-	(1 trees in forest)
-	-:: calculating size dependencies
-	-:: max. leafs (64) 	 :: max. trees (2) 
-
-	-:: populating random forest.
-	-:: calculating dependencies.
-		-:: max. trees: 1 * max. leafs: 64
-		-:: total amount:64kB.
-
-	-:: creating forest.
-		-:: (0) :- generate trees and pruning leaves dependencies.
-		-:: forest constructor.
-		-:: forest 		forest type I (label) was created.
-		-:: 1 tree ::label-> (		forest type I (label)).
-		-:: growing leafs.
-	:: increment(2)
-	:: (2 leafs) ::	.: plants 1 trees. trees labeled 		forest type I (label).
-		-:: 1 tree ::label-> (		forest type I (label)).
-		-:: growing leafs.
-	:: increment(2)
-	:: (2 leafs) ::	.: plants 2 trees. trees labeled 		forest type I (label).
-	-:: deleting tree.
-		-:: tree got deleted.
-		-:: tree got deleted.
-
- oo[
-
-....32323232....32323232....32323232....32323232...
-5%
-.32323232....32323232....32323232....32323232....32323232..
-10%
-..32323232....32323232....32323232....32323232....32323232.
-15%
-...32323232....32323232....32323232....32323232...
-20%
-.32323232....32323232....32323232....32323232....32323232..
-25%
-..32323232....32323232....32323232....32323232....32323232.
-30%
-...32323232....32323232....32323232....32323232....32323232
-35%
-....32323232....32323232....32323232....32323232..
-40%
-
--:: SHEPARD @("1000")(sheep="1")
-
-..32323232....32323232....32323232....32323232....32323232.
-45%
-...32323232....32323232....32323232....32323232....32323232
-50%
-....32323232....32323232....32323232....32323232...
-55%
-.32323232....32323232....32323232....32323232....32323232.
-60%
-...32323232....32323232....32323232....32323232....32323232
-65%
-....32323232....32323232....32323232....32323232...
-70%
-.32323232....32323232....32323232....32323232....32323232..
-75%
-..32323232....32323232....32323232....32323232....32323232
-80%
-....32323232....32323232....32323232....32323232...
-85%
-.32323232....32323232....32323232....32323232....32323232.9
-.
-90%
-8
-7
-6
-5
-4
-.3
-2
-1
-0
-.32323232....32323232....32323232....32323232....32323232.
-95%
-...32323232....32323232....32323232....32323232...
-100%
-
-
--:: extending modular behavior.
 ~:: accessing modular bay construct.
 	~:: opening "/bay" for inspection.
 	~:: scanning() directory: (bay).
 		~:: glob() in directory: (bay):
 
 ~:: stats() function:
-file or directory: -- ./module_bay
-
-~:: stats() function:
-file or directory: -- ./info.txt
-
-~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./downloads
+block device: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+block device: -- ./downloads
+
+~:: stats() function:
+block device: -- ./DCIM
+
+~:: stats() function:
+block device: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1598,285 +1511,77 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/sim
-	[ simple x computation: type:[char]: len:4 vowels:2 consonants:1 special:1 
-~:: parameter request: simulation().
+	/passwd
+	[ simple x computation: type:[char]: len:7 vowels:5 consonants:1 special:1 
+~:: parameter request: store_new_credentials().
  ]
 
 -:: finished x computation.
 
-(simulation) entities: 
+(creds management)
 
-~:: starting simulation.
-	~:: sim construct()
-	~:: initializing simulation run.
-		~:: ready | initialized sim.
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(1)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(2)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(3)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(4)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(5)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(6)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(7)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(8)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(9)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(10)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(11)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(12)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(13)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(14)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(15)
-
-(simulation) objects: 
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(1)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(2)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(3)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(4)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(5)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(6)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(7)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(8)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(9)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(10)
-	~:: simulation is running.
-
-[E]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) (15) 
-[O]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
-
-~:: (manipulate in session #) :: 
-~:: manipulating session: 23.
-(e|o)? : (object #)? : 
-	~:: modifying object #3.
-
-	* nr of manipulating sessions : 1
-
-	~:: added to list (3)
-
-	* nr of manipulating sessions : 1
-	* manipulating (objects) in # session : 23 
-	* modifying objects # : 1
-
-	* manipulated objects : o(3) 
-
-(debug) manipulated eo sessions: ES:0 OS:1
-~:: listing manipulated targets: 
-	o(3) 
-
-- cycle round : 1 -
-14110ns
-
-- cycle round : 2 -
-8332ns
-
-- cycle round : 3 -
-8002ns
-
-- cycle round : 4 -
-8021ns
-
-- cycle round : 5 -
-8052ns
-
-- cycle round : 6 -
-7410ns
-
-- cycle round : 7 -
-8022ns
-
-- cycle round : 8 -
-8141ns
-
-- cycle round : 9 -
-7921ns
-
-- cycle round : 10 -
-7901ns
-
-- cycle round : 11 -
-8142ns
-
-- cycle round : 12 -
-8171ns
-
-- cycle round : 13 -
-8221ns
-
-- cycle round : 14 -
-7911ns
-
-- cycle round : 15 -
-8091ns
-
-- cycle round : 16 -
-8332ns
-
-- cycle round : 17 -
-10074ns
-
-- cycle round : 18 -
-7891ns
-
-- cycle round : 19 -
-7911ns
-
-- cycle round : 20 -
-7931ns
-
-- cycle round : 21 -
-8002ns
-
-- cycle round : 22 -
-7751ns
-
-- cycle round : 23 -
-~:: manipulation on {object}[3]
-
-8612ns
-
-- cycle round : 24 -
-8202ns
-
-- cycle round : 25 -
-7941ns
-
-~:: generating stats ::~
-
-STATISTICS :: SIMULATION RUN:
------
-- simulation # cycles: 25
-- number of entities: 0
-- number of objects: 0
-- total time simulation run (nano seconds): 7941 ns.
-
-~:: deleting simulation.
-
+ENTER NEW PASS  : REPEAT NEW PASS : 
+~[:] hashed & written credentials.
 
 ~:: running (9) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/list_cred
+	[ simple x computation: type:[char]: len:10 vowels:6 consonants:2 special:2 
+~:: parameter request: list_credentials().
+ ]
+
+-:: finished x computation.
+
+~:(creds) list:~
+
+	~:(1) ::	f74c6af46a78becb2f1bd3f95bbd5858
+
+~:: running (8) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/passwd
+	[ simple x computation: type:[char]: len:7 vowels:5 consonants:1 special:1 
+~:: parameter request: store_new_credentials().
+ ]
+
+-:: finished x computation.
+
+(creds management)
+
+ENTER NEW PASS  : REPEAT NEW PASS : 
+~[:] hashed & written credentials.
+
+~:: running (7) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/list_cred
+	[ simple x computation: type:[char]: len:10 vowels:6 consonants:2 special:2 
+~:: parameter request: list_credentials().
+ ]
+
+-:: finished x computation.
+
+~:(creds) list:~
+
+	~:(1) ::	4921c0e2d1f6005abe1f9ec2e2041909
+
+~:: running (6) queries.
 
 ::- type your query -::
 punch.

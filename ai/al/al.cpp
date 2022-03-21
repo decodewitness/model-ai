@@ -179,7 +179,9 @@ HAL::HAL() {	// HAL constructor
 	this->c = 'c';
 	
 	// now live!
-	this->x = this->live();
+	if (exhibit_life == true) {
+		this->x = this->live();
+	}
 };
 
 HAL::~HAL() {	// HAL destructor

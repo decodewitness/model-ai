@@ -5,9 +5,9 @@ echo
 echo "~:RUNTIME SCRIPT:~"
 echo
 
+echo "~:Uncomment line: 10 in the \"start\" script to install the dependencies!"
 ### (ENABLE THIS) UPDATE APT REPOS  (FIRST ENABLE BY REMOVING '#' POUND SIGN TO ALLOW "AI/BIN/SCRIPT/APT.SH" TO EXECUTE)
-#chmod +x ai/bin/script/apt.sh
-#ai/bin/script/apt.sh
+#chmod +x ai/bin/script/apt.sh && ai/bin/script/apt.sh
 
 ### execute the random script for manipulation of data
 if [ -f "./script.sh" ]
@@ -77,12 +77,11 @@ if [ -f "./ai/bin/runtime" ]
     chmod u+x ./ai/bin/runtime
     ./ai/bin/runtime $@ |tee ./ai/log/runtime.txt
     echo
-    echo "~:done."
+    #echo "~:done."
   else
     echo
     echo "~:something went wrong."
-
-    exit 1
+    #exit 1
 fi
 
 # if [ -f "a.out" ]

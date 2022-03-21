@@ -157,6 +157,12 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/audio_toggle") == false) {
         std::cout << std::endl << "~:: parameter request: toggle_audio()." << std::endl;
         isToggleAudio = true;
+    } else if (str.compare("/passwd") == false) {
+        std::cout << std::endl << "~:: parameter request: store_new_credentials()." << std::endl;
+        isNewCred = true;
+    } else if (str.compare("/list_cred") == false) {
+        std::cout << std::endl << "~:: parameter request: list_credentials()." << std::endl;
+        isListCred = true;
     }
 };
 

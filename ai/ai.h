@@ -82,6 +82,7 @@
 #include "system/logic/analysis/algorithms.cpp"
 #include "system/logic/transponder/transponder.cpp"
 #include "system/modules/modular_bay/modular_bay.cpp"
+// #include "system/security/credentials/credentials.cpp"	// already included in "ai.cpp"
 
 // linked to the modules here above
 const int nr_modules = 28;	// equal to the number of includes in "modules" (above this)
@@ -305,6 +306,10 @@ public:
 	// handle data
 	void hdata();
 	void hmath();
+
+	// credentials
+	void list_credentials();
+	void store_new_credentials();
 
 	// testing
 	//bool testing1();

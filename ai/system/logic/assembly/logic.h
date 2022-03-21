@@ -39,8 +39,10 @@ bool isPrintPunch=false;
 bool isAddData=false;
 bool isConvertData=false;
 bool isRunPytube=false;
+bool isToggleAudio=false;
+bool isNewCred=false;
+bool isListCred=false;
 // when not a command but language
 bool isLogic=false;
-bool isToggleAudio=false;
 
 // eof
