@@ -29,14 +29,16 @@ void AL::kbuild(double i) {	// reserves memory for kbuild
 
 void AL::life() {	// artificial life habits
 	int counter=0;
-	for (int i=0; i<=60532; i++) {
-		if (i%al_top_limit) {
-			counter++;
-		}
-		if (counter==30000 || counter==60000) { // runs 2 times	// (increase/decrease)
-			// do action to start extending behavior
-		}
-	}
+	
+	// DISABLED FOR NOW
+	// for (int i=0; i<=60532; i++) {
+	// 	if (i%al_top_limit) {
+	// 		counter++;
+	// 	}
+	// 	if (counter==30000 || counter==60000) { // runs 2 times	// (increase/decrease)
+	// 		// do action to start extending behavior
+	// 	}
+	// }
 
 	this->modifies_behaviour();
 	//std::cout << std::endl << "-::: result :::-" << std::endl;

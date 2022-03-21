@@ -1488,16 +1488,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc61e71bf0)
-	- stacking header:(1)::<address>(0x7ffc61e71c10)
-	- stacking header:(2)::<address>(0x7ffc61e71c30)
-	- stacking header:(3)::<address>(0x7ffc61e71c50)
-	- stacking header:(4)::<address>(0x7ffc61e71c70)
-	- stacking header:(5)::<address>(0x7ffc61e71c90)
-	- stacking header:(6)::<address>(0x7ffc61e71cb0)
-	- stacking header:(7)::<address>(0x7ffc61e71cd0)
-	- stacking header:(8)::<address>(0x7ffc61e71cf0)
-	- stacking header:(9)::<address>(0x7ffc61e71d10)
+	- stacking header:(0)::<address>(0x7ffc1af1e8b0)
+	- stacking header:(1)::<address>(0x7ffc1af1e8d0)
+	- stacking header:(2)::<address>(0x7ffc1af1e8f0)
+	- stacking header:(3)::<address>(0x7ffc1af1e910)
+	- stacking header:(4)::<address>(0x7ffc1af1e930)
+	- stacking header:(5)::<address>(0x7ffc1af1e950)
+	- stacking header:(6)::<address>(0x7ffc1af1e970)
+	- stacking header:(7)::<address>(0x7ffc1af1e990)
+	- stacking header:(8)::<address>(0x7ffc1af1e9b0)
+	- stacking header:(9)::<address>(0x7ffc1af1e9d0)
 
 
 -:: checking AI functions.
@@ -1624,22 +1624,22 @@ regular file:
 		~:: glob() in directory: (bay):
 
 ~:: stats() function:
-character device: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-character device: -- ./info.txt
-
-~:: stats() function:
-	--directory: (debug) xcomp=true; skipping "." -&- ".."
+file or directory: -- ./info.txt
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./downloads
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./DCIM
+file or directory: -- ./downloads
+
+~:: stats() function:
+file or directory: -- ./DCIM
 
 
 ~:: running (10) queries.
@@ -1724,6 +1724,36 @@ punch.
 ~:: increased entity nr.
 		~:: added sim {entity}(10)
 
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(11)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(12)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(13)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(14)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(15)
+
 (simulation) objects: 
 
 	SIM::adding {object}.
@@ -1785,221 +1815,106 @@ punch.
 - {Object} was created.
 ~:: increased objects nr.
 		~:: added sim {object}(10)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(11)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(12)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(13)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(14)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(15)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(16)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(17)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(18)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(19)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(20)
 	~:: simulation is running.
 
-[E]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
-[O]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) (15) (16) (17) (18) (19) (20) 
+[E]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) (15) 
+[O]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
 
 ~:: (manipulate in session #) :: 
-~:: manipulating session: 5.
-(e|o)? : (entity #)? : 
-	~:: modifying entity #5.
-	~:: added to list (5)
+~:: manipulating session: 23.
+(e|o)? : (object #)? : 
+	~:: modifying object #3.
 
 	* nr of manipulating sessions : 1
-	* manipulating (entities) in # session : 5 
-	* modifying entities # : 1
 
-	* manipulated entities : e(5) 
+	~:: added to list (3)
 
-(debug) manipulated eo sessions: ES:1 OS:0
+	* nr of manipulating sessions : 1
+	* manipulating (objects) in # session : 23 
+	* modifying objects # : 1
+
+	* manipulated objects : o(3) 
+
+(debug) manipulated eo sessions: ES:0 OS:1
 ~:: listing manipulated targets: 
-	e(5) 
+	o(3) 
 
 - cycle round : 1 -
-8592ns
+14110ns
 
 - cycle round : 2 -
-4096ns
+8332ns
 
 - cycle round : 3 -
-3795ns
+8002ns
 
 - cycle round : 4 -
-3775ns
+8021ns
 
 - cycle round : 5 -
-3755ns
+8052ns
 
 - cycle round : 6 -
-3755ns
+7410ns
 
 - cycle round : 7 -
-	~:: deleted sim {object}(1)
-- {Object}(1) reached mortality.
-	~:: deleted sim {object}(2)
-- {Object}(2) reached mortality.
-	~:: deleted sim {object}(3)
-- {Object}(3) reached mortality.
-	~:: deleted sim {object}(4)
-- {Object}(4) reached mortality.
-	~:: deleted sim {object}(5)
-- {Object}(5) reached mortality.
-	~:: deleted sim {object}(6)
-- {Object}(6) reached mortality.
-	~:: deleted sim {object}(7)
-- {Object}(7) reached mortality.
-	~:: deleted sim {object}(8)
-- {Object}(8) reached mortality.
-	~:: deleted sim {object}(9)
-- {Object}(9) reached mortality.
-	~:: deleted sim {object}(10)
-- {Object}(10) reached mortality.
-	~:: deleted sim {object}(11)
-- {Object}(11) reached mortality.
-	~:: deleted sim {object}(12)
-- {Object}(12) reached mortality.
-	~:: deleted sim {object}(13)
-- {Object}(13) reached mortality.
-	~:: deleted sim {object}(14)
-- {Object}(14) reached mortality.
-	~:: deleted sim {object}(15)
-- {Object}(15) reached mortality.
-	~:: deleted sim {object}(16)
-- {Object}(16) reached mortality.
-	~:: deleted sim {object}(17)
-- {Object}(17) reached mortality.
-	~:: deleted sim {object}(18)
-- {Object}(18) reached mortality.
-	~:: deleted sim {object}(19)
-- {Object}(19) reached mortality.
-	~:: deleted sim {object}(20)
-- {Object}(20) reached mortality.
-16393ns
+8022ns
 
 - cycle round : 8 -
-3776ns
+8141ns
 
 - cycle round : 9 -
-3745ns
+7921ns
 
 - cycle round : 10 -
-3736ns
+7901ns
 
 - cycle round : 11 -
-4696ns
+8142ns
 
 - cycle round : 12 -
-3746ns
+8171ns
 
 - cycle round : 13 -
-3825ns
+8221ns
 
 - cycle round : 14 -
-3716ns
+7911ns
 
 - cycle round : 15 -
-3755ns
+8091ns
 
 - cycle round : 16 -
-3725ns
+8332ns
 
 - cycle round : 17 -
-3735ns
+10074ns
 
 - cycle round : 18 -
-	~:: deleted sim {entity}(1)
-- {Entity}(1) reached mortality.
-	~:: deleted sim {entity}(2)
-- {Entity}(2) reached mortality.
-	~:: deleted sim {entity}(3)
-- {Entity}(3) reached mortality.
-	~:: deleted sim {entity}(4)
-- {Entity}(4) reached mortality.
-	~:: deleted sim {entity}(5)
-- {Entity}(5) reached mortality.
-	~:: deleted sim {entity}(6)
-- {Entity}(6) reached mortality.
-	~:: deleted sim {entity}(7)
-- {Entity}(7) reached mortality.
-	~:: deleted sim {entity}(8)
-- {Entity}(8) reached mortality.
-	~:: deleted sim {entity}(9)
-- {Entity}(9) reached mortality.
-	~:: deleted sim {entity}(10)
-- {Entity}(10) reached mortality.
-9123ns
+7891ns
 
 - cycle round : 19 -
-3825ns
+7911ns
 
 - cycle round : 20 -
-3815ns
+7931ns
 
 - cycle round : 21 -
-3805ns
+8002ns
 
 - cycle round : 22 -
-3905ns
+7751ns
 
 - cycle round : 23 -
-3806ns
+~:: manipulation on {object}[3]
+
+8612ns
 
 - cycle round : 24 -
-11606ns
+8202ns
 
 - cycle round : 25 -
-4135ns
+7941ns
 
 ~:: generating stats ::~
 
@@ -2008,7 +1923,7 @@ STATISTICS :: SIMULATION RUN:
 - simulation # cycles: 25
 - number of entities: 0
 - number of objects: 0
-- total time simulation run (nano seconds): 4135 ns.
+- total time simulation run (nano seconds): 7941 ns.
 
 ~:: deleting simulation.
 

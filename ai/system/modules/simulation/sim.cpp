@@ -75,6 +75,8 @@ void Simulation::init() {
     this->total_manipulations = 0;
     this->total_manipulated_e_sessions = 0;
     this->total_manipulated_o_sessions = 0;
+    this->counterManipulatedE = 0;
+    this->counterManipulatedO = 0;
 
     memset(this->sessions_with_manipulated_entities,'\0',MAX_SESSIONS);
     memset(this->sessions_with_manipulated_objects,'\0',MAX_SESSIONS);
@@ -90,6 +92,8 @@ void Simulation::init() {
     memset(this->list_of_manipulated_o_sessions, '\0', MAX_SESSIONS);
     memset(this->list_of_manipulated_sessions, '\0', MAX_SESSIONS);
 
+    // int list_entity_session[MAX_SESSIONS][MAX_MANIPULATED_ENTITIES];
+
     for (int i=0; i<MAX_ENTITIES; i++) {
         memset(this->e_manipulate_in_session[MAX_ENTITIES], '\0', MAX_SESSIONS);
     }
@@ -97,10 +101,16 @@ void Simulation::init() {
     for (int i=0; i<MAX_OBJECTS; i++) {
         memset(this->o_manipulate_in_session[MAX_OBJECTS], '\0', MAX_SESSIONS);
     }
+    
+    // int e_session_manipulate[MAX_SESSIONS][MAX_ENTITIES];
 
     for (int i=0; i<MAX_SESSIONS; i++) {
         memset(this->session_has_entities[i], '\0', MAX_MANIPULATED_ENTITIES);
         memset(this->session_has_objects[i], '\0', MAX_MANIPULATED_OBJECTS);
+        memset(this->list_entity_session[i], '\0', MAX_MANIPULATED_ENTITIES);
+        memset(this->list_object_session[i], '\0', MAX_MANIPULATED_OBJECTS);
+        memset(this->e_session_manipulate[i], '\0', MAX_ENTITIES);
+        memset(this->o_session_manipulate[i], '\0', MAX_OBJECTS);
     }
     
 // bool entityList[MAX_ENTITIES];
@@ -305,7 +315,7 @@ void Simulation::manipulateSessions(int n) {
 
 
 
-void Simulation::manipulateEntity(int n, int session) {
+void Simulation::manipulateEntity(int n, int session) { // n = the entity
     int x;
     int y;
     int z;
@@ -318,6 +328,9 @@ void Simulation::manipulateEntity(int n, int session) {
     std::cout << "\t~:: modifying entity #" << n << "." << std::endl; 
     
     this->manipulatedEntityList[session] = n;
+    this->list_entity_session[session][n] += 1;
+    this->e_session_manipulate[session][this->counterManipulatedE++] = n;
+
     
     //this->stats_is_measured(n);
 };
@@ -331,7 +344,7 @@ void Simulation::manipulateEntity(int n, int session) {
     // this->eSession++;
     // this->nr_of_manipulated_entities = y;
 
-void Simulation::manipulateObject(int n, int session) {
+void Simulation::manipulateObject(int n, int session) { // n = the object
     int x;
     int y;
     int z;
@@ -342,6 +355,8 @@ void Simulation::manipulateObject(int n, int session) {
     std::cout << "\t~:: modifying object #" << n << "." << std::endl; 
     
     this->manipulatedObjectList[session] = n;
+    this->list_object_session[session][n] += 1;
+    this->o_session_manipulate[session][this->counterManipulatedO++] = n;
     
     this->stats_is_measured(n);
 };
@@ -380,12 +395,12 @@ void Simulation::listManipulated() {
     std::cout << std::endl;
 }
 
-void performManipulationEntity() {
-
+void Simulation::performManipulationEntity(int n) {
+    std::cout << std::endl;
 }
 
-void performManipulationObject() {
-
+void Simulation::performManipulationObject(int n) {
+    std::cout << std::endl;
 }
 
     // std::cout << "\t~:: object to modify in session #" << n << ": ";
@@ -649,22 +664,37 @@ void Simulation::shortList() {
 */
 
 void Simulation::checkManipulationOnEntities(int n) {
-    // if (this->eSession > 0) {
-    //     if (this->eSessions[this->cycle_round] == true) {
-    //         std::cout << "\t\t~:: manipulating on {Entities} #(" << n << ")." << std::endl;
+    // e_session_manipulate[MAX_SESSIONS][MAX_ENTITIES];
 
-    //     }
-    // }
+    for (int i=0; i<MAX_ENTITIES; i++) {
+        if (e_session_manipulate[n][i] > 0) {
+            std::cout << "~:: manipulation on {entity}";
+            std::cout << "[";
+            std::cout << e_session_manipulate[n][i];
+            std::cout << "]" << std::endl;
+            this->performManipulationEntity(e_session_manipulate[n][i]);
+        }
+    }
 };
 
 void Simulation::checkManipulationOnObjects(int n) {
-    // if (this->oSession > 0) {
-    //     if (this->oSessions[this->cycle_round] == true) {
-    //         std::cout << "\t\t~:: manipulating on {Objects} #(" << n << ")." << std::endl;
+    // o_session_manipulate[MAX_SESSIONS][MAX_ENTITIES];
 
-    //     }
-    // }
-};
+    for (int i=0; i<MAX_OBJECTS; i++) {
+        if (o_session_manipulate[n][i] > 0) {
+            std::cout << "~:: manipulation on {object}";
+            std::cout << "[";
+            std::cout << o_session_manipulate[n][i];
+            std::cout << "]" << std::endl;
+            this->performManipulationObject(o_session_manipulate[n][i]);
+        }
+    }
+}
+
+void Simulation::check_manipulation(int n) {
+    this->checkManipulationOnEntities(n);
+    this->checkManipulationOnObjects(n);
+}
 
 // void Simulation::cycle(int n) {
 
@@ -787,7 +817,12 @@ void Simulation::run_cycle(int n) { // this happens in 1 cycle round instance
     
     // for (int i=0; i<n; i++) {
     this->advance_cycle();  // 'true' as parameter will print the cycle_round
-    this->mortality(1);
+    this->mortality(1); 
+
+    // PAY ATTENTION THE SESSION NUMBER IS OFF BY -1
+    this->check_manipulation(n+1);    // n is the cycle number
+
+    // std::cout << std::endl << "(debug) session number : " << n << std::endl;
 
     // this->checkManipulationOnEntities(retManipE());
     // this->checkManipulationOnObjects(retManipO());
@@ -806,6 +841,15 @@ void Simulation::run_cycle(int n) { // this happens in 1 cycle round instance
     auto end = clock::now();    
     this->run_time_simulation = duration_cast<nanoseconds>(end-start).count();
     std::cout << duration_cast<nanoseconds>(end-start).count() << "ns\n";
+};
+
+void Simulation::setActiveCycle(int n) {
+    this->active_cycle = n;
+};
+
+void Simulation::increaseCycle() {
+    this->active_cycle += 1;
+    this->cycle_round += 1;
 };
 
 // eof

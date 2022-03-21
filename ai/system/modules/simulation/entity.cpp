@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#define ENTITY_LIFESPAN 18
+#define ENTITY_LIFESPAN 26
 
 class Entity {
 

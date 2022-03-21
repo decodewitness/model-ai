@@ -3,7 +3,7 @@
 #include <iostream>
 
 #define LIMIT_XYZ 9999999
-#define OBJECT_LIFESPAN 7
+#define OBJECT_LIFESPAN 26
 
 class Object {
 private:

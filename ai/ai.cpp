@@ -863,6 +863,7 @@ void AI::query() {	// respond to logical query method
 	
 	
 	std::string str;
+	// std::cin.getline(str, 128); // read up to 128 chars from stdin
 	std::getline(cin, str);
 	query_string = str;
 

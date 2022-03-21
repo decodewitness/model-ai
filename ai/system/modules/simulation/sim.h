@@ -50,6 +50,8 @@ private:
     // int manipulateOnEntity[MAX_CYCLE];    // values to manipulate entity in session
     // int manipulateOnObject[MAX_CYCLE];    // values to manipulate objects in session
     // int entity_focus_area;
+
+    bool end_simulation;
     
     int max_cycles;
     int entity_count;
@@ -62,45 +64,40 @@ private:
     int total_manipulated_entities;
     int total_manipulated_objects;
     int total_manipulations;
+    int counterManipulatedE;
+    int counterManipulatedO;
 
     int sessions_with_manipulated_entities[MAX_SESSIONS];
     int sessions_with_manipulated_objects[MAX_SESSIONS];
-
     int nr_manipulated_entities_in_session[MAX_SESSIONS];
     int nr_manipulated_objects_in_session[MAX_SESSIONS];
-    
     int list_of_manipulated_entities[MAX_ENTITIES];
     int list_of_manipulated_objects[MAX_OBJECTS];
-    
+    int list_entity_session[MAX_SESSIONS][MAX_MANIPULATED_ENTITIES];
+    int list_object_session[MAX_SESSIONS][MAX_MANIPULATED_OBJECTS];
     int list_of_manipulated_sessions[MAX_SESSIONS];
     int list_of_manipulated_e_sessions[MAX_SESSIONS];
     int list_of_manipulated_o_sessions[MAX_SESSIONS];
-
     int e_manipulate_in_session[MAX_ENTITIES][MAX_SESSIONS];
     int o_manipulate_in_session[MAX_OBJECTS][MAX_SESSIONS];
-
+    int e_session_manipulate[MAX_SESSIONS][MAX_ENTITIES];
+    int o_session_manipulate[MAX_SESSIONS][MAX_OBJECTS];
     bool entityList[MAX_ENTITIES];
     bool objectList[MAX_OBJECTS];
-    
     bool manipulatedEntityList[MAX_MANIPULATED_ENTITIES];
     bool manipulatedObjectList[MAX_MANIPULATED_OBJECTS];
-
     bool session_has_entities[MAX_SESSIONS][MAX_MANIPULATED_ENTITIES];
     bool session_has_objects[MAX_SESSIONS][MAX_MANIPULATED_OBJECTS];
     int has_entities[MAX_SESSIONS];
     int has_objects[MAX_SESSIONS];
-
-
     bool entityVertexList[MAX_ENTITIES];
     bool objectVertexList[MAX_OBJECTS];
 
     Entity *entity[MAX_ENTITIES];
     Object *object[MAX_OBJECTS];
-
     Vertex *entityVertex[MAX_ENTITIES];
     Vertex *objectVertex[MAX_OBJECTS];
 
-    bool end_simulation;
 
     // int registered_entities[MAX_ENTITIES];
     // int registered_objects[MAX_OBJECTS];
@@ -134,6 +131,7 @@ public:
     void setObject(bool ar);    // ar = add/rome; respectively 0 or 1
 
     void manipulateSessions(int n);
+    void check_manipulation(int n);
     void checkManipulationOnEntities(int n);
     void checkManipulationOnObjects(int n);
     void manipulateEntity(int n, int session);
@@ -141,15 +139,16 @@ public:
     void checkManipulationOnCycle();
     void stats_is_measured(int n);
     void listManipulated();
-    
+    void performManipulationEntity(int n);
+    void performManipulationObject(int n);
     void run_cycle(int n=25);
     void set_max_cycle(int n=25) {this->max_cycles = n; }
-
 
     void advance_cycle() {
         std::cout << std::endl;
         std::cout << "- cycle round : " << (this->cycle_round + 1) << " -" << std::endl;
-        this->cycle_round += 1;
+        this->increaseCycle();  // has optional argument ;; else increase by '1'
+
         // this->cycle_round++;
         // if (this->cycle_round >= this->max_cycles) {
         //     this->end_simulation = true;
@@ -160,9 +159,14 @@ public:
 
     void sim_run_cycle() {
        	for (int i=0; i<this->max_cycles; i++) {
-	    	this->run_cycle();
+            // this->active_cycle++;
+	    	this->run_cycle(this->cycle_round);
+            // this->check_manipulation(this->active_cycle);
 	    }
     }
+
+    void setActiveCycle(int n=0);
+    void increaseCycle();
 
     // int retManipE() { return this->nr_of_manipulated_entities; };
     // int retManipO() { return this->nr_of_manipulated_objects; };

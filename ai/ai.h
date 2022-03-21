@@ -1,5 +1,9 @@
 // (inside AI directory) "AI/AI.H" - MAIN HEADER FILE FOR AI MODEL CLASS (USED BY AI.CPP)
 
+#define PROGRAM "MODEL-AI"
+	#define VERSION "v0.1-26b"
+		#define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
+
 #ifndef _SPLASH
 #include "steering/splash.h"
 #endif
@@ -7,17 +11,13 @@
 #ifndef _AI_HEADER
 #define _AI_HEADER
 
-#define PROGRAM "MODEL-AI"
-#define VERSION "v0.1-26a"
-
-#define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
-
 // commandos / comodos && _varaan
 //#include "comodovaraan.cpp"	// already included differently
 
 // headers
 #include <cstring>
 #include <iostream>
+#include <string>
 #include <sys/stat.h>
 #include <filesystem>
 //#include <thread>
