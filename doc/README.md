@@ -2,7 +2,7 @@
 AUTHOR: Vera Lo
 DATE: 01:19AM 19/11/2021# model-ai
 
-Latest branch in Artificial Intelligence (A.I) software. Version (v.0.0-1b) (07:44PM CET) (August 21 2021)
+Latest branch in Artificial Intelligence (A.I) software. Version (v.0.1-26c) (07:44PM CET) (August 21 2021)
 
 ░▄▄▄▄░
 ▀▀▄██►
@@ -1488,16 +1488,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc6b491150)
-	- stacking header:(1)::<address>(0x7ffc6b491170)
-	- stacking header:(2)::<address>(0x7ffc6b491190)
-	- stacking header:(3)::<address>(0x7ffc6b4911b0)
-	- stacking header:(4)::<address>(0x7ffc6b4911d0)
-	- stacking header:(5)::<address>(0x7ffc6b4911f0)
-	- stacking header:(6)::<address>(0x7ffc6b491210)
-	- stacking header:(7)::<address>(0x7ffc6b491230)
-	- stacking header:(8)::<address>(0x7ffc6b491250)
-	- stacking header:(9)::<address>(0x7ffc6b491270)
+	- stacking header:(0)::<address>(0x7ffe7ae9a6b0)
+	- stacking header:(1)::<address>(0x7ffe7ae9a6d0)
+	- stacking header:(2)::<address>(0x7ffe7ae9a6f0)
+	- stacking header:(3)::<address>(0x7ffe7ae9a710)
+	- stacking header:(4)::<address>(0x7ffe7ae9a730)
+	- stacking header:(5)::<address>(0x7ffe7ae9a750)
+	- stacking header:(6)::<address>(0x7ffe7ae9a770)
+	- stacking header:(7)::<address>(0x7ffe7ae9a790)
+	- stacking header:(8)::<address>(0x7ffe7ae9a7b0)
+	- stacking header:(9)::<address>(0x7ffe7ae9a7d0)
 
 
 -:: checking AI functions.
@@ -1543,16 +1543,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./module_bay
+symlink: -- ./module_bay
 
 ~:: stats() function:
-block device: -- ./downloads
+symlink: -- ./downloads
 
 ~:: stats() function:
-block device: -- ./DCIM
+symlink: -- ./DCIM
 
 ~:: stats() function:
-block device: -- ./info.txt
+symlink: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1563,17 +1563,67 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/passwd
-	[ simple x computation: type:[char]: len:7 vowels:5 consonants:1 special:1 
-~:: parameter request: store_new_credentials().
- ]
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
 
 -:: finished x computation.
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+~:: file_access()
+(debug) file_access(level=0).
 
-(creds management)
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
 
-ENTER NEW PASS  : REPEAT NEW PASS : 
-~[:] hashed & written credentials.
+sorter():
+{ ai/brain/data/logic.dat }
+- opening: ai/brain/data/logic.dat.
+	- ai/brain/data/logic.dat : is open.
+		-- :: ( logical assembly, model-ai. )
+
+sorted: ai/brain/data/logic.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/logic.dat
+~:: resonate_index::match found on line: (6).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
 
 ~:: running (9) queries.
 
@@ -1583,16 +1633,65 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/list_cred
-	[ simple x computation: type:[char]: len:10 vowels:6 consonants:2 special:2 
-~:: parameter request: list_credentials().
- ]
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
+
+[ -- you're asking my input -- ]
 
 -:: finished x computation.
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+~:: file_access()
+(debug) file_access(level=0).
 
-~:(creds) list:~
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 5
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
 
-	~:(1) ::	f74c6af46a78becb2f1bd3f95bbd5858
+sorter():
+{ ai/brain/data/intelligence.dat }
+- opening: ai/brain/data/intelligence.dat.
+	- unable to open : ai/brain/data/intelligence.dat
+
+sorted: ai/brain/data/intelligence.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+~:: found index [intelligence].
+:::_]{ (intelligence can be used to manipulate objects.)
+:::_]{ (intelligent manners could be manners that would be described.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (5).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
+	~:: query matches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 5
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
 
 ~:: running (8) queries.
 
@@ -1602,38 +1701,21 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/passwd
-	[ simple x computation: type:[char]: len:7 vowels:5 consonants:1 special:1 
-~:: parameter request: store_new_credentials().
- ]
+	lah
+	[ simple x computation: type:[char]: len:3 vowels:2 consonants:1 special:0 ]
+
+[ -- you're asking my input -- ]
 
 -:: finished x computation.
+*string_next_logic() :: ssh: "lah".
+	- HMAC string :: *string_next_logic() ::  (lah) is >> 
+~:: file_access()
+(debug) file_access(level=0).
 
-(creds management)
-
-ENTER NEW PASS  : REPEAT NEW PASS : 
-~[:] hashed & written credentials.
+~:: searching indexes:
+	- rewinding file index.
 
 ~:: running (7) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/list_cred
-	[ simple x computation: type:[char]: len:10 vowels:6 consonants:2 special:2 
-~:: parameter request: list_credentials().
- ]
-
--:: finished x computation.
-
-~:(creds) list:~
-
-	~:(1) ::	4921c0e2d1f6005abe1f9ec2e2041909
-
-~:: running (6) queries.
 
 ::- type your query -::
 punch.
@@ -1689,7 +1771,6 @@ model-ai
 ░▄▄▄▄░ ▀▀▄██► ▀▀███► ░▀███►░█► ▒▄████▀▀ (88)
 
     
->>>>>>> 67a543ef128a69601235772a22f8d5f81d32bfd4
 O._
 red_circle__CUBED:
 

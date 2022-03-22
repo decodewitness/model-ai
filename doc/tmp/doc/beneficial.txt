@@ -1,0 +1,38 @@
+USAGE:
+-----
+
+This command will run the (model-ai) program, and generate a "README.md" file, in the project root directory
+based on the output of the "setup.sh" script running the AI model (model-ai).
+The "README.md" file will consist of the files in "model-ai/ai/logs":
+
+[running the program -OPTION- (1)]
+ -------            ----------
+
+   $ ./run
+    
+    (or)
+
+   $ ./bootstrap
+
+
+
+Using this next command will run the (model-ai) AI from "setup.sh", and generate an "output.log" text file in "./ai/logs":
+
+
+[running the program -OPTION- (2)]
+ -------            ----------
+
+   $ ./bootstrap | tee ./ai/logs/output.log
+
+   (The "run" command already generates an "output.log" file inside the "ai/logs" directory)
+
+
+The main compiled C++ program (model-ai) is in the "/model-ai/ai/bin" directory and called "runtime" after the compilation with the scripts.
+Do remember that if you move the program over to another location, then you will lose the functionality of some functional scripts
+which the program (model-ai) uses.
+
+
+LOGGED OUTPUT OF THIS BETA:
+-----
+
+

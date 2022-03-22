@@ -11,7 +11,9 @@ echo "~:completing readme."
 echo
 ./readme.sh # copies README.md from ./doc
 echo
-echo "(Model-Ai) https://model-ai.com"
+echo "Done."
+echo
+echo "(Model-Ai)(C)(2021-2022) - (Author): Vera Lo - (Website): https://model-ai.com"
 echo
 
 exit 0
