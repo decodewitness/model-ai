@@ -752,7 +752,6 @@ void AI::tsp() {	// transponder function
 
 	// prep new transponder
 	std::cout << "~:: transponder -> prep()" << std::endl;
-
 	sleep(2);
 	this->transponder->prep(this->transponder->retVal());	// retVal() returns "initial_sentence" from "Transponder"
 
@@ -761,7 +760,6 @@ void AI::tsp() {	// transponder function
 	//this->transponder->answer(query_string);
 
 	std::cout << std::endl << "(EOT)" << std::endl;
-
 	sleep(2);
 
 	// delete transponder

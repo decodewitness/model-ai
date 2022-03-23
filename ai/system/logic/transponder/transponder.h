@@ -1,10 +1,16 @@
 // AI/LOGIC/TRANSPONDER/TRANSPONDER.H - USED BY "/AI/LOGIC/TRANSPONDER/TRANSPONDER.CPP" // USED FOR LANGUAGE INTERPRETATION.
 
+// headers
 #include <string>
 
+// use stringcode to encode coded sequence to initiate or illicit response
+#include "stringcode.h"
+
+// files
 std::string question_answers = "data/files/question_answers.txt";
 std::string trivia_logic = "data/files/trivia_logic.txt";
 
+// Transponder
 class Transponder {
 private:
     std::string initial_sentence;   // logic comparts from here

@@ -103,21 +103,49 @@ const int SAMPLER_THREADS = 8;
 class AI {
 
 private:
-	int nr;
+	// ints
 	int check_routine;
-
+	int nr;
 	int r10; // for storing random number <=10
 	int r100; // for storing random number <=100
-
 	int pool; // for pooling data (initialize to 0)
 
+	int step;
+	int element;
+	int elements;
+	
+	// chars
 	char ch;
+	
+	// bools
 	bool testrun;
 	bool recordat;
-
-	bool access;
 	bool disableAudio;
+	bool access;
+	bool pytubeRan;	// external software is linked
 
+	// modules
+	bool ammod;
+	bool modul;
+	bool comb;
+	bool combm;
+	bool smpl;
+	bool brn;
+	bool trans;
+
+	// locks on data
+	bool ddLck;
+	bool d1Lck;
+	bool d2Lck;
+
+	// strings
+	std::string number_modules[nr_modules];	// these are all files and used to construct the virtual domain
+	std::string crlurl;
+
+	// containers
+	moduleContainer m;
+
+	// module pointers
 	AMModule *ammodule;
 	Modular *mdl;
 	Brain *brain;
@@ -129,33 +157,14 @@ private:
 	Track_Account *account;
 	Simulation *simulation;
 
-	bool ddLck;
-	bool d1Lck;
-	bool d2Lck;
-
+	// data pipelines
 	Data *dd;
 	Data *d1;
 	Data *d2;
 
-	bool ammod;
-	bool modul;
-	bool comb;
-	bool combm;
-	bool smpl;
-	bool brn;
-
-	int step;
-	int element;
-	int elements;
-
-	std::string number_modules[nr_modules];	// these are all files and used to construct the virtual domain
-	std::string crlurl;
-
-	moduleContainer m;
-
-	bool pytubeRan;
-
 public:
+
+	// constructor
 	AI(int n=1);
 
 	// splash
@@ -282,27 +291,6 @@ public:
 	// initialize transponder
 	void tsp();
 
-	// simulation
-	void startSim();
-	void stopSim();
-	void runSim();
-	void sim_stats();
-
-	void addSimEntity(int x, int y, int z, int n=1);
-	void deleteSimEntity(int x);
-
-	void addSimObject(int x, int y, int z, int n=1);
-	void deleteSimObject(int x);
-	
-	void listEntity();
-	void listObject();
-
-	void listAllEO();
-	void cycle(int n);
-
-	void printEntityCount();
-	void printObjectCount();
-
 	// handle data
 	void hdata();
 	void hmath();
@@ -316,7 +304,25 @@ public:
 	//bool testing2();
 	//bool testing3();
 
-	// account settings
+	// stat
+	int statdir(std::string d);
+
+	// data conversion
+	void convert_data(std::string f, int l);
+
+	// killchain
+	void destroy_msg();
+	void saygrace();
+	void decouple();
+	void killc(int x);
+
+	// pytube
+	void install_pytube();
+	bool chk_pytube();
+	void run_tube(std::string url);
+
+	// ACCOUNT MGMT
+			// account settings
 	void add_account(float x);
 	void subtract_account(float x);
 	void print_account();
@@ -338,22 +344,24 @@ public:
 	void total_account();
 	void average_account();
 
-	// stat
-	int statdir(std::string d);
-
-	// data conversion
-	void convert_data(std::string f, int l);
-
-	// killchain
-	void destroy_msg();
-	void saygrace();
-	void decouple();
-	void killc(int x);
-
-	// pytube
-	void install_pytube();
-	bool chk_pytube();
-	void run_tube(std::string url);
+	// SIMULATION
+			// SIMULATOR
+	void startSim();
+	void stopSim();
+	void runSim();
+	void cycle(int n);
+	// add delete
+	void addSimEntity(int x, int y, int z, int n=1);
+	void deleteSimEntity(int x);
+	void addSimObject(int x, int y, int z, int n=1);
+	void deleteSimObject(int x);
+	// listing
+	void sim_stats();
+	void listEntity();
+	void listObject();
+	void listAllEO();
+	void printEntityCount();
+	void printObjectCount();
 };
 
 #endif

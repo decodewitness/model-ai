@@ -258,7 +258,8 @@ std::string Transponder::answer(std::string s) {
     std::string x;
     std::ifstream filen;
     
-    std::string used_file ="trivia_logic.txt";
+    std::string used_file ="trivia_logic.txt";  // AI/DATA/FILES/TRIVIA_LOGIC.TXT
+    std::string used_file_ar[64] = { "trivia_logic", "question_answers" };  // max. file name length    // AI/DATA/FILES/TRIVIA_LOGIC.TXT   // AI/DATA/FILES/QUESTION_ANSWERS.TXT
 
     // question, normal, or exclamation
     bool isDot = false;

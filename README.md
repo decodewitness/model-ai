@@ -1488,16 +1488,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe7ae9a6b0)
-	- stacking header:(1)::<address>(0x7ffe7ae9a6d0)
-	- stacking header:(2)::<address>(0x7ffe7ae9a6f0)
-	- stacking header:(3)::<address>(0x7ffe7ae9a710)
-	- stacking header:(4)::<address>(0x7ffe7ae9a730)
-	- stacking header:(5)::<address>(0x7ffe7ae9a750)
-	- stacking header:(6)::<address>(0x7ffe7ae9a770)
-	- stacking header:(7)::<address>(0x7ffe7ae9a790)
-	- stacking header:(8)::<address>(0x7ffe7ae9a7b0)
-	- stacking header:(9)::<address>(0x7ffe7ae9a7d0)
+	- stacking header:(0)::<address>(0x7fff62c88710)
+	- stacking header:(1)::<address>(0x7fff62c88730)
+	- stacking header:(2)::<address>(0x7fff62c88750)
+	- stacking header:(3)::<address>(0x7fff62c88770)
+	- stacking header:(4)::<address>(0x7fff62c88790)
+	- stacking header:(5)::<address>(0x7fff62c887b0)
+	- stacking header:(6)::<address>(0x7fff62c887d0)
+	- stacking header:(7)::<address>(0x7fff62c887f0)
+	- stacking header:(8)::<address>(0x7fff62c88810)
+	- stacking header:(9)::<address>(0x7fff62c88830)
 
 
 -:: checking AI functions.
@@ -1543,16 +1543,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-symlink: -- ./module_bay
+character device: -- ./module_bay
 
 ~:: stats() function:
-symlink: -- ./downloads
+character device: -- ./downloads
 
 ~:: stats() function:
-symlink: -- ./DCIM
+character device: -- ./DCIM
 
 ~:: stats() function:
-symlink: -- ./info.txt
+character device: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1694,28 +1694,6 @@ b_string:
     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
 
 ~:: running (8) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	lah
-	[ simple x computation: type:[char]: len:3 vowels:2 consonants:1 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "lah".
-	- HMAC string :: *string_next_logic() ::  (lah) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: running (7) queries.
 
 ::- type your query -::
 punch.

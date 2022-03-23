@@ -395,6 +395,15 @@ void Brain::useBrain(std::string query) {
     std::string logic = query;
     this->neural_net(query, logic, 1);
 
+    // check if Transponder
+
+    // logic
+
+
+
+
+
+
     //this->search(logic, 3);
     //this->search_catalogue_index(logic);
 
