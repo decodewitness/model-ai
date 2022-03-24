@@ -163,6 +163,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/list_cred") == false) {
         std::cout << std::endl << "~:: parameter request: list_credentials()." << std::endl;
         isListCred = true;
+    } else if (str.compare("/menu") == false) {
+        std::cout << std::endl << "~:: parameter request: menu()." << std::endl;
+        isMenu = true;
     }
 };
 

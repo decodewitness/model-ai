@@ -55,6 +55,7 @@
 #include "entropy/b33hiv3.cpp"	// includes entropy.cpp && ltctapttclt.cpp
 #include "sampler/sampler.cpp"
 // #include "steering/splash.h"
+#include "system/menu/menu.cpp"
 #include "language/concepts.cpp"
 #include "system/audio/audio.cpp"
 #include "drum_machine/drums.cpp"
@@ -320,6 +321,9 @@ public:
 	void install_pytube();
 	bool chk_pytube();
 	void run_tube(std::string url);
+
+	// menu
+	void menu();
 
 	// ACCOUNT MGMT
 			// account settings

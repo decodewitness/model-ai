@@ -1488,16 +1488,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff62c88710)
-	- stacking header:(1)::<address>(0x7fff62c88730)
-	- stacking header:(2)::<address>(0x7fff62c88750)
-	- stacking header:(3)::<address>(0x7fff62c88770)
-	- stacking header:(4)::<address>(0x7fff62c88790)
-	- stacking header:(5)::<address>(0x7fff62c887b0)
-	- stacking header:(6)::<address>(0x7fff62c887d0)
-	- stacking header:(7)::<address>(0x7fff62c887f0)
-	- stacking header:(8)::<address>(0x7fff62c88810)
-	- stacking header:(9)::<address>(0x7fff62c88830)
+	- stacking header:(0)::<address>(0x7fffb9996b50)
+	- stacking header:(1)::<address>(0x7fffb9996b70)
+	- stacking header:(2)::<address>(0x7fffb9996b90)
+	- stacking header:(3)::<address>(0x7fffb9996bb0)
+	- stacking header:(4)::<address>(0x7fffb9996bd0)
+	- stacking header:(5)::<address>(0x7fffb9996bf0)
+	- stacking header:(6)::<address>(0x7fffb9996c10)
+	- stacking header:(7)::<address>(0x7fffb9996c30)
+	- stacking header:(8)::<address>(0x7fffb9996c50)
+	- stacking header:(9)::<address>(0x7fffb9996c70)
 
 
 -:: checking AI functions.
@@ -1563,67 +1563,25 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
-
-[ -- you're asking my input -- ]
+	/menu
+	[ simple x computation: type:[char]: len:5 vowels:2 consonants:2 special:1 
+~:: parameter request: menu().
+ ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "logic".
-	- HMAC string :: *string_next_logic() ::  (logic) is >> 
-~:: file_access()
-(debug) file_access(level=0).
 
-~:: searching indexes:
-	- rewinding file index.
-(debug) hit search function.
-	search1 : logic
-	search2 : logic
-	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+[] (Model-Ai) -- (Menu Options) []
 
-sorter():
-{ ai/brain/data/logic.dat }
-- opening: ai/brain/data/logic.dat.
-	- ai/brain/data/logic.dat : is open.
-		-- :: ( logical assembly, model-ai. )
+(N)ew file
+(L)oad file
+(S)earch files
+(D)elete file
+(Q)uit
 
-sorted: ai/brain/data/logic.dat
-~:: file_access()
-(debug) file_access(level=7).
+(input?):-- :: 
+(wrong input): choose a valid menu option.
 
-	<<<
-
-- opened "ai/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-TMP: logic
-~:: found index [logic].
-:::_]{ (logical ways to infer reason.)
-:::_]{ (a logical standard for conventions of proceeding with thinking.)
-(!) omitted empty line.
-(debug) file_access().
-~:: file_access()
-(debug) file_access(level=8).
-~:: closed file "ai/brain/nlp/intelligence/intelligence".
-
-- adding (2) weights.
-
-[]:: ai/brain/data/logic.dat
-~:: resonate_index::match found on line: (6).
-~:: done.
-
-b_string:
-!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
-	~:: query matches search string: "logic".
-
--* logic is:
-   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-
-   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+~:!:~ (error) - no such implementation ready in function doMenuAction(char).
 
 ~:: running (9) queries.
 
@@ -1633,67 +1591,170 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	intelligence
-	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
+	/help
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: help().
+ ]
+
+-:: finished x computation.
+
+Help Function
+-----
+
+MODEL-AI: v0.1-26b
+Download: https://model-ai.com/archive/model-ai.tar.gz
+
+When the Ai asks you for Logic you can enter a string to trigger natural language processing,
+or you can enter one of the following commands.
+
+COMMANDS:
+-----
+
+
+/help -- triggers this help function.
+/help -- displays version information.
+/killc -- built in killchain(1).
+/bank -- starts accounting.
+/hash -- hashes a string in MD5.
+/curl -- curls a website of choice from your machine.
+/table -- prints the table in numbers of your chosen number.
+/tableto -- prints the table in numbers of your chosen number up to max chosen number.
+/dice -- print a random dice number. (1...6)
+/dice2 -- print a random dice number. (1...nr_of_eyes)
+/stat -- stat() function stats directory/file.
+/cp -- copies file_1 into file_2. (src) -> (dst)
+/rm -- removes a file from the system.
+/+ -- adds 2 numbers.
+/- -- subtracts 2 numbers.
+// -- divides number 1 by number 2.
+/* -- multiplies number 1 by number 2.
+/pow -- does number 1 to power of number 2.
+/punch -- punch in numbers like with a calculator.
+/prpunch -- punch in numbers like with a calculator.
+/simulation -- runs a simulation for enities from the Entity class -&- objects from the Object class.
+/convert -- converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
+/convertd -- converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
+/stepping -- will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
+/rollout -- this function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
+/add_data -- adds data to the logical cabinets manually.
+/convert_data -- converts the data from a file.
+/audio_toggle -- disables/enables the Ai model its sound FX.
+/run_tube -- download YouTube file or playlist.
+/menu -- will hand you a menu with several options.
+/passwd -- changes the access code for running the model.
+/list_cred -- lists the MD5 hash (the access code) from the credentials store.
+
+
+~:: running (8) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	list_cred
+	[ simple x computation: type:[char]: len:9 vowels:6 consonants:2 special:1 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "intelligence".
-	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+*string_next_logic() :: ssh: "list_cred".
+	- HMAC string :: *string_next_logic() ::  (list_cred) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
-(debug) hit search function.
-	search1 : intelligence
-	search2 : intelligence
-	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 5
-	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
 
-sorter():
-{ ai/brain/data/intelligence.dat }
-- opening: ai/brain/data/intelligence.dat.
-	- unable to open : ai/brain/data/intelligence.dat
+~:: running (7) queries.
 
-sorted: ai/brain/data/intelligence.dat
-~:: file_access()
-(debug) file_access(level=7).
+::- type your query -::
+punch.
+--?:: 
 
-	<<<
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/list_cred
+	[ simple x computation: type:[char]: len:10 vowels:6 consonants:2 special:2 
+~:: parameter request: list_credentials().
+ ]
 
-- opened "ai/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
+-:: finished x computation.
 
-:: artificial intelligence ::
+~:(creds) list:~
 
-TMP: intelligence
-~:: found index [intelligence].
-:::_]{ (intelligence can be used to manipulate objects.)
-:::_]{ (intelligent manners could be manners that would be described.)
-(!) omitted empty line.
-(debug) file_access().
-~:: file_access()
-(debug) file_access(level=8).
-~:: closed file "ai/brain/nlp/intelligence/intelligence".
+	~:(1) ::	4921c0e2d1f6005abe1f9ec2e2041909
 
-- adding (2) weights.
+~:: running (6) queries.
 
-[]:: ai/brain/data/intelligence.dat
-~:: resonate_index::match found on line: (5).
-~:: done.
+::- type your query -::
+punch.
+--?:: 
 
-b_string:
-!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
-	~:: query matches search string: "intelligence".
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/pow
+	[ simple x computation: type:[char]: len:4 vowels:2 consonants:1 special:1 
+~:: parameter request: power().
+ ]
 
--* intelligence is:
-    deciphering algorithms, and using strategies to solve the inherent problem. + 5
+-:: finished x computation.
+(power of): "number1" to power of "number2" ^ # #: powers (20^5): 3.2e+06
 
-    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+~:: running (5) queries.
 
-~:: running (8) queries.
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/menu
+	[ simple x computation: type:[char]: len:5 vowels:2 consonants:2 special:1 
+~:: parameter request: menu().
+ ]
+
+-:: finished x computation.
+
+[] (Model-Ai) -- (Menu Options) []
+
+(N)ew file
+(L)oad file
+(S)earch files
+(D)elete file
+(Q)uit
+
+(input?):-- :: - opening new file.
+
+~:: running (4) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/menu
+	[ simple x computation: type:[char]: len:5 vowels:2 consonants:2 special:1 
+~:: parameter request: menu().
+ ]
+
+-:: finished x computation.
+
+[] (Model-Ai) -- (Menu Options) []
+
+(N)ew file
+(L)oad file
+(S)earch files
+(D)elete file
+(Q)uit
+
+(input?):-- :: (load) : 
+
+- loading: ""
+
+~:: running (3) queries.
 
 ::- type your query -::
 punch.

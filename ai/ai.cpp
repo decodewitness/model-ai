@@ -117,9 +117,10 @@ void AI::help(int n=1) {
 	std::cout << "/convert_data -- converts the data from a file." << std::endl;
 	std::cout << "/audio_toggle -- disables/enables the Ai model its sound FX." << std::endl;
 	std::cout << "/run_tube -- download YouTube file or playlist." << std::endl;
+	std::cout << "/menu -- will hand you a menu with several options." << std::endl;
 	std::cout << "/passwd -- changes the access code for running the model." << std::endl;
 	std::cout << "/list_cred -- lists the MD5 hash (the access code) from the credentials store." << std::endl;
-	
+
 	// list of arguments
 	std::cout << std::endl;
 };
@@ -1150,6 +1151,9 @@ void AI::query() {	// respond to logical query method
 	} else if (isNewCred == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
 		this->store_new_credentials();
 		isNewCred = false;
+	} else if (isMenu == true) {
+		this->menu();
+		isMenu = false;
 	}
 	
 	// DEFAULT TO LOGIC
@@ -1937,6 +1941,10 @@ void AI::run_tube(std::string url) {
 		system(command.c_str());
 	}
 };
+
+void AI::menu() {
+	drawMenu();
+}
 
 #endif
 // eof

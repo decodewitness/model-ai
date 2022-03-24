@@ -9,6 +9,9 @@
 const int yy = 3;
 const int logic = yy;
 
+// when not a command but language
+bool isLogic=false;
+
 // booleans for in "AI/AI.CPP" -- query() function
 bool isHelp=false;
 bool isVersion=false;
@@ -42,7 +45,5 @@ bool isRunPytube=false;
 bool isToggleAudio=false;
 bool isNewCred=false;
 bool isListCred=false;
-// when not a command but language
-bool isLogic=false;
-
+bool isMenu=false;
 // eof

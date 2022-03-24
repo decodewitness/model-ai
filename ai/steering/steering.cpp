@@ -41,18 +41,29 @@ bool logging_is_enabled = true;
 int steering(int arc) {	// used as main function for the driver of the Model-Ai and spin the program cycle (encapsulation).
 	// initialize_runtime_check();
 	// class instances are main function
-	AI ai(arc);
+
+	// initiating runtime model Model-Ai with: "AI ai(arc);"
+	AI ai(arc);	// starts the Ai model model run cycle
 	
+	// TESTING :: testing functions go here below!
+	//////////////////////////////////////////////
+				// functions go here else will run the default model with methods of interpreting: //
+	//ai.menu();
+
+	//////////////////////////////////////////////
+	// TESTING :: end of testing!
+
+	// end of Ai model-Ai run cycle and decouple with: "ai.decouple();"
+	ai.decouple();	// decouples all living functions of the Ai model for shutdown sequence which gets initiated
+return 0;
+}
 	// need to fix file_access(0)
 	// ai.list_credentials();
 	// ai.store_new_credentials();
 	//ai.run_tube("https://www.youtube.com/watch?v=nH_bEtbfB9U");
 
 	//ai.add_intelligence("try", "try out sample as input to derive or verify the output of a function.");
-	ai.decouple();
 
-return 0;
-}
 	//int loopvar=0; 	// use loopvar in recounting xl[1024]
 	//char * xl[1024];
 
