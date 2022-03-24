@@ -42,11 +42,22 @@ bool doMenuAction(char c) {
     
     bool quitloops = false;
     std::string input;
-    
+    char ch;
+    ofstream filen;
+
     switch (c) {
         case 'n':
         case 'N':
-            std::cout << "- opening new file." << std::endl;
+            std::cout << "- creating new file." << std::endl;
+            std::cout << "(filename) : " << std::endl;
+
+            ch = getchar();
+            std::getline(cin, input);
+
+            filen.open(input);
+
+            std::cout << "- created new file \"" << input << "\"." << std::endl;
+            filen.close();
             break;
 
         case 'd':
@@ -65,6 +76,8 @@ bool doMenuAction(char c) {
         case 'l':
         case 'L':
             std::cout << "(load) : " << std::endl;
+
+            ch = getchar();
             std::getline(cin, input);
 
             std::cout << std::endl;
@@ -99,7 +112,6 @@ void drawMenu() {
     char ch;
     bool x;
     // display menu
-
     
     do {    
         display();

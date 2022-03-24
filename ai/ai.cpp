@@ -694,6 +694,9 @@ void AI::init() {		// INITIALIZATION
 	// create brain instance
 	this->assembleBrain();
 
+	// create Transponder
+	this->createTransponder();
+
 	this->nr = 8;
 	this->ch = 'c';
 	this->check_routine = 1;
@@ -710,6 +713,9 @@ void AI::init() {		// INITIALIZATION
 	this->cmb = new Combine;
 
 	// int x=0;
+
+	// tranponder
+	this->transponderIsPrepped = false;
 
 	this->pytubeRan = false;
 	int x = statdir("ai/lib/.pyt");	// check for signs of pytube installation
@@ -747,21 +753,59 @@ void AI::appliance() {	// starts the "virtual" script
 	system("./ai/virtual/virtual");
 };
 
-void AI::tsp() {	// transponder function
+void AI::createTransponder() {
+	// this->transponder = new Transponder(query_string);
+	this->transponder = new Transponder();
+	this->trans = true;
+	// this->prepTransponder();
+};
+
+void AI::prepTransponder() {
 	// create new transponder
-	this->transponder = new Transponder(query_string);
+	// this->transponder = new Transponder(query_string);
 
 	// prep new transponder
 	std::cout << "~:: transponder -> prep()" << std::endl;
-	sleep(2);
-	this->transponder->prep(this->transponder->retVal());	// retVal() returns "initial_sentence" from "Transponder"
+	// sleep(2);
+	this->transponder->prep(query_string);	// retVal() returns "initial_sentence" from "Transponder"
+	this->transponderIsPrepped = true;
+	// answer query
+	// std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
+	//this->transponder->answer(query_string);
+
+	std::cout << std::endl << "(EOT)" << std::endl;
+	// sleep(2);
+
+	// // delete transponder
+	// delete this->transponder;
+};
+
+void AI::tsp() {	// transponder function
+	// create new transponder
+	// this->transponder = new Transponder(query_string);
+
+	if (this->transponderIsPrepped == false) {
+		std::cout << "~:!:~ transponder is not prepared yet." << std::endl;
+		std::cout << "\t~:: preparing transponder." << std::endl;
+
+		this->prepTransponder();
+	} else if (this->trans == true) {
+		std::cout << "~:: transponder -> prepTr()" << std::endl;
+		this->transponder->prepTr(query_string);
+	}
+
+	// prep new transponder
+	// sleep(2);
+	// this->transponder->prep(this->transponder->retVal());	// retVal() returns "initial_sentence" from "Transponder"
+
+	this->transponder->respond(true);
 
 	// answer query
 	// std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
 	//this->transponder->answer(query_string);
 
 	std::cout << std::endl << "(EOT)" << std::endl;
-	sleep(2);
+	// sleep(2);
 
 	// delete transponder
 	delete this->transponder;
@@ -1160,6 +1204,17 @@ void AI::query() {	// respond to logical query method
 	if (isLogic == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
 		// this->assembleBrain();
 		this->brain->useBrain(query_string);
+		
+		if (this->trans == true && this->transponderIsPrepped == true) {
+			this->tsp();
+		} else {
+			std::cout << std::endl;
+			std::cout << "~:: transponder was not prepared yet." << std::endl;
+			std::cout << "\t~:: preparing transponder." << std::endl;
+
+			this->prepTransponder();
+		}
+		
 		isLogic = false;
 	} 
 };	// functions are being recognised in AI/LOGIC/ASSEMBLY/LOGIC.CPP

@@ -10,33 +10,60 @@
 #include "prepare.cpp"
 #include "transponder.h"
 
-Transponder::Transponder(std::string s) {
+Transponder::Transponder() {
     std::cout << std::endl << "~:: transponder queries." << std::endl;
     sleep(2);
     // setting both "this->initial_sentence" && "this->subject" here to parameter string, which is the sentence queried to the Transponder
-    this->initial_sentence = s;
+    
+    // this->initial_sentence = s;
+    
+    // // initial value
+    // this->subject = s;
+    // this->analytical = true;   // also redundant
+
+    // // fit "initial_sentence" to "question" declared in "prepare.cpp"
+    // aquestion = s;
+    
+    // respond
+    // this->respond(this->analytical);
+};
+
+void Transponder::prepTr(std::string s) {
+    this->initial_sentence = query_string;
     
     // initial value
     this->subject = s;
-
     this->analytical = true;   // also redundant
 
     // fit "initial_sentence" to "question" declared in "prepare.cpp"
     aquestion = s;
-    
-    // respond
-    this->respond(this->analytical);
 };
 
-std::string Transponder::respond(bool b) {
+// Transponder::Transponder(std::string s) {
+//     std::cout << std::endl << "~:: transponder queries." << std::endl;
+//     sleep(2);
+//     // setting both "this->initial_sentence" && "this->subject" here to parameter string, which is the sentence queried to the Transponder
+//     this->initial_sentence = s;
     
+//     // initial value
+//     this->subject = s;
+
+//     this->analytical = true;   // also redundant
+
+//     // fit "initial_sentence" to "question" declared in "prepare.cpp"
+//     aquestion = s;
+    
+//     // respond
+//     this->respond(this->analytical);
+// };
+
+std::string Transponder::respond(bool b) {
     // skip line and respond from mechanism
     std::cout << std::endl;
     std::cout << "\tTRANSPONDER::responding:" << std::endl;
     std::cout << "\t-----" << std::endl;
 
     // std::string x;
-
     // do logic here to determine if analytics are required.
 
     if (b == true) {
@@ -240,6 +267,7 @@ void Transponder::prep(std::string s) { // 's' is the input sentence from "query
     // prepare_ints() prepares the dictionaries
     // dictionaries(true);
     std::cout << "(debug) calling prepare_ints() (from) -> \"" << s << "\"." << std::endl;
+    // std::cout << "(debug) query_string = \"" << query_string << "\"" << std::endl;
 
     // PREPARE DICTIONARIES IN THIS FUNCTION
     dictionaries(alimit, counter);  // A1: limit dictionary A2: limit sentence
@@ -308,7 +336,7 @@ std::string Transponder::answer(std::string s) {
     filen.open(used_file);
 
     if (filen.is_open() == true) {
-        while (getline (filen,x)) {
+        while (getline(filen,x)) {
             answers_processed += 1;
             // convert this logic first!!!!!!!!
             // process answers into NEW!! ARRAY!!!!!!!!

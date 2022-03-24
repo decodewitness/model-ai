@@ -134,6 +134,9 @@ private:
 	bool brn;
 	bool trans;
 
+	// prepared
+	bool transponderIsPrepped;
+
 	// locks on data
 	bool ddLck;
 	bool d1Lck;
@@ -289,8 +292,11 @@ public:
 	void enforce_security();
 	std::string hashtype(std::string h); // checking integrity
 	//std::string hashchain(std::string s);
-	// initialize transponder
+	
+	// transponder
+	void createTransponder();
 	void tsp();
+	void prepTransponder();
 
 	// handle data
 	void hdata();
