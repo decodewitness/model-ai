@@ -31,24 +31,34 @@ std::string meta_5; // meta_5 is not used yet
 
 // meta queries (triviary)
 char meta[meta_queries][meta_query_length];    // [128] meta queries in char format of length [256]
+bool meta_que = false;
 
 void store_meta_queries(int a[], int size) {
 
     std::ofstream met;
-
-    met.open(meta_query_path);
+    
+    if (meta_que == false && met.is_open() == false) {
+        met.open(meta_query_path);
+        sleep(1);
+        if (met.is_open() == true) {
+            meta_que = true;
+        }
+    }
 
     std::cout << std::endl;
 
     if (met.is_open() == true) {
-        std::cout << "~:: meta queries ~:: storing meta query sequence ~:::: ::::~" << std::endl;
+        std::cout << "~:: meta queries ~:: storing meta query sequence ~::::meta::::~" << std::endl;
         std::cout <<"\t- path: \"" << meta_query_path << "\"." << std::endl;
         std::cout <<"\t\t- meta sequences:" << std::endl;
         
         for (int i=0; i<size; i++) {
+            met << a[i];
+            if (i<size-1) {
+                met << ",";
+            }
             std::cout << "\t- " << a[i];
         }
-
         met << std::endl;
 
         met.close();
@@ -110,6 +120,8 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
         } else {
             std::cout << "(skipped unregistered entry)" << std::endl;
         }
+
+        // store_meta_queries;
     }
 
     sleep(3);

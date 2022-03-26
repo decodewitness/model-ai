@@ -760,14 +760,14 @@ void AI::createTransponder() {
 	// this->prepTransponder();
 };
 
-void AI::prepTransponder() {
+void AI::prepTransponder(std::string s) {
 	// create new transponder
 	// this->transponder = new Transponder(query_string);
 
 	// prep new transponder
 	std::cout << "~:: transponder -> prep()" << std::endl;
 	// sleep(2);
-	this->transponder->prep(query_string);	// retVal() returns "initial_sentence" from "Transponder"
+	this->transponder->prep(s);	// retVal() returns "initial_sentence" from "Transponder"
 	this->transponderIsPrepped = true;
 	// answer query
 	// std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
@@ -780,7 +780,7 @@ void AI::prepTransponder() {
 	// delete this->transponder;
 };
 
-void AI::tsp() {	// transponder function
+void AI::tsp(std::string s) {	// transponder function
 	// create new transponder
 	// this->transponder = new Transponder(query_string);
 
@@ -788,10 +788,10 @@ void AI::tsp() {	// transponder function
 		std::cout << "~:!:~ transponder is not prepared yet." << std::endl;
 		std::cout << "\t~:: preparing transponder." << std::endl;
 
-		this->prepTransponder();
+		this->prepTransponder(s);
 	} else if (this->trans == true) {
 		std::cout << "~:: transponder -> prepTr()" << std::endl;
-		this->transponder->prepTr(query_string);
+		this->transponder->prepTr(s);
 	}
 
 	// prep new transponder
@@ -1206,13 +1206,13 @@ void AI::query() {	// respond to logical query method
 		this->brain->useBrain(query_string);
 		
 		if (this->trans == true && this->transponderIsPrepped == true) {
-			this->tsp();
+			this->tsp(query_string);
 		} else {
 			std::cout << std::endl;
 			std::cout << "~:: transponder was not prepared yet." << std::endl;
 			std::cout << "\t~:: preparing transponder." << std::endl;
 
-			this->prepTransponder();
+			this->prepTransponder(query_string);
 		}
 		
 		isLogic = false;

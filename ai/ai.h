@@ -295,8 +295,8 @@ public:
 	
 	// transponder
 	void createTransponder();
-	void tsp();
-	void prepTransponder();
+	void tsp(std::string s);
+	void prepTransponder(std::string s);
 
 	// handle data
 	void hdata();

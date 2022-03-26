@@ -28,8 +28,8 @@ Transponder::Transponder() {
     // this->respond(this->analytical);
 };
 
-void Transponder::prepTr(std::string s) {
-    this->initial_sentence = query_string;
+void Transponder::prepTr(std::string s) { // preparation of Transponder object
+    this->initial_sentence = s;
     
     // initial value
     this->subject = s;
@@ -286,7 +286,7 @@ std::string Transponder::answer(std::string s) {
     std::string x;
     std::ifstream filen;
     
-    std::string used_file ="trivia_logic.txt";  // AI/DATA/FILES/TRIVIA_LOGIC.TXT
+    std::string used_file ="data/files/trivia_logic.txt";  // AI/DATA/FILES/TRIVIA_LOGIC.TXT
     std::string used_file_ar[64] = { "trivia_logic", "question_answers" };  // max. file name length    // AI/DATA/FILES/TRIVIA_LOGIC.TXT   // AI/DATA/FILES/QUESTION_ANSWERS.TXT
 
     // question, normal, or exclamation
