@@ -19,6 +19,7 @@ private:
 protected:
     std::string subject; // same as "initial_sentence" but maybe change this later
     std::string response; // the original answer, queried by the transponder and then returned
+    std::string waquestion;
     
 public:
     // Transponder(std::string s); // initialize with subject

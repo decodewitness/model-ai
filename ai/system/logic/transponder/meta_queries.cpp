@@ -60,10 +60,8 @@ void store_meta_queries(int a[], int size) {
             std::cout << "\t- " << a[i];
         }
         met << std::endl;
-
         met.close();
     }
-
     sleep(2);
     std::cout << std::endl;
 };

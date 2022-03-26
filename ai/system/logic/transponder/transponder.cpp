@@ -10,6 +10,8 @@
 #include "prepare.cpp"
 #include "transponder.h"
 
+extern std::string aquestion;
+
 Transponder::Transponder() {
     std::cout << std::endl << "~:: transponder queries." << std::endl;
     sleep(2);
@@ -36,7 +38,7 @@ void Transponder::prepTr(std::string s) { // preparation of Transponder object
     this->analytical = true;   // also redundant
 
     // fit "initial_sentence" to "question" declared in "prepare.cpp"
-    aquestion = s;
+    this->waquestion = s;
 };
 
 // Transponder::Transponder(std::string s) {
@@ -286,7 +288,7 @@ std::string Transponder::answer(std::string s) {
     std::string x;
     std::ifstream filen;
     
-    std::string used_file ="data/files/trivia_logic.txt";  // AI/DATA/FILES/TRIVIA_LOGIC.TXT
+    std::string used_file ="ai/data/files/trivia_logic.txt";  // AI/DATA/FILES/TRIVIA_LOGIC.TXT
     std::string used_file_ar[64] = { "trivia_logic", "question_answers" };  // max. file name length    // AI/DATA/FILES/TRIVIA_LOGIC.TXT   // AI/DATA/FILES/QUESTION_ANSWERS.TXT
 
     // question, normal, or exclamation

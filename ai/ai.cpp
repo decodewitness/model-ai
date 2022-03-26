@@ -792,6 +792,7 @@ void AI::tsp(std::string s) {	// transponder function
 	} else if (this->trans == true) {
 		std::cout << "~:: transponder -> prepTr()" << std::endl;
 		this->transponder->prepTr(s);
+		std::cout << "(debug) after this query." << std::endl;
 	}
 
 	// prep new transponder
