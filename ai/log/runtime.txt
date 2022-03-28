@@ -1439,6 +1439,7 @@ regular file:
 
 ~:: stacking headers/modules ::~
 <<<<<<< HEAD
+<<<<<<< HEAD
 	- stacking header:(0)::<address>(0x7ffd3299bc20)
 	- stacking header:(1)::<address>(0x7ffd3299bc40)
 	- stacking header:(2)::<address>(0x7ffd3299bc60)
@@ -1450,6 +1451,8 @@ regular file:
 	- stacking header:(8)::<address>(0x7ffd3299bd20)
 	- stacking header:(9)::<address>(0x7ffd3299bd40)
 =======
+=======
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 	- stacking header:(0)::<address>(0x7ffcdaa328a0)
 	- stacking header:(1)::<address>(0x7ffcdaa328c0)
 	- stacking header:(2)::<address>(0x7ffcdaa328e0)
@@ -1460,6 +1463,9 @@ regular file:
 	- stacking header:(7)::<address>(0x7ffcdaa32980)
 	- stacking header:(8)::<address>(0x7ffcdaa329a0)
 	- stacking header:(9)::<address>(0x7ffcdaa329c0)
+<<<<<<< HEAD
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+=======
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 
@@ -1527,8 +1533,13 @@ punch.
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
 <<<<<<< HEAD
+<<<<<<< HEAD
 	need help solving this
 	[ simple x computation: type:[char]: len:22 vowels:16 consonants:6 special:0 ]
+=======
+	just like stringing magick
+	[ simple x computation: type:[char]: len:26 vowels:19 consonants:7 special:0 ]
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 =======
 	just like stringing magick
 	[ simple x computation: type:[char]: len:26 vowels:19 consonants:7 special:0 ]
@@ -1538,8 +1549,13 @@ punch.
 
 -:: finished x computation.
 <<<<<<< HEAD
+<<<<<<< HEAD
 *string_next_logic() :: ssh: "need help solving this".
 	- HMAC string :: *string_next_logic() ::  (need help solving this) is >> 
+=======
+*string_next_logic() :: ssh: "just like stringing magick".
+	- HMAC string :: *string_next_logic() ::  (just like stringing magick) is >> 
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 =======
 *string_next_logic() :: ssh: "just like stringing magick".
 	- HMAC string :: *string_next_logic() ::  (just like stringing magick) is >> 
@@ -1554,22 +1570,32 @@ punch.
 	~:: preparing transponder.
 ~:: transponder -> prep()
 <<<<<<< HEAD
+<<<<<<< HEAD
 (debug) word :: need
 (debug) word :: help
 (debug) word :: solving
 (debug) word :: this
 =======
+=======
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 (debug) word :: just
 (debug) word :: like
 (debug) word :: stringing
 (debug) word :: magick
+<<<<<<< HEAD
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+=======
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 ~:: (debug)::nrOfWords = 4.
 ~:: (debug)::counter = 4.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 (debug) calling prepare_ints() (from) -> "need help solving this".
+=======
+(debug) calling prepare_ints() (from) -> "just like stringing magick".
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 =======
 (debug) calling prepare_ints() (from) -> "just like stringing magick".
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
@@ -1579,20 +1605,27 @@ punch.
 
 ~:: intvars int_occurences[] ::~
 <<<<<<< HEAD
+<<<<<<< HEAD
 (debug) 0) need :: #183
 (debug) 1) help :: #76
 (debug) 2) solving :: #6209
 (debug) 3) this :: #12
 =======
+=======
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 (debug) 0) just :: #109
 (debug) 1) like :: #96
 (debug) 2) stringing :: #-1
 (debug) 3) magick :: #-2
+<<<<<<< HEAD
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+=======
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 ~:: meta queries ~:: storing meta query sequence ~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
+<<<<<<< HEAD
 <<<<<<< HEAD
 	- 183	- 76	- 6209	- 12
 
@@ -1609,10 +1642,20 @@ punch.
 ~:: meta queries ~:: reverse_meta_query_lookup("109,96,-1,-2,") ~:::~
 
 ~:: reverse meta query lookup: 
+=======
+	- 109	- 96	- -1	- -2
+
+~:: meta queries ~:: reverse_meta_query_lookup("109,96,-1,-2,") ~:::~
+
+~:: reverse meta query lookup: 
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 	- just		 --> *(a+i) = 109 - *(a+i) - 1 = 108
 	- like		 --> *(a+i) = 96 - *(a+i) - 1 = 95
 (skipped unregistered entry)
 (skipped unregistered entry)
+<<<<<<< HEAD
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+=======
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 (EOT)
@@ -1626,6 +1669,7 @@ punch.
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/test
 	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
 ~:: parameter request: test().
@@ -1633,6 +1677,76 @@ punch.
 =======
 	just like stringing magic
 	[ simple x computation: type:[char]: len:25 vowels:18 consonants:7 special:0 ]
+=======
+	just like stringing magic
+	[ simple x computation: type:[char]: len:25 vowels:18 consonants:7 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "just like stringing magic".
+	- HMAC string :: *string_next_logic() ::  (just like stringing magic) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 4
+		* length: 25
+		* vowels: 7
+		* consonants: 15
+		* numbers: 0
+		* special chars: 3
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- (!) -- abnormal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: (just like stringing magic)
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (8) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 [ -- you're asking my input -- ]
 
@@ -1763,4 +1877,7 @@ b_string:
 
    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
 ~:: transponder -> prepTr()
+<<<<<<< HEAD
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+=======
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f

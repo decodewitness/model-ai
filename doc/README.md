@@ -1491,6 +1491,7 @@ regular file:
 
 ~:: stacking headers/modules ::~
 <<<<<<< HEAD
+<<<<<<< HEAD
 	- stacking header:(0)::<address>(0x7ffc4ba0db10)
 	- stacking header:(1)::<address>(0x7ffc4ba0db30)
 	- stacking header:(2)::<address>(0x7ffc4ba0db50)
@@ -1502,6 +1503,8 @@ regular file:
 	- stacking header:(8)::<address>(0x7ffc4ba0dc10)
 	- stacking header:(9)::<address>(0x7ffc4ba0dc30)
 =======
+=======
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 	- stacking header:(0)::<address>(0x7ffcdaa328a0)
 	- stacking header:(1)::<address>(0x7ffcdaa328c0)
 	- stacking header:(2)::<address>(0x7ffcdaa328e0)
@@ -1512,6 +1515,9 @@ regular file:
 	- stacking header:(7)::<address>(0x7ffcdaa32980)
 	- stacking header:(8)::<address>(0x7ffcdaa329a0)
 	- stacking header:(9)::<address>(0x7ffcdaa329c0)
+<<<<<<< HEAD
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+=======
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 
@@ -1559,6 +1565,7 @@ regular file:
 
 ~:: stats() function:
 <<<<<<< HEAD
+<<<<<<< HEAD
 regular file: -- ./module_bay
 
 ~:: stats() function:
@@ -1570,6 +1577,8 @@ regular file: -- ./DCIM
 ~:: stats() function:
 regular file: -- ./info.txt
 =======
+=======
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 file or directory: -- ./module_bay
 
 ~:: stats() function:
@@ -1580,6 +1589,9 @@ file or directory: -- ./DCIM
 
 ~:: stats() function:
 file or directory: -- ./info.txt
+<<<<<<< HEAD
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+=======
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 
@@ -1591,6 +1603,7 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
+<<<<<<< HEAD
 <<<<<<< HEAD
 	/test
 	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
@@ -1697,6 +1710,8 @@ new meta : 3198,235,2935
 new meta : -1
 new meta : 5320
 =======
+=======
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 	just like stringing magick
 	[ simple x computation: type:[char]: len:26 vowels:19 consonants:7 special:0 ]
 
@@ -1884,6 +1899,9 @@ b_string:
 
    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
 ~:: transponder -> prepTr()
+<<<<<<< HEAD
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+=======
 >>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
