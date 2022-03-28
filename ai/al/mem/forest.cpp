@@ -30,6 +30,6 @@ Forest::Forest() {  // constructor
 Forest::~Forest() { // destructor
     std::cout << "\t-:: deleting tree." << std::endl;
     for (int i=0; i<maximum_trees; i++) {
-        delete this->trees[i];
+        //delete this->trees[i];
     }
 }

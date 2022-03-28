@@ -376,7 +376,9 @@ public:
 	void printEntityCount();
 	void printObjectCount();
 
+	// meta queries
 	void testA();
+	void clearQue();
 };
 
 #endif

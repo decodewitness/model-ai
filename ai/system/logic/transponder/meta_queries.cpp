@@ -227,6 +227,12 @@ void reverse_meta(std::vector<int> numbers) { // looks up the words for the numb
 
     dict_in.close();
 };
+
+void clear_que() {
+    std::cout << "\t~:: clearing buffer." << std::endl;
+    unlink(meta_query_path.c_str());
+    std::cout << std::endl << "\t~:: cleared buffer / meta queries." << std::endl;
+}
         // alloca = *it;
 
         // while (dict_in >> word) {

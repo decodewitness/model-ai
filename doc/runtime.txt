@@ -1,5 +1,5 @@
 
-ARG: 123231
+ARG: 137485
 
 ~:: how many queries to run? : 
 	** ][][ **
@@ -1438,35 +1438,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-<<<<<<< HEAD
-<<<<<<< HEAD
-	- stacking header:(0)::<address>(0x7ffc4ba0db10)
-	- stacking header:(1)::<address>(0x7ffc4ba0db30)
-	- stacking header:(2)::<address>(0x7ffc4ba0db50)
-	- stacking header:(3)::<address>(0x7ffc4ba0db70)
-	- stacking header:(4)::<address>(0x7ffc4ba0db90)
-	- stacking header:(5)::<address>(0x7ffc4ba0dbb0)
-	- stacking header:(6)::<address>(0x7ffc4ba0dbd0)
-	- stacking header:(7)::<address>(0x7ffc4ba0dbf0)
-	- stacking header:(8)::<address>(0x7ffc4ba0dc10)
-	- stacking header:(9)::<address>(0x7ffc4ba0dc30)
-=======
-=======
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
-	- stacking header:(0)::<address>(0x7ffcdaa328a0)
-	- stacking header:(1)::<address>(0x7ffcdaa328c0)
-	- stacking header:(2)::<address>(0x7ffcdaa328e0)
-	- stacking header:(3)::<address>(0x7ffcdaa32900)
-	- stacking header:(4)::<address>(0x7ffcdaa32920)
-	- stacking header:(5)::<address>(0x7ffcdaa32940)
-	- stacking header:(6)::<address>(0x7ffcdaa32960)
-	- stacking header:(7)::<address>(0x7ffcdaa32980)
-	- stacking header:(8)::<address>(0x7ffcdaa329a0)
-	- stacking header:(9)::<address>(0x7ffcdaa329c0)
-<<<<<<< HEAD
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
-=======
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+	- stacking header:(0)::<address>(0x7ffcffb59630)
+	- stacking header:(1)::<address>(0x7ffcffb59650)
+	- stacking header:(2)::<address>(0x7ffcffb59670)
+	- stacking header:(3)::<address>(0x7ffcffb59690)
+	- stacking header:(4)::<address>(0x7ffcffb596b0)
+	- stacking header:(5)::<address>(0x7ffcffb596d0)
+	- stacking header:(6)::<address>(0x7ffcffb596f0)
+	- stacking header:(7)::<address>(0x7ffcffb59710)
+	- stacking header:(8)::<address>(0x7ffcffb59730)
+	- stacking header:(9)::<address>(0x7ffcffb59750)
 
 
 -:: checking AI functions.
@@ -1512,21 +1493,6 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-<<<<<<< HEAD
-<<<<<<< HEAD
-regular file: -- ./module_bay
-
-~:: stats() function:
-regular file: -- ./downloads
-
-~:: stats() function:
-regular file: -- ./DCIM
-
-~:: stats() function:
-regular file: -- ./info.txt
-=======
-=======
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 file or directory: -- ./module_bay
 
 ~:: stats() function:
@@ -1537,10 +1503,6 @@ file or directory: -- ./DCIM
 
 ~:: stats() function:
 file or directory: -- ./info.txt
-<<<<<<< HEAD
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
-=======
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 
 ~:: running (10) queries.
@@ -1551,123 +1513,14 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-<<<<<<< HEAD
-<<<<<<< HEAD
-	/test
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: parameter request: test().
- ]
-
--:: finished x computation.
-
-~:: readMetaQueries() :
-mq : 12
-mq : 8
-mq : 1
-mq : 27
-mq : 1567
-1429
-mq : 12
-mq : 2548
-235
-mq : 12
-mq : 1139
-mq : 2
-mq : 2548
-3198
-mq : 8
-mq : 39
-mq : 305
-3198
-mq : 6
-mq : 12
-mq : 1139
-mq : 2
-mq : 3391
-3198
-24
-mq : 235
-mq : 2
-mq : 2548
-3198
-mq : 235
-mq : 2935
--1
-5320
-
-n : 24
-numbers: 12
-numbers: 8
-numbers: 1
-numbers: 27
-numbers: 1567
-numbers: 12
-numbers: 2548
-numbers: 12
-numbers: 1139
-numbers: 2
-numbers: 2548
-numbers: 8
-numbers: 39
-numbers: 305
-numbers: 6
-numbers: 12
-numbers: 1139
-numbers: 2
-numbers: 3391
-numbers: 235
-numbers: 2
-numbers: 2548
-numbers: 235
-numbers: 2935
-
-~:: reverse_meta() :
-vector : 12 12
-vector : 8 8
-vector : 1 1
-vector : 27 27
-vector : 1567 1567
-vector : 12 12
-vector : 2548 2548
-vector : 12 12
-vector : 1139 1139
-vector : 2 2
-vector : 2548 2548
-vector : 8 8
-vector : 39 39
-vector : 305 305
-vector : 6 6
-vector : 12 12
-vector : 1139 1139
-vector : 2 2
-vector : 3391 3391
-vector : 235 235
-vector : 2 2
-vector : 2548 2548
-vector : 235 235
-vector : 2935 2935
-
-new meta : 12,8,1,27,1567
-new meta : 1429,12,2548
-new meta : 235,12,1139,2,2548
-new meta : 3198,8,39,305
-new meta : 3198,6,12,1139,2,3391
-new meta : 3198
-new meta : 24,235,2,2548
-new meta : 3198,235,2935
-new meta : -1
-new meta : 5320
-=======
-=======
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
-	just like stringing magick
-	[ simple x computation: type:[char]: len:26 vowels:19 consonants:7 special:0 ]
+	type one query
+	[ simple x computation: type:[char]: len:14 vowels:9 consonants:5 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "just like stringing magick".
-	- HMAC string :: *string_next_logic() ::  (just like stringing magick) is >> 
+*string_next_logic() :: ssh: "type one query".
+	- HMAC string :: *string_next_logic() ::  (type one query) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
@@ -1677,37 +1530,34 @@ new meta : 5320
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 ~:: transponder -> prep()
-(debug) word :: just
-(debug) word :: like
-(debug) word :: stringing
-(debug) word :: magick
+(debug) word :: type
+(debug) word :: one
+(debug) word :: query
 
-~:: (debug)::nrOfWords = 4.
-~:: (debug)::counter = 4.
+~:: (debug)::nrOfWords = 3.
+~:: (debug)::counter = 3.
 
-(debug) calling prepare_ints() (from) -> "just like stringing magick".
+(debug) calling prepare_ints() (from) -> "type one query".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (2).
+~:: (debug) number of matching occurences: (3).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) just :: #109
-(debug) 1) like :: #96
-(debug) 2) stringing :: #-1
-(debug) 3) magick :: #-2
+(debug) 0) type :: #235
+(debug) 1) one :: #45
+(debug) 2) query :: #2548
 
 ~:: meta queries ~:: storing meta query sequence ~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 109	- 96	- -1	- -2
+	- 235	- 45	- 2548
 
-~:: meta queries ~:: reverse_meta_query_lookup("109,96,-1,-2,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("235,45,2548,") ~:::~
 
 ~:: reverse meta query lookup: 
-	- just		 --> *(a+i) = 109 - *(a+i) - 1 = 108
-	- like		 --> *(a+i) = 96 - *(a+i) - 1 = 95
-(skipped unregistered entry)
-(skipped unregistered entry)
+	- type		 --> *(a+i) = 235 - *(a+i) - 1 = 234
+	- one		 --> *(a+i) = 45 - *(a+i) - 1 = 44
+	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
 
 (EOT)
 
@@ -1719,14 +1569,14 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	just like stringing magic
-	[ simple x computation: type:[char]: len:25 vowels:18 consonants:7 special:0 ]
+	another line of text
+	[ simple x computation: type:[char]: len:20 vowels:13 consonants:7 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "just like stringing magic".
-	- HMAC string :: *string_next_logic() ::  (just like stringing magic) is >> 
+*string_next_logic() :: ssh: "another line of text".
+	- HMAC string :: *string_next_logic() ::  (another line of text) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
@@ -1742,12 +1592,12 @@ punch.
 
 	-----------------
 
-		* words no_#: 4
-		* length: 25
-		* vowels: 7
-		* consonants: 15
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
 		* numbers: 0
-		* special chars: 3
+		* special chars: 0
 		* unknown chars: 0
 
 
@@ -1763,13 +1613,13 @@ punch.
 
 (score): 0
 
-~:: (debug) -- (!) -- abnormal query!
+~:: (debug) -- normal query!
 
 ~:: (debug) - answers processed: 5
 
 ~:: transponder -> answer()
 
-+query :: (just like stringing magic)
++query :: ()
 
 -- answer:
 	"5","trivia_logic","transponder is not active yet.";
@@ -1785,69 +1635,528 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+	something else
+	[ simple x computation: type:[char]: len:14 vowels:9 consonants:5 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "logic".
-	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+*string_next_logic() :: ssh: "something else".
+	- HMAC string :: *string_next_logic() ::  (something else) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
-(debug) hit search function.
-	search1 : logic
-	search2 : logic
-	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
-
-sorter():
-{ ai/brain/data/logic.dat }
-- opening: ai/brain/data/logic.dat.
-	- ai/brain/data/logic.dat : is open.
-		-- :: ( logical assembly, model-ai. )
-
-sorted: ai/brain/data/logic.dat
-~:: file_access()
-(debug) file_access(level=7).
-
-	<<<
-
-- opened "ai/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-TMP: logic
-~:: found index [logic].
-:::_]{ (logical ways to infer reason.)
-:::_]{ (a logical standard for conventions of proceeding with thinking.)
-(!) omitted empty line.
-(debug) file_access().
-~:: file_access()
-(debug) file_access(level=8).
-~:: closed file "ai/brain/nlp/intelligence/intelligence".
-
-- adding (2) weights.
-
-[]:: ai/brain/data/logic.dat
-~:: resonate_index::match found on line: (6).
-~:: done.
-
-b_string:
-!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
-	~:: query matches search string: "logic".
-
--* logic is:
-   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-
-   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
 ~:: transponder -> prepTr()
-<<<<<<< HEAD
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
-=======
->>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- normal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: ()
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (7) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	make the transponder active
+	[ simple x computation: type:[char]: len:27 vowels:18 consonants:9 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "make the transponder active".
+	- HMAC string :: *string_next_logic() ::  (make the transponder active) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- normal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: ()
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (6) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	trying to run the full batch
+	[ simple x computation: type:[char]: len:28 vowels:22 consonants:6 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "trying to run the full batch".
+	- HMAC string :: *string_next_logic() ::  (trying to run the full batch) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- normal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: ()
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (5) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	seems like this functions
+	[ simple x computation: type:[char]: len:25 vowels:17 consonants:8 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "seems like this functions".
+	- HMAC string :: *string_next_logic() ::  (seems like this functions) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- normal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: ()
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (4) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	another three queries
+	[ simple x computation: type:[char]: len:21 vowels:12 consonants:9 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "another three queries".
+	- HMAC string :: *string_next_logic() ::  (another three queries) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- normal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: ()
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (3) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/test
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: test().
+ ]
+
+-:: finished x computation.
+
+~:: readMetaQueries() :
+mq : 24
+mq : 235
+mq : 2
+mq : 3198
+589
+mq : 27
+235
+mq : 45
+mq : 2548
+
+n : 7
+numbers: 24
+numbers: 235
+numbers: 2
+numbers: 3198
+numbers: 27
+numbers: 45
+numbers: 2548
+
+~:: reverse_meta() :
+vector : 24 24
+LINE:::your
+
+vector : 235 235
+LINE:::type
+
+vector : 2 2
+LINE:::of
+
+vector : 3198 3198
+LINE:::logic
+
+vector : 27 27
+LINE:::new
+
+vector : 45 45
+LINE:::one
+
+vector : 2548 2548
+LINE:::query
+
+
+~:: running (2) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	seems like it doesn't get all the queries
+	[ simple x computation: type:[char]: len:41 vowels:26 consonants:14 special:1 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "seems like it doesn't get all the queries".
+	- HMAC string :: *string_next_logic() ::  (seems like it doesn't get all the queries) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- normal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: ()
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (1) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/test
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: test().
+ ]
+
+-:: finished x computation.
+
+~:: readMetaQueries() :
+mq : 24
+mq : 235
+mq : 2
+mq : 3198
+589
+mq : 27
+235
+mq : 45
+mq : 2548
+
+n : 7
+numbers: 24
+numbers: 235
+numbers: 2
+numbers: 3198
+numbers: 27
+numbers: 45
+numbers: 2548
+
+~:: reverse_meta() :
+vector : 24 24
+LINE:::your
+
+vector : 235 235
+LINE:::type
+
+vector : 2 2
+LINE:::of
+
+vector : 3198 3198
+LINE:::logic
+
+vector : 27 27
+LINE:::new
+
+vector : 45 45
+LINE:::one
+
+vector : 2548 2548
+LINE:::query
+
+
+-:: aborting artificial life sequence, and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled  .
+
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
+
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+		(-  ||  -)
+
+
+::=> saving grace (routine) and closing libraries <=::
+
+-:: closing files.
+-:: cleaning memory.
+~:: closed access.
+
+-:: calling destructor for AI::Model.
+-:: done.

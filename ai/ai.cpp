@@ -791,7 +791,7 @@ void AI::tsp(std::string s) {	// transponder function
 		this->prepTransponder(s);
 	} else if (this->trans == true) {
 		std::cout << "~:: transponder -> prepTr()" << std::endl;
-		this->transponder->prepTr(s);
+		//this->transponder->prepTr(s);
 		std::cout << "(debug) after this query." << std::endl;
 	}
 
@@ -809,7 +809,7 @@ void AI::tsp(std::string s) {	// transponder function
 	// sleep(2);
 
 	// delete transponder
-	delete this->transponder;
+	//delete this->transponder;
 };
 
 void AI::decouple() {	// decoupler routine for the ai model
@@ -1201,9 +1201,13 @@ void AI::query() {	// respond to logical query method
 		isMenu = false;
 	} else if (isTest == true) {
 		this->testA();
+		isTest = false;
+	} else if (isClearQue == true) {
+		this->clearQue();
+		isClearQue = false;
 	}
-	
-	// DEFAULT TO LOGIC
+
+	// DEFAULTS TO THIS LOGIC
 	if (isLogic == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
 		// this->assembleBrain();
 		this->brain->useBrain(query_string);
@@ -1445,7 +1449,7 @@ void AI::constr() {	// creates Construct class instance
 	this->construct->preprocess();
 
 	// don't forget to delete construct
-	delete this->construct;
+	//delete this->construct;
 };
 
 // allocate
@@ -1513,7 +1517,7 @@ void AI::deallocate() {	// deallocates "dd" data object
 	std::cout << "~:: deallocate:" << std::endl;
 
 	if (this->ddLck == true) {
-		delete this->dd;
+		//delete this->dd;
 		this->ddLck = false;
 		std::cout << "\t~:: data (dd) deallocated." << std::endl;
 	}
@@ -1527,7 +1531,7 @@ void AI::deallocatData(int pipeline) {	// deallocates Data pipeline "d1" or "d2"
 		case 1:	// deallocate to pipeline "d1"
 			if (d1Lck == true) {
 				// do logic
-				delete this->d1;
+				//delete this->d1;
 				this->d1Lck = false;
 				std::cout << "\t~:: data (d2) deallocated." << std::endl;
 			}
@@ -1536,7 +1540,7 @@ void AI::deallocatData(int pipeline) {	// deallocates Data pipeline "d1" or "d2"
 		case 2: // deallocate to pipeline "d2"
 			if (d2Lck == true) {
 				// do logic
-				delete this->d2;
+				//delete this->d2;
 				this->d2Lck = false;
 				std::cout << "\t~:: data (d2) deallocated." << std::endl;
 			}
@@ -1566,7 +1570,7 @@ void AI::sim_stats() {
 
 void AI::stopSim() {
 	std::cout << "~:: deleting simulation." << std::endl << std::endl;
-	delete this->simulation;
+	//delete this->simulation;
 };
 
 void AI::listEntity() {
@@ -2004,6 +2008,7 @@ void AI::menu() {
 	drawMenu();
 }
 
+// meta queries
 void AI::readMetaQue() {
 	readMetaQueries(true);
 }
@@ -2011,6 +2016,11 @@ void AI::readMetaQue() {
 void AI::testA() {
 	this->readMetaQue();
 }
+
+void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIES"
+	clear_que();
+}
+
 
 #endif
 // eof

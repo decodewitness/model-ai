@@ -169,6 +169,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/test") == false) {
         std::cout << std::endl << "~:: parameter request: test()." << std::endl;
         isTest = true;
+    } else if (str.compare("/clear_metas") == false) {
+        std::cout << std::endl << "~:: parameter request: clear_que()." << std::endl;
+        isClearQue = true;
     }
 };
 

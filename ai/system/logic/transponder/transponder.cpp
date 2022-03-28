@@ -360,7 +360,7 @@ std::string Transponder::answer(std::string s) {
     } else if (isExclamation == true) {
         std::cout << "~:: (debug) query was exclamation: ('!')" << std::endl;
     } else {
-        std::cout << "~:: (debug) -- (!) -- abnormal query!" << std::endl;
+        std::cout << "~:: (debug) -- normal query!" << std::endl;
     }
 
     std::cout << std::endl << "~:: (debug) - answers processed: " << answers_processed << std::endl;
