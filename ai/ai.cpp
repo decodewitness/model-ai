@@ -2033,5 +2033,6 @@ void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIE
 void AI::whatHaveYouGot() {
 	whatHaveYou();
 }
+
 #endif
 // eof
