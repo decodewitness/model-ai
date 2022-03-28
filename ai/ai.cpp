@@ -792,6 +792,7 @@ void AI::tsp(std::string s) {	// transponder function
 	} else if (this->trans == true) {
 		std::cout << "~:: transponder -> prepTr()" << std::endl;
 		this->transponder->prepTr(s);
+		std::cout << "(debug) after this query." << std::endl;
 	}
 
 	// prep new transponder
@@ -1198,6 +1199,8 @@ void AI::query() {	// respond to logical query method
 	} else if (isMenu == true) {
 		this->menu();
 		isMenu = false;
+	} else if (isTest == true) {
+		this->testA();
 	}
 	
 	// DEFAULT TO LOGIC
@@ -1999,6 +2002,14 @@ void AI::run_tube(std::string url) {
 
 void AI::menu() {
 	drawMenu();
+}
+
+void AI::readMetaQue() {
+	readMetaQueries(true);
+}
+
+void AI::testA() {
+	this->readMetaQue();
 }
 
 #endif

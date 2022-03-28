@@ -46,4 +46,5 @@ bool isToggleAudio=false;
 bool isNewCred=false;
 bool isListCred=false;
 bool isMenu=false;
+bool isTest=false;
 // eof

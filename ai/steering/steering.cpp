@@ -49,10 +49,9 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	//////////////////////////////////////////////
 				// functions go here else will run the default model with methods of interpreting: //
 	//ai.menu();
-
+	// ai.readMetaQue();
 	//////////////////////////////////////////////
 	// TESTING :: end of testing!
-
 	// end of Ai model-Ai run cycle and decouple with: "ai.decouple();"
 	ai.decouple();	// decouples all living functions of the Ai model for shutdown sequence which gets initiated
 return 0;

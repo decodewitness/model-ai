@@ -166,6 +166,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/menu") == false) {
         std::cout << std::endl << "~:: parameter request: menu()." << std::endl;
         isMenu = true;
+    } else if (str.compare("/test") == false) {
+        std::cout << std::endl << "~:: parameter request: test()." << std::endl;
+        isTest = true;
     }
 };
 

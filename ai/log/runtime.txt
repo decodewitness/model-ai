@@ -1438,16 +1438,29 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc1f3f6ce0)
-	- stacking header:(1)::<address>(0x7ffc1f3f6d00)
-	- stacking header:(2)::<address>(0x7ffc1f3f6d20)
-	- stacking header:(3)::<address>(0x7ffc1f3f6d40)
-	- stacking header:(4)::<address>(0x7ffc1f3f6d60)
-	- stacking header:(5)::<address>(0x7ffc1f3f6d80)
-	- stacking header:(6)::<address>(0x7ffc1f3f6da0)
-	- stacking header:(7)::<address>(0x7ffc1f3f6dc0)
-	- stacking header:(8)::<address>(0x7ffc1f3f6de0)
-	- stacking header:(9)::<address>(0x7ffc1f3f6e00)
+<<<<<<< HEAD
+	- stacking header:(0)::<address>(0x7ffd3299bc20)
+	- stacking header:(1)::<address>(0x7ffd3299bc40)
+	- stacking header:(2)::<address>(0x7ffd3299bc60)
+	- stacking header:(3)::<address>(0x7ffd3299bc80)
+	- stacking header:(4)::<address>(0x7ffd3299bca0)
+	- stacking header:(5)::<address>(0x7ffd3299bcc0)
+	- stacking header:(6)::<address>(0x7ffd3299bce0)
+	- stacking header:(7)::<address>(0x7ffd3299bd00)
+	- stacking header:(8)::<address>(0x7ffd3299bd20)
+	- stacking header:(9)::<address>(0x7ffd3299bd40)
+=======
+	- stacking header:(0)::<address>(0x7ffcdaa328a0)
+	- stacking header:(1)::<address>(0x7ffcdaa328c0)
+	- stacking header:(2)::<address>(0x7ffcdaa328e0)
+	- stacking header:(3)::<address>(0x7ffcdaa32900)
+	- stacking header:(4)::<address>(0x7ffcdaa32920)
+	- stacking header:(5)::<address>(0x7ffcdaa32940)
+	- stacking header:(6)::<address>(0x7ffcdaa32960)
+	- stacking header:(7)::<address>(0x7ffcdaa32980)
+	- stacking header:(8)::<address>(0x7ffcdaa329a0)
+	- stacking header:(9)::<address>(0x7ffcdaa329c0)
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 
 -:: checking AI functions.
@@ -1513,14 +1526,24 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	this is the new string
-	[ simple x computation: type:[char]: len:22 vowels:17 consonants:5 special:0 ]
+<<<<<<< HEAD
+	need help solving this
+	[ simple x computation: type:[char]: len:22 vowels:16 consonants:6 special:0 ]
+=======
+	just like stringing magick
+	[ simple x computation: type:[char]: len:26 vowels:19 consonants:7 special:0 ]
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "this is the new string".
-	- HMAC string :: *string_next_logic() ::  (this is the new string) is >> 
+<<<<<<< HEAD
+*string_next_logic() :: ssh: "need help solving this".
+	- HMAC string :: *string_next_logic() ::  (need help solving this) is >> 
+=======
+*string_next_logic() :: ssh: "just like stringing magick".
+	- HMAC string :: *string_next_logic() ::  (just like stringing magick) is >> 
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 ~:: file_access()
 (debug) file_access(level=0).
 
@@ -1530,40 +1553,67 @@ punch.
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 ~:: transponder -> prep()
+<<<<<<< HEAD
+(debug) word :: need
+(debug) word :: help
+(debug) word :: solving
 (debug) word :: this
-(debug) word :: is
-(debug) word :: the
-(debug) word :: new
-(debug) word :: string
+=======
+(debug) word :: just
+(debug) word :: like
+(debug) word :: stringing
+(debug) word :: magick
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
-~:: (debug)::nrOfWords = 5.
-~:: (debug)::counter = 5.
+~:: (debug)::nrOfWords = 4.
+~:: (debug)::counter = 4.
 
-(debug) calling prepare_ints() (from) -> "this is the new string".
+<<<<<<< HEAD
+(debug) calling prepare_ints() (from) -> "need help solving this".
+=======
+(debug) calling prepare_ints() (from) -> "just like stringing magick".
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (4).
+~:: (debug) number of matching occurences: (2).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) this :: #12
-(debug) 1) is :: #8
-(debug) 2) the :: #1
-(debug) 3) new :: #27
-(debug) 4) string :: #1567
+<<<<<<< HEAD
+(debug) 0) need :: #183
+(debug) 1) help :: #76
+(debug) 2) solving :: #6209
+(debug) 3) this :: #12
+=======
+(debug) 0) just :: #109
+(debug) 1) like :: #96
+(debug) 2) stringing :: #-1
+(debug) 3) magick :: #-2
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 ~:: meta queries ~:: storing meta query sequence ~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 12	- 8	- 1	- 27	- 1567
+<<<<<<< HEAD
+	- 183	- 76	- 6209	- 12
 
-~:: meta queries ~:: reverse_meta_query_lookup("12,8,1,27,1567,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("183,76,6209,12,") ~:::~
 
 ~:: reverse meta query lookup: 
+	- need		 --> *(a+i) = 183 - *(a+i) - 1 = 182
+	- help		 --> *(a+i) = 76 - *(a+i) - 1 = 75
+	- solving		 --> *(a+i) = 6209 - *(a+i) - 1 = 6208
 	- this		 --> *(a+i) = 12 - *(a+i) - 1 = 11
-	- is		 --> *(a+i) = 8 - *(a+i) - 1 = 7
-	- the		 --> *(a+i) = 1 - *(a+i) - 1 = 0
-	- new		 --> *(a+i) = 27 - *(a+i) - 1 = 26
-	- string		 --> *(a+i) = 1567 - *(a+i) - 1 = 1566
+=======
+	- 109	- 96	- -1	- -2
+
+~:: meta queries ~:: reverse_meta_query_lookup("109,96,-1,-2,") ~:::~
+
+~:: reverse meta query lookup: 
+	- just		 --> *(a+i) = 109 - *(a+i) - 1 = 108
+	- like		 --> *(a+i) = 96 - *(a+i) - 1 = 95
+(skipped unregistered entry)
+(skipped unregistered entry)
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
 
 (EOT)
 
@@ -1575,42 +1625,118 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+<<<<<<< HEAD
+	/test
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: test().
+ ]
+=======
+	just like stringing magic
+	[ simple x computation: type:[char]: len:25 vowels:18 consonants:7 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "logic".
-	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+*string_next_logic() :: ssh: "just like stringing magic".
+	- HMAC string :: *string_next_logic() ::  (just like stringing magic) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
-(debug) hit search function.
-	search1 : logic
-	search2 : logic
-	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+~:: transponder -> prepTr()
+(debug) after this query.
 
-sorter():
-{ ai/brain/data/logic.dat }
-- opening: ai/brain/data/logic.dat.
-	- ai/brain/data/logic.dat : is open.
-		-- :: ( logical assembly, model-ai. )
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
 
-sorted: ai/brain/data/logic.dat
-~:: file_access()
-(debug) file_access(level=7).
+	-----------------
 
-	<<<
+		* words no_#: 4
+		* length: 25
+		* vowels: 7
+		* consonants: 15
+		* numbers: 0
+		* special chars: 3
+		* unknown chars: 0
 
-- opened "ai/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
 
-:: artificial intelligence ::
+(debug) answer.
 
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- (!) -- abnormal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: (just like stringing magic)
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (8) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f
+
+-:: finished x computation.
+
+~:: readMetaQueries() :
+mq : 183
+mq : 76
+mq : 6209
+mq : 12
+
+n : 4
+numbers: 183
+numbers: 76
+numbers: 6209
+numbers: 12
+
+~:: reverse_meta() :
+vector : 183 183
+
+LINE:::need
+vector : 76 76
+
+LINE:::help
+vector : 6209 6209
+
+LINE:::solving
+vector : 12 12
+
+<<<<<<< HEAD
+LINE:::this
+
+~:: running (8) queries.
+
+::- type your query -::
+punch.
+=======
 TMP: intelligence
 TMP: logic
 ~:: found index [logic].
@@ -1637,43 +1763,4 @@ b_string:
 
    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
 ~:: transponder -> prepTr()
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 5
-		* vowels: 2
-		* consonants: 3
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-~::!::~ error opening file (Transponder::answer()): "data/files/trivia_logic.txt"
-
-
-~:: (debug) -- (!) -- abnormal query!
-
-~:: (debug) - answers processed: 0
-
-~:: transponder -> answer()
-
-+query :: (logic)
-
--- answer:
-	
-
-
-(EOT)
-
-~:: running (8) queries.
-
-::- type your query -::
-punch.
+>>>>>>> 247d9b4d677f1c27412157eda0de84a554c41d2f

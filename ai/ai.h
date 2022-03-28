@@ -331,6 +331,9 @@ public:
 	// menu
 	void menu();
 
+	// meta queries
+	void readMetaQue();
+
 	// ACCOUNT MGMT
 			// account settings
 	void add_account(float x);
@@ -372,6 +375,8 @@ public:
 	void listAllEO();
 	void printEntityCount();
 	void printObjectCount();
+
+	void testA();
 };
 
 #endif

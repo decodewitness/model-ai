@@ -5,6 +5,8 @@
 #include <string.h>
 #include <fstream>
 #include <unistd.h>
+#include <sstream>
+#include <vector>
 
 std::string reverse_path_handle = "ai/data/files/20k.txt";
 std::string meta_query_path = "ai/lib/queries/meta_queries";
@@ -38,7 +40,7 @@ void store_meta_queries(int a[], int size) {
     std::ofstream met;
     
     if (meta_que == false && met.is_open() == false) {
-        met.open(meta_query_path);
+        met.open(meta_query_path, std::ofstream::app);
         sleep(1);
         if (met.is_open() == true) {
             meta_que = true;
@@ -60,16 +62,13 @@ void store_meta_queries(int a[], int size) {
             std::cout << "\t- " << a[i];
         }
         met << std::endl;
-
         met.close();
     }
-
     sleep(2);
     std::cout << std::endl;
 };
 
 void reverse_meta_query_lookup(int a[], int size) { // looks up the words for the numbers of the meta queries
-
     //std::ifstream met;
     //std::string new_meta;
     //std::string word;
@@ -126,6 +125,197 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
 
     sleep(3);
 };
+
+// std::string readMetaQueries(bool all) {
+
+//     std::string mq;
+//     std::string ourString;
+//     std::ifstream openFile;
+    
+//     openFile.open(meta_query_path);
+
+//     int x;
+//     int mqa[meta_queries];  // meta query array
+//     int sizeElements=0;     // number of used queries
+
+
+//     if (all == true) {
+//         while (getline(openFile, mq)) {
+//             std::cout << "mq : " << mq << std::endl;
+//         }
+//     }
+
+//     openFile.close();
+//     return ourString;
+// };
+
+
+int readMetaQueries(bool all) {
+    std::string mq;
+    std::string number_as_string;
+    std::vector<int> numbers;
+    std::ifstream openFile;
+
+    void reverse_meta(std::vector<int> numbers);
+
+    std::cout << std::endl << "~:: readMetaQueries() :" << std::endl;
+
+    openFile.open(meta_query_path);
+
+    while (getline(openFile, mq, ',')) {
+        std::cout << "mq : " << mq << std::endl;
+        std::istringstream is(mq);
+
+        while (getline(is, number_as_string, ',')) {
+            numbers.push_back(std::stoi(number_as_string));
+        }
+    }
+
+    std::cout << "n : " << numbers.size() << "\n";
+
+    for(auto&& number : numbers)
+    {
+        std::cout << "numbers: " << number << "\n";
+    }
+
+    if (all == true) {
+        reverse_meta(numbers);
+    }
+
+return numbers.size();
+}
+
+// NEED TO FIX THIS FUNCTION
+void reverse_meta(std::vector<int> numbers) { // looks up the words for the numbers of the meta queries
+    std::ifstream met;
+    std::string new_meta;
+    std::string word;
+    std::string ourword;
+    std::ifstream dict_in;
+    std::vector<std::string> vecA;
+    std::string tmp;
+    std::string line;
+
+    int line_counter;
+    int counts = 0;
+    char *our_dict[20000];
+    int alloca;
+    int keyd = 0;
+
+    std::cout << std::endl << "~:: reverse_meta() :" << std::endl;
+
+    int i=0;
+
+    if (dict_in.is_open() == false) {
+        dict_in.open(reverse_path_handle);
+    }
+
+    for(std::vector<int>::iterator it = std::begin(numbers); it != std::end(numbers); ++it) {
+        int metaquery1 = *it;
+        std::cout << "vector : " << *it << " " << metaquery1 << std::endl;
+
+        dict_in.seekg(SEEK_SET);
+        line_counter=0;
+        while (getline (dict_in,line)) {
+            line_counter++;
+            if (line_counter == metaquery1) {
+                std::cout << "LINE:::" << line << std::endl << std::endl;
+                break;
+            }
+        }
+    }
+
+    dict_in.close();
+};
+        // alloca = *it;
+
+        // while (dict_in >> word) {
+        // if (word.compare(vecA.at(i)) == 0) {
+            // std::cout << "HIT ON: " << *it << std::endl;
+        // }
+
+
+        // std::cout << our_dict[alloca - 1];
+        // }
+    // }
+
+    // dict_in.open(reverse_path_handle);
+    //bool fileWasClosed = false;
+
+//     std::cout << std::endl;
+
+//     met.open(meta_query_path);
+    
+//     if (met.is_open() == true) {
+//         while (met >> new_meta) {
+//             std::cout << "new meta : " << new_meta << std::endl;
+//         }
+//     }
+
+//     while (keyd < 20000) {
+//         dict_in >> ourword;
+//         vecA.push_back(ourword);    
+//     }
+    
+//     std::cout << "word: " << word << std::endl;
+
+//     met.close();
+//     dict_in.close();
+// };
+    // std::fstream dict_in;
+    // dict_in.open(reverse_path_handle);
+    // char our_dict[20000][256];
+    // int counts=0;
+    // int keyd=0;
+    // std::string ourword;
+    // //int counter=0, actualnumber=1, limit = 20000;  // size of dictionary
+
+    // std::cout << std::endl;
+    // std::cout << "~:: meta queries ~:: reverse_meta_query_lookup(\"";
+    
+    // for (int i=0; i<size; i++) {
+    //     std::cout << *(a+i) << ",";
+    // }
+
+    // // std::cout << "\b" << (32) << "\b";
+    // std::cout << "\") ~:::~" << std::endl;
+    // std::cout << std::endl;
+
+    // //std::cout << "- (debug) *(a+i) " << std::endl;
+
+    // // std::string word;
+
+    // while (keyd < 20000) {
+    //     dict_in >> ourword;
+                
+    //     // debugging output
+    //     //std::cout << key << ") " << word << std::endl; 
+        
+    //     strncpy(our_dict[counts], ourword.c_str(), 255);
+
+    //     //ints[key] = counter++;
+    //     //std::cout << "(debug) word = \"" << word << "\" - key: (" << key << ")." << std::endl;
+        
+    //     counts++;
+    //     keyd++;
+    // }
+    
+    // std::cout << "~:: reverse meta query lookup: " << std::endl;
+
+    // for (int i=0; i<size; i++) {
+    //     if (*(a+i) > 0) {
+    //         std::cout << "\t- " << our_dict[(*(a+i) - 1)] << "\t\t --> *(a+i) = "  << *(a+i) << " - *(a+i) - 1 = " << (*(a+i) - 1) << std::endl;
+    //     } else {
+    //         std::cout << "(skipped unregistered entry)" << std::endl;
+    //     }
+
+    //     // store_meta_queries;
+    // }
+
+    // sleep(3);
+// };
+
+
     //met.open(reverse_path_handle);
 
     // loop variables along with dict_size and size -> size = size of loopvar of array
