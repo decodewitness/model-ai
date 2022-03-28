@@ -256,6 +256,8 @@ void Transponder::prep(std::string s) { // 's' is the input sentence from "query
             std::cout << "(debug) word :: " << word << std::endl;
             nrOfWords++;
             // at the same time counting words in sentence
+            // THIS WILL OMIT THE SPACE
+                // NEEDS FIX
             strncpy(wordsFromSentence[counter++], word.c_str(), word.length());
         }
     }

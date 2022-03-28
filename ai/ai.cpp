@@ -1213,6 +1213,7 @@ void AI::query() {	// respond to logical query method
 		this->brain->useBrain(query_string);
 		
 		if (this->trans == true && this->transponderIsPrepped == true) {
+			this->prepTransponder(query_string);	// THIS IS REDUNDANT
 			this->tsp(query_string);
 		} else {
 			std::cout << std::endl;
@@ -1220,6 +1221,7 @@ void AI::query() {	// respond to logical query method
 			std::cout << "\t~:: preparing transponder." << std::endl;
 
 			this->prepTransponder(query_string);
+			this->tsp(query_string);
 		}
 		
 		isLogic = false;
