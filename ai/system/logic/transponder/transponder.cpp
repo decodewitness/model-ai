@@ -14,7 +14,7 @@ extern std::string aquestion;
 
 Transponder::Transponder() {
     std::cout << std::endl << "~:: transponder queries." << std::endl;
-    sleep(2);
+    sleep(1);
     // setting both "this->initial_sentence" && "this->subject" here to parameter string, which is the sentence queried to the Transponder
     
     // this->initial_sentence = s;

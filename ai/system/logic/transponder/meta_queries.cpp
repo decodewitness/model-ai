@@ -10,6 +10,9 @@
 
 std::string reverse_path_handle = "ai/data/files/20k.txt";
 std::string meta_query_path = "ai/lib/queries/meta_queries";
+std::string subjectsfile = "ai/lib/queries/subs";
+std::string relations = "ai/lib/queries/relations";
+std::string learn = "ai/lib/queries/learn";
 
 const int dict_size = 20000;    // size of dictionary in "AI/DATA/FILES/20K.TXT"
 
@@ -64,7 +67,7 @@ void store_meta_queries(int a[], int size) {
         met << std::endl;
         met.close();
     }
-    sleep(2);
+    sleep(1);
     std::cout << std::endl;
 };
 
@@ -123,7 +126,7 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
         // store_meta_queries;
     }
 
-    sleep(3);
+    sleep(1);
 };
 
 // std::string readMetaQueries(bool all) {
@@ -232,6 +235,110 @@ void clear_que() {
     std::cout << "\t~:: clearing buffer." << std::endl;
     unlink(meta_query_path.c_str());
     std::cout << std::endl << "\t~:: cleared buffer / meta queries." << std::endl;
+}
+
+void whatHaveYou() {    // return what we have extracted as data
+   
+    void labelSynopsis(bool sy);
+    std::string answer;
+    std::string meta_q;
+    bool synopsis = false;
+    std::ifstream learned;
+    
+    // learned.open(learn);
+
+    std::cout << "label all? (y/n) default is [no] : ";
+    std::cin >> answer;
+
+    if (answer[0] == 'y' || answer[0] == 'y') {
+        std::cout << "(label) all:" << std::endl << "-----" << std::endl;
+        synopsis = false;
+    } else {
+        std::cout << "(label) synopsis:" << std::endl << "-----" << std::endl;
+        synopsis = true;
+    }
+    
+    labelSynopsis(synopsis);
+}
+
+void labelSynopsis(bool sy) {
+    // strings
+    std::string hamstr;
+    
+    // file pointers
+    std::ifstream ifstr;
+    
+    // functions
+    std::string filtersf(std::string f);
+    void relatedMetaQueries(std::string h);
+
+    ifstr.open(learn);
+    std::cout << "synopsis: " << std::endl << std::endl;
+    
+
+    if (ifstr.is_open() == true) {
+        if (sy == false) {
+            while (ifstr >> hamstr) {
+                std::cout << "metasq: " << hamstr << std::endl;
+            }
+        } else {
+            while (ifstr >> hamstr) {
+                std::cout << "metasq:" << filtersf(hamstr) << std::endl;
+                relatedMetaQueries(hamstr);
+            }
+        }
+    }
+}
+
+std::string filtersf(std::string f) {
+    // function
+    std::string subjectsf(std::string s);
+
+    // assign subject
+    std::string x = subjectsf(f);
+
+return x;
+}
+
+
+std::string subjectsf(std::string s) {
+    std::string line = "<unassigned>";
+    std::ifstream subs;
+
+    std::cout << "~:: subjects filter :" << std::endl;
+
+    subs.open(subjectsfile);
+
+    if (subs.is_open() == true) {
+        while (subs >> line) {
+            std::cout << ":: " << line << std::endl;
+            
+
+
+
+
+        }
+        subs.close();
+    }
+
+return line;
+}
+
+void relatedMetaQueries(std::string h) {
+    std::ifstream rel;
+    std::string line;
+    
+    std::cout << std::endl << "- related meta queries:" << std::endl;
+    rel.open(relations);
+
+    if (rel.is_open() == true) {
+        while (rel >> line) {
+            std::cout << "relations : " << line << std::endl;
+        }
+        rel.close();
+    }
+
+    rel.close();
 }
         // alloca = *it;
 

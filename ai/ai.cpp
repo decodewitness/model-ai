@@ -120,6 +120,9 @@ void AI::help(int n=1) {
 	std::cout << "/menu -- will hand you a menu with several options." << std::endl;
 	std::cout << "/passwd -- changes the access code for running the model." << std::endl;
 	std::cout << "/list_cred -- lists the MD5 hash (the access code) from the credentials store." << std::endl;
+	std::cout << "/learned -- lists the added data through learning." << std::endl;
+	std::cout << "/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model." << std::endl;
+	std::cout << "/test -- test the transponder responses." << std::endl;
 
 	// list of arguments
 	std::cout << std::endl;
@@ -1205,6 +1208,9 @@ void AI::query() {	// respond to logical query method
 	} else if (isClearQue == true) {
 		this->clearQue();
 		isClearQue = false;
+	} else if (isWhatHave == true) {
+		this->whatHaveYouGot();
+		isWhatHave = false;
 	}
 
 	// DEFAULTS TO THIS LOGIC
@@ -1958,7 +1964,7 @@ void AI::runSim() {	// sim objects and such go here
 	sleep(1);
 
 	this->sim_stats();
-	sleep(3);
+	sleep(1);
 
 	// this next "stopSim()" should be the last statement in this function
 	this->stopSim();
@@ -2020,9 +2026,12 @@ void AI::testA() {
 }
 
 void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIES"
+	void clear_que();
 	clear_que();
 }
 
-
+void AI::whatHaveYouGot() {
+	whatHaveYou();
+}
 #endif
 // eof

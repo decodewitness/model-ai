@@ -708,6 +708,7 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
         if (b_string.length() > 0) {
             std::cout << std::endl << "b_string:" << std::endl;
             std::cout << "!~ " << b_string << std::endl;
+            sleep(1);
         }
     }
 
@@ -725,6 +726,7 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
         std::cout << line1 << std::endl;
         std::cout << std::endl;
         std::cout << line2 << std::endl;
+        sleep(1);
     }
 
     // return the broad definitions from line2
@@ -756,7 +758,7 @@ void Brain::add_data(std::string h, std::string s, std::string c) {    // adds d
 
     if (this->output.is_open() == true) {
         // adding data
-        sleep(2);
+        sleep(1);
         this->output << std::endl << h << "\t" << s << "\t[" << c << "]" << std::endl << std::endl;
         std::cout << "~:: added data." << std::endl;
     }

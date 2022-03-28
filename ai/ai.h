@@ -379,6 +379,9 @@ public:
 	// meta queries
 	void testA();
 	void clearQue();
+
+	// learned
+	void whatHaveYouGot();
 };
 
 #endif

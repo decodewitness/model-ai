@@ -48,4 +48,5 @@ bool isListCred=false;
 bool isMenu=false;
 bool isTest=false;
 bool isClearQue=false;
+bool isWhatHave=false;
 // eof

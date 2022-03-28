@@ -1438,16 +1438,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff8f50de00)
-	- stacking header:(1)::<address>(0x7fff8f50de20)
-	- stacking header:(2)::<address>(0x7fff8f50de40)
-	- stacking header:(3)::<address>(0x7fff8f50de60)
-	- stacking header:(4)::<address>(0x7fff8f50de80)
-	- stacking header:(5)::<address>(0x7fff8f50dea0)
-	- stacking header:(6)::<address>(0x7fff8f50dec0)
-	- stacking header:(7)::<address>(0x7fff8f50dee0)
-	- stacking header:(8)::<address>(0x7fff8f50df00)
-	- stacking header:(9)::<address>(0x7fff8f50df20)
+	- stacking header:(0)::<address>(0x7fff4bfdc570)
+	- stacking header:(1)::<address>(0x7fff4bfdc590)
+	- stacking header:(2)::<address>(0x7fff4bfdc5b0)
+	- stacking header:(3)::<address>(0x7fff4bfdc5d0)
+	- stacking header:(4)::<address>(0x7fff4bfdc5f0)
+	- stacking header:(5)::<address>(0x7fff4bfdc610)
+	- stacking header:(6)::<address>(0x7fff4bfdc630)
+	- stacking header:(7)::<address>(0x7fff4bfdc650)
+	- stacking header:(8)::<address>(0x7fff4bfdc670)
+	- stacking header:(9)::<address>(0x7fff4bfdc690)
 
 
 -:: checking AI functions.
@@ -1513,94 +1513,10 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	everything prepared
-	[ simple x computation: type:[char]: len:19 vowels:13 consonants:6 special:0 ]
-
-[ -- you're asking my input -- ]
+	/clear_metas
+	[ simple x computation: type:[char]: len:12 vowels:6 consonants:4 special:2  ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "everything prepared".
-	- HMAC string :: *string_next_logic() ::  (everything prepared) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: transponder was not prepared yet.
-	~:: preparing transponder.
-~:: transponder -> prep()
-(debug) word :: everything
-(debug) word :: prepared
-
-~:: (debug)::nrOfWords = 2.
-~:: (debug)::counter = 2.
-
-(debug) calling prepare_ints() (from) -> "everything prepared".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (2).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) everything :: #878
-(debug) 1) prepared :: #2447
-
-~:: meta queries ~:: storing meta query sequence ~::::meta::::~
-	- path: "ai/lib/queries/meta_queries".
-		- meta sequences:
-	- 878	- 2447
-
-~:: meta queries ~:: reverse_meta_query_lookup("878,2447,") ~:::~
-
-~:: reverse meta query lookup: 
-	- everything		 --> *(a+i) = 878 - *(a+i) - 1 = 877
-	- prepared		 --> *(a+i) = 2447 - *(a+i) - 1 = 2446
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 0
-		* vowels: 0
-		* consonants: 0
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-~:: (debug) -- normal query!
-
-~:: (debug) - answers processed: 5
-
-~:: transponder -> answer()
-
-+query :: ()
-
--- answer:
-	"5","trivia_logic","transponder is not active yet.";
-
-
-(EOT)
 
 ~:: running (9) queries.
 
@@ -1610,51 +1526,98 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	need logic for the transponder
-	[ simple x computation: type:[char]: len:30 vowels:21 consonants:9 special:0 ]
+	/clear metas
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:4 special:1 
+~:: parameter request: clear_que().
+ ]
+
+-:: finished x computation.
+	~:: clearing buffer.
+
+	~:: cleared buffer / meta queries.
+
+~:: running (8) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/learned
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
+~:: parameter request: whatHaveYouGot().
+ ]
+
+-:: finished x computation.
+label all? (y/n) default is [no] : (label) synopsis:
+-----
+synopsis: 
+
+metasq:~:: subjects filter :
+:: logic
+:: intelligence
+:: model-ai
+model-ai
+
+- related meta queries:
+relations : 1,10,3,6
+relations : 2,39,500
+relations : 3,1022,13
+
+~:: running (7) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	only inherent logic
+	[ simple x computation: type:[char]: len:19 vowels:13 consonants:6 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "need logic for the transponder".
-	- HMAC string :: *string_next_logic() ::  (need logic for the transponder) is >> 
+*string_next_logic() :: ssh: "only inherent logic".
+	- HMAC string :: *string_next_logic() ::  (only inherent logic) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
+
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
 ~:: transponder -> prep()
-(debug) word :: need
+(debug) word :: only
+(debug) word :: inherent
 (debug) word :: logic
-(debug) word :: for
-(debug) word :: the
-(debug) word :: transponder
 
-~:: (debug)::nrOfWords = 5.
-~:: (debug)::counter = 5.
+~:: (debug)::nrOfWords = 3.
+~:: (debug)::counter = 3.
 
-(debug) calling prepare_ints() (from) -> "need logic for the transponder".
+(debug) calling prepare_ints() (from) -> "only inherent logic".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (3).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) needything :: #-1
-(debug) 1) logicred :: #-2
-(debug) 2) for :: #7
-(debug) 3) the :: #1
-(debug) 4) transponder :: #-3
+(debug) 0) only :: #65
+(debug) 1) inherent :: #10683
+(debug) 2) logic :: #3198
 
+~:: meta queries ~:: storing meta query sequence ~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+		- meta sequences:
+	- 65	- 10683	- 3198
 
-
-~:: meta queries ~:: reverse_meta_query_lookup("-1,-2,7,1,-3,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("65,10683,3198,") ~:::~
 
 ~:: reverse meta query lookup: 
-(skipped unregistered entry)
-(skipped unregistered entry)
-	- for		 --> *(a+i) = 7 - *(a+i) - 1 = 6
-	- the		 --> *(a+i) = 1 - *(a+i) - 1 = 0
-(skipped unregistered entry)
+	- only		 --> *(a+i) = 65 - *(a+i) - 1 = 64
+	- inherent		 --> *(a+i) = 10683 - *(a+i) - 1 = 10682
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1702,7 +1665,7 @@ punch.
 
 (EOT)
 
-~:: running (8) queries.
+~:: running (6) queries.
 
 ::- type your query -::
 punch.
@@ -1780,17 +1743,17 @@ b_string:
 (debug) calling prepare_ints() (from) -> "logic".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (3).
+~:: (debug) number of matching occurences: (4).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) logicthing :: #-1
+(debug) 0) logic :: #3198
 
 
 
-~:: meta queries ~:: reverse_meta_query_lookup("-1,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("3198,") ~:::~
 
 ~:: reverse meta query lookup: 
-(skipped unregistered entry)
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1838,7 +1801,189 @@ b_string:
 
 (EOT)
 
-~:: running (7) queries.
+~:: running (5) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	learned
+	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "learned".
+	- HMAC string :: *string_next_logic() ::  (learned) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+~:: transponder -> prep()
+(debug) word :: learned
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "learned".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (5).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) learned :: #3293
+
+
+
+~:: meta queries ~:: reverse_meta_query_lookup("3293,") ~:::~
+
+~:: reverse meta query lookup: 
+	- learned		 --> *(a+i) = 3293 - *(a+i) - 1 = 3292
+
+(EOT)
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- normal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: ()
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (4) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/learned
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
+~:: parameter request: whatHaveYouGot().
+ ]
+
+-:: finished x computation.
+label all? (y/n) default is [no] : (label) synopsis:
+-----
+synopsis: 
+
+metasq:~:: subjects filter :
+:: logic
+:: intelligence
+:: model-ai
+model-ai
+
+- related meta queries:
+relations : 1,10,3,6
+relations : 2,39,500
+relations : 3,1022,13
+
+~:: running (3) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/help
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: help().
+ ]
+
+-:: finished x computation.
+
+Help Function
+-----
+
+MODEL-AI: v0.1-26b
+Download: https://model-ai.com/archive/model-ai.tar.gz
+
+When the Ai asks you for Logic you can enter a string to trigger natural language processing,
+or you can enter one of the following commands.
+
+COMMANDS:
+-----
+
+
+/help -- triggers this help function.
+/help -- displays version information.
+/killc -- built in killchain(1).
+/bank -- starts accounting.
+/hash -- hashes a string in MD5.
+/curl -- curls a website of choice from your machine.
+/table -- prints the table in numbers of your chosen number.
+/tableto -- prints the table in numbers of your chosen number up to max chosen number.
+/dice -- print a random dice number. (1...6)
+/dice2 -- print a random dice number. (1...nr_of_eyes)
+/stat -- stat() function stats directory/file.
+/cp -- copies file_1 into file_2. (src) -> (dst)
+/rm -- removes a file from the system.
+/+ -- adds 2 numbers.
+/- -- subtracts 2 numbers.
+// -- divides number 1 by number 2.
+/* -- multiplies number 1 by number 2.
+/pow -- does number 1 to power of number 2.
+/punch -- punch in numbers like with a calculator.
+/prpunch -- punch in numbers like with a calculator.
+/simulation -- runs a simulation for enities from the Entity class -&- objects from the Object class.
+/convert -- converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
+/convertd -- converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
+/stepping -- will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
+/rollout -- this function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
+/add_data -- adds data to the logical cabinets manually.
+/convert_data -- converts the data from a file.
+/audio_toggle -- disables/enables the Ai model its sound FX.
+/run_tube -- download YouTube file or playlist.
+/menu -- will hand you a menu with several options.
+/passwd -- changes the access code for running the model.
+/list_cred -- lists the MD5 hash (the access code) from the credentials store.
+/learned -- lists the added data through learning.
+/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model.
+/test -- test the transponder responses.
+
+
+~:: running (2) queries.
 
 ::- type your query -::
 punch.
