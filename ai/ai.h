@@ -377,11 +377,14 @@ public:
 	void printObjectCount();
 
 	// meta queries
-	void testA();
 	void clearQue();
+	void answerMeta(bool b);
 
 	// learned
 	void whatHaveYouGot();
+	
+	// testing
+	void testA();
 };
 
 #endif

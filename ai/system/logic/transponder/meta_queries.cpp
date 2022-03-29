@@ -39,8 +39,8 @@ std::string meta_5; // meta_5 is not used yet
 char meta[meta_queries][meta_query_length];    // [128] meta queries in char format of length [256]
 bool meta_que = false;
 
+// stores meta queries
 void store_meta_queries(int a[], int size) {
-
     std::ofstream met;
     
     if (meta_que == false && met.is_open() == false) {
@@ -72,6 +72,7 @@ void store_meta_queries(int a[], int size) {
     std::cout << std::endl;
 };
 
+// looks up meta queries inside a[]
 void reverse_meta_query_lookup(int a[], int size) { // looks up the words for the numbers of the meta queries
     //std::ifstream met;
     //std::string new_meta;
@@ -153,7 +154,7 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
 //     return ourString;
 // };
 
-
+// reads meta queries
 int readMetaQueries(bool all) {
     std::string mq;
     std::string number_as_string;
@@ -189,7 +190,60 @@ int readMetaQueries(bool all) {
 return numbers.size();
 }
 
-// NEED TO FIX THIS FUNCTION
+// reads ALL meta queries
+int readAllMetaQueries(bool all) {
+
+    int counter=0;
+
+    std::string cvar;
+    std::string mq;
+    std::string number_as_string;
+    std::vector<int> numbers;
+    std::ifstream openFile;
+
+    void reverse_meta(std::vector<int> numbers);
+
+    std::cout << std::endl << "~:: readAllMetaQueries() :" << std::endl;
+
+    openFile.open(meta_query_path);
+    // while (1) {
+        // counter++;  // increase counter to amount to 3 lines read
+
+        // read label first
+        // openFile >> cvar;
+        
+        // GETS THE HEADER FOR EVERY META QUEUE
+        // getline(openFile,cvar);
+        // std::cout << "CVAR: \"" << cvar << "\"" << std::endl;
+
+        // GETS THE NUMBERED SEQUENCE OF EVERY META QUEUE
+    while (getline(openFile, mq, ',')) {
+        std::cout << "mq : " << mq << std::endl;
+        std::istringstream is(mq);
+        // numbers.push_back(std::stoi(mq));
+
+        while (getline(is, number_as_string, ',')) {
+            numbers.push_back(std::stoi(number_as_string));
+        }
+    }
+
+    std::cout << "n : " << numbers.size() << "\n";
+
+    for(auto&& number : numbers)
+    {
+        std::cout << "numbers: " << number << "\n";
+    }
+
+    if (all == true) {
+        reverse_meta(numbers);
+    }
+    // }
+
+return numbers.size();
+}
+
+// reverses meta queries
+    // NEED TO FIX THIS FUNCTION
 void reverse_meta(std::vector<int> numbers) { // looks up the words for the numbers of the meta queries
     std::ifstream met;
     std::string new_meta;
@@ -298,6 +352,7 @@ void labelSynopsis(bool sy) {
     }
 }
 
+// main filter / scrutiny
 std::string filtersf(std::string f) {
     // function
     std::string subjectsf(std::string s);
@@ -308,7 +363,7 @@ std::string filtersf(std::string f) {
 return x;
 }
 
-
+// subjects filter
 std::string subjectsf(std::string s) {
     std::string line = "<unassigned>";
     std::ifstream subs;
@@ -332,6 +387,7 @@ std::string subjectsf(std::string s) {
 return line;
 }
 
+// related meta queries
 void relatedMetaQueries(std::string h) {
     std::ifstream rel;
     std::string line;
@@ -371,6 +427,33 @@ void relatedMetaQueries(std::string h) {
         reverse_meta(vect);
     }
 }
+
+// stores related meta queries in to "ai/lib/queries/relations"
+void store_nr_relation(int nr, int relation) {
+    std::ofstream reldb;
+
+    std::cout << std::endl << "~::store_relation()" << std::endl;
+    reldb.open(relations, std::ofstream::app);
+
+    if (reldb.is_open() == true) {
+        reldb << nr << "," << relation << std::endl;
+        std::cout << "\t~:: stored reference." << std::endl;
+    }
+}
+
+// stores related meta queries in to "ai/lib/queries/relations" too
+void store_string_relation(std::string relation) {
+    std::ofstream reldb;
+
+    std::cout << std::endl << "~::store_relation()" << std::endl;
+    reldb.open(relations, std::ofstream::app);
+
+    if (reldb.is_open() == true) {
+        reldb << relation << std::endl;
+        std::cout << "\t~:: stored reference." << std::endl;
+    }
+}
+
         // alloca = *it;
 
         // while (dict_in >> word) {

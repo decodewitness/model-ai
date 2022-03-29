@@ -1490,16 +1490,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff028cb800)
-	- stacking header:(1)::<address>(0x7fff028cb820)
-	- stacking header:(2)::<address>(0x7fff028cb840)
-	- stacking header:(3)::<address>(0x7fff028cb860)
-	- stacking header:(4)::<address>(0x7fff028cb880)
-	- stacking header:(5)::<address>(0x7fff028cb8a0)
-	- stacking header:(6)::<address>(0x7fff028cb8c0)
-	- stacking header:(7)::<address>(0x7fff028cb8e0)
-	- stacking header:(8)::<address>(0x7fff028cb900)
-	- stacking header:(9)::<address>(0x7fff028cb920)
+	- stacking header:(0)::<address>(0x7ffd45fae560)
+	- stacking header:(1)::<address>(0x7ffd45fae580)
+	- stacking header:(2)::<address>(0x7ffd45fae5a0)
+	- stacking header:(3)::<address>(0x7ffd45fae5c0)
+	- stacking header:(4)::<address>(0x7ffd45fae5e0)
+	- stacking header:(5)::<address>(0x7ffd45fae600)
+	- stacking header:(6)::<address>(0x7ffd45fae620)
+	- stacking header:(7)::<address>(0x7ffd45fae640)
+	- stacking header:(8)::<address>(0x7ffd45fae660)
+	- stacking header:(9)::<address>(0x7ffd45fae680)
 
 
 -:: checking AI functions.
@@ -1545,16 +1545,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-	--directory: -- ./module_bay
+FIFO/pipe: -- ./module_bay
 
 ~:: stats() function:
-	--directory: -- ./downloads
+FIFO/pipe: -- ./downloads
 
 ~:: stats() function:
-	--directory: -- ./DCIM
+FIFO/pipe: -- ./DCIM
 
 ~:: stats() function:
-	--directory: -- ./info.txt
+FIFO/pipe: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1565,175 +1565,34 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/learned
-	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
-~:: parameter request: whatHaveYouGot().
+	/test
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: test().
  ]
 
 -:: finished x computation.
-label all? (y/n) default is [no] : (label) all:
+
+<!> trial rounds in these functions (logged output):
 -----
-synopsis: 
 
-metasq:~:: subjects filter :
-:: logic
-:: intelligence
-:: model-ai
-model-ai
-
-- related meta queries:
-relations : 1,10,3,6
-relations : 2,39,500
-relations : 3,1022,13
-lines : 3
-vect[] = 1
-vect[] = 10
-vect[] = 3
-vect[] = 6
-vect[] = 2
-vect[] = 39
-vect[] = 500
-vect[] = 3
-vect[] = 1022
-vect[] = 13
-~:: reversing meta topology.
-
-~:: reverse_meta() :
-vector : 1 1
-LINE:::the
-
-vector : 10 10
-LINE:::that
-
-vector : 3 3
-LINE:::and
-
-vector : 6 6
-LINE:::in
-
-vector : 2 2
-LINE:::of
-
-vector : 39 39
-LINE:::my
-
-vector : 500 500
-LINE:::going
-
-vector : 3 3
-LINE:::and
-
-vector : 1022 1022
-LINE:::force
-
-vector : 13 13
-LINE:::with
-
-
-~:: running (9) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/learned
-	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
-~:: parameter request: whatHaveYouGot().
- ]
-
--:: finished x computation.
-label all? (y/n) default is [no] : (label) all:
------
-synopsis: 
-
-metasq:~:: subjects filter :
-:: logic
-:: intelligence
-:: model-ai
-model-ai
-
-- related meta queries:
-relations : 1,10,3,6
-relations : 2,39,500
-relations : 3,1022,13
-lines : 3
-vect[] = 1
-vect[] = 10
-vect[] = 3
-vect[] = 6
-vect[] = 2
-vect[] = 39
-vect[] = 500
-vect[] = 3
-vect[] = 1022
-vect[] = 13
-~:: reversing meta topology.
-
-~:: reverse_meta() :
-vector : 1 1
-LINE:::the
-
-vector : 10 10
-LINE:::that
-
-vector : 3 3
-LINE:::and
-
-vector : 6 6
-LINE:::in
-
-vector : 2 2
-LINE:::of
-
-vector : 39 39
-LINE:::my
-
-vector : 500 500
-LINE:::going
-
-vector : 3 3
-LINE:::and
-
-vector : 1022 1022
-LINE:::force
-
-vector : 13 13
-LINE:::with
-
-
-~:: running (8) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/learned
-	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
-~:: parameter request: whatHaveYouGot().
- ]
-
--:: finished x computation.
-label all? (y/n) default is [no] : (label) all:
------
-synopsis: 
-
-metasq:~:: subjects filter :
-:: logic
-:: intelligence
-:: model-ai
-model-ai
-
-- related meta queries:
-relations : 65,10683,3198
-lines : 1
-vect[] = 65
-vect[] = 10683
-vect[] = 3198
-~:: reversing meta topology.
+~:: readAllMetaQueries() :
+mq : 65
+mq : 10683
+mq : 3198
+mq : 3293
+mq : 502
+mq : 1451
+mq : 11
+mq : 10
+n : 8
+numbers: 65
+numbers: 10683
+numbers: 3198
+numbers: 3293
+numbers: 502
+numbers: 1451
+numbers: 11
+numbers: 10
 
 ~:: reverse_meta() :
 vector : 65 65
@@ -1745,100 +1604,23 @@ LINE:::inherent
 vector : 3198 3198
 LINE:::logic
 
+vector : 3293 3293
+LINE:::learned
 
-~:: running (7) queries.
+vector : 502 502
+LINE:::test
 
-::- type your query -::
-punch.
---?:: 
+vector : 1451 1451
+LINE:::testing
 
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/account
-	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1  ]
+vector : 11 11
+LINE:::by
 
--:: finished x computation.
-
-~:: running (6) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/accounts
-	[ simple x computation: type:[char]: len:9 vowels:5 consonants:3 special:1  ]
-
--:: finished x computation.
-
-~:: running (5) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/help
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: parameter request: help().
- ]
-
--:: finished x computation.
-
-Help Function
------
-
-MODEL-AI: v0.1-27
-Download: https://model-ai.com/archive/model-ai.tar.gz
-
-When the Ai asks you for Logic you can enter a string to trigger natural language processing,
-or you can enter one of the following commands.
-
-COMMANDS:
------
+vector : 10 10
+LINE:::that
 
 
-/help -- triggers this help function.
-/help -- displays version information.
-/killc -- built in killchain(1).
-/bank -- starts accounting.
-/hash -- hashes a string in MD5.
-/curl -- curls a website of choice from your machine.
-/table -- prints the table in numbers of your chosen number.
-/tableto -- prints the table in numbers of your chosen number up to max chosen number.
-/dice -- print a random dice number. (1...6)
-/dice2 -- print a random dice number. (1...nr_of_eyes)
-/stat -- stat() function stats directory/file.
-/cp -- copies file_1 into file_2. (src) -> (dst)
-/rm -- removes a file from the system.
-/+ -- adds 2 numbers.
-/- -- subtracts 2 numbers.
-// -- divides number 1 by number 2.
-/* -- multiplies number 1 by number 2.
-/pow -- does number 1 to power of number 2.
-/punch -- punch in numbers like with a calculator.
-/prpunch -- punch in numbers like with a calculator.
-/simulation -- runs a simulation for enities from the Entity class -&- objects from the Object class.
-/convert -- converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
-/convertd -- converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
-/stepping -- will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
-/rollout -- this function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
-/add_data -- adds data to the logical cabinets manually.
-/convert_data -- converts the data from a file.
-/audio_toggle -- disables/enables the Ai model its sound FX.
-/run_tube -- download YouTube file or playlist.
-/menu -- will hand you a menu with several options.
-/passwd -- changes the access code for running the model.
-/list_cred -- lists the MD5 hash (the access code) from the credentials store.
-/learned -- lists the added data through learning.
-/what -- lists the added data through learning.
-/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model.
-/test -- test the transponder responses.
-
-
-~:: running (4) queries.
+~:: running (9) queries.
 
 ::- type your query -::
 punch.
@@ -1871,27 +1653,8 @@ punch.
 	(99) QUIT();
 
 :: 
-~:: accounts total: EURO 0 over 0 accounts.
+- account: (1) --> balance: [0 EURO].
 
-
-(banking engine) function() : 
-	( 1) // ai.add_account(1);
-	( 2) // ai.subtract_account(10);
-	( 3) // ai.change_account(10);
-	( 4) // ai.printn_account();
-	( 5) // ai.total_account();
-	( 6) // ai.list_positive();
-	( 7) // ai.list_negative();
-	( 8) // ai.average_account();
-	( 9) // ai.transfer(1,200,20.00);
-	(10) // ai.store_accounts_detail();
-	(11) // ai.export_accounts(exp_account);
-	(12) // ai.import_accounts(imp_account);
-
-	(99) QUIT();
-
-:: 
-~:: accounts total: EURO 0 over 0 accounts.
 
 
 (banking engine) function() : 
@@ -1911,8 +1674,8 @@ punch.
 	(99) QUIT();
 
 :: (amount) : - account (1):
-	adding: (+/+) 10 EURO.
-	balance: [10 EURO].
+	adding: (+/+) 24.95 EURO.
+	balance: [24.95 EURO].
 
 
 
@@ -1933,7 +1696,28 @@ punch.
 	(99) QUIT();
 
 :: 
-~:: accounts total: EURO 10 over 1 accounts.
+- account: (1) --> balance: [24.95 EURO].
+
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: ~:: exporting accounts information for later imports.
+~:: exported (1) account(s) to: "ai/log/export_account.txt"
 
 
 (banking engine) function() : 
@@ -1953,7 +1737,7 @@ punch.
 	(99) QUIT();
 
 :: 
-~:: running (3) queries.
+~:: running (8) queries.
 
 ::- type your query -::
 punch.
@@ -1961,64 +1745,76 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/version
-	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
-~:: parameter request: version().
- ]
-
--:: finished x computation.
-
-MODEL-AI version: v0.1-27
-https://model-ai.com/archive/model-ai.tar.gz
-
-
-~:: running (2) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	killc
-	[ simple x computation: type:[char]: len:5 vowels:4 consonants:1 special:0 ]
+	test
+	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "killc".
-	- HMAC string :: *string_next_logic() ::  (killc) is >> 
+*string_next_logic() :: ssh: "test".
+	- HMAC string :: *string_next_logic() ::  (test) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
+(debug) hit search function.
+	search1 : test
+	search2 : test
+	line1 : 	testing concepts, testing an outcome, trying out methods to oppose logic to its function, trying out new or old concepts	+ 9
+	line2 : 	testing concepts or a function by using logic	[test.dat]  {}
+
+sorter():
+{ ai/brain/data/test.dat }
+- opening: ai/brain/data/test.dat.
+	- unable to open : ai/brain/data/test.dat
+
+sorted: ai/brain/data/test.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+TMP: model-ai
+	~:: query matches search string: "test".
+
+-* test is:
+	testing concepts, testing an outcome, trying out methods to oppose logic to its function, trying out new or old concepts	+ 9
+
+	testing concepts or a function by using logic	[test.dat]  {}
 
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 ~:: transponder -> prep()
-(debug) word :: killc
+(debug) word :: test
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "killc".
+(debug) calling prepare_ints() (from) -> "test".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (0).
+~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) killc :: #-1
+(debug) 0) test :: #502
 
 ~:: meta queries ~:: storing meta query sequence ~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- -1
+	- 502
 
-~:: meta queries ~:: reverse_meta_query_lookup("-1,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("502,") ~:::~
 
 ~:: reverse meta query lookup: 
-(skipped unregistered entry)
+	- test		 --> *(a+i) = 502 - *(a+i) - 1 = 501
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2066,7 +1862,7 @@ punch.
 
 (EOT)
 
-~:: running (1) queries.
+~:: running (7) queries.
 
 ::- type your query -::
 punch.

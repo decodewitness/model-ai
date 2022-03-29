@@ -2022,9 +2022,9 @@ void AI::menu() {
 // 	readMetaQueries(true);
 // }
 
-void AI::testA() {	// test queue
+void AI::answerMeta(bool b) {	// test queue
 	// this->readMetaQue();
-	readMetaQueries(true);
+	readMetaQueries(b);	// true also reverses all meta queries 
 }
 
 void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIES"
@@ -2032,8 +2032,26 @@ void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIE
 	clear_que();
 }
 
+// "/what" or "/learned" triggers this next command
 void AI::whatHaveYouGot() {	// shows stored references
 	whatHaveYou();
+}
+
+// TEST TEST TESTING FUNCTIONS
+void AI::testA() {	// test queue
+	// this->readMetaQue();
+	// readMetaQueries(true);
+	std::cout << std::endl;
+	std::cout << "<!> trial rounds in these functions (logged output):" << std::endl;
+	std::cout << "-----" << std::endl;
+
+	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
+	// TO TEST THE FUNCTION INSIDE THE MODEL.
+	readAllMetaQueries(true);
+	// this->answerMeta(true);
+	// sleep(2);
+	//readMetaQueries(true);
+	// this->answerMeta(false);
 }
 
 #endif
