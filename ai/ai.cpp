@@ -121,6 +121,7 @@ void AI::help(int n=1) {
 	std::cout << "/passwd -- changes the access code for running the model." << std::endl;
 	std::cout << "/list_cred -- lists the MD5 hash (the access code) from the credentials store." << std::endl;
 	std::cout << "/learned -- lists the added data through learning." << std::endl;
+	std::cout << "/what -- lists the added data through learning." << std::endl;
 	std::cout << "/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model." << std::endl;
 	std::cout << "/test -- test the transponder responses." << std::endl;
 
@@ -2016,13 +2017,14 @@ void AI::menu() {
 	drawMenu();
 }
 
-// meta queries
-void AI::readMetaQue() {
-	readMetaQueries(true);
-}
+// // meta queries
+// void AI::readMetaQue() {
+// 	readMetaQueries(true);
+// }
 
-void AI::testA() {
-	this->readMetaQue();
+void AI::testA() {	// test queue
+	// this->readMetaQue();
+	readMetaQueries(true);
 }
 
 void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIES"
@@ -2030,7 +2032,7 @@ void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIE
 	clear_que();
 }
 
-void AI::whatHaveYouGot() {
+void AI::whatHaveYouGot() {	// shows stored references
 	whatHaveYou();
 }
 

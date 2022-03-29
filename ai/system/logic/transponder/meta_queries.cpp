@@ -14,6 +14,7 @@ std::string subjectsfile = "ai/lib/queries/subs";
 std::string relations = "ai/lib/queries/relations";
 std::string learn = "ai/lib/queries/learn";
 
+// NEED TO MAKE THIS VARIABLE
 const int dict_size = 20000;    // size of dictionary in "AI/DATA/FILES/20K.TXT"
 
 // meta limits
@@ -242,7 +243,7 @@ void whatHaveYou() {    // return what we have extracted as data
     void labelSynopsis(bool sy);
     std::string answer;
     std::string meta_q;
-    bool synopsis = false;
+    bool nosynopsis = false;
     std::ifstream learned;
     
     // learned.open(learn);
@@ -252,13 +253,17 @@ void whatHaveYou() {    // return what we have extracted as data
 
     if (answer[0] == 'y' || answer[0] == 'y') {
         std::cout << "(label) all:" << std::endl << "-----" << std::endl;
-        synopsis = false;
+        nosynopsis = true;
     } else {
         std::cout << "(label) synopsis:" << std::endl << "-----" << std::endl;
-        synopsis = true;
+        nosynopsis = false;
     }
     
-    labelSynopsis(synopsis);
+    if (nosynopsis == true) {
+        labelSynopsis(nosynopsis);
+    } else {
+        labelSynopsis(false);
+    }
 }
 
 void labelSynopsis(bool sy) {
@@ -273,8 +278,11 @@ void labelSynopsis(bool sy) {
     void relatedMetaQueries(std::string h);
 
     ifstr.open(learn);
-    std::cout << "synopsis: " << std::endl << std::endl;
-    
+    if (sy == true) {
+        std::cout << "synopsis: " << std::endl << std::endl;
+    } else {
+        std::cout << "all:" << std::endl << std::endl;
+    }
 
     if (ifstr.is_open() == true) {
         if (sy == false) {
@@ -327,18 +335,41 @@ return line;
 void relatedMetaQueries(std::string h) {
     std::ifstream rel;
     std::string line;
-    
+    std::vector<int> vect;
+
+    int lines=0;
+    int numberOfEntries=0;
+
     std::cout << std::endl << "- related meta queries:" << std::endl;
     rel.open(relations);
 
     if (rel.is_open() == true) {
         while (rel >> line) {
+            lines++;
             std::cout << "relations : " << line << std::endl;
+            std::stringstream ss(line);
+
+            for (int i; ss >> i;) {
+                vect.push_back(i);    
+                if (ss.peek() == ',') {
+                    ss.ignore();
+                }
+                numberOfEntries++;
+            }
         }
         rel.close();
     }
 
-    rel.close();
+    if (numberOfEntries > 0) {
+        std::cout << "lines : " << lines << std::endl;
+
+        for (std::size_t i = 0; i < vect.size(); i++) {
+            std::cout << "vect[] = " << vect[i] << std::endl;
+        }
+
+        std::cout << "~:: reversing meta topology." << std::endl;
+        reverse_meta(vect);
+    }
 }
         // alloca = *it;
 

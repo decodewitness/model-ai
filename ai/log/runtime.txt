@@ -1438,16 +1438,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff4bfdc570)
-	- stacking header:(1)::<address>(0x7fff4bfdc590)
-	- stacking header:(2)::<address>(0x7fff4bfdc5b0)
-	- stacking header:(3)::<address>(0x7fff4bfdc5d0)
-	- stacking header:(4)::<address>(0x7fff4bfdc5f0)
-	- stacking header:(5)::<address>(0x7fff4bfdc610)
-	- stacking header:(6)::<address>(0x7fff4bfdc630)
-	- stacking header:(7)::<address>(0x7fff4bfdc650)
-	- stacking header:(8)::<address>(0x7fff4bfdc670)
-	- stacking header:(9)::<address>(0x7fff4bfdc690)
+	- stacking header:(0)::<address>(0x7fff028cb800)
+	- stacking header:(1)::<address>(0x7fff028cb820)
+	- stacking header:(2)::<address>(0x7fff028cb840)
+	- stacking header:(3)::<address>(0x7fff028cb860)
+	- stacking header:(4)::<address>(0x7fff028cb880)
+	- stacking header:(5)::<address>(0x7fff028cb8a0)
+	- stacking header:(6)::<address>(0x7fff028cb8c0)
+	- stacking header:(7)::<address>(0x7fff028cb8e0)
+	- stacking header:(8)::<address>(0x7fff028cb900)
+	- stacking header:(9)::<address>(0x7fff028cb920)
 
 
 -:: checking AI functions.
@@ -1493,16 +1493,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./module_bay
+	--directory: -- ./module_bay
 
 ~:: stats() function:
-block device: -- ./downloads
+	--directory: -- ./downloads
 
 ~:: stats() function:
-block device: -- ./DCIM
+	--directory: -- ./DCIM
 
 ~:: stats() function:
-block device: -- ./info.txt
+	--directory: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1513,10 +1513,70 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/clear_metas
-	[ simple x computation: type:[char]: len:12 vowels:6 consonants:4 special:2  ]
+	/learned
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
+~:: parameter request: whatHaveYouGot().
+ ]
 
 -:: finished x computation.
+label all? (y/n) default is [no] : (label) all:
+-----
+synopsis: 
+
+metasq:~:: subjects filter :
+:: logic
+:: intelligence
+:: model-ai
+model-ai
+
+- related meta queries:
+relations : 1,10,3,6
+relations : 2,39,500
+relations : 3,1022,13
+lines : 3
+vect[] = 1
+vect[] = 10
+vect[] = 3
+vect[] = 6
+vect[] = 2
+vect[] = 39
+vect[] = 500
+vect[] = 3
+vect[] = 1022
+vect[] = 13
+~:: reversing meta topology.
+
+~:: reverse_meta() :
+vector : 1 1
+LINE:::the
+
+vector : 10 10
+LINE:::that
+
+vector : 3 3
+LINE:::and
+
+vector : 6 6
+LINE:::in
+
+vector : 2 2
+LINE:::of
+
+vector : 39 39
+LINE:::my
+
+vector : 500 500
+LINE:::going
+
+vector : 3 3
+LINE:::and
+
+vector : 1022 1022
+LINE:::force
+
+vector : 13 13
+LINE:::with
+
 
 ~:: running (9) queries.
 
@@ -1526,15 +1586,70 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/clear metas
-	[ simple x computation: type:[char]: len:12 vowels:7 consonants:4 special:1 
-~:: parameter request: clear_que().
+	/learned
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
+~:: parameter request: whatHaveYouGot().
  ]
 
 -:: finished x computation.
-	~:: clearing buffer.
+label all? (y/n) default is [no] : (label) all:
+-----
+synopsis: 
 
-	~:: cleared buffer / meta queries.
+metasq:~:: subjects filter :
+:: logic
+:: intelligence
+:: model-ai
+model-ai
+
+- related meta queries:
+relations : 1,10,3,6
+relations : 2,39,500
+relations : 3,1022,13
+lines : 3
+vect[] = 1
+vect[] = 10
+vect[] = 3
+vect[] = 6
+vect[] = 2
+vect[] = 39
+vect[] = 500
+vect[] = 3
+vect[] = 1022
+vect[] = 13
+~:: reversing meta topology.
+
+~:: reverse_meta() :
+vector : 1 1
+LINE:::the
+
+vector : 10 10
+LINE:::that
+
+vector : 3 3
+LINE:::and
+
+vector : 6 6
+LINE:::in
+
+vector : 2 2
+LINE:::of
+
+vector : 39 39
+LINE:::my
+
+vector : 500 500
+LINE:::going
+
+vector : 3 3
+LINE:::and
+
+vector : 1022 1022
+LINE:::force
+
+vector : 13 13
+LINE:::with
+
 
 ~:: running (8) queries.
 
@@ -1550,7 +1665,7 @@ punch.
  ]
 
 -:: finished x computation.
-label all? (y/n) default is [no] : (label) synopsis:
+label all? (y/n) default is [no] : (label) all:
 -----
 synopsis: 
 
@@ -1561,9 +1676,23 @@ metasq:~:: subjects filter :
 model-ai
 
 - related meta queries:
-relations : 1,10,3,6
-relations : 2,39,500
-relations : 3,1022,13
+relations : 65,10683,3198
+lines : 1
+vect[] = 65
+vect[] = 10683
+vect[] = 3198
+~:: reversing meta topology.
+
+~:: reverse_meta() :
+vector : 65 65
+LINE:::only
+
+vector : 10683 10683
+LINE:::inherent
+
+vector : 3198 3198
+LINE:::logic
+
 
 ~:: running (7) queries.
 
@@ -1573,97 +1702,10 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	only inherent logic
-	[ simple x computation: type:[char]: len:19 vowels:13 consonants:6 special:0 ]
-
-[ -- you're asking my input -- ]
+	/account
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1  ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "only inherent logic".
-	- HMAC string :: *string_next_logic() ::  (only inherent logic) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: transponder was not prepared yet.
-	~:: preparing transponder.
-~:: transponder -> prep()
-(debug) word :: only
-(debug) word :: inherent
-(debug) word :: logic
-
-~:: (debug)::nrOfWords = 3.
-~:: (debug)::counter = 3.
-
-(debug) calling prepare_ints() (from) -> "only inherent logic".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (3).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) only :: #65
-(debug) 1) inherent :: #10683
-(debug) 2) logic :: #3198
-
-~:: meta queries ~:: storing meta query sequence ~::::meta::::~
-	- path: "ai/lib/queries/meta_queries".
-		- meta sequences:
-	- 65	- 10683	- 3198
-
-~:: meta queries ~:: reverse_meta_query_lookup("65,10683,3198,") ~:::~
-
-~:: reverse meta query lookup: 
-	- only		 --> *(a+i) = 65 - *(a+i) - 1 = 64
-	- inherent		 --> *(a+i) = 10683 - *(a+i) - 1 = 10682
-	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 0
-		* vowels: 0
-		* consonants: 0
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-~:: (debug) -- normal query!
-
-~:: (debug) - answers processed: 5
-
-~:: transponder -> answer()
-
-+query :: ()
-
--- answer:
-	"5","trivia_logic","transponder is not active yet.";
-
-
-(EOT)
 
 ~:: running (6) queries.
 
@@ -1673,252 +1715,12 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
-
-[ -- you're asking my input -- ]
+	/accounts
+	[ simple x computation: type:[char]: len:9 vowels:5 consonants:3 special:1  ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "logic".
-	- HMAC string :: *string_next_logic() ::  (logic) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-(debug) hit search function.
-	search1 : logic
-	search2 : logic
-	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
-
-sorter():
-{ ai/brain/data/logic.dat }
-- opening: ai/brain/data/logic.dat.
-	- ai/brain/data/logic.dat : is open.
-		-- :: ( logical assembly, model-ai. )
-
-sorted: ai/brain/data/logic.dat
-~:: file_access()
-(debug) file_access(level=7).
-
-	<<<
-
-- opened "ai/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-TMP: logic
-~:: found index [logic].
-:::_]{ (logical ways to infer reason.)
-:::_]{ (a logical standard for conventions of proceeding with thinking.)
-(!) omitted empty line.
-(debug) file_access().
-~:: file_access()
-(debug) file_access(level=8).
-~:: closed file "ai/brain/nlp/intelligence/intelligence".
-
-- adding (2) weights.
-
-[]:: ai/brain/data/logic.dat
-~:: resonate_index::match found on line: (6).
-~:: done.
-
-b_string:
-!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
-	~:: query matches search string: "logic".
-
--* logic is:
-   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-
-   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
-~:: transponder -> prep()
-(debug) word :: logic
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "logic".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (4).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) logic :: #3198
-
-
-
-~:: meta queries ~:: reverse_meta_query_lookup("3198,") ~:::~
-
-~:: reverse meta query lookup: 
-	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 0
-		* vowels: 0
-		* consonants: 0
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-~:: (debug) -- normal query!
-
-~:: (debug) - answers processed: 5
-
-~:: transponder -> answer()
-
-+query :: ()
-
--- answer:
-	"5","trivia_logic","transponder is not active yet.";
-
-
-(EOT)
 
 ~:: running (5) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	learned
-	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "learned".
-	- HMAC string :: *string_next_logic() ::  (learned) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-~:: transponder -> prep()
-(debug) word :: learned
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "learned".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (5).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) learned :: #3293
-
-
-
-~:: meta queries ~:: reverse_meta_query_lookup("3293,") ~:::~
-
-~:: reverse meta query lookup: 
-	- learned		 --> *(a+i) = 3293 - *(a+i) - 1 = 3292
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 0
-		* vowels: 0
-		* consonants: 0
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-(score): 0
-
-~:: (debug) -- normal query!
-
-~:: (debug) - answers processed: 5
-
-~:: transponder -> answer()
-
-+query :: ()
-
--- answer:
-	"5","trivia_logic","transponder is not active yet.";
-
-
-(EOT)
-
-~:: running (4) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/learned
-	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
-~:: parameter request: whatHaveYouGot().
- ]
-
--:: finished x computation.
-label all? (y/n) default is [no] : (label) synopsis:
------
-synopsis: 
-
-metasq:~:: subjects filter :
-:: logic
-:: intelligence
-:: model-ai
-model-ai
-
-- related meta queries:
-relations : 1,10,3,6
-relations : 2,39,500
-relations : 3,1022,13
-
-~:: running (3) queries.
 
 ::- type your query -::
 punch.
@@ -1936,7 +1738,7 @@ punch.
 Help Function
 -----
 
-MODEL-AI: v0.1-26b
+MODEL-AI: v0.1-27
 Download: https://model-ai.com/archive/model-ai.tar.gz
 
 When the Ai asks you for Logic you can enter a string to trigger natural language processing,
@@ -1979,11 +1781,255 @@ COMMANDS:
 /passwd -- changes the access code for running the model.
 /list_cred -- lists the MD5 hash (the access code) from the credentials store.
 /learned -- lists the added data through learning.
+/what -- lists the added data through learning.
 /clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model.
 /test -- test the transponder responses.
+
+
+~:: running (4) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/bank
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: track_account().
+ ]
+
+-:: finished x computation.
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: 
+~:: accounts total: EURO 0 over 0 accounts.
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: 
+~:: accounts total: EURO 0 over 0 accounts.
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: (amount) : - account (1):
+	adding: (+/+) 10 EURO.
+	balance: [10 EURO].
+
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: 
+~:: accounts total: EURO 10 over 1 accounts.
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: 
+~:: running (3) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/version
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
+~:: parameter request: version().
+ ]
+
+-:: finished x computation.
+
+MODEL-AI version: v0.1-27
+https://model-ai.com/archive/model-ai.tar.gz
 
 
 ~:: running (2) queries.
 
 ::- type your query -::
 punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	killc
+	[ simple x computation: type:[char]: len:5 vowels:4 consonants:1 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "killc".
+	- HMAC string :: *string_next_logic() ::  (killc) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
+~:: transponder -> prep()
+(debug) word :: killc
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "killc".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (0).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) killc :: #-1
+
+~:: meta queries ~:: storing meta query sequence ~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+		- meta sequences:
+	- -1
+
+~:: meta queries ~:: reverse_meta_query_lookup("-1,") ~:::~
+
+~:: reverse meta query lookup: 
+(skipped unregistered entry)
+
+(EOT)
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 0
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+(score): 0
+
+~:: (debug) -- normal query!
+
+~:: (debug) - answers processed: 5
+
+~:: transponder -> answer()
+
++query :: ()
+
+-- answer:
+	"5","trivia_logic","transponder is not active yet.";
+
+
+(EOT)
+
+~:: running (1) queries.
+
+::- type your query -::
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
+ ]
+
+-:: finished x computation.
+
+(kill chain) function() : 9
+
+-/- initializing killchain(1) sequence.
+

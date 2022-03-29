@@ -41,15 +41,14 @@ bool logging_is_enabled = true;
 int steering(int arc) {	// used as main function for the driver of the Model-Ai and spin the program cycle (encapsulation).
 	// initialize_runtime_check();
 	// class instances are main function
-
 	// initiating runtime model Model-Ai with: "AI ai(arc);"
 	AI ai(arc);	// starts the Ai model model run cycle
 	
 	// TESTING :: testing functions go here below!
 	//////////////////////////////////////////////
 				// functions go here else will run the default model with methods of interpreting: //
-	//ai.menu();
-	// ai.readMetaQue();
+	// ai.whatHaveYouGot();
+
 	//////////////////////////////////////////////
 	// TESTING :: end of testing!
 	// end of Ai model-Ai run cycle and decouple with: "ai.decouple();"
@@ -77,6 +76,9 @@ return 0;
 
 	// splash AI model
 	// splash();
+	
+	//ai.menu();
+	// ai.readMetaQue();
 
 	// check files and such things / environment
 	// need to implement this function again
