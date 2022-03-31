@@ -60,9 +60,9 @@ void store_meta_queries(int a[], int size) {
         
         for (int i=0; i<size; i++) {
             met << a[i];
-            if (i<size-1) {
-                met << ",";
-            }
+            // if (i<size-1) {
+            met << ",";
+            // }
             std::cout << "\t- " << a[i];
         }
         met << std::endl;
@@ -131,29 +131,6 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
     sleep(1);
 };
 
-// std::string readMetaQueries(bool all) {
-
-//     std::string mq;
-//     std::string ourString;
-//     std::ifstream openFile;
-    
-//     openFile.open(meta_query_path);
-
-//     int x;
-//     int mqa[meta_queries];  // meta query array
-//     int sizeElements=0;     // number of used queries
-
-
-//     if (all == true) {
-//         while (getline(openFile, mq)) {
-//             std::cout << "mq : " << mq << std::endl;
-//         }
-//     }
-
-//     openFile.close();
-//     return ourString;
-// };
-
 // reads meta queries
 int readMetaQueries(bool all) {
     std::string mq;
@@ -161,30 +138,40 @@ int readMetaQueries(bool all) {
     std::vector<int> numbers;
     std::ifstream openFile;
 
-    void reverse_meta(std::vector<int> numbers);
+    void meta_read(std::vector<int>numbers);
+    void reverse_metas(std::vector<int> numbers);
 
     std::cout << std::endl << "~:: readMetaQueries() :" << std::endl;
 
     openFile.open(meta_query_path);
 
     while (getline(openFile, mq, ',')) {
-        std::cout << "mq : " << mq << std::endl;
-        std::istringstream is(mq);
+        // mq.pop_back();
 
-        while (getline(is, number_as_string, ',')) {
-            numbers.push_back(std::stoi(number_as_string));
+        if (mq.front() == '\n') {
+            mq = mq.substr(1, mq.size());
+        }
+
+        if(mq.size() > 0) {
+            // std::cout << "mq : " << mq << std::endl;
+            std::istringstream is(mq);
+            while (getline(is, number_as_string, ',')) {
+                numbers.push_back(std::stoi(number_as_string));
+            }
         }
     }
 
-    std::cout << "n : " << numbers.size() << "\n";
+    // std::cout << "n : " << numbers.size() << "\n";
 
-    for(auto&& number : numbers)
-    {
-        std::cout << "numbers: " << number << "\n";
-    }
+    // for(auto&& number : numbers)
+    // {
+    //     std::cout << "numbers: " << number << "\n";
+    // }
 
     if (all == true) {
-        reverse_meta(numbers);
+        reverse_metas(numbers);
+        meta_read(numbers);
+
     }
 
 return numbers.size();
@@ -192,16 +179,14 @@ return numbers.size();
 
 // reads ALL meta queries
 int readAllMetaQueries(bool all) {
-
     int counter=0;
-
     std::string cvar;
     std::string mq;
     std::string number_as_string;
     std::vector<int> numbers;
     std::ifstream openFile;
-
-    void reverse_meta(std::vector<int> numbers);
+    void reverse_metas(std::vector<int> numbers);
+    void meta_read(std::vector<int>numbers);
 
     std::cout << std::endl << "~:: readAllMetaQueries() :" << std::endl;
 
@@ -218,7 +203,13 @@ int readAllMetaQueries(bool all) {
 
         // GETS THE NUMBERED SEQUENCE OF EVERY META QUEUE
     while (getline(openFile, mq, ',')) {
-        std::cout << "mq : " << mq << std::endl;
+
+        if (mq.front() == '\n') {
+            // std::cout << "readAllMetaQueries() - removing '\\n'" << std::endl;
+            mq = mq.substr(1, mq.size());
+        }
+
+        // std::cout << "mq : " << mq << std::endl;
         std::istringstream is(mq);
         // numbers.push_back(std::stoi(mq));
 
@@ -227,24 +218,66 @@ int readAllMetaQueries(bool all) {
         }
     }
 
-    std::cout << "n : " << numbers.size() << "\n";
+    // std::cout << "n : " << numbers.size() << "\n";
 
-    for(auto&& number : numbers)
-    {
-        std::cout << "numbers: " << number << "\n";
-    }
+    // for(auto&& number : numbers) {
+    //     std::cout << "numbers: " << number << "\n";
+    // }
 
     if (all == true) {
-        reverse_meta(numbers);
+        //reverse_metas(numbers);
+        meta_read(numbers);
     }
     // }
 
 return numbers.size();
 }
 
+// read up meta sequence
+void meta_read(std::vector<int>numbers) {
+    std::string reverse_meta(int x);
+    std::cout << "\t\t~:: meta_read() :" << std::endl << std::endl;
+
+    std::cout << "[[[ - ";
+    for(auto&& number : numbers) {
+        std::cout << reverse_meta(number) << " ";
+    }
+    std::cout << "- ]]]" << std::endl;
+}
+
+// reverse single meta
+std::string reverse_meta(int x) {
+    std::ifstream dict_in;
+    int line_counter;
+    std::string line;
+
+    dict_in.open(reverse_path_handle);
+    
+    if (dict_in.is_open() == false) {
+        dict_in.open(reverse_path_handle);
+    }
+
+    // for(std::vector<int>::iterator it = std::begin(numbers); it != std::end(numbers); ++it) {
+    //     int metaquery1 = *it;
+    //     std::cout << "vector : " << *it << " " << metaquery1 << std::endl;
+
+    dict_in.seekg(SEEK_SET);
+    line_counter=0;
+    while (std::getline (dict_in,line)) {
+        line_counter++;
+        if (line_counter == x) {
+            //std::cout << "LINE:::" << line << std::endl << std::endl;
+            break;
+        }
+    }
+    // }
+
+    dict_in.close();
+return line;
+}
+
 // reverses meta queries
-    // NEED TO FIX THIS FUNCTION
-void reverse_meta(std::vector<int> numbers) { // looks up the words for the numbers of the meta queries
+void reverse_metas(std::vector<int> numbers) { // looks up the words for the numbers of the meta queries
     std::ifstream met;
     std::string new_meta;
     std::string word;
@@ -259,10 +292,9 @@ void reverse_meta(std::vector<int> numbers) { // looks up the words for the numb
     char *our_dict[20000];
     int alloca;
     int keyd = 0;
-
-    std::cout << std::endl << "~:: reverse_meta() :" << std::endl;
-
     int i=0;
+
+    std::cout << "\t~:: reverse_metas() :" << std::endl;
 
     if (dict_in.is_open() == false) {
         dict_in.open(reverse_path_handle);
@@ -270,19 +302,18 @@ void reverse_meta(std::vector<int> numbers) { // looks up the words for the numb
 
     for(std::vector<int>::iterator it = std::begin(numbers); it != std::end(numbers); ++it) {
         int metaquery1 = *it;
-        std::cout << "vector : " << *it << " " << metaquery1 << std::endl;
+        // std::cout << "vector : " << *it << " " << metaquery1 << std::endl;
 
         dict_in.seekg(SEEK_SET);
         line_counter=0;
-        while (getline (dict_in,line)) {
+        while (std::getline (dict_in,line)) {
             line_counter++;
             if (line_counter == metaquery1) {
-                std::cout << "LINE:::" << line << std::endl << std::endl;
+                // std::cout << "LINE:::" << line << std::endl << std::endl;
                 break;
             }
         }
     }
-
     dict_in.close();
 };
 
@@ -424,7 +455,7 @@ void relatedMetaQueries(std::string h) {
         }
 
         std::cout << "~:: reversing meta topology." << std::endl;
-        reverse_meta(vect);
+        reverse_metas(vect);
     }
 }
 

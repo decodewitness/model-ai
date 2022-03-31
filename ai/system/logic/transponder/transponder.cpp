@@ -245,6 +245,10 @@ void Transponder::prep(std::string s) { // 's' is the input sentence from "query
     std::vector<std::string> userString(max_sentence_length);
     std::istringstream iss(s);
 
+    for (int i=0; i<max_sentence_length; i++) {
+        memset(wordsFromSentence[i],'\0', wordsize);
+    }
+
     for (decltype(userString.size()) i=0; i<userString.size(); ++i) {
         // split words in sentence
         while (iss >> word) {

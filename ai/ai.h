@@ -378,7 +378,7 @@ public:
 
 	// meta queries
 	void clearQue();
-	void answerMeta(bool b);
+	void answer(bool b);
 
 	// learned
 	void whatHaveYouGot();

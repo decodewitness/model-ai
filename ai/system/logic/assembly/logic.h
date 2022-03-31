@@ -49,4 +49,5 @@ bool isMenu=false;
 bool isTest=false;
 bool isClearQue=false;
 bool isWhatHave=false;
+bool isAnswer=false;
 // eof

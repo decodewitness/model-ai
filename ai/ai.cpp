@@ -1212,6 +1212,9 @@ void AI::query() {	// respond to logical query method
 	} else if (isWhatHave == true) {
 		this->whatHaveYouGot();
 		isWhatHave = false;
+	} else if (isAnswer == true) {
+		this->answer(true);
+		isAnswer = false;
 	}
 
 	// DEFAULTS TO THIS LOGIC
@@ -2022,9 +2025,13 @@ void AI::menu() {
 // 	readMetaQueries(true);
 // }
 
-void AI::answerMeta(bool b) {	// test queue
+void AI::answer(bool b) {	// test queue
 	// this->readMetaQue();
-	readMetaQueries(b);	// true also reverses all meta queries 
+	if (b == true) {
+		readAllMetaQueries(b);
+	} else {
+		readMetaQueries(b);	// true also reverses all meta queries 
+	}
 }
 
 void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIES"
@@ -2047,7 +2054,7 @@ void AI::testA() {	// test queue
 
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
 	// TO TEST THE FUNCTION INSIDE THE MODEL.
-	readAllMetaQueries(true);
+	// readAllMetaQueries(true);
 	// this->answerMeta(true);
 	// sleep(2);
 	//readMetaQueries(true);
