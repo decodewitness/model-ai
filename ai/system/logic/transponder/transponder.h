@@ -4,11 +4,12 @@
 #include <string>
 
 // use stringcode to encode coded sequence to initiate or illicit response
+#include "brain/nn.h"
 #include "stringcode.h"
 
 // files
-std::string question_answers = "data/files/question_answers.txt";
-std::string trivia_logic = "data/files/trivia_logic.txt";
+std::string question_answers = "ai/data/files/question_answers.txt";
+std::string trivia_logic = "ai/data/files/trivia_logic.txt";
 
 // Transponder
 class Transponder {

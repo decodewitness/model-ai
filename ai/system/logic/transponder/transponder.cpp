@@ -232,8 +232,7 @@ void Transponder::analytics(std::string s) {
     // answer the question
     std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
     std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
-    std::cout << std::endl;
-    std::cout << "-- answer:" << std::endl << "\t" << this->response << std::endl;
+    std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
     std::cout << std::endl;
 };
 
@@ -297,7 +296,8 @@ std::string Transponder::retVal() {
 std::string Transponder::answer(std::string s) {
     int answers_processed = 0;
     int rank;
-
+    int count;
+    
     std::string query = s;
     std::string x;
     std::ifstream filen;
@@ -399,7 +399,10 @@ int Transponder::rank_score(std::string q, std::string a) { // parameters: q:que
     // compare occurences in q -&- a
     // add score and return it
 
-    // then compare score inside 
+    // then compare score inside
+    // if (a.length() >= 1) {
+    //     std::cout << a.find_first_of("\"1\",");
+    // }
 
 return score;
 };

@@ -10,7 +10,7 @@ std::string Brain::sorter(std::string st, int level) {
     unsigned open2;
     unsigned close2;
     
-    std::string initstr = "ai/brain/data/";
+    std::string initstr = "ai/system/logic/transponder/brain/data/";
     std::string linea;
     std::string lineb;
     std::string combined;

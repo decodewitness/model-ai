@@ -1283,9 +1283,9 @@ ENTER PASSCODE:
 ~:: assembling brain object.
 ~:: file_access()
 (debug) file_access(level=0).
-~:: opened store_reference_file / ai/brain/nlp/intelligence/cabinet_collection.
-~:: opened data_collection / ai/brain/nlp/intelligence/data_collection.
-~:: opened output / ai/brain/nlp/intelligence/store_file.
+~:: opened store_reference_file / ai/system/logic/transponder/brain/nlp/intelligence/cabinet_collection.
+~:: opened data_collection / ai/system/logic/transponder/brain/nlp/intelligence/data_collection.
+~:: opened output / ai/system/logic/transponder/brain/nlp/intelligence/store_file.
 
 ~:: transponder queries.
 -:: running checks arguments.
@@ -1438,16 +1438,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff22f244e0)
-	- stacking header:(1)::<address>(0x7fff22f24500)
-	- stacking header:(2)::<address>(0x7fff22f24520)
-	- stacking header:(3)::<address>(0x7fff22f24540)
-	- stacking header:(4)::<address>(0x7fff22f24560)
-	- stacking header:(5)::<address>(0x7fff22f24580)
-	- stacking header:(6)::<address>(0x7fff22f245a0)
-	- stacking header:(7)::<address>(0x7fff22f245c0)
-	- stacking header:(8)::<address>(0x7fff22f245e0)
-	- stacking header:(9)::<address>(0x7fff22f24600)
+	- stacking header:(0)::<address>(0x7ffe250dc940)
+	- stacking header:(1)::<address>(0x7ffe250dc960)
+	- stacking header:(2)::<address>(0x7ffe250dc980)
+	- stacking header:(3)::<address>(0x7ffe250dc9a0)
+	- stacking header:(4)::<address>(0x7ffe250dc9c0)
+	- stacking header:(5)::<address>(0x7ffe250dc9e0)
+	- stacking header:(6)::<address>(0x7ffe250dca00)
+	- stacking header:(7)::<address>(0x7ffe250dca20)
+	- stacking header:(8)::<address>(0x7ffe250dca40)
+	- stacking header:(9)::<address>(0x7ffe250dca60)
 
 
 -:: checking AI functions.
@@ -1493,16 +1493,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-	--directory: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-	--directory: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
-	--directory: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-	--directory: -- ./info.txt
+file or directory: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1514,73 +1514,78 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	gimme logic or intelligence noob model-ai and queue please
-	[ simple x computation: type:[char]: len:58 vowels:33 consonants:24 special:1 ]
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "gimme logic or intelligence noob model-ai and queue please".
-	- HMAC string :: *string_next_logic() ::  (gimme logic or intelligence noob model-ai and queue please) is >> 
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
+(debug) hit search function.
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 5
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+
+sorter():
+{ ai/system/logic/transponder/brain/data/intelligence.dat }
+- opening: ai/system/logic/transponder/brain/data/intelligence.dat.
+	- unable to open : ai/system/logic/transponder/brain/data/intelligence.dat
+
+sorted: ai/system/logic/transponder/brain/data/intelligence.dat
+~:: file_access()
+(debug) file_access(level=7).
+~::!::~ error! could not open "intel" (ai/system/logic/transponder/ai/brain/nlp/intelligence/intelligence).
+- intelligence is closed.
+
+[]:: ai/system/logic/transponder/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (5).
+~:: done.
+	~:: query matches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 5
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
 
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 
-~:: prepTransponder() : (gimme logic or intelligence noob model-ai and queue please)
+~:: prepTransponder() : (intelligence)
 ~:: transponder -> prep()
 
-~:: set subject to: "gimme logic or intelligence noob model-ai and queue please".
-(debug) word :: gimme
-(debug) word :: logic
-(debug) word :: or
+~:: set subject to: "intelligence".
 (debug) word :: intelligence
-(debug) word :: noob
-(debug) word :: model-ai
-(debug) word :: and
-(debug) word :: queue
-(debug) word :: please
 
-~:: (debug)::nrOfWords = 9.
-~:: (debug)::counter = 9.
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "gimme logic or intelligence noob model-ai and queue please".
+(debug) calling prepare_ints() (from) -> "intelligence".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (6).
+~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) gimme :: #-1
-(debug) 1) logic :: #3198
-(debug) 2) or :: #18
-(debug) 3) intelligence :: #2526
-(debug) 4) noob :: #-2
-(debug) 5) model-ai :: #-3
-(debug) 6) and :: #3
-(debug) 7) queue :: #7712
-(debug) 8) please :: #145
+(debug) 0) intelligence :: #2526
 
-~:: meta queries ~:: storing meta query sequence ~::::meta::::~
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
-		- meta sequences:
-	- -1	- 3198	- 18	- 2526	- -2	- -3	- 3	- 7712	- 145
+	- meta sequences:
+		- 2526
 
-~:: meta queries ~:: reverse_meta_query_lookup("-1,3198,18,2526,-2,-3,3,7712,145,") ~:::~
+~:: meta queries
+	~:: reverse_meta_query_lookup("2526,")
+~:::~
 
 ~:: reverse meta query lookup: 
-(skipped unregistered entry)
-	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
-	- or		 --> *(a+i) = 18 - *(a+i) - 1 = 17
 	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
-(skipped unregistered entry)
-(skipped unregistered entry)
-	- and		 --> *(a+i) = 3 - *(a+i) - 1 = 2
-	- queue		 --> *(a+i) = 7712 - *(a+i) - 1 = 7711
-	- please		 --> *(a+i) = 145 - *(a+i) - 1 = 144
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1593,12 +1598,12 @@ punch.
 
 	-----------------
 
-		* words no_#: 9
-		* length: 58
-		* vowels: 24
-		* consonants: 25
+		* words no_#: 1
+		* length: 12
+		* vowels: 5
+		* consonants: 7
 		* numbers: 0
-		* special chars: 9
+		* special chars: 0
 		* unknown chars: 0
 
 
@@ -1610,27 +1615,17 @@ punch.
 	~:: successfully opened: "ai/lib/queries/weights".
 
 ~:: results :
-- found: intelligence
 - found: logic
-- found: model-ai
 - found: learn
 - found: queue
 
 	~:: closed "ai/lib/queries/weights".
-	- gimme
-	- logic
-	- or
 	- intelligence
-	- noob
-	- model-ai
-	- and
-	- queue
-	- please
 
 - rank_score(q,a) :
-Q : gimme logic or intelligence noob model-ai and queue please
-A : "1","trivia_logic","transponder is not active yet.";
-(rank): 5
+Q : intelligence
+A : "1","trivia_logic","transponder has question.";
+(rank): 3
 
 (score):
 
@@ -1638,27 +1633,17 @@ A : "1","trivia_logic","transponder is not active yet.";
 	~:: successfully opened: "ai/lib/queries/weights".
 
 ~:: results :
-- found: intelligence
 - found: logic
-- found: model-ai
 - found: learn
 - found: queue
 
 	~:: closed "ai/lib/queries/weights".
-	- gimme
-	- logic
-	- or
 	- intelligence
-	- noob
-	- model-ai
-	- and
-	- queue
-	- please
 
 - rank_score(q,a) :
-Q : gimme logic or intelligence noob model-ai and queue please
-A : "2","trivia_logic","transponder is not active yet.";
-(rank): 5
+Q : intelligence
+A : "2","trivia_logic","transponder gets answer.";
+(rank): 3
 
 (score):
 
@@ -1666,27 +1651,17 @@ A : "2","trivia_logic","transponder is not active yet.";
 	~:: successfully opened: "ai/lib/queries/weights".
 
 ~:: results :
-- found: intelligence
 - found: logic
-- found: model-ai
 - found: learn
 - found: queue
 
 	~:: closed "ai/lib/queries/weights".
-	- gimme
-	- logic
-	- or
 	- intelligence
-	- noob
-	- model-ai
-	- and
-	- queue
-	- please
 
 - rank_score(q,a) :
-Q : gimme logic or intelligence noob model-ai and queue please
+Q : intelligence
 A : "3","trivia_logic","transponder is not active yet.";
-(rank): 5
+(rank): 3
 
 (score):
 
@@ -1694,27 +1669,17 @@ A : "3","trivia_logic","transponder is not active yet.";
 	~:: successfully opened: "ai/lib/queries/weights".
 
 ~:: results :
-- found: intelligence
 - found: logic
-- found: model-ai
 - found: learn
 - found: queue
 
 	~:: closed "ai/lib/queries/weights".
-	- gimme
-	- logic
-	- or
 	- intelligence
-	- noob
-	- model-ai
-	- and
-	- queue
-	- please
 
 - rank_score(q,a) :
-Q : gimme logic or intelligence noob model-ai and queue please
+Q : intelligence
 A : "4","trivia_logic","transponder is not active yet.";
-(rank): 5
+(rank): 3
 
 (score):
 
@@ -1722,34 +1687,24 @@ A : "4","trivia_logic","transponder is not active yet.";
 	~:: successfully opened: "ai/lib/queries/weights".
 
 ~:: results :
-- found: intelligence
 - found: logic
-- found: model-ai
 - found: learn
 - found: queue
 
 	~:: closed "ai/lib/queries/weights".
-	- gimme
-	- logic
-	- or
 	- intelligence
-	- noob
-	- model-ai
-	- and
-	- queue
-	- please
 
 - rank_score(q,a) :
-Q : gimme logic or intelligence noob model-ai and queue please
+Q : intelligence
 A : "5","trivia_logic","transponder is not active yet.";
-(rank): 5
+(rank): 3
 
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 5
 
 ~:: transponder -> answer()
 
-+query :: (gimme logic or intelligence noob model-ai and queue please)
++query :: (intelligence)
 
 -- answer:
 	"5","trivia_logic","transponder is not active yet.";

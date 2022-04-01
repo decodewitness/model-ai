@@ -13,6 +13,7 @@ std::string meta_query_path = "ai/lib/queries/meta_queries";
 std::string subjectsfile = "ai/lib/queries/subs";
 std::string relations = "ai/lib/queries/relations";
 std::string learn = "ai/lib/queries/learn";
+std::string swap = "ai/lib/queries/swap";
 
 // NEED TO MAKE THIS VARIABLE
 const int dict_size = 20000;    // size of dictionary in "AI/DATA/FILES/20K.TXT"
@@ -42,7 +43,6 @@ bool meta_que = false;
 // stores meta queries
 void store_meta_queries(int a[], int size) {
     std::ofstream met;
-    
     if (meta_que == false && met.is_open() == false) {
         met.open(meta_query_path, std::ofstream::app);
         sleep(1);
@@ -50,20 +50,18 @@ void store_meta_queries(int a[], int size) {
             meta_que = true;
         }
     }
-
     std::cout << std::endl;
-
     if (met.is_open() == true) {
-        std::cout << "~:: meta queries ~:: storing meta query sequence ~::::meta::::~" << std::endl;
+        std::cout << "~:: meta queries ~:: storing meta query sequence" << std::endl;
+        std::cout << "\t~::::meta::::~" << std::endl;
         std::cout <<"\t- path: \"" << meta_query_path << "\"." << std::endl;
-        std::cout <<"\t\t- meta sequences:" << std::endl;
-        
+        std::cout <<"\t- meta sequences:" << std::endl;
         for (int i=0; i<size; i++) {
             met << a[i];
             // if (i<size-1) {
             met << ",";
             // }
-            std::cout << "\t- " << a[i];
+            std::cout << "\t\t- " << a[i];
         }
         met << std::endl;
         met.close();
@@ -87,20 +85,20 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
     //int counter=0, actualnumber=1, limit = 20000;  // size of dictionary
 
     std::cout << std::endl;
-    std::cout << "~:: meta queries ~:: reverse_meta_query_lookup(\"";
+    std::cout << "~:: meta queries" << std::endl;
+    std::cout << "\t~:: reverse_meta_query_lookup(\"";
     
     for (int i=0; i<size; i++) {
         std::cout << *(a+i) << ",";
     }
 
     // std::cout << "\b" << (32) << "\b";
-    std::cout << "\") ~:::~" << std::endl;
+    std::cout << "\")" << std::endl;
+    std::cout << "~:::~" << std::endl;
     std::cout << std::endl;
-
     //std::cout << "- (debug) *(a+i) " << std::endl;
-
     // std::string word;
-
+    
     while (keyd < 20000) {
         dict_in >> ourword;
                 

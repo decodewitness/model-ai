@@ -40,7 +40,7 @@
 
 // headers
 #include "al/al.cpp"
-#include "brain/nn.h"
+//#include "brain/nn.h"
 #include "system/chk.h"
 #include "lib/data.cpp"
 //#include "simulation.cpp"	// already included in "ai.cpp"
