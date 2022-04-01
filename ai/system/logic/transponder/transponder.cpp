@@ -9,6 +9,7 @@
 
 #include "prepare.cpp"
 #include "transponder.h"
+#include "scores.cpp"
 
 extern std::string aquestion;
 
@@ -58,6 +59,11 @@ void Transponder::prepTr(std::string s) { // preparation of Transponder object
 //     // respond
 //     this->respond(this->analytical);
 // };
+
+void Transponder::setSubject(std::string s) {
+    this->subject = s;
+    std::cout << std::endl << "~:: set subject to: \"" << this->subject << "\"." << std::endl;
+}
 
 std::string Transponder::respond(bool b) {
     // skip line and respond from mechanism
@@ -218,7 +224,6 @@ void Transponder::analytics(std::string s) {
     std::cout << std::endl;
 
     // process answers in "this->answer()"
-    
     std::cout << std::endl << "(debug) answer." << std::endl;
     this->response = this->answer(s);
     
@@ -241,6 +246,8 @@ void Transponder::prep(std::string s) { // 's' is the input sentence from "query
 
     std::string extrapolated;
     std::string word;
+
+    this->setSubject(s);
 
     std::vector<std::string> userString(max_sentence_length);
     std::istringstream iss(s);
@@ -289,6 +296,7 @@ std::string Transponder::retVal() {
 
 std::string Transponder::answer(std::string s) {
     int answers_processed = 0;
+    int rank;
 
     std::string query = s;
     std::string x;
@@ -349,7 +357,12 @@ std::string Transponder::answer(std::string s) {
             // convert this logic first!!!!!!!!
             // process answers into NEW!! ARRAY!!!!!!!!
             // calculate score
-            std::cout << std::endl << "(score): " << this->rank_score(query, x) << std::endl;
+
+            // rank score
+            std::cout << std::endl << "(score):" << std::endl;            
+            rank = this->rank_score(query, x);
+            std::cout << "(rank): " << rank << std::endl;
+
         }
     } else {
         std::cout << std::endl << "~::!::~ error opening file (Transponder::answer()): \"" << used_file << "\"" << std::endl << std::endl;
@@ -369,15 +382,19 @@ std::string Transponder::answer(std::string s) {
         std::cout << "~:: (debug) -- normal query!" << std::endl;
     }
 
-    std::cout << std::endl << "~:: (debug) - answers processed: " << answers_processed << std::endl;
+    std::cout << "~:: (debug) -- answers processed: " << answers_processed << std::endl;
 
     // return answer to Transponder::analytics(std::string)
     return x;
 };
 
 int Transponder::rank_score(std::string q, std::string a) { // parameters: q:query, a:answer
-    int score = 0;
+    int score = scores(q);
 
+    std::cout << std::endl << "- rank_score(q,a) :" << std::endl;
+    
+    std::cout << "Q : " << q << std::endl;
+    std::cout << "A : " << a << std::endl;
     // split words in query
     // compare occurences in q -&- a
     // add score and return it

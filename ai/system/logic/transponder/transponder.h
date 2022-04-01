@@ -31,7 +31,8 @@ public:
     
     // process answers
     int rank_score(std::string q, std::string a);  // processes score/ranking for the answer based of similarities
-
+    void setSubject(std::string s);
+    
     // analytical functions and preparation functions
     void prep(std::string s); // preps "ints"   //  needs "this->initial_sentence" or "this->subject"
     void prepTr(std::string s); // preps Transponder with query

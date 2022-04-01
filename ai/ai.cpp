@@ -77,15 +77,16 @@ void AI::help(int n=1) {
 	std::cout << "Help Function" << std::endl << "-----" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << PROGRAM << ": " << VERSION << std::endl;
-	std::cout << "Download: " << DOWNLOADURL << std::endl;
+	std::cout << PROGRAM << std::endl;
+	std::cout << VERSION << std::endl;
+	std::cout << DOWNLOADURL << std::endl;
 	std::cout << std::endl;
 	std::cout << "When the Ai asks you for Logic you can enter a string to trigger natural language processing," << std::endl;
 	std::cout << "or you can enter one of the following commands." << std::endl;
 	std::cout << std::endl;
 
 	std::cout << "COMMANDS:" << std::endl;
-	std::cout << "-----" << std::endl << std::endl;
+	std::cout << "-----" << std::endl;
 	std::cout << std::endl;
 
 	std::cout << "/help -- triggers this help function." << std::endl;
@@ -768,6 +769,7 @@ void AI::prepTransponder(std::string s) {
 	// create new transponder
 	// this->transponder = new Transponder(query_string);
 
+	std::cout << std::endl << "~:: prepTransponder() : (" << s << ")" << std::endl;
 	// prep new transponder
 	std::cout << "~:: transponder -> prep()" << std::endl;
 	// sleep(2);
@@ -882,16 +884,13 @@ void AI::query() {	// respond to logical query method
 	std::string yy;
 	int z, zz;
 	char ch;
+	std::string str = "\n";
 
 	// play audio file
 	this->play_audio_file("ai/system/audio/samples/taptaptap.wav");
 
 	// QUERY
 	std::cout << "::- type your query -::" << std::endl;
-
-	// PROMPT
-	std::cout << "punch." << std::endl;
-	std::cout << "--?:: ";
 
 	// std::getline(cin, query_string);
 	// ch = getchar();
@@ -908,14 +907,24 @@ void AI::query() {	// respond to logical query method
 	// Ignore to the end of line
 	//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	
+	// PROMPT
+	// std::cout << "punch." << std::endl;
+	// std::cout << "--?:: ";
 
 	// input
-	ch = getchar();
-	
-	
-	std::string str;
+	// ch = getchar();
+	// std::getline(cin, str);
 	// std::cin.getline(str, 128); // read up to 128 chars from stdin
-	std::getline(cin, str);
+	
+	while (str.compare("\n") == 0 || str.length() < 1) {
+		// PROMPT
+		std::cout << std::endl << "punch." << std::endl;
+		std::cout << "--?:: ";
+		
+		ch = getchar();
+		std::getline(cin, str);
+	}
+	
 	query_string = str;
 
 	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;

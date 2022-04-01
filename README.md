@@ -51,7 +51,7 @@ LOGGED OUTPUT OF THIS BETA:
 
 
 
-ARG: 137485
+ARG: 110011
 
 ~:: how many queries to run? : 
 	** ][][ **
@@ -1490,16 +1490,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd08686df0)
-	- stacking header:(1)::<address>(0x7ffd08686e10)
-	- stacking header:(2)::<address>(0x7ffd08686e30)
-	- stacking header:(3)::<address>(0x7ffd08686e50)
-	- stacking header:(4)::<address>(0x7ffd08686e70)
-	- stacking header:(5)::<address>(0x7ffd08686e90)
-	- stacking header:(6)::<address>(0x7ffd08686eb0)
-	- stacking header:(7)::<address>(0x7ffd08686ed0)
-	- stacking header:(8)::<address>(0x7ffd08686ef0)
-	- stacking header:(9)::<address>(0x7ffd08686f10)
+	- stacking header:(0)::<address>(0x7ffc340bcd60)
+	- stacking header:(1)::<address>(0x7ffc340bcd80)
+	- stacking header:(2)::<address>(0x7ffc340bcda0)
+	- stacking header:(3)::<address>(0x7ffc340bcdc0)
+	- stacking header:(4)::<address>(0x7ffc340bcde0)
+	- stacking header:(5)::<address>(0x7ffc340bce00)
+	- stacking header:(6)::<address>(0x7ffc340bce20)
+	- stacking header:(7)::<address>(0x7ffc340bce40)
+	- stacking header:(8)::<address>(0x7ffc340bce60)
+	- stacking header:(9)::<address>(0x7ffc340bce80)
 
 
 -:: checking AI functions.
@@ -1545,54 +1545,35 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+file or directory: -- ./info.txt
 
 
-~:: running (10) queries.
+~:: running (1) queries.
 
 ::- type your query -::
+
 punch.
 --?:: 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/answer
-	[ simple x computation: type:[char]: len:7 vowels:4 consonants:2 special:1 
-~:: parameter request: answer().
- ]
-
--:: finished x computation.
-
-~:: readAllMetaQueries() :
-		~:: meta_read() :
-
-[[[ - only inherent logic learned test testing by definitive orange blue red trivial stored this sequence ]]]
-
-~:: running (9) queries.
-
-::- type your query -::
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	type one query
-	[ simple x computation: type:[char]: len:14 vowels:9 consonants:5 special:0 ]
+	intelligence is a new way for logic for model-ai
+	[ simple x computation: type:[char]: len:48 vowels:30 consonants:17 special:1 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "type one query".
-	- HMAC string :: *string_next_logic() ::  (type one query) is >> 
+*string_next_logic() :: ssh: "intelligence is a new way for logic for model-ai".
+	- HMAC string :: *string_next_logic() ::  (intelligence is a new way for logic for model-ai) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
@@ -1601,35 +1582,57 @@ punch.
 
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
+
+~:: prepTransponder() : (intelligence is a new way for logic for model-ai)
 ~:: transponder -> prep()
-(debug) word :: type
-(debug) word :: one
-(debug) word :: query
 
-~:: (debug)::nrOfWords = 3.
-~:: (debug)::counter = 3.
+~:: set subject to: "intelligence is a new way for logic for model-ai".
+(debug) word :: intelligence
+(debug) word :: is
+(debug) word :: a
+(debug) word :: new
+(debug) word :: way
+(debug) word :: for
+(debug) word :: logic
+(debug) word :: for
+(debug) word :: model-ai
 
-(debug) calling prepare_ints() (from) -> "type one query".
+~:: (debug)::nrOfWords = 9.
+~:: (debug)::counter = 9.
+
+(debug) calling prepare_ints() (from) -> "intelligence is a new way for logic for model-ai".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (3).
+~:: (debug) number of matching occurences: (8).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) type :: #235
-(debug) 1) one :: #45
-(debug) 2) query :: #2548
+(debug) 0) intelligence :: #2526
+(debug) 1) is :: #8
+(debug) 2) a :: #5
+(debug) 3) new :: #27
+(debug) 4) way :: #203
+(debug) 5) for :: #7
+(debug) 6) logic :: #3198
+(debug) 7) for :: #7
+(debug) 8) model-ai :: #-1
 
 ~:: meta queries ~:: storing meta query sequence ~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 		- meta sequences:
-	- 235	- 45	- 2548
+	- 2526	- 8	- 5	- 27	- 203	- 7	- 3198	- 7	- -1
 
-~:: meta queries ~:: reverse_meta_query_lookup("235,45,2548,") ~:::~
+~:: meta queries ~:: reverse_meta_query_lookup("2526,8,5,27,203,7,3198,7,-1,") ~:::~
 
 ~:: reverse meta query lookup: 
-	- type		 --> *(a+i) = 235 - *(a+i) - 1 = 234
-	- one		 --> *(a+i) = 45 - *(a+i) - 1 = 44
-	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+	- is		 --> *(a+i) = 8 - *(a+i) - 1 = 7
+	- a		 --> *(a+i) = 5 - *(a+i) - 1 = 4
+	- new		 --> *(a+i) = 27 - *(a+i) - 1 = 26
+	- way		 --> *(a+i) = 203 - *(a+i) - 1 = 202
+	- for		 --> *(a+i) = 7 - *(a+i) - 1 = 6
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
+	- for		 --> *(a+i) = 7 - *(a+i) - 1 = 6
+(skipped unregistered entry)
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1642,34 +1645,128 @@ punch.
 
 	-----------------
 
-		* words no_#: 1
-		* length: 0
-		* vowels: 0
-		* consonants: 0
+		* words no_#: 9
+		* length: 48
+		* vowels: 17
+		* consonants: 22
 		* numbers: 0
-		* special chars: 0
+		* special chars: 9
 		* unknown chars: 0
 
 
 (debug) answer.
 
-(score): 0
+(score): 
+~:: scores() - calculating scores:
+	~:: successfully opened: "ai/lib/queries/concepts".
 
-(score): 0
+~:: results :
+substr: intelligence --> (HIT)
+substr: is
+substr: a
+substr: new
+substr: way
+substr: for
+substr: logic
+substr: for
+substr: model-ai
+	~:: closed "ai/lib/queries/concepts".
 
-(score): 0
+- rank_score(q,a) :
+Q : intelligence is a new way for logic for model-ai
+A : "1","trivia_logic","transponder is not active yet.";
+1
 
-(score): 0
+(score): 
+~:: scores() - calculating scores:
+	~:: successfully opened: "ai/lib/queries/concepts".
 
-(score): 0
+~:: results :
+substr: intelligence --> (HIT)
+substr: is
+substr: a
+substr: new
+substr: way
+substr: for
+substr: logic
+substr: for
+substr: model-ai
+	~:: closed "ai/lib/queries/concepts".
+
+- rank_score(q,a) :
+Q : intelligence is a new way for logic for model-ai
+A : "2","trivia_logic","transponder is not active yet.";
+1
+
+(score): 
+~:: scores() - calculating scores:
+	~:: successfully opened: "ai/lib/queries/concepts".
+
+~:: results :
+substr: intelligence --> (HIT)
+substr: is
+substr: a
+substr: new
+substr: way
+substr: for
+substr: logic
+substr: for
+substr: model-ai
+	~:: closed "ai/lib/queries/concepts".
+
+- rank_score(q,a) :
+Q : intelligence is a new way for logic for model-ai
+A : "3","trivia_logic","transponder is not active yet.";
+1
+
+(score): 
+~:: scores() - calculating scores:
+	~:: successfully opened: "ai/lib/queries/concepts".
+
+~:: results :
+substr: intelligence --> (HIT)
+substr: is
+substr: a
+substr: new
+substr: way
+substr: for
+substr: logic
+substr: for
+substr: model-ai
+	~:: closed "ai/lib/queries/concepts".
+
+- rank_score(q,a) :
+Q : intelligence is a new way for logic for model-ai
+A : "4","trivia_logic","transponder is not active yet.";
+1
+
+(score): 
+~:: scores() - calculating scores:
+	~:: successfully opened: "ai/lib/queries/concepts".
+
+~:: results :
+substr: intelligence --> (HIT)
+substr: is
+substr: a
+substr: new
+substr: way
+substr: for
+substr: logic
+substr: for
+substr: model-ai
+	~:: closed "ai/lib/queries/concepts".
+
+- rank_score(q,a) :
+Q : intelligence is a new way for logic for model-ai
+A : "5","trivia_logic","transponder is not active yet.";
+1
 
 ~:: (debug) -- normal query!
-
-~:: (debug) - answers processed: 5
+~:: (debug) -- answers processed: 5
 
 ~:: transponder -> answer()
 
-+query :: ()
++query :: (intelligence is a new way for logic for model-ai)
 
 -- answer:
 	"5","trivia_logic","transponder is not active yet.";
@@ -1677,25 +1774,27 @@ punch.
 
 (EOT)
 
-~:: running (8) queries.
+-:: aborting artificial life sequence, and clean up gracefully!
 
-::- type your query -::
-punch.
---?:: 
+-:: display ((x)->live())(?x) equaled  .
 
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
- ]
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
 
--:: finished x computation.
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+		(-  ||  -)
 
-(kill chain) function() : 9
 
--/- initializing killchain(1) sequence.
+::=> saving grace (routine) and closing libraries <=::
 
+-:: closing files.
+-:: cleaning memory.
+~:: closed access.
+
+-:: calling destructor for AI::Model.
+-:: done.
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).
