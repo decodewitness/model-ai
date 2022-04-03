@@ -4,17 +4,25 @@
 #include <sstream>
 #include <vector>
 #include <unistd.h>
+#include <algorithm>
+
 
 // #include <iterator>
 // #include <algorithm>
 
 std::string weights = "ai/lib/queries/weights";
 
-int scores(std::string s) {
+std::vector<std::string> conversation;
+
+int vec_rec;
+
+int scores(std::string a, std::string q) {
     std::ifstream scores;
-    std::string x = s;
+    std::string x = q;
     std::string word;
     std::string wrd;
+    std::vector<size_t> vec;
+    // stringstream s_stream(a); //create string stream from the string
 
     int score=0;
 
@@ -42,7 +50,7 @@ int scores(std::string s) {
 
         for (const auto& s : words){
             while (scores >> word) {
-                if (word.compare(s) == true) {
+                if (word.compare(s) == false) {
                     std::cout << "- found: " << word << std::endl;
                     score += 1;
                     sleep(1);
@@ -65,8 +73,38 @@ int scores(std::string s) {
         std::cout << "\t- " << str << std::endl;
     }
 
-    return score;
+    // Get the first occurrence
+    size_t pos = a.find(q);
+    // Repeat till end is reached
+    while( pos != std::string::npos) {
+        // Add position to the vector
+        vec.push_back(pos);
+        // Get the next occurrence from the current position
+        pos=a.find(q, pos + q.size());
+    }
+    
+    std::cout << std::endl << "incremental size function : " << vec.size() << std::endl;
+    score = vec.size();
+
+    if (vec.size() > 0) {   // let's have a conversation :)
+        conversation.push_back(a);  // works in conjunction with "vector<int> record" // PROBABLY NOT YET !!!
+        std::cout << std::endl << "pushed back <<< " << a << std::endl;
+    }
+
+    // vec_rec =
+
+return score;
 };
+
+void listConvo() {
+    std::cout << std::endl;
+    std::cout << "having convo?" << std::endl;
+    std::cout << std::endl;
+
+    for (auto que : conversation) {
+        std::cout << ":: " << que << std::endl;
+    }
+}
             // if (words.at(i).compare(word) == false) {
             //     std::cout << "-- HIT!!! --> " << wrd << " " << words.at(i) << std::endl;
             // }

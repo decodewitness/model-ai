@@ -11,11 +11,15 @@
 std::string question_answers = "ai/data/files/question_answers.txt";
 std::string trivia_logic = "ai/data/files/trivia_logic.txt";
 
+int track_record;
+
 // Transponder
 class Transponder {
 private:
     std::string initial_sentence;   // logic comparts from here
     bool analytical;    // whether to use "analytics" function
+    vector<int> ints;
+    vector<std::string> strings;
 
 protected:
     std::string subject; // same as "initial_sentence" but maybe change this later

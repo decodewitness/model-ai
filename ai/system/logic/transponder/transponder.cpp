@@ -232,7 +232,7 @@ void Transponder::analytics(std::string s) {
     // answer the question
     std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
     std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
-    std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
+    // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
     std::cout << std::endl;
 };
 
@@ -297,13 +297,15 @@ std::string Transponder::answer(std::string s) {
     int answers_processed = 0;
     int rank;
     int count;
-    
-    std::string query = s;
+    int biggest=0;
+    int inc=0;
+
     std::string x;
-    std::ifstream filen;
-    
-    std::string used_file ="ai/data/files/trivia_logic.txt";  // AI/DATA/FILES/TRIVIA_LOGIC.TXT
+    std::string query = s;
+    std::string used_file = "ai/data/files/trivia_logic.txt";  // AI/DATA/FILES/TRIVIA_LOGIC.TXT
     std::string used_file_ar[64] = { "trivia_logic", "question_answers" };  // max. file name length    // AI/DATA/FILES/TRIVIA_LOGIC.TXT   // AI/DATA/FILES/QUESTION_ANSWERS.TXT
+
+    std::ifstream filen;
 
     // question, normal, or exclamation
     bool isDot = false;
@@ -349,20 +351,20 @@ std::string Transponder::answer(std::string s) {
         query.pop_back();
     }
 
-    filen.open(used_file);
+    filen.open(used_file);  // trivia_logic // questions_ansewers
 
     if (filen.is_open() == true) {
         while (getline(filen,x)) {
             answers_processed += 1;
-            // convert this logic first!!!!!!!!
-            // process answers into NEW!! ARRAY!!!!!!!!
-            // calculate score
 
-            // rank score
+            // convert this logic first!!!!!!!!
+                // rank score
             std::cout << std::endl << "(score):" << std::endl;            
-            rank = this->rank_score(query, x);
+            rank = this->rank_score(query, x);  // calculate score
             std::cout << "(rank): " << rank << std::endl;
 
+            this->ints.push_back(rank);
+            // process answers into NEW!! ARRAY!!!!!!!!
         }
     } else {
         std::cout << std::endl << "~::!::~ error opening file (Transponder::answer()): \"" << used_file << "\"" << std::endl << std::endl;
@@ -385,23 +387,55 @@ std::string Transponder::answer(std::string s) {
     std::cout << "~:: (debug) -- answers processed: " << answers_processed << std::endl;
 
     // return answer to Transponder::analytics(std::string)
-    return x;
-};
+
+    int noted=0;
+
+    for (size_t i : this->ints) {
+        inc++;
+        if (i>biggest) { biggest = i; noted = inc; }
+    }
+
+    // for (size_t i : ints) {
+    //     if (i == biggest) {
+    //     }
+    // }
+    std::cout << std::endl;
+    std::cout << "labelled faculty : " << biggest << std::endl;
+    
+    if (noted > 0) {
+        std::cout << "ANSWER:";
+        listConvo();
+    }
+
+    std::cout << std::endl;    
+ 
+return x;
+}
 
 int Transponder::rank_score(std::string q, std::string a) { // parameters: q:query, a:answer
-    int score = scores(q);
+    int score = scores(a,q);
+    std::vector<std::string> result;
 
-    std::cout << std::endl << "- rank_score(q,a) :" << std::endl;
-    
-    std::cout << "Q : " << q << std::endl;
-    std::cout << "A : " << a << std::endl;
+/*  // DEBUGGING INFORMATION IN THIS COMMENT
+ *      // clutters display
+ *  std::cout << std::endl << "- rank_score(q,a) :" << std::endl;
+ *  std::cout << "Q : " << q << std::endl;
+ *  std::cout << "A : " << a << std::endl;
+ */
     // split words in query
     // compare occurences in q -&- a
     // add score and return it
-
     // then compare score inside
     // if (a.length() >= 1) {
     //     std::cout << a.find_first_of("\"1\",");
+    // }
+
+
+
+// NNNNNNNEEEEEED TO FIX THIS
+    // if (q.length() >= 1 && a.find(q)) {
+    //     std::cout << std::endl << "ANSWER : " << a << std::endl;
+    //     std::cout << std::endl;
     // }
 
 return score;
