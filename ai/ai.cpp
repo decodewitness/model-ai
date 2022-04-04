@@ -125,7 +125,8 @@ void AI::help(int n=1) {
 	std::cout << "/what -- lists the added data through learning." << std::endl;
 	std::cout << "/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model." << std::endl;
 	std::cout << "/test -- test the transponder responses." << std::endl;
-
+	std::cout << "/answer" << std::endl;
+	std::cout << "/talk -- lists the conversation." << std::endl;
 	// list of arguments
 	std::cout << std::endl;
 };
@@ -1224,6 +1225,9 @@ void AI::query() {	// respond to logical query method
 	} else if (isAnswer == true) {
 		this->answer(true);
 		isAnswer = false;
+	} else if (isTalk == true) {
+		this->talk(0);
+		isTalk = false;
 	}
 
 	// DEFAULTS TO THIS LOGIC
@@ -2068,6 +2072,11 @@ void AI::testA() {	// test queue
 	// sleep(2);
 	//readMetaQueries(true);
 	// this->answerMeta(false);
+}
+
+void AI::talk(int x) {	// list stored conversation
+	size_t max_history = x;
+	listConvo(max_history);
 }
 
 #endif

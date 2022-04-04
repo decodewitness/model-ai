@@ -181,6 +181,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/answer") == false) {
         std::cout << std::endl << "~:: parameter request: answer()." << std::endl;
         isAnswer = true;
+    } else if (str.compare("/talk") == false) {
+        std::cout << std::endl << "~:: parameter request: listConvo()." << std::endl;
+        isTalk = true;
     }
 };
 

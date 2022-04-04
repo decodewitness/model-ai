@@ -1,8 +1,9 @@
 // (inside AI directory) "AI/AI.H" - MAIN HEADER FILE FOR AI MODEL CLASS (USED BY AI.CPP)
 
 #define PROGRAM "MODEL-AI"
-	#define VERSION "v0.1-27"
-		#define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
+	#define VERSION "v0.1-27a"
+		#define WEBSITE	"https://model-ai.com"
+			#define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
 
 #ifndef _SPLASH
 #include "steering/splash.h"
@@ -382,6 +383,7 @@ public:
 
 	// learned
 	void whatHaveYouGot();
+	void talk(int x=0);
 	
 	// testing
 	void testA();

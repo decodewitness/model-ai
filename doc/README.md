@@ -1490,16 +1490,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff88476cb0)
-	- stacking header:(1)::<address>(0x7fff88476cd0)
-	- stacking header:(2)::<address>(0x7fff88476cf0)
-	- stacking header:(3)::<address>(0x7fff88476d10)
-	- stacking header:(4)::<address>(0x7fff88476d30)
-	- stacking header:(5)::<address>(0x7fff88476d50)
-	- stacking header:(6)::<address>(0x7fff88476d70)
-	- stacking header:(7)::<address>(0x7fff88476d90)
-	- stacking header:(8)::<address>(0x7fff88476db0)
-	- stacking header:(9)::<address>(0x7fff88476dd0)
+	- stacking header:(0)::<address>(0x7ffd26f91120)
+	- stacking header:(1)::<address>(0x7ffd26f91140)
+	- stacking header:(2)::<address>(0x7ffd26f91160)
+	- stacking header:(3)::<address>(0x7ffd26f91180)
+	- stacking header:(4)::<address>(0x7ffd26f911a0)
+	- stacking header:(5)::<address>(0x7ffd26f911c0)
+	- stacking header:(6)::<address>(0x7ffd26f911e0)
+	- stacking header:(7)::<address>(0x7ffd26f91200)
+	- stacking header:(8)::<address>(0x7ffd26f91220)
+	- stacking header:(9)::<address>(0x7ffd26f91240)
 
 
 -:: checking AI functions.
@@ -1557,978 +1557,6 @@ file or directory: -- ./DCIM
 file or directory: -- ./info.txt
 
 
-~:: running (5) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	artificial
-	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "artificial".
-	- HMAC string :: *string_next_logic() ::  (artificial) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-(debug) hit search function.
-	search1 : artificial
-	search2 : artificial
-	line1 :   something real or artificial made up out of a matter construct. + 1
-	line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
-
-sorter():
-{ ai/system/logic/transponder/brain/data/artificial.dat }
-{ ai/system/logic/transponder/brain/data/artificial2.dat }
-::
-- opening: ai/system/logic/transponder/brain/data/artificial.dat.
-	- ai/system/logic/transponder/brain/data/artificial.dat : is open.
-		-- :: ( artificial assembly, model-ai. )
-- opening: ai/system/logic/transponder/brain/data/artificial2.dat.
-	- ai/system/logic/transponder/brain/data/artificial2.dat : is open.
-		-- :: ( artificial data. artificial encounters. artificial life. artificial measure. artificial object. artificial reality. artificial or logical conduit. )
-
-sorted: ai/system/logic/transponder/brain/data/artificial.dat
-~:: file_access()
-(debug) file_access(level=7).
-~::!::~ error! could not open "intel" (ai/system/logic/transponder/ai/brain/nlp/intelligence/intelligence).
-- intelligence is closed.
-
-[]:: ai/system/logic/transponder/brain/data/artificial.dat
-~:: resonate_index::match found on line: (1).
-~:: done.
-	~:: query matches search string: "artificial".
-
--* artificial is:
-  something real or artificial made up out of a matter construct. + 1
-
-  being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
-
-~:: transponder was not prepared yet.
-	~:: preparing transponder.
-
-~:: prepTransponder() : (artificial)
-~:: transponder -> prep()
-
-~:: set subject to: "artificial".
-(debug) word :: artificial
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "artificial".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (1).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) artificial :: #5919
-
-~:: meta queries ~:: storing meta query sequence
-	~::::meta::::~
-	- path: "ai/lib/queries/meta_queries".
-	- meta sequences:
-		- 5919
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("5919,")
-~:::~
-
-~:: reverse meta query lookup: 
-	- artificial		 --> *(a+i) = 5919 - *(a+i) - 1 = 5918
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 10
-		* vowels: 5
-		* consonants: 5
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- artificial
-
-incremental size function : 1
-
-pushed back <<< "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-(rank): 1
-
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 12
-
-labelled faculty : 1
-ANSWER:
-having convo?
-
-:: "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-
-
-~:: transponder -> answer()
-
-+query :: (artificial)
-
-
-(EOT)
-
-~:: running (4) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	query
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "query".
-	- HMAC string :: *string_next_logic() ::  (query) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: prepTransponder() : (query)
-~:: transponder -> prep()
-
-~:: set subject to: "query".
-(debug) word :: query
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "query".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (2).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) query :: #2548
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("2548,")
-~:::~
-
-~:: reverse meta query lookup: 
-	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 5
-		* vowels: 2
-		* consonants: 3
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 12
-
-labelled faculty : 1
-ANSWER:
-having convo?
-
-:: "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-
-
-~:: transponder -> answer()
-
-+query :: (query)
-
-
-(EOT)
-
-~:: running (3) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	query?
-	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "query?".
-	- HMAC string :: *string_next_logic() ::  (query?) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: prepTransponder() : (query?)
-~:: transponder -> prep()
-
-~:: set subject to: "query?".
-(debug) word :: query
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "query?".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (3).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) query :: #2548
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("2548,")
-~:::~
-
-~:: reverse meta query lookup: 
-	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 6
-		* vowels: 2
-		* consonants: 3
-		* numbers: 0
-		* special chars: 1
-		* unknown chars: 0
-
-
-(debug) answer.
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 1
-
-pushed back <<< "6","question_answers","a real query.";
-(rank): 1
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- query
-
-incremental size function : 0
-(rank): 0
-
-~:: (debug) query was question: ('?')
-~:: (debug) -- answers processed: 8
-
-labelled faculty : 1
-ANSWER:
-having convo?
-
-:: "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-:: "6","question_answers","a real query.";
-
-
-~:: transponder -> answer()
-
-+query :: (query?)
-
-
-(EOT)
-
-~:: running (2) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	ntelligence
-	[ simple x computation: type:[char]: len:11 vowels:7 consonants:4 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "ntelligence".
-	- HMAC string :: *string_next_logic() ::  (ntelligence) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: prepTransponder() : (ntelligence)
-~:: transponder -> prep()
-
-~:: set subject to: "ntelligence".
-(debug) word :: ntelligence
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "ntelligence".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (3).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) ntelligence :: #-1
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("-1,")
-~:::~
-
-~:: reverse meta query lookup: 
-(skipped unregistered entry)
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 11
-		* vowels: 4
-		* consonants: 7
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 0
-(rank): 0
-
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- ntelligence
-
-incremental size function : 1
-
-pushed back <<< "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-(rank): 1
-
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 12
-
-labelled faculty : 1
-ANSWER:
-having convo?
-
-:: "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-:: "6","question_answers","a real query.";
-:: "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-
-
-~:: transponder -> answer()
-
-+query :: (ntelligence)
-
-
-(EOT)
-
 ~:: running (1) queries.
 
 ::- type your query -::
@@ -2538,71 +1566,52 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	help
-	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 ]
+	amazing
+	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "help".
-	- HMAC string :: *string_next_logic() ::  (help) is >> 
+*string_next_logic() :: ssh: "amazing".
+	- HMAC string :: *string_next_logic() ::  (amazing) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
-(debug) hit search function.
-	search1 : help
-	search2 : help
-	line1 :     type "/help" to access the help function.   + 4
-	line2 :     help solves problems. helping is a good thing. if you need help with this model-Ai, you can type "/help" to access the help function. [help.dat]    {}
 
-sorter():
-{ ai/system/logic/transponder/brain/data/help.dat }
-- opening: ai/system/logic/transponder/brain/data/help.dat.
-	- unable to open : ai/system/logic/transponder/brain/data/help.dat
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
 
-sorted: ai/system/logic/transponder/brain/data/help.dat
-~:: file_access()
-(debug) file_access(level=7).
-~::!::~ error! could not open "intel" (ai/system/logic/transponder/ai/brain/nlp/intelligence/intelligence).
-- intelligence is closed.
-
-[]:: ai/system/logic/transponder/brain/data/help.dat
-~:: resonate_index::match found on line: (4).
-~:: done.
-	~:: query matches search string: "help".
-
--* help is:
-    type "/help" to access the help function.   + 4
-
-    help solves problems. helping is a good thing. if you need help with this model-Ai, you can type "/help" to access the help function. [help.dat]    {}
-
-~:: prepTransponder() : (help)
+~:: prepTransponder() : (amazing)
 ~:: transponder -> prep()
 
-~:: set subject to: "help".
-(debug) word :: help
+~:: set subject to: "amazing".
+(debug) word :: amazing
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "help".
+(debug) calling prepare_ints() (from) -> "amazing".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (4).
+~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) help :: #76
+(debug) 0) amazing :: #2928
 
-
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequences:
+		- 2928
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("76,")
+	~:: reverse_meta_query_lookup("2928,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- help		 --> *(a+i) = 76 - *(a+i) - 1 = 75
+	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2616,9 +1625,9 @@ sorted: ai/system/logic/transponder/brain/data/help.dat
 	-----------------
 
 		* words no_#: 1
-		* length: 4
-		* vowels: 1
-		* consonants: 3
+		* length: 7
+		* vowels: 3
+		* consonants: 4
 		* numbers: 0
 		* special chars: 0
 		* unknown chars: 0
@@ -2634,7 +1643,7 @@ sorted: ai/system/logic/transponder/brain/data/help.dat
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2647,7 +1656,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2660,7 +1669,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2673,7 +1682,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2686,7 +1695,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2699,7 +1708,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2712,7 +1721,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2725,7 +1734,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2738,7 +1747,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2751,7 +1760,7 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
 
 incremental size function : 0
 (rank): 0
@@ -2764,42 +1773,90 @@ incremental size function : 0
 ~:: results :
 
 	~:: closed "ai/lib/queries/weights".
-	- help
+	- amazing
+
+incremental size function : 0
+(rank): 0
+
+(score):
+
+~:: scores() - calculating scores:
+	~:: successfully opened: "ai/lib/queries/weights".
+
+~:: results :
+
+	~:: closed "ai/lib/queries/weights".
+	- amazing
+
+incremental size function : 0
+(rank): 0
+
+(score):
+
+~:: scores() - calculating scores:
+	~:: successfully opened: "ai/lib/queries/weights".
+
+~:: results :
+
+	~:: closed "ai/lib/queries/weights".
+	- amazing
 
 incremental size function : 1
 
-pushed back <<< "11","trivia_logic","use the /help function.";
+RESULT: 0) : 13
+
+RESULT: 1) : trivia_logic
+
+RESULT: 2) : you are amazing.
+
+->>> pushed back ->>> you are amazing."
 (rank): 1
 
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- help
-
-incremental size function : 0
-(rank): 0
-
 ~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 12
+~:: (debug) -- answers processed: 13
 
 labelled faculty : 1
-ANSWER:
-having convo?
 
-:: "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-:: "6","question_answers","a real query.";
-:: "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
-:: "11","trivia_logic","use the /help function.";
+[ANSWER]:
+
+~:: listConvo() :
+
+	% having convos?
+
+:: you are amazing."
+
+->>> pushing ->>> you
+
+~:: iterating synonyms for: "you"
+	:: (synonyms) : 0
+
+->>> pushing ->>> are
+
+~:: iterating synonyms for: "you"
+	:: (synonyms) : 0
+
+~:: iterating synonyms for: "are"
+	:: (synonyms) : 0
+
+->>> pushing ->>> amazing
+
+~:: iterating synonyms for: "you"
+	:: (synonyms) : 0
+
+~:: iterating synonyms for: "are"
+	:: (synonyms) : 0
+
+~:: iterating synonyms for: "amazing"
+
+HiT!
+	:: (synonyms) : Amazing	Incredible	Unbelievable	Improbable	Astonishing	
+(EOT)
+
 
 
 ~:: transponder -> answer()
 
-+query :: (help)
++query :: (amazing)
 
 
 (EOT)

@@ -63,7 +63,7 @@ void Transponder::prepTr(std::string s) { // preparation of Transponder object
 void Transponder::setSubject(std::string s) {
     this->subject = s;
     std::cout << std::endl << "~:: set subject to: \"" << this->subject << "\"." << std::endl;
-}
+};
 
 std::string Transponder::respond(bool b) {
     // skip line and respond from mechanism
@@ -86,7 +86,7 @@ std::string Transponder::respond(bool b) {
     // should use transponder together with NLP processing
     // instead of just relaying the answer.
         // use logic here
-    this->response = "~:: tr :: message was relayed from transponder -- response().";
+    this->response = "~:: tr :: message was relayed by transponder -- response().";
 
     // return the answer to the question or statement/pragma/sequence/expression
     return this->response;
@@ -402,19 +402,21 @@ std::string Transponder::answer(std::string s) {
     std::cout << std::endl;
     std::cout << "labelled faculty : " << biggest << std::endl;
     
-    if (noted > 0) {
-        std::cout << "ANSWER:";
-        listConvo();
+    if (noted > 0) {    // ANSWER THE QUERY WITH listConvo()
+    // <---> OVER HERE TRANSPONDER QUERIES <--->
+        std::cout << std::endl << "[ANSWER]:" << std::endl;
+        listConvo(0);    // also lists synonyms
     }
-
     std::cout << std::endl;    
- 
+
 return x;
-}
+};
 
 int Transponder::rank_score(std::string q, std::string a) { // parameters: q:query, a:answer
     int score = scores(a,q);
     std::vector<std::string> result;
+return score;
+};
 
 /*  // DEBUGGING INFORMATION IN THIS COMMENT
  *      // clutters display
@@ -438,8 +440,7 @@ int Transponder::rank_score(std::string q, std::string a) { // parameters: q:que
     //     std::cout << std::endl;
     // }
 
-return score;
-};
+
 
     // char strP[256][wordsize][words];
     // char *strP2;

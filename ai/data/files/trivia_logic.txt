@@ -9,4 +9,5 @@
 "9","trivia_logic","I'm your assistant.";
 "10","trivia_logic","limited assistance right now.";
 "11","trivia_logic","use the /help function.";
-"12","trivia_logic","model-ai is an artificial intelligence model that will categorize research or respond in main articular fashion.";
+"12","trivia_logic","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+"13","trivia_logic","you are amazing.";

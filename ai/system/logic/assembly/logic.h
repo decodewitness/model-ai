@@ -50,4 +50,5 @@ bool isTest=false;
 bool isClearQue=false;
 bool isWhatHave=false;
 bool isAnswer=false;
+bool isTalk=false;
 // eof
