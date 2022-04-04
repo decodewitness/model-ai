@@ -10,6 +10,7 @@
 // AI.H main header file
 #include "ai.h"
 #include "system/security/credentials/credentials.cpp"
+
 // simulation run
 //#include "simulation.cpp"	// simulation.h is included in "ai.h"
 
@@ -67,7 +68,7 @@ void AI::splash(void) {
 	if (this->disableAudio != true) {
 		this->play_audio(4);
 	}
-}
+};
 
 void AI::help(int n=1) {
 	// the help menu for the interactive menu structure
@@ -126,7 +127,8 @@ void AI::help(int n=1) {
 	std::cout << "/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model." << std::endl;
 	std::cout << "/test -- test the transponder responses." << std::endl;
 	std::cout << "/answer" << std::endl;
-	std::cout << "/talk -- lists the conversation." << std::endl;
+	std::cout << "/list -- lists the conversation." << std::endl;
+
 	// list of arguments
 	std::cout << std::endl;
 };
@@ -136,7 +138,7 @@ void AI::version() {
 	std::cout << PROGRAM << " version: " << VERSION << std::endl;
 	std::cout << DOWNLOADURL << std::endl;
 	std::cout << std::endl;
-}
+};
 
 // initialize_runtime_check
 void AI::initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
@@ -228,23 +230,23 @@ AI::AI(int n) {	// AI constructor
 		//std::cout << "- catching single character to continue..." << std::endl;
 		//ch = getchar();
 	}
-}
+};
 
 void AI::openfs() {	// opens filestream to "ai/bin/TL/tl" file
     fs.open ("ai/bin/TL/tl", std::fstream::in | std::fstream::out | std::fstream::app);
-}
+};
 
 void AI::closefs() {	// closes filestream "fs"
 	fs.close();
-}
+};
 
 void AI::openrs() {	// opens filestream to "ai/bin/TL/t1"
 	rs.open ("ai/bin/TL/t1", std::fstream::in | std::fstream::out | std::fstream::app);
-}
+};
 
 void AI::closers() {	// closes filestream "rs"
 	rs.close();
-}
+};
 
 // still needs to lookup actual financial unit courses online
 void AI::convert(int amount, int method) {	// course converter (INTEGRAL METHOD)
@@ -266,7 +268,7 @@ void AI::convertf(float amount, int method) {	// course converter (FLOATING POIN
 
 void AI::hal() {	// start HAL abstraction layer
 	start_hal();
-}
+};
 
 void AI::AMMod() {	// AMModule
 	// create AMModule
@@ -344,7 +346,7 @@ void AI::run_checks(int args) {	// runs checks on "args"
 		std::cout << std::endl;
 	}
 	// couples back to main()
-}
+};
 
 void AI::check_functions() {	// checking functions
 	int routine; // used to set the checking interval from 1 ... 10 (0=not ;; 1=at start ;; 10=every cycle)	
@@ -380,7 +382,7 @@ void AI::check_functions() {	// checking functions
 	// logging
 	// log(x);
 	this->recordat = true;
-}
+};
 
 void AI::headers() {	// loads the headers which contain modules
 	// file streams
@@ -455,7 +457,7 @@ void AI::headers() {	// loads the headers which contain modules
 	// close file with headers' file handle
 	outdata.close();
 	std::cout << std::endl;
-}
+};
 
 void AI::test(int n=0) { // testing all modules in this function
 
@@ -831,11 +833,11 @@ void AI::decouple() {	// decoupler routine for the ai model
 	this->sampler->decouple();
 	// this->unprep_audio();	// unprepare audio devices
 	this->saygrace();
-}
+};
 
 void AI::destroy_msg() {	// shows "calling destructor" message
 	std::cout << std::endl << "-:: calling destructor for AI::Model." << std::endl;
-}
+};
 
 void AI::saygrace() {	// say grace routine
 	std::cout  << std::endl;
@@ -854,19 +856,26 @@ void AI::saygrace() {	// say grace routine
 	// clean up sampler allocated memory
 	std::cout << "-:: cleaning memory." << std::endl;
 
+	// close files of Transponder
+	if (this->trans == true) { this->transponder->decouple(); }
+
+	// clear all objects
 	if (this->smpl == true)  { delete this->sampler; }
 	if (this->ammod == true) { delete this->ammodule; }
 	if (this->modul == true) { delete this->mdl; }
 	if (this->comb == true)  { delete this->cmb; }
 	if (this->combm == true) { delete this->combinemodule; }
 	if (this->brn == true) 	 { delete this->brain; }
+	if (this->trans == true) { delete this->transponder;}
 
+	// set booleans to false
 	this->smpl = false;
 	this->ammod = false;
 	this->modul = false;
 	this->comb = false;
 	this->combm = false;
 	this->brn = false;
+	this->trans = false;
 
 	// send destruction message
 	this->destroy_msg();
@@ -1389,7 +1398,7 @@ bool AI::pooling(int x) {	// pooling function
 		// add pool data here
 	}
 	return 1;
-}
+};
 
 void AI::auto_patch() {	// auto patch routine
 	std::cout << std::endl << std::endl << "~:: auto-patch routine ::~";
@@ -1401,7 +1410,7 @@ void AI::auto_patch() {	// auto patch routine
 
 	// patch cabinets
 	patch_module();
-}
+};
 
 void AI::rollout(int n) {	// rollout function for several new features
 	std::string toolstr;
@@ -1591,7 +1600,7 @@ void AI::startSim() {
 void AI::sim_stats() {
 	std::cout << std::endl << "~:: generating stats ::~" << std::endl;
 	this->simulation->statistics();
-}
+};
 
 void AI::stopSim() {
 	std::cout << "~:: deleting simulation." << std::endl << std::endl;
@@ -1600,11 +1609,11 @@ void AI::stopSim() {
 
 void AI::listEntity() {
 	this->simulation->listEntities();	// needs fixing
-}
+};
 
 void AI::listObject() {
 	this->simulation->listObjects();	// needs fixing
-}
+};
 
 void AI::listAllEO() {
 	this->simulation->listAll();
@@ -1613,7 +1622,7 @@ void AI::listAllEO() {
 void AI::cycle(int n) {
 	//this->simulation->cycle(n);
 	std::cout << std::endl << "(!) cycle() is disabled." << std::endl;
-}
+};
 
 void AI::printEntityCount() {
 	std::cout << "- entity count: " << this->simulation->returnEntityCount() << std::endl;
@@ -1681,7 +1690,7 @@ void AI::add_to_brain(std::string h, std::string s, std::string c) {
 
 void AI::add_intelligence(std::string tag, std::string desc) {
 	this->brain->add_intel(tag, desc);	
-}
+};
 
 void AI::add_to_brain_manually() {
 	std::string handle;
@@ -1780,13 +1789,13 @@ void AI::list_negative() {	// lists negative saldos in account
 	std::cout << std::endl;
 	this->account->list_negatives();
 	std::cout << std::endl;
-}
+};
 
 void AI::list_positive() {	// lists positive saldi in account
 	std::cout << std::endl;
 	this->account->list_positives();
 	std::cout << std::endl;
-}
+};
 
 void AI::store_account() {	// stores accounts to textfile
 	this->account->store_accounts();
@@ -1879,7 +1888,7 @@ void AI::table(float x) {	// displays table of number x to 10
     }
 
     std::cout << std::endl;
-}
+};
 
 void AI::tableTo(float x, float y=10) {	// displays table of number x to y
 
@@ -1891,7 +1900,7 @@ void AI::tableTo(float x, float y=10) {	// displays table of number x to y
     }
 
     std::cout << std::endl;
-}
+};
 
 void AI::add(float x, float y) {	// function adds arguments x + y
 	std::cout << "adds (" << x << "+" << y << "): ";
@@ -2011,7 +2020,7 @@ bool AI::chk_pytube() {
 		std::cout << "\t~:: no old installation found." << std::endl;
 		return false;
 	}
-}
+};
 
 void AI::run_tube(std::string url) {
 	std::string command = "/usr/bin/pytube " + url;
@@ -2031,7 +2040,7 @@ void AI::run_tube(std::string url) {
 
 void AI::menu() {
 	drawMenu();
-}
+};
 
 // // meta queries
 // void AI::readMetaQue() {
@@ -2045,17 +2054,17 @@ void AI::answer(bool b) {	// test queue
 	} else {
 		readMetaQueries(b);	// true also reverses all meta queries 
 	}
-}
+};
 
 void AI::clearQue() {	// clears the meta queries in: "AI/LIB/QUERIES/META_QUERIES"
 	void clear_que();
 	clear_que();
-}
+};
 
 // "/what" or "/learned" triggers this next command
 void AI::whatHaveYouGot() {	// shows stored references
 	whatHaveYou();
-}
+};
 
 // TEST TEST TESTING FUNCTIONS
 void AI::testA() {	// test queue
@@ -2072,12 +2081,14 @@ void AI::testA() {	// test queue
 	// sleep(2);
 	//readMetaQueries(true);
 	// this->answerMeta(false);
-}
+};
 
 void AI::talk(int x) {	// list stored conversation
 	size_t max_history = x;
-	listConvo(max_history);
-}
+	if (this->trans == true) {
+		this->transponder->listConvo(max_history);
+	}
+};
 
 #endif
 // eof

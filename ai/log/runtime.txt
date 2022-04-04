@@ -1288,6 +1288,10 @@ ENTER PASSCODE:
 ~:: opened output / ai/system/logic/transponder/brain/nlp/intelligence/store_file.
 
 ~:: transponder queries.
+
+	~:: transponder->init().
+		~:: successfully opened: "ai/lib/queries/weights".
+		~:: successfully opened: "ai/data/files/synonyms.txt".
 -:: running checks arguments.
 	0: arguments.
 
@@ -1438,16 +1442,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd26f91120)
-	- stacking header:(1)::<address>(0x7ffd26f91140)
-	- stacking header:(2)::<address>(0x7ffd26f91160)
-	- stacking header:(3)::<address>(0x7ffd26f91180)
-	- stacking header:(4)::<address>(0x7ffd26f911a0)
-	- stacking header:(5)::<address>(0x7ffd26f911c0)
-	- stacking header:(6)::<address>(0x7ffd26f911e0)
-	- stacking header:(7)::<address>(0x7ffd26f91200)
-	- stacking header:(8)::<address>(0x7ffd26f91220)
-	- stacking header:(9)::<address>(0x7ffd26f91240)
+	- stacking header:(0)::<address>(0x7ffce9fe6570)
+	- stacking header:(1)::<address>(0x7ffce9fe6590)
+	- stacking header:(2)::<address>(0x7ffce9fe65b0)
+	- stacking header:(3)::<address>(0x7ffce9fe65d0)
+	- stacking header:(4)::<address>(0x7ffce9fe65f0)
+	- stacking header:(5)::<address>(0x7ffce9fe6610)
+	- stacking header:(6)::<address>(0x7ffce9fe6630)
+	- stacking header:(7)::<address>(0x7ffce9fe6650)
+	- stacking header:(8)::<address>(0x7ffce9fe6670)
+	- stacking header:(9)::<address>(0x7ffce9fe6690)
 
 
 -:: checking AI functions.
@@ -1493,19 +1497,19 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+regular file: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./downloads
+regular file: -- ./downloads
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+regular file: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+regular file: -- ./info.txt
 
 
-~:: running (1) queries.
+~:: running (10) queries.
 
 ::- type your query -::
 
@@ -1585,12 +1589,9 @@ punch.
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1598,12 +1599,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1611,12 +1609,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1624,12 +1619,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1637,12 +1629,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1650,12 +1639,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1663,12 +1649,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1676,12 +1659,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1689,12 +1669,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1702,12 +1679,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1715,12 +1689,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1728,12 +1699,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 0
@@ -1741,12 +1709,9 @@ incremental size function : 0
 
 (score):
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
+~:: scored() : 
 
-~:: results :
 
-	~:: closed "ai/lib/queries/weights".
 	- amazing
 
 incremental size function : 1
@@ -1775,29 +1740,324 @@ labelled faculty : 1
 
 ->>> pushing ->>> you
 
+(debug) res : "you".
+
 ~:: iterating synonyms for: "you"
+(debug) str1 :
+Amazing	Incredible	Unbelievable	Improbable	Astonishing
+
+(debug) str1 :
+Anger	Enrage	Infuriate	Arouse	Nettle
+
+(debug) str1 :
+Angry	Wrathful	Furious	Enraged	Indignant
+
+(debug) str1 :
+Answer	Reply	Respond	Retort	Acknowledge
+
+(debug) str1 :
+Ask	Question	Inquire	Query	Interrogate
+
+(debug) str1 :
+Awful	Dreadful	Terrible	Abominable	Unpleasant
+
+(debug) str1 :
+Bad	Depraved	Rotten	Contaminated	Sinful
+
+(debug) str1 :
+Beautiful	Gorgeous	Dazzling	Splendid	Magnificent
+
+(debug) str1 :
+Begin	Start	Open	Launch	Initiate
+
+(debug) str1 :
+Big	Enormous	Huge	Immense	Gigantic
+
+(debug) str1 :
+Brave	Courageous	Fearless	Dauntless	Intrepid
+
+(debug) str1 :
+Break	Fracture	Wreck	Crash	Demolish
+
+(debug) str1 :
+Bright	Sparkling	Shimmering	Radiant	Vivid
+
+(debug) str1 :
+Calm	Quiet	Peaceful	Unruffled	Tranquil
+
+(debug) str1 :
+Come	Approach	Advance	Near	Arrive
+
+(debug) str1 :
+Cool	Chilly	Cold	Frosty	Frigid
+
+(debug) str1 :
+Crooked	Bent	Twisted	Zigzag	Hooked
+
+(debug) str1 :
+Cry	Weep	Wail	Sob	Bawl
+
+(debug) str1 :
+Cut	Slice	Carve	Cleave	Slit                                                                  
+
+(debug) str1 :
+Dangerous	Perilous	Hazardous	Risky	Uncertain
+
+(debug) str1 :
+Dark	Shadowy	Unlit	Murky	Gloomy
+
+(debug) str1 :
+Decide	Determine	Settle	Choose	Resolve
+
+(debug) str1 :
+Definite	Certain	Sure	Positive	Determined
+
+(debug) str1 :
+Delicious	Savory	Delectable	Appetizing	Luscious
+
+(debug) str1 :
+Describe	Portray	Characterize	Picture	Narrate
+
+(debug) str1 :
+Destroy	Ruin	Demolish	Raze	Slay
+
+(debug) str1 :
+Difference	Disagreement	Inequity	Contrast	Dissimilarity
+
+(debug) str1 :
+Do	Execute	Enact	Carry Out	Finish
+
+(debug) str1 :
+Dull	Unimaginative	Lifeless	Tedious	Tiresome
+
+(debug) str1 :
+Eager	Keen	Fervent	Enthusiastic	Involved
+
+(debug) str1 :
+End	Stop	Finish	Terminate	Conclude
+
+(debug) str1 :
+Enjoy	Appreciate	Delight In	Be Pleased	Indulge In
+
+(debug) str1 :
+Explain	Elaborate	Clarify	Define	Interpret
+
+(debug) str1 :
+Fair	Just	Impartial	Unbiased	Objective
+
+(debug) str1 :
+Fall	Drop	Descend	Plunge	Topple
+
+(debug) str1 :
+False	Fake	Fraudulent	Counterfeit	Spurious
+
+(debug) str1 :
+Fast	Quick	Rapid	Hasty	Swiftly
+
+(debug) str1 :
+Fat	Stout	Corpulent	Paunchy	Plump
+
+(debug) str1 :
+Fear	Fright	Dread	Terror	Alarm
+
+(debug) str1 :
+Fly	Soar	Hover	Flit	Wing
+
+(debug) str1 :
+Funny	Humorous	Amusing	Droll	Laughable
+
+(debug) str1 :
+Get	Acquire	Obtain	Secure	Procure
+
+(debug) str1 :
+Go	Recede	Depart	Fade	Disappear
+
+(debug) str1 :
+Good	Excellent	Apt	Marvelous	Qualified
+
+(debug) str1 :
+Great	Noteworthy	Worthy	Distinguished	Remarkable
+
+(debug) str1 :
+Gross	Improper	Rude	Coarse	Indecent
+
+(debug) str1 :
+Happy	Pleased	Contented	Satisfied	Delighted
+
+(debug) str1 :
+Hate	Despise	Loathe	Detest	Abhor
+
+(debug) str1 :
+Have	Acquire	Gain	Maintain	Believe
+
+(debug) str1 :
+Help	Aid	Assist	Succor	Encourage
+
+(debug) str1 :
+Hide	Conceal	Camouflage	Shroud	Veil
+
+(debug) str1 :
+Hurry	Hasten	Urge	Accelerate	Bustle
+
+(debug) str1 :
+Hurt	Damage	Distress	Afflict	Pain
+
+(debug) str1 :
+Idea	Thought	Concept	Conception	Notion
+
+(debug) str1 :
+Important	Necessary	Vital	Critical	Indispensable
+
+(debug) str1 :
+Interesting	Fascinating	Bright	Intelligent	Animated
+
+(debug) str1 :
+Keep	Hold	Maintain	Sustain	Support
+
+(debug) str1 :
+Kill	Slay	Execute	Assassinate	Abolish
+
+(debug) str1 :
+Lazy	Indolent	Slothful	Idle	Inactive
+
+(debug) str1 :
+Little	Dinky	Puny	Diminutive	Miniature
+
+(debug) str1 :
+Look	Scrutinize	Inspect	Survey	Study
+
+(debug) str1 :
+Love	Like	Admire	Esteem	Fancy
+
+(debug) str1 :
+Make	Design	Fabricate	Manufacture	Produce
+
+(debug) str1 :
+Mark	Impress	Effect	Trace	Imprint
+
+(debug) str1 :
+Mischievous	Prankish	Waggish	Impish	Sportive
+
+(debug) str1 :
+Move	Plod	Go	Creep	Crawl
+
+(debug) str1 :
+Neat	Trim	Dapper	Natty	Smart
+
+(debug) str1 :
+New	Novel	Modern	Current	Recent
+
+(debug) str1 :
+Old	Aged	Used	Worn	Dilapidated
+
+(debug) str1 :
+Part	Portion	Section	Fraction	Fragment
+
+(debug) str1 :
+Place	Space	Area	Spot	Plot
+
+(debug) str1 :
+Plan	Region	Location	Situation	Position
+
+(debug) str1 :
+Predicament	Quandary	Dilemma	Plight	Spot
+
+(debug) str1 :
+Put	Place	Assign	Keep	Establish
+
+(debug) str1 :
+Quiet	Tranquil	Peaceful	Calm	Restful
+
+(debug) str1 :
+Right	Correct	Accurate	Factual	True
+
+(debug) str1 :
+Run	Race	Sprint	Dash	Rush
+
+(debug) str1 :
+Say/Tell	Recount	Narrate	Explain	Reveal
+
+(debug) str1 :
+Scared	Panicked	Fearful	Unnerved	Insecure
+
+(debug) str1 :
+Show	Display	Exhibit	Present	Note
+
+(debug) str1 :
+Slow	Unhurried	Behind	Tedious	Slack
+
+(debug) str1 :
+Stop	Cease	Halt	Stay	Pause
+
+(debug) str1 :
+Story	Tale	Yarn	Account	Narrative
+
+(debug) str1 :
+Strange	Odd	Peculiar	Unusual	Unfamiliar
+
+(debug) str1 :
+Take	Hold	Catch	Seize	Grasp
+
+(debug) str1 :
+Tell	Disclose	Reveal	Show	Expose
+
+(debug) str1 :
+Think	Consider	Contemplate	Reflect	Mediate
+
+(debug) str1 :
+Trouble	Distress	Anguish	Anxiety	Wretchedness
+
+(debug) str1 :
+True	Accurate	Right	Proper	Precise
+
+(debug) str1 :
+Ugly	Horrible	Unpleasant	Monstrous	Terrifying
+
+(debug) str1 :
+# eof
+
+
+(debug) term : "0".
 	:: (synonyms) : 0
 
 ->>> pushing ->>> are
 
-~:: iterating synonyms for: "you"
-	:: (synonyms) : 0
+(debug) res : "you".
 
 ~:: iterating synonyms for: "are"
+
+(debug) term : "0".
+	:: (synonyms) : 0
+
+(debug) res : "are".
+
+~:: iterating synonyms for: "are"
+
+(debug) term : "0".
 	:: (synonyms) : 0
 
 ->>> pushing ->>> amazing
 
-~:: iterating synonyms for: "you"
-	:: (synonyms) : 0
-
-~:: iterating synonyms for: "are"
-	:: (synonyms) : 0
+(debug) res : "you".
 
 ~:: iterating synonyms for: "amazing"
 
-HiT!
-	:: (synonyms) : Amazing	Incredible	Unbelievable	Improbable	Astonishing	
+(debug) term : "0".
+	:: (synonyms) : 0
+
+(debug) res : "are".
+
+~:: iterating synonyms for: "amazing"
+
+(debug) term : "0".
+	:: (synonyms) : 0
+
+(debug) res : "amazing."".
+
+~:: iterating synonyms for: "amazing"
+
+(debug) term : "0".
+	:: (synonyms) : 0
 (EOT)
 
 
@@ -1809,24 +2069,8 @@ HiT!
 
 (EOT)
 
--:: aborting artificial life sequence, and clean up gracefully!
+~:: running (9) queries.
 
--:: display ((x)->live())(?x) equaled  .
+::- type your query -::
 
--:: destructor artificial life routine was called. -::
-	killing abstraction layer.
-
--:: decoupler.
-	-:: decoupling sampler
-	-:: sampler set to pause.
-		(-  ||  -)
-
-
-::=> saving grace (routine) and closing libraries <=::
-
--:: closing files.
--:: cleaning memory.
-~:: closed access.
-
--:: calling destructor for AI::Model.
--:: done.
+punch.
