@@ -58,7 +58,7 @@ public:
     // process answers
     int rank_score(std::string q, std::string a);  // processes score/ranking for the answer based of similarities
     void setSubject(std::string s);
-    int scored(std::string a, std::string q);
+    int scored(std::string q, std::string tq);
     void listConvo(size_t max_history_length);
     std::string synonyms(std::string q);
 

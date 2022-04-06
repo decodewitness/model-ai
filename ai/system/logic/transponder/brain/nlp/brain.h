@@ -12,7 +12,7 @@ const int batch_size = 1024;
 const char store_reference_file[] = "ai/system/logic/transponder/brain/nlp/intelligence/cabinet_collection";
 const char data_collection[] = "ai/system/logic/transponder/brain/nlp/intelligence/data_collection";
 const char store_file[] = "ai/system/logic/transponder/brain/nlp/intelligence/store_file";
-std::string intelligence_file = "ai/system/logic/transponder/ai/brain/nlp/intelligence/intelligence";   // will poke into the file with the intelligence
+std::string intelligence_file = "ai/system/logic/transponder/brain/nlp/intelligence/intelligence";   // will poke into the file with the intelligence
 std::string intel_file = "ai/system/logic/transponder/brain/nlp/intelligence/intelligence";
 std::string code;   // used by std::string Brain::search_index_code(std::string l)  // in file brain.cpp
 std::string b_string;   // string with various tags in intelligence_file

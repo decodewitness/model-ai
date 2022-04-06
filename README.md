@@ -1340,6 +1340,10 @@ ENTER PASSCODE:
 ~:: opened output / ai/system/logic/transponder/brain/nlp/intelligence/store_file.
 
 ~:: transponder queries.
+
+	~:: transponder->init().
+		~:: successfully opened: "ai/lib/queries/weights".
+		~:: successfully opened: "ai/data/files/synonyms.txt".
 -:: running checks arguments.
 	0: arguments.
 
@@ -1490,16 +1494,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd26f91120)
-	- stacking header:(1)::<address>(0x7ffd26f91140)
-	- stacking header:(2)::<address>(0x7ffd26f91160)
-	- stacking header:(3)::<address>(0x7ffd26f91180)
-	- stacking header:(4)::<address>(0x7ffd26f911a0)
-	- stacking header:(5)::<address>(0x7ffd26f911c0)
-	- stacking header:(6)::<address>(0x7ffd26f911e0)
-	- stacking header:(7)::<address>(0x7ffd26f91200)
-	- stacking header:(8)::<address>(0x7ffd26f91220)
-	- stacking header:(9)::<address>(0x7ffd26f91240)
+	- stacking header:(0)::<address>(0x7ffcdedaf870)
+	- stacking header:(1)::<address>(0x7ffcdedaf890)
+	- stacking header:(2)::<address>(0x7ffcdedaf8b0)
+	- stacking header:(3)::<address>(0x7ffcdedaf8d0)
+	- stacking header:(4)::<address>(0x7ffcdedaf8f0)
+	- stacking header:(5)::<address>(0x7ffcdedaf910)
+	- stacking header:(6)::<address>(0x7ffcdedaf930)
+	- stacking header:(7)::<address>(0x7ffcdedaf950)
+	- stacking header:(8)::<address>(0x7ffcdedaf970)
+	- stacking header:(9)::<address>(0x7ffcdedaf990)
 
 
 -:: checking AI functions.
@@ -1545,19 +1549,19 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+block device: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./downloads
+block device: -- ./downloads
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+block device: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+block device: -- ./info.txt
 
 
-~:: running (1) queries.
+~:: running (3) queries.
 
 ::- type your query -::
 
@@ -1566,52 +1570,89 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	amazing
-	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0 ]
+	artificial
+	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "amazing".
-	- HMAC string :: *string_next_logic() ::  (amazing) is >> 
+*string_next_logic() :: ssh: "artificial".
+	- HMAC string :: *string_next_logic() ::  (artificial) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
+(debug) hit search function.
+	search1 : artificial
+	search2 : artificial
+	line1 :   something real or artificial made up out of a matter construct. + 1
+	line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
+
+sorter():
+{ ai/system/logic/transponder/brain/data/artificial.dat }
+{ ai/system/logic/transponder/brain/data/artificial2.dat }
+::
+- opening: ai/system/logic/transponder/brain/data/artificial.dat.
+	- ai/system/logic/transponder/brain/data/artificial.dat : is open.
+		-- :: ( artificial assembly, model-ai. )
+- opening: ai/system/logic/transponder/brain/data/artificial2.dat.
+	- ai/system/logic/transponder/brain/data/artificial2.dat : is open.
+		-- :: ( artificial data. artificial encounters. artificial life. artificial measure. artificial object. artificial reality. artificial or logical conduit. )
+
+sorted: ai/system/logic/transponder/brain/data/artificial.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+TMP: model-ai
+	~:: query matches search string: "artificial".
+
+-* artificial is:
+  something real or artificial made up out of a matter construct. + 1
+
+  being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
 
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 
-~:: prepTransponder() : (amazing)
+~:: prepTransponder() : (artificial)
 ~:: transponder -> prep()
 
-~:: set subject to: "amazing".
-(debug) word :: amazing
+~:: set subject to: "artificial".
+(debug) word :: artificial
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "amazing".
+(debug) calling prepare_ints() (from) -> "artificial".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) amazing :: #2928
+(debug) 0) artificial :: #5919
 
 ~:: meta queries ~:: storing meta query sequence
 	~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 	- meta sequences:
-		- 2928
+		- 5919
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("2928,")
+	~:: reverse_meta_query_lookup("5919,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
+	- artificial		 --> *(a+i) = 5919 - *(a+i) - 1 = 5918
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1625,9 +1666,9 @@ punch.
 	-----------------
 
 		* words no_#: 1
-		* length: 7
-		* vowels: 3
-		* consonants: 4
+		* length: 10
+		* vowels: 5
+		* consonants: 5
 		* numbers: 0
 		* special chars: 0
 		* unknown chars: 0
@@ -1635,182 +1676,162 @@ punch.
 
 (debug) answer.
 
-(score):
+~:: scored() : 
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
 
-~:: results :
+~:: pushing back ---> artificial
 
-	~:: closed "ai/lib/queries/weights".
-	- amazing
 
-incremental size function : 0
-(rank): 0
+	- artificial
 
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- amazing
+	~:: matching occurences.
 
 incremental size function : 0
-(rank): 0
 
-(score):
+~:: scored() : 
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
 
-~:: results :
+~:: pushing back ---> artificial
 
-	~:: closed "ai/lib/queries/weights".
-	- amazing
 
-incremental size function : 0
-(rank): 0
+	- artificial
 
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- amazing
+	~:: matching occurences.
 
 incremental size function : 0
-(rank): 0
 
-(score):
+~:: scored() : 
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
 
-~:: results :
+~:: pushing back ---> artificial
 
-	~:: closed "ai/lib/queries/weights".
-	- amazing
 
-incremental size function : 0
-(rank): 0
+	- artificial
 
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- amazing
+	~:: matching occurences.
 
 incremental size function : 0
-(rank): 0
 
-(score):
+~:: scored() : 
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
 
-~:: results :
+~:: pushing back ---> artificial
 
-	~:: closed "ai/lib/queries/weights".
-	- amazing
 
-incremental size function : 0
-(rank): 0
+	- artificial
 
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- amazing
+	~:: matching occurences.
 
 incremental size function : 0
-(rank): 0
 
-(score):
+~:: scored() : 
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
 
-~:: results :
+~:: pushing back ---> artificial
 
-	~:: closed "ai/lib/queries/weights".
-	- amazing
 
-incremental size function : 0
-(rank): 0
+	- artificial
 
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- amazing
+	~:: matching occurences.
 
 incremental size function : 0
-(rank): 0
 
-(score):
+~:: scored() : 
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
 
-~:: results :
+~:: pushing back ---> artificial
 
-	~:: closed "ai/lib/queries/weights".
-	- amazing
 
-incremental size function : 0
-(rank): 0
+	- artificial
 
-(score):
-
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
-
-~:: results :
-
-	~:: closed "ai/lib/queries/weights".
-	- amazing
+	~:: matching occurences.
 
 incremental size function : 0
-(rank): 0
 
-(score):
+~:: scored() : 
 
-~:: scores() - calculating scores:
-	~:: successfully opened: "ai/lib/queries/weights".
 
-~:: results :
+~:: pushing back ---> artificial
 
-	~:: closed "ai/lib/queries/weights".
-	- amazing
+
+	- artificial
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> artificial
+
+
+	- artificial
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> artificial
+
+
+	- artificial
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> artificial
+
+
+	- artificial
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> artificial
+
+
+	- artificial
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> artificial
+
+
+	- artificial
+
+	~:: matching occurences.
 
 incremental size function : 1
 
-RESULT: 0) : 13
+~:: scored() : 
 
-RESULT: 1) : trivia_logic
 
-RESULT: 2) : you are amazing.
+~:: pushing back ---> artificial
 
-->>> pushed back ->>> you are amazing."
-(rank): 1
+
+	- artificial
+
+	~:: matching occurences.
+
+incremental size function : 0
+(CHOSEN) : (1) : "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
 
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 13
@@ -1823,65 +1844,318 @@ labelled faculty : 1
 
 	% having convos?
 
-:: you are amazing."
-
-->>> pushing ->>> you
-
-~:: iterating synonyms for: "you"
-	:: (synonyms) : 0
-
-->>> pushing ->>> are
-
-~:: iterating synonyms for: "you"
-	:: (synonyms) : 0
-
-~:: iterating synonyms for: "are"
-	:: (synonyms) : 0
-
-->>> pushing ->>> amazing
-
-~:: iterating synonyms for: "you"
-	:: (synonyms) : 0
-
-~:: iterating synonyms for: "are"
-	:: (synonyms) : 0
-
-~:: iterating synonyms for: "amazing"
-
-HiT!
-	:: (synonyms) : Amazing	Incredible	Unbelievable	Improbable	Astonishing	
+:: artificial
 (EOT)
 
 
 
 ~:: transponder -> answer()
 
-+query :: (amazing)
++query :: (artificial)
 
 
 (EOT)
 
--:: aborting artificial life sequence, and clean up gracefully!
+~:: running (2) queries.
 
--:: display ((x)->live())(?x) equaled  .
+::- type your query -::
 
--:: destructor artificial life routine was called. -::
-	killing abstraction layer.
+punch.
+--?:: 
 
--:: decoupler.
-	-:: decoupling sampler
-	-:: sampler set to pause.
-		(-  ||  -)
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 5
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+
+sorter():
+{ ai/system/logic/transponder/brain/data/intelligence.dat }
+- opening: ai/system/logic/transponder/brain/data/intelligence.dat.
+	- unable to open : ai/system/logic/transponder/brain/data/intelligence.dat
+
+sorted: ai/system/logic/transponder/brain/data/intelligence.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+	~:: query matches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 5
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+
+~:: prepTransponder() : (intelligence)
+~:: transponder -> prep()
+
+~:: set subject to: "intelligence".
+(debug) word :: intelligence
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "intelligence".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (2).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) intelligence :: #2526
 
 
-::=> saving grace (routine) and closing libraries <=::
 
--:: closing files.
--:: cleaning memory.
-~:: closed access.
+~:: meta queries
+	~:: reverse_meta_query_lookup("2526,")
+~:::~
 
--:: calling destructor for AI::Model.
--:: done.
+~:: reverse meta query lookup: 
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+
+(EOT)
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 12
+		* vowels: 5
+		* consonants: 7
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 1
+
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+(CHOSEN) : (1) : "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 13
+
+labelled faculty : 1
+
+[ANSWER]:
+
+~:: listConvo() :
+
+	% having convos?
+
+:: artificial
+:: intelligence
+(EOT)
+
+
+
+~:: transponder -> answer()
+
++query :: (intelligence)
+
+
+(EOT)
+
+~:: running (1) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
+ ]
+
+-:: finished x computation.
+
+(kill chain) function() : 9
+
+-/- initializing killchain(1) sequence.
+
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).

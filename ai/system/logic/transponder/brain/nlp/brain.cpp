@@ -143,7 +143,6 @@ void Brain::file_access(int level) {
         }
     }
 
-
     if (level == 7) {
         std::cout << "(debug) file_access(level=" << level << ")." << std::endl;
         // if (intelligence_file.length() >= 5) { // check if file has extension
