@@ -229,7 +229,7 @@ void Transponder::analytics(std::string s) {
     std::cout << std::endl << "\t-----------------" << std::endl;
     std::cout << std::endl;
 
-    // out put analytics data
+    // output analytical data
     std::cout << "\t\t* words no_#: " << (wordcount + 1) << std::endl;
     std::cout << "\t\t* length: " << len << std::endl;
     std::cout << "\t\t* vowels: " << noun << std::endl;
@@ -252,6 +252,9 @@ void Transponder::analytics(std::string s) {
     std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
     if (this->response.length() > 0) {
         std::cout << "(RESPONSE) : " << this->result << std::endl;
+        this->points = 0;
+        this->result = "missing";   // redundant
+        //this->scores.seekg(SEEK_SET);
     }
 
     // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
@@ -399,6 +402,7 @@ std::string Transponder::answer(std::string s) {
             this->ints.push_back(rank);
             // process answers into NEW!! ARRAY!!!!!!!!
 
+            // this part is redundant
             if (rank > 0) {
                 if (rank > b) {
                     b=rank;
@@ -406,6 +410,8 @@ std::string Transponder::answer(std::string s) {
                 }
             }
         }
+        // rewind file
+        filen.seekg(SEEK_SET);
     } else {
         std::cout << std::endl << "~::!::~ error opening file (Transponder::answer()): \"" << used_file << "\"" << std::endl << std::endl;
     }

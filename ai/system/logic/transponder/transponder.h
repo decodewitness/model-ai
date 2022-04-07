@@ -36,6 +36,7 @@ private:
     bool analytical;    // whether to use "analytics" function
     vector<int> ints;
     vector<std::string> strings;
+    vector<std::string> backlog;
     std::ifstream scores;
     std::ifstream syno;
     int points; // keeps track of highest score

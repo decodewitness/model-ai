@@ -1442,16 +1442,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc4ca45ce0)
-	- stacking header:(1)::<address>(0x7ffc4ca45d00)
-	- stacking header:(2)::<address>(0x7ffc4ca45d20)
-	- stacking header:(3)::<address>(0x7ffc4ca45d40)
-	- stacking header:(4)::<address>(0x7ffc4ca45d60)
-	- stacking header:(5)::<address>(0x7ffc4ca45d80)
-	- stacking header:(6)::<address>(0x7ffc4ca45da0)
-	- stacking header:(7)::<address>(0x7ffc4ca45dc0)
-	- stacking header:(8)::<address>(0x7ffc4ca45de0)
-	- stacking header:(9)::<address>(0x7ffc4ca45e00)
+	- stacking header:(0)::<address>(0x7ffc0ca1a250)
+	- stacking header:(1)::<address>(0x7ffc0ca1a270)
+	- stacking header:(2)::<address>(0x7ffc0ca1a290)
+	- stacking header:(3)::<address>(0x7ffc0ca1a2b0)
+	- stacking header:(4)::<address>(0x7ffc0ca1a2d0)
+	- stacking header:(5)::<address>(0x7ffc0ca1a2f0)
+	- stacking header:(6)::<address>(0x7ffc0ca1a310)
+	- stacking header:(7)::<address>(0x7ffc0ca1a330)
+	- stacking header:(8)::<address>(0x7ffc0ca1a350)
+	- stacking header:(9)::<address>(0x7ffc0ca1a370)
 
 
 -:: checking AI functions.
@@ -1497,16 +1497,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+FIFO/pipe: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./downloads
+FIFO/pipe: -- ./downloads
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+FIFO/pipe: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+FIFO/pipe: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -2041,7 +2041,8 @@ incremental size function : 0
 	~:: matching occurences.
 
 incremental size function : 1
-(RESULT) : 
+(RESULT) : "13","trivia_logic","you are amazing.";
+
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 13
 
@@ -2062,7 +2063,7 @@ labelled faculty : 1
 ~:: transponder -> answer()
 
 +query :: (amazing)
-(RESPONSE) : "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+(RESPONSE) : "13","trivia_logic","you are amazing.";
 
 
 (EOT)
