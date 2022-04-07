@@ -10,6 +10,7 @@ Transponder::Transponder() {
     std::cout << std::endl << "~:: transponder queries." << std::endl;
     sleep(1);
     this->init();
+    this->points = 0;
 };
 
 void Transponder::init() {
@@ -249,6 +250,10 @@ void Transponder::analytics(std::string s) {
     // answer the question
     std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
     std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
+    if (this->response.length() > 0) {
+        std::cout << "(RESPONSE) : " << this->result << std::endl;
+    }
+
     // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
     std::cout << std::endl;
 };
@@ -401,9 +406,6 @@ std::string Transponder::answer(std::string s) {
                 }
             }
         }
-
-        std::cout << "(CHOSEN) : (" << b << ") : " << tp << std::endl;
-
     } else {
         std::cout << std::endl << "~::!::~ error opening file (Transponder::answer()): \"" << used_file << "\"" << std::endl << std::endl;
     }
@@ -525,10 +527,25 @@ int Transponder::scored(std::string q, std::string tq) {
         }
     }
 
-    words.clear();
 
     std::cout << std::endl << "incremental size function : " << vec.size() << std::endl;
     score = vec.size();
+    vec.clear();
+
+    // debugging output (1)
+    std::cout << "(RESULT) : ";
+
+    if (score > this->points) {
+        // debugging output (2)
+        std::cout << tq << endl;
+        this->points = score;
+        this->result = tq;
+    }
+
+    words.clear();
+
+return score;
+};
 
     // if (vec.size() > 0) {   // let's have a conversation :)
     //     std::stringstream s_stream(a); //create string stream from the query string
@@ -554,11 +571,6 @@ int Transponder::scored(std::string q, std::string tq) {
     //     // conversation.push_back(result.at(2));  // should work
     //     // std::cout << std::endl << "->>> pushed back ->>> " << result.at(2) << std::endl;
     // }
-
-    vec.clear();
-
-return score;
-};
 
     // // Get the first occurrence
     // size_t pos = a.find(q);
@@ -674,6 +686,9 @@ void Transponder::listConvo(size_t max_history_length) {  // list conversation, 
 std::string Transponder::synonyms(std::string q) {    // q is term for looking up synonyms thereof
     std::string term;
     std::string line;
+
+    std::cout << std::endl << "synonyms() :" << std::endl;
+
     if (this->syno.is_open() == true) {
         while (getline(this->syno, line)) {
             std::cout << line << std::endl;

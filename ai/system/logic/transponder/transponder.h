@@ -38,10 +38,13 @@ private:
     vector<std::string> strings;
     std::ifstream scores;
     std::ifstream syno;
-    
+    int points; // keeps track of highest score
+
+
 protected:
     std::string subject; // same as "initial_sentence" but maybe change this later
     std::string response; // the original answer, queried by the transponder and then returned
+    std::string result; // the official answer of the transponder
     std::string waquestion;
     
 public:
