@@ -184,6 +184,19 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/list") == false) {
         std::cout << std::endl << "~:: parameter request: listConvo()." << std::endl;
         isTalk = true;
+    } else if (str.compare("/export_backlog1") == false) {
+        std::cout << std::endl << "~:: parameter request: export_backlogs(1)." << std::endl;
+        isExportBL = true;
+        isExportBL1 = true;
+    } else if (str.compare("/export_backlog2") == false) {
+        std::cout << std::endl << "~:: parameter request: export_backlogs(2)." << std::endl;
+        isExportBL = true;
+        isExportBL2 = true;
+    } else if (str.compare("/export_backlogs") == false) {
+        std::cout << std::endl << "~:: parameter request: export_backlogs(both)." << std::endl;
+        isExportBL = true;
+        isExportBL1 = true;
+        isExportBL2 = true;
     }
 };
 

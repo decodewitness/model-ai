@@ -298,6 +298,11 @@ public:
 	void createTransponder();
 	void tsp(std::string s);
 	void prepTransponder(std::string s);
+	// exporting transponder backlogs
+	void export_backlog1();	// export backlog_queries
+	void export_backlog2();	// export backlog_answers
+	void export_backlogs();	// export both backlog_queries & backlog_answers
+
 
 	// handle data
 	void hdata();

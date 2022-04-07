@@ -28,6 +28,10 @@ std::string trivia_logic = "ai/data/files/trivia_logic.txt";
 std::string synonym = "ai/data/files/synonyms.txt";
 std::string weights = "ai/lib/queries/weights";
 
+// backlog export
+std::string backlog_query = "ai/log/backlog_queries.txt";
+std::string backlog_answer = "ai/log/backlog_answers.txt";
+
 
 // Transponder  
 class Transponder {
@@ -36,7 +40,8 @@ private:
     bool analytical;    // whether to use "analytics" function
     vector<int> ints;
     vector<std::string> strings;
-    vector<std::string> backlog;
+    vector<std::string> backlog_queries;
+    vector<std::string> backlog_answers;
     std::ifstream scores;
     std::ifstream syno;
     int points; // keeps track of highest score
@@ -71,6 +76,9 @@ public:
     void prepTr(std::string s); // preps Transponder with query
     void analytics(std::string s);  // textual analytics function
     std::string retVal();
+
+    // export backlog
+    void export_backlog(int n);    // n=0 (backlog_queries); n=1 (backlog_answers); n=2 (both)
 };
 
 // eof

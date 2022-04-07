@@ -249,12 +249,23 @@ void Transponder::analytics(std::string s) {
     
     // answer the question
     std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
-    std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
+    
+    // ANSWER / RESPONSE
     if (this->response.length() > 0) {
+        std::cout << std::endl << "~:: pushing back queries." << std::endl;
+
+        // push back query
+        this->backlog_queries.push_back(this->subject);
+        this->backlog_answers.push_back(this->result);
+        
+        // output
+        std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
         std::cout << "(RESPONSE) : " << this->result << std::endl;
-        this->points = 0;
+        
+        // reset points
+        this->points = 0;   // this keeps track of the highest score for results
+        // reset result
         this->result = "missing";   // redundant
-        //this->scores.seekg(SEEK_SET);
     }
 
     // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
@@ -703,10 +714,82 @@ std::string Transponder::synonyms(std::string q) {    // q is term for looking u
         std::cout << std::endl << "~:!:~ (error) - \"syno\" is not open." << std::endl;
     }
 
-
 return term;
 };
 
+void Transponder::export_backlog(int n=2) {
+
+    ofstream out_queries;
+    ofstream out_answers;
+
+    std::cout << std::endl;
+    std::cout << "export_backlog() : " << std::endl;
+
+    switch (n) {
+        case 0:
+            std::cout << std::endl;
+            std::cout << "\t~:: exporting backlog <backlog_queries> to: \"ai/log/backlog_queries.txt\"" << std::endl;
+            std::cout << std::endl;
+
+            out_queries.open(backlog_query);
+            if (out_queries.is_open() == true) {
+                for (size_t i=0; i<backlog_queries.size(); i++) {
+                    out_queries << backlog_queries.at(i) << std::endl;
+                }
+                out_queries.close();
+                std::cout << "\t~:: exported." << std::endl;
+            }            
+            break;
+
+        case 1:
+            std::cout << std::endl;
+            std::cout << "\t~:: exporting backlog <backlog_answers> to: \"ai/log/backlog_answers.txt\"" << std::endl;
+            std::cout << std::endl;
+
+            out_answers.open(backlog_answer);
+            
+            if (out_answers.is_open() == true) {
+                for (size_t i=0; i<backlog_answers.size(); i++) {
+                    out_answers << backlog_answers.at(i) << std::endl;
+                }
+                out_answers.close();
+                std::cout << "\t~:: exported." << std::endl;
+            }
+            break;
+
+        case 2:
+            std::cout << std::endl;
+            std::cout << "\t~:: exporting backlogs - <backlog_queries> & <backlog_answers> to: \"ai/log/backlog_queries.txt\" && to \"ai/log/backlog_answers.txt\"" << std::endl;
+            std::cout << std::endl;
+
+            out_queries.open(backlog_query);
+            if (out_queries.is_open() == true) {
+                for (size_t i=0; i<backlog_queries.size(); i++) {
+                    out_queries << backlog_queries.at(i) << std::endl;
+                }
+                out_queries.close();
+                std::cout << "\t~:: exported <backlog_queries>." << std::endl;
+            }
+            
+            out_answers.open(backlog_answer);
+            if (out_answers.is_open() == true) {
+                for (size_t i=0; i<backlog_answers.size(); i++) {
+                    out_answers << backlog_answers.at(i) << std::endl;
+                }
+                out_answers.close();
+                std::cout << "\t~:: exported <backlog_answers>." << std::endl;
+            }
+            break;
+
+        default:
+            std::cout << std::endl << "~:!:~ (error) - export_backlog() - unknown parameter given." << std::endl;
+            break;
+    };
+    
+    std::cout << std::endl;
+    std::cout << "~:: done." << std::endl;
+    std::cout << std::endl;
+};
     // // variables
     // int nr_of_synonyms; // the number of actual synonyms for term
     // // bools

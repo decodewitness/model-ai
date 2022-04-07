@@ -128,6 +128,9 @@ void AI::help(int n=1) {
 	std::cout << "/test -- test the transponder responses." << std::endl;
 	std::cout << "/answer" << std::endl;
 	std::cout << "/list -- lists the conversation." << std::endl;
+	std::cout << "/export_backlogs -- export backlogs of user queries & transponder queries." << std::endl;
+	std::cout << "/export_backlog1 -- export backlogs of user queries." << std::endl;
+	std::cout << "/export_backlog2 -- export backlogs of transponder queries." << std::endl;
 
 	// list of arguments
 	std::cout << std::endl;
@@ -821,6 +824,32 @@ void AI::tsp(std::string s) {	// transponder function
 	//delete this->transponder;
 };
 
+void AI::talk(int x) {	// list stored conversation
+	size_t max_history = x;
+	if (this->trans == true) {
+		this->transponder->listConvo(max_history);
+	}
+};
+
+// exporting transponder backlogs
+void AI::export_backlog1() {// export backlog_queries
+	if (this->trans == true) {
+		this->transponder->export_backlog(0);
+	}
+};	
+
+void AI::export_backlog2() {// export backlog_answers
+	if (this->trans == true) {
+		this->transponder->export_backlog(1);
+	}
+};	
+
+void AI::export_backlogs() {// export both backlog_queries & backlog_answers
+	if (this->trans == true) {
+		this->transponder->export_backlog(2);
+	}
+};	
+
 void AI::decouple() {	// decoupler routine for the ai model
 	std::cout << std::endl;
 	std::cout << "-:: decoupler." << std::endl;
@@ -1237,6 +1266,17 @@ void AI::query() {	// respond to logical query method
 	} else if (isTalk == true) {
 		this->talk(0);
 		isTalk = false;
+	} else if (isExportBL == true) {
+		if (isExportBL1 == true && isExportBL2 == true) {
+			this->export_backlogs();
+		} else {
+			if (isExportBL1 == true) {
+				this->export_backlog1();
+			}
+			if (isExportBL2 == true) {
+				this->export_backlog2();
+			}
+		}
 	}
 
 	// DEFAULTS TO THIS LOGIC
@@ -2081,13 +2121,6 @@ void AI::testA() {	// test queue
 	// sleep(2);
 	//readMetaQueries(true);
 	// this->answerMeta(false);
-};
-
-void AI::talk(int x) {	// list stored conversation
-	size_t max_history = x;
-	if (this->trans == true) {
-		this->transponder->listConvo(max_history);
-	}
 };
 
 #endif

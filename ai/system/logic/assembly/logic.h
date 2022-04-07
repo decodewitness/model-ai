@@ -51,4 +51,7 @@ bool isClearQue=false;
 bool isWhatHave=false;
 bool isAnswer=false;
 bool isTalk=false;
+bool isExportBL=false;
+bool isExportBL1=false;
+bool isExportBL2=false;
 // eof
