@@ -1,9 +1,9 @@
-"1","question_answers","transponder gets question.";
-"2","question_answers","transponder gets answer.";
-"3","question_answers","transponder is not active yet question? question question?.";
-"4","question_answers","transponder is bool.";
-"5","question_answers","transponder is boolean boolean.";
-"6","question_answers","a real query.";
-"7","question_answers","I'm just artificial. rather official.";
-"8","question_answers","rather official.";
-"9","question_answers","amazing suggestion.";
+"1","question","transponder gets question.";
+"2","question","transponder gets answer.";
+"3","question","transponder is not active yet question? question question?.";
+"4","question","transponder is bool.";
+"5","question","transponder is boolean boolean.";
+"6","question","a real query.";
+"7","question","I'm just artificial. rather official.";
+"8","question","rather official.";
+"9","question","amazing suggestion.";

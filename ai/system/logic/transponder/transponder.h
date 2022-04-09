@@ -36,16 +36,28 @@ std::string backlog_answer = "ai/log/backlog_answers.txt";
 // Transponder  
 class Transponder {
 private:
-    std::string initial_sentence;   // logic comparts from here
+    // integers
+    int used;   // indicates which file was used: trivia_logic or questions_answers
+    int points; // keeps track of highest score
+    
+    // booleans
     bool analytical;    // whether to use "analytics" function
+    
+    // strings
+    std::string initial_sentence;   // logic comparts from here
+    std::string default_response;   // carries the default response for when there is no logic
+    std::string line;   // is used to indicate the line number of the transponder queries from trivia_logic/questions_answers
+    
+    // vectors
     vector<int> ints;
     vector<std::string> strings;
-    vector<std::string> backlog_queries;
-    vector<std::string> backlog_answers;
+    vector<std::string> backlog_queries;    // backlog of queries of conversation
+    vector<std::string> backlog_answers;    // backlog of answers of conversation
+    vector<std::string> relations;
+
+    // file streams
     std::ifstream scores;
     std::ifstream syno;
-    int points; // keeps track of highest score
-
 
 protected:
     std::string subject; // same as "initial_sentence" but maybe change this later
@@ -68,7 +80,6 @@ public:
     int rank_score(std::string q, std::string a);  // processes score/ranking for the answer based of similarities
     void setSubject(std::string s);
     int scored(std::string q, std::string tq);
-    void listConvo(size_t max_history_length);
     std::string synonyms(std::string q);
 
     // analytical functions and preparation functions
@@ -76,9 +87,14 @@ public:
     void prepTr(std::string s); // preps Transponder with query
     void analytics(std::string s);  // textual analytics function
     std::string retVal();
+    std::string strip(std::string tq);
 
     // export backlog
     void export_backlog(int n);    // n=0 (backlog_queries); n=1 (backlog_answers); n=2 (both)
+    
+    // listing queries and such
+    void listConvo(size_t max_history_length);
+    void list_relations();
 };
 
 // eof

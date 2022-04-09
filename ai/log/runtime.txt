@@ -1442,16 +1442,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdc4cc4780)
-	- stacking header:(1)::<address>(0x7ffdc4cc47a0)
-	- stacking header:(2)::<address>(0x7ffdc4cc47c0)
-	- stacking header:(3)::<address>(0x7ffdc4cc47e0)
-	- stacking header:(4)::<address>(0x7ffdc4cc4800)
-	- stacking header:(5)::<address>(0x7ffdc4cc4820)
-	- stacking header:(6)::<address>(0x7ffdc4cc4840)
-	- stacking header:(7)::<address>(0x7ffdc4cc4860)
-	- stacking header:(8)::<address>(0x7ffdc4cc4880)
-	- stacking header:(9)::<address>(0x7ffdc4cc48a0)
+	- stacking header:(0)::<address>(0x7ffdd26f4660)
+	- stacking header:(1)::<address>(0x7ffdd26f4680)
+	- stacking header:(2)::<address>(0x7ffdd26f46a0)
+	- stacking header:(3)::<address>(0x7ffdd26f46c0)
+	- stacking header:(4)::<address>(0x7ffdd26f46e0)
+	- stacking header:(5)::<address>(0x7ffdd26f4700)
+	- stacking header:(6)::<address>(0x7ffdd26f4720)
+	- stacking header:(7)::<address>(0x7ffdd26f4740)
+	- stacking header:(8)::<address>(0x7ffdd26f4760)
+	- stacking header:(9)::<address>(0x7ffdd26f4780)
 
 
 -:: checking AI functions.
@@ -1497,16 +1497,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-character device: -- ./module_bay
+block device: -- ./module_bay
 
 ~:: stats() function:
-character device: -- ./downloads
+block device: -- ./downloads
 
 ~:: stats() function:
-character device: -- ./DCIM
+block device: -- ./DCIM
 
 ~:: stats() function:
-character device: -- ./info.txt
+block device: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1767,7 +1767,7 @@ incremental size function : 0
 	~:: matching occurences.
 
 incremental size function : 1
-(RESULT) : "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+(RESULT) : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
 
 ~:: scored() : 
 
@@ -1781,8 +1781,20 @@ incremental size function : 1
 
 incremental size function : 0
 (RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> artificial
+
+
+	- artificial
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
 ~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 13
+~:: (debug) -- answers processed: 14
 
 labelled faculty : 1
 
@@ -1796,13 +1808,18 @@ labelled faculty : 1
 (EOT)
 
 
-
 ~:: transponder -> answer()
 
 ~:: pushing back queries.
 
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 12
+
 +query :: (artificial)
-(RESPONSE) : "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+(RESPONSE) : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
 
 
 (EOT)
@@ -2049,7 +2066,7 @@ incremental size function : 0
 	~:: matching occurences.
 
 incremental size function : 1
-(RESULT) : "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+(RESULT) : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
 
 ~:: scored() : 
 
@@ -2063,8 +2080,20 @@ incremental size function : 1
 
 incremental size function : 0
 (RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> intelligence
+
+
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
 ~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 13
+~:: (debug) -- answers processed: 14
 
 labelled faculty : 1
 
@@ -2076,16 +2105,25 @@ labelled faculty : 1
 
 :: artificial
 :: intelligence
-(EOT)
 
+~:: list_relations() :
+relatives : "12".
+
+(EOT)
 
 
 ~:: transponder -> answer()
 
 ~:: pushing back queries.
 
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 12
+
 +query :: (intelligence)
-(RESPONSE) : "12","trivia_logic","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+(RESPONSE) : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
 
 
 (EOT)
@@ -2099,45 +2137,74 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	amazing
-	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0 ]
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "amazing".
-	- HMAC string :: *string_next_logic() ::  (amazing) is >> 
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
 
-~:: prepTransponder() : (amazing)
+sorter():
+{ ai/system/logic/transponder/brain/data/logic.dat }
+- opening: ai/system/logic/transponder/brain/data/logic.dat.
+	- ai/system/logic/transponder/brain/data/logic.dat : is open.
+		-- :: ( logical assembly, model-ai. )
+
+sorted: ai/system/logic/transponder/brain/data/logic.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+~:: prepTransponder() : (logic)
 ~:: transponder -> prep()
 
-~:: set subject to: "amazing".
-(debug) word :: amazing
+~:: set subject to: "logic".
+(debug) word :: logic
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "amazing".
+(debug) calling prepare_ints() (from) -> "logic".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (3).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) amazing :: #2928
+(debug) 0) logic :: #3198
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("2928,")
+	~:: reverse_meta_query_lookup("3198,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2151,9 +2218,9 @@ punch.
 	-----------------
 
 		* words no_#: 1
-		* length: 7
-		* vowels: 3
-		* consonants: 4
+		* length: 5
+		* vowels: 2
+		* consonants: 3
 		* numbers: 0
 		* special chars: 0
 		* unknown chars: 0
@@ -2164,22 +2231,10 @@ punch.
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> logic
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- logic
 
 	~:: matching occurences.
 
@@ -2188,22 +2243,10 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> logic
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- logic
 
 	~:: matching occurences.
 
@@ -2212,22 +2255,10 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> logic
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- logic
 
 	~:: matching occurences.
 
@@ -2236,22 +2267,10 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> logic
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- logic
 
 	~:: matching occurences.
 
@@ -2260,22 +2279,10 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> logic
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- logic
 
 	~:: matching occurences.
 
@@ -2284,22 +2291,10 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> logic
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- logic
 
 	~:: matching occurences.
 
@@ -2308,18 +2303,102 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> logic
 
 
-	- amazing
+	- logic
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> logic
+
+
+	- logic
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> logic
+
+
+	- logic
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> logic
+
+
+	- logic
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> logic
+
+
+	- logic
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> logic
+
+
+	- logic
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> logic
+
+
+	- logic
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> logic
+
+
+	- logic
 
 	~:: matching occurences.
 
 incremental size function : 1
-(RESULT) : "13","trivia_logic","you are amazing.";
+(RESULT) : "14","trivia","inferring logic.";
 
 ~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 13
+~:: (debug) -- answers processed: 14
 
 labelled faculty : 1
 
@@ -2331,17 +2410,26 @@ labelled faculty : 1
 
 :: artificial
 :: intelligence
-:: amazing
-(EOT)
+:: logic
 
+~:: list_relations() :
+relatives : "12","12".
+
+(EOT)
 
 
 ~:: transponder -> answer()
 
 ~:: pushing back queries.
 
-+query :: (amazing)
-(RESPONSE) : "13","trivia_logic","you are amazing.";
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 14
+
++query :: (logic)
+(RESPONSE) : "14","trivia","inferring logic.";
 
 
 (EOT)
@@ -2355,45 +2443,45 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	amazing?
-	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 ]
+	sample
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:2 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "amazing?".
-	- HMAC string :: *string_next_logic() ::  (amazing?) is >> 
+*string_next_logic() :: ssh: "sample".
+	- HMAC string :: *string_next_logic() ::  (sample) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
 
-~:: prepTransponder() : (amazing?)
+~:: prepTransponder() : (sample)
 ~:: transponder -> prep()
 
-~:: set subject to: "amazing?".
-(debug) word :: amazing
+~:: set subject to: "sample".
+(debug) word :: sample
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "amazing?".
+(debug) calling prepare_ints() (from) -> "sample".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (4).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) amazing :: #2928
+(debug) 0) sample :: #1165
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("2928,")
+	~:: reverse_meta_query_lookup("1165,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
+	- sample		 --> *(a+i) = 1165 - *(a+i) - 1 = 1164
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2407,11 +2495,11 @@ punch.
 	-----------------
 
 		* words no_#: 1
-		* length: 8
-		* vowels: 3
+		* length: 6
+		* vowels: 2
 		* consonants: 4
 		* numbers: 0
-		* special chars: 1
+		* special chars: 0
 		* unknown chars: 0
 
 
@@ -2420,22 +2508,10 @@ punch.
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> sample
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- sample
 
 	~:: matching occurences.
 
@@ -2444,22 +2520,10 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> sample
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- sample
 
 	~:: matching occurences.
 
@@ -2468,22 +2532,10 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> sample
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- sample
 
 	~:: matching occurences.
 
@@ -2492,22 +2544,10 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> sample
 
 
-	- amazing
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> amazing
-
-
-	- amazing
+	- sample
 
 	~:: matching occurences.
 
@@ -2516,18 +2556,125 @@ incremental size function : 0
 ~:: scored() : 
 
 
-~:: pushing back ---> amazing
+~:: pushing back ---> sample
 
 
-	- amazing
+	- sample
 
 	~:: matching occurences.
 
-incremental size function : 1
-(RESULT) : "9","question_answers","amazing suggestion.";
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
 
-~:: (debug) query was question: ('?')
-~:: (debug) -- answers processed: 9
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: scored() : 
+
+
+~:: pushing back ---> sample
+
+
+	- sample
+
+	~:: matching occurences.
+
+incremental size function : 0
+(RESULT) : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
 
 labelled faculty : 1
 
@@ -2539,273 +2686,32 @@ labelled faculty : 1
 
 :: artificial
 :: intelligence
-:: amazing
-:: amazing?
-(EOT)
+:: logic
+:: sample
 
+~:: list_relations() :
+relatives : "12","12","14".
+
+(EOT)
 
 
 ~:: transponder -> answer()
 
 ~:: pushing back queries.
 
-+query :: (amazing?)
-(RESPONSE) : "9","question_answers","amazing suggestion.";
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : missing
+
++query :: (sample)
+(RESPONSE) : missing
 
 
 (EOT)
 
 ~:: running (6) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/export_backlogs
-	[ simple x computation: type:[char]: len:16 vowels:10 consonants:4 special:2 
-~:: parameter request: export_backlogs(both).
- ]
-
--:: finished x computation.
-
-export_backlog() : 
-
-	~:: exporting backlogs - <backlog_queries> & <backlog_answers> to: "ai/log/backlog_queries.txt" && to "ai/log/backlog_answers.txt"
-
-	~:: exported <backlog_queries>.
-	~:: exported <backlog_answers>.
-
-~:: done.
-
-
-~:: running (5) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/sim
-	[ simple x computation: type:[char]: len:4 vowels:2 consonants:1 special:1 
-~:: parameter request: simulation().
- ]
-
--:: finished x computation.
-
-(simulation) entities: 
-
-~:: starting simulation.
-	~:: sim construct()
-	~:: initializing simulation run.
-		~:: ready | initialized sim.
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(1)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(2)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(3)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(4)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(5)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(6)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(7)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(8)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(9)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(10)
-
-(simulation) objects: 
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(1)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(2)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(3)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(4)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(5)
-	~:: simulation is running.
-
-[E]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
-[O]: (1) (2) (3) (4) (5) 
-
-~:: (manipulate in session #) :: 
-~:: manipulating session: 3.
-(e|o)? : (entity #)? : 
-	~:: modifying entity #1.
-	~:: added to list (1)
-
-	* nr of manipulating sessions : 1
-	* manipulating (entities) in # session : 3 
-	* modifying entities # : 1
-
-	* manipulated entities : e(1) 
-
-(debug) manipulated eo sessions: ES:1 OS:0
-~:: listing manipulated targets: 
-	e(1) 
-
-- cycle round : 1 -
-35113ns
-
-- cycle round : 2 -
-8841ns
-
-- cycle round : 3 -
-~:: manipulation on {entity}[1]
-
-9893ns
-
-- cycle round : 4 -
-7708ns
-
-- cycle round : 5 -
-9232ns
-
-- cycle round : 6 -
-7588ns
-
-- cycle round : 7 -
-7568ns
-
-- cycle round : 8 -
-7548ns
-
-- cycle round : 9 -
-7518ns
-
-- cycle round : 10 -
-8190ns
-
-- cycle round : 11 -
-9182ns
-
-- cycle round : 12 -
-7548ns
-
-- cycle round : 13 -
-7568ns
-
-- cycle round : 14 -
-7508ns
-
-- cycle round : 15 -
-7699ns
-
-- cycle round : 16 -
-7548ns
-
-- cycle round : 17 -
-8410ns
-
-- cycle round : 18 -
-9112ns
-
-- cycle round : 19 -
-9663ns
-
-- cycle round : 20 -
-7568ns
-
-- cycle round : 21 -
-7548ns
-
-- cycle round : 22 -
-7588ns
-
-- cycle round : 23 -
-7588ns
-
-- cycle round : 24 -
-10033ns
-
-- cycle round : 25 -
-7748ns
-
-~:: generating stats ::~
-
-STATISTICS :: SIMULATION RUN:
------
-- simulation # cycles: 25
-- number of entities: 0
-- number of objects: 0
-- total time simulation run (nano seconds): 7748 ns.
-
-~:: deleting simulation.
-
-
-~:: running (4) queries.
 
 ::- type your query -::
 

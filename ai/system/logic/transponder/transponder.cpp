@@ -11,6 +11,7 @@ Transponder::Transponder() {
     sleep(1);
     this->init();
     this->points = 0;
+    this->default_response = "can't relate to query.";
 };
 
 void Transponder::init() {
@@ -251,13 +252,28 @@ void Transponder::analytics(std::string s) {
     std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
     
     // ANSWER / RESPONSE
-    if (this->response.length() > 0) {
+    if (this->result.length() > 0) {
         std::cout << std::endl << "~:: pushing back queries." << std::endl;
 
         // push back query
         this->backlog_queries.push_back(this->subject);
         this->backlog_answers.push_back(this->result);
         
+        // strip line number from transponder query and store it in relations
+        if (this->used == 1 || this->used == 2) {
+            std::cout << std::endl << "~:: stripping (result)." << std::endl;
+            // use strip() to get the line number
+            this->line = this->strip(this->result);
+            // store line number in relations
+            this->relations.push_back(this->line);
+            
+            std::cout << std::endl << "- pushing back : " << this->line << std::endl;
+            
+            // reset this->used and this->line ;; this->used indicates the file that was used ;; 1=trivia_logic ;; 2=questions_answers
+            this->used = 0;
+            this->line = "0";
+        }
+
         // output
         std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
         std::cout << "(RESPONSE) : " << this->result << std::endl;
@@ -266,6 +282,10 @@ void Transponder::analytics(std::string s) {
         this->points = 0;   // this keeps track of the highest score for results
         // reset result
         this->result = "missing";   // redundant
+    } else {
+        // secondary output // DEFAULT RESPONSE // Not used in the most cases
+        std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
+        std::cout << "(RESPONSE) : " << this->default_response << std::endl;
     }
 
     // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
@@ -366,32 +386,40 @@ std::string Transponder::answer(std::string s) {
         isQuestion = true;
         used_file = question_answers;
         query.pop_back();
+        this->used = 2; // 1=trivia_logic; 2=questions_answers
     } else if (query.back() == '!') {   // open "trivia_logic"
         isExclamation = true;
         used_file = trivia_logic;
         query.pop_back();
+        this->used = 1;
     } else if (query.back() == '.') {   // open "trivia_logic"
         isDot = true;
         used_file = trivia_logic;
         query.pop_back();
+        this->used = 1;
     } else if (query.back() == ',') {   // open "trivia_logic"
         isComma = true;
         isFollowUp = true;
         used_file = trivia_logic;
         // follow_up check here
         query.pop_back();
+        this->used = 1;
     } else if (query.back() == ';') {   // open "trivia_logic"
         isSemicolon = true;
         isFollowUp = true;
         used_file = trivia_logic;
         // follow up check here
         query.pop_back();
+        this->used = 1;
     } else if (query.back() == ':') {   // open "trivia_logic"
         isColon = true;
         isFollowUp = true;
         used_file = trivia_logic;
         // follow up check here
         query.pop_back();
+        this->used = 1;
+    } else {
+        this->used = 1;
     }
 
     filen.open(used_file);  // trivia_logic // questions_ansewers
@@ -631,9 +659,10 @@ void Transponder::listConvo(size_t max_history_length) {  // list conversation, 
         }
     }
     
+    this->list_relations(); // list the relations
+
     // End Of Transmission
     std::cout << "(EOT)" << std::endl;
-    std::cout << std::endl;
 };
     // append comma again to split correctly
 //     for (auto que : conversation) {
@@ -790,6 +819,43 @@ void Transponder::export_backlog(int n=2) {
     std::cout << "~:: done." << std::endl;
     std::cout << std::endl;
 };
+
+std::string Transponder::strip(std::string tq) {
+	int pos, pos2;
+	std::cout << std::endl << "~:: strip()" << std::endl;
+
+	pos = tq.find_first_of("\"");
+	pos2 = tq.find_first_of(",");
+
+	std::string result = tq.substr(pos+1, pos2-2);
+
+	// std::cout << "\tpos : " << pos << " pos2 : " << pos2 << std::endl;
+	//std::cout << "\t(nr. of query) : " << result << std::endl;
+
+return result;
+};
+
+void Transponder::list_relations() {
+    std::string tmp = "relatives : ";
+
+    if (this->relations.size() > 0) {
+        std::cout << std::endl << "~:: list_relations() :" << std::endl;
+        
+        for (size_t i=0; i<this->relations.size(); i++) {
+            // std::cout << "\"" << this->relations.at(i) << "\",";
+            tmp.append("\"");
+            tmp.append(this->relations.at(i));
+            tmp.append("\",");
+        }
+
+        tmp.pop_back(); // remove the last comma
+        tmp.append(".");    // add a dot
+        
+        // output
+        std::cout << tmp << std::endl;
+        std::cout << std::endl;
+    }
+}
     // // variables
     // int nr_of_synonyms; // the number of actual synonyms for term
     // // bools

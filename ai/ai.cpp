@@ -2116,6 +2116,11 @@ void AI::testA() {	// test queue
 
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
 	// TO TEST THE FUNCTION INSIDE THE MODEL.
+
+	// std::string query = "\"1\",\"trivia\",\"transponder has query.\";";
+	// std::string a = strip(query);
+	// std::cout << "A: " << a << std::endl;
+	
 	// readAllMetaQueries(true);
 	// this->answerMeta(true);
 	// sleep(2);
