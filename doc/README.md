@@ -1494,16 +1494,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdd26f4660)
-	- stacking header:(1)::<address>(0x7ffdd26f4680)
-	- stacking header:(2)::<address>(0x7ffdd26f46a0)
-	- stacking header:(3)::<address>(0x7ffdd26f46c0)
-	- stacking header:(4)::<address>(0x7ffdd26f46e0)
-	- stacking header:(5)::<address>(0x7ffdd26f4700)
-	- stacking header:(6)::<address>(0x7ffdd26f4720)
-	- stacking header:(7)::<address>(0x7ffdd26f4740)
-	- stacking header:(8)::<address>(0x7ffdd26f4760)
-	- stacking header:(9)::<address>(0x7ffdd26f4780)
+	- stacking header:(0)::<address>(0x7ffc28adfff0)
+	- stacking header:(1)::<address>(0x7ffc28ae0010)
+	- stacking header:(2)::<address>(0x7ffc28ae0030)
+	- stacking header:(3)::<address>(0x7ffc28ae0050)
+	- stacking header:(4)::<address>(0x7ffc28ae0070)
+	- stacking header:(5)::<address>(0x7ffc28ae0090)
+	- stacking header:(6)::<address>(0x7ffc28ae00b0)
+	- stacking header:(7)::<address>(0x7ffc28ae00d0)
+	- stacking header:(8)::<address>(0x7ffc28ae00f0)
+	- stacking header:(9)::<address>(0x7ffc28ae0110)
 
 
 -:: checking AI functions.
@@ -1549,16 +1549,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./module_bay
+regular file: -- ./module_bay
 
 ~:: stats() function:
-block device: -- ./downloads
+regular file: -- ./downloads
 
 ~:: stats() function:
-block device: -- ./DCIM
+regular file: -- ./DCIM
 
 ~:: stats() function:
-block device: -- ./info.txt
+regular file: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1570,89 +1570,61 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	artificial
-	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0 ]
+	tie in query relations?
+	[ simple x computation: type:[char]: len:23 vowels:13 consonants:9 special:1 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "artificial".
-	- HMAC string :: *string_next_logic() ::  (artificial) is >> 
+*string_next_logic() :: ssh: "tie in query relations?".
+	- HMAC string :: *string_next_logic() ::  (tie in query relations?) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
-(debug) hit search function.
-	search1 : artificial
-	search2 : artificial
-	line1 :   something real or artificial made up out of a matter construct. + 1
-	line2 :   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
-
-sorter():
-{ ai/system/logic/transponder/brain/data/artificial.dat }
-{ ai/system/logic/transponder/brain/data/artificial2.dat }
-::
-- opening: ai/system/logic/transponder/brain/data/artificial.dat.
-	- ai/system/logic/transponder/brain/data/artificial.dat : is open.
-		-- :: ( artificial assembly, model-ai. )
-- opening: ai/system/logic/transponder/brain/data/artificial2.dat.
-	- ai/system/logic/transponder/brain/data/artificial2.dat : is open.
-		-- :: ( artificial data. artificial encounters. artificial life. artificial measure. artificial object. artificial reality. artificial or logical conduit. )
-
-sorted: ai/system/logic/transponder/brain/data/artificial.dat
-~:: file_access()
-(debug) file_access(level=7).
-
-	<<<
-
-- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-TMP: logic
-TMP: model-ai
-	~:: query matches search string: "artificial".
-
--* artificial is:
-  something real or artificial made up out of a matter construct. + 1
-
-  being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
 
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 
-~:: prepTransponder() : (artificial)
+~:: prepTransponder() : (tie in query relations?)
 ~:: transponder -> prep()
 
-~:: set subject to: "artificial".
-(debug) word :: artificial
+~:: set subject to: "tie in query relations?".
+(debug) word :: tie
+(debug) word :: in
+(debug) word :: query
+(debug) word :: relations
 
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
+~:: (debug)::nrOfWords = 4.
+~:: (debug)::counter = 4.
 
-(debug) calling prepare_ints() (from) -> "artificial".
+(debug) calling prepare_ints() (from) -> "tie in query relations?".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (1).
+~:: (debug) number of matching occurences: (4).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) artificial :: #5919
+(debug) 0) tie :: #4607
+(debug) 1) in :: #6
+(debug) 2) query :: #2548
+(debug) 3) relations :: #1494
 
 ~:: meta queries ~:: storing meta query sequence
 	~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 	- meta sequences:
-		- 5919
+		- 4607		- 6		- 2548		- 1494
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("5919,")
+	~:: reverse_meta_query_lookup("4607,6,2548,1494,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- artificial		 --> *(a+i) = 5919 - *(a+i) - 1 = 5918
+	- tie		 --> *(a+i) = 4607 - *(a+i) - 1 = 4606
+	- in		 --> *(a+i) = 6 - *(a+i) - 1 = 5
+	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
+	- relations		 --> *(a+i) = 1494 - *(a+i) - 1 = 1493
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1665,12 +1637,12 @@ TMP: model-ai
 
 	-----------------
 
-		* words no_#: 1
-		* length: 10
-		* vowels: 5
-		* consonants: 5
+		* words no_#: 4
+		* length: 23
+		* vowels: 9
+		* consonants: 10
 		* numbers: 0
-		* special chars: 0
+		* special chars: 4
 		* unknown chars: 0
 
 
@@ -1678,185 +1650,224 @@ TMP: model-ai
 
 ~:: scored() : 
 
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
 
-~:: pushing back ---> artificial
+	- tie
 
+	~:: matching occurences.
+	- in
 
-	- artificial
+	~:: matching occurences.
+	- query
+
+	~:: matching occurences.
+	- relations
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
 
-~:: pushing back ---> artificial
+	- tie
 
+	~:: matching occurences.
+	- in
 
-	- artificial
+	~:: matching occurences.
+	- query
+
+	~:: matching occurences.
+	- relations
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
 
-~:: pushing back ---> artificial
+	- tie
 
+	~:: matching occurences.
+	- in
 
-	- artificial
+	~:: matching occurences.
+	- query
+
+	~:: matching occurences.
+	- relations
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
 
-~:: pushing back ---> artificial
+	- tie
 
+	~:: matching occurences.
+	- in
 
-	- artificial
+	~:: matching occurences.
+	- query
+
+	~:: matching occurences.
+	- relations
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
 
-~:: pushing back ---> artificial
+	- tie
 
+	~:: matching occurences.
+	- in
 
-	- artificial
+	~:: matching occurences.
+	- query
+
+	~:: matching occurences.
+	- relations
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
 
-~:: pushing back ---> artificial
-
-
-	- artificial
+	- tie
 
 	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> artificial
-
-
-	- artificial
+	- in
 
 	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> artificial
-
-
-	- artificial
+	- query
 
 	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> artificial
-
-
-	- artificial
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> artificial
-
-
-	- artificial
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> artificial
-
-
-	- artificial
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> artificial
-
-
-	- artificial
+	- relations
 
 	~:: matching occurences.
 
 incremental size function : 1
-(RESULT) : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+
+[RESULT] : "6","question","a real query.";
 
 ~:: scored() : 
 
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
 
-~:: pushing back ---> artificial
+	- tie
 
+	~:: matching occurences.
+	- in
 
-	- artificial
+	~:: matching occurences.
+	- query
+
+	~:: matching occurences.
+	- relations
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
 
-~:: pushing back ---> artificial
+	- tie
 
+	~:: matching occurences.
+	- in
 
-	- artificial
+	~:: matching occurences.
+	- query
+
+	~:: matching occurences.
+	- relations
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> tie
+~:: pushing back ---> in
+~:: pushing back ---> query
+~:: pushing back ---> relations
+
+	- tie
+
+	~:: matching occurences.
+	- in
+
+	~:: matching occurences.
+	- query
+
+	~:: matching occurences.
+	- relations
+
+	~:: matching occurences.
+
+incremental size function : 1
+
+[RESULT] : 
+~:: (debug) query was question: ('?')
+~:: (debug) -- answers processed: 9
 
 labelled faculty : 1
 
-[ANSWER]:
+[CONVOS] :
 
-~:: listConvo() :
+~:: listConvos() :
 
 	% having convos?
 
-:: artificial
+:: tie in query relations?
 (EOT)
 
 
@@ -1868,10 +1879,17 @@ labelled faculty : 1
 
 ~:: strip()
 
-- pushing back : 12
+- pushing back : 6
 
-+query :: (artificial)
-(RESPONSE) : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
++query :: (tie in query relations?)
+[RESPONSE] : "6","question","a real query.";
 
 
 (EOT)
@@ -1885,72 +1903,47 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	intelligence
-	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
+	artificial intelligence
+	[ simple x computation: type:[char]: len:23 vowels:13 consonants:10 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "intelligence".
-	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+*string_next_logic() :: ssh: "artificial intelligence".
+	- HMAC string :: *string_next_logic() ::  (artificial intelligence) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
-(debug) hit search function.
-	search1 : intelligence
-	search2 : intelligence
-	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 5
-	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
 
-sorter():
-{ ai/system/logic/transponder/brain/data/intelligence.dat }
-- opening: ai/system/logic/transponder/brain/data/intelligence.dat.
-	- unable to open : ai/system/logic/transponder/brain/data/intelligence.dat
-
-sorted: ai/system/logic/transponder/brain/data/intelligence.dat
-~:: file_access()
-(debug) file_access(level=7).
-
-	<<<
-
-- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-	~:: query matches search string: "intelligence".
-
--* intelligence is:
-    deciphering algorithms, and using strategies to solve the inherent problem. + 5
-
-    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-
-~:: prepTransponder() : (intelligence)
+~:: prepTransponder() : (artificial intelligence)
 ~:: transponder -> prep()
 
-~:: set subject to: "intelligence".
+~:: set subject to: "artificial intelligence".
+(debug) word :: artificial
 (debug) word :: intelligence
 
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
+~:: (debug)::nrOfWords = 2.
+~:: (debug)::counter = 2.
 
-(debug) calling prepare_ints() (from) -> "intelligence".
+(debug) calling prepare_ints() (from) -> "artificial intelligence".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (2).
+~:: (debug) number of matching occurences: (6).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) intelligence :: #2526
+(debug) 0) artificial :: #5919
+(debug) 1) intelligence :: #2526
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("2526,")
+	~:: reverse_meta_query_lookup("5919,2526,")
 ~:::~
 
 ~:: reverse meta query lookup: 
+	- artificial		 --> *(a+i) = 5919 - *(a+i) - 1 = 5918
 	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
 
 (EOT)
@@ -1964,12 +1957,12 @@ sorted: ai/system/logic/transponder/brain/data/intelligence.dat
 
 	-----------------
 
-		* words no_#: 1
-		* length: 12
-		* vowels: 5
-		* consonants: 7
+		* words no_#: 2
+		* length: 23
+		* vowels: 10
+		* consonants: 12
 		* numbers: 0
-		* special chars: 0
+		* special chars: 1
 		* unknown chars: 0
 
 
@@ -1977,190 +1970,228 @@ sorted: ai/system/logic/transponder/brain/data/intelligence.dat
 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
+	- artificial
 
+	~:: matching occurences.
 	- intelligence
 
 	~:: matching occurences.
 
-incremental size function : 1
-(RESULT) : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+incremental size function : 2
+
+[RESULT] : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
 
 ~:: scored() : 
 
-
+~:: pushing back ---> artificial
 ~:: pushing back ---> intelligence
 
-
-	- intelligence
+	- artificial
 
 	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> intelligence
-
-
 	- intelligence
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> artificial
+~:: pushing back ---> intelligence
+
+	- artificial
+
+	~:: matching occurences.
+	- intelligence
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 14
 
-labelled faculty : 1
+labelled faculty : 2
 
-[ANSWER]:
+[CONVOS] :
 
-~:: listConvo() :
+~:: listConvos() :
 
 	% having convos?
 
-:: artificial
-:: intelligence
-
-~:: list_relations() :
-relatives : "12".
-
+:: tie in query relations?
+:: artificial intelligence
 (EOT)
 
 
@@ -2174,13 +2205,286 @@ relatives : "12".
 
 - pushing back : 12
 
-+query :: (intelligence)
-(RESPONSE) : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
++query :: (artificial intelligence)
+[RESPONSE] : "12","trivia","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
 
 
 (EOT)
 
 ~:: running (8) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	amazing
+	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "amazing".
+	- HMAC string :: *string_next_logic() ::  (amazing) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: prepTransponder() : (amazing)
+~:: transponder -> prep()
+
+~:: set subject to: "amazing".
+(debug) word :: amazing
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "amazing".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (7).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) amazing :: #2928
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("2928,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
+
+(EOT)
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 7
+		* vowels: 3
+		* consonants: 4
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 1
+
+[RESULT] : "13","trivia","you are amazing.";
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+
+	~:: matching occurences.
+
+incremental size function : 0
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+labelled faculty : 2
+
+[CONVOS] :
+
+~:: listConvos() :
+
+	% having convos?
+
+:: tie in query relations?
+:: artificial intelligence
+:: amazing
+(EOT)
+
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 13
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
++query :: (amazing)
+[RESPONSE] : "13","trivia","you are amazing.";
+
+
+(EOT)
+
+~:: running (7) queries.
 
 ::- type your query -::
 
@@ -2225,6 +2529,25 @@ sorted: ai/system/logic/transponder/brain/data/logic.dat
 
 :: artificial intelligence ::
 
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/system/logic/transponder/brain/data/logic.dat
+~:: resonate_index::match found on line: (6).
+~:: done.
+
+b_string:
+!~ logical ways to infer reason. a logical standard for conventions of proceeding with thinking.
 	~:: query matches search string: "logic".
 
 -* logic is:
@@ -2244,7 +2567,7 @@ sorted: ai/system/logic/transponder/brain/data/logic.dat
 (debug) calling prepare_ints() (from) -> "logic".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (3).
+~:: (debug) number of matching occurences: (8).
 
 ~:: intvars int_occurences[] ::~
 (debug) 0) logic :: #3198
@@ -2282,191 +2605,174 @@ sorted: ai/system/logic/transponder/brain/data/logic.dat
 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
-
 ~:: pushing back ---> logic
-
 
 	- logic
 
 	~:: matching occurences.
 
 incremental size function : 1
-(RESULT) : "14","trivia","inferring logic.";
+
+[RESULT] : "14","trivia","inferring logic.";
 
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 14
 
-labelled faculty : 1
+labelled faculty : 2
 
-[ANSWER]:
+[CONVOS] :
 
-~:: listConvo() :
+~:: listConvos() :
 
 	% having convos?
 
-:: artificial
-:: intelligence
+:: tie in query relations?
+:: artificial intelligence
+:: amazing
 :: logic
-
-~:: list_relations() :
-relatives : "12","12".
-
 (EOT)
 
 
@@ -2480,13 +2786,20 @@ relatives : "12","12".
 
 - pushing back : 14
 
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
 +query :: (logic)
-(RESPONSE) : "14","trivia","inferring logic.";
+[RESPONSE] : "14","trivia","inferring logic.";
 
 
 (EOT)
 
-~:: running (7) queries.
+~:: running (6) queries.
 
 ::- type your query -::
 
@@ -2495,45 +2808,45 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	sample
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:2 special:0 ]
+	query?
+	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "sample".
-	- HMAC string :: *string_next_logic() ::  (sample) is >> 
+*string_next_logic() :: ssh: "query?".
+	- HMAC string :: *string_next_logic() ::  (query?) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
 
-~:: prepTransponder() : (sample)
+~:: prepTransponder() : (query?)
 ~:: transponder -> prep()
 
-~:: set subject to: "sample".
-(debug) word :: sample
+~:: set subject to: "query?".
+(debug) word :: query
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "sample".
+(debug) calling prepare_ints() (from) -> "query?".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (4).
+~:: (debug) number of matching occurences: (9).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) sample :: #1165
+(debug) 0) query :: #2548
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("1165,")
+	~:: reverse_meta_query_lookup("2548,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- sample		 --> *(a+i) = 1165 - *(a+i) - 1 = 1164
+	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2549,9 +2862,9 @@ punch.
 		* words no_#: 1
 		* length: 6
 		* vowels: 2
-		* consonants: 4
+		* consonants: 3
 		* numbers: 0
-		* special chars: 0
+		* special chars: 1
 		* unknown chars: 0
 
 
@@ -2559,191 +2872,120 @@ punch.
 
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
-incremental size function : 0
-(RESULT) : 
+incremental size function : 1
+
+[RESULT] : "6","question","a real query.";
+
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
+
+[RESULT] : 
 ~:: scored() : 
 
+~:: pushing back ---> query
 
-~:: pushing back ---> sample
-
-
-	- sample
+	- query
 
 	~:: matching occurences.
 
 incremental size function : 0
-(RESULT) : 
-~:: scored() : 
 
+[RESULT] : 
+~:: (debug) query was question: ('?')
+~:: (debug) -- answers processed: 9
 
-~:: pushing back ---> sample
+labelled faculty : 2
 
+[CONVOS] :
 
-	- sample
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> sample
-
-
-	- sample
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> sample
-
-
-	- sample
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> sample
-
-
-	- sample
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: scored() : 
-
-
-~:: pushing back ---> sample
-
-
-	- sample
-
-	~:: matching occurences.
-
-incremental size function : 0
-(RESULT) : 
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
-
-labelled faculty : 1
-
-[ANSWER]:
-
-~:: listConvo() :
+~:: listConvos() :
 
 	% having convos?
 
-:: artificial
-:: intelligence
+:: tie in query relations?
+:: artificial intelligence
+:: amazing
 :: logic
-:: sample
-
-~:: list_relations() :
-relatives : "12","12","14".
-
+:: query?
 (EOT)
 
 
@@ -2755,15 +2997,22 @@ relatives : "12","12","14".
 
 ~:: strip()
 
-- pushing back : missing
+- pushing back : 6
 
-+query :: (sample)
-(RESPONSE) : missing
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
++query :: (query?)
+[RESPONSE] : "6","question","a real query.";
 
 
 (EOT)
 
-~:: running (6) queries.
+~:: running (5) queries.
 
 ::- type your query -::
 

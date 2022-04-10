@@ -827,7 +827,7 @@ void AI::tsp(std::string s) {	// transponder function
 void AI::talk(int x) {	// list stored conversation
 	size_t max_history = x;
 	if (this->trans == true) {
-		this->transponder->listConvo(max_history);
+		this->transponder->listConvos(max_history);
 	}
 };
 

@@ -274,18 +274,27 @@ void Transponder::analytics(std::string s) {
             this->line = "0";
         }
 
-        // output
-        std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
-        std::cout << "(RESPONSE) : " << this->result << std::endl;
-        
+        // store your relations
+        this->store_relations();    // stores the relations through store_relations() function
+        // flush relations
+        this->flush_relations();
+
+        // output MAIN RESPONSE in all certain events
+        std::cout << std::endl;
+        std::cout << "+query :: (" << this->subject << ")" << std::endl;
+        std::cout << "[RESPONSE] : " << this->result << std::endl;
+        sleep(3);
+
         // reset points
         this->points = 0;   // this keeps track of the highest score for results
         // reset result
         this->result = "missing";   // redundant
     } else {
         // secondary output // DEFAULT RESPONSE // Not used in the most cases
-        std::cout << std::endl << "+query :: (" << this->subject << ")" << std::endl;
-        std::cout << "(RESPONSE) : " << this->default_response << std::endl;
+        std::cout << std::endl;
+        std::cout << "+query :: (" << this->subject << ")" << std::endl;
+        std::cout << "[RESPONSE] : " << this->default_response << std::endl;
+        sleep(3);
     }
 
     // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
@@ -487,10 +496,10 @@ std::string Transponder::answer(std::string s) {
     std::cout << std::endl;
     std::cout << "labelled faculty : " << biggest << std::endl;
     
-    if (noted > 0) {    // ANSWER THE QUERY WITH listConvo()
+    if (noted > 0) {    // ANSWER THE QUERY WITH listConvos()
     // <---> OVER HERE TRANSPONDER QUERIES <--->
-        std::cout << std::endl << "[ANSWER]:" << std::endl;
-        this->listConvo(0);    // also lists synonyms
+        std::cout << std::endl << "[CONVOS] :" << std::endl;
+        this->listConvos(0);    // also lists synonyms ;; and stores relations
     }
     std::cout << std::endl;    
 
@@ -530,7 +539,7 @@ int Transponder::scored(std::string q, std::string tq) {
         while (iss >> wrd) {
             // iss >> wrd;
             words.push_back(wrd);   // contains the query from the transponder
-            std::cout << std::endl << "~:: pushing back ---> " << wrd << std::endl;
+            std::cout <<  "~:: pushing back ---> " << wrd << std::endl;
         }
 
 
@@ -554,7 +563,7 @@ int Transponder::scored(std::string q, std::string tq) {
     }
 
     for (const auto &str : words) {
-        std::cout << std::endl << "\t- " << str << std::endl;
+        std::cout << "\t- " << str << std::endl;
         
         // conversation.push_back(str);  // should work
         // std::cout << "->>> pushed back ->>> " << str << std::endl;
@@ -578,7 +587,8 @@ int Transponder::scored(std::string q, std::string tq) {
     vec.clear();
 
     // debugging output (1)
-    std::cout << "(RESULT) : ";
+    std::cout << std::endl;
+    std::cout << "[RESULT] : ";
 
     if (score > this->points) {
         // debugging output (2)
@@ -629,7 +639,7 @@ return score;
     // }
     
 
-void Transponder::listConvo(size_t max_history_length) {  // list conversation, and also list synonyms
+void Transponder::listConvos(size_t max_history_length) {  // list conversation, and also list synonyms
     // vars
     int iter=0;
     std::string q;
@@ -642,7 +652,7 @@ void Transponder::listConvo(size_t max_history_length) {  // list conversation, 
 
     // query user
     std::cout << std::endl;
-    std::cout << "~:: listConvo() :" << std::endl;
+    std::cout << "~:: listConvos() :" << std::endl;
     std::cout << std::endl;
     std::cout << "\t\% having convos?" << std::endl;
     std::cout << std::endl;
@@ -657,10 +667,11 @@ void Transponder::listConvo(size_t max_history_length) {  // list conversation, 
             // maybe should also put flush device here ...
             break;  // break out of loop on max length for conversation history
         }
-    }
+    }    
     
     this->list_relations(); // list the relations
-
+    // this->store_relations();    // then stores the relations through store_relations() function
+    
     // End Of Transmission
     std::cout << "(EOT)" << std::endl;
 };
@@ -835,7 +846,7 @@ std::string Transponder::strip(std::string tq) {
 return result;
 };
 
-void Transponder::list_relations() {
+void Transponder::list_relations() {    // lists the relations from this->relations <vector>
     std::string tmp = "relatives : ";
 
     if (this->relations.size() > 0) {
@@ -855,7 +866,36 @@ void Transponder::list_relations() {
         std::cout << tmp << std::endl;
         std::cout << std::endl;
     }
-}
+    // this->store_relations(); // already stores relations in list_convos()
+};
+
+void Transponder::store_relations() {   // stores the relations from this->relations <vector>
+    if ((this->relations.size() > 0) && (this->relate.is_open() == false)) {
+        std::cout << std::endl << "~:: storing relations ::~" << std::endl;
+        std::cout << "\t~:: opening : \"" << relatives << "\"." << std::endl;
+        this->relate.open(relatives, ios::app);
+    }
+
+    if (this->relate.is_open() == true) {
+        std::cout << "\t\t+/+ relations :" << std::endl;
+        std::cout << "\t\t";
+        for (size_t i=0; i<this->relations.size(); i++) {
+            this->relate << this->relations.at(i);
+            this->relate << ((i<this->relations.size()-1) ? " " : ";") << std::endl;
+            std::cout << ".";   // a dot for every relation
+        }
+        if (this->relate.is_open() == true) {
+            std::cout << std::endl;
+            std::cout << "~:: closing file." << std::endl;
+            this->relate.close();
+        }
+    }
+    std::cout << std::endl;
+};
+
+void Transponder::flush_relations() {
+    this->relations.clear();
+};
     // // variables
     // int nr_of_synonyms; // the number of actual synonyms for term
     // // bools

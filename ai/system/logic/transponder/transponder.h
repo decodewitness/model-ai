@@ -25,6 +25,7 @@ std::vector<std::string> conversation;
 // files
 std::string question_answers = "ai/data/files/question_answers.txt";
 std::string trivia_logic = "ai/data/files/trivia_logic.txt";
+std::string relatives = "ai/data/files/relatives.txt";
 std::string synonym = "ai/data/files/synonyms.txt";
 std::string weights = "ai/lib/queries/weights";
 
@@ -58,6 +59,7 @@ private:
     // file streams
     std::ifstream scores;
     std::ifstream syno;
+    std::ofstream relate;
 
 protected:
     std::string subject; // same as "initial_sentence" but maybe change this later
@@ -89,11 +91,15 @@ public:
     std::string retVal();
     std::string strip(std::string tq);
 
-    // export backlog
+    // export backlog and storing relations
     void export_backlog(int n);    // n=0 (backlog_queries); n=1 (backlog_answers); n=2 (both)
     
+    // relations
+    void store_relations();
+    void flush_relations();
+
     // listing queries and such
-    void listConvo(size_t max_history_length);
+    void listConvos(size_t max_history_length);
     void list_relations();
 };
 
