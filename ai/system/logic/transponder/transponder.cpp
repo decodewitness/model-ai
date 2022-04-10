@@ -296,7 +296,6 @@ void Transponder::analytics(std::string s) {
         std::cout << "[RESPONSE] : " << this->default_response << std::endl;
         sleep(3);
     }
-
     // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
     std::cout << std::endl;
 };
