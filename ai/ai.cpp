@@ -2117,6 +2117,11 @@ void AI::testA() {	// test queue
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
 	// TO TEST THE FUNCTION INSIDE THE MODEL.
 
+	nref x = build_custom_nref();
+	print_nref(x);
+	store_nref(x);
+	read_nrefs(nref_store_file, 1);
+
 	// std::string query = "\"1\",\"trivia\",\"transponder has query.\";";
 	// std::string a = strip(query);
 	// std::cout << "A: " << a << std::endl;

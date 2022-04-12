@@ -82,6 +82,7 @@
 // #include "steering/initialize_runcheck.cpp"
 #include "system/logic/analysis/interpret.cpp"
 #include "system/logic/analysis/algorithms.cpp"
+#include "system/logic/transponder/concept.cpp"	// build refs
 #include "system/logic/transponder/transponder.cpp"
 #include "system/modules/modular_bay/modular_bay.cpp"
 // #include "system/security/credentials/credentials.cpp"	// already included in "ai.cpp"

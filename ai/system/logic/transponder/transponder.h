@@ -14,6 +14,7 @@
 #include "prepare.cpp"
 #include "brain/nn.h"
 #include "stringcode.h"
+// #include "concept.cpp"   // included in AI/AI.H
 // #include "synonyms.h"    // already included in (transponder.h / transponder.cpp)
 
 // use stringcode to encode coded sequence to initiate or illicit response
