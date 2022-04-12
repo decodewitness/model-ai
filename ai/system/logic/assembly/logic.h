@@ -54,4 +54,10 @@ bool isTalk=false;
 bool isExportBL=false;
 bool isExportBL1=false;
 bool isExportBL2=false;
+bool isBuildRef = false;
+bool isReadRef = false;
+bool isReadRefs = false;
+bool isReadLastRef = false;
+bool isReturnRefNr = false;
+
 // eof

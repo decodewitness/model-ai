@@ -1,4 +1,5 @@
 // (inside AI directory) "AI/AI.CPP" - USED BY "/HEADER.H" MAIN FILE FOR AI MODEL CLASS
+	// COMMANDS CURRENTLY AT LINE: 976
 
 #ifndef _AI_DEFINITION_INCLUDED
 #define _AI_DEFINITION_INCLUDED
@@ -131,6 +132,11 @@ void AI::help(int n=1) {
 	std::cout << "/export_backlogs -- export backlogs of user queries & transponder queries." << std::endl;
 	std::cout << "/export_backlog1 -- export backlogs of user queries." << std::endl;
 	std::cout << "/export_backlog2 -- export backlogs of transponder queries." << std::endl;
+	std::cout << "/buildref -- build custom reference." << std::endl;
+	std::cout << "/readref -- read a certain reference." << std::endl;
+	std::cout << "/readrefs -- read all references." << std::endl;
+	std::cout << "/lastref -- print the last reference." << std::endl;
+	std::cout << "/refnumber -- print the number of references." << std::endl;
 
 	// list of arguments
 	std::cout << std::endl;
@@ -1277,9 +1283,29 @@ void AI::query() {	// respond to logical query method
 				this->export_backlog2();
 			}
 		}
+	} else if (isBuildRef == true) {
+		this->buildRef();
+		isBuildRef = false;
+	} else if (isReadRef == true) {
+		int n=0;
+		std::cout << std::endl;
+		std::cout << "ref : ";
+		cin >> n;
+		if (n>=0) {
+			this->readRef(n);
+		}
+		isReadRef = false;
+	} else if (isReadRefs == true) {
+		this->readRefs();
+	} else if (isReadLastRef == true) {
+		this->readLastRef();
+		isReadLastRef = false;
+	} else if (isReturnRefNr == true) {
+		this->returnRefNr();
+		isReturnRefNr = false;
 	}
 
-	// DEFAULTS TO THIS LOGIC
+	// DEFAULTS TO THIS LOGIC FUNCTION
 	if (isLogic == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
 		// this->assembleBrain();
 		this->brain->useBrain(query_string);
@@ -2106,6 +2132,40 @@ void AI::whatHaveYouGot() {	// shows stored references
 	whatHaveYou();
 };
 
+void AI::buildRef() {	// build custom nref
+	std::cout << std::endl;
+	std::cout << "- buildRef()";
+	std::cout << std::endl;
+
+	nref x = build_custom_nref();
+	store_nref(x);
+	print_nref(x);
+	// read_nrefs_from_file(stored_nrefs_file, 1);
+};
+
+void AI::readRefs() {	// read ALL references from file input
+	read_nrefs_from_file(stored_nrefs_file);
+};
+
+void AI::readRef(int n) {	// read a SINGLE ref from file
+	std::cout << "- reading nref (" << n << ") : " << std::endl;
+	nref x = return_nref(n);
+	print_nref(x);	// prints nref(x)
+};
+
+void AI::readLastRef() {	// read the LAST reference from file
+	std::cout << std::endl;
+	std::cout << "- last nref :" << std::endl << "\t:\t";
+	read_last_ref();
+};
+
+void AI::returnRefNr() {
+	std::cout << "- nrefs number : ";
+	int x = return_last_ref_nr();
+	std::cout << x << std::endl;
+	std::cout << std::endl;
+};
+
 // TEST TEST TESTING FUNCTIONS
 void AI::testA() {	// test queue
 	// this->readMetaQue();
@@ -2117,10 +2177,10 @@ void AI::testA() {	// test queue
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
 	// TO TEST THE FUNCTION INSIDE THE MODEL.
 
-	nref x = build_custom_nref();
-	print_nref(x);
-	store_nref(x);
-	read_nrefs(nref_store_file, 1);
+	// nref x = build_custom_nref();
+	// print_nref(x);
+	// store_nref(x);
+	// read_nrefs(stored_nrefs_file, 1);
 
 	// std::string query = "\"1\",\"trivia\",\"transponder has query.\";";
 	// std::string a = strip(query);

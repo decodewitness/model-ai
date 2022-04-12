@@ -197,6 +197,21 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
         isExportBL = true;
         isExportBL1 = true;
         isExportBL2 = true;
+    } else if (str.compare("/buildref") == false) {
+        std::cout << std::endl << "~:: parameter request: buildRef()." << std::endl;
+        isBuildRef = true;
+    } else if (str.compare("/readref") == false) {
+        std::cout << std::endl << "~:: parameter request: readRef(n)." << std::endl;
+        isReadRef = true;
+    } else if (str.compare("/readrefs") == false) {
+        std::cout << std::endl << "~:: parameter request: readRefs()." << std::endl;
+        isReadRefs = true;
+    } else if (str.compare("/lastref") == false) {
+        std::cout << std::endl << "~:: parameter request: readLastRef()." << std::endl;
+        isReadLastRef = true;
+    } else if (str.compare("/refnumber") == false) {
+        std::cout << std::endl << "~:: parameter request: export_backlogs(both)." << std::endl;
+        isReturnRefNr = true;
     }
 };
 

@@ -1,3 +1,5 @@
+# AI/LOG/MAKE_README.SH  - USED BY "/RUN" SCRIPT
+
 #!/bin/bash
 
 echo "- make_readme.sh - script is * running *"
@@ -7,11 +9,11 @@ echo
 
 if [ -f "README.md" ]
   then
-    #mv README.md README.md.1
+    mv README.md ./doc/README.md.1
 fi
 if [ -d "./doc" ]
   then
-    cp ./doc/README.md ./README.md.old
+    #cp ./doc/README.md ./README.md.old
     rm -r ./doc
     mkdir -p ./doc
     touch ./doc/README.md
@@ -21,12 +23,13 @@ if [ -d "./doc" ]
 fi
 
 ### download from archive the documents to constuct the "README.md" ###
-wget https://model-ai.com/archive/doc.tar.gz
+wget https://model-ai.com/archive/doc.tar
 ### extract the "README.md" documents and clean up ###
-if [ -f "./doc.tar.gz" ]
+
+if [ -f "./doc.tar" ]
   then
-    tar xvf ./doc.tar.gz
-    rm ./doc.tar.gz
+    tar xvf ./doc.tar
+    rm ./doc.tar
 fi
 if [ -f "header1.txt" ]
   then
@@ -120,14 +123,15 @@ if [ -f "./doc/header2.txt" ]
   cat ./doc/header2.txt >> ./doc/README.md
   rm ./doc/header2.txt
 fi
-if [ -f "./README.md.1" ]
-  then
-  mv ./README.md.1 ./doc/README.md.old.1
-fi
-if [ -f "./doc/README.md" ]
-  then
-  cp ./doc/README.md ./README.md
-fi
+#if [ -f "./README.md.1" ]
+#  then
+#  mv ./README.md.1 ./doc/README.md.old.1
+#fi
+
+#if [ -f "./doc/README.md" ]
+#  then
+#  cp ./doc/README.md ./README.md
+#fi
 ### do your clean up here ###
 
 
