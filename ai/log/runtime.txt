@@ -1442,16 +1442,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc9ac45340)
-	- stacking header:(1)::<address>(0x7ffc9ac45360)
-	- stacking header:(2)::<address>(0x7ffc9ac45380)
-	- stacking header:(3)::<address>(0x7ffc9ac453a0)
-	- stacking header:(4)::<address>(0x7ffc9ac453c0)
-	- stacking header:(5)::<address>(0x7ffc9ac453e0)
-	- stacking header:(6)::<address>(0x7ffc9ac45400)
-	- stacking header:(7)::<address>(0x7ffc9ac45420)
-	- stacking header:(8)::<address>(0x7ffc9ac45440)
-	- stacking header:(9)::<address>(0x7ffc9ac45460)
+	- stacking header:(0)::<address>(0x7fffae87dc60)
+	- stacking header:(1)::<address>(0x7fffae87dc80)
+	- stacking header:(2)::<address>(0x7fffae87dca0)
+	- stacking header:(3)::<address>(0x7fffae87dcc0)
+	- stacking header:(4)::<address>(0x7fffae87dce0)
+	- stacking header:(5)::<address>(0x7fffae87dd00)
+	- stacking header:(6)::<address>(0x7fffae87dd20)
+	- stacking header:(7)::<address>(0x7fffae87dd40)
+	- stacking header:(8)::<address>(0x7fffae87dd60)
+	- stacking header:(9)::<address>(0x7fffae87dd80)
 
 
 -:: checking AI functions.
@@ -1497,16 +1497,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+character device: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./downloads
+character device: -- ./downloads
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+character device: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+character device: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1695,11 +1695,202 @@ punch.
 			~:: processed.
 		8) sub : "dkjbdkd"
 			~:: processed.
-		9) sub :   dkjbdkd"    vhjd"      °       registeredID                                                        2¶k[                        Ó—≥U          ‡˛Ì—≥U                                  !        ”ä∂U  Î—≥U          °                                                                                     òÓ—≥U                         ` Ó—≥U  8                               !       `”ä∂U  Î—≥U          °       AnotherName                                                         ¬mê                       †Ó—≥U  †Ó—≥U  ∞ÚÌ—≥U                                  !       ‡=[   Î—≥U          °       type-id                                                             g˘√E  @                            `Ó—≥U  ‡Ó—≥U                                  !       artificial_life.csv     °       value                                                               »Ò∞	 @                      Ó—≥U          †Ó—≥U                                  !       --catalogues routines-- °                                                                                @    òÓ—≥U                 ‡Ó—≥U  `Ó—≥U  0                               !       --health & life cycle-- °       type-id                                                             g˘√E                                        Ó—≥U                                  !       ‡”ä∂U  Î—≥U  d"      °       IssuerAltName                                                       zZ¡N  @    Ó—≥U                 `Ó—≥U  ‡Ó—≥U  GeneralNames                    !       Ó—≥U  pÓ—≥U          †       BasicConstraints                                                    ÒPB                        Ó—≥U   
-Ó—≥U  †Ó—≥U                                  !       ∞Ó—≥U  0Ó—≥U          †       cA                                                                  A∆  Ä                      ‡Ó—≥U  †Ó—≥U  `Ó—≥U                                  !       pÓ—≥U  Ó—≥U          †                                                                               	                                       Ó—≥U                                  !       0	Ó—≥U  ∞Ó—≥U          †       pathLenConstraint                                                   î∆nÏ@                     `	Ó—≥U           Ó—≥U                                  !       \{O/  pÓ—≥U          †       0                                                                   0   
-       ÿ	Ó—≥U                         †Ó—≥U  MAX                             !       health_criteria.csv     °       CRLDistributionPoints                                               }∂U                       ‡
-Ó—≥U  ÄÓ—≥U  `Ó—≥U                                  !       images_translation.csv  °       MAX                                                                 XÇ4
- @    XÓ—≥U                 †Ó—≥U   
-Ó—≥U  1                               !       0Ó—≥U  Ó—≥U          †                                                                                      `Ó—≥U                         ‡
-Ó—≥U                                  !       Ó—≥U   Ó—≥U                  DistributionPoint       °       DistributionPoint                                                   ím(m                       @Ó—≥U  ‡Ó—≥U   
-Ó—≥U                                  !       –Ó—≥U  0Ó—≥U          †       distributionPoint                                                   ímHm`       Ó—≥U          Ó—≥U  ‡Ó—≥U  ÄÓ—≥U                                  !       ∞Ó—≥U  Ó—≥U                  DistributionPointName   °                                                                                     òÓ—≥U                         @Ó—≥U  0                               !       pÓ—≥U  –Ó—≥U          †       reasons                                                             ÜÇI∂`      XÓ—≥U         †Ó—≥U  `Ó—≥U  @Ó—≥U  ReasonFlags                     !       0Ó—≥U  ∞Ó—≥U          †                                                                                     Ó—≥U                         ‡Ó—≥U  1                           
+~:: done processing nrefs.
+
+
+~:: running (9) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/readrefs
+	[ simple x computation: type:[char]: len:9 vowels:5 consonants:3 special:1 
+~:: parameter request: readRefs().
+ ]
+
+-:: finished x computation.
+
+~:: read_nrefs() :
+	~:: opened nrefs file.
+		~:: process nref[] ::
+			: "1001","arabian nights","secrets of the hidden cave","1001 nights","aladin","cave","treasure","genie","bottle","the genie in the bottle";
+
+		0) sub : "1001"
+			~:: processed.
+		1) sub : "arabian nights"
+			~:: processed.
+		2) sub : "secrets of the hidden cave"
+			~:: processed.
+		3) sub : "1001 nights"
+			~:: processed.
+		4) sub : "aladin"
+			~:: processed.
+		5) sub : "cave"
+			~:: processed.
+		6) sub : "treasure"
+			~:: processed.
+		7) sub : "genie"
+			~:: processed.
+		8) sub : "bottle"
+			~:: processed.
+		~:: process nref[] ::
+			: "3000","andre 3000","just another ref","outkast","big boi","outkast","label","albums","music","dre or dre 3000";
+
+		0) sub : "3000"
+			~:: processed.
+		1) sub : "andre 3000"
+			~:: processed.
+		2) sub : "just another ref"
+			~:: processed.
+		3) sub : "outkast"
+			~:: processed.
+		4) sub : "big boi"
+			~:: processed.
+		5) sub : "outkast"
+			~:: processed.
+		6) sub : "label"
+			~:: processed.
+		7) sub : "albums"
+			~:: processed.
+		8) sub : "music"
+			~:: processed.
+		~:: process nref[] ::
+			: "one","try","for","everything","should","really","be","sort of","enough","really";
+
+		0) sub : "one"
+			~:: processed.
+		1) sub : "try"
+			~:: processed.
+		2) sub : "for"
+			~:: processed.
+		3) sub : "everything"
+			~:: processed.
+		4) sub : "should"
+			~:: processed.
+		5) sub : "really"
+			~:: processed.
+		6) sub : "be"
+			~:: processed.
+		7) sub : "sort of"
+			~:: processed.
+		8) sub : "enough"
+			~:: processed.
+		~:: process nref[] ::
+			: "come one","bastard ","please","freaky","do it","for me","god doughnut","man","ai","really";
+
+		0) sub : "come one"
+			~:: processed.
+		1) sub : "bastard "
+			~:: processed.
+		2) sub : "please"
+			~:: processed.
+		3) sub : "freaky"
+			~:: processed.
+		4) sub : "do it"
+			~:: processed.
+		5) sub : "for me"
+			~:: processed.
+		6) sub : "god doughnut"
+			~:: processed.
+		7) sub : "man"
+			~:: processed.
+		8) sub : "ai"
+			~:: processed.
+		~:: process nref[] ::
+			: "jhdjhvd","jdhdhvd","dhdhd","jhddjhd","dvdjhd","dhdhj","dhjdhvd","dhjdjhvdjdvdvhjd","ddvdhvd","ddjbdjdbdb";
+
+		0) sub : "jhdjhvd"
+			~:: processed.
+		1) sub : "jdhdhvd"
+			~:: processed.
+		2) sub : "dhdhd"
+			~:: processed.
+		3) sub : "jhddjhd"
+			~:: processed.
+		4) sub : "dvdjhd"
+			~:: processed.
+		5) sub : "dhdhj"
+			~:: processed.
+		6) sub : "dhjdhvd"
+			~:: processed.
+		7) sub : "dhjdjhvdjdvdvhjd"
+			~:: processed.
+		8) sub : "ddvdhvd"
+			~:: processed.
+		~:: process nref[] ::
+			: "amazing","when","it ","turns out","that","it ","will","finally","seem","working";
+
+		0) sub : "amazing"
+			~:: processed.
+		1) sub : "when"
+			~:: processed.
+		2) sub : "it "
+			~:: processed.
+		3) sub : "turns out"
+			~:: processed.
+		4) sub : "that"
+			~:: processed.
+		5) sub : "it "
+			~:: processed.
+		6) sub : "will"
+			~:: processed.
+		7) sub : "finally"
+			~:: processed.
+		8) sub : "seem"
+			~:: processed.
+		~:: process nref[] ::
+			: "give","me","the","correct","output","please","before","I","go","coo coo";
+
+		0) sub : "give"
+			~:: processed.
+		1) sub : "me"
+			~:: processed.
+		2) sub : "the"
+			~:: processed.
+		3) sub : "correct"
+			~:: processed.
+		4) sub : "output"
+			~:: processed.
+		5) sub : "please"
+			~:: processed.
+		6) sub : "before"
+			~:: processed.
+		7) sub : "I"
+			~:: processed.
+		8) sub : "go"
+			~:: processed.
+		~:: process nref[] ::
+			: "10","kdkndw","dlndnd","dkbdkebjd","dkjdkbjd","dkddbkj","djkdkd","dkbdkd","dkjbdkd","dbdkbjd";
+
+		0) sub : "10"
+			~:: processed.
+		1) sub : "kdkndw"
+			~:: processed.
+		2) sub : "dlndnd"
+			~:: processed.
+		3) sub : "dkbdkebjd"
+			~:: processed.
+		4) sub : "dkjdkbjd"
+			~:: processed.
+		5) sub : "dkddbkj"
+			~:: processed.
+		6) sub : "djkdkd"
+			~:: processed.
+		7) sub : "dkbdkd"
+			~:: processed.
+		8) sub : "dkjbdkd"
+			~:: processed.
+~:: done processing nrefs.
+
+
+~:: running (8) queries.
+
+::- type your query -::
+
+punch.

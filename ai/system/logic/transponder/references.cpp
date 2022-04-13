@@ -96,6 +96,10 @@ nref read_nrefs_from_file(std::string filename, int nr=0) {  // filename with nr
         std::cout << "\t~:: opened nrefs file." << std::endl;
 
         while (getline(file, str)) {
+            if (str.compare("\n") == false) {
+                continue;
+            }
+
             if (str.length() > 0) {
                 std::cout << "\t\t~:: process nref[] ::" << std::endl;
                 std::cout << "\t\t\t: " << str << std::endl;
@@ -125,19 +129,21 @@ nref read_nrefs_from_file(std::string filename, int nr=0) {  // filename with nr
                     // assign sub to x element i
                     assign_sub(x, s, i);
                 }
+            } else {
+                break;
             }
         }
 
-        if (s.length() > 0) {
-            s = str.substr(pos, pos3 - 1);
-            s.pop_back();
-            std::cout << "\t\t" << i << ") sub : " << s << std::endl;
-            std::cout << "\t\t\t~:: processed." << std::endl;
-            // std::cout << std::endl;
-            // assign last sub element to x element i
-            assign_sub(x, s, i);
-            // close file stream
-        }
+        // if (s.length() > 0) {
+        //     s = str.substr(pos, pos3 - 1);
+        //     s.pop_back();
+        //     std::cout << "\t\t" << i << ") sub : " << s << std::endl;
+        //     std::cout << "\t\t\t~:: processed." << std::endl;
+        //     // std::cout << std::endl;
+        //     // assign last sub element to x element i
+        //     assign_sub(x, s, i);
+        //     // close file stream
+        // }
     }
     if (file.is_open() == true) {
         file.close();
