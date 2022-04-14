@@ -346,6 +346,24 @@ nref return_nref(int x) {   // return nref structure "x"
 return y;
 };
 
+nref construct_ref(std::string nr, std::string concept, std::string description, std::string short_label, std::string rel1, std::string rel2, std::string rel3, std::string rel4, std::string rel5, std::string rel_string) {
+
+    nref x;
+
+    // todo CHECK for STRINGS HERE!!!
+    x.nr = nr;
+    x.concept = concept;
+    x.description = description;
+    x.short_label = short_label;
+    x.rel1 = rel1;
+    x.rel2 = rel2;
+    x.rel3 = rel3;
+    x.rel4 = rel4;
+    x.rel5 = rel5;
+    x.rel_string = rel_string;
+
+return x;
+};
     // // print reference
     // std::cout << "\tnr : " << x.nr << std::endl; // number of this reference
     // std::cout << "\tconcept : " << x.concept << std::endl;    // name of this ref/concept
@@ -369,7 +387,7 @@ void read_last_ref() {
     std::string lastLine;            
     
     // file pointers
-    ifstream file;
+    std::ifstream file;
 
     std::cout << std::endl;
     std::cout << "~:: read_last_ref() : " << std::endl;
@@ -377,7 +395,7 @@ void read_last_ref() {
     file.open(stored_nrefs_file);
     
     if(file.is_open()) {
-        file.seekg(-1,ios_base::end);                // go to one spot before the EOF
+        file.seekg(-1, std::ios_base::end);                // go to one spot before the EOF
 
         bool keepLooping = true;
         while(keepLooping) {
@@ -391,7 +409,7 @@ void read_last_ref() {
                 keepLooping = false;                // Stop at the current position.
             }
             else {                                  // If the data was neither a newline nor at the 0 byte
-                file.seekg(-2,ios_base::cur);        // Move to the front of that data, then to the front of the data before it
+                file.seekg(-2, std::ios_base::cur);        // Move to the front of that data, then to the front of the data before it
             }
         }
 
@@ -409,8 +427,8 @@ void read_last_ref() {
 
 int return_last_ref_nr() {  // returns the number of lines
     int x=0;
-    string line;
-    ifstream file;
+    std::string line;
+    std::ifstream file;
     
     file.open(stored_nrefs_file);
 

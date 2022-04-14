@@ -753,6 +753,7 @@ void AI::init() {		// INITIALIZATION
 	// open read streams for t1
 	this->openrs();
 
+	// NEED TO PREEMPT RUNNING THIS
 	// drum machine drum machine
 	std::cout << "\t-:: drum machine" << std::endl;
 	DrumMachine();
@@ -764,6 +765,10 @@ void AI::init() {		// INITIALIZATION
 	x=gradle();
 	std::cout << "\t-:: gradle method finished. (";
 	std::cout << x << ")" << std::endl;
+
+	// count references
+	std::cout << "\t-:: counting references." << std::endl;
+	this->rNr = return_last_ref_nr();
 };
 
 void AI::appliance() {	// starts the "virtual" script
@@ -2159,6 +2164,10 @@ void AI::readLastRef() {	// read the LAST reference from file
 	read_last_ref();
 };
 
+void AI::storeRef(nref x) {
+	store_nref(x);
+};
+
 void AI::returnRefNr() {
 	std::cout << "- nrefs number : ";
 	int x = return_last_ref_nr();
@@ -2191,6 +2200,66 @@ void AI::testA() {	// test queue
 	// sleep(2);
 	//readMetaQueries(true);
 	// this->answerMeta(false);
+};
+
+void AI::train_model(std::string q, std::string a) {
+	// ints
+	int nr = this->rNr;
+
+	// nref sequences
+	nref x;
+	nref refq;
+	
+	// get stored number
+	std::string s = std::to_string(nr);
+	refq.nr = s;
+
+	// look up subject
+		// look for 'the','a','an'.
+		// look for 'it'
+
+	// look for adjectives.
+		// look for 'I','me','her','him','it','they'.
+		// look for 'my','mine','her','his','its','their','theirs'.
+
+	// assign subject
+		// combine word after [adjectives][2]
+		// look for word behind [subject][1]
+		// look for "is" behind "it"
+
+		// record [adjectives][1]
+			// look for "are" after "they" [adjectives][1]
+
+
+	// if (nreference || synonym) {
+	// 	STRING A
+	// 	look up correct number for string a
+	// 	update nreference
+	// 		add synonym if not present
+
+	// 	STRING B
+	// 	look up correct number for string a
+	// 	update nreference
+	// 		add synonym if not present
+
+	// 	COMBINE references
+	// 	FILTER references with trained references.
+
+	// 	RETURN new reference
+	// }
+
+ 	x.nr = refq.nr;
+    x.concept = refq.concept;
+    x.description = refq.description;
+    x.short_label = refq.short_label;
+    x.rel1 = refq.rel1;
+    x.rel2 = refq.rel2;
+    x.rel3 = refq.rel3;
+    x.rel4 = refq.rel4;
+    x.rel5 = refq.rel5;
+    x.rel_string = refq.rel_string;
+
+	this->storeRef(x);
 };
 
 #endif

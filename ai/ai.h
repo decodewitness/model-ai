@@ -113,9 +113,13 @@ private:
 	int r100; // for storing random number <=100
 	int pool; // for pooling data (initialize to 0)
 
+	// stepping
 	int step;
 	int element;
 	int elements;
+	
+	// references
+	int rNr;	// nr for the last reference
 	
 	// chars
 	char ch;
@@ -397,9 +401,11 @@ public:
 	void readLastRef();
 	void readRef(int n);
 	void returnRefNr();
-	
+	void storeRef(nref x);	// nref and not ref
+
 	// testing
 	void testA();
+	void train_model(std::string q, std::string a);
 };
 
 #endif
