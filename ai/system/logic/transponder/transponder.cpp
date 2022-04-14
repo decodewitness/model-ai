@@ -122,6 +122,14 @@ void Transponder::analytics(std::string s) {
     int special=0;
     int unknown=0;
 
+    // variables for query position
+    int pos;
+    bool queryAssigned = false;
+    // int pos1, pos2;
+
+    // strings
+    std::string query;
+
     // length for analytics
     int len = s.length();   // length of string
     
@@ -279,9 +287,28 @@ void Transponder::analytics(std::string s) {
         // flush relations
         this->flush_relations();
 
+        // filter response
+        // if (this->result.length() >= 1) {
+        //     // query
+            
+        //     pos = this->result.find_first_of("\";") - 2;
+        //     query = this->result.substr(this->result.find("\",\"") + 3, pos);
+            
+        //     // pos2 = this->result.find_last_of("\";");
+        //     // query = this->result.substr(pos1, pos2-1);
+
+        //     if (query.length() > 0) {
+        //         queryAssigned = true;
+        //     }
+        // }
+
+        // std::cout << std::endl;
+        // std::cout << ((queryAssigned) ? "-assigned query;" : "-query was not assigned;");
+        // std::cout << std::endl;
+
         // output MAIN RESPONSE in all certain events
-        std::cout << std::endl;
         std::cout << "+query :: (" << this->subject << ")" << std::endl;
+        // std::cout << "[RESPONSE] : " << ((queryAssigned) ? query : "-query was not assigned-") << std::endl; // query was just made here above
         std::cout << "[RESPONSE] : " << this->result << std::endl;
         sleep(3);
 
@@ -364,10 +391,12 @@ std::string Transponder::answer(std::string s) {
     int biggest=0;
     int inc=0;
     int b=0;
+    int pos1, pos2;
 
     std::string x;
     std::string tp; // initially chosen returned query
     std::string query = s;
+    std::string query2;
     std::string used_file = "ai/data/files/trivia_logic.txt";  // AI/DATA/FILES/TRIVIA_LOGIC.TXT
     std::string used_file_ar[64] = { "trivia_logic", "question_answers" };  // max. file name length    // AI/DATA/FILES/TRIVIA_LOGIC.TXT   // AI/DATA/FILES/QUESTION_ANSWERS.TXT
 
@@ -440,7 +469,18 @@ std::string Transponder::answer(std::string s) {
                 // rank score
                     // x = transponder queries  // query = user input query
             // debug
-            rank = this->rank_score(query, x);  // calculate score
+
+            // TRANSFORM TRANSPONDER QUERY
+            std::cout << "(debug) : " << std::endl;
+            pos1 = query.find_last_of(",");
+            pos2 = query.find_last_of(";");
+            std::cout << "\t" << pos2;
+            std::cout << std::endl;
+            query2 = query.substr(pos1+1, pos2-2);
+            std::cout << "\t" << query2 << std::endl;
+            std::cout << std::endl;
+
+            rank = this->rank_score(query2, x);  // calculate score
             
             // debugging information
             // std::cout << std::endl << "(transponder query): " << x << std::endl;            
@@ -568,7 +608,8 @@ int Transponder::scored(std::string q, std::string tq) {
         // std::cout << "->>> pushed back ->>> " << str << std::endl;
 
         // Get the first occurrence
-        std::cout << std::endl << "\t~:: matching occurences." << std::endl;
+        std::cout << "\t~:: matching occurences." << std::endl;
+        std::cout << std::endl;
         size_t pos = tq.find(str);
         // Repeat till end is reached
 
