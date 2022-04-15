@@ -85,6 +85,8 @@ void Transponder::setSubject(std::string s) {
 };
 
 std::string Transponder::respond(bool b) {
+    std::string syn_res;
+    
     // skip line and respond from mechanism
     std::cout << std::endl;
     std::cout << "\tTRANSPONDER::responding:" << std::endl;
@@ -96,6 +98,8 @@ std::string Transponder::respond(bool b) {
     if (b == true) {
         // x = this->subject;
         this->analytics(this->subject);
+        // syn_res = synonyms(this->subject);
+
     } else {
         // debug messages
         std::cout << std::endl << "~::(skipping analytics)" << std::endl;
@@ -129,6 +133,11 @@ void Transponder::analytics(std::string s) {
 
     // strings
     std::string query;
+
+    std::string syn_res;
+    // std::string syn_res1;
+    // std::string syn_res2;
+
 
     // length for analytics
     int len = s.length();   // length of string
@@ -250,10 +259,23 @@ void Transponder::analytics(std::string s) {
     // skip line
     std::cout << std::endl;
 
+    // RESPONSE GETS SET HERE
     // process answers in "this->answer()"
     std::cout << std::endl << "(debug) answer." << std::endl;
     this->response = this->answer(s);
     
+    std::cout << std::endl;
+    std::cout << "----- ----- -----" << std::endl;
+    //std::cout << "(debug) response : " << this->response << std::endl;
+    std::cout << "(debug) result : " << this->result << std::endl;
+
+    
+    
+    //syn_res1 = synonyms(this->response);
+    // syn_res2 = synonyms(this->result);
+
+
+
     sleep(1);
     
     // answer the question
@@ -286,6 +308,8 @@ void Transponder::analytics(std::string s) {
         this->store_relations();    // stores the relations through store_relations() function
         // flush relations
         this->flush_relations();
+
+        syn_res = synonyms(this->subject);
 
         // filter response
         // if (this->result.length() >= 1) {
@@ -784,14 +808,156 @@ std::string Transponder::synonyms(std::string q) {    // q is term for looking u
     std::string term;
     std::string line;
 
-    std::cout << std::endl << "synonyms() :" << std::endl;
+    std::string word;
+    std::string word1, word2, word3, word4, word5;
+    vector<std::string> ourwords;
 
-    if (this->syno.is_open() == true) {
-        while (getline(this->syno, line)) {
-            std::cout << line << std::endl;
+    bool match1=false;
+    bool match2=false;
+    bool match3=false;
+    bool match4=false;
+    bool match5=false;
+
+    istringstream iss(q);
+
+    std::cout << std::endl << "~:: --- synonyms() ---:" << std::endl;
+    
+    // process query first
+    while (iss >> word) {
+        ourwords.push_back(word);
+    }
+
+    for (size_t i=0; i<ourwords.size(); i++) {
+        if (this->syno.is_open() == true) {
+            while (getline(this->syno, line)) {
+                // debugging output
+                // std::cout << line << std::endl;
+                std::istringstream iss (line);
+                iss >> word1 >> std::skipws >> word2 >> std::skipws >> word3 >> std::skipws >> word4 >> std::skipws >> word5;
+                            
+                if (word1.length() != 0) {
+                    word1[0] = tolower(word1[0]);
+                    if (word1.compare(word) == false) {
+                        // this->oursyns.push_back(word1);
+                        std::cout << "success 1" << std::endl;
+                        std::cout << std::endl << "word1 : " << word1 << " // q : " << q << std::endl;
+                        match1=true;
+                        break;
+                    }
+                }
+
+                if (word2.length() != 0) {
+                    word2[0] = tolower(word2[0]);
+                    if (word2.compare(word) == false) {
+                        // this->oursyns.push_back(word2);
+                        std::cout << "success 2" << std::endl;
+                        std::cout << std::endl << "word2 : " << word1 << " // q : " << q << std::endl;
+                        match2=true;
+                        break;
+                    }
+                }
+
+                if (word3.length() != 0) {
+                    word3[0] = tolower(word3[0]);
+                    if (word3.compare(word) == false) {
+                        // this->oursyns.push_back(word3);
+                        std::cout << "success 3" << std::endl;
+                        std::cout << std::endl << "word3 : " << word1 << " // q : " << q << std::endl;
+                        match3=true;
+                        break;
+                    }
+                }
+
+                if (word4.length() != 0) {
+                    word4[0] = tolower(word4[0]);
+                    if (word4.compare(word) == false) {
+                        // this->oursyns.push_back(word4);
+                        std::cout << "success 4" << std::endl;
+                        std::cout << std::endl << "word4 : " << word1 << " // q : " << q << std::endl;
+                        match4=true;
+                        break;
+                    }
+                }
+
+                if (word5.length() != 0) {
+                    word5[0] = tolower(word5[0]);
+                    if (word5.compare(word) == false) {
+                        this->oursyns.push_back(word5);
+                        std::cout << "success 5" << std::endl;
+                        std::cout << std::endl << "word5 : " << word1 << " // q : " << q << std::endl;
+                        match5=true;
+                        break;
+                    }
+                }
+            }
+
+            if (match1 || match2 || match3 || match4 || match5) {
+                std::cout << "\t~:: match ::~" << std::endl;
+                if (match1 == true) {
+                    std::cout << "\t\tmatch -1-" << std::endl;
+                }
+                if (match2 == true) {
+                    std::cout << "\t\tmatch -2-" << std::endl;
+                }
+                if (match3 == true) {
+                    std::cout << "\t\tmatch -3-" << std::endl;
+                }
+                if (match4 == true) {
+                    std::cout << "\t\tmatch -4-" << std::endl;
+                }
+                if (match5 == true) {
+                    std::cout << "\t\tmatch -5-" << std::endl;
+                }
+
+                if (match1 || match2 || match3 || match4 || match5) {
+                    if (word1.length() > 0) {
+                        this->oursyns.push_back(word1);
+                    }
+                    if (word2.length() > 0) {
+                        this->oursyns.push_back(word2);
+                    }
+                    if (word3.length() > 0) {
+                        this->oursyns.push_back(word3);
+                    }
+                    if (word4.length() > 0) {
+                        this->oursyns.push_back(word4);
+                    }
+                    if (word5.length() > 0) {
+                        this->oursyns.push_back(word5);
+                    }
+                }
+
+                // this->oursyns.push_back(word2);
+                // this->oursyns.push_back(word3);
+                // this->oursyns.push_back(word4);
+                // this->oursyns.push_back(word5);
+
+                // OUTPUT SYNONYMS
+                for (size_t i=0; i<this->oursyns.size(); i++) {
+                    std::cout << "- synonym : " << this->oursyns.at(i) << std::endl;
+                }
+            }
+                
+                // DEBUGGING OUTPUT
+                // for (size_t i=0; i < this->oursyns.size(); i++) {
+                //     std::cout << " :: " << this->oursyns.at(i);
+                // }
+
+                // std::cout << std::endl;
+        } else {
+            std::cout << std::endl << "~:!:~ (error) - \"syno\" is not open." << std::endl;
+        }
+    }
+
+    // measure synonyms
+    if (this->oursyns.size() > 0) {
+        if (this->oursyns.at(0).length() > 0) {
+            term = this->oursyns.at(0);
+            std::cout << std::endl;
+            std::cout << "\t- assigned term : " << term << std::endl;
         }
     } else {
-        std::cout << std::endl << "~:!:~ (error) - \"syno\" is not open." << std::endl;
+        term = "<none assigned>";
     }
 
 return term;

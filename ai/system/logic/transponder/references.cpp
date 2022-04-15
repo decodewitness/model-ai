@@ -10,12 +10,12 @@ struct nref {
     std::string concept;    // name of this ref/concept
     std::string description;    // summary or brief description of gained attributes
     std::string short_label;    // short label for reference
+    std::string rel_string; // additional relations
     std::string rel1;   // relation 1
     std::string rel2;   // relation 2
     std::string rel3;   // relation 3
     std::string rel4;   // relation 4
     std::string rel5;   // relation 5
-    std::string rel_string; // additional relations
 };
 
 void store_nref(nref x) {
@@ -355,12 +355,12 @@ nref construct_ref(std::string nr, std::string concept, std::string description,
     x.concept = concept;
     x.description = description;
     x.short_label = short_label;
+    x.rel_string = rel_string;
     x.rel1 = rel1;
     x.rel2 = rel2;
     x.rel3 = rel3;
     x.rel4 = rel4;
     x.rel5 = rel5;
-    x.rel_string = rel_string;
 
 return x;
 };

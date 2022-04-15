@@ -56,6 +56,7 @@ private:
     vector<std::string> backlog_queries;    // backlog of queries of conversation
     vector<std::string> backlog_answers;    // backlog of answers of conversation
     vector<std::string> relations;
+    vector<std::string> oursyns;
 
     // file streams
     std::ifstream scores;

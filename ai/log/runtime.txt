@@ -1443,16 +1443,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe7170ca00)
-	- stacking header:(1)::<address>(0x7ffe7170ca20)
-	- stacking header:(2)::<address>(0x7ffe7170ca40)
-	- stacking header:(3)::<address>(0x7ffe7170ca60)
-	- stacking header:(4)::<address>(0x7ffe7170ca80)
-	- stacking header:(5)::<address>(0x7ffe7170caa0)
-	- stacking header:(6)::<address>(0x7ffe7170cac0)
-	- stacking header:(7)::<address>(0x7ffe7170cae0)
-	- stacking header:(8)::<address>(0x7ffe7170cb00)
-	- stacking header:(9)::<address>(0x7ffe7170cb20)
+	- stacking header:(0)::<address>(0x7ffd5b220a40)
+	- stacking header:(1)::<address>(0x7ffd5b220a60)
+	- stacking header:(2)::<address>(0x7ffd5b220a80)
+	- stacking header:(3)::<address>(0x7ffd5b220aa0)
+	- stacking header:(4)::<address>(0x7ffd5b220ac0)
+	- stacking header:(5)::<address>(0x7ffd5b220ae0)
+	- stacking header:(6)::<address>(0x7ffd5b220b00)
+	- stacking header:(7)::<address>(0x7ffd5b220b20)
+	- stacking header:(8)::<address>(0x7ffd5b220b40)
+	- stacking header:(9)::<address>(0x7ffd5b220b60)
 
 
 -:: checking AI functions.
@@ -1519,14 +1519,14 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	the correct query
-	[ simple x computation: type:[char]: len:17 vowels:12 consonants:5 special:0 ]
+	amazing
+	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "the correct query".
-	- HMAC string :: *string_next_logic() ::  (the correct query) is >> 
+*string_next_logic() :: ssh: "amazing".
+	- HMAC string :: *string_next_logic() ::  (amazing) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
@@ -1536,41 +1536,35 @@ punch.
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 
-~:: prepTransponder() : (the correct query)
+~:: prepTransponder() : (amazing)
 ~:: transponder -> prep()
 
-~:: set subject to: "the correct query".
-(debug) word :: the
-(debug) word :: correct
-(debug) word :: query
+~:: set subject to: "amazing".
+(debug) word :: amazing
 
-~:: (debug)::nrOfWords = 3.
-~:: (debug)::counter = 3.
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "the correct query".
+(debug) calling prepare_ints() (from) -> "amazing".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (2).
+~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) the :: #1
-(debug) 1) correct :: #1847
-(debug) 2) query :: #2548
+(debug) 0) amazing :: #2928
 
 ~:: meta queries ~:: storing meta query sequence
 	~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 	- meta sequences:
-		- 1		- 1847		- 2548
+		- 2928
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("1,1847,2548,")
+	~:: reverse_meta_query_lookup("2928,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- the		 --> *(a+i) = 1 - *(a+i) - 1 = 0
-	- correct		 --> *(a+i) = 1847 - *(a+i) - 1 = 1846
-	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
+	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1583,334 +1577,222 @@ punch.
 
 	-----------------
 
-		* words no_#: 3
-		* length: 17
-		* vowels: 5
-		* consonants: 10
+		* words no_#: 1
+		* length: 7
+		* vowels: 3
+		* consonants: 4
 		* numbers: 0
-		* special chars: 2
+		* special chars: 0
 		* unknown chars: 0
 
 
 (debug) answer.
 (debug) : 
 	-1
-	the correct query
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
+~:: pushing back ---> amazing
 
-	- the
+	- amazing
 	~:: matching occurences.
 
-	- correct
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
 	~:: matching occurences.
 
-	- query
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
 	~:: matching occurences.
 
 
 incremental size function : 1
 
-[RESULT] : "1","transponder has query.";
+[RESULT] : "13","you are amazing.";
 (debug) : 
 	-1
-	the correct query
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
+~:: pushing back ---> amazing
 
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 1
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
+	- amazing
 	~:: matching occurences.
 
 
@@ -1928,9 +1810,12 @@ labelled faculty : 1
 
 	% having convos?
 
-:: the correct query
+:: amazing
 (EOT)
 
+
+----- ----- -----
+(debug) result : "13","you are amazing.";
 
 ~:: transponder -> answer()
 
@@ -1940,7 +1825,7 @@ labelled faculty : 1
 
 ~:: strip()
 
-- pushing back : 1
+- pushing back : 13
 
 ~:: storing relations ::~
 	~:: opening : "ai/data/files/relatives.txt".
@@ -1948,8 +1833,22 @@ labelled faculty : 1
 		.
 ~:: closing file.
 
-+query :: (the correct query)
-[RESPONSE] : "1","transponder has query.";
+
+~:: --- synonyms() ---:
+success 1
+
+word1 : amazing // q : amazing
+	~:: match ::~
+		match -1-
+- synonym : amazing
+- synonym : Incredible
+- synonym : Unbelievable
+- synonym : Improbable
+- synonym : Astonishing
+
+	- assigned term : amazing
++query :: (amazing)
+[RESPONSE] : "13","you are amazing.";
 
 
 (EOT)
@@ -1963,335 +1862,51 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	the query?
-	[ simple x computation: type:[char]: len:10 vowels:6 consonants:3 special:1 ]
+	this is amazing
+	[ simple x computation: type:[char]: len:15 vowels:10 consonants:5 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "the query?".
-	- HMAC string :: *string_next_logic() ::  (the query?) is >> 
+*string_next_logic() :: ssh: "this is amazing".
+	- HMAC string :: *string_next_logic() ::  (this is amazing) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
 
-~:: prepTransponder() : (the query?)
+~:: prepTransponder() : (this is amazing)
 ~:: transponder -> prep()
 
-~:: set subject to: "the query?".
-(debug) word :: the
-(debug) word :: query
-
-~:: (debug)::nrOfWords = 2.
-~:: (debug)::counter = 2.
-
-(debug) calling prepare_ints() (from) -> "the query?".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (3).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) the :: #1
-(debug) 1) query :: #2548
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("1,2548,")
-~:::~
-
-~:: reverse meta query lookup: 
-	- the		 --> *(a+i) = 1 - *(a+i) - 1 = 0
-	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
-
-(EOT)
-~:: transponder -> prepTr()
-(debug) after this query.
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 2
-		* length: 10
-		* vowels: 3
-		* consonants: 5
-		* numbers: 0
-		* special chars: 2
-		* unknown chars: 0
-
-
-(debug) answer.
-(debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 1
-
-[RESULT] : "6","a real query.";
-(debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 1
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 1
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : 
-~:: (debug) query was question: ('?')
-~:: (debug) -- answers processed: 9
-
-labelled faculty : 1
-
-[CONVOS] :
-
-~:: listConvos() :
-
-	% having convos?
-
-:: the correct query
-:: the query?
-(EOT)
-
-
-~:: transponder -> answer()
-
-~:: pushing back queries.
-
-~:: stripping (result).
-
-~:: strip()
-
-- pushing back : 6
-
-~:: storing relations ::~
-	~:: opening : "ai/data/files/relatives.txt".
-		+/+ relations :
-		.
-~:: closing file.
-
-+query :: (the query?)
-[RESPONSE] : "6","a real query.";
-
-
-(EOT)
-
-~:: running (8) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	question for you
-	[ simple x computation: type:[char]: len:16 vowels:9 consonants:7 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "question for you".
-	- HMAC string :: *string_next_logic() ::  (question for you) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: prepTransponder() : (question for you)
-~:: transponder -> prep()
-
-~:: set subject to: "question for you".
-(debug) word :: question
-(debug) word :: for
-(debug) word :: you
+~:: set subject to: "this is amazing".
+(debug) word :: this
+(debug) word :: is
+(debug) word :: amazing
 
 ~:: (debug)::nrOfWords = 3.
 ~:: (debug)::counter = 3.
 
-(debug) calling prepare_ints() (from) -> "question for you".
+(debug) calling prepare_ints() (from) -> "this is amazing".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (6).
+~:: (debug) number of matching occurences: (4).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) question :: #592
-(debug) 1) for :: #7
-(debug) 2) you :: #15
+(debug) 0) this :: #12
+(debug) 1) is :: #8
+(debug) 2) amazing :: #2928
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("592,7,15,")
+	~:: reverse_meta_query_lookup("12,8,2928,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- question		 --> *(a+i) = 592 - *(a+i) - 1 = 591
-	- for		 --> *(a+i) = 7 - *(a+i) - 1 = 6
-	- you		 --> *(a+i) = 15 - *(a+i) - 1 = 14
+	- this		 --> *(a+i) = 12 - *(a+i) - 1 = 11
+	- is		 --> *(a+i) = 8 - *(a+i) - 1 = 7
+	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2305,9 +1920,9 @@ punch.
 	-----------------
 
 		* words no_#: 3
-		* length: 16
-		* vowels: 7
-		* consonants: 7
+		* length: 15
+		* vowels: 5
+		* consonants: 8
 		* numbers: 0
 		* special chars: 2
 		* unknown chars: 0
@@ -2316,22 +1931,22 @@ punch.
 (debug) answer.
 (debug) : 
 	-1
-	question for you
+	this is amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
 
-	- question
+	- this
 	~:: matching occurences.
 
-	- for
+	- is
 	~:: matching occurences.
 
-	- you
+	- amazing
 	~:: matching occurences.
 
 
@@ -2339,22 +1954,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	this is amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
 
-	- question
+	- this
 	~:: matching occurences.
 
-	- for
+	- is
 	~:: matching occurences.
 
-	- you
+	- amazing
 	~:: matching occurences.
 
 
@@ -2362,253 +1977,46 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	this is amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
 
-	- question
+	- this
 	~:: matching occurences.
 
-	- for
+	- is
 	~:: matching occurences.
 
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- amazing
 	~:: matching occurences.
 
 
 incremental size function : 1
 
-[RESULT] : "9","I'm your assistant.";
+[RESULT] : "3","transponder is bool.";
 (debug) : 
 	-1
-	question for you
+	this is amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
 
-	- question
+	- this
 	~:: matching occurences.
 
-	- for
+	- is
 	~:: matching occurences.
 
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- amazing
 	~:: matching occurences.
 
 
@@ -2616,22 +2024,229 @@ incremental size function : 1
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	this is amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
 
-	- question
+	- this
 	~:: matching occurences.
 
-	- for
+	- is
 	~:: matching occurences.
 
-	- you
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	this is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> this
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- this
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
 	~:: matching occurences.
 
 
@@ -2649,11 +2264,13 @@ labelled faculty : 1
 
 	% having convos?
 
-:: the correct query
-:: the query?
-:: question for you
+:: amazing
+:: this is amazing
 (EOT)
 
+
+----- ----- -----
+(debug) result : "3","transponder is bool.";
 
 ~:: transponder -> answer()
 
@@ -2663,7 +2280,7 @@ labelled faculty : 1
 
 ~:: strip()
 
-- pushing back : 9
+- pushing back : 3
 
 ~:: storing relations ::~
 	~:: opening : "ai/data/files/relatives.txt".
@@ -2671,29 +2288,18 @@ labelled faculty : 1
 		.
 ~:: closing file.
 
-+query :: (question for you)
-[RESPONSE] : "9","I'm your assistant.";
+
+~:: --- synonyms() ---:
+
+	- assigned term : amazing
++query :: (this is amazing)
+[RESPONSE] : "3","transponder is bool.";
 
 
 (EOT)
 
-~:: running (7) queries.
+~:: running (8) queries.
 
 ::- type your query -::
 
 punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
- ]
-
--:: finished x computation.
-
-(kill chain) function() : 9
-
--/- initializing killchain(1) sequence.
-
