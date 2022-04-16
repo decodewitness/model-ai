@@ -155,7 +155,6 @@ return x;
 };
 
 void assign_sub(nref &x, std::string sub, int count) {
-    
     // debugging output
         // anounce function
     // std::cout << std::endl;

@@ -976,6 +976,11 @@ void AI::query() {	// respond to logical query method
 	}
 	
 	query_string = str;
+	this->original_string = query_string;
+	// AND FILTER AS WELL!!!
+	for (size_t i=0; i<query_string.length(); i++) {
+		query_string[i] = tolower(query_string[i]);
+	}
 
 	std::cout << std::endl << std::endl << "-:: testing sample ::-" << std::endl;
 	logicalQuery(query_string);

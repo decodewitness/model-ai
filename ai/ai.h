@@ -150,7 +150,8 @@ private:
 
 	// strings
 	std::string number_modules[nr_modules];	// these are all files and used to construct the virtual domain
-	std::string crlurl;
+	std::string crlurl;	// the url for the curl request to download the latest model
+	std::string original_string;	// used for query string reference until being overridden by another str object
 
 	// containers
 	moduleContainer m;
