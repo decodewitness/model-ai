@@ -93,7 +93,6 @@ const int nr_modules = 28;	// equal to the number of includes in "modules" (abov
 // FOR OTHER MODULES
 const int module_limits = 1024;
 
-
 // DON'T MESS WITH THIS SETTING -- this setting to "true" runs the virtual appliance.
 	// --- VIRTUAL APP APPLIANCE CONTROL SETTING ---
 bool app = false;
@@ -119,7 +118,7 @@ private:
 	int elements;
 	
 	// references
-	int rNr;	// nr for the last reference
+	int rNr;	// nr for the last reference (size of references)
 	
 	// chars
 	char ch;
@@ -309,7 +308,6 @@ public:
 	void export_backlog2();	// export backlog_answers
 	void export_backlogs();	// export both backlog_queries & backlog_answers
 
-
 	// handle data
 	void hdata();
 	void hmath();
@@ -407,7 +405,11 @@ public:
 	// testing
 	void testA();
 	void train_model(std::string q, std::string a);
+
+	// analytical / category research
+	void qlog(int x);	// log last queries ;; x=number (0 default ;; means only last query+response)
 };
 
 #endif
+
 // eof

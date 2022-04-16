@@ -137,6 +137,7 @@ void AI::help(int n=1) {
 	std::cout << "/readrefs -- read all references." << std::endl;
 	std::cout << "/lastref -- print the last reference." << std::endl;
 	std::cout << "/refnumber -- print the number of references." << std::endl;
+	std::cout << "/qlog -- qlog(x) -- log (x) queries." << std::endl;
 
 	// list of arguments
 	std::cout << std::endl;
@@ -578,6 +579,12 @@ bool AI::rm(std::string f) {	// remove function for files
 return true;
 };
 
+void AI::qlog(int x=0) {
+	if (this->trans == true) {
+		std::cout << "~:: (logging)" << std::endl;
+		this->transponder->logQueries(x);
+	}
+};
 
 void AI::test_run(int flag=0) {	// simulate a test run
 	std::cout << std::endl;
@@ -1313,6 +1320,9 @@ void AI::query() {	// respond to logical query method
 	} else if (isReturnRefNr == true) {
 		this->returnRefNr();
 		isReturnRefNr = false;
+	} else if (isQLog == true) {
+		this->qlog(0);
+		isQLog = false;
 	}
 
 	// DEFAULTS TO THIS LOGIC FUNCTION

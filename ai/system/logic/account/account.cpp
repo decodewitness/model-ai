@@ -133,7 +133,7 @@ void Track_Account::transfer_account(int src, int dst, float amount) {  // trans
         af << "Transaction:" << std::endl << "-----" << std::endl;
         af << "account: " << src << " ;; new saldo: " << (saldo1 - amount) << std::endl;
         af << "account: " << dst << " ;; new saldo: " << (saldo2 + amount) << std::endl;
-        af << "< - > amount transferred: " << amount << coin[coin_no] << std::endl;
+        af << "< - > amount transferred: " << amount << " " << coin[coin_no] << std::endl;
         af << std::endl;
 
         // close file stream

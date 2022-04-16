@@ -1,9 +1,9 @@
-"1","transponder gets question.";
-"2","transponder gets answer.";
-"3","transponder is not active yet question? question question?.";
-"4","transponder is bool.";
-"5","transponder is boolean boolean.";
+"1","transponder :: what is your question?";
+"2","transponder :: has answer.";
+"3","transponder :: is not active yet question? question question?";
+"4","transponder :: is bool.";
+"5","transponder :: is boolean boolean.";
 "6","a real query.";
-"7","I'm just artificial. rather official.";
+"7","I'm just artificial. still rather official.";
 "8","rather official.";
-"9","amazing suggestion.";
+"9","amazing suggestion!";

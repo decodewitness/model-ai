@@ -34,6 +34,8 @@ std::string weights = "ai/lib/queries/weights";
 std::string backlog_query = "ai/log/backlog_queries.txt";
 std::string backlog_answer = "ai/log/backlog_answers.txt";
 
+// log file for query related things / - abstract
+std::string logfile = "modelai_extract.txt";
 
 // Transponder  
 class Transponder {
@@ -44,7 +46,13 @@ private:
     
     // booleans
     bool analytical;    // whether to use "analytics" function
-    
+    bool capsize;  // if true then put a newline character before and after every log entry for the logQueries() && the qlog() functions
+
+    // analytical
+    bool fitting; // used in case the answer is fitting else resets bool and is checked in the query
+    bool notAlwaysFitting;  // used when not always fitting answer
+    bool alwaysFitting;  // used when applies in every answer context
+
     // strings
     std::string initial_sentence;   // logic comparts from here
     std::string default_response;   // carries the default response for when there is no logic
@@ -95,7 +103,8 @@ public:
 
     // export backlog and storing relations
     void export_backlog(int n);    // n=0 (backlog_queries); n=1 (backlog_answers); n=2 (both)
-    
+    void cappedsize();  // toggles "capsize" boolean to put a newline char before and after log queries in Transponder::logQueries() and AI::qlog() functions
+
     // relations
     void store_relations();
     void flush_relations();
@@ -103,6 +112,8 @@ public:
     // listing queries and such
     void listConvos(size_t max_history_length);
     void list_relations();
+    void logQueries(int x=0);
+    
 };
 
 // eof

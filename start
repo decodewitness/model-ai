@@ -109,7 +109,7 @@ cp ./ai/log/runtime.txt ./doc/runtime.1.txt
 #cat ./ai/log/runtime.txt > runtime.txt
 
 echo "~:copying \"make_readme.sh\""
-cp ./ai/log/make_readme.sh ./
+cp ./ai/bin/script/make_readme.sh ./
 chmod +x ./make_readme.sh
 
 echo "~:creating README.md -> ./doc/README.md"

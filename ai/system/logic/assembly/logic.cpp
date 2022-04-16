@@ -210,8 +210,11 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
         std::cout << std::endl << "~:: parameter request: readLastRef()." << std::endl;
         isReadLastRef = true;
     } else if (str.compare("/refnumber") == false) {
-        std::cout << std::endl << "~:: parameter request: export_backlogs(both)." << std::endl;
+        std::cout << std::endl << "~:: parameter request: export_backlogs()." << std::endl;
         isReturnRefNr = true;
+    } else if (str.compare("/log") == false) {
+        std::cout << std::endl << "~:: parameter request: qlog()." << std::endl;
+        isQLog = true;
     }
 };
 

@@ -1443,16 +1443,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe7170ca00)
-	- stacking header:(1)::<address>(0x7ffe7170ca20)
-	- stacking header:(2)::<address>(0x7ffe7170ca40)
-	- stacking header:(3)::<address>(0x7ffe7170ca60)
-	- stacking header:(4)::<address>(0x7ffe7170ca80)
-	- stacking header:(5)::<address>(0x7ffe7170caa0)
-	- stacking header:(6)::<address>(0x7ffe7170cac0)
-	- stacking header:(7)::<address>(0x7ffe7170cae0)
-	- stacking header:(8)::<address>(0x7ffe7170cb00)
-	- stacking header:(9)::<address>(0x7ffe7170cb20)
+	- stacking header:(0)::<address>(0x7ffc08133da0)
+	- stacking header:(1)::<address>(0x7ffc08133dc0)
+	- stacking header:(2)::<address>(0x7ffc08133de0)
+	- stacking header:(3)::<address>(0x7ffc08133e00)
+	- stacking header:(4)::<address>(0x7ffc08133e20)
+	- stacking header:(5)::<address>(0x7ffc08133e40)
+	- stacking header:(6)::<address>(0x7ffc08133e60)
+	- stacking header:(7)::<address>(0x7ffc08133e80)
+	- stacking header:(8)::<address>(0x7ffc08133ea0)
+	- stacking header:(9)::<address>(0x7ffc08133ec0)
 
 
 -:: checking AI functions.
@@ -1510,7 +1510,7 @@ file or directory: -- ./DCIM
 file or directory: -- ./info.txt
 
 
-~:: running (10) queries.
+~:: running (4) queries.
 
 ::- type your query -::
 
@@ -1519,14 +1519,14 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	the correct query
-	[ simple x computation: type:[char]: len:17 vowels:12 consonants:5 special:0 ]
+	a question?
+	[ simple x computation: type:[char]: len:11 vowels:5 consonants:5 special:1 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "the correct query".
-	- HMAC string :: *string_next_logic() ::  (the correct query) is >> 
+*string_next_logic() :: ssh: "a question?".
+	- HMAC string :: *string_next_logic() ::  (a question?) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
@@ -1536,41 +1536,38 @@ punch.
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 
-~:: prepTransponder() : (the correct query)
+~:: prepTransponder() : (a question?)
 ~:: transponder -> prep()
 
-~:: set subject to: "the correct query".
-(debug) word :: the
-(debug) word :: correct
-(debug) word :: query
+~:: set subject to: "a question?".
+(debug) word :: a
+(debug) word :: question
 
-~:: (debug)::nrOfWords = 3.
-~:: (debug)::counter = 3.
+~:: (debug)::nrOfWords = 2.
+~:: (debug)::counter = 2.
 
-(debug) calling prepare_ints() (from) -> "the correct query".
+(debug) calling prepare_ints() (from) -> "a question?".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (2).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) the :: #1
-(debug) 1) correct :: #1847
-(debug) 2) query :: #2548
+(debug) 0) a :: #5
+(debug) 1) question :: #592
 
 ~:: meta queries ~:: storing meta query sequence
 	~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 	- meta sequences:
-		- 1		- 1847		- 2548
+		- 5		- 592
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("1,1847,2548,")
+	~:: reverse_meta_query_lookup("5,592,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- the		 --> *(a+i) = 1 - *(a+i) - 1 = 0
-	- correct		 --> *(a+i) = 1847 - *(a+i) - 1 = 1846
-	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
+	- a		 --> *(a+i) = 5 - *(a+i) - 1 = 4
+	- question		 --> *(a+i) = 592 - *(a+i) - 1 = 591
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1583,10 +1580,10 @@ punch.
 
 	-----------------
 
-		* words no_#: 3
-		* length: 17
+		* words no_#: 2
+		* length: 11
 		* vowels: 5
-		* consonants: 10
+		* consonants: 4
 		* numbers: 0
 		* special chars: 2
 		* unknown chars: 0
@@ -1595,253 +1592,38 @@ punch.
 (debug) answer.
 (debug) : 
 	-1
-	the correct query
+	a question
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
+~:: pushing back ---> a
+~:: pushing back ---> question
 
-	- the
+	- a
 	~:: matching occurences.
 
-	- correct
-	~:: matching occurences.
-
-	- query
+	- question
 	~:: matching occurences.
 
 
-incremental size function : 1
+incremental size function : 2
 
-[RESULT] : "1","transponder has query.";
+[RESULT] : "1","transponder :: what is your question?";
 (debug) : 
 	-1
-	the correct query
+	a question
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
+~:: pushing back ---> a
+~:: pushing back ---> question
 
-	- the
+	- a
 	~:: matching occurences.
 
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the correct query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- correct
-	~:: matching occurences.
-
-	- query
+	- question
 	~:: matching occurences.
 
 
@@ -1849,78 +1631,142 @@ incremental size function : 1
 
 [RESULT] : (debug) : 
 	-1
-	the correct query
+	a question
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
+~:: pushing back ---> a
+~:: pushing back ---> question
 
-	- the
+	- a
 	~:: matching occurences.
 
-	- correct
-	~:: matching occurences.
-
-	- query
+	- question
 	~:: matching occurences.
 
 
-incremental size function : 0
+incremental size function : 2
 
 [RESULT] : (debug) : 
 	-1
-	the correct query
+	a question
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
+~:: pushing back ---> a
+~:: pushing back ---> question
 
-	- the
+	- a
 	~:: matching occurences.
 
-	- correct
-	~:: matching occurences.
-
-	- query
+	- question
 	~:: matching occurences.
 
 
-incremental size function : 0
+incremental size function : 1
 
 [RESULT] : (debug) : 
 	-1
-	the correct query
+	a question
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> correct
-~:: pushing back ---> query
+~:: pushing back ---> a
+~:: pushing back ---> question
 
-	- the
+	- a
 	~:: matching occurences.
 
-	- correct
-	~:: matching occurences.
-
-	- query
+	- question
 	~:: matching occurences.
 
 
-incremental size function : 0
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	a question
+
+
+~:: scored() : 
+
+~:: pushing back ---> a
+~:: pushing back ---> question
+
+	- a
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	a question
+
+
+~:: scored() : 
+
+~:: pushing back ---> a
+~:: pushing back ---> question
+
+	- a
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	a question
+
+
+~:: scored() : 
+
+~:: pushing back ---> a
+~:: pushing back ---> question
+
+	- a
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	a question
+
+
+~:: scored() : 
+
+~:: pushing back ---> a
+~:: pushing back ---> question
+
+	- a
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 1
 
 [RESULT] : 
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
+~:: (debug) query was question: ('?')
+~:: (debug) -- answers processed: 9
 
-labelled faculty : 1
+labelled faculty : 2
 
 [CONVOS] :
 
@@ -1928,9 +1774,12 @@ labelled faculty : 1
 
 	% having convos?
 
-:: the correct query
+:: a question?
 (EOT)
 
+
+----- ----- -----
+(debug) result : "1","transponder :: what is your question?";
 
 ~:: transponder -> answer()
 
@@ -1948,13 +1797,15 @@ labelled faculty : 1
 		.
 ~:: closing file.
 
-+query :: (the correct query)
-[RESPONSE] : "1","transponder has query.";
+
+~:: --- synonyms() ---:
++query :: (a question?)
+[RESPONSE] : "1","transponder :: what is your question?";
 
 
 (EOT)
 
-~:: running (9) queries.
+~:: running (3) queries.
 
 ::- type your query -::
 
@@ -1963,48 +1814,48 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	the query?
-	[ simple x computation: type:[char]: len:10 vowels:6 consonants:3 special:1 ]
+	he que
+	[ simple x computation: type:[char]: len:6 vowels:3 consonants:3 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "the query?".
-	- HMAC string :: *string_next_logic() ::  (the query?) is >> 
+*string_next_logic() :: ssh: "he que".
+	- HMAC string :: *string_next_logic() ::  (he que) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
 
-~:: prepTransponder() : (the query?)
+~:: prepTransponder() : (he que)
 ~:: transponder -> prep()
 
-~:: set subject to: "the query?".
-(debug) word :: the
-(debug) word :: query
+~:: set subject to: "he que".
+(debug) word :: he
+(debug) word :: que
 
 ~:: (debug)::nrOfWords = 2.
 ~:: (debug)::counter = 2.
 
-(debug) calling prepare_ints() (from) -> "the query?".
+(debug) calling prepare_ints() (from) -> "he que".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (3).
+~:: (debug) number of matching occurences: (4).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) the :: #1
-(debug) 1) query :: #2548
+(debug) 0) he :: #53
+(debug) 1) que :: #3765
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("1,2548,")
+	~:: reverse_meta_query_lookup("53,3765,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- the		 --> *(a+i) = 1 - *(a+i) - 1 = 0
-	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
+	- he		 --> *(a+i) = 53 - *(a+i) - 1 = 52
+	- que		 --> *(a+i) = 3765 - *(a+i) - 1 = 3764
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2018,144 +1869,144 @@ punch.
 	-----------------
 
 		* words no_#: 2
-		* length: 10
+		* length: 6
 		* vowels: 3
-		* consonants: 5
+		* consonants: 2
 		* numbers: 0
-		* special chars: 2
+		* special chars: 1
 		* unknown chars: 0
 
 
 (debug) answer.
 (debug) : 
 	-1
-	the query
+	he que
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> query
+~:: pushing back ---> he
+~:: pushing back ---> que
 
-	- the
+	- he
 	~:: matching occurences.
 
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	the query
-
-
-~:: scored() : 
-
-~:: pushing back ---> the
-~:: pushing back ---> query
-
-	- the
-	~:: matching occurences.
-
-	- query
+	- que
 	~:: matching occurences.
 
 
 incremental size function : 1
 
-[RESULT] : "6","a real query.";
+[RESULT] : "1","transponder has query.";
 (debug) : 
 	-1
-	the query
+	he que
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> query
+~:: pushing back ---> he
+~:: pushing back ---> que
 
-	- the
+	- he
 	~:: matching occurences.
 
-	- query
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
 	~:: matching occurences.
 
 
@@ -2163,18 +2014,75 @@ incremental size function : 1
 
 [RESULT] : (debug) : 
 	-1
-	the query
+	he que
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> query
+~:: pushing back ---> he
+~:: pushing back ---> que
 
-	- the
+	- he
 	~:: matching occurences.
 
-	- query
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
 	~:: matching occurences.
 
 
@@ -2182,28 +2090,66 @@ incremental size function : 1
 
 [RESULT] : (debug) : 
 	-1
-	the query
+	he que
 
 
 ~:: scored() : 
 
-~:: pushing back ---> the
-~:: pushing back ---> query
+~:: pushing back ---> he
+~:: pushing back ---> que
 
-	- the
+	- he
 	~:: matching occurences.
 
-	- query
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he que
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+~:: pushing back ---> que
+
+	- he
+	~:: matching occurences.
+
+	- que
 	~:: matching occurences.
 
 
 incremental size function : 0
 
 [RESULT] : 
-~:: (debug) query was question: ('?')
-~:: (debug) -- answers processed: 9
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
 
-labelled faculty : 1
+labelled faculty : 2
 
 [CONVOS] :
 
@@ -2211,10 +2157,13 @@ labelled faculty : 1
 
 	% having convos?
 
-:: the correct query
-:: the query?
+:: a question?
+:: he que
 (EOT)
 
+
+----- ----- -----
+(debug) result : "1","transponder has query.";
 
 ~:: transponder -> answer()
 
@@ -2224,7 +2173,7 @@ labelled faculty : 1
 
 ~:: strip()
 
-- pushing back : 6
+- pushing back : 1
 
 ~:: storing relations ::~
 	~:: opening : "ai/data/files/relatives.txt".
@@ -2232,13 +2181,15 @@ labelled faculty : 1
 		.
 ~:: closing file.
 
-+query :: (the query?)
-[RESPONSE] : "6","a real query.";
+
+~:: --- synonyms() ---:
++query :: (he que)
+[RESPONSE] : "1","transponder has query.";
 
 
 (EOT)
 
-~:: running (8) queries.
+~:: running (2) queries.
 
 ::- type your query -::
 
@@ -2247,51 +2198,45 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	question for you
-	[ simple x computation: type:[char]: len:16 vowels:9 consonants:7 special:0 ]
+	he 
+	[ simple x computation: type:[char]: len:3 vowels:2 consonants:1 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "question for you".
-	- HMAC string :: *string_next_logic() ::  (question for you) is >> 
+*string_next_logic() :: ssh: "he ".
+	- HMAC string :: *string_next_logic() ::  (he ) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
 
-~:: prepTransponder() : (question for you)
+~:: prepTransponder() : (he )
 ~:: transponder -> prep()
 
-~:: set subject to: "question for you".
-(debug) word :: question
-(debug) word :: for
-(debug) word :: you
+~:: set subject to: "he ".
+(debug) word :: he
 
-~:: (debug)::nrOfWords = 3.
-~:: (debug)::counter = 3.
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "question for you".
+(debug) calling prepare_ints() (from) -> "he ".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (6).
+~:: (debug) number of matching occurences: (5).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) question :: #592
-(debug) 1) for :: #7
-(debug) 2) you :: #15
+(debug) 0) he :: #53
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("592,7,15,")
+	~:: reverse_meta_query_lookup("53,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- question		 --> *(a+i) = 592 - *(a+i) - 1 = 591
-	- for		 --> *(a+i) = 7 - *(a+i) - 1 = 6
-	- you		 --> *(a+i) = 15 - *(a+i) - 1 = 14
+	- he		 --> *(a+i) = 53 - *(a+i) - 1 = 52
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2304,34 +2249,26 @@ punch.
 
 	-----------------
 
-		* words no_#: 3
-		* length: 16
-		* vowels: 7
-		* consonants: 7
+		* words no_#: 2
+		* length: 3
+		* vowels: 1
+		* consonants: 1
 		* numbers: 0
-		* special chars: 2
+		* special chars: 1
 		* unknown chars: 0
 
 
 (debug) answer.
 (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2339,22 +2276,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2362,22 +2291,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2385,22 +2306,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2408,22 +2321,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2431,22 +2336,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2454,92 +2351,30 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
-	~:: matching occurences.
-
-
-incremental size function : 0
-
-[RESULT] : (debug) : 
-	-1
-	question for you
-
-
-~:: scored() : 
-
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
-
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
 incremental size function : 1
 
-[RESULT] : "9","I'm your assistant.";
+[RESULT] : "7","hello.";
 (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2547,22 +2382,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2570,22 +2397,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2593,22 +2412,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
-	~:: matching occurences.
-
-	- for
-	~:: matching occurences.
-
-	- you
+	- he
 	~:: matching occurences.
 
 
@@ -2616,22 +2427,44 @@ incremental size function : 1
 
 [RESULT] : (debug) : 
 	-1
-	question for you
+	he 
 
 
 ~:: scored() : 
 
-~:: pushing back ---> question
-~:: pushing back ---> for
-~:: pushing back ---> you
+~:: pushing back ---> he
 
-	- question
+	- he
 	~:: matching occurences.
 
-	- for
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he 
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+
+	- he
 	~:: matching occurences.
 
-	- you
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	he 
+
+
+~:: scored() : 
+
+~:: pushing back ---> he
+
+	- he
 	~:: matching occurences.
 
 
@@ -2641,7 +2474,7 @@ incremental size function : 0
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 14
 
-labelled faculty : 1
+labelled faculty : 2
 
 [CONVOS] :
 
@@ -2649,11 +2482,14 @@ labelled faculty : 1
 
 	% having convos?
 
-:: the correct query
-:: the query?
-:: question for you
+:: a question?
+:: he que
+:: he 
 (EOT)
 
+
+----- ----- -----
+(debug) result : "7","hello.";
 
 ~:: transponder -> answer()
 
@@ -2663,7 +2499,7 @@ labelled faculty : 1
 
 ~:: strip()
 
-- pushing back : 9
+- pushing back : 7
 
 ~:: storing relations ::~
 	~:: opening : "ai/data/files/relatives.txt".
@@ -2671,13 +2507,15 @@ labelled faculty : 1
 		.
 ~:: closing file.
 
-+query :: (question for you)
-[RESPONSE] : "9","I'm your assistant.";
+
+~:: --- synonyms() ---:
++query :: (he )
+[RESPONSE] : "7","hello.";
 
 
 (EOT)
 
-~:: running (7) queries.
+~:: running (1) queries.
 
 ::- type your query -::
 
@@ -2686,14 +2524,405 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
- ]
+	the question
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
+
+[ -- you're asking my input -- ]
 
 -:: finished x computation.
+*string_next_logic() :: ssh: "the question".
+	- HMAC string :: *string_next_logic() ::  (the question) is >> 
+~:: file_access()
+(debug) file_access(level=0).
 
-(kill chain) function() : 9
+~:: searching indexes:
+	- rewinding file index.
 
--/- initializing killchain(1) sequence.
+~:: prepTransponder() : (the question)
+~:: transponder -> prep()
 
+~:: set subject to: "the question".
+(debug) word :: the
+(debug) word :: question
+
+~:: (debug)::nrOfWords = 2.
+~:: (debug)::counter = 2.
+
+(debug) calling prepare_ints() (from) -> "the question".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (6).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) the :: #1
+(debug) 1) question :: #592
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("1,592,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- the		 --> *(a+i) = 1 - *(a+i) - 1 = 0
+	- question		 --> *(a+i) = 592 - *(a+i) - 1 = 591
+
+(EOT)
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 2
+		* length: 12
+		* vowels: 5
+		* consonants: 6
+		* numbers: 0
+		* special chars: 1
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : "11","use the /help function.";
+(debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	the question
+
+
+~:: scored() : 
+
+~:: pushing back ---> the
+~:: pushing back ---> question
+
+	- the
+	~:: matching occurences.
+
+	- question
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+labelled faculty : 2
+
+[CONVOS] :
+
+~:: listConvos() :
+
+	% having convos?
+
+:: a question?
+:: he que
+:: he 
+:: the question
+(EOT)
+
+
+----- ----- -----
+(debug) result : "11","use the /help function.";
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 11
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
+~:: --- synonyms() ---:
++query :: (the question)
+[RESPONSE] : "11","use the /help function.";
+
+
+(EOT)
+
+-:: aborting artificial life sequence, and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled  .
+
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
+
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+		(-  ||  -)
+
+
+::=> saving grace (routine) and closing libraries <=::
+
+-:: closing files.
+-:: cleaning memory.
+
+~:: decoupling transponder.
+	~:: closed "ai/lib/queries/weights" transponder file access.
+	~:: closed "ai/data/files/synonyms.txt" transponder file access.
+~:: closed access.
+
+-:: calling destructor for AI::Model.
+-:: done.

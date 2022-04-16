@@ -12,6 +12,7 @@ Transponder::Transponder() {
     this->init();
     this->points = 0;
     this->default_response = "can't relate to query.";
+    this->capsize= false;
 };
 
 void Transponder::init() {
@@ -910,6 +911,9 @@ std::string Transponder::synonyms(std::string q) {    // q is term for looking u
                 }
 
                 if (match1 || match2 || match3 || match4 || match5) {
+                    std::cout << std::endl;
+                    std::cout << "- pushing:" << std::endl;
+
                     if (word1.length() > 0) {
                         this->oursyns.push_back(word1);
                     }
@@ -933,7 +937,9 @@ std::string Transponder::synonyms(std::string q) {    // q is term for looking u
                 // this->oursyns.push_back(word5);
 
                 // OUTPUT SYNONYMS
+                std::cout << std::endl;
                 for (size_t i=0; i<this->oursyns.size(); i++) {
+                    this->oursyns.at(i).front() = tolower(this->oursyns.at(i).front()); // to lower
                     std::cout << "- synonym : " << this->oursyns.at(i) << std::endl;
                 }
             }
@@ -974,7 +980,7 @@ void Transponder::export_backlog(int n=2) {
     switch (n) {
         case 0:
             std::cout << std::endl;
-            std::cout << "\t~:: exporting backlog <backlog_queries> to: \"ai/log/backlog_queries.txt\"" << std::endl;
+            std::cout << "\t~:: exporting backlog <queries> to: \"ai/log/backlog_queries.txt\"" << std::endl;
             std::cout << std::endl;
 
             out_queries.open(backlog_query);
@@ -989,7 +995,7 @@ void Transponder::export_backlog(int n=2) {
 
         case 1:
             std::cout << std::endl;
-            std::cout << "\t~:: exporting backlog <backlog_answers> to: \"ai/log/backlog_answers.txt\"" << std::endl;
+            std::cout << "\t~:: exporting backlog <answers> to: \"ai/log/backlog_answers.txt\"" << std::endl;
             std::cout << std::endl;
 
             out_answers.open(backlog_answer);
@@ -1101,6 +1107,47 @@ void Transponder::store_relations() {   // stores the relations from this->relat
 
 void Transponder::flush_relations() {
     this->relations.clear();
+};
+
+void Transponder::logQueries(int x) {    // log x number of queries + answers (n*2)
+    bool io = false;
+    ofstream file_io;
+
+    file_io.open(logfile, std::ios::app);
+    std::cout << "\t- logging queries." << std::endl;
+
+    // BUILD IN support for several queries!
+    if (x == 0) {
+        if (this->capsize == true) {
+            file_io << std::endl;
+        }
+        
+        if (this->subject.length() > 0) {
+            file_io << this->subject << std::endl;
+        }
+
+        if (this->result.length() > 0) {
+            file_io << this->result << std::endl;
+        }
+        
+        if (this->capsize == true) {
+            file_io << std::endl;
+        }
+
+        std::cout << "\t-> stored related queries." << std::endl;
+    }
+
+    if (file_io.is_open() == true)  {
+        file_io.close();
+    }
+};
+
+void Transponder::cappedsize() {
+    std::cout << std::endl;
+    std::cout << "~:: toggle (b) capsize." << std::endl;
+    this->capsize=true;
+    std::cout << "\t~:: done." << std::endl;
+    std::cout << std::endl;
 };
     // // variables
     // int nr_of_synonyms; // the number of actual synonyms for term
