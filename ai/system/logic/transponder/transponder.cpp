@@ -139,7 +139,6 @@ void Transponder::analytics(std::string s) {
     // std::string syn_res1;
     // std::string syn_res2;
 
-
     // length for analytics
     int len = s.length();   // length of string
     
