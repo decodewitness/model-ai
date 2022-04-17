@@ -119,6 +119,9 @@ std::string Transponder::respond(bool b) {
 void Transponder::analytics(std::string s) {
     // unsigned int countWords(char *str);
 
+    // metas
+    int meta;
+
     // variables for analytics 
     int wordcount=0;      // number of words in string
     int noun=0;
@@ -330,7 +333,34 @@ void Transponder::analytics(std::string s) {
         // std::cout << ((queryAssigned) ? "-assigned query;" : "-query was not assigned;");
         // std::cout << std::endl;
 
+        // metas
+        std::string word;
+        istringstream iss(this->subject);
+        
+
+        while (iss >> word) {
+            meta = singleMeta(word);
+            this->vec.push_back(meta);
+        }
+
+        // handle storing of the meta queries in "vec"
+        nref xl;
+        for (int i=0; i<vec.size(); i++) {
+            xl.nr = "1000";
+            xl.rel1 = this->result;
+            xl.description = this->subject;
+            std::cout << std::endl;
+            std::cout << "\t~:: pushing back query : " << std::endl;
+            xl.rel.push_back(std::to_string(vec.at(i)));
+        }
+        
+        std::cout << "\t~:: storing nref." << std::endl;
+        store_nref(xl);
+
+        // OUTPUT
+
         // output MAIN RESPONSE in all certain events
+        std::cout << std::endl;
         std::cout << "+query :: (" << this->subject << ")" << std::endl;
         // std::cout << "[RESPONSE] : " << ((queryAssigned) ? query : "-query was not assigned-") << std::endl; // query was just made here above
         std::cout << "[RESPONSE] : " << this->result << std::endl;
@@ -340,6 +370,8 @@ void Transponder::analytics(std::string s) {
         this->points = 0;   // this keeps track of the highest score for results
         // reset result
         this->result = "missing";   // redundant
+        // clear vector with metas
+        this->vec.clear();
     } else {
         // secondary output // DEFAULT RESPONSE // Not used in the most cases
         std::cout << std::endl;
@@ -805,9 +837,10 @@ void Transponder::listConvos(size_t max_history_length) {  // list conversation,
 //     }
 
 std::string Transponder::synonyms(std::string q) {    // q is term for looking up synonyms thereof
+    int meta;    
+    
     std::string term;
     std::string line;
-
     std::string word;
     std::string word1, word2, word3, word4, word5;
     vector<std::string> ourwords;
@@ -825,6 +858,8 @@ std::string Transponder::synonyms(std::string q) {    // q is term for looking u
     // process query first
     while (iss >> word) {
         ourwords.push_back(word);
+        meta = singleMeta(word);
+        std::cout << std::endl << "~:: meta : " << meta << std::endl;
     }
 
     for (size_t i=0; i<ourwords.size(); i++) {

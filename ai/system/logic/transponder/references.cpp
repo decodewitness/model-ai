@@ -1,7 +1,9 @@
+// SYSTEM/LOGIC/TRANSPONDER/REFERENCES.CPP  -   USED BY "AI/LOGIC/TRANSPONDER/TRANSPONDER.H"
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <vector>
 
 std::string stored_nrefs_file = "ai/lib/queries/references";
 
@@ -16,6 +18,7 @@ struct nref {
     std::string rel3;   // relation 3
     std::string rel4;   // relation 4
     std::string rel5;   // relation 5
+    std::vector<std::string> rel;
 };
 
 void store_nref(nref x) {
@@ -50,6 +53,12 @@ void store_nref(nref x) {
         store << "\"" << x.rel5 << "\"";
         store << ",";
         store << "\"" << x.rel_string << "\"";
+        store << ",";
+
+        for (int i=0; i<x.rel.size(); i++) {
+            store << ":" << x.rel.at(i);
+        }
+        
         store << ";" << std::endl;
 
         // close file      
@@ -63,6 +72,10 @@ void store_nref(nref x) {
         std::cout << "~:: stored nrefs." << std::endl;
     }
 };
+
+
+
+// NEED TO FIX THIS FUNCTION TO INCLUDE "nref.rel <vector>"
 
 nref read_nrefs_from_file(std::string filename, int nr=0) {  // filename with nrefs ;; nr of nref
     // positions in string

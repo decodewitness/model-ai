@@ -70,13 +70,42 @@ void store_meta_queries(int a[], int size) {
     std::cout << std::endl;
 };
 
+// look up single meta
+int singleMeta(std::string s) {
+    int value=-1;
+    std::string word;
+    std::ifstream dict_in;
+
+
+    dict_in.open(reverse_path_handle);
+
+    std::cout << std::endl;
+    std::cout << "~:: singleMeta() lookup." << std::endl;
+
+    if (dict_in.is_open() == true) {
+        for (int i=0; dict_in >> word ; i++) {
+            if (word.compare(s) == false) {
+                std::cout << "\t~:: meta query : (" << (i+1) << ")" << std::endl;
+                value = i + 1;
+                break;
+            }
+        }
+    }
+
+    if (dict_in.is_open() == true) {
+        dict_in.close();
+    }
+
+return value;
+};
+
 // looks up meta queries inside a[]
 void reverse_meta_query_lookup(int a[], int size) { // looks up the words for the numbers of the meta queries
     //std::ifstream met;
     //std::string new_meta;
     //std::string word;
     //bool fileWasClosed = false;
-    std::fstream dict_in;
+    std::ifstream dict_in;
     dict_in.open(reverse_path_handle);
     char our_dict[20000][256];
     int counts=0;

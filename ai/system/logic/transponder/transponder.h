@@ -14,6 +14,7 @@
 #include "prepare.cpp"
 #include "brain/nn.h"
 #include "stringcode.h"
+#include "references.cpp"
 // #include "concept.cpp"   // included in AI/AI.H
 // #include "synonyms.h"    // already included in (transponder.h / transponder.cpp)
 
@@ -65,6 +66,7 @@ private:
     vector<std::string> backlog_answers;    // backlog of answers of conversation
     vector<std::string> relations;
     vector<std::string> oursyns;
+    vector<int> vec;    // used for meta queries
 
     // file streams
     std::ifstream scores;
