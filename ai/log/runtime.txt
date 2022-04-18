@@ -1443,16 +1443,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fffeed55eb0)
-	- stacking header:(1)::<address>(0x7fffeed55ed0)
-	- stacking header:(2)::<address>(0x7fffeed55ef0)
-	- stacking header:(3)::<address>(0x7fffeed55f10)
-	- stacking header:(4)::<address>(0x7fffeed55f30)
-	- stacking header:(5)::<address>(0x7fffeed55f50)
-	- stacking header:(6)::<address>(0x7fffeed55f70)
-	- stacking header:(7)::<address>(0x7fffeed55f90)
-	- stacking header:(8)::<address>(0x7fffeed55fb0)
-	- stacking header:(9)::<address>(0x7fffeed55fd0)
+	- stacking header:(0)::<address>(0x7ffd0e4bf8c0)
+	- stacking header:(1)::<address>(0x7ffd0e4bf8e0)
+	- stacking header:(2)::<address>(0x7ffd0e4bf900)
+	- stacking header:(3)::<address>(0x7ffd0e4bf920)
+	- stacking header:(4)::<address>(0x7ffd0e4bf940)
+	- stacking header:(5)::<address>(0x7ffd0e4bf960)
+	- stacking header:(6)::<address>(0x7ffd0e4bf980)
+	- stacking header:(7)::<address>(0x7ffd0e4bf9a0)
+	- stacking header:(8)::<address>(0x7ffd0e4bf9c0)
+	- stacking header:(9)::<address>(0x7ffd0e4bf9e0)
 
 
 -:: checking AI functions.
@@ -1498,16 +1498,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-	--directory: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-	--directory: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
-	--directory: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-	--directory: -- ./info.txt
+file or directory: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1519,14 +1519,14 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	running this query
-	[ simple x computation: type:[char]: len:18 vowels:13 consonants:5 special:0 ]
+	give me some
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "running this query".
-	- HMAC string :: *string_next_logic() ::  (running this query) is >> 
+*string_next_logic() :: ssh: "give me some".
+	- HMAC string :: *string_next_logic() ::  (give me some) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
@@ -1536,41 +1536,41 @@ punch.
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 
-~:: prepTransponder() : (running this query)
+~:: prepTransponder() : (give me some)
 ~:: transponder -> prep()
 
-~:: set subject to: "running this query".
-(debug) word :: running
-(debug) word :: this
-(debug) word :: query
+~:: set subject to: "give me some".
+(debug) word :: give
+(debug) word :: me
+(debug) word :: some
 
 ~:: (debug)::nrOfWords = 3.
 ~:: (debug)::counter = 3.
 
-(debug) calling prepare_ints() (from) -> "running this query".
+(debug) calling prepare_ints() (from) -> "give me some".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (3).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) running :: #1103
-(debug) 1) this :: #12
-(debug) 2) query :: #2548
+(debug) 0) give :: #555
+(debug) 1) me :: #89
+(debug) 2) some :: #92
 
 ~:: meta queries ~:: storing meta query sequence
 	~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 	- meta sequences:
-		- 1103		- 12		- 2548
+		- 555		- 89		- 92
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("1103,12,2548,")
+	~:: reverse_meta_query_lookup("555,89,92,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- running		 --> *(a+i) = 1103 - *(a+i) - 1 = 1102
-	- this		 --> *(a+i) = 12 - *(a+i) - 1 = 11
-	- query		 --> *(a+i) = 2548 - *(a+i) - 1 = 2547
+	- give		 --> *(a+i) = 555 - *(a+i) - 1 = 554
+	- me		 --> *(a+i) = 89 - *(a+i) - 1 = 88
+	- some		 --> *(a+i) = 92 - *(a+i) - 1 = 91
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -1584,9 +1584,9 @@ punch.
 	-----------------
 
 		* words no_#: 3
-		* length: 18
+		* length: 12
 		* vowels: 5
-		* consonants: 11
+		* consonants: 5
 		* numbers: 0
 		* special chars: 2
 		* unknown chars: 0
@@ -1595,46 +1595,22 @@ punch.
 (debug) answer.
 (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
-	~:: matching occurences.
-
-
-incremental size function : 1
-
-[RESULT] : "1","transponder has query.";
-(debug) : 
-	-1
-	running this query
-
-
-~:: scored() : 
-
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
-
-	- running
-	~:: matching occurences.
-
-	- this
-	~:: matching occurences.
-
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1642,22 +1618,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1665,22 +1641,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1688,22 +1664,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1711,22 +1687,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1734,22 +1710,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1757,22 +1733,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1780,22 +1756,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1803,22 +1779,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1826,22 +1802,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1849,22 +1825,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1872,22 +1848,22 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
 	~:: matching occurences.
 
 
@@ -1895,22 +1871,45 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	running this query
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> running
-~:: pushing back ---> this
-~:: pushing back ---> query
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- running
+	- give
 	~:: matching occurences.
 
-	- this
+	- me
 	~:: matching occurences.
 
-	- query
+	- some
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	give me some
+
+
+~:: scored() : 
+
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
+
+	- give
+	~:: matching occurences.
+
+	- me
+	~:: matching occurences.
+
+	- some
 	~:: matching occurences.
 
 
@@ -1920,126 +1919,16 @@ incremental size function : 0
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 14
 
-labelled faculty : 1
-
-[CONVOS] :
-
-~:: listConvos() :
-
-	% having convos?
-
-:: running this query
-(EOT)
+labelled faculty : 0
 
 
 ----- ----- -----
-(debug) result : "1","transponder has query.";
+(debug) result : 
 
 ~:: transponder -> answer()
 
-~:: pushing back queries.
-
-~:: stripping (result).
-
-~:: strip()
-
-- pushing back : 1
-
-~:: storing relations ::~
-	~:: opening : "ai/data/files/relatives.txt".
-		+/+ relations :
-		.
-~:: closing file.
-
-
-~:: --- synonyms() ---:
-
-~:: singleMeta() lookup.
-	~:: meta query : (1103)
-
-~:: meta : 1103
-
-~:: singleMeta() lookup.
-	~:: meta query : (12)
-
-~:: meta : 12
-
-~:: singleMeta() lookup.
-	~:: meta query : (2548)
-
-~:: meta : 2548
-success 4
-
-word4 : ask // q : running this query
-	~:: match ::~
-		match -4-
-
-- pushing:
-
-- synonym : ask
-- synonym : question
-- synonym : inquire
-- synonym : query
-- synonym : interrogate
-	~:: match ::~
-		match -4-
-
-- pushing:
-
-- synonym : ask
-- synonym : question
-- synonym : inquire
-- synonym : query
-- synonym : interrogate
-- synonym : #
-- synonym : eof
-- synonym : unpleasant
-- synonym : monstrous
-- synonym : terrifying
-	~:: match ::~
-		match -4-
-
-- pushing:
-
-- synonym : ask
-- synonym : question
-- synonym : inquire
-- synonym : query
-- synonym : interrogate
-- synonym : #
-- synonym : eof
-- synonym : unpleasant
-- synonym : monstrous
-- synonym : terrifying
-- synonym : #
-- synonym : eof
-- synonym : unpleasant
-- synonym : monstrous
-- synonym : terrifying
-
-	- assigned term : ask
-
-~:: singleMeta() lookup.
-	~:: meta query : (1103)
-
-~:: singleMeta() lookup.
-	~:: meta query : (12)
-
-~:: singleMeta() lookup.
-	~:: meta query : (2548)
-
-	~:: pushing back query : 
-
-	~:: pushing back query : 
-
-	~:: pushing back query : 
-	~:: storing nref.
-
-~:: store_nrefs() :
-~:: stored nrefs.
-
-+query :: (running this query)
-[RESPONSE] : "1","transponder has query.";
++query :: (give me some)
+[RESPONSE] : can't relate to query.
 
 
 (EOT)
@@ -2053,51 +1942,51 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	just a question?
-	[ simple x computation: type:[char]: len:16 vowels:9 consonants:6 special:1 ]
+	give me some
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "just a question?".
-	- HMAC string :: *string_next_logic() ::  (just a question?) is >> 
+*string_next_logic() :: ssh: "give me some".
+	- HMAC string :: *string_next_logic() ::  (give me some) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
 
-~:: prepTransponder() : (just a question?)
+~:: prepTransponder() : (give me some)
 ~:: transponder -> prep()
 
-~:: set subject to: "just a question?".
-(debug) word :: just
-(debug) word :: a
-(debug) word :: question
+~:: set subject to: "give me some".
+(debug) word :: give
+(debug) word :: me
+(debug) word :: some
 
 ~:: (debug)::nrOfWords = 3.
 ~:: (debug)::counter = 3.
 
-(debug) calling prepare_ints() (from) -> "just a question?".
+(debug) calling prepare_ints() (from) -> "give me some".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (6).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) just :: #109
-(debug) 1) a :: #5
-(debug) 2) question :: #592
+(debug) 0) give :: #555
+(debug) 1) me :: #89
+(debug) 2) some :: #92
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("109,5,592,")
+	~:: reverse_meta_query_lookup("555,89,92,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- just		 --> *(a+i) = 109 - *(a+i) - 1 = 108
-	- a		 --> *(a+i) = 5 - *(a+i) - 1 = 4
-	- question		 --> *(a+i) = 592 - *(a+i) - 1 = 591
+	- give		 --> *(a+i) = 555 - *(a+i) - 1 = 554
+	- me		 --> *(a+i) = 89 - *(a+i) - 1 = 88
+	- some		 --> *(a+i) = 92 - *(a+i) - 1 = 91
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2111,298 +2000,351 @@ punch.
 	-----------------
 
 		* words no_#: 3
-		* length: 16
-		* vowels: 6
-		* consonants: 7
+		* length: 12
+		* vowels: 5
+		* consonants: 5
 		* numbers: 0
-		* special chars: 3
+		* special chars: 2
 		* unknown chars: 0
 
 
 (debug) answer.
 (debug) : 
 	-1
-	just a question
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- just
+	- give
 	~:: matching occurences.
 
-	- a
+	- me
 	~:: matching occurences.
 
-	- question
-	~:: matching occurences.
-
-
-incremental size function : 2
-
-[RESULT] : "1","transponder :: what is your question?";
-(debug) : 
-	-1
-	just a question
-
-
-~:: scored() : 
-
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
-
-	- just
-	~:: matching occurences.
-
-	- a
-	~:: matching occurences.
-
-	- question
+	- some
 	~:: matching occurences.
 
 
-incremental size function : 1
+incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	just a question
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- just
+	- give
 	~:: matching occurences.
 
-	- a
+	- me
 	~:: matching occurences.
 
-	- question
+	- some
 	~:: matching occurences.
 
 
-incremental size function : 2
+incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	just a question
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- just
+	- give
 	~:: matching occurences.
 
-	- a
+	- me
 	~:: matching occurences.
 
-	- question
+	- some
 	~:: matching occurences.
 
 
-incremental size function : 1
+incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	just a question
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- just
+	- give
 	~:: matching occurences.
 
-	- a
+	- me
 	~:: matching occurences.
 
-	- question
+	- some
 	~:: matching occurences.
 
 
-incremental size function : 1
+incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	just a question
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- just
+	- give
 	~:: matching occurences.
 
-	- a
+	- me
 	~:: matching occurences.
 
-	- question
+	- some
 	~:: matching occurences.
 
 
-incremental size function : 1
+incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	just a question
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- just
+	- give
 	~:: matching occurences.
 
-	- a
+	- me
 	~:: matching occurences.
 
-	- question
+	- some
 	~:: matching occurences.
 
 
-incremental size function : 2
+incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	just a question
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- just
+	- give
 	~:: matching occurences.
 
-	- a
+	- me
 	~:: matching occurences.
 
-	- question
+	- some
 	~:: matching occurences.
 
 
-incremental size function : 1
+incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	just a question
+	give me some
 
 
 ~:: scored() : 
 
-~:: pushing back ---> just
-~:: pushing back ---> a
-~:: pushing back ---> question
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
 
-	- just
+	- give
 	~:: matching occurences.
 
-	- a
+	- me
 	~:: matching occurences.
 
-	- question
+	- some
 	~:: matching occurences.
 
 
-incremental size function : 1
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	give me some
+
+
+~:: scored() : 
+
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
+
+	- give
+	~:: matching occurences.
+
+	- me
+	~:: matching occurences.
+
+	- some
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	give me some
+
+
+~:: scored() : 
+
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
+
+	- give
+	~:: matching occurences.
+
+	- me
+	~:: matching occurences.
+
+	- some
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	give me some
+
+
+~:: scored() : 
+
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
+
+	- give
+	~:: matching occurences.
+
+	- me
+	~:: matching occurences.
+
+	- some
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	give me some
+
+
+~:: scored() : 
+
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
+
+	- give
+	~:: matching occurences.
+
+	- me
+	~:: matching occurences.
+
+	- some
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	give me some
+
+
+~:: scored() : 
+
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
+
+	- give
+	~:: matching occurences.
+
+	- me
+	~:: matching occurences.
+
+	- some
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	give me some
+
+
+~:: scored() : 
+
+~:: pushing back ---> give
+~:: pushing back ---> me
+~:: pushing back ---> some
+
+	- give
+	~:: matching occurences.
+
+	- me
+	~:: matching occurences.
+
+	- some
+	~:: matching occurences.
+
+
+incremental size function : 0
 
 [RESULT] : 
-~:: (debug) query was question: ('?')
-~:: (debug) -- answers processed: 9
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
 
-labelled faculty : 2
-
-[CONVOS] :
-
-~:: listConvos() :
-
-	% having convos?
-
-:: running this query
-:: just a question?
-(EOT)
+labelled faculty : 0
 
 
 ----- ----- -----
-(debug) result : "1","transponder :: what is your question?";
+(debug) result : 
 
 ~:: transponder -> answer()
 
-~:: pushing back queries.
-
-~:: stripping (result).
-
-~:: strip()
-
-- pushing back : 1
-
-~:: storing relations ::~
-	~:: opening : "ai/data/files/relatives.txt".
-		+/+ relations :
-		.
-~:: closing file.
-
-
-~:: --- synonyms() ---:
-
-~:: singleMeta() lookup.
-	~:: meta query : (109)
-
-~:: meta : 109
-
-~:: singleMeta() lookup.
-	~:: meta query : (5)
-
-~:: meta : 5
-
-~:: singleMeta() lookup.
-
-~:: meta : -1
-
-	- assigned term : ask
-
-~:: singleMeta() lookup.
-	~:: meta query : (109)
-
-~:: singleMeta() lookup.
-	~:: meta query : (5)
-
-~:: singleMeta() lookup.
-
-	~:: pushing back query : 
-
-	~:: pushing back query : 
-
-	~:: pushing back query : 
-	~:: storing nref.
-
-~:: store_nrefs() :
-~:: stored nrefs.
-
-+query :: (just a question?)
-[RESPONSE] : "1","transponder :: what is your question?";
++query :: (give me some)
+[RESPONSE] : can't relate to query.
 
 
 (EOT)
@@ -2735,12 +2677,12 @@ incremental size function : 0
 
 incremental size function : 1
 
-[RESULT] : "14","inferring logic.";
+[RESULT] : 14,inferring logic.
 
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 14
 
-labelled faculty : 2
+labelled faculty : 1
 
 [CONVOS] :
 
@@ -2748,14 +2690,14 @@ labelled faculty : 2
 
 	% having convos?
 
-:: running this query
-:: just a question?
+:: give me some
+:: give me some
 :: logic
 (EOT)
 
 
 ----- ----- -----
-(debug) result : "14","inferring logic.";
+(debug) result : 14,inferring logic.
 
 ~:: transponder -> answer()
 
@@ -2765,7 +2707,7 @@ labelled faculty : 2
 
 ~:: strip()
 
-- pushing back : 14
+- pushing back : 
 
 ~:: storing relations ::~
 	~:: opening : "ai/data/files/relatives.txt".
@@ -2779,13 +2721,6 @@ labelled faculty : 2
 ~:: singleMeta() lookup.
 	~:: meta query : (3198)
 
-~:: meta : 3198
-
-	- assigned term : ask
-
-~:: singleMeta() lookup.
-	~:: meta query : (3198)
-
 	~:: pushing back query : 
 	~:: storing nref.
 
@@ -2793,7 +2728,7 @@ labelled faculty : 2
 ~:: stored nrefs.
 
 +query :: (logic)
-[RESPONSE] : "14","inferring logic.";
+[RESPONSE] : 14,inferring logic.
 
 
 (EOT)
@@ -2807,57 +2742,45 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	excellent food can't be bogus
-	[ simple x computation: type:[char]: len:29 vowels:19 consonants:9 special:1 ]
+	amazing
+	[ simple x computation: type:[char]: len:7 vowels:4 consonants:3 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "excellent food can't be bogus".
-	- HMAC string :: *string_next_logic() ::  (excellent food can't be bogus) is >> 
+*string_next_logic() :: ssh: "amazing".
+	- HMAC string :: *string_next_logic() ::  (amazing) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
 
-~:: prepTransponder() : (excellent food can't be bogus)
+~:: prepTransponder() : (amazing)
 ~:: transponder -> prep()
 
-~:: set subject to: "excellent food can't be bogus".
-(debug) word :: excellent
-(debug) word :: food
-(debug) word :: can't
-(debug) word :: be
-(debug) word :: bogus
+~:: set subject to: "amazing".
+(debug) word :: amazing
 
-~:: (debug)::nrOfWords = 5.
-~:: (debug)::counter = 5.
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "excellent food can't be bogus".
+(debug) calling prepare_ints() (from) -> "amazing".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (11).
+~:: (debug) number of matching occurences: (8).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) excellent :: #1353
-(debug) 1) food :: #418
-(debug) 2) can't :: #-1
-(debug) 3) be :: #19
-(debug) 4) bogus :: #18068
+(debug) 0) amazing :: #2928
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("1353,418,-1,19,18068,")
+	~:: reverse_meta_query_lookup("2928,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- excellent		 --> *(a+i) = 1353 - *(a+i) - 1 = 1352
-	- food		 --> *(a+i) = 418 - *(a+i) - 1 = 417
-(skipped unregistered entry)
-	- be		 --> *(a+i) = 19 - *(a+i) - 1 = 18
-	- bogus		 --> *(a+i) = 18068 - *(a+i) - 1 = 18067
+	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
 
 (EOT)
 ~:: transponder -> prepTr()
@@ -2870,42 +2793,26 @@ punch.
 
 	-----------------
 
-		* words no_#: 5
-		* length: 29
-		* vowels: 9
-		* consonants: 15
+		* words no_#: 1
+		* length: 7
+		* vowels: 3
+		* consonants: 4
 		* numbers: 0
-		* special chars: 5
+		* special chars: 0
 		* unknown chars: 0
 
 
 (debug) answer.
 (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -2913,30 +2820,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -2944,30 +2835,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -2975,30 +2850,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3006,30 +2865,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3037,30 +2880,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3068,30 +2895,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3099,30 +2910,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3130,30 +2925,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3161,30 +2940,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3192,30 +2955,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3223,30 +2970,14 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
-	~:: matching occurences.
-
-	- food
-	~:: matching occurences.
-
-	- can't
-	~:: matching occurences.
-
-	- be
-	~:: matching occurences.
-
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3254,30 +2985,185 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> amazing
 
-	- excellent
+	- amazing
 	~:: matching occurences.
 
-	- food
+
+incremental size function : 1
+
+[RESULT] : 13,you are amazing.
+(debug) : 
+	-1
+	amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> amazing
+
+	- amazing
 	~:: matching occurences.
 
-	- can't
+
+incremental size function : 0
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+labelled faculty : 1
+
+[CONVOS] :
+
+~:: listConvos() :
+
+	% having convos?
+
+:: give me some
+:: give me some
+:: logic
+:: amazing
+(EOT)
+
+
+----- ----- -----
+(debug) result : 13,you are amazing.
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
+~:: --- synonyms() ---:
+
+~:: singleMeta() lookup.
+	~:: meta query : (2928)
+
+	~:: pushing back query : 
+	~:: storing nref.
+
+~:: store_nrefs() :
+~:: stored nrefs.
+
++query :: (amazing)
+[RESPONSE] : 13,you are amazing.
+
+
+(EOT)
+
+~:: running (6) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	that is amazing
+	[ simple x computation: type:[char]: len:15 vowels:10 consonants:5 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "that is amazing".
+	- HMAC string :: *string_next_logic() ::  (that is amazing) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: prepTransponder() : (that is amazing)
+~:: transponder -> prep()
+
+~:: set subject to: "that is amazing".
+(debug) word :: that
+(debug) word :: is
+(debug) word :: amazing
+
+~:: (debug)::nrOfWords = 3.
+~:: (debug)::counter = 3.
+
+(debug) calling prepare_ints() (from) -> "that is amazing".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (11).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) that :: #10
+(debug) 1) is :: #8
+(debug) 2) amazing :: #2928
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("10,8,2928,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- that		 --> *(a+i) = 10 - *(a+i) - 1 = 9
+	- is		 --> *(a+i) = 8 - *(a+i) - 1 = 7
+	- amazing		 --> *(a+i) = 2928 - *(a+i) - 1 = 2927
+
+(EOT)
+~:: transponder -> prepTr()
+(debug) after this query.
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 3
+		* length: 15
+		* vowels: 5
+		* consonants: 8
+		* numbers: 0
+		* special chars: 2
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
 	~:: matching occurences.
 
-	- be
+	- is
 	~:: matching occurences.
 
-	- bogus
+	- amazing
 	~:: matching occurences.
 
 
@@ -3285,30 +3171,300 @@ incremental size function : 0
 
 [RESULT] : (debug) : 
 	-1
-	excellent food can't be bogus
+	that is amazing
 
 
 ~:: scored() : 
 
-~:: pushing back ---> excellent
-~:: pushing back ---> food
-~:: pushing back ---> can't
-~:: pushing back ---> be
-~:: pushing back ---> bogus
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
 
-	- excellent
+	- that
 	~:: matching occurences.
 
-	- food
+	- is
 	~:: matching occurences.
 
-	- can't
+	- amazing
 	~:: matching occurences.
 
-	- be
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
 	~:: matching occurences.
 
-	- bogus
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : 3,transponder is bool.
+(debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 2
+
+[RESULT] : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+(debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
+	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	that is amazing
+
+
+~:: scored() : 
+
+~:: pushing back ---> that
+~:: pushing back ---> is
+~:: pushing back ---> amazing
+
+	- that
+	~:: matching occurences.
+
+	- is
+	~:: matching occurences.
+
+	- amazing
 	~:: matching occurences.
 
 
@@ -3326,15 +3482,16 @@ labelled faculty : 2
 
 	% having convos?
 
-:: running this query
-:: just a question?
+:: give me some
+:: give me some
 :: logic
-:: excellent food can't be bogus
+:: amazing
+:: that is amazing
 (EOT)
 
 
 ----- ----- -----
-(debug) result : missing
+(debug) result : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
 
 ~:: transponder -> answer()
 
@@ -3344,7 +3501,7 @@ labelled faculty : 2
 
 ~:: strip()
 
-- pushing back : missing
+- pushing back : 
 
 ~:: storing relations ::~
 	~:: opening : "ai/data/files/relatives.txt".
@@ -3356,82 +3513,30 @@ labelled faculty : 2
 ~:: --- synonyms() ---:
 
 ~:: singleMeta() lookup.
-	~:: meta query : (1353)
-
-~:: meta : 1353
+	~:: meta query : (10)
 
 ~:: singleMeta() lookup.
-	~:: meta query : (418)
-
-~:: meta : 418
+	~:: meta query : (8)
 
 ~:: singleMeta() lookup.
-
-~:: meta : -1
-
-~:: singleMeta() lookup.
-	~:: meta query : (19)
-
-~:: meta : 19
-
-~:: singleMeta() lookup.
-	~:: meta query : (18068)
-
-~:: meta : 18068
-
-	- assigned term : ask
-
-~:: singleMeta() lookup.
-	~:: meta query : (1353)
-
-~:: singleMeta() lookup.
-	~:: meta query : (418)
-
-~:: singleMeta() lookup.
-
-~:: singleMeta() lookup.
-	~:: meta query : (19)
-
-~:: singleMeta() lookup.
-	~:: meta query : (18068)
+	~:: meta query : (2928)
 
 	~:: pushing back query : 
-
 	~:: pushing back query : 
-
-	~:: pushing back query : 
-
-	~:: pushing back query : 
-
 	~:: pushing back query : 
 	~:: storing nref.
 
 ~:: store_nrefs() :
 ~:: stored nrefs.
 
-+query :: (excellent food can't be bogus)
-[RESPONSE] : missing
++query :: (that is amazing)
+[RESPONSE] : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
 
 
 (EOT)
 
-~:: running (6) queries.
+~:: running (5) queries.
 
 ::- type your query -::
 
 punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
- ]
-
--:: finished x computation.
-
-(kill chain) function() : 9
-
--/- initializing killchain(1) sequence.
-

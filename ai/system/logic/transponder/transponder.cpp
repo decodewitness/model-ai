@@ -337,7 +337,6 @@ void Transponder::analytics(std::string s) {
         std::string word;
         istringstream iss(this->subject);
         
-
         while (iss >> word) {
             meta = singleMeta(word);
             this->vec.push_back(meta);
@@ -345,11 +344,12 @@ void Transponder::analytics(std::string s) {
 
         // handle storing of the meta queries in "vec"
         nref xl;
+        xl.nr = "1000";
+        xl.rel1 = this->result;
+        xl.description = this->subject;
+        std::cout << std::endl;
+        
         for (int i=0; i<vec.size(); i++) {
-            xl.nr = "1000";
-            xl.rel1 = this->result;
-            xl.description = this->subject;
-            std::cout << std::endl;
             std::cout << "\t~:: pushing back query : " << std::endl;
             xl.rel.push_back(std::to_string(vec.at(i)));
         }
@@ -856,11 +856,11 @@ std::string Transponder::synonyms(std::string q) {    // q is term for looking u
     std::cout << std::endl << "~:: --- synonyms() ---:" << std::endl;
     
     // process query first
-    while (iss >> word) {
-        ourwords.push_back(word);
-        meta = singleMeta(word);
-        std::cout << std::endl << "~:: meta : " << meta << std::endl;
-    }
+    // while (iss >> word) {
+    //     ourwords.push_back(word);
+    //     meta = singleMeta(word);
+    //     std::cout << std::endl << "~:: meta : " << meta << std::endl;
+    // }
 
     for (size_t i=0; i<ourwords.size(); i++) {
         if (this->syno.is_open() == true) {

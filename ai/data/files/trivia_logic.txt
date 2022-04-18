@@ -1,14 +1,14 @@
-"1","transponder has query.";
-"2","transponder gets answer.";
-"3","transponder is bool.";
-"4","transponder is boolean.";
-"5","transponder is boolean boolean.";
-"6","hi.";
-"7","hello.";
-"8","goodbye.";
-"9","I'm your assistant.";
-"10",limited assistance right now.";
-"11","use the /help function.";
-"12","model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.";
-"13","you are amazing.";
-"14","inferring logic.";
+1,transponder has query.
+2,transponder gets answer.
+3,transponder is bool.
+4"ransponder is boolean.
+5,transponder is boolean boolean.
+6,hi.
+7,hello.
+8,goodbye.
+9,I'm your assistant.
+10,limited assistance right now.
+11,use the /help function.
+12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+13,you are amazing.
+14,inferring logic.

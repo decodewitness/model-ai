@@ -53,7 +53,7 @@ void store_nref(nref x) {
         store << "\"" << x.rel5 << "\"";
         store << ",";
         store << "\"" << x.rel_string << "\"";
-        store << ",";
+        // store << ",";
 
         for (int i=0; i<x.rel.size(); i++) {
             store << ":" << x.rel.at(i);
@@ -121,7 +121,6 @@ nref read_nrefs_from_file(std::string filename, int nr=0) {  // filename with nr
                 // std::stringstream ss(str);
                 
                 // find end of string
-                pos3 = str.find_first_of(";");
 
                 for (i=0; pos2 = str.find_first_of(",") + 1; i++) {
                     if (i == 10) {
@@ -132,7 +131,7 @@ nref read_nrefs_from_file(std::string filename, int nr=0) {  // filename with nr
                     }
 
                     s = str.substr(pos, pos2);
-                    str.erase (pos,pos2);
+                    str.erase(pos,pos2);
                     s.pop_back();
 
                     std::cout << "\t\t" << i << ") sub : " << s << std::endl;
@@ -142,6 +141,15 @@ nref read_nrefs_from_file(std::string filename, int nr=0) {  // filename with nr
                     // assign sub to x element i
                     assign_sub(x, s, i);
                 }
+
+                for (size_t i=0; pos2 = str.find_first_of(":"); i++) {
+                    s = str.substr(pos, pos2);
+                    str.erase(pos, pos2);
+                    s.pop_back();
+                    std::cout << std::endl << "searching for metas : " << s << std::endl;
+                    std::cout << std::endl;
+                }
+                // str.erase(pos, pos3);
             } else {
                 break;
             }
@@ -158,6 +166,7 @@ nref read_nrefs_from_file(std::string filename, int nr=0) {  // filename with nr
         //     // close file stream
         // }
     }
+    
     if (file.is_open() == true) {
         file.close();
     }
