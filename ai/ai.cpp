@@ -804,6 +804,7 @@ void AI::prepTransponder(std::string s) {
 	//this->transponder->answer(query_string);
 
 	std::cout << std::endl << "(EOT)" << std::endl;
+	std::cout << std::endl;
 	// sleep(2);
 
 	// // delete transponder
@@ -813,16 +814,13 @@ void AI::prepTransponder(std::string s) {
 void AI::tsp(std::string s) {	// transponder function
 	// create new transponder
 	// this->transponder = new Transponder(query_string);
+	std::cout << std::endl;
+	std::cout << "~:: tsp() :" << std::endl;
 
-	if (this->transponderIsPrepped == false) {
-		std::cout << "~:!:~ transponder is not prepared yet." << std::endl;
-		std::cout << "\t~:: preparing transponder." << std::endl;
-
+	if (this->transponderIsPrepped == false || this->trans == true) {
+		std::cout << "\t~:!:~ transponder is not prepared yet." << std::endl;
+		std::cout << "\t\t;; preparing transponder." << std::endl;
 		this->prepTransponder(s);
-	} else if (this->trans == true) {
-		std::cout << "~:: transponder -> prepTr()" << std::endl;
-		//this->transponder->prepTr(s);
-		std::cout << "(debug) after this query." << std::endl;
 	}
 
 	// prep new transponder
@@ -836,11 +834,11 @@ void AI::tsp(std::string s) {	// transponder function
 	//this->transponder->answer(query_string);
 
 	std::cout << std::endl << "(EOT)" << std::endl;
+};
 	// sleep(2);
 
 	// delete transponder
 	//delete this->transponder;
-};
 
 void AI::talk(int x) {	// list stored conversation
 	size_t max_history = x;
@@ -1331,7 +1329,7 @@ void AI::query() {	// respond to logical query method
 		this->brain->useBrain(query_string);
 		
 		if (this->trans == true && this->transponderIsPrepped == true) {
-			this->prepTransponder(query_string);	// THIS IS REDUNDANT
+			// this->prepTransponder(query_string);	// THIS IS REDUNDANT
 			this->tsp(query_string);
 		} else {
 			std::cout << std::endl;

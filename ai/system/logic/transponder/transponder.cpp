@@ -110,15 +110,13 @@ std::string Transponder::respond(bool b) {
     // should use transponder together with NLP processing
     // instead of just relaying the answer.
         // use logic here
-    this->response = "~:: tr :: message was relayed by transponder -- response().";
+    this->response = "~:: tr :: message was relayed by transponder -- response()."; // gets changed somewhere else, in: *void Transponder::analytics(std::string s)*
 
     // return the answer to the question or statement/pragma/sequence/expression
     return this->response;
 };
 
-void Transponder::analytics(std::string s) {
-    // unsigned int countWords(char *str);
-
+void Transponder::analytics(std::string s) {    // function that performs the analytics
     // metas
     int meta;
 
@@ -129,6 +127,7 @@ void Transponder::analytics(std::string s) {
     int number=0;
     int special=0;
     int unknown=0;
+    // unsigned int countWords(char *str);
 
     // variables for query position
     int pos;
@@ -517,7 +516,7 @@ std::string Transponder::answer(std::string s) {
 
     filen.open(used_file);  // trivia_logic // questions_ansewers
 
-    if (filen.is_open() == true) {
+    if (filen.is_open() == true) {  // trivia logic // questions_answers
         while (getline(filen,x)) {
             answers_processed += 1;
 
@@ -584,18 +583,24 @@ std::string Transponder::answer(std::string s) {
         if (i>biggest) { biggest = i; noted = inc; }
     }
 
+    std::cout << std::endl;
+    std::cout << "(debug)" << std::endl;
+    std::cout << "noted : " << noted << std::endl;
+    std::cout << "biggest : " << biggest << std::endl;
+    std::cout << std::endl;
+
     // for (size_t i : ints) {
     //     if (i == biggest) {
     //     }
     // }
     std::cout << std::endl;
-    std::cout << "labelled faculty : " << biggest << std::endl;
+    std::cout << "labelled biggest faculty : " << biggest << std::endl;
     
-    if (noted > 0) {    // ANSWER THE QUERY WITH listConvos()
-    // <---> OVER HERE TRANSPONDER QUERIES <--->
-        std::cout << std::endl << "[CONVOS] :" << std::endl;
-        this->listConvos(0);    // also lists synonyms ;; and stores relations
-    }
+    // if (noted > 0) {    // ANSWER THE QUERY WITH listConvos()
+    // // <---> OVER HERE TRANSPONDER QUERIES <--->
+    //     std::cout << std::endl << "[CONVOS] :" << std::endl;
+    //     this->listConvos(0);    // also lists synonyms ;; and stores relations
+    // }
     std::cout << std::endl;    
 
 return x;
@@ -603,7 +608,7 @@ return x;
 
 int Transponder::rank_score(std::string q, std::string a) { // parameters: q:query, a:answer
     int score = this->scored(q,a);
-    std::vector<std::string> result;
+    // std::vector<std::string> result;
 return score;
 };
 
@@ -629,12 +634,13 @@ int Transponder::scored(std::string q, std::string tq) {
     if (this->scores.is_open() == true) {
         // std::cout << "\t~:: successfully opened: \"" << weights << "\"." << std::endl;
         std::istringstream iss(q);
+
         std::cout << std::endl;
         // std::cout << "~:: results :" << std::endl;
         while (iss >> wrd) {
             // iss >> wrd;
             words.push_back(wrd);   // contains the query from the transponder
-            std::cout <<  "~:: pushing back ---> " << wrd << std::endl;
+            std::cout <<  "\t~:: pushing back ---> " << wrd << std::endl;
         }
 
 
@@ -658,13 +664,13 @@ int Transponder::scored(std::string q, std::string tq) {
     }
 
     for (const auto &str : words) {
-        std::cout << "\t- " << str << std::endl;
+        std::cout << "\t- " << str; // prints the query words one by one
+        std::cout << "\t~:: matching occurences." << std::endl;
         
         // conversation.push_back(str);  // should work
         // std::cout << "->>> pushed back ->>> " << str << std::endl;
 
         // Get the first occurrence
-        std::cout << "\t~:: matching occurences." << std::endl;
         std::cout << std::endl;
         size_t pos = tq.find(str);
         // Repeat till end is reached
@@ -673,10 +679,9 @@ int Transponder::scored(std::string q, std::string tq) {
             // Add position to the vector
             vec.push_back(pos);
             // Get the next occurrence from the current position
-            pos=q.find(tq, pos + tq.size());
+            pos = q.find(tq, pos + tq.size());
         }
     }
-
 
     std::cout << std::endl << "incremental size function : " << vec.size() << std::endl;
     score = vec.size();
@@ -686,8 +691,9 @@ int Transponder::scored(std::string q, std::string tq) {
     std::cout << std::endl;
     std::cout << "[RESULT] : ";
 
-    if (score > this->points) {
+    if (score > this->points) { // rate score
         // debugging output (2)
+        std::cout << "~:: score(" << score << ") got rated." << std::endl;
         std::cout << tq << endl;
         this->points = score;
         this->result = tq;
@@ -748,27 +754,42 @@ void Transponder::listConvos(size_t max_history_length) {  // list conversation,
 
     // query user
     std::cout << std::endl;
+    std::cout << "[CONVOS]" << std::endl;
+    std::cout << std::endl;
     std::cout << "~:: listConvos() :" << std::endl;
     std::cout << std::endl;
     std::cout << "\t\% having convos?" << std::endl;
     std::cout << std::endl;
 
-    // conversation is found in: vector<std::string> conversation
-    for (auto que : conversation) {
+    int count=0;
+
+    // list conversation    ;;  conversation is found in: vector<std::string> conversation
+    for (auto &que : conversation) {
         iter++;
         // display transponder query and list synonyms
-        std::cout << ":: " << que << std::endl;
-
+        std::cout << "\t:: " << que << std::endl;
+        if (answers.size() < count) { std::cout << "\t:: " << answers.at(count++) << std::endl; }
+        
         if (max_history_length != 0 && iter == max_history_length) {
             // maybe should also put flush device here ...
             break;  // break out of loop on max length for conversation history
         }
     }    
     
+    if (backlog_answers.size() > 0) {
+        for (auto &que : backlog_answers) {
+            std::cout << std::endl;
+            std::cout << "\t:>>>: " << que << std::endl;
+        }
+        // clear answers
+        // backlog_answers.clear();
+    }
+
     this->list_relations(); // list the relations
     // this->store_relations();    // then stores the relations through store_relations() function
     
     // End Of Transmission
+    std::cout << std::endl;
     std::cout << "(EOT)" << std::endl;
 };
     // append comma again to split correctly
@@ -1116,6 +1137,8 @@ void Transponder::list_relations() {    // lists the relations from this->relati
 };
 
 void Transponder::store_relations() {   // stores the relations from this->relations <vector>
+    std::cout << "\t~:: store_relations()." << std::endl;
+
     if ((this->relations.size() > 0) && (this->relate.is_open() == false)) {
         std::cout << std::endl << "~:: storing relations ::~" << std::endl;
         std::cout << "\t~:: opening : \"" << relatives << "\"." << std::endl;

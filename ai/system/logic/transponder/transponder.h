@@ -20,9 +20,13 @@
 
 // use stringcode to encode coded sequence to initiate or illicit response
 
+// ints
 int vec_rec;
 int track_record;
+
+// convo
 std::vector<std::string> conversation;
+std::vector<std::string> answers;
 
 // files
 std::string question_answers = "ai/data/files/question_answers.txt";
@@ -66,7 +70,9 @@ private:
     vector<std::string> backlog_answers;    // backlog of answers of conversation
     vector<std::string> relations;
     vector<std::string> oursyns;
-    vector<int> vec;    // used for meta queries
+
+    // used for meta queries
+    vector<int> vec;
 
     // file streams
     std::ifstream scores;
@@ -111,11 +117,17 @@ public:
     void store_relations();
     void flush_relations();
 
+    // convos
+    void store_in_convo(std::string s);  // stores string in this->conversation<vector>
+    void store_in_answers(std::string s);    // stores in this->answers<vector>
+
     // listing queries and such
     void listConvos(size_t max_history_length);
     void list_relations();
     void logQueries(int x=0);
-    
+
+    // numerate brain
+    void enumerateBrain() { std::cout << std::endl << "- size envelope : " << enumerate().size() << std::endl; };
 };
 
 // eof
