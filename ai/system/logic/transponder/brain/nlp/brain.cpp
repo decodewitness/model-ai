@@ -707,6 +707,9 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
         if (b_string.length() > 0) {
             std::cout << std::endl << "b_string:" << std::endl;
             std::cout << "!~ " << b_string << std::endl;
+
+            // store answer b_string from catalogs in bstrings
+            bstrings.push_back(b_string);
             sleep(1);
         }
     }
@@ -725,6 +728,11 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
         std::cout << line1 << std::endl;
         std::cout << std::endl;
         std::cout << line2 << std::endl;
+
+        // push back database collection/answers to bstrings <vector>
+        bstrings.push_back(line1);
+        bstrings.push_back(line2);
+
         sleep(1);
     }
 
@@ -804,6 +812,10 @@ void Brain::flush_data(int n) {  // consolidates data
 
 void Brain::done_with_query() {
     this->done[0] = true;
+};
+
+std::vector<std::string> enumerate() {
+    return bstrings;
 };
 
     // if (this->access.is_open() == true) {
