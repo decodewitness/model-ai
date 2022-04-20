@@ -781,8 +781,6 @@ void Transponder::listConvos(size_t max_history_length) {  // list conversation,
             std::cout << std::endl;
             std::cout << "\t:>>>: " << que << std::endl;
         }
-        // clear answers
-        // backlog_answers.clear();
     }
 
     this->list_relations(); // list the relations
