@@ -2173,8 +2173,9 @@ void AI::readRef(int n) {	// read a SINGLE ref from file
 
 void AI::readLastRef() {	// read the LAST reference from file
 	std::cout << std::endl;
-	std::cout << "- last nref :" << std::endl << "\t:\t";
-	read_last_ref();
+	std::cout << "- readLastRef()" << std::endl;
+	std::string x = read_last_ref();
+	std::cout << "\t\t(*)[stored ref] : " << x << std::endl;
 };
 
 void AI::storeRef(nref x) {

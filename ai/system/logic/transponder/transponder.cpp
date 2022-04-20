@@ -744,10 +744,15 @@ return score;
 void Transponder::listConvos(size_t max_history_length) {  // list conversation, and also list synonyms
     // vars
     int iter=0;
+
+    // strings
     std::string q;
     std::string syno;
     std::string line;
     
+    // booleans
+    bool convoIsBigger = false;
+    bool backlogIsBigger = false;
     // vectors
     std::vector<std::string> results;
     std::vector<std::string> results2;
@@ -759,28 +764,68 @@ void Transponder::listConvos(size_t max_history_length) {  // list conversation,
     std::cout << "~:: listConvos() :" << std::endl;
     std::cout << std::endl;
     std::cout << "\t\% having convos?" << std::endl;
-    std::cout << std::endl;
+    // std::cout << std::endl;
 
     int count=0;
 
     // list conversation    ;;  conversation is found in: vector<std::string> conversation
-    for (auto &que : conversation) {
-        iter++;
-        // display transponder query and list synonyms
-        std::cout << "\t:: " << que << std::endl;
-        if (answers.size() < count) { std::cout << "\t:: " << answers.at(count++) << std::endl; }
-        
-        if (max_history_length != 0 && iter == max_history_length) {
-            // maybe should also put flush device here ...
-            break;  // break out of loop on max length for conversation history
+    if (conversation.size() > 0 && backlog_answers.size() > 0) {
+        if (conversation.size() == backlog_answers.size()) {
+            for (int i=0; i<conversation.size(); i++) {
+                std::cout << std::endl;
+                std::cout << "q[] : " << conversation.at(i) << std::endl;
+                std::cout << "a[] : " << backlog_answers.at(i) << std::endl;
+            }            
+        } else {
+            if (conversation.size() > backlog_answers.size()) {
+                std::cout << "~:!:~ conversation size is (bigger)." << std::endl;
+                
+                for (auto &que : conversation) {
+                    std::cout << std::endl;
+                    std::cout << "q[] : " << que << std::endl;
+                    std::cout << "a[] : " << backlog_answers.at(count++) << std::endl;;
+                }
+                convoIsBigger = true;
+            } else {
+                std::cout << std::endl << "~:!:~ backlog_answers size is (bigger)." << std::endl;
+                std::cout << std::endl;
+
+                for (auto &que : backlog_answers) {
+                    std::cout << "a[] : " << conversation.at(count++) << std::endl;
+                                        std::cout << std::endl;
+                    std::cout << "q[] : " << que << std::endl;
+                    count++;
+                }
+                backlogIsBigger = true;
+            }
+        }   
+    } else if (conversation.size() > 0) {
+        for (auto &que : conversation) {
+            std::cout << "a[] : " << que << std::endl;
         }
-    }    
-    
-    if (backlog_answers.size() > 0) {
+        std::cout << std::endl;
+    } else if (backlog_answers.size() > 0) {
         for (auto &que : backlog_answers) {
-            std::cout << std::endl;
-            std::cout << "\t:>>>: " << que << std::endl;
+            std::cout << "q[] : " << que << std::endl;
+            count++;
         }
+        std::cout << std::endl;
+    }
+    
+    if (convoIsBigger == true && count < conversation.size()) {
+        std::cout << std::endl;
+        for (int i=count; i<conversation.size(); i++) {
+            std::cout << "a[e] : " << conversation.at(i) << std::endl;
+        }
+        std::cout << std::endl;
+    }
+
+    if (backlogIsBigger == true && count < backlog_answers.size()) {
+        std::cout << std::endl;
+        for (int i=count; i<backlog_answers.size(); i++) {
+            std::cout << "q[e] : " << backlog_answers.at(i) << std::endl;
+        }
+        std::cout << std::endl;
     }
 
     this->list_relations(); // list the relations
@@ -790,6 +835,43 @@ void Transponder::listConvos(size_t max_history_length) {  // list conversation,
     std::cout << std::endl;
     std::cout << "(EOT)" << std::endl;
 };
+    // list answers
+    // if (backlog_answers.size() > 0) {
+    //     for (auto &que : backlog_answers) {
+    //         std::cout << std::endl;
+    //         std::cout << "\t:>>>: " << que << std::endl;
+    //     }
+    //     // clear answers
+    //     // backlog_answers.clear();
+    // }
+
+    // OLD FUNCTIONS
+    // // list conversation    ;;  conversation is found in: vector<std::string> conversation
+    // if (conversation.size() > 0) {
+    //     for (auto &que : conversation) {
+    //         iter++;
+    //         // display transponder query and list synonyms
+    //         std::cout << "\t:: " << que << std::endl;
+    //         if (answers.size() < count) { std::cout << "\t:: " << answers.at(count++) << std::endl; }
+            
+    //         if (max_history_length != 0 && iter == max_history_length) {
+    //             // maybe should also put flush device here ...
+    //             break;  // break out of loop on max length for conversation history
+    //         }
+    //     }    
+    // }
+
+    // // list answers
+    // if (backlog_answers.size() > 0) {
+    //     for (auto &que : backlog_answers) {
+    //         std::cout << std::endl;
+    //         std::cout << "\t:>>>: " << que << std::endl;
+    //     }
+    //     // clear answers
+    //     // backlog_answers.clear();
+    // }
+
+
     // append comma again to split correctly
 //     for (auto que : conversation) {
 //         std::stringstream s_stream(que); //create string stream from the string

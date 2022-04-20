@@ -400,50 +400,78 @@ return x;
     // // print newline character
     // std::cout << std::endl;
 
-void read_last_ref() {
+std::string read_last_ref() {
     // chars
-    char ch;
+    // char ch;
+
+    // ints
+    int count=0;
 
     // strings
-    std::string lastLine;            
+    std::string buffA="<empty>";
+    std::string buffB="<empty>";
+    std::string lastLine="<empty>";
     
     // file pointers
     std::ifstream file;
 
+    file.open(stored_nrefs_file);
+
     std::cout << std::endl;
     std::cout << "~:: read_last_ref() : " << std::endl;
-
-    file.open(stored_nrefs_file);
     
     if(file.is_open()) {
-        file.seekg(-1, std::ios_base::end);                // go to one spot before the EOF
-
-        bool keepLooping = true;
-        while(keepLooping) {
-            file.get(ch);                            // Get current byte's data
-
-            if((int)file.tellg() <= 1) {             // If the data was at or before the 0th byte
-                file.seekg(0);                       // The first line is the last line
-                keepLooping = false;                // So stop there
+        std::cout << "\t";
+        
+        while (std::getline(file, buffB)) {
+            std::cout << ".";
+            count++;            
+            
+            if (buffB.compare("\n") == false) {
+                buffB = lastLine;
             }
-            else if(ch == '\n') {                   // If the data was a newline
-                keepLooping = false;                // Stop at the current position.
-            }
-            else {                                  // If the data was neither a newline nor at the 0 byte
-                file.seekg(-2, std::ios_base::cur);        // Move to the front of that data, then to the front of the data before it
+            
+            lastLine = buffB;
+            buffA = lastLine;
+        
+            if (count == 24) {
+                std::cout << std::endl;
+                std::cout << "\t";
             }
         }
-
-        std::getline(file,lastLine);                      // Read the current line
-
-        std::cout << "~::\t* nref sequence : " << lastLine << std::endl;     // Display it
-        std::cout << std::endl;
-
-        if (file.is_open() == true) {
-            file.close();
-        }
+        std::cout << " (" << count << ")" << std::endl;
     }
+    std::cout << std::endl;
+return lastLine;
 };
+    //     file.seekg(-1, std::ios_base::end);                // go to one spot before the EOF
+
+    //     bool keepLooping = true;
+    //     while(keepLooping) {
+    //         file.get(ch);                            // Get current byte's data
+
+    //         if((int)file.tellg() <= 1) {             // If the data was at or before the 0th byte
+    //             file.seekg(0);                       // The first line is the last line
+    //             keepLooping = false;                // So stop there
+    //         }
+    //         else if(ch == '\n') {                   // If the data was a newline
+    //             keepLooping = false;                // Stop at the current position.
+    //         }
+    //         else {                                  // If the data was neither a newline nor at the 0 byte
+    //             file.seekg(-2, std::ios_base::cur);        // Move to the front of that data, then to the front of the data before it
+    //         }
+    //     }
+
+    //     std::getline(file,lastLine);                      // Read the current line
+
+    //     std::cout << "~::\t* nref sequence : " << lastLine << std::endl;     // Display it
+    //     std::cout << std::endl;
+
+    //     if (file.is_open() == true) {
+    //         file.close();
+    //     }
+    // }
+// };
 
 
 int return_last_ref_nr() {  // returns the number of lines
