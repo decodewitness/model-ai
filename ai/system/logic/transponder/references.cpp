@@ -324,7 +324,7 @@ nref return_nref(int x) {   // return nref structure "x"
                 pos3 = line.find_first_of(";");
 
                 for (i=0; pos2 = line.find_first_of(",") + 1; i++) {
-                    if (i == 10) {
+                    if (i == 11) {  // check for max elements in nref
                         std::cout << std::endl;
                         std::cout << "~:!:~ (error) - anomaly ;; check your nrefs data on element size (max. 10)." << std::endl;
                         std::cout << std::endl;
@@ -367,8 +367,8 @@ nref return_nref(int x) {   // return nref structure "x"
 return y;
 };
 
-nref construct_ref(std::string nr, std::string concept, std::string description, std::string short_label, std::string rel1, std::string rel2, std::string rel3, std::string rel4, std::string rel5, std::string rel_string) {
-
+nref construct_ref(std::string nr, std::string concept, std::string description, std::string short_label, std::string rel1, std::string rel2, std::string rel3, std::string rel4, std::string rel5, std::string rel_string, std::vector<std::string> rel) {
+    // references
     nref x;
 
     // todo CHECK for STRINGS HERE!!!
@@ -382,8 +382,81 @@ nref construct_ref(std::string nr, std::string concept, std::string description,
     x.rel3 = rel3;
     x.rel4 = rel4;
     x.rel5 = rel5;
+    x.rel = rel;
 
 return x;
+};
+
+nref return_ref(int n) {
+    // file streams
+    std::ifstream io;
+    io.open(stored_nrefs_file);
+    
+    // ints
+    int counter=0;
+    int pos=0;
+    int pos1=0;
+    int pos2=0;
+
+    // strings
+    std::string buffer;
+
+    // strings for nref
+    std::string nr="<empty>";
+    std::string concept="<empty>";
+    std::string description="<empty>";
+    std::string short_label="<empty>";
+    std::string rel1="<empty>";
+    std::string rel2="<empty>";
+    std::string rel3="<empty>";
+    std::string rel4="<empty>";
+    std::string rel5="<empty>";
+    std::string rel_string="<empty>";
+
+    // vectors for nref
+    std::vector<std::string> rel;
+
+    // announce function
+    std::cout << std::endl;
+    std::cout << "~:: return_ref()" << std::endl;
+
+    if (io.is_open() == true) {
+        while (std::getline(io, buffer)) {
+            counter++;
+            if (counter == n) {
+                break;
+            }
+        }
+        if (io.is_open()) {
+            io.close();
+        }
+    }
+
+    std::cout << "\t~:: [nref] : " << std::endl;
+    std::cout << "\t\t*-> " << buffer << std::endl;
+
+    // // stringstream
+    // istringstream iss(buffer);
+
+    pos = 0;
+    pos2 = buffer.find_last_of(";");
+
+    std::cout << std::endl;
+
+    for (int i=0; pos1 = buffer.find_first_of("\",\""); i++) {
+        std::string x = buffer.substr(pos, pos1 - 1);
+        std::cout << x << std::endl;
+        buffer.erase(pos,pos1-1);
+
+        std::cout << std::endl;
+        std::cout << "[buffer] -> \"" << buffer << "\"" << std::endl;
+    }
+
+    // NEED TO ADD A TO NUMBER FUNCTION
+    // NEED TO ADD STRING TO VARIABLES
+
+// assignes nref sequence
+return construct_ref(nr, concept, description, short_label, rel1, rel2, rel3, rel4, rel5, rel_string, rel);
 };
     // // print reference
     // std::cout << "\tnr : " << x.nr << std::endl; // number of this reference
