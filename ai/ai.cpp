@@ -81,7 +81,9 @@ void AI::help(int n=1) {
 
 	std::cout << PROGRAM << std::endl;
 	std::cout << VERSION << std::endl;
+	std::cout << AUTHOR << std::endl;
 	std::cout << DOWNLOADURL << std::endl;
+	
 	std::cout << std::endl;
 	std::cout << "When the Ai asks you for Logic you can enter a string to trigger natural language processing," << std::endl;
 	std::cout << "or you can enter one of the following commands." << std::endl;

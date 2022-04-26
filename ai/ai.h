@@ -1,8 +1,12 @@
 // (inside AI directory) "AI/AI.H" - MAIN HEADER FILE FOR AI MODEL CLASS (USED BY AI.CPP)
 
+	// ALL DATA FILES GO IN: "AI/DATA/FILES"
+	// ALL META QUERIES AND REFERENCES GO IN "AI/LIB/QUERIES"
+
 #define PROGRAM "MODEL-AI"
-#define VERSION "v0.1-27b"
+#define VERSION "v0.1-27c"
 #define WEBSITE	"https://model-ai.com"
+#define AUTHOR "Author: vera lo"
 #define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
 
 #ifndef _SPLASH

@@ -1443,16 +1443,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffca8f3f5f0)
-	- stacking header:(1)::<address>(0x7ffca8f3f610)
-	- stacking header:(2)::<address>(0x7ffca8f3f630)
-	- stacking header:(3)::<address>(0x7ffca8f3f650)
-	- stacking header:(4)::<address>(0x7ffca8f3f670)
-	- stacking header:(5)::<address>(0x7ffca8f3f690)
-	- stacking header:(6)::<address>(0x7ffca8f3f6b0)
-	- stacking header:(7)::<address>(0x7ffca8f3f6d0)
-	- stacking header:(8)::<address>(0x7ffca8f3f6f0)
-	- stacking header:(9)::<address>(0x7ffca8f3f710)
+	- stacking header:(0)::<address>(0x7fff05cfadd0)
+	- stacking header:(1)::<address>(0x7fff05cfadf0)
+	- stacking header:(2)::<address>(0x7fff05cfae10)
+	- stacking header:(3)::<address>(0x7fff05cfae30)
+	- stacking header:(4)::<address>(0x7fff05cfae50)
+	- stacking header:(5)::<address>(0x7fff05cfae70)
+	- stacking header:(6)::<address>(0x7fff05cfae90)
+	- stacking header:(7)::<address>(0x7fff05cfaeb0)
+	- stacking header:(8)::<address>(0x7fff05cfaed0)
+	- stacking header:(9)::<address>(0x7fff05cfaef0)
 
 
 -:: checking AI functions.
@@ -1498,16 +1498,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-block device: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-block device: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
-block device: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-block device: -- ./info.txt
+file or directory: -- ./info.txt
 
 
 ~:: running (10) queries.
@@ -1519,22 +1519,1145 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/lastref
-	[ simple x computation: type:[char]: len:8 vowels:5 consonants:2 special:1 
-~:: parameter request: readLastRef().
+	/version
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
+~:: parameter request: version().
  ]
 
 -:: finished x computation.
 
-- readLastRef()
+MODEL-AI version: v0.1-27c
+https://model-ai.com/archive/model-ai.tar.gz
 
-~:: read_last_ref() : 
-	................ (16)
-
-	[stored ref] : "1000","","more analytics","","missing","","","","","":28:11831;
 
 ~:: running (9) queries.
 
 ::- type your query -::
 
 punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/help
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: help().
+ ]
+
+-:: finished x computation.
+
+Help Function
+-----
+
+MODEL-AI
+v0.1-27c
+vera lo
+https://model-ai.com/archive/model-ai.tar.gz
+
+When the Ai asks you for Logic you can enter a string to trigger natural language processing,
+or you can enter one of the following commands.
+
+COMMANDS:
+-----
+
+/help -- triggers this help function.
+/help -- displays version information.
+/killc -- built in killchain(1).
+/bank -- starts accounting.
+/hash -- hashes a string in MD5.
+/curl -- curls a website of choice from your machine.
+/table -- prints the table in numbers of your chosen number.
+/tableto -- prints the table in numbers of your chosen number up to max chosen number.
+/dice -- print a random dice number. (1...6)
+/dice2 -- print a random dice number. (1...nr_of_eyes)
+/stat -- stat() function stats directory/file.
+/cp -- copies file_1 into file_2. (src) -> (dst)
+/rm -- removes a file from the system.
+/+ -- adds 2 numbers.
+/- -- subtracts 2 numbers.
+// -- divides number 1 by number 2.
+/* -- multiplies number 1 by number 2.
+/pow -- does number 1 to power of number 2.
+/punch -- punch in numbers like with a calculator.
+/prpunch -- punch in numbers like with a calculator.
+/simulation -- runs a simulation for enities from the Entity class -&- objects from the Object class.
+/convert -- converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
+/convertd -- converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
+/stepping -- will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
+/rollout -- this function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
+/add_data -- adds data to the logical cabinets manually.
+/convert_data -- converts the data from a file.
+/audio_toggle -- disables/enables the Ai model its sound FX.
+/run_tube -- download YouTube file or playlist.
+/menu -- will hand you a menu with several options.
+/passwd -- changes the access code for running the model.
+/list_cred -- lists the MD5 hash (the access code) from the credentials store.
+/learned -- lists the added data through learning.
+/what -- lists the added data through learning.
+/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model.
+/test -- test the transponder responses.
+/answer
+/list -- lists the conversation.
+/export_backlogs -- export backlogs of user queries & transponder queries.
+/export_backlog1 -- export backlogs of user queries.
+/export_backlog2 -- export backlogs of transponder queries.
+/buildref -- build custom reference.
+/readref -- read a certain reference.
+/readrefs -- read all references.
+/lastref -- print the last reference.
+/refnumber -- print the number of references.
+/qlog -- qlog(x) -- log (x) queries.
+
+
+~:: running (8) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	show me intelligence
+	[ simple x computation: type:[char]: len:20 vowels:13 consonants:7 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "show me intelligence".
+	- HMAC string :: *string_next_logic() ::  (show me intelligence) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
+
+~:: prepTransponder() : (show me intelligence)
+~:: transponder -> prep()
+
+~:: set subject to: "show me intelligence".
+(debug) word :: show
+(debug) word :: me
+(debug) word :: intelligence
+
+~:: (debug)::nrOfWords = 3.
+~:: (debug)::counter = 3.
+
+(debug) calling prepare_ints() (from) -> "show me intelligence".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (3).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) show :: #268
+(debug) 1) me :: #89
+(debug) 2) intelligence :: #2526
+
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequences:
+		- 268		- 89		- 2526
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("268,89,2526,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- show		 --> *(a+i) = 268 - *(a+i) - 1 = 267
+	- me		 --> *(a+i) = 89 - *(a+i) - 1 = 88
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+
+(EOT)
+
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (show me intelligence)
+~:: transponder -> prep()
+
+~:: set subject to: "show me intelligence".
+(debug) word :: show
+(debug) word :: me
+(debug) word :: intelligence
+
+~:: (debug)::nrOfWords = 3.
+~:: (debug)::counter = 3.
+
+(debug) calling prepare_ints() (from) -> "show me intelligence".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (6).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) show :: #268
+(debug) 1) me :: #89
+(debug) 2) intelligence :: #2526
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("268,89,2526,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- show		 --> *(a+i) = 268 - *(a+i) - 1 = 267
+	- me		 --> *(a+i) = 89 - *(a+i) - 1 = 88
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 3
+		* length: 20
+		* vowels: 7
+		* consonants: 11
+		* numbers: 0
+		* special chars: 2
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : ~:: score(1) got rated.
+12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+(debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	show me intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> show
+	~:: pushing back ---> me
+	~:: pushing back ---> intelligence
+
+	- show	~:: matching occurences.
+
+	- me	~:: matching occurences.
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 12
+biggest : 1
+
+
+labelled biggest faculty : 1
+
+
+----- ----- -----
+(debug) result : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 
+	~:: store_relations().
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
+~:: --- synonyms() ---:
+
+~:: singleMeta() lookup.
+	~:: meta query : (268)
+
+~:: singleMeta() lookup.
+	~:: meta query : (89)
+
+~:: singleMeta() lookup.
+	~:: meta query : (2526)
+
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: storing nref.
+
+~:: store_nrefs() :
+~:: stored nrefs.
+
++query :: (show me intelligence)
+[RESPONSE] : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+
+
+(EOT)
+
+~:: running (7) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : intelligence
+	search2 : intelligence
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 5
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+
+sorter():
+{ ai/system/logic/transponder/brain/data/intelligence.dat }
+- opening: ai/system/logic/transponder/brain/data/intelligence.dat.
+	- unable to open : ai/system/logic/transponder/brain/data/intelligence.dat
+
+sorted: ai/system/logic/transponder/brain/data/intelligence.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+~:: found index [intelligence].
+:::_]{ (intelligence can be used to manipulate objects.)
+:::_]{ (intelligent manners could be manners that would be described.)
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/system/logic/transponder/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (5).
+~:: done.
+
+b_string:
+!~ intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
+	~:: query matches search string: "intelligence".
+
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 5
+
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (intelligence)
+~:: transponder -> prep()
+
+~:: set subject to: "intelligence".
+(debug) word :: intelligence
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "intelligence".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (7).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) intelligence :: #2526
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("2526,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 12
+		* vowels: 5
+		* consonants: 7
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : ~:: score(1) got rated.
+12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+(debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	intelligence
+
+
+~:: scored() : 
+
+	~:: pushing back ---> intelligence
+
+	- intelligence	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 12
+biggest : 1
+
+
+labelled biggest faculty : 1
+
+
+----- ----- -----
+(debug) result : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 
+	~:: store_relations().
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
+~:: --- synonyms() ---:
+
+~:: singleMeta() lookup.
+	~:: meta query : (2526)
+
+	~:: pushing back query : 
+	~:: storing nref.
+
+~:: store_nrefs() :
+~:: stored nrefs.
+
++query :: (intelligence)
+[RESPONSE] : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+
+
+(EOT)
+
+~:: running (6) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/simulation
+	[ simple x computation: type:[char]: len:11 vowels:5 consonants:5 special:1 
+~:: parameter request: simulation().
+ ]
+
+-:: finished x computation.
+
+(simulation) entities: 
+
+~:: starting simulation.
+	~:: sim construct()
+	~:: initializing simulation run.
+		~:: ready | initialized sim.
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(1)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(2)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(3)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(4)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(5)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(6)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(7)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(8)
+
+(simulation) objects: 
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(1)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(2)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(3)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(4)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(5)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(6)
+	~:: simulation is running.
+
+[E]: (1) (2) (3) (4) (5) (6) (7) (8) 
+[O]: (1) (2) (3) (4) (5) (6) 
+
+~:: (manipulate in session #) :: 
+~:: manipulating session: 4.
+(e|o)? : (entity #)? : 
+	~:: modifying entity #3.
+	~:: added to list (3)
+
+	* nr of manipulating sessions : 1
+	* manipulating (entities) in # session : 4 
+	* modifying entities # : 1
+
+	* manipulated entities : e(3) 
+
+(debug) manipulated eo sessions: ES:1 OS:0
+~:: listing manipulated targets: 
+	e(3) 
+
+- cycle round : 1 -
+14805ns
+
+- cycle round : 2 -
+7949ns
+
+- cycle round : 3 -
+7618ns
+
+- cycle round : 4 -
+~:: manipulation on {entity}[3]
+
+8681ns
+
+- cycle round : 5 -
+7818ns
+
+- cycle round : 6 -
+7748ns
+
+- cycle round : 7 -
+7618ns
+
+- cycle round : 8 -
+7618ns
+
+- cycle round : 9 -
+7588ns
+
+- cycle round : 10 -
+7929ns
+
+- cycle round : 11 -
+7648ns
+
+- cycle round : 12 -
+7629ns
+
+- cycle round : 13 -
+7678ns
+
+- cycle round : 14 -
+7638ns
+
+- cycle round : 15 -
+7588ns
+
+- cycle round : 16 -
+7658ns
+
+- cycle round : 17 -
+7758ns
+
+- cycle round : 18 -
+7668ns
+
+- cycle round : 19 -
+7608ns
+
+- cycle round : 20 -
+7628ns
+
+- cycle round : 21 -
+7778ns
+
+- cycle round : 22 -
+7608ns
+
+- cycle round : 23 -
+7609ns
+
+- cycle round : 24 -
+7668ns
+
+- cycle round : 25 -
+7678ns
+
+~:: generating stats ::~
+
+STATISTICS :: SIMULATION RUN:
+-----
+- simulation # cycles: 25
+- number of entities: 0
+- number of objects: 0
+- total time simulation run (nano seconds): 7678 ns.
+
+~:: deleting simulation.
+
+
+~:: running (5) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
