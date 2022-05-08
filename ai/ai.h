@@ -66,6 +66,7 @@
 #include "drum_machine/drums.cpp"
 #include "data/convert/convert.cpp"
 #include "data/handler/handler.cpp"
+#include "system/logic/strings.cpp"
 #include "autonomous/autonomous.cpp"
 #include "system/modules/utility.cpp"
 // #include "system/logic/math/tables.h"
