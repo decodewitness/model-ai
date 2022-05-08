@@ -3,6 +3,6 @@
 #include <string>
 
 // queries
-std::string query_string;   // gets used from Transponder class // when inserting logic into the device
+std::string query_string;   // gets used in the Transponder class ;; when inserting logic into the device
 
 // eof

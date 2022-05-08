@@ -8,6 +8,7 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)	// holds
         this->x = x;
         this->y = y;
         this->z = z;
+};
 
         // bool square[10];
         // int a, b, c;
@@ -42,19 +43,22 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)	// holds
          */
 
         
-
+void AI_Matrix::setSquares() {
         // alpha computations
         this->square_A[0] = x;
         this->square_A[1] = y;
         this->square_A[2] = z;
-
         // beta computations
-        this->square_B[0] = y;
-        this->square_B[9] = z;
-
+        this->square_B[0] = x;
+        this->square_B[1] = y;
+        this->square_B[2] = z;
         // calculations
-        this->square_C[9] = x;
+        this->square_C[0] = x;
+        this->square_C[1] = y;
+        this->square_C[2] = z;
+};
 
+void AI_Matrix::decA() {        // sets decimal_A with 'x' values
         // draw decimal equations
         this->decimal_A[0] = x+x;
         this->decimal_A[1] = x*x;
@@ -66,7 +70,9 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)	// holds
         this->decimal_A[7] = x/4;
         this->decimal_A[8] = x/10;
         this->decimal_A[9] = x/100;
+};
 
+void AI_Matrix::decB() {        // sets decimal_B with 'y' values
         this->decimal_B[0] = y+y;
         this->decimal_B[1] = y*y;
         this->decimal_B[2] = y/y;
@@ -77,7 +83,9 @@ AI_Matrix::AI_Matrix(int x, int y, int z) { // square measure (3, 3, 3)	// holds
         this->decimal_B[7] = y*2.5;
         this->decimal_B[8] = y/10;
         this->decimal_B[9] = y/100;
+};
 
+void AI_Matrix::decC() {        // sets decimal_A with 'x/y' values
         this->decimal_C[0]  = x+y;
         this->decimal_C[1]  = x-y;
         this->decimal_C[2]  = x*y;
