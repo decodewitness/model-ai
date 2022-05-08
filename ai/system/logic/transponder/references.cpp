@@ -23,6 +23,7 @@ struct nref {
 
 void store_nref(nref x) {
     std::ofstream store;
+    bool stored = false;
 
     std::cout << std::endl;
     std::cout << "~:: store_nrefs() :" << std::endl;
@@ -61,6 +62,8 @@ void store_nref(nref x) {
         
         store << ";" << std::endl;
 
+        stored = true;
+
         // close file      
         store.close();
     } else {
@@ -68,12 +71,10 @@ void store_nref(nref x) {
         std::cout << "~:!:~ (error) - nrefs file not open." << std::endl;
     }
 
-    if (store.is_open() == false) {
-        std::cout << "~:: stored nrefs." << std::endl;
+    if (stored == true && store.is_open() == false) {
+        std::cout << "\t~:: stored nrefs." << std::endl;
     }
 };
-
-
 
 // NEED TO FIX THIS FUNCTION TO INCLUDE "nref.rel <vector>"
 

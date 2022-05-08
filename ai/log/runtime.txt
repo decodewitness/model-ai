@@ -1443,16 +1443,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc7d367cb0)
-	- stacking header:(1)::<address>(0x7ffc7d367cd0)
-	- stacking header:(2)::<address>(0x7ffc7d367cf0)
-	- stacking header:(3)::<address>(0x7ffc7d367d10)
-	- stacking header:(4)::<address>(0x7ffc7d367d30)
-	- stacking header:(5)::<address>(0x7ffc7d367d50)
-	- stacking header:(6)::<address>(0x7ffc7d367d70)
-	- stacking header:(7)::<address>(0x7ffc7d367d90)
-	- stacking header:(8)::<address>(0x7ffc7d367db0)
-	- stacking header:(9)::<address>(0x7ffc7d367dd0)
+	- stacking header:(0)::<address>(0x7fff23e6c380)
+	- stacking header:(1)::<address>(0x7fff23e6c3a0)
+	- stacking header:(2)::<address>(0x7fff23e6c3c0)
+	- stacking header:(3)::<address>(0x7fff23e6c3e0)
+	- stacking header:(4)::<address>(0x7fff23e6c400)
+	- stacking header:(5)::<address>(0x7fff23e6c420)
+	- stacking header:(6)::<address>(0x7fff23e6c440)
+	- stacking header:(7)::<address>(0x7fff23e6c460)
+	- stacking header:(8)::<address>(0x7fff23e6c480)
+	- stacking header:(9)::<address>(0x7fff23e6c4a0)
 
 
 -:: checking AI functions.
@@ -1498,19 +1498,19 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+socket: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./downloads
+socket: -- ./downloads
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+socket: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+socket: -- ./info.txt
 
 
-~:: running (1) queries.
+~:: running (10) queries.
 
 ::- type your query -::
 
@@ -1519,41 +1519,512 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/test
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: parameter request: test().
- ]
+	in need of weights
+	[ simple x computation: type:[char]: len:18 vowels:12 consonants:6 special:0 ]
+
+[ -- you're asking my input -- ]
 
 -:: finished x computation.
+*string_next_logic() :: ssh: "in need of weights".
+	- HMAC string :: *string_next_logic() ::  (in need of weights) is >> 
+~:: file_access()
+(debug) file_access(level=0).
 
-<!> trial rounds in these functions (logged output):
------
-(true)
-searchterm: (true)
+~:: searching indexes:
+	- rewinding file index.
+
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
+
+~:: prepTransponder() : (in need of weights)
+~:: transponder -> prep()
+
+~:: set subject to: "in need of weights".
+(debug) word :: in
+(debug) word :: need
+(debug) word :: of
+(debug) word :: weights
+
+~:: (debug)::nrOfWords = 4.
+~:: (debug)::counter = 4.
+
+(debug) calling prepare_ints() (from) -> "in need of weights".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (4).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) in :: #6
+(debug) 1) need :: #183
+(debug) 2) of :: #2
+(debug) 3) weights :: #8454
+
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequences:
+		- 6		- 183		- 2		- 8454
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("6,183,2,8454,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- in		 --> *(a+i) = 6 - *(a+i) - 1 = 5
+	- need		 --> *(a+i) = 183 - *(a+i) - 1 = 182
+	- of		 --> *(a+i) = 2 - *(a+i) - 1 = 1
+	- weights		 --> *(a+i) = 8454 - *(a+i) - 1 = 8453
+
+(EOT)
 
 
--:: aborting artificial life sequence, and clean up gracefully!
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
 
--:: display ((x)->live())(?x) equaled  .
+~:: prepTransponder() : (in need of weights)
+~:: transponder -> prep()
 
--:: destructor artificial life routine was called. -::
-	killing abstraction layer.
+~:: set subject to: "in need of weights".
+(debug) word :: in
+(debug) word :: need
+(debug) word :: of
+(debug) word :: weights
 
--:: decoupler.
-	-:: decoupling sampler
-	-:: sampler set to pause.
-		(-  ||  -)
+~:: (debug)::nrOfWords = 4.
+~:: (debug)::counter = 4.
+
+(debug) calling prepare_ints() (from) -> "in need of weights".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (8).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) in :: #6
+(debug) 1) need :: #183
+(debug) 2) of :: #2
+(debug) 3) weights :: #8454
 
 
-::=> saving grace (routine) and closing libraries <=::
 
--:: closing files.
--:: cleaning memory.
+~:: meta queries
+	~:: reverse_meta_query_lookup("6,183,2,8454,")
+~:::~
 
-~:: decoupling transponder.
-	~:: closed "ai/lib/queries/weights" transponder file access.
-	~:: closed "ai/data/files/synonyms.txt" transponder file access.
-~:: closed access.
+~:: reverse meta query lookup: 
+	- in		 --> *(a+i) = 6 - *(a+i) - 1 = 5
+	- need		 --> *(a+i) = 183 - *(a+i) - 1 = 182
+	- of		 --> *(a+i) = 2 - *(a+i) - 1 = 1
+	- weights		 --> *(a+i) = 8454 - *(a+i) - 1 = 8453
 
--:: calling destructor for AI::Model.
--:: done.
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 4
+		* length: 18
+		* vowels: 6
+		* consonants: 9
+		* numbers: 0
+		* special chars: 3
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : ~:: score(1) got rated.
+12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+(debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	in need of weights
+
+
+~:: scored() : 
+
+	~:: pushing back ---> in
+	~:: pushing back ---> need
+	~:: pushing back ---> of
+	~:: pushing back ---> weights
+
+	- in	~:: matching occurences.
+
+	- need	~:: matching occurences.
+
+	- of	~:: matching occurences.
+
+	- weights	~:: matching occurences.
+
+
+incremental size function : 1
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 12
+biggest : 1
+
+
+labelled biggest faculty : 1
+
+
+----- ----- -----
+(debug) result : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 
+	~:: store_relations().
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
+~:: --- synonyms() ---:
+
+~:: singleMeta() lookup.
+	~:: meta query : (6)
+
+~:: singleMeta() lookup.
+	~:: meta query : (183)
+
+~:: singleMeta() lookup.
+	~:: meta query : (2)
+
+~:: singleMeta() lookup.
+	~:: meta query : (8454)
+
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: storing nref.
+
+~:: store_nrefs() :
+~:: stored nrefs.
+
++query :: (in need of weights)
+[RESPONSE] : 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+
+
+(EOT)
+
+~:: running (9) queries.
+
+::- type your query -::
+
+punch.
