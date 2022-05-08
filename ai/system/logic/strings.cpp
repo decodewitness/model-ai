@@ -1,4 +1,4 @@
-// AI/SYSTEM/LOGIC/STRINGS.CPP
+// AI/SYSTEM/LOGIC/STRINGS.CPP  -   USED BY "AI/AI.H"
 
 #include <iostream>
 #include <string>
@@ -16,10 +16,10 @@ return ret;
 bool searchterm2(std::string search, std::string& str) {  // prints and returns 'true' when string query "search" is found in string "str" else returns false
     bool ret = false;
     if (str.find(search) != std::string::npos) {
-        std::cout << "true";
+        std::cout << "(true)";
         ret=true;
     } else {
-        std::cout << "false";
+        std::cout << "(false)";
         ret=false;
     }
 return ret;

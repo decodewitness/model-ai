@@ -2202,15 +2202,15 @@ void AI::testA() {	// test queue
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
 	// TO TEST THE FUNCTION INSIDE THE MODEL.
 
-	// std::string str = "this is a bool envelope!";
+	std::string str = "this is a bool envelope!";
 
-	// if (searchterm("nott", str)) {
-	// 	std::cout << std::endl << "searchterm: (true)" << std::endl;
-	// 	std::cout << std::endl;
-	// } else {
-	// 	std::cout << std::endl << "searchterm: (false)" << std::endl;
-	// 	std::cout << std::endl;
-	// }
+	if (searchterm2("is", str)) {
+		std::cout << std::endl << "searchterm: (true)" << std::endl;
+		std::cout << std::endl;
+	} else {
+		std::cout << std::endl << "searchterm: (false)" << std::endl;
+		std::cout << std::endl;
+	}
 
 	// nref x = build_custom_nref();
 	// print_nref(x);

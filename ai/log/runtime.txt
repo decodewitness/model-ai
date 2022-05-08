@@ -1443,16 +1443,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffda6192760)
-	- stacking header:(1)::<address>(0x7ffda6192780)
-	- stacking header:(2)::<address>(0x7ffda61927a0)
-	- stacking header:(3)::<address>(0x7ffda61927c0)
-	- stacking header:(4)::<address>(0x7ffda61927e0)
-	- stacking header:(5)::<address>(0x7ffda6192800)
-	- stacking header:(6)::<address>(0x7ffda6192820)
-	- stacking header:(7)::<address>(0x7ffda6192840)
-	- stacking header:(8)::<address>(0x7ffda6192860)
-	- stacking header:(9)::<address>(0x7ffda6192880)
+	- stacking header:(0)::<address>(0x7ffc7d367cb0)
+	- stacking header:(1)::<address>(0x7ffc7d367cd0)
+	- stacking header:(2)::<address>(0x7ffc7d367cf0)
+	- stacking header:(3)::<address>(0x7ffc7d367d10)
+	- stacking header:(4)::<address>(0x7ffc7d367d30)
+	- stacking header:(5)::<address>(0x7ffc7d367d50)
+	- stacking header:(6)::<address>(0x7ffc7d367d70)
+	- stacking header:(7)::<address>(0x7ffc7d367d90)
+	- stacking header:(8)::<address>(0x7ffc7d367db0)
+	- stacking header:(9)::<address>(0x7ffc7d367dd0)
 
 
 -:: checking AI functions.
@@ -1498,19 +1498,19 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+file or directory: -- ./info.txt
 
 
-~:: running (10) queries.
+~:: running (1) queries.
 
 ::- type your query -::
 
@@ -1528,12 +1528,32 @@ punch.
 
 <!> trial rounds in these functions (logged output):
 -----
+(true)
+searchterm: (true)
 
-searchterm(false)
+
+-:: aborting artificial life sequence, and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled  .
+
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
+
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+		(-  ||  -)
 
 
-~:: running (9) queries.
+::=> saving grace (routine) and closing libraries <=::
 
-::- type your query -::
+-:: closing files.
+-:: cleaning memory.
 
-punch.
+~:: decoupling transponder.
+	~:: closed "ai/lib/queries/weights" transponder file access.
+	~:: closed "ai/data/files/synonyms.txt" transponder file access.
+~:: closed access.
+
+-:: calling destructor for AI::Model.
+-:: done.
