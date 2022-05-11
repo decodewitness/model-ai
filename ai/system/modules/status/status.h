@@ -4,9 +4,12 @@
 #include <string>
 #include <cstring>
 #include <cstdlib>
+#include <unistd.h>
 #include <fstream>
+#include <sstream>
 
 bool stats_is_active = false;   // true if there is a Status class object
+int max_stats = 3;  // increase this number according to the measured number of stats   // later assign automatic by stat->reporting()
 
 const std::string def_count = "ai/definitions/def_count";
 const std::string wrds_count = "ai/definitions/wrds_count";
@@ -19,10 +22,11 @@ private:
     int definitions_nr;    // number of definitions.
     int words_nr;      // number of words in definitions.
     int measured;   // measured number of stats.
+    int reported_stats; // stats that gave feedback.
 
 public:
     // constructor / destructor
-    Status() { stats_is_active = true; }
+    Status() { this->init(); }
     ~Status() { stats_is_active = false; }
 
     // initialization
@@ -35,7 +39,9 @@ public:
     // reporting
     int ret_def_count();    // returns this->definitions_nr.
     int ret_word_count();   // returns "this->words".
-    void accumulate_status_report(); // gathers session status info.
+    int accumulate_status_report(); // gathers session status info.
+    void reporting() { this->reported_stats += 1; } // returns from tracked stats (they invoke this function if they are being tracked)
+    void numbers(); // reports on already gathered stat count for definitions/-words numbers
 
     // printing stats
     void report();          // report on all statistics.

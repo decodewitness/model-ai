@@ -80,6 +80,7 @@
 // #include "system/modules/simulation/sim.h"	// simulation
 #include "system/logic/account/account.cpp"
 #include "system/logic/analysis/limits.cpp"
+#include "system/modules/status/status.cpp"
 //#include "system/logic/analysis/statx.cpp"	// valid functions already defined in modular_bay.h
 #include "system/modules/simulation/sim.cpp"	// simulation
 #include "system/modules/combine/combine.cpp"
@@ -143,6 +144,7 @@ private:
 	bool smpl;
 	bool brn;
 	bool trans;
+	bool status;
 
 	// prepared
 	bool transponderIsPrepped;
@@ -171,6 +173,7 @@ private:
 	Transponder *transponder;
 	Track_Account *account;
 	Simulation *simulation;
+	Status *status;
 
 	// data pipelines
 	Data *dd;
