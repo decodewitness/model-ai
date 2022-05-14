@@ -772,6 +772,16 @@ Today's Progress: Added more logic to the AI_Matrix class. Added functions for s
 Thoughts:
 I need to fix the AI_Matrix functions to process autonomic data. Need to accumulate the nano seconds for all the simulation run cycles. Need to fix reading nref sequences from the references text file. Need to fix the synonyms. Need to add indexing of references (nrefs). I still need to test the added methods and such, and then I need to draw logic from there, based also on interpretation, meaning, and synonyms. Then next seek any relations and give a Transponder query back. Then develop a method to train the model, and train it to have a fully fledged Ai based of language input/output.
 
+
+### Saturday 14 May, 2022
+##### (Working on Model-Ai, an artificial intelligence project)
+Today's Progress: Fixed the error about the "Status" class and "status" variable, which prevented the model from compiling. Tidied up the output a bit, regarding the Status class output.
+
+Thoughts:
+First I had to fix the virtual machine, because it didn't want to update after a fresh installation; the solution was waiting for 2 days.
+
+I still need to fix the AI_Matrix functions to process autonomic data. Need to accumulate the nano seconds for all the simulation run cycles. Need to fix reading nref sequences from the references text file. Need to fix the synonyms. Need to add indexing of references (nrefs). I still need to test the added methods and such, and then I need to draw logic from there, based also on interpretation, meaning, and synonyms. Then next seek any relations and give a Transponder query back. Then develop a method to train the model, and train it to have a fully fledged Ai based of language input/output.
+
   
   
 // eof

@@ -6,20 +6,22 @@
 void prt_statline1() {
     std::cout << std::endl;
     std::cout << "~:: status - status report :" << std::endl;
-    std::cout << "    ----------------------" << std::endl;
+    std::cout << "   --------" << std::endl;
 };
 
 void prt_statline2() {
-    std::cout << "~:: ---------------------- :: ~" << std::endl;
     std::cout << std::endl;
+    std::cout << "~:: ---------------------- :: ~" << std::endl;
 };
 
 // Status functions
 void Status::init() {   // initializes Status object
     std::cout << std::endl;
-    std::cout << "~:: Status init." << std::endl;
+    std::cout << "~:: Status::init() :" << std::endl;
 
     std::cout << "\t~:: stats_is_active (true)" << std::endl;
+    std::cout << std::endl;
+
     stats_is_active = true;
 
     this->reported_stats = 0;
@@ -75,8 +77,8 @@ int Status::count_words_in_definitions() {  // counts nr of words inside definit
     // open file
     fil.open(file_with_definitions);
 
-    std::cout << std::endl;
-    std::cout << "~:: count_words_in_definitions() :" << std::endl;
+    // std::cout << std::endl;
+    std::cout << "\t~:: count_words_in_definitions() :" << std::endl;
 
     // loop over file
     while (getline(fil, ln)) {
@@ -111,8 +113,8 @@ int Status::count_words_in_definitions() {  // counts nr of words inside definit
         }
     }
 
-    std::cout << std::endl;
-    std::cout << "\t~:: words in definitions : ( " << count << " )" << std::endl;
+    // std::cout << std::endl;
+    std::cout << "\t\t~:: words in definitions : ( " << count << " )" << std::endl;
 
     // close file
     fil.close();
@@ -137,9 +139,9 @@ int Status::count_definitions() {   // counts the nr of definitions.
     // open files
     def.open(file_with_definitions);
 
-    std::cout << std::endl;
-    std::cout << "\t~:: Status::count_words() :" << std::endl;
-    std::cout << "\t\t~:: counting number of definitions inside catalogue." << std::endl;
+    // std::cout << std::endl;
+    std::cout << "~:: Status::count_definitions() :" << std::endl;
+    std::cout << "\t~:: counting number of definitions inside catalogue / reference." << std::endl;
     
     // enumerate dbase with definitions
         // count lines in def (file_with_definitions)
@@ -170,8 +172,8 @@ int Status::count_definitions() {   // counts the nr of definitions.
         std::cout << std::endl;
     }
     
-    std::cout << "\t\t\t~:: updated (count) in relations (# = " << count << ")" << std::endl;
-
+    // std::cout << "\t\t~:: updated (count) in relations (# = " << count << ")" << std::endl;
+    std::cout << "\t\t~:: updated (count) in relations." << std::endl;
     // report this stat enhancement
     this->reporting();
 
@@ -181,28 +183,29 @@ return count;
 void Status::status_report() {  // reports on session / stats numbers.
     int x=0;
     
-    prt_statline1();    // prints "status report" line
-    std::cout << " -= SESSION =-" << std::endl;
-    std::cout << "   ---------" << std::endl;
+    // prt_statline1();    // prints "status report" line
+
+    // std::cout << " -= SESSION =-" << std::endl;
+    // std::cout << "   ---------" << std::endl;
 
     x = this->accumulate_status_report();
 
     switch (x) {
         case 0:
-            std::cout << "- zero logic." << std::endl;
+            std::cout << "\t\t- zero logic." << std::endl;
             break;
 
         case 1:
-            std::cout << "- definitions : " << this->definitions_nr << std::endl;
+            std::cout << "\t\t- definitions : " << this->definitions_nr << std::endl;
             break;
 
         case 2:
-            std::cout << "- words (total): " << this->words_nr << std::endl;
+            std::cout << "\t\t- words (total): " << this->words_nr << std::endl;
             break;
 
         case 3:
-            std::cout << "- definitions : " << this->definitions_nr << std::endl;
-            std::cout << "- words (total) : " << this->words_nr << std::endl;
+            std::cout << "\t\t- definitions : " << this->definitions_nr << std::endl;
+            std::cout << "\t\t- words (total) : " << this->words_nr << std::endl;
             break;
 
         default:
@@ -255,14 +258,14 @@ int Status::accumulate_status_report() {    // generates report for status (sess
     // calculate average
         // also report this stat enhancement
     if (avg != 0) {
-        std::cout << "(average) : " << avg << " number of words per definition." << std::endl;
+        std::cout << "\t~:: (average) : " << avg << " number of words per definition." << std::endl;
         
         // report this stat enhancement
         this->reporting();
     }
 
     sleep(1);
-    std::cout << std::endl;
+    // std::cout << std::endl;
 
 return x;
 };

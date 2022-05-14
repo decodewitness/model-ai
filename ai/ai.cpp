@@ -776,8 +776,17 @@ void AI::init() {		// INITIALIZATION
 	std::cout << x << ")" << std::endl;
 
 	// count references
-	std::cout << "\t-:: counting references." << std::endl;
+	std::cout << std::endl;
+	std::cout << "-:: counting references." << std::endl;
 	this->rNr = return_last_ref_nr();
+
+	// status
+	std::cout << "-:: initializing status reports." << std::endl;
+	this->status = new Status;
+	this->statis = true;
+	// this->status->count();	// alreadt happens in Status::init().
+
+	sleep(3);
 };
 
 void AI::appliance() {	// starts the "virtual" script

@@ -144,7 +144,7 @@ private:
 	bool smpl;	// used for Sampler
 	bool brn;	// used for Brain
 	bool trans;	// used for Transponder
-	bool statx;	// used for Status
+	bool statis;	// used for Status
 
 	// prepared
 	bool transponderIsPrepped;

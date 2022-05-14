@@ -35,13 +35,16 @@ public:
     // counter functions
     int count_words_in_definitions();  // counts the number of words inside "file_with_definitions".
     int count_definitions();    // counts the number of definitions.
-    
+
+    // efficiency
+    void count() { int x = this->count_definitions(); int y = this->count_words_in_definitions(); }  // does both the counter functions.
+
     // reporting
     int ret_def_count();    // returns this->definitions_nr.
     int ret_word_count();   // returns "this->words".
     int accumulate_status_report(); // gathers session status info.
-    void reporting() { this->reported_stats += 1; } // returns from tracked stats (they invoke this function if they are being tracked)
     void numbers(); // reports on already gathered stat count for definitions/-words numbers
+    void reporting() { this->reported_stats += 1; } // returns from tracked stats (they invoke this function if they are being tracked)
 
     // printing stats
     void report();          // report on all statistics.
