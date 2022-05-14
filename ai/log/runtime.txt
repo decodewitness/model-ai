@@ -1460,16 +1460,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffdbd22a8b0)
-	- stacking header:(1)::<address>(0x7ffdbd22a8d0)
-	- stacking header:(2)::<address>(0x7ffdbd22a8f0)
-	- stacking header:(3)::<address>(0x7ffdbd22a910)
-	- stacking header:(4)::<address>(0x7ffdbd22a930)
-	- stacking header:(5)::<address>(0x7ffdbd22a950)
-	- stacking header:(6)::<address>(0x7ffdbd22a970)
-	- stacking header:(7)::<address>(0x7ffdbd22a990)
-	- stacking header:(8)::<address>(0x7ffdbd22a9b0)
-	- stacking header:(9)::<address>(0x7ffdbd22a9d0)
+	- stacking header:(0)::<address>(0x7ffd731b0ea0)
+	- stacking header:(1)::<address>(0x7ffd731b0ec0)
+	- stacking header:(2)::<address>(0x7ffd731b0ee0)
+	- stacking header:(3)::<address>(0x7ffd731b0f00)
+	- stacking header:(4)::<address>(0x7ffd731b0f20)
+	- stacking header:(5)::<address>(0x7ffd731b0f40)
+	- stacking header:(6)::<address>(0x7ffd731b0f60)
+	- stacking header:(7)::<address>(0x7ffd731b0f80)
+	- stacking header:(8)::<address>(0x7ffd731b0fa0)
+	- stacking header:(9)::<address>(0x7ffd731b0fc0)
 
 
 -:: checking AI functions.
@@ -1509,22 +1509,22 @@ regular file:
 		~:: glob() in directory: (bay):
 
 ~:: stats() function:
-regular file: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-regular file: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./downloads
+file or directory: -- ./downloads
 
 
 ~:: running (10) queries.
@@ -1533,3 +1533,824 @@ regular file: -- ./downloads
 
 punch.
 --?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	model-ai
+	[ simple x computation: type:[char]: len:8 vowels:3 consonants:4 special:1 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "model-ai".
+	- HMAC string :: *string_next_logic() ::  (model-ai) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : model-ai
+	search2 : model-ai
+
+~:: collusion().
+
+~:: collusion().
+	line1 :     model-Ai. could we fashion this arithmetic sequence?   + 8
+	line2 :     MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]  {}
+
+sorter():
+{ ai/system/logic/transponder/brain/data/model-ai.dat }
+- opening: ai/system/logic/transponder/brain/data/model-ai.dat.
+	- unable to open : ai/system/logic/transponder/brain/data/model-ai.dat
+
+sorted: ai/system/logic/transponder/brain/data/model-ai.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+TMP: model-ai
+~:: found index [model-ai].
+:::_]{ (model-ai - artificial intelligence.)
+
+~:: collusion().
+(!) omitted empty line.
+:::_]{ (eof)
+
+~:: collusion().
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/system/logic/transponder/brain/data/model-ai.dat
+~:: resonate_index::match found on line: (8).
+~:: done.
+
+b_string:
+!~ model-ai - artificial intelligence. eof
+	~:: query matches search string: "model-ai".
+
+-* model-ai is:
+    model-Ai. could we fashion this arithmetic sequence?   + 8
+
+    MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]  {}
+
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
+
+~:: prepTransponder() : (model-ai)
+~:: transponder -> prep()
+
+~:: set subject to: "model-ai".
+(debug) word :: model-ai
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "model-ai".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (0).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) model-ai :: #-1
+
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequences:
+		- -1
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("-1,")
+~:::~
+
+~:: reverse meta query lookup: 
+(skipped unregistered entry)
+
+(EOT)
+
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (model-ai)
+~:: transponder -> prep()
+
+~:: set subject to: "model-ai".
+(debug) word :: model-ai
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "model-ai".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (0).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) model-ai :: #-1
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("-1,")
+~:::~
+
+~:: reverse meta query lookup: 
+(skipped unregistered entry)
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 8
+		* vowels: 4
+		* consonants: 3
+		* numbers: 0
+		* special chars: 1
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+- found: model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : ~:: score(1) got rated.
+1,transponder has query.
+(debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	model-ai
+
+
+~:: scored() : (model-ai)
+
+	~:: pushing back ---> model-ai
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 1
+biggest : 1
+
+
+labelled biggest faculty : 1
+
+
+----- ----- -----
+(debug) result : 1,transponder has query.
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 1,transponder has query.
+	~:: store_relations().
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
+~:: --- synonyms() ---:
+
+~:: singleMeta() lookup.
+
+	~:: pushing back query : 
+	~:: storing nref.
+
+~:: store_nrefs() :
+	~:: stored nrefs.
+
++query :: (model-ai)
+[RESPONSE] : 
+~:: readref() :
+::     model-Ai. could we fashion this arithmetic sequence?   + 8
+::     MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]  {}
+:: model-ai - artificial intelligence.
+:: eof
+
+
+(EOT)
+
+~:: running (9) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	i have a question for you
+	[ simple x computation: type:[char]: len:25 vowels:14 consonants:11 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "i have a question for you".
+	- HMAC string :: *string_next_logic() ::  (i have a question for you) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (i have a question for you)
+~:: transponder -> prep()
+
+~:: set subject to: "i have a question for you".
+(debug) word :: i
+(debug) word :: have
+(debug) word :: a
+(debug) word :: question
+(debug) word :: for
+(debug) word :: you
+
+~:: (debug)::nrOfWords = 6.
+~:: (debug)::counter = 6.
+
+(debug) calling prepare_ints() (from) -> "i have a question for you".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (6).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) i :: #14
+(debug) 1) have :: #26
+(debug) 2) a :: #5
+(debug) 3) question :: #592
+(debug) 4) for :: #7
+(debug) 5) you :: #15
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("14,26,5,592,7,15,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- i		 --> *(a+i) = 14 - *(a+i) - 1 = 13
+	- have		 --> *(a+i) = 26 - *(a+i) - 1 = 25
+	- a		 --> *(a+i) = 5 - *(a+i) - 1 = 4
+	- question		 --> *(a+i) = 592 - *(a+i) - 1 = 591
+	- for		 --> *(a+i) = 7 - *(a+i) - 1 = 6
+	- you		 --> *(a+i) = 15 - *(a+i) - 1 = 14
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 6
+		* length: 25
+		* vowels: 11
+		* consonants: 9
+		* numbers: 0
+		* special chars: 5
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : ~:: score(1) got rated.
+1,transponder has query.
+(debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : (debug) : 
+	-1
+	i have a question for you
+
+
+~:: scored() : (i have a question for you)
+
+	~:: pushing back ---> i
+	~:: pushing back ---> have
+	~:: pushing back ---> a
+	~:: pushing back ---> question
+	~:: pushing back ---> for
+	~:: pushing back ---> you
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 1
+biggest : 1
+
+
+labelled biggest faculty : 1
+
+
+----- ----- -----
+(debug) result : 1,transponder has query.
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 1,transponder has query.
+	~:: store_relations().
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
+~:: --- synonyms() ---:
+
+~:: singleMeta() lookup.
+	~:: meta query : (14)
+
+~:: singleMeta() lookup.
+	~:: meta query : (26)
+
+~:: singleMeta() lookup.
+	~:: meta query : (5)
+
+~:: singleMeta() lookup.
+	~:: meta query : (592)
+
+~:: singleMeta() lookup.
+	~:: meta query : (7)
+
+~:: singleMeta() lookup.
+	~:: meta query : (15)
+
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: pushing back query : 
+	~:: storing nref.
+
+~:: store_nrefs() :
+	~:: stored nrefs.
+
++query :: (i have a question for you)
+[RESPONSE] : 1,transponder has query.
+
+~:: readref() :
+::     model-Ai. could we fashion this arithmetic sequence?   + 8
+::     MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]  {}
+:: model-ai - artificial intelligence.
+:: eof
+
+
+(EOT)
+
+~:: running (8) queries.
+
+::- type your query -::
+
+punch.

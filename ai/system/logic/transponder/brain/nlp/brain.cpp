@@ -477,6 +477,9 @@ std::string Brain::search_index_code(std::string l) {
 }
 
 std::string Brain::search(std::string logic, int n) { // search cabinet    // n is default 1   // n is resonate index
+    // function prototypes
+    void collusion(std::string& ref);
+
     // has access cabinet
     this->file_access(0);
 
@@ -563,6 +566,19 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                 std::getline(access, line1);
                 std::getline(data, line2);
 
+
+
+
+                // SET THESE VALUES FOR TRANSPONDER CLASS
+
+
+                if (line1.length() > 1) {
+                    collusion(line1);
+                }
+                if (line2.length() > 1) {
+                    collusion(line2);
+                }
+
                 std::cout << "\tline1 : " << line1 << std::endl;
                 std::cout << "\tline2 : " << line2 << std::endl;
                 
@@ -611,6 +627,9 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                                 b_string.append(i_string);
                                 b_string.append(" ");
                                 // b_string.append(". ");
+
+                                // RETURN REFERENCE
+                                collusion(i_string);
                             } else {
                                 std::cout << "(!) omitted empty line." << std::endl;
                             }

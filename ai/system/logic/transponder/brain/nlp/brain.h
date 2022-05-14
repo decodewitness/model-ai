@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <vector>
 
+#include "func.h"
+
 using namespace std;
 
 // ints
@@ -95,3 +97,5 @@ public:
     // signal
     void done_with_query(); // creates done sequence in array done[]
 };
+
+// eof

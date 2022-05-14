@@ -9,14 +9,39 @@ extern std::string aquestion;
 Transponder::Transponder() {
     std::cout << std::endl << "~:: transponder queries." << std::endl;
     sleep(1);
+    
     this->init();
-    this->points = 0;
-    this->default_response = "can't relate to query.";
-    this->capsize= false;
+};
+
+// clean attributes properties
+void Transponder::clear_property() {
+    // individuals && properties
+    this->query_relating_to_self = false;    // used when the person typing the query is referring to self "I, me, myself, we".
+    this->query_relating_to_other = false;    // used when the person is referring to "him, them, they".
+    this->query_relating_to_her = false;
+    this->query_relating_to_it = false;
+    this->query_relating_to_property = false;    // used when the person is referring to "mine, my, our, their".
+    this->query_relating_to_model = false;   // used when the person typing the query is referring to "you",
+    this->query_relating_to_property_model = false; // used when relating to model-ai's property or attributes.
+    this->query_relating_to_her_property = false;
+
+    // manual overrides
+    hasAResult = false;
+    hasBResult = false;
+    hasCResult = false;
+    hasDResult = false;
+    hasEResult = false;
 };
 
 void Transponder::init() {
     std::cout << std::endl << "\t~:: transponder->init()." << std::endl;
+
+    // initialize default settings for booleans, vars and strings
+    this->capsize = false;
+    this->override = false;
+    
+    this->points = 0;
+    this->default_response = "can't relate to query.";
 
     if (this->scores.is_open() == false) {
         this->scores.open(weights);
@@ -35,6 +60,9 @@ void Transponder::init() {
             std::cout << std::endl << "~:!:~ (error): opening \"" << synonym <<"\"." << std::endl;
         }        
     }
+
+    // set all the properties here
+    this->clear_property();
 };
 
 void Transponder::decouple() {
@@ -49,6 +77,9 @@ void Transponder::decouple() {
         this->syno.close();
         std::cout << "\t~:: closed \"" << synonym << "\" transponder file access." << std::endl;
     }
+
+    // clear all properties
+    this->clear_property();
 };
 
 void Transponder::prepTr(std::string s) { // preparation of Transponder object
@@ -117,6 +148,9 @@ std::string Transponder::respond(bool b) {
 };
 
 void Transponder::analytics(std::string s) {    // function that performs the analytics
+    
+    this->construed.clear();
+
     // metas
     int meta;
 
@@ -136,14 +170,21 @@ void Transponder::analytics(std::string s) {    // function that performs the an
 
     // strings
     std::string query;
-
     std::string syn_res;
+    std::string product = "";    // used to store altered queries in the nref sequences
     // std::string syn_res1;
     // std::string syn_res2;
 
     // length for analytics
     int len = s.length();   // length of string
     
+    // reset all property leashes on "you, me, etc."
+        // set all the properties to false here
+    this->clear_property();
+
+    // NEED TO CHECK HERE IF SOME "clear_property()" LEASES STILL APPLY ON PROPERTIES OR CONVERSATION, AND BACK PROPAGATE.
+
+
     // debugging output
     std::cout << "\t~:: (DEBUG) performing analytics() in {transponder}." << std::endl;
 
@@ -273,12 +314,12 @@ void Transponder::analytics(std::string s) {    // function that performs the an
 
     
     
-    //syn_res1 = synonyms(this->response);
+    // syn_res1 = synonyms(this->response);
     // syn_res2 = synonyms(this->result);
 
 
 
-    sleep(1);
+    // sleep(1);
     
     // answer the question
     std::cout << std::endl << "~:: transponder -> answer()" << std::endl;
@@ -341,10 +382,23 @@ void Transponder::analytics(std::string s) {    // function that performs the an
             this->vec.push_back(meta);
         }
 
+        // STORING nref sequences
+
         // handle storing of the meta queries in "vec"
         nref xl;
         xl.nr = "1000";
-        xl.rel1 = this->result;
+
+        if (this->overriden == true) {
+            for (auto &str : this->construed) {
+                product.append(str);
+                product.append(" ");
+            }
+            product.pop_back();
+            xl.rel1 = product;
+        } else {
+            xl.rel1 = this->result; // default
+        }
+
         xl.description = this->subject;
         std::cout << std::endl;
         
@@ -362,8 +416,19 @@ void Transponder::analytics(std::string s) {    // function that performs the an
         std::cout << std::endl;
         std::cout << "+query :: (" << this->subject << ")" << std::endl;
         // std::cout << "[RESPONSE] : " << ((queryAssigned) ? query : "-query was not assigned-") << std::endl; // query was just made here above
-        std::cout << "[RESPONSE] : " << this->result << std::endl;
-        sleep(3);
+        
+        if (this->overriden == false) { // overriden INSTANCE WILL GENERATE RESPONSES ON THE FLY...
+            std::cout << "[RESPONSE] : " << this->result << std::endl;
+        } else {
+            std::cout << "[RESPONSE] : ";
+            for (int i=0; i<construed.size(); i++) {
+                std::cout << construed.at(i) << " ";
+            }           
+            std::cout << "\b";  // backspace
+            this->overriden = false;
+            this->construed.clear();    // empty construed
+        }
+        // sleep(3);
 
         // reset points
         this->points = 0;   // this keeps track of the highest score for results
@@ -372,11 +437,23 @@ void Transponder::analytics(std::string s) {    // function that performs the an
         // clear vector with metas
         this->vec.clear();
     } else {
-        // secondary output // DEFAULT RESPONSE // Not used in the most cases
-        std::cout << std::endl;
-        std::cout << "+query :: (" << this->subject << ")" << std::endl;
-        std::cout << "[RESPONSE] : " << this->default_response << std::endl;
-        sleep(3);
+        if (this->overriden == true) { // overriden INSTANCE WILL GENERATE RESPONSES ON THE FLY...
+            std::cout << "[RESPONSE] : ";
+            for (int i=0; i<construed.size(); i++) {
+                std::cout << construed.at(i) << " ";
+            }           
+            std::cout << "\b";  // backspace
+            this->overriden = false;
+            this->construed.clear();    // empty construed
+
+            sleep(3);
+        } else {
+            // secondary output // DEFAULT RESPONSE // Not used in the most cases
+            std::cout << std::endl;
+            std::cout << "+query :: (" << this->subject << ")" << std::endl;
+            std::cout << "[RESPONSE] : " << this->default_response << std::endl;
+            sleep(3);
+        }
     }
     // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
     std::cout << std::endl;
@@ -622,12 +699,16 @@ int Transponder::scored(std::string q, std::string tq) {
     std::vector<std::string> result;
     int score=0;
 
+    // ADDING TO MODEL
+    std::string model;
+    // std::vector<std::string> construed;
+
     // stringstream s_stream(a); //create string stream from the string
     // char delimeter = ' ';
     // size_t pos = 0;
 
     std::cout << std::endl;
-    std::cout << "~:: scored() : " << std::endl;
+    std::cout << "~:: scored() : (" << q << ")" << std::endl;
 
     // this->scores.open(weights);
 
@@ -663,27 +744,116 @@ int Transponder::scored(std::string q, std::string tq) {
         std::cout << "~:!:~ (error) -> file: \"" << weights << "\" is not available." << std::endl;
     }
 
-    for (const auto &str : words) {
-        std::cout << "\t- " << str; // prints the query words one by one
-        std::cout << "\t~:: matching occurences." << std::endl;
+    // // output
+    // std::cout << std::endl;
+    // std::cout << "(LOGIC):" << std::endl;
+    // std::cout << std::endl;
+
+    // // COMPARISONS
+    // for (int i=0; i<words.size(); i++) {
+    //     std::string &str = words.at(i);
+
+    //     // queries relating to individual/self
+    //     if (str.compare("i") == 0 || str.compare("me") == 0 || str.compare("myself") == 0) {
+    //         //std::cout << "\t- *(you)*" << std::endl;
+    //         std::cout << std::endl;
+
+    //         this->override = true;  // override this function
+    //         this->query_relating_to_self = true;
+    //         model = "*(you)*";
+    //     } else if (str.compare("him") == 0 || str.compare("her") == 0 || str.compare("they") == 0 || str.compare("them") == 0) {
+    //         // queries relating to others
+
+    //         std::cout << "\t- *(they)*" << std::endl;   // need to narrow down this conversion to include: her, he, they...
+    //         std::cout << std::endl;
+    //         this->query_relating_to_other = true;
+    //         continue;
+    //     } else if (str.compare("hers") == 0) {
+    //     // queries relating to "her" property (hers)
+    //         std::cout << "\t- *(her)*" << std::endl;
+    //         std::cout << std::endl;
+    //         this->query_relating_to_her_property = true;
+    //         continue;
+    //     } else if (!query_relating_to_her_property && str.compare("her") == 0) {   // ALSO DOUBLE CHECK
+    //         // queries relating to "her" specific
+                    
+    //         std::cout << "\t- *(her)*" << std::endl;
+    //         std::cout << std::endl;
+    //         this->query_relating_to_her = true;
+    //         continue;
+    //     } else if (str.compare("it") == 0) {   // need to doublecheck if it=is or it=has
+    //         // queries relating to it
+
+    //         std::cout << "\t- *(it)*" << std::endl;
+    //         std::cout << std::endl;
+    //         this->query_relating_to_it = true;
+    //         continue;
+    //     } else if (str.compare("my") == 0 || str.compare("mine") == 0 || str.compare("our") == 0) {
+    //         // queries owning properties
+            
+    //         std::cout << "\t- *(your)*" << std::endl;
+    //         std::cout << std::endl;
+    //         this->query_relating_to_property = true;
+    //         continue;
+    //     } else if (str.compare("you") == 0) {
+    //         // queries relating to model-ai
+
+    //         //std::cout << "\t- *(me)*" << std::endl;
+    //         std::cout << std::endl;
+    //         this->override = true;  // override this function
+    //         this->query_relating_to_model = true;
+    //         model = "*(me)*";
+    //     } else if (str.compare("your") == 0 || str.compare("yours") == 0) { // double-check if they didn't mean "you're"
+    //         // queries relating to model-ai / properties / attributes
+
+    //         this->query_relating_to_property_model = true;
+    //         std::cout << "\t- *(my)*" << std::endl;
+    //         std::cout << std::endl;
+    //         continue;
+    //     } else if (str.compare("his") == 0 || str.compare("their") == 0 || str.compare("hers") == 0) {
+    //     // if (str.compare("his") == 0 || str.compare("her") == 0 || str.compare("they") == 0 || str.compare("them") == 0) {
+
+    //         // queries relating to property
+
+    //         this->query_relating_to_property = true;
+    //         std::cout << "\t- *(their)*" << std::endl;   // need to narrow down this conversion to include: her, he, they...
+    //         std::cout << std::endl;
+    //         continue;
+    //     }
+    
+    //     if (this->override == true) {
+    //         std::cout << "\t- " << model << std::endl; // prints the query words one by one from the original query
+    //         std::cout << "\t\t~:: matching occurences." << std::endl;
+    //         std::cout << std::endl;
+
+    //         this->construed.push_back(model);    // append model
+    //         this->override = false; // reset override (really redundant after the 1st time of setting to false)
+    //         this->overriden = true; // indicates construed <vector> should contain altered occasions.
+    //     } else {
+    //         std::cout << "\t- " << str << std::endl; // prints the query words one by one from the original query
+    //         std::cout << "\t\t~:: matching occurences." << std::endl;
+
+    //         this->construed.push_back(str);
         
-        // conversation.push_back(str);  // should work
-        // std::cout << "->>> pushed back ->>> " << str << std::endl;
+            // conversation.push_back(str);  // should work
+            // std::cout << "->>> pushed back ->>> " << str << std::endl;
 
-        // Get the first occurrence
-        std::cout << std::endl;
-        size_t pos = tq.find(str);
-        // Repeat till end is reached
+            // Get the first occurrence
+            std::cout << std::endl;
+            size_t pos = tq.find(str);
+            // Repeat till end is reached
 
-        while( pos != std::string::npos) {
-            // Add position to the vector
-            vec.push_back(pos);
-            // Get the next occurrence from the current position
-            pos = q.find(tq, pos + tq.size());
-        }
-    }
+            while( pos != std::string::npos) {
+                // Add position to the vector
+                vec.push_back(pos);
+                // Get the next occurrence from the current position
+                pos = q.find(tq, pos + tq.size());
+            }
+        // }
+    // }
 
-    std::cout << std::endl << "incremental size function : " << vec.size() << std::endl;
+    std::cout << std::endl << "~:: incremental size function : " << vec.size() << std::endl;
+
     score = vec.size();
     vec.clear();
 
@@ -1286,6 +1456,117 @@ void Transponder::cappedsize() {
     std::cout << "\t~:: done." << std::endl;
     std::cout << std::endl;
 };
+
+std::string Transponder::transcode(std::string s) {
+
+    // strings
+    std::string w;
+    std::string model;
+
+    // string streams
+    std::istringstream iss{s};
+
+    // vectors
+    std::vector<std::string> words;
+
+    while (iss >> w) {
+        words.push_back(w);
+    }
+
+    // for (auto &str : words)
+
+    // output
+    std::cout << std::endl;
+    std::cout << "~:: transcode() : {LOGIC} :" << std::endl;
+    std::cout << std::endl;
+
+    // COMPARISONS
+    // for (int i=0; i<words.size(); i++) {
+        // std::string &str = words.at(i);
+    for (auto &str : words) {
+        // queries relating to individual/self
+        if (str.compare("i") == 0 || str.compare("me") == 0 || str.compare("myself") == 0) {
+            //std::cout << "\t- *(you)*" << std::endl;
+            std::cout << std::endl;
+
+            this->override = true;  // override this function
+            this->query_relating_to_self = true;
+            model = "*(you)*";
+        } else if (str.compare("him") == 0 || str.compare("her") || str.compare("they") == 0 || str.compare("them") == 0) {
+            // queries relating to others
+
+            std::cout << "\t- *(they)*" << std::endl;   // need to narrow down this conversion to include: her, he, they...
+            std::cout << std::endl;
+            this->query_relating_to_other = true;
+        } else if (str.compare("hers") == 0) {
+        // queries relating to "her" property (hers)
+            std::cout << "\t- *(her)*" << std::endl;
+            std::cout << std::endl;
+            this->query_relating_to_her_property = true;
+        } else if (!query_relating_to_her_property && str.compare("her") == 0) {   // ALSO DOUBLE CHECK
+            // queries relating to "her" specific
+                    
+            std::cout << "\t- *(her)*" << std::endl;
+            std::cout << std::endl;
+            this->query_relating_to_her = true;
+        } else if (str.compare("it") == 0) {   // need to doublecheck if it=is or it=has
+            // queries relating to it
+
+            std::cout << "\t- *(it)*" << std::endl;
+            std::cout << std::endl;
+            this->query_relating_to_it = true;
+        } else if (str.compare("my") == 0 || str.compare("mine") == 0 || str.compare("our") == 0) {
+            // queries owning properties
+            
+            std::cout << "\t- *(your)*" << std::endl;
+            std::cout << std::endl;
+            this->query_relating_to_property = true;
+        } else if (str.compare("you") == 0) {
+            // queries relating to model-ai
+
+            //std::cout << "\t- *(me)*" << std::endl;
+            std::cout << std::endl;
+            this->override = true;  // override this function
+            this->query_relating_to_model = true;
+            model = "*(me)*";
+        } else if (str.compare("your") == 0 || str.compare("yours") == 0) { // double-check if they didn't mean "you're"
+            // queries relating to model-ai / properties / attributes
+
+            this->query_relating_to_property_model = true;
+            std::cout << "\t- *(my)*" << std::endl;
+            std::cout << std::endl;
+        } else if (str.compare("his") == 0 || str.compare("their") == 0 || str.compare("hers") == 0) {
+        // if (str.compare("his") == 0 || str.compare("her") == 0 || str.compare("they") == 0 || str.compare("them") == 0) {
+
+            // queries relating to property
+
+            this->query_relating_to_property = true;
+            std::cout << "\t- *(their)*" << std::endl;   // need to narrow down this conversion to include: her, he, they...
+            std::cout << std::endl;
+        }
+    
+        if (this->override == true) {
+            std::cout << "\t- " << model << std::endl; // prints the query words one by one from the original query
+            std::cout << "\t\t~:: matching occurences." << std::endl;
+            std::cout << std::endl;
+
+            this->construed.push_back(model);    // append model
+            this->override = false; // reset override (really redundant after the 1st time of setting to false)
+            this->overriden = true; // indicates construed <vector> should contain altered occasions.
+        } else {
+            std::cout << "\t- " << str << std::endl; // prints the query words one by one from the original query
+            std::cout << "\t\t~:: matching occurences." << std::endl;
+
+            this->construed.push_back(str);
+        }
+    }
+
+    if (this->overriden == true) {
+        return "-overriden-";
+    }
+
+return "-returning from transponder queries-";
+}
     // // variables
     // int nr_of_synonyms; // the number of actual synonyms for term
     // // bools

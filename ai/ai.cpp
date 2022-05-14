@@ -786,7 +786,7 @@ void AI::init() {		// INITIALIZATION
 	this->statis = true;
 	// this->status->count();	// alreadt happens in Status::init().
 
-	sleep(3);
+	// sleep(3);
 };
 
 void AI::appliance() {	// starts the "virtual" script
@@ -838,7 +838,12 @@ void AI::tsp(std::string s) {	// transponder function
 	// sleep(2);
 	// this->transponder->prep(this->transponder->retVal());	// retVal() returns "initial_sentence" from "Transponder"
 
-	this->transponder->respond(true);
+
+	// TALKING
+
+	this->transponder->respond(true);	// responds from transponder
+	readref();	// gives answers from internal catalogue
+	sleep(3);
 
 	// answer query
 	// std::cout << std::endl << "~:: transponder -> answer()" << std::endl;

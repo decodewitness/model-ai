@@ -44,6 +44,7 @@
 #include "system/logic/math/math.h"
 
 // headers and modules
+// #include "func.h"
 #include "al/al.cpp"
 //#include "brain/nn.h"
 #include "system/chk.h"

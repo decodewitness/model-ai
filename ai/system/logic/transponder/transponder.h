@@ -52,11 +52,32 @@ private:
     // booleans
     bool analytical;    // whether to use "analytics" function
     bool capsize;  // if true then put a newline character before and after every log entry for the logQueries() && the qlog() functions
+    
+    // overrides
+    bool override;  // override response.
+    bool overriden; // if this is true then the model overriden a sentence  ;; applied to construed <vector>
+
+    // manual overrides
+    bool hasAResult;
+    bool hasBResult;
+    bool hasCResult;
+    bool hasDResult;
+    bool hasEResult;
 
     // analytical
     bool fitting; // used in case the answer is fitting else resets bool and is checked in the query
     bool notAlwaysFitting;  // used when not always fitting answer
     bool alwaysFitting;  // used when applies in every answer context
+    
+    // individuals & relations to property
+    bool query_relating_to_model;   // used when the person typing the query is referring to "you",
+    bool query_relating_to_self;    // used when the person typing the query is referring to self "I, me, myself, we".
+    bool query_relating_to_other;    // used when the person is referring to "him, her, them, they".
+    bool query_relating_to_it;  // used when referred to "it".
+    bool query_relating_to_her;    // used when referring to "her".
+    bool query_relating_to_her_property;   // used in conjunction with "hers".  // needs further checks in place.
+    bool query_relating_to_property;    // used when the person is referring to "mine, my, our, their".
+    bool query_relating_to_property_model;  // used when relating to model-ai's property or attributes.
 
     // strings
     std::string initial_sentence;   // logic comparts from here
@@ -70,6 +91,7 @@ private:
     vector<std::string> backlog_answers;    // backlog of answers of conversation
     vector<std::string> relations;
     vector<std::string> oursyns;
+    vector<std::string> construed; // used to assemble a sentence with altered words.
 
     // used for meta queries
     vector<int> vec;
@@ -101,6 +123,8 @@ public:
     void setSubject(std::string s);
     int scored(std::string q, std::string tq);
     std::string synonyms(std::string q);
+    void clear_property();  // cleans the relations indicating if there is a relation between: "you, him, her, their, etc.".
+    std::string transcode(std::string s);   // returns processed output for the [RESPONSE].
 
     // analytical functions and preparation functions
     void prep(std::string s); // preps "ints"   //  needs "this->initial_sentence" or "this->subject"
@@ -113,7 +137,7 @@ public:
     void export_backlog(int n);    // n=0 (backlog_queries); n=1 (backlog_answers); n=2 (both)
     void cappedsize();  // toggles "capsize" boolean to put a newline char before and after log queries in Transponder::logQueries() and AI::qlog() functions
 
-    // relations
+    // relations (object)
     void store_relations();
     void flush_relations();
 

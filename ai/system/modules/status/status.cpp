@@ -18,7 +18,6 @@ void prt_statline2() {
 void Status::init() {   // initializes Status object
     std::cout << std::endl;
     std::cout << "~:: Status::init() :" << std::endl;
-
     std::cout << "\t~:: stats_is_active (true)" << std::endl;
     std::cout << std::endl;
 
@@ -264,7 +263,7 @@ int Status::accumulate_status_report() {    // generates report for status (sess
         this->reporting();
     }
 
-    sleep(1);
+    // sleep(1);
     // std::cout << std::endl;
 
 return x;
