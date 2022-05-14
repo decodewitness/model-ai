@@ -43,7 +43,7 @@
 // math
 #include "system/logic/math/math.h"
 
-// headers
+// headers and modules
 #include "al/al.cpp"
 //#include "brain/nn.h"
 #include "system/chk.h"
@@ -137,14 +137,14 @@ private:
 	bool pytubeRan;	// external software is linked
 
 	// modules
-	bool ammod;
-	bool modul;
-	bool comb;
-	bool combm;
-	bool smpl;
-	bool brn;
-	bool trans;
-	bool status;
+	bool ammod;	// used for AMModule
+	bool modul;	// used for Modular
+	bool comb;	// used for Combine
+	bool combm;	// used for CombineModule
+	bool smpl;	// used for Sampler
+	bool brn;	// used for Brain
+	bool trans;	// used for Transponder
+	bool statx;	// used for Status
 
 	// prepared
 	bool transponderIsPrepped;

@@ -51,7 +51,7 @@ LOGGED OUTPUT OF THIS BETA:
 
 
 
-ARG: 110011
+ARG: 1101011
 
 ~:: how many queries to run? : 
 	** ][][ **
@@ -1495,16 +1495,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc7d367cb0)
-	- stacking header:(1)::<address>(0x7ffc7d367cd0)
-	- stacking header:(2)::<address>(0x7ffc7d367cf0)
-	- stacking header:(3)::<address>(0x7ffc7d367d10)
-	- stacking header:(4)::<address>(0x7ffc7d367d30)
-	- stacking header:(5)::<address>(0x7ffc7d367d50)
-	- stacking header:(6)::<address>(0x7ffc7d367d70)
-	- stacking header:(7)::<address>(0x7ffc7d367d90)
-	- stacking header:(8)::<address>(0x7ffc7d367db0)
-	- stacking header:(9)::<address>(0x7ffc7d367dd0)
+	- stacking header:(0)::<address>(0x7ffe1e8fd320)
+	- stacking header:(1)::<address>(0x7ffe1e8fd340)
+	- stacking header:(2)::<address>(0x7ffe1e8fd360)
+	- stacking header:(3)::<address>(0x7ffe1e8fd380)
+	- stacking header:(4)::<address>(0x7ffe1e8fd3a0)
+	- stacking header:(5)::<address>(0x7ffe1e8fd3c0)
+	- stacking header:(6)::<address>(0x7ffe1e8fd3e0)
+	- stacking header:(7)::<address>(0x7ffe1e8fd400)
+	- stacking header:(8)::<address>(0x7ffe1e8fd420)
+	- stacking header:(9)::<address>(0x7ffe1e8fd440)
 
 
 -:: checking AI functions.
@@ -1544,25 +1544,25 @@ regular file:
 		~:: glob() in directory: (bay):
 
 ~:: stats() function:
-	--directory: (debug) xcomp=true; skipping "." -&- ".."
+symlink: -- ./info.txt
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+symlink: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./downloads
+symlink: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+symlink: -- ./downloads
 
 
-~:: running (1) queries.
+~:: running (10) queries.
 
 ::- type your query -::
 
@@ -1571,44 +1571,1230 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/test
+	/help
 	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: parameter request: test().
+~:: parameter request: help().
  ]
 
 -:: finished x computation.
 
-<!> trial rounds in these functions (logged output):
+Help Function
 -----
-(true)
-searchterm: (true)
+
+MODEL-AI
+v0.1-27c
+Author: vera lo
+https://model-ai.com/archive/model-ai.tar.gz
+
+When the Ai asks you for Logic you can enter a string to trigger natural language processing,
+or you can enter one of the following commands.
+
+COMMANDS:
+-----
+
+/help -- triggers this help function.
+/help -- displays version information.
+/killc -- built in killchain(1).
+/bank -- starts accounting.
+/hash -- hashes a string in MD5.
+/curl -- curls a website of choice from your machine.
+/table -- prints the table in numbers of your chosen number.
+/tableto -- prints the table in numbers of your chosen number up to max chosen number.
+/dice -- print a random dice number. (1...6)
+/dice2 -- print a random dice number. (1...nr_of_eyes)
+/stat -- stat() function stats directory/file.
+/cp -- copies file_1 into file_2. (src) -> (dst)
+/rm -- removes a file from the system.
+/+ -- adds 2 numbers.
+/- -- subtracts 2 numbers.
+// -- divides number 1 by number 2.
+/* -- multiplies number 1 by number 2.
+/pow -- does number 1 to power of number 2.
+/punch -- punch in numbers like with a calculator.
+/prpunch -- punch in numbers like with a calculator.
+/simulation -- runs a simulation for enities from the Entity class -&- objects from the Object class.
+/convert -- converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
+/convertd -- converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
+/stepping -- will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
+/rollout -- this function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
+/add_data -- adds data to the logical cabinets manually.
+/convert_data -- converts the data from a file.
+/audio_toggle -- disables/enables the Ai model its sound FX.
+/run_tube -- download YouTube file or playlist.
+/menu -- will hand you a menu with several options.
+/passwd -- changes the access code for running the model.
+/list_cred -- lists the MD5 hash (the access code) from the credentials store.
+/learned -- lists the added data through learning.
+/what -- lists the added data through learning.
+/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model.
+/test -- test the transponder responses.
+/answer
+/list -- lists the conversation.
+/export_backlogs -- export backlogs of user queries & transponder queries.
+/export_backlog1 -- export backlogs of user queries.
+/export_backlog2 -- export backlogs of transponder queries.
+/buildref -- build custom reference.
+/readref -- read a certain reference.
+/readrefs -- read all references.
+/lastref -- print the last reference.
+/refnumber -- print the number of references.
+/qlog -- qlog(x) -- log (x) queries.
 
 
--:: aborting artificial life sequence, and clean up gracefully!
+~:: running (9) queries.
 
--:: display ((x)->live())(?x) equaled  .
+::- type your query -::
 
--:: destructor artificial life routine was called. -::
-	killing abstraction layer.
+punch.
+--?:: 
 
--:: decoupler.
-	-:: decoupling sampler
-	-:: sampler set to pause.
-		(-  ||  -)
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	qlog
+	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "qlog".
+	- HMAC string :: *string_next_logic() ::  (qlog) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
+
+~:: prepTransponder() : (qlog)
+~:: transponder -> prep()
+
+~:: set subject to: "qlog".
+(debug) word :: qlog
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "qlog".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (0).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) qlog :: #-1
+
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequences:
+		- -1
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("-1,")
+~:::~
+
+~:: reverse meta query lookup: 
+(skipped unregistered entry)
+
+(EOT)
 
 
-::=> saving grace (routine) and closing libraries <=::
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
 
--:: closing files.
--:: cleaning memory.
+~:: prepTransponder() : (qlog)
+~:: transponder -> prep()
 
-~:: decoupling transponder.
-	~:: closed "ai/lib/queries/weights" transponder file access.
-	~:: closed "ai/data/files/synonyms.txt" transponder file access.
-~:: closed access.
+~:: set subject to: "qlog".
+(debug) word :: qlog
 
--:: calling destructor for AI::Model.
--:: done.
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "qlog".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (0).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) qlog :: #-1
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("-1,")
+~:::~
+
+~:: reverse meta query lookup: 
+(skipped unregistered entry)
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 4
+		* vowels: 1
+		* consonants: 3
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 0
+biggest : 0
+
+
+labelled biggest faculty : 0
+
+
+----- ----- -----
+(debug) result : 
+
+~:: transponder -> answer()
+
++query :: (qlog)
+[RESPONSE] : can't relate to query.
+
+
+(EOT)
+
+~:: running (8) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	qlog
+	[ simple x computation: type:[char]: len:4 vowels:3 consonants:1 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "qlog".
+	- HMAC string :: *string_next_logic() ::  (qlog) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (qlog)
+~:: transponder -> prep()
+
+~:: set subject to: "qlog".
+(debug) word :: qlog
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "qlog".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (0).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) qlog :: #-1
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("-1,")
+~:::~
+
+~:: reverse meta query lookup: 
+(skipped unregistered entry)
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 4
+		* vowels: 1
+		* consonants: 3
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	qlog
+
+
+~:: scored() : 
+
+	~:: pushing back ---> qlog
+
+	- qlog	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 0
+biggest : 0
+
+
+labelled biggest faculty : 0
+
+
+----- ----- -----
+(debug) result : 
+
+~:: transponder -> answer()
+
++query :: (qlog)
+[RESPONSE] : can't relate to query.
+
+
+(EOT)
+
+~:: running (7) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/qlog
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1  ]
+
+-:: finished x computation.
+
+~:: running (6) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/simulation
+	[ simple x computation: type:[char]: len:11 vowels:5 consonants:5 special:1 
+~:: parameter request: simulation().
+ ]
+
+-:: finished x computation.
+
+(simulation) entities: 
+
+~:: starting simulation.
+	~:: sim construct()
+	~:: initializing simulation run.
+		~:: ready | initialized sim.
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(1)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(2)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(3)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(4)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(5)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(6)
+
+(simulation) objects: 
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(1)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(2)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(3)
+	~:: simulation is running.
+
+[E]: (1) (2) (3) (4) (5) (6) 
+[O]: (1) (2) (3) 
+
+~:: (manipulate in session #) :: 
+~:: manipulating session: 7.
+(e|o)? : (object #)? : 
+	~:: modifying object #4.
+
+	* nr of manipulating sessions : 1
+
+	~:: added to list (4)
+
+	* nr of manipulating sessions : 1
+	* manipulating (objects) in # session : 7 
+	* modifying objects # : 1
+
+	* manipulated objects : o(4) 
+
+(debug) manipulated eo sessions: ES:0 OS:1
+~:: listing manipulated targets: 
+	o(4) 
+
+- cycle round : 1 -
+13435ns
+
+- cycle round : 2 -
+7655ns
+
+- cycle round : 3 -
+7123ns
+
+- cycle round : 4 -
+6983ns
+
+- cycle round : 5 -
+7023ns
+
+- cycle round : 6 -
+6963ns
+
+- cycle round : 7 -
+~:: manipulation on {object}[4]
+
+10079ns
+
+- cycle round : 8 -
+7244ns
+
+- cycle round : 9 -
+7003ns
+
+- cycle round : 10 -
+7013ns
+
+- cycle round : 11 -
+6993ns
+
+- cycle round : 12 -
+7244ns
+
+- cycle round : 13 -
+7203ns
+
+- cycle round : 14 -
+7263ns
+
+- cycle round : 15 -
+7334ns
+
+- cycle round : 16 -
+8496ns
+
+- cycle round : 17 -
+7304ns
+
+- cycle round : 18 -
+8055ns
+
+- cycle round : 19 -
+7253ns
+
+- cycle round : 20 -
+8245ns
+
+- cycle round : 21 -
+7344ns
+
+- cycle round : 22 -
+7995ns
+
+- cycle round : 23 -
+7314ns
+
+- cycle round : 24 -
+8195ns
+
+- cycle round : 25 -
+7384ns
+
+~:: generating stats ::~
+
+STATISTICS :: SIMULATION RUN:
+-----
+- simulation # cycles: 25
+- number of entities: 0
+- number of objects: 0
+- total time simulation run (nano seconds): 7384 ns.
+
+~:: deleting simulation.
+
+
+~:: running (5) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	+
+	[ simple x computation: type:[char]: len:1 vowels:0 consonants:0 special:1 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "+".
+	- HMAC string :: *string_next_logic() ::  (+) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (+)
+~:: transponder -> prep()
+
+~:: set subject to: "+".
+(debug) word :: +
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "+".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (0).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) + :: #-1
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("-1,")
+~:::~
+
+~:: reverse meta query lookup: 
+(skipped unregistered entry)
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 1
+		* vowels: 0
+		* consonants: 0
+		* numbers: 0
+		* special chars: 1
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : (debug) : 
+	-1
+	+
+
+
+~:: scored() : 
+
+	~:: pushing back ---> +
+
+	- +	~:: matching occurences.
+
+
+incremental size function : 0
+
+[RESULT] : 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 0
+biggest : 0
+
+
+labelled biggest faculty : 0
+
+
+----- ----- -----
+(debug) result : 
+
+~:: transponder -> answer()
+
++query :: (+)
+[RESPONSE] : can't relate to query.
+
+
+(EOT)
+
+~:: running (4) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/+
+	[ simple x computation: type:[char]: len:2 vowels:0 consonants:0 special:2 
+~:: parameter request: add().
+ ]
+
+-:: finished x computation.
+(add): number1 number2 + # #: adds (684564+254584): 939148
+
+~:: running (3) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
+ ]
+
+-:: finished x computation.
+
+(kill chain) function() : 9
+
+-/- initializing killchain(1) sequence.
+
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).

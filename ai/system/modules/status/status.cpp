@@ -41,7 +41,7 @@ int Status::ret_def_count() {   // returns the number of definitions
     return this->definitions_nr;
 };
 
-int Status::numbers() {
+void Status::numbers() {
     std::cout << std::endl;
     std::cout << "~:: (stats / numbers) : " << std::endl;
     std::cout << "\t(++)\t d:" << this->ret_def_count() << " w:" << this->ret_word_count() << std::endl;
