@@ -1512,16 +1512,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc435ffe70)
-	- stacking header:(1)::<address>(0x7ffc435ffe90)
-	- stacking header:(2)::<address>(0x7ffc435ffeb0)
-	- stacking header:(3)::<address>(0x7ffc435ffed0)
-	- stacking header:(4)::<address>(0x7ffc435ffef0)
-	- stacking header:(5)::<address>(0x7ffc435fff10)
-	- stacking header:(6)::<address>(0x7ffc435fff30)
-	- stacking header:(7)::<address>(0x7ffc435fff50)
-	- stacking header:(8)::<address>(0x7ffc435fff70)
-	- stacking header:(9)::<address>(0x7ffc435fff90)
+	- stacking header:(0)::<address>(0x7ffc23ba1040)
+	- stacking header:(1)::<address>(0x7ffc23ba1060)
+	- stacking header:(2)::<address>(0x7ffc23ba1080)
+	- stacking header:(3)::<address>(0x7ffc23ba10a0)
+	- stacking header:(4)::<address>(0x7ffc23ba10c0)
+	- stacking header:(5)::<address>(0x7ffc23ba10e0)
+	- stacking header:(6)::<address>(0x7ffc23ba1100)
+	- stacking header:(7)::<address>(0x7ffc23ba1120)
+	- stacking header:(8)::<address>(0x7ffc23ba1140)
+	- stacking header:(9)::<address>(0x7ffc23ba1160)
 
 
 -:: checking AI functions.
@@ -1561,22 +1561,22 @@ regular file:
 		~:: glob() in directory: (bay):
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+file or directory: -- ./downloads
 
 
 ~:: running (10) queries.
@@ -1588,2655 +1588,35 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	transponder question?
-	[ simple x computation: type:[char]: len:21 vowels:13 consonants:7 special:1 ]
+	ai
+	[ simple x computation: type:[char]: len:2 vowels:0 consonants:2 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "transponder question?".
-	- HMAC string :: *string_next_logic() ::  (transponder question?) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: transponder was not prepared yet.
-	~:: preparing transponder.
-
-~:: prepTransponder() : (transponder question?)
-~:: transponder -> prep()
-
-~:: set subject to: "transponder question?".
-(debug) word :: transponder
-(debug) word :: question
-
-~:: (debug)::nrOfWords = 2.
-~:: (debug)::counter = 2.
-
-(debug) calling prepare_ints() (from) -> "transponder question?".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (1).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) transponder :: #-1
-(debug) 1) question :: #592
-
-~:: meta queries ~:: storing meta query sequence
-	~::::meta::::~
-	- path: "ai/lib/queries/meta_queries".
-	- meta sequences:
-		- -1		- 592
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("-1,592,")
-~:::~
-
-~:: reverse meta query lookup: 
-(skipped unregistered entry)
-	- question		 --> *(a+i) = 592 - *(a+i) - 1 = 591
-
-(EOT)
-
-
-~:: tsp() :
-	~:!:~ transponder is not prepared yet.
-		;; preparing transponder.
-
-~:: prepTransponder() : (transponder question?)
-~:: transponder -> prep()
-
-~:: set subject to: "transponder question?".
-(debug) word :: transponder
-(debug) word :: question
-
-~:: (debug)::nrOfWords = 2.
-~:: (debug)::counter = 2.
-
-(debug) calling prepare_ints() (from) -> "transponder question?".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (2).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) transponder :: #-1
-(debug) 1) question :: #592
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("-1,592,")
-~:::~
-
-~:: reverse meta query lookup: 
-(skipped unregistered entry)
-	- question		 --> *(a+i) = 592 - *(a+i) - 1 = 591
-
-(EOT)
-
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 2
-		* length: 21
-		* vowels: 7
-		* consonants: 12
-		* numbers: 0
-		* special chars: 2
-		* unknown chars: 0
-
-
-(debug) answer.
-(debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : ~:: score(1) got rated.
-1,transponder :: what is your question?
-
-~:: collusion().
-
-DEBUGGING this ref.
-transponder question (debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-transponder question (debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-transponder question (debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-transponder question (debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-transponder question (debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-transponder question (debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-transponder question (debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-transponder question (debug) : 
-	-1
-	transponder question
-
-
-~:: scored() : (transponder question)
-
-	~:: pushing back ---> transponder
-	~:: pushing back ---> question
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-transponder question 
-~:: (debug) query was question: ('?')
-~:: (debug) -- answers processed: 9
-
-(debug)
-noted : 1
-biggest : 1
-
-
-labelled biggest faculty : 1
-
-
------ ----- -----
-(debug) result : 1,transponder :: what is your question?
-
-~:: transponder -> answer()
-
-~:: pushing back queries.
-
-~:: stripping (result).
-
-~:: strip()
-
-- pushing back : 1,transponder :: what is your question?
-	~:: store_relations().
-
-~:: storing relations ::~
-	~:: opening : "ai/data/files/relatives.txt".
-		+/+ relations :
-		.
-~:: closing file.
-
-
-~:: --- synonyms() ---:
-
-~:: singleMeta() lookup.
-
-~:: singleMeta() lookup.
-
-	~:: pushing back query : 
-	~:: pushing back query : 
-	~:: storing nref.
-
-~:: store_nrefs() :
-	~:: stored nrefs.
-
-+query :: (transponder question?)
-
-[RESPONSE] :
-~:: readref() :
-	:: 1,transponder :: what is your question?
-
-
-~:: clearref() - clearing last references.
-
-(EOT)
-
-~:: running (9) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	what is intelligence
-	[ simple x computation: type:[char]: len:20 vowels:13 consonants:7 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "what is intelligence".
-	- HMAC string :: *string_next_logic() ::  (what is intelligence) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: tsp() :
-	~:!:~ transponder is not prepared yet.
-		;; preparing transponder.
-
-~:: prepTransponder() : (what is intelligence)
-~:: transponder -> prep()
-
-~:: set subject to: "what is intelligence".
-(debug) word :: what
-(debug) word :: is
-(debug) word :: intelligence
-
-~:: (debug)::nrOfWords = 3.
-~:: (debug)::counter = 3.
-
-(debug) calling prepare_ints() (from) -> "what is intelligence".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (5).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) what :: #56
-(debug) 1) is :: #8
-(debug) 2) intelligence :: #2526
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("56,8,2526,")
-~:::~
-
-~:: reverse meta query lookup: 
-	- what		 --> *(a+i) = 56 - *(a+i) - 1 = 55
-	- is		 --> *(a+i) = 8 - *(a+i) - 1 = 7
-	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
-
-(EOT)
-
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 3
-		* length: 20
-		* vowels: 7
-		* consonants: 11
-		* numbers: 0
-		* special chars: 2
-		* unknown chars: 0
-
-
-(debug) answer.
-(debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : ~:: score(1) got rated.
-1,transponder has query.
-
-~:: collusion().
-
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence (debug) : 
-	-1
-	what is intelligence
-
-
-~:: scored() : (what is intelligence)
-
-	~:: pushing back ---> what
-	~:: pushing back ---> is
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-what is intelligence 
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
-
-(debug)
-noted : 1
-biggest : 1
-
-
-labelled biggest faculty : 1
-
-
------ ----- -----
-(debug) result : 1,transponder has query.
-
-~:: transponder -> answer()
-
-~:: pushing back queries.
-
-~:: stripping (result).
-
-~:: strip()
-
-- pushing back : 1,transponder has query.
-	~:: store_relations().
-
-~:: storing relations ::~
-	~:: opening : "ai/data/files/relatives.txt".
-		+/+ relations :
-		.
-~:: closing file.
-
-
-~:: --- synonyms() ---:
-
-~:: singleMeta() lookup.
-	~:: meta query : (56)
-
-~:: singleMeta() lookup.
-	~:: meta query : (8)
-
-~:: singleMeta() lookup.
-	~:: meta query : (2526)
-
-	~:: pushing back query : 
-	~:: pushing back query : 
-	~:: pushing back query : 
-	~:: storing nref.
-
-~:: store_nrefs() :
-	~:: stored nrefs.
-
-+query :: (what is intelligence)
-
-[RESPONSE] :
-~:: readref() :
-	:: 1,transponder has query.
-
-
-~:: clearref() - clearing last references.
-
-(EOT)
-
-~:: running (8) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	intelligence
-	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "intelligence".
-	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+*string_next_logic() :: ssh: "ai".
+	- HMAC string :: *string_next_logic() ::  (ai) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
 ~:: searching indexes:
 	- rewinding file index.
 (debug) hit search function.
-	search1 : intelligence
-	search2 : intelligence
-
-~:: collusion().
-
-~:: collusion().
-	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 5
-	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-
-sorter():
-{ ai/system/logic/transponder/brain/data/intelligence.dat }
-- opening: ai/system/logic/transponder/brain/data/intelligence.dat.
-	- unable to open : ai/system/logic/transponder/brain/data/intelligence.dat
-
-sorted: ai/system/logic/transponder/brain/data/intelligence.dat
-~:: file_access()
-(debug) file_access(level=7).
-
-	<<<
-
-- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-~:: found index [intelligence].
-:::_]{ (intelligence can be used to manipulate objects.)
-
-~:: collusion().
-:::_]{ (intelligent manners could be manners that would be described.)
-
-~:: collusion().
-(!) omitted empty line.
-(debug) file_access().
-~:: file_access()
-(debug) file_access(level=8).
-~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-
-- adding (2) weights.
-
-[]:: ai/system/logic/transponder/brain/data/intelligence.dat
-~:: resonate_index::match found on line: (5).
-~:: done.
-
-b_string:
-!~ intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
-	~:: query matches search string: "intelligence".
-
--* intelligence is:
-    deciphering algorithms, and using strategies to solve the inherent problem. + 5
-
-    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-
-~:: tsp() :
-	~:!:~ transponder is not prepared yet.
-		;; preparing transponder.
-
-~:: prepTransponder() : (intelligence)
-~:: transponder -> prep()
-
-~:: set subject to: "intelligence".
-(debug) word :: intelligence
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "intelligence".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (6).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) intelligence :: #2526
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("2526,")
-~:::~
-
-~:: reverse meta query lookup: 
-	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
-
-(EOT)
-
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 12
-		* vowels: 5
-		* consonants: 7
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-(debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : ~:: score(1) got rated.
-1,transponder has query.
-
-~:: collusion().
-
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence (debug) : 
-	-1
-	intelligence
-
-
-~:: scored() : (intelligence)
-
-	~:: pushing back ---> intelligence
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-intelligence 
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
-
-(debug)
-noted : 1
-biggest : 1
-
-
-labelled biggest faculty : 1
-
-
------ ----- -----
-(debug) result : 1,transponder has query.
-
-~:: transponder -> answer()
-
-~:: pushing back queries.
-
-~:: stripping (result).
-
-~:: strip()
-
-- pushing back : 1,transponder has query.
-	~:: store_relations().
-
-~:: storing relations ::~
-	~:: opening : "ai/data/files/relatives.txt".
-		+/+ relations :
-		.
-~:: closing file.
-
-
-~:: --- synonyms() ---:
-
-~:: singleMeta() lookup.
-	~:: meta query : (2526)
-
-	~:: pushing back query : 
-	~:: storing nref.
-
-~:: store_nrefs() :
-	~:: stored nrefs.
-
-+query :: (intelligence)
-
-[RESPONSE] :
-~:: readref() :
-	::     deciphering algorithms, and using strategies to solve the inherent problem. + 5
-	::     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-	:: intelligence can be used to manipulate objects.
-	:: intelligent manners could be manners that would be described.
-	:: 1,transponder has query.
-
-
-~:: clearref() - clearing last references.
-
-(EOT)
-
-~:: running (7) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	model-ai
-	[ simple x computation: type:[char]: len:8 vowels:3 consonants:4 special:1 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "model-ai".
-	- HMAC string :: *string_next_logic() ::  (model-ai) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-(debug) hit search function.
-	search1 : model-ai
-	search2 : model-ai
-
-~:: collusion().
-
-~:: collusion().
-	line1 :     model-Ai. could we fashion this arithmetic sequence?   + 8
-	line2 :     MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]  {}
-
-sorter():
-{ ai/system/logic/transponder/brain/data/model-ai.dat }
-- opening: ai/system/logic/transponder/brain/data/model-ai.dat.
-	- unable to open : ai/system/logic/transponder/brain/data/model-ai.dat
-
-sorted: ai/system/logic/transponder/brain/data/model-ai.dat
-~:: file_access()
-(debug) file_access(level=7).
-
-	<<<
-
-- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-TMP: logic
-TMP: model-ai
-~:: found index [model-ai].
-:::_]{ (model-ai - artificial intelligence.)
-
-~:: collusion().
-(!) omitted empty line.
-:::_]{ (eof)
-
-~:: collusion().
-(debug) file_access().
-~:: file_access()
-(debug) file_access(level=8).
-~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-
-- adding (2) weights.
-
-[]:: ai/system/logic/transponder/brain/data/model-ai.dat
-~:: resonate_index::match found on line: (8).
-~:: done.
-
-b_string:
-!~ intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.model-ai - artificial intelligence. eof
-	~:: query matches search string: "model-ai".
-
--* model-ai is:
-    model-Ai. could we fashion this arithmetic sequence?   + 8
-
-    MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]  {}
-
-~:: tsp() :
-	~:!:~ transponder is not prepared yet.
-		;; preparing transponder.
-
-~:: prepTransponder() : (model-ai)
-~:: transponder -> prep()
-
-~:: set subject to: "model-ai".
-(debug) word :: model-ai
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "model-ai".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (6).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) model-ai :: #-1
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("-1,")
-~:::~
-
-~:: reverse meta query lookup: 
-(skipped unregistered entry)
-
-(EOT)
-
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 8
-		* vowels: 4
-		* consonants: 3
-		* numbers: 0
-		* special chars: 1
-		* unknown chars: 0
-
-
-(debug) answer.
-(debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : ~:: score(1) got rated.
-1,transponder has query.
-
-~:: collusion().
-
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai (debug) : 
-	-1
-	model-ai
-
-
-~:: scored() : (model-ai)
-
-	~:: pushing back ---> model-ai
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-model-ai 
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
-
-(debug)
-noted : 1
-biggest : 1
-
-
-labelled biggest faculty : 1
-
-
------ ----- -----
-(debug) result : 1,transponder has query.
-
-~:: transponder -> answer()
-
-~:: pushing back queries.
-
-~:: stripping (result).
-
-~:: strip()
-
-- pushing back : 1,transponder has query.
-	~:: store_relations().
-
-~:: storing relations ::~
-	~:: opening : "ai/data/files/relatives.txt".
-		+/+ relations :
-		.
-~:: closing file.
-
-
-~:: --- synonyms() ---:
-
-~:: singleMeta() lookup.
-
-	~:: pushing back query : 
-	~:: storing nref.
-
-~:: store_nrefs() :
-	~:: stored nrefs.
-
-+query :: (model-ai)
-
-[RESPONSE] :
-~:: readref() :
-	::     model-Ai. could we fashion this arithmetic sequence?   + 8
-	::     MODEL-Ai an artificial automata program with Artificial Intelligence which likes precision, Model-Ai.   [model-ai.dat]  {}
-	:: model-ai - artificial intelligence.
-	:: eof
-	:: 1,transponder has query.
-
-
-~:: clearref() - clearing last references.
-
-(EOT)
-
-~:: running (6) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/simulation
-	[ simple x computation: type:[char]: len:11 vowels:5 consonants:5 special:1 
-~:: parameter request: simulation().
- ]
-
--:: finished x computation.
-
-(simulation) entities: 
-
-~:: starting simulation.
-	~:: sim construct()
-	~:: initializing simulation run.
-		~:: ready | initialized sim.
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(1)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(2)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(3)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(4)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(5)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(6)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(7)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(8)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(9)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(10)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(11)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(12)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(13)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(14)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(15)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(16)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(17)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(18)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(19)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(20)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(21)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(22)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(23)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(24)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(25)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(26)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(27)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(28)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(29)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(30)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(31)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(32)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(33)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(34)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(35)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(36)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(37)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(38)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(39)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(40)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(41)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(42)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(43)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(44)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(45)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(46)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(47)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(48)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(49)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(50)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(51)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(52)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(53)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(54)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(55)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(56)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(57)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(58)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(59)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(60)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(61)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(62)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(63)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(64)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(65)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(66)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(67)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(68)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(69)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(70)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(71)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(72)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(73)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(74)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(75)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(76)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(77)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(78)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(79)
-
-	SIM::adding {entity}.
-	~:: adding sim {entity}.
-	- (Entity) was created.
-~:: increased entity nr.
-		~:: added sim {entity}(80)
-
-(simulation) objects: 
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(1)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(2)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(3)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(4)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(5)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(6)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(7)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(8)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(9)
-
-	SIM::adding {object}.
-	~:: adding sim {object}.
-- {Object} was created.
-~:: increased objects nr.
-		~:: added sim {object}(10)
-	~:: simulation is running.
-
-[E]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) (15) (16) (17) (18) (19) (20) (21) (22) (23) (24) (25) (26) (27) (28) (29) (30) (31) (32) (33) (34) (35) (36) (37) (38) (39) (40) (41) (42) (43) (44) (45) (46) (47) (48) (49) (50) (51) (52) (53) (54) (55) (56) (57) (58) (59) (60) (61) (62) (63) (64) (65) (66) (67) (68) (69) (70) (71) (72) (73) (74) (75) (76) (77) (78) (79) (80) 
-[O]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
-
-~:: (manipulate in session #) :: 
-~:: manipulating session: 8.
-(e|o)? : (entity #)? : 
-	~:: modifying entity #9.
-	~:: added to list (9)
-
-	* nr of manipulating sessions : 1
-	* manipulating (entities) in # session : 8 
-	* modifying entities # : 1
-
-	* manipulated entities : e(9) 
-
-(debug) manipulated eo sessions: ES:1 OS:0
-~:: listing manipulated targets: 
-	e(9) 
-
-- cycle round : 1 -
-15441ns
-
-- cycle round : 2 -
-8212ns
-
-- cycle round : 3 -
-7630ns
-
-- cycle round : 4 -
-7630ns
-
-- cycle round : 5 -
-7490ns
-
-- cycle round : 6 -
-11540ns
-
-- cycle round : 7 -
-7549ns
-
-- cycle round : 8 -
-~:: manipulation on {entity}[9]
-
-8221ns
-
-- cycle round : 9 -
-7630ns
-
-- cycle round : 10 -
-8161ns
-
-- cycle round : 11 -
-8753ns
-
-- cycle round : 12 -
-8251ns
-
-- cycle round : 13 -
-7801ns
-
-- cycle round : 14 -
-7640ns
-
-- cycle round : 15 -
-7550ns
-
-- cycle round : 16 -
-7670ns
-
-- cycle round : 17 -
-7539ns
-
-- cycle round : 18 -
-7650ns
-
-- cycle round : 19 -
-9735ns
-
-- cycle round : 20 -
-7680ns
-
-- cycle round : 21 -
-7650ns
-
-- cycle round : 22 -
-7670ns
-
-- cycle round : 23 -
-7730ns
-
-- cycle round : 24 -
-7770ns
-
-- cycle round : 25 -
-7690ns
-
-~:: generating stats ::~
-
-STATISTICS :: SIMULATION RUN:
------
-- simulation # cycles: 25
-- number of entities: 0
-- number of objects: 0
-- total time simulation run (nano seconds): 7690 ns.
-
-~:: deleting simulation.
-
-
-~:: running (5) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/bank
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: parameter request: track_account().
- ]
-
--:: finished x computation.
-
-
-(banking engine) function() : 
-	( 1) // ai.add_account(1);
-	( 2) // ai.subtract_account(10);
-	( 3) // ai.change_account(10);
-	( 4) // ai.printn_account();
-	( 5) // ai.total_account();
-	( 6) // ai.list_positive();
-	( 7) // ai.list_negative();
-	( 8) // ai.average_account();
-	( 9) // ai.transfer(1,200,20.00);
-	(10) // ai.store_accounts_detail();
-	(11) // ai.export_accounts(exp_account);
-	(12) // ai.import_accounts(imp_account);
-
-	(99) QUIT();
-
-:: 
-~:: accounts total: EURO 0 over 0 accounts.
-
-
-(banking engine) function() : 
-	( 1) // ai.add_account(1);
-	( 2) // ai.subtract_account(10);
-	( 3) // ai.change_account(10);
-	( 4) // ai.printn_account();
-	( 5) // ai.total_account();
-	( 6) // ai.list_positive();
-	( 7) // ai.list_negative();
-	( 8) // ai.average_account();
-	( 9) // ai.transfer(1,200,20.00);
-	(10) // ai.store_accounts_detail();
-	(11) // ai.export_accounts(exp_account);
-	(12) // ai.import_accounts(imp_account);
-
-	(99) QUIT();
-
-:: 
-~:: running (4) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-punch.
---?:: 
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	logic
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "logic".
-	- HMAC string :: *string_next_logic() ::  (logic) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-(debug) hit search function.
-	search1 : logic
-	search2 : intelligence
-
-~:: collusion().
-
-~:: collusion().
-	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-~:: file_access()
-(debug) file_access(level=7).
-
-	<<<
-
-- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-TMP: logic
-~:: found index [logic].
-:::_]{ (logical ways to infer reason.)
-
-~:: collusion().
-:::_]{ (a logical standard for conventions of proceeding with thinking.)
-
-~:: collusion().
-(!) omitted empty line.
-(debug) file_access().
-~:: file_access()
-(debug) file_access(level=8).
-~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-
-- adding (2) weights.
-
-[]:: n
-	~:: matches found accross files in database.
-	~:: query matches search string: "logic".
-
--* logic is:
-   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-
-    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-
-~:: tsp() :
-	~:!:~ transponder is not prepared yet.
-		;; preparing transponder.
-
-~:: prepTransponder() : (logic)
-~:: transponder -> prep()
-
-~:: set subject to: "logic".
-(debug) word :: logic
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "logic".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (7).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) logic :: #3198
-
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("3198,")
-~:::~
-
-~:: reverse meta query lookup: 
-	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
-
-(EOT)
-
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 5
-		* vowels: 2
-		* consonants: 3
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-(debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : ~:: score(1) got rated.
-1,transponder has query.
-
-~:: collusion().
-
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic (debug) : 
-	-1
-	logic
-
-
-~:: scored() : (logic)
-
-	~:: pushing back ---> logic
-
-
-
-~:: incremental size function : 1
-
-[RESULT] : 
-DEBUGGING this ref.
-logic 
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
-
-(debug)
-noted : 1
-biggest : 1
-
-
-labelled biggest faculty : 1
-
-
------ ----- -----
-(debug) result : 1,transponder has query.
-
-~:: transponder -> answer()
-
-~:: pushing back queries.
-
-~:: stripping (result).
-
-~:: strip()
-
-- pushing back : 1,transponder has query.
-	~:: store_relations().
-
-~:: storing relations ::~
-	~:: opening : "ai/data/files/relatives.txt".
-		+/+ relations :
-		.
-~:: closing file.
-
-
-~:: --- synonyms() ---:
-
-~:: singleMeta() lookup.
-	~:: meta query : (3198)
-
-	~:: pushing back query : 
-	~:: storing nref.
-
-~:: store_nrefs() :
-	~:: stored nrefs.
-
-+query :: (logic)
-
-[RESPONSE] :
-~:: readref() :
-	::    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 6
-	::     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-	:: logical ways to infer reason.
-	:: a logical standard for conventions of proceeding with thinking.
-	:: 1,transponder has query.
-
-
-~:: clearref() - clearing last references.
-
-(EOT)
-
-~:: running (3) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	artificial
-	[ simple x computation: type:[char]: len:10 vowels:5 consonants:5 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "artificial".
-	- HMAC string :: *string_next_logic() ::  (artificial) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-(debug) hit search function.
-	search1 : artificial
+	search1 : ai
 	search2 : ai
 
 ~:: collusion().
 
 ~:: collusion().
-	line1 :   something real or artificial made up out of a matter construct. + 1
+	line1 :   artificial intelligence program or unit (basic).    + 1
 	line2 :   artificial intelligence is an automated program that is being run, which responds like a machine or sometimes like humans.  [ai.dat] {}
+
+sorter():
+{ ai/system/logic/transponder/brain/data/ai.dat }
+- opening: ai/system/logic/transponder/brain/data/ai.dat.
+	- unable to open : ai/system/logic/transponder/brain/data/ai.dat
+
+sorted: ai/system/logic/transponder/brain/data/ai.dat
 ~:: file_access()
 (debug) file_access(level=7).
 
@@ -4251,43 +1631,102 @@ TMP: intelligence
 TMP: logic
 TMP: model-ai
 TMP: ai
-	~:: matches found accross files in database.
-	~:: query matches search string: "artificial".
+~:: found index [ai].
+:::_]{ (artificial intelligence.)
 
--* artificial is:
-  something real or artificial made up out of a matter construct. + 1
+~:: collusion().
+:::_]{ (model-ai is an artificial intelligence.)
+
+~:: collusion().
+(!) omitted empty line.
+:::_]{ (eof)
+
+~:: collusion().
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+
+- adding (3) weights.
+
+[]:: ai/system/logic/transponder/brain/data/ai.dat
+~:: resonate_index::match found on line: (1).
+~:: done.
+
+b_string:
+!~ artificial intelligence. model-ai is an artificial intelligence. eof
+	~:: query matches search string: "ai".
+
+-* ai is:
+  artificial intelligence program or unit (basic).    + 1
 
   artificial intelligence is an automated program that is being run, which responds like a machine or sometimes like humans.  [ai.dat] {}
+
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
+
+~:: prepTransponder() : (ai)
+~:: transponder -> prep()
+
+~:: set subject to: "ai".
+(debug) word :: ai
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "ai".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (1).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) ai :: #5320
+
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequences:
+		- 5320
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("5320,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- ai		 --> *(a+i) = 5320 - *(a+i) - 1 = 5319
+
+(EOT)
+
 
 ~:: tsp() :
 	~:!:~ transponder is not prepared yet.
 		;; preparing transponder.
 
-~:: prepTransponder() : (artificial)
+~:: prepTransponder() : (ai)
 ~:: transponder -> prep()
 
-~:: set subject to: "artificial".
-(debug) word :: artificial
+~:: set subject to: "ai".
+(debug) word :: ai
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "artificial".
+(debug) calling prepare_ints() (from) -> "ai".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (8).
+~:: (debug) number of matching occurences: (2).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) artificial :: #5919
+(debug) 0) ai :: #5320
 
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("5919,")
+	~:: reverse_meta_query_lookup("5320,")
 ~:::~
 
 ~:: reverse meta query lookup: 
-	- artificial		 --> *(a+i) = 5919 - *(a+i) - 1 = 5918
+	- ai		 --> *(a+i) = 5320 - *(a+i) - 1 = 5319
 
 (EOT)
 
@@ -4300,9 +1739,9 @@ TMP: ai
 	-----------------
 
 		* words no_#: 1
-		* length: 10
-		* vowels: 5
-		* consonants: 5
+		* length: 2
+		* vowels: 2
+		* consonants: 0
 		* numbers: 0
 		* special chars: 0
 		* unknown chars: 0
@@ -4311,12 +1750,13 @@ TMP: ai
 (debug) answer.
 (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
+- found: ai
 
 
 
@@ -4328,14 +1768,14 @@ TMP: ai
 ~:: collusion().
 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4343,14 +1783,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4358,14 +1798,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4373,14 +1813,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4388,14 +1828,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4403,14 +1843,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4418,14 +1858,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4433,14 +1873,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4448,14 +1888,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4463,14 +1903,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4478,14 +1918,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4493,14 +1933,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4508,14 +1948,14 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial (debug) : 
+ai (debug) : 
 	-1
-	artificial
+	ai
 
 
-~:: scored() : (artificial)
+~:: scored() : (ai)
 
-	~:: pushing back ---> artificial
+	~:: pushing back ---> ai
 
 
 
@@ -4523,7 +1963,7 @@ artificial (debug) :
 
 [RESULT] : 
 DEBUGGING this ref.
-artificial 
+ai 
 ~:: (debug) -- normal query!
 ~:: (debug) -- answers processed: 14
 
@@ -4559,7 +1999,7 @@ labelled biggest faculty : 1
 ~:: --- synonyms() ---:
 
 ~:: singleMeta() lookup.
-	~:: meta query : (5919)
+	~:: meta query : (5320)
 
 	~:: pushing back query : 
 	~:: storing nref.
@@ -4567,12 +2007,15 @@ labelled biggest faculty : 1
 ~:: store_nrefs() :
 	~:: stored nrefs.
 
-+query :: (artificial)
++query :: (ai)
 
 [RESPONSE] :
 ~:: readref() :
-	::   something real or artificial made up out of a matter construct. + 1
+	::   artificial intelligence program or unit (basic).    + 1
 	::   artificial intelligence is an automated program that is being run, which responds like a machine or sometimes like humans.  [ai.dat] {}
+	:: artificial intelligence.
+	:: model-ai is an artificial intelligence.
+	:: eof
 	:: 1,transponder has query.
 
 
@@ -4580,7 +2023,7 @@ labelled biggest faculty : 1
 
 (EOT)
 
-~:: running (2) queries.
+~:: running (9) queries.
 
 ::- type your query -::
 
@@ -4615,7 +2058,10 @@ punch.
 sorter():
 { ai/system/logic/transponder/brain/data/intelligence.dat }
 - opening: ai/system/logic/transponder/brain/data/intelligence.dat.
-	- unable to open : ai/system/logic/transponder/brain/data/intelligence.dat
+	- ai/system/logic/transponder/brain/data/intelligence.dat : is open.
+		-- :: ( prime intelligence. seeking reason to understanding. allowing intelligence. seeking strategies. reasoning, or to reason. understanding. )
+
+~:: collusion().
 
 sorted: ai/system/logic/transponder/brain/data/intelligence.dat
 ~:: file_access()
@@ -4628,6 +2074,28 @@ sorted: ai/system/logic/transponder/brain/data/intelligence.dat
 
 :: artificial intelligence ::
 
+TMP: intelligence
+~:: found index [intelligence].
+:::_]{ (intelligence can be used to manipulate objects.)
+
+~:: collusion().
+:::_]{ (intelligent manners could be manners that would be described.)
+
+~:: collusion().
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/system/logic/transponder/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (6).
+~:: done.
+
+b_string:
+!~ artificial intelligence. model-ai is an artificial intelligence. eofintelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
 	~:: query matches search string: "intelligence".
 
 -* intelligence is:
@@ -4651,7 +2119,7 @@ sorted: ai/system/logic/transponder/brain/data/intelligence.dat
 (debug) calling prepare_ints() (from) -> "intelligence".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (9).
+~:: (debug) number of matching occurences: (3).
 
 ~:: intvars int_occurences[] ::~
 (debug) 0) intelligence :: #2526
@@ -4949,6 +2417,9 @@ labelled biggest faculty : 1
 ~:: readref() :
 	::     deciphering algorithms, and using strategies to solve the inherent problem. + 6
 	::     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+	:: prime intelligence. seeking reason to understanding. allowing intelligence. seeking strategies. reasoning, or to reason. understanding.
+	:: intelligence can be used to manipulate objects.
+	:: intelligent manners could be manners that would be described.
 	:: 1,transponder has query.
 
 
@@ -4956,7 +2427,7 @@ labelled biggest faculty : 1
 
 (EOT)
 
-~:: running (1) queries.
+~:: running (8) queries.
 
 ::- type your query -::
 
@@ -4995,9 +2466,13 @@ sorter():
 - opening: ai/system/logic/transponder/brain/data/artificial.dat.
 	- ai/system/logic/transponder/brain/data/artificial.dat : is open.
 		-- :: ( artificial assembly, model-ai. )
+
+~:: collusion().
 - opening: ai/system/logic/transponder/brain/data/artificial2.dat.
 	- ai/system/logic/transponder/brain/data/artificial2.dat : is open.
 		-- :: ( artificial data. artificial encounters. artificial life. artificial measure. artificial object. artificial reality. artificial or logical conduit. )
+
+~:: collusion().
 
 sorted: ai/system/logic/transponder/brain/data/artificial.dat
 ~:: file_access()
@@ -5010,6 +2485,10 @@ sorted: ai/system/logic/transponder/brain/data/artificial.dat
 
 :: artificial intelligence ::
 
+TMP: intelligence
+TMP: logic
+TMP: model-ai
+TMP: ai
 	~:: query matches search string: "artificial".
 
 -* artificial is:
@@ -5033,7 +2512,7 @@ sorted: ai/system/logic/transponder/brain/data/artificial.dat
 (debug) calling prepare_ints() (from) -> "artificial".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: (debug) number of matching occurences: (10).
+~:: (debug) number of matching occurences: (4).
 
 ~:: intvars int_occurences[] ::~
 (debug) 0) artificial :: #5919
@@ -5331,12 +2810,1103 @@ labelled biggest faculty : 1
 ~:: readref() :
 	::   something real or artificial made up out of a matter construct. + 2
 	::   being artificial, artificial lives could exist that are even less sentient than human beings and might look artificial, higher artificial intelligence can possibly encompass our ways of extinction and seem to prevent our instinction in such an event.  [artificial.dat]    {artificial2.dat}
+	:: artificial assembly, model-ai.
+	:: artificial data. artificial encounters. artificial life. artificial measure. artificial object. artificial reality. artificial or logical conduit.
 	:: 1,transponder has query.
 
 
 ~:: clearref() - clearing last references.
 
 (EOT)
+
+~:: running (7) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
+
+~:: collusion().
+
+~:: collusion().
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 7
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+sorter():
+{ ai/system/logic/transponder/brain/data/logic.dat }
+- opening: ai/system/logic/transponder/brain/data/logic.dat.
+	- ai/system/logic/transponder/brain/data/logic.dat : is open.
+		-- :: ( logical assembly, model-ai. )
+
+~:: collusion().
+
+sorted: ai/system/logic/transponder/brain/data/logic.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 7
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (logic)
+~:: transponder -> prep()
+
+~:: set subject to: "logic".
+(debug) word :: logic
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "logic".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (5).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) logic :: #3198
+
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("3198,")
+~:::~
+
+~:: reverse meta query lookup: 
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 1
+		* length: 5
+		* vowels: 2
+		* consonants: 3
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : ~:: score(1) got rated.
+1,transponder has query.
+
+~:: collusion().
+
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic (debug) : 
+	-1
+	logic
+
+
+~:: scored() : (logic)
+
+	~:: pushing back ---> logic
+
+
+
+~:: incremental size function : 1
+
+[RESULT] : 
+DEBUGGING this ref.
+logic 
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 1
+biggest : 1
+
+
+labelled biggest faculty : 1
+
+
+----- ----- -----
+(debug) result : 1,transponder has query.
+
+~:: transponder -> answer()
+
+~:: pushing back queries.
+
+~:: stripping (result).
+
+~:: strip()
+
+- pushing back : 1,transponder has query.
+	~:: store_relations().
+
+~:: storing relations ::~
+	~:: opening : "ai/data/files/relatives.txt".
+		+/+ relations :
+		.
+~:: closing file.
+
+
+~:: --- synonyms() ---:
+
+~:: singleMeta() lookup.
+	~:: meta query : (3198)
+
+	~:: pushing back query : 
+	~:: storing nref.
+
+~:: store_nrefs() :
+	~:: stored nrefs.
+
++query :: (logic)
+
+[RESPONSE] :
+~:: readref() :
+	::    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 7
+	::    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+	:: logical assembly, model-ai.
+	:: 1,transponder has query.
+
+
+~:: clearref() - clearing last references.
+
+(EOT)
+
+~:: running (6) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/bank
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: track_account().
+ ]
+
+-:: finished x computation.
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: (amount) : - account (1):
+	adding: (+/+) 3.65 EURO.
+	balance: [3.65 EURO].
+
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: ~:: exporting accounts information for later imports.
+~:: exported (1) account(s) to: "ai/log/export_account.txt"
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: 
+~:: accounts total: EURO 3.65 over 1 accounts.
+
+
+(banking engine) function() : 
+	( 1) // ai.add_account(1);
+	( 2) // ai.subtract_account(10);
+	( 3) // ai.change_account(10);
+	( 4) // ai.printn_account();
+	( 5) // ai.total_account();
+	( 6) // ai.list_positive();
+	( 7) // ai.list_negative();
+	( 8) // ai.average_account();
+	( 9) // ai.transfer(1,200,20.00);
+	(10) // ai.store_accounts_detail();
+	(11) // ai.export_accounts(exp_account);
+	(12) // ai.import_accounts(imp_account);
+
+	(99) QUIT();
+
+:: 
+~:: running (5) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/simulation
+	[ simple x computation: type:[char]: len:11 vowels:5 consonants:5 special:1 
+~:: parameter request: simulation().
+ ]
+
+-:: finished x computation.
+
+(simulation) entities: 
+
+~:: starting simulation.
+	~:: sim construct()
+	~:: initializing simulation run.
+		~:: ready | initialized sim.
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(1)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(2)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(3)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(4)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(5)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(6)
+
+	SIM::adding {entity}.
+	~:: adding sim {entity}.
+	- (Entity) was created.
+~:: increased entity nr.
+		~:: added sim {entity}(7)
+
+(simulation) objects: 
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(1)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(2)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(3)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(4)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(5)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(6)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(7)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(8)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(9)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(10)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(11)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(12)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(13)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(14)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(15)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(16)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(17)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(18)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(19)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(20)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(21)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(22)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(23)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(24)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(25)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(26)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(27)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(28)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(29)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(30)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(31)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(32)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(33)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(34)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(35)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(36)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(37)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(38)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(39)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(40)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(41)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(42)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(43)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(44)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(45)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(46)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(47)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(48)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(49)
+
+	SIM::adding {object}.
+	~:: adding sim {object}.
+- {Object} was created.
+~:: increased objects nr.
+		~:: added sim {object}(50)
+	~:: simulation is running.
+
+[E]: (1) (2) (3) (4) (5) (6) (7) 
+[O]: (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) (15) (16) (17) (18) (19) (20) (21) (22) (23) (24) (25) (26) (27) (28) (29) (30) (31) (32) (33) (34) (35) (36) (37) (38) (39) (40) (41) (42) (43) (44) (45) (46) (47) (48) (49) (50) 
+
+~:: (manipulate in session #) :: 
+~:: manipulating session: 10.
+(e|o)? : (entity #)? : 
+	~:: modifying entity #11.
+	~:: added to list (11)
+
+	* nr of manipulating sessions : 1
+	* manipulating (entities) in # session : 10 
+	* modifying entities # : 1
+
+	* manipulated entities : e(11) 
+
+(debug) manipulated eo sessions: ES:1 OS:0
+~:: listing manipulated targets: 
+	e(11) 
+
+- cycle round : 1 -
+19436ns
+
+- cycle round : 2 -
+10936ns
+
+- cycle round : 3 -
+10476ns
+
+- cycle round : 4 -
+10496ns
+
+- cycle round : 5 -
+10395ns
+
+- cycle round : 6 -
+10294ns
+
+- cycle round : 7 -
+10285ns
+
+- cycle round : 8 -
+10566ns
+
+- cycle round : 9 -
+12422ns
+
+- cycle round : 10 -
+~:: manipulation on {entity}[11]
+
+11158ns
+
+- cycle round : 11 -
+10375ns
+
+- cycle round : 12 -
+10355ns
+
+- cycle round : 13 -
+10436ns
+
+- cycle round : 14 -
+43005ns
+
+- cycle round : 15 -
+11559ns
+
+- cycle round : 16 -
+10566ns
+
+- cycle round : 17 -
+12081ns
+
+- cycle round : 18 -
+10375ns
+
+- cycle round : 19 -
+10275ns
+
+- cycle round : 20 -
+10325ns
+
+- cycle round : 21 -
+10355ns
+
+- cycle round : 22 -
+10425ns
+
+- cycle round : 23 -
+10375ns
+
+- cycle round : 24 -
+11679ns
+
+- cycle round : 25 -
+10455ns
+
+~:: generating stats ::~
+
+STATISTICS :: SIMULATION RUN:
+-----
+- simulation # cycles: 25
+- number of entities: 0
+- number of objects: 0
+- total time simulation run (nano seconds): 10455 ns.
+
+~:: deleting simulation.
+
+
+~:: running (4) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/help
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: parameter request: help().
+ ]
+
+-:: finished x computation.
+
+Help Function
+-----
+
+MODEL-AI
+v0.1-27c
+Author: vera lo
+https://model-ai.com/archive/model-ai.tar.gz
+
+When the Ai asks you for Logic you can enter a string to trigger natural language processing,
+or you can enter one of the following commands.
+
+COMMANDS:
+-----
+
+/help -- triggers this help function.
+/help -- displays version information.
+/killc -- built in killchain(1).
+/bank -- starts accounting.
+/hash -- hashes a string in MD5.
+/curl -- curls a website of choice from your machine.
+/table -- prints the table in numbers of your chosen number.
+/tableto -- prints the table in numbers of your chosen number up to max chosen number.
+/dice -- print a random dice number. (1...6)
+/dice2 -- print a random dice number. (1...nr_of_eyes)
+/stat -- stat() function stats directory/file.
+/cp -- copies file_1 into file_2. (src) -> (dst)
+/rm -- removes a file from the system.
+/+ -- adds 2 numbers.
+/- -- subtracts 2 numbers.
+// -- divides number 1 by number 2.
+/* -- multiplies number 1 by number 2.
+/pow -- does number 1 to power of number 2.
+/punch -- punch in numbers like with a calculator.
+/prpunch -- punch in numbers like with a calculator.
+/simulation -- runs a simulation for enities from the Entity class -&- objects from the Object class.
+/convert -- converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
+/convertd -- converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
+/stepping -- will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
+/rollout -- this function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
+/add_data -- adds data to the logical cabinets manually.
+/convert_data -- converts the data from a file.
+/audio_toggle -- disables/enables the Ai model its sound FX.
+/run_tube -- download YouTube file or playlist.
+/menu -- will hand you a menu with several options.
+/passwd -- changes the access code for running the model.
+/list_cred -- lists the MD5 hash (the access code) from the credentials store.
+/learned -- lists the added data through learning.
+/what -- lists the added data through learning.
+/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model.
+/test -- test the transponder responses.
+/answer
+/list -- lists the conversation.
+/export_backlogs -- export backlogs of user queries & transponder queries.
+/export_backlog1 -- export backlogs of user queries.
+/export_backlog2 -- export backlogs of transponder queries.
+/buildref -- build custom reference.
+/readref -- read a certain reference.
+/readrefs -- read all references.
+/lastref -- print the last reference.
+/refnumber -- print the number of references.
+/qlog -- qlog(x) -- log (x) queries.
+
+
+~:: running (3) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/refnumber
+	[ simple x computation: type:[char]: len:10 vowels:6 consonants:3 special:1 
+~:: parameter request: export_backlogs().
+ ]
+
+-:: finished x computation.
+- nrefs number : 59
+
+
+~:: running (2) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/list_cred
+	[ simple x computation: type:[char]: len:10 vowels:6 consonants:2 special:2 
+~:: parameter request: list_credentials().
+ ]
+
+-:: finished x computation.
+
+~:(creds) list:~
+
+	~:(1) ::	4921c0e2d1f6005abe1f9ec2e2041909
+
+~:: running (1) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/version
+	[ simple x computation: type:[char]: len:8 vowels:4 consonants:3 special:1 
+~:: parameter request: version().
+ ]
+
+-:: finished x computation.
+
+MODEL-AI version: v0.1-27c
+https://model-ai.com/archive/model-ai.tar.gz
+
 
 -:: aborting artificial life sequence, and clean up gracefully!
 

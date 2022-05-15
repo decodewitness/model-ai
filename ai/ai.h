@@ -4,7 +4,7 @@
 	// ALL META QUERIES AND REFERENCES GO IN "AI/LIB/QUERIES"
 
 #define PROGRAM "MODEL-AI"
-#define VERSION "v0.1-27c"
+#define VERSION "v0.1-28"
 #define WEBSITE	"https://model-ai.com"
 #define AUTHOR "Author: vera lo"
 #define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
