@@ -417,17 +417,23 @@ void Transponder::analytics(std::string s) {    // function that performs the an
         std::cout << "+query :: (" << this->subject << ")" << std::endl;
         // std::cout << "[RESPONSE] : " << ((queryAssigned) ? query : "-query was not assigned-") << std::endl; // query was just made here above
         
-        if (this->overriden == false) { // overriden INSTANCE WILL GENERATE RESPONSES ON THE FLY...
-            std::cout << "[RESPONSE] : " << this->result << std::endl;
-        } else {
-            std::cout << "[RESPONSE] : ";
-            for (int i=0; i<construed.size(); i++) {
-                std::cout << construed.at(i) << " ";
-            }           
-            std::cout << "\b";  // backspace
-            this->overriden = false;
-            this->construed.clear();    // empty construed
-        }
+
+
+
+        // if (this->overriden == false) { // overriden INSTANCE WILL GENERATE RESPONSES ON THE FLY...
+        //     std::cout << "[RESPONSE] : " << this->result << std::endl;
+        // } else {
+        //     std::cout << "[RESPONSE] : ";
+        //     for (int i=0; i<construed.size(); i++) {
+        //         std::cout << construed.at(i) << " ";
+        //     }           
+        //     std::cout << "\b";  // backspace
+        //     this->overriden = false;
+        //     this->construed.clear();    // empty construed
+        // }
+
+        // EDIT EDIT EDIT
+
         // sleep(3);
 
         // reset points
@@ -436,25 +442,30 @@ void Transponder::analytics(std::string s) {    // function that performs the an
         this->result = "missing";   // redundant
         // clear vector with metas
         this->vec.clear();
-    } else {
-        if (this->overriden == true) { // overriden INSTANCE WILL GENERATE RESPONSES ON THE FLY...
-            std::cout << "[RESPONSE] : ";
-            for (int i=0; i<construed.size(); i++) {
-                std::cout << construed.at(i) << " ";
-            }           
-            std::cout << "\b";  // backspace
-            this->overriden = false;
-            this->construed.clear();    // empty construed
+    } //else {
+        // if (this->overriden == true) { // overriden INSTANCE WILL GENERATE RESPONSES ON THE FLY...
+        //     std::cout << "[RESPONSE] : ";
+        //     for (int i=0; i<construed.size(); i++) {
+        //         std::cout << construed.at(i) << " ";
+        //     }           
+        //     std::cout << "\b";  // backspace
+        //     this->overriden = false;
+        //     this->construed.clear();    // empty construed
 
-            sleep(3);
-        } else {
-            // secondary output // DEFAULT RESPONSE // Not used in the most cases
-            std::cout << std::endl;
-            std::cout << "+query :: (" << this->subject << ")" << std::endl;
-            std::cout << "[RESPONSE] : " << this->default_response << std::endl;
-            sleep(3);
-        }
-    }
+        //     sleep(3);
+        // } else {
+        //     // secondary output // DEFAULT RESPONSE // Not used in the most cases
+        //     std::cout << std::endl;
+        //     std::cout << "+query :: (" << this->subject << ")" << std::endl;
+        //     std::cout << "[RESPONSE] : " << this->default_response << std::endl;
+        //     sleep(3);
+        // }
+    //}
+
+
+
+
+
     // std::cout << std::endl << "-- answer:" << std::endl << "\t" << this->response << std::endl;
     std::cout << std::endl;
 };
@@ -867,7 +878,18 @@ int Transponder::scored(std::string q, std::string tq) {
         std::cout << tq << endl;
         this->points = score;
         this->result = tq;
+
+        collusion(tq);
     }
+
+    // debugging output ------>
+    std::cout << std::endl;
+    std::cout << "DEBUGGING this ref." << std::endl;
+    for (auto &ref : words) {
+        std::cout << ref << " ";
+    }
+    std::cout << "\b";
+    // end of debugging output
 
     words.clear();
 

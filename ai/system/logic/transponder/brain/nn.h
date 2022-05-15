@@ -51,6 +51,9 @@ std::string Brain::sorter(std::string st, int level) {
             std::cout << "\t- " << combined << " : is open." << std::endl;
             std::getline(fileObject, linea);
             std::cout << "\t\t-- :: ( " << linea << " )" << std::endl;
+
+            collusion(linea);
+            
             fileObject.close();
         } else {
             std::cout << "\t- unable to open : " << combined << std::endl;
@@ -65,6 +68,9 @@ std::string Brain::sorter(std::string st, int level) {
             std::cout << "\t- " << combined2 << " : is open." << std::endl;
             std::getline(fileObject, lineb);
             std::cout << "\t\t-- :: ( " << lineb << " )" << std::endl;
+            
+            collusion(lineb);
+            
             fileObject.close();
         } else {
             std::cout << "\t- unable to open : " << combined << std::endl;

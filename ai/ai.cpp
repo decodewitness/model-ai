@@ -842,7 +842,14 @@ void AI::tsp(std::string s) {	// transponder function
 	// TALKING
 
 	this->transponder->respond(true);	// responds from transponder
-	readref();	// gives answers from internal catalogue
+	std::cout << "[RESPONSE] :" << std::endl;
+
+	// response has been gathered in place by transponder.
+		// next read out the response from the <vector> ev with the readref() function.
+			// ev is declared in "ai/system/logic/transponder/brain/nlp/func.h".
+
+	readref();	// read references in <vector> ev ;; gives answers from internal catalogue
+	clearref();	// after reading out all the gathered data isolated in ev then clear all these references
 	sleep(3);
 
 	// answer query
