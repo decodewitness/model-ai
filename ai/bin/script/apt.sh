@@ -59,3 +59,28 @@ echo "~:installing \"libssl-dev\"."
 echo
 sudo apt -y install libssl-dev libasound2-dev libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-gfx-dev
 echo "~:done."
+
+echo
+echo "~:installing speech/audio dependencies."
+echo
+### install PyAudio requirements
+echo
+echo "~!~ I need SUDO to install \"portaudio19-dev\" && \"python-all-dev\" for support for \"PyAudio\"."
+sudo apt-get install portaudio19-dev python-all-dev
+echo
+echo "IF PyAudio FAILS TO INSTALL YOU CAN TRY UNCOMMENTING THE NEXT LINE, THEN IT SHOULD WORK".
+###IF PyAudio FAILS TO INSTALL YOU CAN TRY UNCOMMENTING THE NEXT LINE, THEN IT SHOULD WORK
+
+#sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools
+echo "~:installing \"SpeechRecognition\", \"pyttsx3\", \"pyaudio\", \"pywhatkit\", \"wikipedia\", \"pyjokes\"."
+echo
+pip install SpeechRecognition
+pip install pyttsx3
+pip3 install pyaudio
+pip install pywhatkit
+pip install wikipedia
+pip install pyjokes
+
+echo
+echo "~:done."
+echo
