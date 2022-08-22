@@ -42,8 +42,13 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	// initialize_runtime_check();
 	// class instances are main function
 	// initiating runtime model Model-Ai with: "AI ai(arc);"
-	AI ai(arc);	// starts the Ai model model run cycle
 	
+	if (arc != 0) {
+		AI ai(arc);	// starts the Ai model model run cycle
+	} else {
+		cout << std::endl << "done." << std::endl;
+	}
+
 	// TESTING :: testing functions go here below!
 	//////////////////////////////////////////////
 				// functions go here else will run the default model with methods of interpreting: //
