@@ -28,24 +28,24 @@ g++ -o a.out ./main.cpp -lcurl -lasound -lSDL2main -lSDL2 -lSDL2_image -lSDL2_tt
 echo "~:done."
 
 ### compiling "sha1.cpp" with the "sha1.sh" script
-if [ -f "ai/system/security/sha1/sha1.sh" ]
-  then
-  chmod u+x ai/system/security/sha1/sha1.sh
-  ai/system/security/sha1/sha1.sh |tee ./ai/log/runtime.txt
-fi
+# if [ -f "ai/system/security/sha1/sha1.sh" ]
+  # then
+  # chmod u+x ai/system/security/sha1/sha1.sh
+  # ai/system/security/sha1/sha1.sh |tee ./ai/log/runtime.txt
+# fi
 
 ### run sha1 agent
-echo
-echo "~:checking hashing integrity with SHA1."
-if [ -f "ai/bin/sha1" ]
-  then
-  echo "~:found \"sha1\"."
-  ai/bin/sha1 |tee ./ai/log/runtime.txt
-  echo
-  else
-  echo "~!~ (oops)...file not found. can't check the integrity of your \"model-ai\" installation."
-  echo
-fi
+# echo
+# echo "~:checking hashing integrity with SHA1."
+# if [ -f "ai/bin/sha1" ]
+  # then
+  # echo "~:found \"sha1\"."
+  # ai/bin/sha1 |tee ./ai/log/runtime.txt
+  # echo
+  # else
+  # echo "~!~ (oops)...file not found. can't check the integrity of your \"model-ai\" installation."
+  # echo
+# fi
 
 ### start "ai/bin/runtime"
 echo "~:checking for old runtime environment."

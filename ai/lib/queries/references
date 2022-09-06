@@ -57,3 +57,8 @@
 "1000","","intelligence","","1,transponder has query.","","","","","":2526;
 "1000","","artificial","","1,transponder has query.","","","","","":5919;
 "1000","","logic","","1,transponder has query.","","","","","":3198;
+"1000","","test intelligence","","1,transponder has query.","","","","","":502:2526;
+"1000","","test intelligence logic","","1,transponder has query.","","","","","":502:2526:3198;
+"1000","","test logic intelligecne","","1,transponder has query.","","","","","":502:3198:-1;
+"1000","","intelligence","","1,transponder has query.","","","","","":2526;
+"1000","","learn","","1,transponder has query.","","","","","":424;

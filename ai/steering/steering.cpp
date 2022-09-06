@@ -45,6 +45,7 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	
 	if (arc != 0) {
 		AI ai(arc);	// starts the Ai model model run cycle
+		ai.decouple();	// decouples all living functions of the Ai model for shutdown sequence which gets initiated
 	} else {
 		cout << std::endl << "done." << std::endl;
 	}
@@ -57,7 +58,6 @@ int steering(int arc) {	// used as main function for the driver of the Model-Ai 
 	//////////////////////////////////////////////
 	// TESTING :: end of testing!
 	// end of Ai model-Ai run cycle and decouple with: "ai.decouple();"
-	ai.decouple();	// decouples all living functions of the Ai model for shutdown sequence which gets initiated
 return 0;
 }
 	// need to fix file_access(0)

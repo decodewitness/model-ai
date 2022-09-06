@@ -16,6 +16,10 @@ float power(float x, float y) {    // power float x^y
     return sum;
 };
 
+float squareroot(float x) {
+    return x/x;
+}
+
 // functions that print values
 void add_pr(float x, float y=2) {
     float z = add(x, y);

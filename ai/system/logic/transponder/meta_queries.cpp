@@ -113,7 +113,6 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
     std::string ourword;
     //int counter=0, actualnumber=1, limit = 20000;  // size of dictionary
 
-    std::cout << std::endl;
     std::cout << "~:: meta queries" << std::endl;
     std::cout << "\t~:: reverse_meta_query_lookup(\"";
     
@@ -123,7 +122,7 @@ void reverse_meta_query_lookup(int a[], int size) { // looks up the words for th
 
     // std::cout << "\b" << (32) << "\b";
     std::cout << "\")" << std::endl;
-    std::cout << "~:::~" << std::endl;
+    // std::cout << "~:::~" << std::endl;
     std::cout << std::endl;
     //std::cout << "- (debug) *(a+i) " << std::endl;
     // std::string word;

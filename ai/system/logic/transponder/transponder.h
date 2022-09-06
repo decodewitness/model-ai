@@ -15,6 +15,7 @@
 #include "brain/nn.h"
 #include "stringcode.h"
 #include "references.cpp"
+
 // #include "concept.cpp"   // included in AI/AI.H
 // #include "synonyms.h"    // already included in (transponder.h / transponder.cpp)
 
@@ -150,8 +151,11 @@ public:
     void list_relations();
     void logQueries(int x=0);
 
-    // numerate brain
+    // enumerate brain
     void enumerateBrain() { std::cout << std::endl << "- size envelope : " << enumerate().size() << std::endl; };
+
+    // weights
+    int weighted(std::string s);   // checks occurences inside /ai/lib/queries/weights
 };
 
 // eof

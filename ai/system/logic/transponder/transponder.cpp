@@ -13,6 +13,53 @@ Transponder::Transponder() {
     this->init();
 };
 
+
+// WORKING ON THIS FUNCTION!!!
+int Transponder::weighted(std::string s) {
+    int weight_increment = 0;
+    int cnt = 0, cnt2 = 0;
+
+    // variables
+    std::string wrd;
+    std::string tmp;
+    ifstream w;     // words in "weights"
+
+    // string stream
+    stringstream iss(s);
+
+    // open weights
+    w.open("ai/lib/queries/weights");   // replace filename with variable with the filename
+
+    if (w.is_open() == true) {
+        while (iss >> wrd) {    // query string
+            // for (int i=0; i<lim; i++) {
+                // w >> tmp;
+            cnt++;
+            std::cout << "- iterations: " << cnt << " word: " << wrd << std::endl;
+
+            // while (w >> tmp) {  // weights file
+            while(getline(w, tmp)) {
+                cnt2++;
+
+                if (wrd.compare(tmp) == 0) {
+                    std::cout << "!!! --(correct) (" << wrd << ", " << tmp << ")" << std::endl;
+                    std::cout << "\t-- words processed: " << cnt2 << " word: " << tmp << std::endl;
+
+                    weight_increment += 1;
+                }
+            }
+
+            w.seekg(SEEK_SET);
+        }
+
+        if (w.is_open() == true) {
+            w.close();
+        }
+    }
+
+return weight_increment;
+}
+
 // clean attributes properties
 void Transponder::clear_property() {
     // individuals && properties
@@ -625,6 +672,10 @@ std::string Transponder::answer(std::string s) {
 
             rank = this->rank_score(query2, x);  // calculate score
             
+            if (rank != 0) {
+                std::cout << std::endl << "~:: (!) ranked." << std::endl;
+            }
+            
             // debugging information
             // std::cout << std::endl << "(transponder query): " << x << std::endl;            
             // std::cout << "(rank): " << rank << std::endl;
@@ -695,9 +746,14 @@ return x;
 };
 
 int Transponder::rank_score(std::string q, std::string a) { // parameters: q:query, a:answer
-    int score = this->scored(q,a);
+    // int score = this->scored(q,a);   // if uncommented also uncomment "return score;"
+
+    int weighing = weighted(q);  // 8 = limit ;; defined by line number in /ai/lib/queries/weights
+
     // std::vector<std::string> result;
-return score;
+
+return weighing;
+// return score;
 };
 
 int Transponder::scored(std::string q, std::string tq) {
@@ -735,15 +791,15 @@ int Transponder::scored(std::string q, std::string tq) {
             std::cout <<  "\t~:: pushing back ---> " << wrd << std::endl;
         }
 
-
         // DEBUG HERE
-
 
         for (const auto& s : words){
             while (this->scores >> word) {
-                if (word.compare(s) == false) {
+                std::cout << "~:: comparing -> " << s << " to " <<  word << std::endl;
+                if (word.compare(s) == 0) {
                     std::cout << "- found: " << word << std::endl;
                     score += 1;
+                    std::cout << "\t- score: " << score << std::endl;
                     sleep(1);
                 }
             }

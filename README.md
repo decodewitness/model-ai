@@ -1509,16 +1509,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffcbd107370)
-	- stacking header:(1)::<address>(0x7ffcbd107390)
-	- stacking header:(2)::<address>(0x7ffcbd1073b0)
-	- stacking header:(3)::<address>(0x7ffcbd1073d0)
-	- stacking header:(4)::<address>(0x7ffcbd1073f0)
-	- stacking header:(5)::<address>(0x7ffcbd107410)
-	- stacking header:(6)::<address>(0x7ffcbd107430)
-	- stacking header:(7)::<address>(0x7ffcbd107450)
-	- stacking header:(8)::<address>(0x7ffcbd107470)
-	- stacking header:(9)::<address>(0x7ffcbd107490)
+	- stacking header:(0)::<address>(0x7ffe7ad78ae0)
+	- stacking header:(1)::<address>(0x7ffe7ad78b00)
+	- stacking header:(2)::<address>(0x7ffe7ad78b20)
+	- stacking header:(3)::<address>(0x7ffe7ad78b40)
+	- stacking header:(4)::<address>(0x7ffe7ad78b60)
+	- stacking header:(5)::<address>(0x7ffe7ad78b80)
+	- stacking header:(6)::<address>(0x7ffe7ad78ba0)
+	- stacking header:(7)::<address>(0x7ffe7ad78bc0)
+	- stacking header:(8)::<address>(0x7ffe7ad78be0)
+	- stacking header:(9)::<address>(0x7ffe7ad78c00)
 
 
 -:: checking AI functions.
@@ -1576,31 +1576,365 @@ file or directory: -- ./module_bay
 file or directory: -- ./DCIM
 
 
--:: aborting artificial life sequence, and clean up gracefully!
+~:: running (10) queries.
 
--:: display ((x)->live())(?x) equaled  .
+::- type your query -::
 
--:: destructor artificial life routine was called. -::
-	killing abstraction layer.
+punch.
+--?:: 
 
--:: decoupler.
-	-:: decoupling sampler
-	-:: sampler set to pause.
-		(-  ||  -)
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	test in artificial logic and intelligence
+	[ simple x computation: type:[char]: len:41 vowels:26 consonants:15 special:0 ]
+
+[ -- you're asking my input -- ]
+
+-:: finished x computation.
+*string_next_logic() :: ssh: "test in artificial logic and intelligence".
+	- HMAC string :: *string_next_logic() ::  (test in artificial logic and intelligence) is >> 
+~:: file_access()
+(debug) file_access(level=0).
+
+~:: searching indexes:
+	- rewinding file index.
+
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
+
+~:: prepTransponder() : (test in artificial logic and intelligence)
+~:: transponder -> prep()
+
+~:: set subject to: "test in artificial logic and intelligence".
+(debug) word :: test
+(debug) word :: in
+(debug) word :: artificial
+(debug) word :: logic
+(debug) word :: and
+(debug) word :: intelligence
+
+~:: (debug)::nrOfWords = 6.
+~:: (debug)::counter = 6.
+
+(debug) calling prepare_ints() (from) -> "test in artificial logic and intelligence".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (6).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) test :: #502
+(debug) 1) in :: #6
+(debug) 2) artificial :: #5919
+(debug) 3) logic :: #3198
+(debug) 4) and :: #3
+(debug) 5) intelligence :: #2526
+
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequences:
+		- 502		- 6		- 5919		- 3198		- 3		- 2526
+~:: meta queries
+	~:: reverse_meta_query_lookup("502,6,5919,3198,3,2526,")
+
+~:: reverse meta query lookup: 
+	- test		 --> *(a+i) = 502 - *(a+i) - 1 = 501
+	- in		 --> *(a+i) = 6 - *(a+i) - 1 = 5
+	- artificial		 --> *(a+i) = 5919 - *(a+i) - 1 = 5918
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
+	- and		 --> *(a+i) = 3 - *(a+i) - 1 = 2
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+
+(EOT)
 
 
-::=> saving grace (routine) and closing libraries <=::
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
 
--:: closing files.
--:: cleaning memory.
+~:: prepTransponder() : (test in artificial logic and intelligence)
+~:: transponder -> prep()
 
-~:: decoupling transponder.
-	~:: closed "ai/lib/queries/weights" transponder file access.
-	~:: closed "ai/data/files/synonyms.txt" transponder file access.
-~:: closed access.
+~:: set subject to: "test in artificial logic and intelligence".
+(debug) word :: test
+(debug) word :: in
+(debug) word :: artificial
+(debug) word :: logic
+(debug) word :: and
+(debug) word :: intelligence
 
--:: calling destructor for AI::Model.
--:: done.
+~:: (debug)::nrOfWords = 6.
+~:: (debug)::counter = 6.
+
+(debug) calling prepare_ints() (from) -> "test in artificial logic and intelligence".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (12).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) test :: #502
+(debug) 1) in :: #6
+(debug) 2) artificial :: #5919
+(debug) 3) logic :: #3198
+(debug) 4) and :: #3
+(debug) 5) intelligence :: #2526
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("502,6,5919,3198,3,2526,")
+
+~:: reverse meta query lookup: 
+	- test		 --> *(a+i) = 502 - *(a+i) - 1 = 501
+	- in		 --> *(a+i) = 6 - *(a+i) - 1 = 5
+	- artificial		 --> *(a+i) = 5919 - *(a+i) - 1 = 5918
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
+	- and		 --> *(a+i) = 3 - *(a+i) - 1 = 2
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
+	~:: (DEBUG) performing analytics() in {transponder}.
+	::- analytics -::
+
+	-----------------
+
+		* words no_#: 6
+		* length: 41
+		* vowels: 15
+		* consonants: 21
+		* numbers: 0
+		* special chars: 5
+		* unknown chars: 0
+
+
+(debug) answer.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+(debug) : 
+	-1
+	test in artificial logic and intelligence
+
+- iterations: 1 word: test
+!!! --(correct) (test, test)
+	-- words processed: 8 word: test
+- iterations: 2 word: in
+- iterations: 3 word: artificial
+- iterations: 4 word: logic
+- iterations: 5 word: and
+- iterations: 6 word: intelligence
+
+~:: (!) ranked.
+
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 1
+biggest : 1
+
+
+labelled biggest faculty : 1
+
+
+----- ----- -----
+(debug) result : 
+
+~:: transponder -> answer()
+
+[RESPONSE] :
+
+~:: clearref() - clearing last references.
+
+(EOT)
+
+~:: running (9) queries.
+
+::- type your query -::
+
+punch.
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).
