@@ -152,12 +152,29 @@ void AI::version() {
 	std::cout << std::endl;
 };
 
+// RUNNING SCRIPTS
+void AI::runscript(std::string ss="1") {
+	std::string xs = ss;
+	if (xs=="1") {
+		xs = "ai/bin/script/disable_apt.sh";
+	} else {
+		xs = ss;
+	}
+	std::cout << std::endl;
+	std::cout << "~:: running: " << xs << std::endl;
+	std::cout << std::endl;
+
+	system(xs.c_str());
+}
+
 // initialize_runtime_check
-void AI::initialize_runtime_check() { // actually should be staged and recursive / needs a parameter in that case
+void AI::initialize_runtime_check(int x=0) { // actually should be staged and recursive / needs a parameter in that case
 	int nrsteps = 3;
 
     std::cout << "~:: ** &initialize_runtime_check() **" << std::endl;
     
+
+
 	// // moved to runtime script --> "/run"
     // // compile sha1 program from external library.
     // std::cout << "(debugging symbol here)" << std::endl;
@@ -172,7 +189,14 @@ void AI::initialize_runtime_check() { // actually should be staged and recursive
                 // do logic here
             case 1: // files complete
                 std::cout << "\t- file hierarchy." << std::endl;
-                break;
+                
+				if (x == 1) {
+					// executes "ai/bin/scripts/disable_apt.$$$" which replaces the "./start" script and makes it executable.
+					std::cout << "~:: --\t-- executing runscript()." << std::endl;
+					AI::runscript();	// default value is 1.
+				}
+								
+				break;
                 // do logic here
             case 2: // file integrity && hashing
                 std::cout << "\t- file integrity." << std::endl;
@@ -190,8 +214,31 @@ void AI::initialize_runtime_check() { // actually should be staged and recursive
     }
 };
 
-AI::AI(int n) {	// AI constructor
-	//char ch;
+AI::AI(int n=1, int ss=0) {	// AI constructor
+	
+	// BUSY WITH THIS FUNCTION!!!
+
+	int xs;
+	// char ch;
+	ifstream fs;
+
+	fs.open("./chk.0");
+
+	if (fs.is_open() == true) {
+		std::cout << std::endl;
+		std::cout << "\t\tCHK.0\t\t+OK." << std::endl;
+		std::cout << std::endl;
+
+		// this will execute runscript
+		// xs = 1; 
+
+		xs = 1;	// or xs=ss=1.
+	} else {
+		std::cout << std::endl;
+		std::cout << "~:: skipping CHK.0." << std::endl;
+		std::cout << std::endl;
+	}
+
 	// play audio file
 	//this->play_audio_file("ai/system/audio/samples/flir.wav");
 	
@@ -206,7 +253,7 @@ AI::AI(int n) {	// AI constructor
 	}
 
 	// runtime check
-	initialize_runtime_check();
+	initialize_runtime_check(xs);
 
 	// splash oval
 	int x=amnesia();

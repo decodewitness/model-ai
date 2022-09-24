@@ -16,48 +16,48 @@ Transponder::Transponder() {
 
 // WORKING ON THIS FUNCTION!!!
 int Transponder::weighted(std::string s) {
-    int weight_increment = 0;
-    int cnt = 0, cnt2 = 0;
+    // int weight_increment = 0;
+    // int cnt = 0, cnt2 = 0;
 
-    // variables
-    std::string wrd;
-    std::string tmp;
-    ifstream w;     // words in "weights"
+    // // variables
+    // std::string wrd;
+    // std::string tmp;
+    // ifstream w;     // words in "weights"
 
-    // string stream
-    stringstream iss(s);
+    // // string stream
+    // stringstream iss(s);
 
-    // open weights
-    w.open("ai/lib/queries/weights");   // replace filename with variable with the filename
+    // // open weights
+    // w.open("ai/lib/queries/weights");   // replace filename with variable with the filename
 
-    if (w.is_open() == true) {
-        while (iss >> wrd) {    // query string
-            // for (int i=0; i<lim; i++) {
-                // w >> tmp;
-            cnt++;
-            std::cout << "- iterations: " << cnt << " word: " << wrd << std::endl;
+    // if (w.is_open() == true) {
+    //     while (iss >> wrd) {    // query string
+    //         // for (int i=0; i<lim; i++) {
+    //             // w >> tmp;
+    //         cnt++;
+    //         std::cout << "- iterations: " << cnt << " word: " << wrd << std::endl;
 
-            // while (w >> tmp) {  // weights file
-            while(getline(w, tmp)) {
-                cnt2++;
+    //         // while (w >> tmp) {  // weights file
+    //         while(getline(w, tmp)) {
+    //             cnt2++;
 
-                if (wrd.compare(tmp) == 0) {
-                    std::cout << "!!! --(correct) (" << wrd << ", " << tmp << ")" << std::endl;
-                    std::cout << "\t-- words processed: " << cnt2 << " word: " << tmp << std::endl;
+    //             if (wrd.compare(tmp) == 0) {
+    //                 std::cout << "!!! --(correct) (" << wrd << ", " << tmp << ")" << std::endl;
+    //                 std::cout << "\t-- words processed: " << cnt2 << " word: " << tmp << std::endl;
 
-                    weight_increment += 1;
-                }
-            }
+    //                 weight_increment += 1;
+    //             }
+    //         }
 
-            w.seekg(SEEK_SET);
-        }
+    //         w.seekg(SEEK_SET);
+    //     }
 
-        if (w.is_open() == true) {
-            w.close();
-        }
-    }
-
-return weight_increment;
+    //     if (w.is_open() == true) {
+    //         w.close();
+    //     }
+    // }
+// return weight_increment;
+return 1;
 }
 
 // clean attributes properties
@@ -575,6 +575,11 @@ std::string Transponder::retVal() {
 };
 
 std::string Transponder::answer(std::string s) {
+
+    std::cout << std::endl;
+    std::cout << "~:: --(!)-- answer(std::string)" << std::endl;
+    std::cout << std::endl;
+
     int answers_processed = 0;
     int rank;
     int count;
@@ -583,7 +588,7 @@ std::string Transponder::answer(std::string s) {
     int b=0;
     int pos1, pos2;
 
-    std::string x;
+    std::string x = "-assemble-";
     std::string tp; // initially chosen returned query
     std::string query = s;
     std::string query2;
@@ -671,9 +676,12 @@ std::string Transponder::answer(std::string s) {
             std::cout << std::endl;
 
             rank = this->rank_score(query2, x);  // calculate score
-            
+
+            // DEBUGGING OPTION
+            std::cout << std::endl << "~:: (!!) rank of: " << query2 << std::endl << "\t:: == " << x << std::endl;
+
             if (rank != 0) {
-                std::cout << std::endl << "~:: (!) ranked." << std::endl;
+                std::cout << std::endl << "~:: (!) ranked" << std::endl;
             }
             
             // debugging information

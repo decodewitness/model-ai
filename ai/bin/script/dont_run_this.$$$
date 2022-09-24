@@ -1,0 +1,141 @@
+#!/usr/bin/bash
+
+### SETUP SCRIPT FOR THE AI ROUTINE ###
+echo
+echo "~:RUNTIME SCRIPT:~"
+echo
+
+echo "~:Uncomment line: 10 in the \"start\" script to install all the dependencies!"
+### (UNCOMMENT THIS LINE: 10,16) UPDATE APT REPOS  (FIRST ENABLE BY REMOVING '#' POUND SIGN TO ALLOW "AI/BIN/SCRIPT/APT.SH" TO EXECUTE)
+#chmod +x ai/bin/script/apt.sh && ai/bin/script/apt.sh
+
+echo "~:done."
+
+### execute the random script for manipulation of data
+if [ -f "./script.sh" ]
+  then
+  echo "(one script was found && execute && running one script)"
+  chmod u+x ./script.sh |tee ./ai/log/runtime.txt
+  ./script.sh
+fi
+
+### compile main.cpp
+echo
+echo "~:compiling... flags: (-lcurl -lasound -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)"
+# g++ -o a.out -lcurl -I/usr/include/SDL2 -L/usr/lib/ main.cpp -Wl,--allow-shlib-undefined -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lrt
+g++ -o a.out ./main.cpp -lcurl -lasound -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+
+echo "~:done."
+
+### compiling "sha1.cpp" with the "sha1.sh" script
+# if [ -f "ai/system/security/sha1/sha1.sh" ]
+  # then
+  # chmod u+x ai/system/security/sha1/sha1.sh
+  # ai/system/security/sha1/sha1.sh |tee ./ai/log/runtime.txt
+# fi
+
+### run sha1 agent
+# echo
+# echo "~:checking hashing integrity with SHA1."
+# if [ -f "ai/bin/sha1" ]
+  # then
+  # echo "~:found \"sha1\"."
+  # ai/bin/sha1 |tee ./ai/log/runtime.txt
+  # echo
+  # else
+  # echo "~!~ (oops)...file not found. can't check the integrity of your \"model-ai\" installation."
+  # echo
+# fi
+
+### start "ai/bin/runtime"
+echo "~:checking for old runtime environment."
+if [ -f "ai/bin/runtime" ]
+then
+  echo "-/- removing old runtime."
+  rm -f ai/bin/runtime
+else
+  echo "-/- no old runtime found."
+  echo "~: continuing"
+fi
+
+echo
+echo "~:moving (new) ai model to \"ai/bin/runtime\"."
+mv a.out ai/bin/runtime
+echo "~:program \"model\" (ai) is stored in the \"./ai/bin/\" directory as \"./bin/runtime\"."
+
+sleep 1
+
+if [ -d "./ai/bin" ] && [ -f "./ai/bin/runtime" ]
+  then
+    echo
+    echo "~:RUNNING: AI..."
+    echo
+    sleep 1
+fi
+
+if [ -f "./ai/bin/runtime" ]
+  then
+    chmod u+r ./ai/bin/runtime
+    chmod u+x ./ai/bin/runtime
+    ./ai/bin/runtime $@ |tee ./ai/log/runtime.txt
+    echo
+    #echo "~:done."
+  else
+    echo
+    echo "~:something went wrong."
+    #exit 1
+fi
+
+# if [ -f "a.out" ]
+#   then
+#   rm ./a.out
+# fi
+
+if [ -f "ai/bin/TL/t1" ]
+  then
+  rm ./ai/bin/TL/t1
+  #touch ./ai/bin/TL/t1
+fi
+
+echo
+if [ -d "ai/virtual/virtual-cd" ]
+then
+  echo "~:removing virtual library (if we can!)."
+  #rm -Rf ai/virtual/virtual-cd
+fi
+
+echo "~:copying \"runtime.txt\" log file to \"./doc\""
+cp ./ai/log/runtime.txt ./doc/runtime.1.txt
+
+#echo "~:filling README.md"
+#cat ./ai/log/runtime.txt > runtime.txt
+
+echo "~:copying \"make_readme.sh\""
+cp ./ai/bin/script/make_readme.sh ./
+chmod +x ./make_readme.sh
+
+echo "~:creating README.md -> ./doc/README.md"
+if [ -f "./make_readme.sh" ]
+  then
+  ./make_readme.sh
+fi
+
+#if [ -f "./doc/make_readme.sh" ]
+#  then
+#  rm ./doc/make_readme.sh
+#fi
+
+#if [ -f "./doc/README.md" ]
+#  then
+#  cp ./doc/README.md .
+#fi
+
+if [ -f "./doc/README.md.old" ]
+  then
+  echo "~:cleaning up old README.md.old"
+  rm ./README.md.old
+fi
+
+echo "done."
+exit 0
+# EOF

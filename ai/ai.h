@@ -184,7 +184,7 @@ private:
 public:
 
 	// constructor
-	AI(int n=1);
+	AI(int n, int ss);
 
 	// splash
 	void splash(void);
@@ -195,7 +195,7 @@ public:
 
 	// round init
 	void init();
-	void initialize_runtime_check();
+	void initialize_runtime_check(int x);
 
 	// headers
 	void headers();
@@ -417,6 +417,9 @@ public:
 
 	// analytical / category research
 	void qlog(int x);	// log last queries ;; x=number (0 default ;; means only last query+response)
+
+	// running scripts
+	void runscript(std::string ss);
 };
 
 #endif
