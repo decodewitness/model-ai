@@ -7,7 +7,7 @@ echo
 
 echo "~:Uncomment line: 10 in the \"start\" script to install all the dependencies!"
 ### (UNCOMMENT THIS LINE: 10,16) UPDATE APT REPOS  (FIRST ENABLE BY REMOVING '#' POUND SIGN TO ALLOW "AI/BIN/SCRIPT/APT.SH" TO EXECUTE)
-#chmod +x ai/bin/script/apt.sh && ai/bin/script/apt.sh
+chmod +x ai/bin/script/apt.sh && ai/bin/script/apt.sh
 
 echo "~:done."
 
