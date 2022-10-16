@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffedb6c6e80)
-	- stacking header:(1)::<address>(0x7ffedb6c6ea0)
-	- stacking header:(2)::<address>(0x7ffedb6c6ec0)
-	- stacking header:(3)::<address>(0x7ffedb6c6ee0)
-	- stacking header:(4)::<address>(0x7ffedb6c6f00)
-	- stacking header:(5)::<address>(0x7ffedb6c6f20)
-	- stacking header:(6)::<address>(0x7ffedb6c6f40)
-	- stacking header:(7)::<address>(0x7ffedb6c6f60)
-	- stacking header:(8)::<address>(0x7ffedb6c6f80)
-	- stacking header:(9)::<address>(0x7ffedb6c6fa0)
+	- stacking header:(0)::<address>(0x7fff8992c500)
+	- stacking header:(1)::<address>(0x7fff8992c520)
+	- stacking header:(2)::<address>(0x7fff8992c540)
+	- stacking header:(3)::<address>(0x7fff8992c560)
+	- stacking header:(4)::<address>(0x7fff8992c580)
+	- stacking header:(5)::<address>(0x7fff8992c5a0)
+	- stacking header:(6)::<address>(0x7fff8992c5c0)
+	- stacking header:(7)::<address>(0x7fff8992c5e0)
+	- stacking header:(8)::<address>(0x7fff8992c600)
+	- stacking header:(9)::<address>(0x7fff8992c620)
 
 
 -:: checking AI functions.
@@ -1542,287 +1542,35 @@ punch.
 -:: :logic: (compute x computation)::-
 	/testa
 	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
-~:: parameter request: testA().
+~:: testing parameters: testA().
  ]
 
 -:: finished x computation.
+*(testA)->{
 
-~:: running (9) queries.
 
-::- type your query -::
 
-punch.
---?:: 
-punch.
---?:: 
+=== * === * === *
+<!> trial rounds in these functions (logged output):
 
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	q
-	[ simple x computation: type:[char]: len:1 vowels:1 consonants:0 special:0 ]
+=== * === * === *
 
-[ -- you're asking my input -- ]
+CREATING FIRST CHAIN:
 
--:: finished x computation.
-*string_next_logic() :: ssh: "q".
-	- HMAC string :: *string_next_logic() ::  (q) is >> 
-~:: file_access()
-(debug) file_access(level=0).
+~:: chainCreate().
 
-~:: searching indexes:
-	- rewinding file index.
 
-~:: transponder was not prepared yet.
-	~:: preparing transponder.
+Chain ID	:	6
+Active Chain	:	0
+Nr. of Chains	:	0
 
-~:: prepTransponder() : (q)
-~:: transponder -> prep()
+=== * === * === *
 
-~:: set subject to: "q".
-(debug) word :: q
 
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "q".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+} -- (testA).
 
-~:: (debug) number of matching occurences: (1).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) q :: #559
-
-~:: meta queries ~:: storing meta query sequence
-	~::::meta::::~
-	- path: "ai/lib/queries/meta_queries".
-	- meta sequences:
-		- 559
-~:: meta queries
-	~:: reverse_meta_query_lookup("559,")
-
-~:: reverse meta query lookup: 
-	- q		 --> *(a+i) = 559 - *(a+i) - 1 = 558
-
-(EOT)
-
-
-~:: tsp() :
-	~:!:~ transponder is not prepared yet.
-		;; preparing transponder.
-
-~:: prepTransponder() : (q)
-~:: transponder -> prep()
-
-~:: set subject to: "q".
-(debug) word :: q
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "q".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (2).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) q :: #559
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("559,")
-
-~:: reverse meta query lookup: 
-	- q		 --> *(a+i) = 559 - *(a+i) - 1 = 558
-
-(EOT)
-
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 1
-		* vowels: 0
-		* consonants: 1
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-~:: --(!)-- answer(std::string)
-
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 1,transponder has query.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 2,transponder gets answer.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 3,transponder is bool.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 4"ransponder is boolean.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 5,transponder is boolean boolean.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 6,hi.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 7,hello.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 8,goodbye.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 9,I'm your assistant.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 10,limited assistance right now.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 11,use the /help function.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 13,you are amazing.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	q
-
-
-~:: (!!) rank of: q
-	:: == 14,inferring logic.
-
-~:: (!) ranked
-
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
-
-(debug)
-noted : 1
-biggest : 1
-
-
-labelled biggest faculty : 1
-
-
------ ----- -----
-(debug) result : 
-
-~:: transponder -> answer()
-
-[RESPONSE] :
-
-~:: clearref() - clearing last references.
-
-(EOT)
-
-~:: running (8) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
- ]
-
--:: finished x computation.
-
-(kill chain) function() : 9
+Press --ENTER--.
 
 -/- initializing killchain(1) sequence.
 

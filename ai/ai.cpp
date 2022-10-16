@@ -1068,13 +1068,16 @@ void AI::query() {	// respond to logical query method
 	// process commands	// compute logic and strings
 		// is declared in AI/LOGIC/ASSEMBLY/LOGIC.H
 		// functions in AI/LOGIC/ASSEMBLY/LOGIC.CPP
-	if (isTestA == true) {
+	if (isTest == true) {
+		this->testA();	// currently only testA() is available...
+		isTest = false;
+	} else if (isTestA == true) {
 		std::cout << "*(testA)->{" << std::endl;
 		this->testA();
 		std::cout << std::endl << "} -- (testA)." << std::endl;
 		std::cout << std::endl << "Press --ENTER--." << std::endl;
 		std::cin >> ch;
-		this->killc(9);
+		// this->killc(9);
 	} else if (isSim == true) {	// run simulation
 		std::cout << std::endl << "(simulation) entities: ";
 		std::cin >> x;
@@ -1357,9 +1360,6 @@ void AI::query() {	// respond to logical query method
 	} else if (isMenu == true) {
 		this->menu();
 		isMenu = false;
-	} else if (isTest == true) {
-		this->testA();
-		isTest = false;
 	} else if (isClearQue == true) {
 		this->clearQue();
 		isClearQue = false;
@@ -2389,8 +2389,8 @@ struct Chain {
 	std::cout << "CREATING FIRST CHAIN:" << std::endl;
 	Chain *chain1 = &chainCreate();
 
-	chain1->id = 6;
-
+	// chain1->id = 6;
+	chainID(*chain1);
 
 
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND

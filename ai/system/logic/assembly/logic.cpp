@@ -63,7 +63,10 @@ void commands(int x, std::string param) {
 };
 
 void compare_query_str(std::string str) {   // handles the commands for the logic input
-    if (str.compare("/testA") == false || str.compare("/testa") == false) {
+    if (str.compare("/test") == false) {
+        std::cout << std::endl << "~:: testing parameters request: test()." << std::endl;
+        isTest = true;
+    } else if (str.compare("/testA") == false || str.compare("/testa") == false) {
         std::cout << std::endl << "~:: testing parameters: testA()." << std::endl;
         isTestA = true;   // triggers testing function (AI::testA)
     } else if (str.compare("/sim") == false || str.compare("/simulation") == false) {
@@ -169,9 +172,6 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/menu") == false) {
         std::cout << std::endl << "~:: parameter request: menu()." << std::endl;
         isMenu = true;
-    } else if (str.compare("/test") == false) {
-        std::cout << std::endl << "~:: parameter request: test()." << std::endl;
-        isTest = true;
     } else if (str.compare("/clear metas") == false) {
         std::cout << std::endl << "~:: parameter request: clear_que()." << std::endl;
         isClearQue = true;

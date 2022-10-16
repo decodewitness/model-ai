@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe7a273c10)
-	- stacking header:(1)::<address>(0x7ffe7a273c30)
-	- stacking header:(2)::<address>(0x7ffe7a273c50)
-	- stacking header:(3)::<address>(0x7ffe7a273c70)
-	- stacking header:(4)::<address>(0x7ffe7a273c90)
-	- stacking header:(5)::<address>(0x7ffe7a273cb0)
-	- stacking header:(6)::<address>(0x7ffe7a273cd0)
-	- stacking header:(7)::<address>(0x7ffe7a273cf0)
-	- stacking header:(8)::<address>(0x7ffe7a273d10)
-	- stacking header:(9)::<address>(0x7ffe7a273d30)
+	- stacking header:(0)::<address>(0x7fff8992c500)
+	- stacking header:(1)::<address>(0x7fff8992c520)
+	- stacking header:(2)::<address>(0x7fff8992c540)
+	- stacking header:(3)::<address>(0x7fff8992c560)
+	- stacking header:(4)::<address>(0x7fff8992c580)
+	- stacking header:(5)::<address>(0x7fff8992c5a0)
+	- stacking header:(6)::<address>(0x7fff8992c5c0)
+	- stacking header:(7)::<address>(0x7fff8992c5e0)
+	- stacking header:(8)::<address>(0x7fff8992c600)
+	- stacking header:(9)::<address>(0x7fff8992c620)
 
 
 -:: checking AI functions.
@@ -1516,16 +1516,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1535,8 +1535,6 @@ FIFO/pipe: -- ./downloads
 
 ::- type your query -::
 
-punch.
---?:: 
 punch.
 --?:: 
 
@@ -1559,6 +1557,13 @@ punch.
 
 CREATING FIRST CHAIN:
 
+~:: chainCreate().
+
+
+Chain ID	:	6
+Active Chain	:	0
+Nr. of Chains	:	0
+
 === * === * === *
 
 
@@ -1566,3 +1571,6 @@ CREATING FIRST CHAIN:
 } -- (testA).
 
 Press --ENTER--.
+
+-/- initializing killchain(1) sequence.
+

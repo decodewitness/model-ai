@@ -2,6 +2,9 @@
 
 	// ALL DATA FILES GO IN: "AI/DATA/FILES"
 	// ALL META QUERIES AND REFERENCES GO IN "AI/LIB/QUERIES"
+	//
+	// ***
+	// Commands are in ai/system/logic/assembly/logic.cpp, logic.h, AI::Query().
 
 #define PROGRAM "MODEL-AI"
 #define VERSION "v0.1-28"
@@ -52,10 +55,10 @@
 //#include "simulation.cpp"	// already included in "ai.cpp"
 //#include "fetch/curl.cpp"		(fix)
 #include "lib/testing.cpp"
-#include "chain/chain.cpp"
 #include "system/gradle.h"
 //#include "brain/brain.cpp"	// use "nn.cpp" instead
 #include "comodo/varaan.h"
+#include "chains/chain.cpp"
 #include "lib/construct.cpp"
 #include "patching/patch.cpp"
 #include "system/protocol.cpp"

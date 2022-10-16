@@ -33,8 +33,19 @@ struct Chain {
 */
 
 Chain & chainCreate() {
+
+
+    int chainno = 0;
     Chain *c = new Chain;
-    return *c;
+    
+    std::cout << std::endl << "~:: chainCreate()." << std::endl;
+    std::cout << std::endl;
+
+    c->id = chainno;
+    c->activeChain = chainno;
+    c->nrOfChains = chainno;
+
+return *c;
 }
 
 void deleteChain(Chain &c) {
@@ -77,12 +88,16 @@ void writeChain(int x, int id, Chain &c, std::string str) {   // x=chain, id=cha
 
 // checks for double chain ID nrs.
 void chainID(Chain c) {
-    std::cout << "\tChain ID\t:\t";
+    std::cout << std::endl;
+    std::cout << "Chain ID\t:\t";
     std::cout << reportStatID(c);
+    std::cout << std::endl;
     std::cout << "Active Chain\t:\t";
     std::cout << reportActiveChain(c);
+    std::cout << std::endl;
     std::cout << "Nr. of Chains\t:\t";
     std::cout << reportStatChains(c);
+    std::cout << std::endl;
 }
 
 void viewChainData(int x, Chain &c) { // x = chain number
