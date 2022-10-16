@@ -1516,16 +1516,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff8992c500)
-	- stacking header:(1)::<address>(0x7fff8992c520)
-	- stacking header:(2)::<address>(0x7fff8992c540)
-	- stacking header:(3)::<address>(0x7fff8992c560)
-	- stacking header:(4)::<address>(0x7fff8992c580)
-	- stacking header:(5)::<address>(0x7fff8992c5a0)
-	- stacking header:(6)::<address>(0x7fff8992c5c0)
-	- stacking header:(7)::<address>(0x7fff8992c5e0)
-	- stacking header:(8)::<address>(0x7fff8992c600)
-	- stacking header:(9)::<address>(0x7fff8992c620)
+	- stacking header:(0)::<address>(0x7fff13310410)
+	- stacking header:(1)::<address>(0x7fff13310430)
+	- stacking header:(2)::<address>(0x7fff13310450)
+	- stacking header:(3)::<address>(0x7fff13310470)
+	- stacking header:(4)::<address>(0x7fff13310490)
+	- stacking header:(5)::<address>(0x7fff133104b0)
+	- stacking header:(6)::<address>(0x7fff133104d0)
+	- stacking header:(7)::<address>(0x7fff133104f0)
+	- stacking header:(8)::<address>(0x7fff13310510)
+	- stacking header:(9)::<address>(0x7fff13310530)
 
 
 -:: checking AI functions.
@@ -1592,13 +1592,12 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/testa
-	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
-~:: testing parameters: testA().
+	/test
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: testing parameters request: test().
  ]
 
 -:: finished x computation.
-*(testA)->{
 
 
 
@@ -1612,17 +1611,45 @@ CREATING FIRST CHAIN:
 ~:: chainCreate().
 
 
-Chain ID	:	6
+Chain ID	:	0
 Active Chain	:	0
-Nr. of Chains	:	0
+Nr. of Chains	:	1
 
 === * === * === *
 
 
 
-} -- (testA).
+~:: running (9) queries.
 
-Press --ENTER--.
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/kills
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1  ]
+
+-:: finished x computation.
+
+~:: running (8) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
+ ]
+
+-:: finished x computation.
+
+(kill chain) function() : 9
 
 -/- initializing killchain(1) sequence.
 

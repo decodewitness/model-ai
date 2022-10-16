@@ -43,7 +43,7 @@ Chain & chainCreate() {
 
     c->id = chainno;
     c->activeChain = chainno;
-    c->nrOfChains = chainno;
+    c->nrOfChains = chainno + 1;
 
 return *c;
 }
