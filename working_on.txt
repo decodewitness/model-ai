@@ -1,5 +1,0 @@
-CURRENTLY WORKING ON:
------
-- Chains.
-- The weights in the function: int Transponder::weighted(std::string s)
-    -- Current bug is iteration only compares with the first line.
