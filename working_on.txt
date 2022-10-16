@@ -1,0 +1,14 @@
+CURRENTLY WORKING ON:
+-----
+
+17/10/2022:
+-----
+- Chains (chain.cpp, chain.h).
+    -- Finish implementation.
+
+1/10/2022:
+-----
+- The weights in the function: int Transponder::weighted(std::string s)
+    -- Current bug is iteration only compares with the first line.
+
+// eof
