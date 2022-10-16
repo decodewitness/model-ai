@@ -67,7 +67,7 @@ std::string moduleData[module_limits] = {
 void AI::splash(void) {
 	std::cout << std::endl << "\t** ][][ **" << std::endl << std::endl;
 	if (this->disableAudio != true) {
-		this->play_audio(4);
+		// this->play_audio(4);
 	}
 };
 
@@ -578,24 +578,29 @@ void run_checks(int n) {	// displays "running checks" message yet
 	std::cout << "-:: running checks" << std::endl << std::endl;
 };
 
-void AI::play_audio(int s=1) {	// plays an audio sample (int)(s)
-	// debug string
-	//std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
-	
-	// audio device + sample nr
-	if (this->disableAudio != true) {
-		play_audio_device(s);
-	}
-	//sleep(1);
-};
 
-void AI::play_audio_file(std::string path) {
-	// audio file
-	if (this->disableAudio != true) {
-		play_audio_f(path);
-	}
-	//sleep(1);
-};
+// ENABLE AUDIO
+
+// void AI::play_audio(int s=1) {	// plays an audio sample (int)(s)
+// 	// debug string
+// 	//std::cout << std::endl << "~:: playing audio device." << std::endl << std::endl;
+	
+// 	// audio device + sample nr
+// 	if (this->disableAudio != true) {
+// 		play_audio_device(s);
+// 	}
+// 	//sleep(1);
+// };
+
+// ENABLE AUDIO
+
+// void AI::play_audio_file(std::string path) {
+// 	// audio file
+// 	if (this->disableAudio != true) {
+// 		play_audio_f(path);
+// 	}
+// 	//sleep(1);
+// };
 
 // must be redevised native and compatibly
 bool AI::cp(std::string src, std::string dst) {	// copy function
@@ -941,8 +946,8 @@ void AI::decouple() {	// decoupler routine for the ai model
 	std::cout << "-:: decoupler." << std::endl;
 
 	// play audio file
-	this->play_audio_file("ai/system/audio/samples/vwoof.wav");
-	this->play_audio_file("ai/system/audio/samples/vwoof.wav");
+	// this->_file("ai/system/audio/samples/vwoof.wav");
+	// this->play_audio_file("ai/system/audio/samples/vwoof.wav");
 
 	std::cout << "\t-:: decoupling sampler" << std::endl;
 	this->sampler->decouple();
@@ -1012,7 +1017,7 @@ void AI::query() {	// respond to logical query method
 	std::string str = "\n";
 
 	// play audio file
-	this->play_audio_file("ai/system/audio/samples/taptaptap.wav");
+	// this->play_audio_file("ai/system/audio/samples/taptaptap.wav");
 
 	// QUERY
 	std::cout << "::- type your query -::" << std::endl;
@@ -1047,7 +1052,7 @@ void AI::query() {	// respond to logical query method
 		std::cout << "--?:: ";
 		
 		ch = getchar();
-		std::getline(cin, str);
+		std::getline(std::cin, str);
 	}
 	
 	query_string = str;
@@ -1063,9 +1068,16 @@ void AI::query() {	// respond to logical query method
 	// process commands	// compute logic and strings
 		// is declared in AI/LOGIC/ASSEMBLY/LOGIC.H
 		// functions in AI/LOGIC/ASSEMBLY/LOGIC.CPP
-	if (isSim == true) {	// run simulation
+	if (isTestA == true) {
+		std::cout << "*(testA)->{" << std::endl;
+		this->testA();
+		std::cout << std::endl << "} -- (testA)." << std::endl;
+		std::cout << std::endl << "Press --ENTER--." << std::endl;
+		std::cin >> ch;
+		this->killc(9);
+	} else if (isSim == true) {	// run simulation
 		std::cout << std::endl << "(simulation) entities: ";
-		cin >> x;
+		std::cin >> x;
 		std::cout << std::endl;
 
 		// start Simulation
@@ -1081,7 +1093,7 @@ void AI::query() {	// respond to logical query method
 		}
 		
 		std::cout << std::endl << "(simulation) objects: ";
-		cin >> x;
+		std::cin >> x;
 		std::cout << std::endl;
 
 		// still need to add entities (or) objects to Simulation
@@ -1096,17 +1108,17 @@ void AI::query() {	// respond to logical query method
 		isSim = false;
 	} else if (isConvert == true) {	// run converter EURO
 		std::cout << std::endl << "(converter) (EURO->USD) : ";
-		cin >> x;
+		std::cin >> x;
 		this->convertf(x, 1);
 		isConvert = false;
 	} else if (isConvertUSD == true) {	// run converter USD
 		std::cout << std::endl << "(converter) (USD->EURO) : ";
-		cin >> x;
+		std::cin >> x;
 		this->convertf(x, 2);
 		isConvertUSD = false;
 	} else if (isHash == true) {	// hash function
 		std::cout << std::endl << "(hash) function() : ";
-		cin >> y;
+		std::cin >> y;
 		std::cout << std::endl << this->hashtype(y.c_str()) << std::endl;
 		isHash = false;
 	} else if (isKill == true) {	// hash function
@@ -1119,40 +1131,43 @@ void AI::query() {	// respond to logical query method
 		isStepping = false;
 	} else if (isRollout == true) {	// hash function
 		std::cout << std::endl << "(rollout) function(#) : ";
-		cin >> x;
+		std::cin >> x;
 		// rollout functions numbers:
 			// no_model1 next_model2 patch3
 			// TOOL4 permissions5 comodos9
 		this->rollout(x);	// don't do the restore rollout function
 		isRollout = false;
-	} else if (isCurl == true) {	// hash function
-		std::cout << std::endl << "(curl engine function) (provide an URL) :: ";
-		cin >> y;
-		this->curl(y);
-		isCurl = false;
+
+	// } else if (isCurl == true) {	// hash function
+	// 	std::cout << std::endl << "(curl engine function) (provide an URL) :: ";
+	// 	cin >> y;
+	// 	this->curl(y);
+	// 	isCurl = false;
+	//
+
 	} else if (isBank == true) {	// hash function
 
 		for (int i=0; isBank==true ; i++) {
 			draw_banking_menu();	// draws banking menu on the screen
-			cin >> z;
+			std::cin >> z;
 			
 			switch (z) {
 				case 1:
 					std::cout << "(amount) : ";
-					cin >> x;
+					std::cin >> x;
 					// ai.add_account(1);
 					this->add_account(x);
 					break;
 				case 2:
 				// ai.subtract_account(10);
 					std::cout << "(amount) : ";
-					cin >> x;
+					std::cin >> x;
 					this->subtract_account(x);
 					break;
 				case 3:
 				// ai.change_account(10);
 					std::cout << "(change to account) #: ";
-					cin >> z;
+					std::cin >> z;
 					this->change_account(z);
 					break;
 				case 4:
@@ -1180,11 +1195,11 @@ void AI::query() {	// respond to logical query method
 				case 9:
 				// ai.transfer(1,200,20.00);	// transfer from acct 1 to 200 an amount of 20.00
 					std::cout << "(source account) :# ";
-					cin >> z;
+					std::cin >> z;
 					std::cout << "(target account) :# ";
-					cin >> zz;
+					std::cin >> zz;
 					std::cout << "(amount):# ";
-					cin >> x;
+					std::cin >> x;
 					this->transfer(z,zz,x);
 					break;
 				case 10:
@@ -1210,14 +1225,14 @@ void AI::query() {	// respond to logical query method
 		}
 	} else if (isTable == true) {
 		std::cout << "(table): of :# ";
-		cin >> z;
+		std::cin >> z;
 		this->table(z);
 		isTable = false;
 	} else if (isTableTo == true) {
 		std::cout << "(table): of :# ";
-		cin >> z;
+		std::cin >> z;
 		std::cout << "(to maximal): :# ";
-		cin >> zz;
+		std::cin >> zz;
 		this->tableTo(z,zz);
 		isTableTo = false;
 	} else if (isDice == true) {
@@ -1225,61 +1240,61 @@ void AI::query() {	// respond to logical query method
 		isDice = false;
 	} else if (isDice2 == true) {
 		std::cout << "(dice): number of eyes :# ";
-		cin >> z;
+		std::cin >> z;
 		this->dice_npr(z);
 		isDice2 = false;
 	} else if (isStat == true) {
 		std::cout << "(stat): dir : ";
-		cin >> y;
+		std::cin >> y;
 		this->statdir(y.c_str());
 		isStat = false;
 	} else if (isRm == true) {
 		std::cout << "(rm): filename : ";
-		cin >> y;
+		std::cin >> y;
 		this->rm(y.c_str());
 		isRm = false;
 	} else if (isCp == true) {
 		std::cout << "(cp): src dst: ";
-		cin >> y >> yy;
+		std::cin >> y >> yy;
 		this->cp(y.c_str(), yy.c_str());
 		isCp = false;
 	} else if (isAdd == true) {
 		std::cout << "(add): number1 number2 + # #: ";
-		cin >> x >> xx;
+		std::cin >> x >> xx;
 		this->add(x, xx);
 		isAdd = false;
 	} else if (isSubtract == true) {
 		std::cout << "(subtract): number1 number2 -/- # #: ";
-		cin >> x >> xx;
+		std::cin >> x >> xx;
 		this->subtract(x, xx);
 		isSubtract = false;
 	} else if (isMultiply == true) {
 		std::cout << "(multiply): number1 number2 * # #: ";
-		cin >> x >> xx;
+		std::cin >> x >> xx;
 		this->multiply(x, xx);
 		isMultiply = false;
 	} else if (isDivide == true) {
 		std::cout << "(divide): number1 number2 / # #: ";
-		cin >> x >> xx;
+		std::cin >> x >> xx;
 		this->divide(x, xx);
 		isDivide = false;
 	} else if (isPower == true) {
 		std::cout << "(power of): \"number1\" to power of \"number2\" ^ # #: ";
-		cin >> x >> xx;
+		std::cin >> x >> xx;
 		this->power(x, xx);
 		isPower = false;
 	} else if (isPlayAudio == true) {
 		std::cout << "(play audio file): file : ";
-		cin >> y;
-		this->play_audio_file(y.c_str());
+		std::cin >> y;
+		// this->play_audio_file(y.c_str());
 		isPlayAudio = false;
 	} else if (isReturnPunch == true) {
 		sum=0;
 		for (int i=0;; i++) {
 			std::cout << "(punch): number :# ";
-			cin >> x;
+			std::cin >> x;
 			std::cout << "(operator or: 'Q')::(+,-,*,/) : ";
-			cin >> ch;
+			std::cin >> ch;
 			if (ch == 'q' || ch == 'Q') {
 				std::cout << "(FINAL RESULT) = " << sum << std::endl << std::endl;
 				break;
@@ -1292,9 +1307,9 @@ void AI::query() {	// respond to logical query method
 		sum=0;
 		for (int i=0;; i++) {
 			std::cout << "(punch): number :# ";
-			cin >> x;
+			std::cin >> x;
 			std::cout << "(operator or: 'Q')::(+,-,*,/) : ";
-			cin >> ch;
+			std::cin >> ch;
 			if (ch == 'q' || ch == 'Q') {
 				std::cout << "(FINAL RESULT) = " << sum << std::endl << std::endl;
 				break;
@@ -1317,16 +1332,16 @@ void AI::query() {	// respond to logical query method
 		int l;
 		std::string f;
 		std::cout << "~:: file carrying definitions : ";
-		cin >> f;
+		std::cin >> f;
 		std::cout << "~:: nr. of lines : ";
-		cin >> l;
+		std::cin >> l;
 		this->convert_data(f, l);	// change length
 		data_handler();
 		isConvertData = false;
 	} else if (isRunPytube == true) {
 		std::string uri;
 		std::cout << "~:: (pytube) give an URL? : ";
-		cin >> uri;
+		std::cin >> uri;
 		this->run_tube(uri);
 		isRunPytube = false;
 	} else if (isToggleAudio == true) {	// USE THIS (isLogic) AS LAST COMMAND IN THIS IF/ELSE CHAIN 
@@ -1375,7 +1390,7 @@ void AI::query() {	// respond to logical query method
 		int n=0;
 		std::cout << std::endl;
 		std::cout << "ref : ";
-		cin >> n;
+		std::cin >> n;
 		if (n>=0) {
 			this->readRef(n);
 		}
@@ -1477,28 +1492,32 @@ void AI::killc(int x) {	// basically implies killchain handle
 	};	
 };
 
-int AI::curl(std::string f) {	// Curl function
-	std::cout << std::endl << "********* CURLING **********" << std::endl;
-	int x = do_curl(f);
+// ENABLE CURL
+
+// int AI::curl(std::string f) {	// Curl function
+// 	std::cout << std::endl << "********* CURLING **********" << std::endl;
+// 	int x = do_curl(f);
 	
-	// std::cout << "x:" << x << std::endl;
-	if (x+1 == 1) {
-		std::cout << "-:: curl succeeded." << std::endl;
-	}
+// 	// std::cout << "x:" << x << std::endl;
+// 	if (x+1 == 1) {
+// 		std::cout << "-:: curl succeeded." << std::endl;
+// 	}
 
-	return x;
-};
+// 	return x;
+// };
 
-int AI::links(std::string url, int max) {	// fetches links from URL
-	std::cout << "********* FETCHING LINKS (max: " << max << ") **********" << std::endl << std::endl;
+// ENABLE CURL
+
+// int AI::links(std::string url, int max) {	// fetches links from URL
+// 	std::cout << "********* FETCHING LINKS (max: " << max << ") **********" << std::endl << std::endl;
 	
-	int x = fetch_link(url, max);
+// 	int x = fetch_link(url, max);
 
-	return x;
-};
+// 	return x;
+// };
 
 void AI::enforce_security() {	// jumps to security prompt
-	this->play_audio(10);
+	// this->play_audio(10);
 
 	bool ack = security_prompt();
 	this->access = ack;
@@ -1833,7 +1852,7 @@ void AI::add_to_brain(std::string h, std::string s, std::string c) {
 	std::string desc;
 
 	std::cout << std::endl << "~:: give a data description : ";
-	cin >> desc;
+	std::cin >> desc;
 
 	// add to data_collection 
 	this->brain->add_data(h, s, c);
@@ -1854,13 +1873,13 @@ void AI::add_to_brain_manually() {
 	
 	std::cout << std::endl;
 	std::cout << "~:: give a handle for the data : ";
-	cin >> handle;
+	std::cin >> handle;
 
 	// std::cout << std::endl;
 	std::cout << "~:: give a data description : ";
 	
 	ch = getchar();
-	std::getline(cin, desc);
+	getline(std::cin, desc);
 
 	std::cout << "(debug) " << handle << " " << desc << std::endl;
 
@@ -1887,11 +1906,11 @@ void AI::add_to_cabinet_manually() {
 	std::cout << std::endl;
 	std::cout << "~:: give a handle for the data in cabinet : ";
 
-	cin >> handle;
+	std::cin >> handle;
 
 	std::cout << "~:: give a description for the data : ";
 	ch = getchar();
-	std::getline(cin, desc);
+	getline(std::cin, desc);
 
 	this->brain->add_cabinet(handle, desc);
 };
@@ -2104,7 +2123,7 @@ void AI::runSim() {	// sim objects and such go here
 	
 
 	// play audio file -- already done in "startSim()"
-	this->play_audio_file("ai/system/audio/samples/vworge.wav");
+	// this->play_audio_file("ai/system/audio/samples/vworge.wav");
 	sleep(1);
 	std::cout << "\t~:: simulation is running." << std::endl;
 	
@@ -2259,43 +2278,6 @@ void AI::returnRefNr() {
 	std::cout << std::endl;
 };
 
-// TEST TEST TESTING FUNCTIONS
-void AI::testA() {	// test queue
-	// this->readMetaQue();
-	// readMetaQueries(true);
-	std::cout << std::endl;
-	std::cout << "<!> trial rounds in these functions (logged output):" << std::endl;
-	std::cout << "-----" << std::endl;
-
-	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
-	// TO TEST THE FUNCTION INSIDE THE MODEL.
-
-	std::string str = "this is a bool envelope!";
-
-	if (searchterm2("is", str)) {
-		std::cout << std::endl << "searchterm: (true)" << std::endl;
-		std::cout << std::endl;
-	} else {
-		std::cout << std::endl << "searchterm: (false)" << std::endl;
-		std::cout << std::endl;
-	}
-
-	// nref x = build_custom_nref();
-	// print_nref(x);
-	// store_nref(x);
-	// read_nrefs(stored_nrefs_file, 1);
-
-	// std::string query = "\"1\",\"trivia\",\"transponder has query.\";";
-	// std::string a = strip(query);
-	// std::cout << "A: " << a << std::endl;
-	
-	// readAllMetaQueries(true);
-	// this->answerMeta(true);
-	// sleep(2);
-	//readMetaQueries(true);
-	// this->answerMeta(false);
-};
-
 void AI::train_model(std::string q, std::string a) {
 	// ints
 	int nr = this->rNr;
@@ -2354,6 +2336,95 @@ void AI::train_model(std::string q, std::string a) {
     x.rel_string = refq.rel_string;
 
 	this->storeRef(x);
+};
+
+// TESTING!!! TESTING!!! TESTING!!! TESTING!!! TESTING!!!
+   // TESTING!!! TESTING!!! TESTING!!! TESTING!!! TESTING!!!
+
+void AI::testA() {	// testing queue
+	// this->readMetaQue();
+	// readMetaQueries(true);
+	std::cout << std::endl << std::endl;
+	std::cout << std::endl <<  "=== * === * === *" << std::endl;
+	std::cout << "<!> trial rounds in these functions (logged output):" << std::endl;
+	std::cout << std::endl <<  "=== * === * === *" << std::endl << std::endl;
+
+/*
+// Need to use CHAIN.H to build chain dynamics in architecture.
+
+struct Chain {
+    int id;    // id
+    int nrOfChains; // nr   // ((( could fluctuate ;; needs implementation)))
+    int activeChain;    // the active chain number (passive/active ##)
+
+    // current nominal chain sequences
+        // from 1 -> ... -> 5
+    int sequence_one[climit];
+    int sequence_two[climit];
+    int sequence_three[climit];
+    int sequence_four[climit];
+    int sequence_five[climit];
+
+    // data or reference
+    int chain[maxchains][climit];
+    char chains[maxchains][strlimit];
+
+    // total pooled data
+    std::vector<std::string> pool;
+}
+
+// Functions
+    int reportStatID(Chain c)
+    int reportStatChains(Chain c)
+    int reportActiveChain(Chain c)
+
+	&chainCreate()
+	deleteChain(&)
+	writeChain(x, id, &, str)
+	chainID()
+	viewChainData(x, &)
+
+*/
+
+	std::cout << "CREATING FIRST CHAIN:" << std::endl;
+	Chain *chain1 = &chainCreate();
+
+	chain1->id = 6;
+
+
+
+	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
+	// TO TEST THE FUNCTION INSIDE THE MODEL.
+
+	// std::string str = "this is a bool envelope!";
+
+	// PRIOR TESTING
+
+	// if (searchterm2("is", str)) {
+	// 	std::cout << std::endl << "searchterm: (true)" << std::endl;
+	// 	std::cout << std::endl;
+	// } else {
+	// 	std::cout << std::endl << "searchterm: (false)" << std::endl;
+	// 	std::cout << std::endl;
+	// }
+
+	// nref x = build_custom_nref();
+	// print_nref(x);
+	// store_nref(x);
+	// read_nrefs(stored_nrefs_file, 1);
+
+	// std::string query = "\"1\",\"trivia\",\"transponder has query.\";";
+	// std::string a = strip(query);
+	// std::cout << "A: " << a << std::endl;
+	
+	// readAllMetaQueries(true);
+	// this->answerMeta(true);
+	// sleep(2);
+	//readMetaQueries(true);
+	// this->answerMeta(false);
+
+	std::cout << std::endl <<  "=== * === * === *" << std::endl;
+	std::cout << std::endl << std::endl;
 };
 
 #endif

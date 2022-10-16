@@ -1,10 +1,9 @@
 // AI/CHAIN/CHAIN.CPP -- (NOT USED YET!!!)
 # include "chain.h"
 
-    // Need to use CHAIN.H to build chain dynamics in architecture.
-
-
 /*
+// Need to use CHAIN.H to build chain dynamics in architecture.
+
 struct Chain {
     int id;    // id
     int nrOfChains; // nr   // ((( could fluctuate ;; needs implementation)))
@@ -12,14 +11,14 @@ struct Chain {
 
     // current nominal chain sequences
         // from 1 -> ... -> 5
-    int sequence_one[limits];
-    int sequence_two[limits];
-    int sequence_three[limits];
-    int sequence_four[limits];
-    int sequence_five[limits];
+    int sequence_one[climit];
+    int sequence_two[climit];
+    int sequence_three[climit];
+    int sequence_four[climit];
+    int sequence_five[climit];
 
     // data or reference
-    int chain[maxchains][limits];
+    int chain[maxchains][climit];
     char chains[maxchains][strlimit];
 
     // total pooled data
@@ -86,7 +85,7 @@ void chainID(Chain c) {
     std::cout << reportStatChains(c);
 }
 
-void chainData(int x, Chain &c) { // x = chain number
+void viewChainData(int x, Chain &c) { // x = chain number
     if (x < c.nrOfChains) {
         std::cout << "~:: (*)[chain][" << x << "]->(\"" << c.chains[x] << "\")." << std::endl;
     } else {

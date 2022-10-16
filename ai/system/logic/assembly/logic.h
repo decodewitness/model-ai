@@ -13,6 +13,7 @@ const int logic = yy;
 bool isLogic=false;
 
 // booleans for in "AI/AI.CPP" -- query() function
+bool isTestA=false;
 bool isHelp=false;
 bool isVersion=false;
 bool isSim=false;

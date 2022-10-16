@@ -1516,16 +1516,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffea02acf00)
-	- stacking header:(1)::<address>(0x7ffea02acf20)
-	- stacking header:(2)::<address>(0x7ffea02acf40)
-	- stacking header:(3)::<address>(0x7ffea02acf60)
-	- stacking header:(4)::<address>(0x7ffea02acf80)
-	- stacking header:(5)::<address>(0x7ffea02acfa0)
-	- stacking header:(6)::<address>(0x7ffea02acfc0)
-	- stacking header:(7)::<address>(0x7ffea02acfe0)
-	- stacking header:(8)::<address>(0x7ffea02ad000)
-	- stacking header:(9)::<address>(0x7ffea02ad020)
+	- stacking header:(0)::<address>(0x7ffedb6c6e80)
+	- stacking header:(1)::<address>(0x7ffedb6c6ea0)
+	- stacking header:(2)::<address>(0x7ffedb6c6ec0)
+	- stacking header:(3)::<address>(0x7ffedb6c6ee0)
+	- stacking header:(4)::<address>(0x7ffedb6c6f00)
+	- stacking header:(5)::<address>(0x7ffedb6c6f20)
+	- stacking header:(6)::<address>(0x7ffedb6c6f40)
+	- stacking header:(7)::<address>(0x7ffedb6c6f60)
+	- stacking header:(8)::<address>(0x7ffedb6c6f80)
+	- stacking header:(9)::<address>(0x7ffedb6c6fa0)
 
 
 -:: checking AI functions.
@@ -1592,14 +1592,32 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	c
+	/testa
+	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
+~:: parameter request: testA().
+ ]
+
+-:: finished x computation.
+
+~:: running (9) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	q
 	[ simple x computation: type:[char]: len:1 vowels:1 consonants:0 special:0 ]
 
 [ -- you're asking my input -- ]
 
 -:: finished x computation.
-*string_next_logic() :: ssh: "c".
-	- HMAC string :: *string_next_logic() ::  (c) is >> 
+*string_next_logic() :: ssh: "q".
+	- HMAC string :: *string_next_logic() ::  (q) is >> 
 ~:: file_access()
 (debug) file_access(level=0).
 
@@ -1609,33 +1627,33 @@ punch.
 ~:: transponder was not prepared yet.
 	~:: preparing transponder.
 
-~:: prepTransponder() : (c)
+~:: prepTransponder() : (q)
 ~:: transponder -> prep()
 
-~:: set subject to: "c".
-(debug) word :: c
+~:: set subject to: "q".
+(debug) word :: q
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "c".
+(debug) calling prepare_ints() (from) -> "q".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (1).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) c :: #81
+(debug) 0) q :: #559
 
 ~:: meta queries ~:: storing meta query sequence
 	~::::meta::::~
 	- path: "ai/lib/queries/meta_queries".
 	- meta sequences:
-		- 81
+		- 559
 ~:: meta queries
-	~:: reverse_meta_query_lookup("81,")
+	~:: reverse_meta_query_lookup("559,")
 
 ~:: reverse meta query lookup: 
-	- c		 --> *(a+i) = 81 - *(a+i) - 1 = 80
+	- q		 --> *(a+i) = 559 - *(a+i) - 1 = 558
 
 (EOT)
 
@@ -1644,29 +1662,29 @@ punch.
 	~:!:~ transponder is not prepared yet.
 		;; preparing transponder.
 
-~:: prepTransponder() : (c)
+~:: prepTransponder() : (q)
 ~:: transponder -> prep()
 
-~:: set subject to: "c".
-(debug) word :: c
+~:: set subject to: "q".
+(debug) word :: q
 
 ~:: (debug)::nrOfWords = 1.
 ~:: (debug)::counter = 1.
 
-(debug) calling prepare_ints() (from) -> "c".
+(debug) calling prepare_ints() (from) -> "q".
 ~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
 ~:: (debug) number of matching occurences: (2).
 
 ~:: intvars int_occurences[] ::~
-(debug) 0) c :: #81
+(debug) 0) q :: #559
 
 
 ~:: meta queries
-	~:: reverse_meta_query_lookup("81,")
+	~:: reverse_meta_query_lookup("559,")
 
 ~:: reverse meta query lookup: 
-	- c		 --> *(a+i) = 81 - *(a+i) - 1 = 80
+	- q		 --> *(a+i) = 559 - *(a+i) - 1 = 558
 
 (EOT)
 
@@ -1693,350 +1711,127 @@ punch.
 
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 1,transponder has query.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 2,transponder gets answer.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 3,transponder is bool.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 4"ransponder is boolean.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 5,transponder is boolean boolean.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 6,hi.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 7,hello.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 8,goodbye.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 9,I'm your assistant.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 10,limited assistance right now.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 11,use the /help function.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
+~:: (!!) rank of: q
 	:: == 13,you are amazing.
 
 ~:: (!) ranked
 (debug) : 
 	-1
-	c
+	q
 
 
-~:: (!!) rank of: c
-	:: == 14,inferring logic.
-
-~:: (!) ranked
-
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
-
-(debug)
-noted : 1
-biggest : 1
-
-
-labelled biggest faculty : 1
-
-
------ ----- -----
-(debug) result : 
-
-~:: transponder -> answer()
-
-[RESPONSE] :
-
-~:: clearref() - clearing last references.
-
-(EOT)
-
-~:: running (9) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	quit
-	[ simple x computation: type:[char]: len:4 vowels:2 consonants:2 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "quit".
-	- HMAC string :: *string_next_logic() ::  (quit) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-
-~:: tsp() :
-	~:!:~ transponder is not prepared yet.
-		;; preparing transponder.
-
-~:: prepTransponder() : (quit)
-~:: transponder -> prep()
-
-~:: set subject to: "quit".
-(debug) word :: quit
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "quit".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (3).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) quit :: #6027
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("6027,")
-
-~:: reverse meta query lookup: 
-	- quit		 --> *(a+i) = 6027 - *(a+i) - 1 = 6026
-
-(EOT)
-
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 4
-		* vowels: 2
-		* consonants: 2
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-~:: --(!)-- answer(std::string)
-
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 1,transponder has query.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 2,transponder gets answer.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 3,transponder is bool.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 4"ransponder is boolean.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 5,transponder is boolean boolean.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 6,hi.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 7,hello.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 8,goodbye.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 9,I'm your assistant.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 10,limited assistance right now.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 11,use the /help function.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
-	:: == 13,you are amazing.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	quit
-
-
-~:: (!!) rank of: quit
+~:: (!!) rank of: q
 	:: == 14,inferring logic.
 
 ~:: (!) ranked
@@ -2064,307 +1859,6 @@ labelled biggest faculty : 1
 (EOT)
 
 ~:: running (8) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	intelligence
-	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
-
-[ -- you're asking my input -- ]
-
--:: finished x computation.
-*string_next_logic() :: ssh: "intelligence".
-	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
-~:: file_access()
-(debug) file_access(level=0).
-
-~:: searching indexes:
-	- rewinding file index.
-(debug) hit search function.
-	search1 : intelligence
-	search2 : intelligence
-
-~:: collusion().
-
-~:: collusion().
-	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 6
-	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-
-sorter():
-{ ai/system/logic/transponder/brain/data/intelligence.dat }
-- opening: ai/system/logic/transponder/brain/data/intelligence.dat.
-	- ai/system/logic/transponder/brain/data/intelligence.dat : is open.
-		-- :: ( prime intelligence. seeking reason to understanding. allowing intelligence. seeking strategies. reasoning, or to reason. understanding. )
-
-~:: collusion().
-
-sorted: ai/system/logic/transponder/brain/data/intelligence.dat
-~:: file_access()
-(debug) file_access(level=7).
-
-	<<<
-
-- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-	- intelligence is open.
-
-:: artificial intelligence ::
-
-TMP: intelligence
-~:: found index [intelligence].
-:::_]{ (intelligence can be used to manipulate objects.)
-
-~:: collusion().
-:::_]{ (intelligent manners could be manners that would be described.)
-
-~:: collusion().
-(!) omitted empty line.
-(debug) file_access().
-~:: file_access()
-(debug) file_access(level=8).
-~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
-
-- adding (2) weights.
-
-[]:: ai/system/logic/transponder/brain/data/intelligence.dat
-~:: resonate_index::match found on line: (6).
-~:: done.
-
-b_string:
-!~ intelligence can be used to manipulate objects. intelligent manners could be manners that would be described.
-	~:: query matches search string: "intelligence".
-
--* intelligence is:
-    deciphering algorithms, and using strategies to solve the inherent problem. + 6
-
-    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-
-~:: tsp() :
-	~:!:~ transponder is not prepared yet.
-		;; preparing transponder.
-
-~:: prepTransponder() : (intelligence)
-~:: transponder -> prep()
-
-~:: set subject to: "intelligence".
-(debug) word :: intelligence
-
-~:: (debug)::nrOfWords = 1.
-~:: (debug)::counter = 1.
-
-(debug) calling prepare_ints() (from) -> "intelligence".
-~:: succesfully opened dictionary: "ai/data/files/20k.txt".
-
-~:: (debug) number of matching occurences: (4).
-
-~:: intvars int_occurences[] ::~
-(debug) 0) intelligence :: #2526
-
-
-~:: meta queries
-	~:: reverse_meta_query_lookup("2526,")
-
-~:: reverse meta query lookup: 
-	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
-
-(EOT)
-
-
-	TRANSPONDER::responding:
-	-----
-	~:: (DEBUG) performing analytics() in {transponder}.
-	::- analytics -::
-
-	-----------------
-
-		* words no_#: 1
-		* length: 12
-		* vowels: 5
-		* consonants: 7
-		* numbers: 0
-		* special chars: 0
-		* unknown chars: 0
-
-
-(debug) answer.
-
-~:: --(!)-- answer(std::string)
-
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 1,transponder has query.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 2,transponder gets answer.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 3,transponder is bool.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 4"ransponder is boolean.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 5,transponder is boolean boolean.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 6,hi.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 7,hello.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 8,goodbye.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 9,I'm your assistant.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 10,limited assistance right now.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 11,use the /help function.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 13,you are amazing.
-
-~:: (!) ranked
-(debug) : 
-	-1
-	intelligence
-
-
-~:: (!!) rank of: intelligence
-	:: == 14,inferring logic.
-
-~:: (!) ranked
-
-~:: (debug) -- normal query!
-~:: (debug) -- answers processed: 14
-
-(debug)
-noted : 1
-biggest : 1
-
-
-labelled biggest faculty : 1
-
-
------ ----- -----
-(debug) result : 
-
-~:: transponder -> answer()
-
-[RESPONSE] :
-~:: readref() :
-	::     deciphering algorithms, and using strategies to solve the inherent problem. + 6
-	::     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
-	:: prime intelligence. seeking reason to understanding. allowing intelligence. seeking strategies. reasoning, or to reason. understanding.
-	:: intelligence can be used to manipulate objects.
-	:: intelligent manners could be manners that would be described.
-
-
-~:: clearref() - clearing last references.
-
-(EOT)
-
-~:: running (7) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/quit
-	[ simple x computation: type:[char]: len:5 vowels:2 consonants:2 special:1  ]
-
--:: finished x computation.
-
-~:: running (6) queries.
 
 ::- type your query -::
 

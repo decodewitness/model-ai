@@ -7,7 +7,7 @@ echo
 
 echo "~:Uncomment line: 10 in the \"start\" script to install all the dependencies!"
 ### (UNCOMMENT THIS LINE: 10,16) UPDATE APT REPOS  (FIRST ENABLE BY REMOVING '#' POUND SIGN TO ALLOW "AI/BIN/SCRIPT/APT.SH" TO EXECUTE)
-chmod +x ai/bin/script/apt.sh && ai/bin/script/apt.sh
+#chmod +x ai/bin/script/apt.sh && ai/bin/script/apt.sh
 
 echo "~:done."
 
@@ -23,7 +23,8 @@ fi
 echo
 echo "~:compiling... flags: (-lcurl -lasound -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)"
 # g++ -o a.out -lcurl -I/usr/include/SDL2 -L/usr/lib/ main.cpp -Wl,--allow-shlib-undefined -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lrt
-g++ -o a.out ./main.cpp -lcurl -lasound -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+# g++ -o a.out ./main.cpp -lcurl -lasound -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+g++ -o a.out ./main.cpp
 
 echo "~:done."
 

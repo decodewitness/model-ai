@@ -50,8 +50,9 @@
 #include "system/chk.h"
 #include "lib/data.cpp"
 //#include "simulation.cpp"	// already included in "ai.cpp"
-#include "fetch/curl.cpp"
+//#include "fetch/curl.cpp"		(fix)
 #include "lib/testing.cpp"
+#include "chain/chain.cpp"
 #include "system/gradle.h"
 //#include "brain/brain.cpp"	// use "nn.cpp" instead
 #include "comodo/varaan.h"
@@ -63,7 +64,7 @@
 // #include "steering/splash.h"
 #include "system/menu/menu.cpp"
 #include "language/concepts.cpp"
-#include "system/audio/audio.cpp"
+// #include "system/audio/audio.cpp"	(fix)
 #include "drum_machine/drums.cpp"
 #include "data/convert/convert.cpp"
 #include "data/handler/handler.cpp"

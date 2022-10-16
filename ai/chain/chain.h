@@ -9,7 +9,7 @@ const int strlimit = 1024; // length of char sequence
 const int maxchains = 5;
 
 // length of stored chain refs.
-const int limits = 5; // e.g. 10 (or 5, or 100) 
+const int climit = 5; // e.g. 10 (or 5, or 100) 
 
 // Main Chain structure.
 struct Chain {
@@ -20,14 +20,14 @@ struct Chain {
 
     // current nominal chain sequences
         // from 1 -> ... -> 5
-    int sequence_one[limits];
-    int sequence_two[limits];
-    int sequence_three[limits];
-    int sequence_four[limits];
-    int sequence_five[limits];
+    int sequence_one[climit];
+    int sequence_two[climit];
+    int sequence_three[climit];
+    int sequence_four[climit];
+    int sequence_five[climit];
 
     // data or reference
-    int chain[maxchains][limits];
+    int chain[maxchains][climit];
     char chains[maxchains][strlimit];
  
     // total pooled data
