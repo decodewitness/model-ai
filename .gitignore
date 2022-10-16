@@ -31,6 +31,8 @@
 *.out
 *.app
 
+.git/*
+
 .vscode
 runtime/model
 addy/*
