@@ -2,7 +2,7 @@
 AUTHOR: Vera Lo
 DATE: 01:19AM 19/11/2021# model-ai
 
-Latest branch in Artificial Intelligence (A.I) software. Version (v.0.1-26c) (07:44PM CET) (August 21 2021)
+Latest branch in Artificial Intelligence (A.I) software. Version (v.0.1-29a) (07:44PM CET) (August 21 2021)
 
 ░▄▄▄▄░
 ▀▀▄██►
@@ -23,12 +23,7 @@ The "README.md" file will consist of the files in "model-ai/ai/logs":
  -------            ----------
 
    $ ./run
-    
-    (or)
-
-   $ ./bootstrap
-
-
+   (uncomment the APT repositories update -- in the "start" file LINE: 11)
 
 Using this next command will run the (model-ai) AI from "setup.sh", and generate an "output.log" text file in "./ai/logs":
 
