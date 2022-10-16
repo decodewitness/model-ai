@@ -1069,14 +1069,17 @@ void AI::query() {	// respond to logical query method
 		// is declared in AI/LOGIC/ASSEMBLY/LOGIC.H
 		// functions in AI/LOGIC/ASSEMBLY/LOGIC.CPP
 	if (isTest == true) {
-		this->testA();	// currently only testA() is available...
+		this->testA();	// currently only testA() is available	// Change to test implemented features later.
+		std::cin >> ch;
 		isTest = false;
+		// this->killc(9);
 	} else if (isTestA == true) {
-		std::cout << "*(testA)->{" << std::endl;
+		std::cout << "~:: *(testA)->{" << std::endl;
 		this->testA();
 		std::cout << std::endl << "} -- (testA)." << std::endl;
 		std::cout << std::endl << "Press --ENTER--." << std::endl;
 		std::cin >> ch;
+		isTestA = false;
 		// this->killc(9);
 	} else if (isSim == true) {	// run simulation
 		std::cout << std::endl << "(simulation) entities: ";

@@ -12,8 +12,10 @@ echo
 ./readme.sh # copies README.md from ./doc
 echo
 echo "Done."
-echo
-echo "(Model-Ai)(C)(2021-2022) - (Author): Vera Lo - (Website): https://model-ai.com"
+
+echo "COPYRIGHT NOTICE:"
+echo "-----"
+echo "(Model-Ai) Copyright(C)(2021-2022) :: (Author): Vera Lo :: (Website): https://model-ai.com"
 echo
 
 exit 0
