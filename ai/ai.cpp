@@ -2345,6 +2345,7 @@ void AI::train_model(std::string q, std::string a) {
 
 // create new chain
 Chain & AI::create_chain() {
+	std::cout << std::endl << "Creating Chain:" << std::endl;
 	Chain *ccc = &chainCreate();
 	return *ccc;
 };
@@ -2352,6 +2353,11 @@ Chain & AI::create_chain() {
 void AI::chain_id(Chain & ccc) {
 	std::cout << std::endl << "Viewing ChainID():" << std::endl;
 	chainID(ccc);
+}
+
+void AI::read_chain(Chain & ccc) {
+	std::cout << std::endl << "Reading Chain Data:" << std::endl;
+	readChain(ccc);
 }
 
 void AI::write_chain(int x, int id, Chain & ccc, std::string str) {
@@ -2382,24 +2388,25 @@ void AI::testA() {	// testing queue
 	std::cout << std::endl <<  "=== * === * === *" << std::endl;
 	std::cout << "<!> trial rounds in these functions (logged output):" << std::endl;
 	std::cout << std::endl <<  "=== * === * === *" << std::endl << std::endl;
-
 /*
 // Need to use CHAIN.H to build chain dynamics in architecture.
-
-
+//
+//
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
-	// TO TEST THE FUNCTION INSIDE THE MODEL.
-	
-	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
+		// TO TEST THE FUNCTION INSIDE THE MODEL.
+	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] //
+//
+//
 */
 Chain *cp1 = &AI::create_chain();
 AI::chain_id(*cp1);
 AI::write_chain(0,0,*cp1,"testing success");
+AI::read_chain(*cp1);
 AI::view_chain(*cp1,0);
 AI::delete_chain(*cp1);
 cp1 = NULL;
-	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] //
 
 /*
 struct Chain {

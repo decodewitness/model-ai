@@ -1516,16 +1516,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffd13080700)
-	- stacking header:(1)::<address>(0x7ffd13080720)
-	- stacking header:(2)::<address>(0x7ffd13080740)
-	- stacking header:(3)::<address>(0x7ffd13080760)
-	- stacking header:(4)::<address>(0x7ffd13080780)
-	- stacking header:(5)::<address>(0x7ffd130807a0)
-	- stacking header:(6)::<address>(0x7ffd130807c0)
-	- stacking header:(7)::<address>(0x7ffd130807e0)
-	- stacking header:(8)::<address>(0x7ffd13080800)
-	- stacking header:(9)::<address>(0x7ffd13080820)
+	- stacking header:(0)::<address>(0x7ffc40beb780)
+	- stacking header:(1)::<address>(0x7ffc40beb7a0)
+	- stacking header:(2)::<address>(0x7ffc40beb7c0)
+	- stacking header:(3)::<address>(0x7ffc40beb7e0)
+	- stacking header:(4)::<address>(0x7ffc40beb800)
+	- stacking header:(5)::<address>(0x7ffc40beb820)
+	- stacking header:(6)::<address>(0x7ffc40beb840)
+	- stacking header:(7)::<address>(0x7ffc40beb860)
+	- stacking header:(8)::<address>(0x7ffc40beb880)
+	- stacking header:(9)::<address>(0x7ffc40beb8a0)
 
 
 -:: checking AI functions.
@@ -1583,7 +1583,7 @@ regular file: -- ./downloads
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (10) queries.
+~:: running (1) queries.
 
 ::- type your query -::
 
@@ -1606,28 +1606,45 @@ punch.
 
 === * === * === *
 
-Creating chain w/ chainID(0):
 
+Creating Chain:
 ~:: chainCreate().
 	~:: id=[0]
-
 	~:: updated chain ref (1) in "chain" file.
 
 
 Viewing ChainID():
-
-Chain ID	:	0
-Active Chain	:	1
-Nr. of Chains	:	1
+~:: chainID().
+	~:: Chain ID	:	0
+	~:: Active Chain	:	1
+	!:: Nr. of Chains	:	1
 
 Writing Chain Data:
-+chain:0 length: (9)
-~:: (wrote) chain data (9).
+~:: writeChain().
+	~:: +chain:0 length: (15)
+	~:: (wrote) chain data (15).
+
+Reading Chain Data:
+~:: readChain().
+	~:: ChainID:	0
+	~:: Nr of Chains:	1
+	~:: Active Chain:	1
+
+	~:: Chain Data (int):
+		-0x5613005a8204
+
+	~:: Chain Data (char):
+		-testing success
+
+	~:: Chain Pool Data:
 
 Viewing Chain Data:
-~:: (*)[chain][0][0]->("test data").
+~:: viewChainData().
+	~:: (*)[chain][0][0]->("testing success").
 
 Deleting Chain w/ Data:
+~:: deleteChain().
+	~:: Chain[0]->(deleted).
 
 
 This line should be visible!
@@ -1636,79 +1653,31 @@ This line should be visible!
 
 
 
-~:: running (9) queries.
+-:: aborting artificial life sequence, and clean up gracefully!
 
-::- type your query -::
+-:: display ((x)->live())(?x) equaled  .
 
-punch.
---?:: 
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
 
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/test
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: testing parameters request: test().
- ]
-
--:: finished x computation.
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+		(-  ||  -)
 
 
+::=> saving grace (routine) and closing libraries <=::
 
-=== * === * === *
-<!> trial rounds in these functions (logged output):
+-:: closing files.
+-:: cleaning memory.
 
-=== * === * === *
+~:: decoupling transponder.
+	~:: closed "ai/lib/queries/weights" transponder file access.
+	~:: closed "ai/data/files/synonyms.txt" transponder file access.
+~:: closed access.
 
-Creating chain w/ chainID(0):
-
-~:: chainCreate().
-	~:: id=[0]
-
-	~:: updated chain ref (1) in "chain" file.
-
-
-Viewing ChainID():
-
-Chain ID	:	0
-Active Chain	:	1
-Nr. of Chains	:	1
-
-Writing Chain Data:
-+chain:0 length: (9)
-~:: (wrote) chain data (9).
-
-Viewing Chain Data:
-~:: (*)[chain][0][0]->("test data").
-
-Deleting Chain w/ Data:
-
-
-This line should be visible!
-
-=== * === * === *
-
-
-
-~:: running (8) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
- ]
-
--:: finished x computation.
-
-(kill chain) function() : 9
-
--/- initializing killchain(1) sequence.
-
+-:: calling destructor for AI::Model.
+-:: done.
 # model-ai	((( MODEL-AI ))) ARTIFICIAL INTELLIGENCE
 
 Latest branch in development in artificial intelligence software (Model-Ai) version:(0.1-22b).

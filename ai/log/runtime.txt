@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffce25eb1e0)
-	- stacking header:(1)::<address>(0x7ffce25eb200)
-	- stacking header:(2)::<address>(0x7ffce25eb220)
-	- stacking header:(3)::<address>(0x7ffce25eb240)
-	- stacking header:(4)::<address>(0x7ffce25eb260)
-	- stacking header:(5)::<address>(0x7ffce25eb280)
-	- stacking header:(6)::<address>(0x7ffce25eb2a0)
-	- stacking header:(7)::<address>(0x7ffce25eb2c0)
-	- stacking header:(8)::<address>(0x7ffce25eb2e0)
-	- stacking header:(9)::<address>(0x7ffce25eb300)
+	- stacking header:(0)::<address>(0x7fff3036fc20)
+	- stacking header:(1)::<address>(0x7fff3036fc40)
+	- stacking header:(2)::<address>(0x7fff3036fc60)
+	- stacking header:(3)::<address>(0x7fff3036fc80)
+	- stacking header:(4)::<address>(0x7fff3036fca0)
+	- stacking header:(5)::<address>(0x7fff3036fcc0)
+	- stacking header:(6)::<address>(0x7fff3036fce0)
+	- stacking header:(7)::<address>(0x7fff3036fd00)
+	- stacking header:(8)::<address>(0x7fff3036fd20)
+	- stacking header:(9)::<address>(0x7fff3036fd40)
 
 
 -:: checking AI functions.
@@ -1531,7 +1531,7 @@ file or directory: -- ./downloads
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (3) queries.
+~:: running (19) queries.
 
 ::- type your query -::
 
@@ -1540,13 +1540,12 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/testa
-	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
-~:: testing parameters: testA().
+	/test
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
+~:: testing parameters request: test().
  ]
 
 -:: finished x computation.
-~:: *(testA)->{
 
 
 
@@ -1556,26 +1555,44 @@ punch.
 === * === * === *
 
 
+Creating Chain:
 ~:: chainCreate().
 	~:: id=[0]
-
 	~:: updated chain ref (1) in "chain" file.
 
 
 Viewing ChainID():
-
-Chain ID	:	0
-Active Chain	:	1
-Nr. of Chains	:	1
+~:: chainID().
+	~:: Chain ID	:	0
+	~:: Active Chain	:	1
+	!:: Nr. of Chains	:	1
 
 Writing Chain Data:
-+chain:0 length: (15)
-~:: (wrote) chain data (15).
+~:: writeChain().
+	~:: +chain:0 length: (15)
+	~:: (wrote) chain data (15).
+
+Reading Chain Data:
+~:: readChain().
+	~:: ChainID:	0
+	~:: Nr of Chains:	1
+	~:: Active Chain:	1
+
+	~:: Chain Data (int):
+		-745960291
+
+	~:: Chain Data (char):
+		-testing success
+
+	~:: Chain Pool Data:
 
 Viewing Chain Data:
-~:: (*)[chain][0][0]->("testing success").
+~:: viewChainData().
+	~:: (*)[chain][0][0]->("testing success").
 
 Deleting Chain w/ Data:
+~:: deleteChain().
+	~:: Chain[0]->(deleted).
 
 
 This line should be visible!
@@ -1583,7 +1600,3 @@ This line should be visible!
 === * === * === *
 
 
-
-} -- (testA).
-
-Press --ENTER--.
