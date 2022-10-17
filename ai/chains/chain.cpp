@@ -101,7 +101,7 @@ void writeChain(int x, int id, Chain &c, std::string str) {   // x=chain, id=cha
         // correct Chain!
         std::cout << "+chain:" << xii << " length: (" << strlen(str.c_str()) << ")"<< std::endl;
         if (lng > 0 && xii < c.nrOfChains) {
-            for (int i=0; i<strlimit; i++) {
+            for (int i=0; i<strlimit-1; i++) {
                 if (i<lng) {
                     c.chains[xii][i] = str.c_str()[i];
                     wrote = true;
