@@ -1,6 +1,9 @@
 CURRENTLY WORKING ON:
 =====
 
+17/10/2022:
+-----
+finish: ai/lib/queries/weights.
 
 17/10/2022:
 -----
@@ -9,7 +12,7 @@ CURRENTLY WORKING ON:
 17/10/2022:
 -----
 - Chains: (chain.cpp, chain.h).
-    -- Finish implementation.
+    -- Finish implementation (almost finished).
     -- Needs "editing" function, unless just discarding chains.
     -- Needs "swapping" function.
     -- Needs "insert" function.
