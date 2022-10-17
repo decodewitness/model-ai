@@ -1611,3 +1611,17 @@ This line should be visible!
 
 punch.
 --?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
+ ]
+
+-:: finished x computation.
+
+(kill chain) function() : 9
+
+-/- initializing killchain(1) sequence.
+

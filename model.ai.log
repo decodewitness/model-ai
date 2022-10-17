@@ -1525,4 +1525,157 @@ regular file:
 
 -:: constructing artificial life routine.
 	-:: reserving mibs memory for virtual assimilation.
-	-:: kbuild reserving 1024(DEG) by
+	-:: kbuild reserving 1024(DEG) bytes ::- for your additional mappings.
+
+-:: starting evolving mechanic life in artificial life habits.
+~:: accessing modular bay construct.
+	~:: opening "/bay" for inspection.
+	~:: scanning() directory: (bay).
+		~:: glob() in directory: (bay):
+
+~:: stats() function:
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
+
+~:: stats() function:
+file or directory: -- ./module_bay
+
+~:: stats() function:
+file or directory: -- ./DCIM
+
+~:: stats() function:
+file or directory: -- ./info.txt
+
+~:: stats() function:
+file or directory: -- ./downloads
+
+~:: stats() function:
+	--directory: (debug) xcomp=true; skipping "." -&- ".."
+
+
+~:: running (10) queries.
+
+::- type your query -::
+
+punch.
+--?:: /testa
+
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/testa
+	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
+~:: testing parameters: testA().
+ ]
+
+-:: finished x computation.
+
+
+
+=== * === * === *
+<!> trial rounds in these functions (logged output):
+
+=== * === * === *
+
+
+~Creating Chain:
+~:: chainCreate().
+	~:: id=[0]
+	~:: updated chain ref (1) in "chain" file.
+
+
+~Viewing ChainID():
+~:: chainID().
+	~:: Chain ID	:	0
+	~:: Active Chain	:	1
+	!:: Nr. of Chains	:	1
+
+~Writing Chain Data:
+~:: writeChain().
+	~:: +chain:0 length: (15)
+	~:: (wrote) chain data (15).
+
+~Reading Chain Data:
+~:: readChain().
+	~:: ChainID:	0
+	~:: Nr of Chains:	1
+	~:: Active Chain:	1
+
+	~:: Chain Data (int):
+		-745960291
+
+	~:: Chain Data (char):
+		-testing success
+
+	~:: Chain Pool Data:
+
+~Viewing Chain Data:
+~:: viewChainData().
+	~:: (*)[chain][0][0]->("testing success").
+
+~Deleting Chain Data:
+~:: deleteChain().
+	~:: Chain[0]->(deleted).
+
+1666031130
+-2698470(seconds) since January 17, 2022 in the current timezone
+
+
+
+This line should be visible!
+
+=== * === * === *
+
+
+k
+
+~:: running (10) queries.
+
+::- type your query -::
+
+punch.
+--?:: /killc
+
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/killc
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: parameter request: kill_chain().
+ ]
+
+-:: finished x computation.
+
+(kill chain) function() : 9
+
+-/- initializing killchain(1) sequence.
+
+
+
+~:copying "runtime.txt" log file to "./doc"
+~:copying "make_readme.sh"
+~:creating README.md -> ./doc/README.md
+- make_readme.sh - script is * running *
+
+--2022-10-17 14:49:38--  https://model-ai.com/archive/doc.tar
+Resolving model-ai.com (model-ai.com)... 62.221.254.104, fe80::1c00:f3ff:fe00:bd9
+Connecting to model-ai.com (model-ai.com)|62.221.254.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 24576 (24K) [application/x-tar]
+Saving to: ‘doc.tar’
+
+doc.tar                                            0%[                                                                                                          ]       0  --.-KB/s               doc.tar                                          100%[=========================================================================================================>]  24.00K  --.-KB/s    in 0s      
+
+2022-10-17 14:49:38 (91.7 MB/s) - ‘doc.tar’ saved [24576/24576]
+
+authors.txt
+beneficial.txt
+header1.txt
+header2.txt
+make_readme.sh
+program.txt
+readme_component_1.txt
+readme_component_2.txt
+
+done.
+
+Script done on 2022-10-17 14:49:38-04:00 [COMMAND_EXIT_CODE="0"]

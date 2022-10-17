@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffff3bae180)
-	- stacking header:(1)::<address>(0x7ffff3bae1a0)
-	- stacking header:(2)::<address>(0x7ffff3bae1c0)
-	- stacking header:(3)::<address>(0x7ffff3bae1e0)
-	- stacking header:(4)::<address>(0x7ffff3bae200)
-	- stacking header:(5)::<address>(0x7ffff3bae220)
-	- stacking header:(6)::<address>(0x7ffff3bae240)
-	- stacking header:(7)::<address>(0x7ffff3bae260)
-	- stacking header:(8)::<address>(0x7ffff3bae280)
-	- stacking header:(9)::<address>(0x7ffff3bae2a0)
+	- stacking header:(0)::<address>(0x7ffff3cc7250)
+	- stacking header:(1)::<address>(0x7ffff3cc7270)
+	- stacking header:(2)::<address>(0x7ffff3cc7290)
+	- stacking header:(3)::<address>(0x7ffff3cc72b0)
+	- stacking header:(4)::<address>(0x7ffff3cc72d0)
+	- stacking header:(5)::<address>(0x7ffff3cc72f0)
+	- stacking header:(6)::<address>(0x7ffff3cc7310)
+	- stacking header:(7)::<address>(0x7ffff3cc7330)
+	- stacking header:(8)::<address>(0x7ffff3cc7350)
+	- stacking header:(9)::<address>(0x7ffff3cc7370)
 
 
 -:: checking AI functions.
@@ -1531,7 +1531,7 @@ file or directory: -- ./downloads
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (10) queries. (10)
+~:: running (10) queries.
 
 ::- type your query -::
 
@@ -1594,8 +1594,8 @@ punch.
 ~:: deleteChain().
 	~:: Chain[0]->(deleted).
 
-1666030812
--2698788(seconds) since January 17, 2022 in the current timezone
+1666031130
+-2698470(seconds) since January 17, 2022 in the current timezone
 
 
 
@@ -1605,7 +1605,7 @@ This line should be visible!
 
 
 
-~:: running (10) queries. (11)
+~:: running (10) queries.
 
 ::- type your query -::
 
