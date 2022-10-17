@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff3036fc20)
-	- stacking header:(1)::<address>(0x7fff3036fc40)
-	- stacking header:(2)::<address>(0x7fff3036fc60)
-	- stacking header:(3)::<address>(0x7fff3036fc80)
-	- stacking header:(4)::<address>(0x7fff3036fca0)
-	- stacking header:(5)::<address>(0x7fff3036fcc0)
-	- stacking header:(6)::<address>(0x7fff3036fce0)
-	- stacking header:(7)::<address>(0x7fff3036fd00)
-	- stacking header:(8)::<address>(0x7fff3036fd20)
-	- stacking header:(9)::<address>(0x7fff3036fd40)
+	- stacking header:(0)::<address>(0x7ffe290a25f0)
+	- stacking header:(1)::<address>(0x7ffe290a2610)
+	- stacking header:(2)::<address>(0x7ffe290a2630)
+	- stacking header:(3)::<address>(0x7ffe290a2650)
+	- stacking header:(4)::<address>(0x7ffe290a2670)
+	- stacking header:(5)::<address>(0x7ffe290a2690)
+	- stacking header:(6)::<address>(0x7ffe290a26b0)
+	- stacking header:(7)::<address>(0x7ffe290a26d0)
+	- stacking header:(8)::<address>(0x7ffe290a26f0)
+	- stacking header:(9)::<address>(0x7ffe290a2710)
 
 
 -:: checking AI functions.
@@ -1531,7 +1531,7 @@ file or directory: -- ./downloads
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (19) queries.
+~:: running (1) queries.
 
 ::- type your query -::
 
@@ -1590,7 +1590,7 @@ Viewing Chain Data:
 ~:: viewChainData().
 	~:: (*)[chain][0][0]->("testing success").
 
-Deleting Chain w/ Data:
+Deleting Chain Data:
 ~:: deleteChain().
 	~:: Chain[0]->(deleted).
 
@@ -1600,3 +1600,29 @@ This line should be visible!
 === * === * === *
 
 
+
+-:: aborting artificial life sequence, and clean up gracefully!
+
+-:: display ((x)->live())(?x) equaled  .
+
+-:: destructor artificial life routine was called. -::
+	killing abstraction layer.
+
+-:: decoupler.
+	-:: decoupling sampler
+	-:: sampler set to pause.
+		(-  ||  -)
+
+
+::=> saving grace (routine) and closing libraries <=::
+
+-:: closing files.
+-:: cleaning memory.
+
+~:: decoupling transponder.
+	~:: closed "ai/lib/queries/weights" transponder file access.
+	~:: closed "ai/data/files/synonyms.txt" transponder file access.
+~:: closed access.
+
+-:: calling destructor for AI::Model.
+-:: done.

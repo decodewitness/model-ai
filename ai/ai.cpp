@@ -2372,7 +2372,7 @@ void AI::view_chain(Chain & ccc,int x) {
 }
 
 void AI::delete_chain(Chain & ccc) {
-	std::cout << std::endl << "Deleting Chain w/ Data:" << std::endl;
+	std::cout << std::endl << "Deleting Chain Data:" << std::endl;
 	deleteChain(ccc);
 }
 
