@@ -2,7 +2,7 @@
 AUTHOR: Vera Lo
 DATE: 01:19AM 19/11/2021# model-ai
 
-Latest branch in Artificial Intelligence (A.I) software. Version (v.0.1-29a) (07:44PM CET) (August 21 2021)
+Latest branch in Artificial Intelligence (A.I) software. Version (v.0.1-26c) (07:44PM CET) (August 21 2021)
 
 ░▄▄▄▄░
 ▀▀▄██►
@@ -23,7 +23,12 @@ The "README.md" file will consist of the files in "model-ai/ai/logs":
  -------            ----------
 
    $ ./run
-   (uncomment the APT repositories update -- in the "start" file LINE: 11)
+    
+    (or)
+
+   $ ./bootstrap
+
+
 
 Using this next command will run the (model-ai) AI from "setup.sh", and generate an "output.log" text file in "./ai/logs":
 
@@ -1511,16 +1516,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7fff13310410)
-	- stacking header:(1)::<address>(0x7fff13310430)
-	- stacking header:(2)::<address>(0x7fff13310450)
-	- stacking header:(3)::<address>(0x7fff13310470)
-	- stacking header:(4)::<address>(0x7fff13310490)
-	- stacking header:(5)::<address>(0x7fff133104b0)
-	- stacking header:(6)::<address>(0x7fff133104d0)
-	- stacking header:(7)::<address>(0x7fff133104f0)
-	- stacking header:(8)::<address>(0x7fff13310510)
-	- stacking header:(9)::<address>(0x7fff13310530)
+	- stacking header:(0)::<address>(0x7ffe8687e320)
+	- stacking header:(1)::<address>(0x7ffe8687e340)
+	- stacking header:(2)::<address>(0x7ffe8687e360)
+	- stacking header:(3)::<address>(0x7ffe8687e380)
+	- stacking header:(4)::<address>(0x7ffe8687e3a0)
+	- stacking header:(5)::<address>(0x7ffe8687e3c0)
+	- stacking header:(6)::<address>(0x7ffe8687e3e0)
+	- stacking header:(7)::<address>(0x7ffe8687e400)
+	- stacking header:(8)::<address>(0x7ffe8687e420)
+	- stacking header:(9)::<address>(0x7ffe8687e440)
 
 
 -:: checking AI functions.
@@ -1563,22 +1568,22 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+socket: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+socket: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+socket: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+socket: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (10) queries.
+~:: running (2) queries.
 
 ::- type your query -::
 
@@ -1601,34 +1606,32 @@ punch.
 
 === * === * === *
 
-CREATING FIRST CHAIN:
+Creating chain w/ chainID(0):
 
 ~:: chainCreate().
+	~:: id=[0]
 
+	~:: updated chain ref (1) in "chain" file.
+
+
+Viewing ChainID():
 
 Chain ID	:	0
-Active Chain	:	0
+Active Chain	:	1
 Nr. of Chains	:	1
+
+Writing Chain Data:
++chain:0 length: (9)
+~:: (wrote) chain data (9).
+
+Viewing Chain Data:
+~:: (*)[chain][0][0]->("test data").
 
 === * === * === *
 
 
 
-~:: running (9) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/kills
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1  ]
-
--:: finished x computation.
-
-~:: running (8) queries.
+~:: running (1) queries.
 
 ::- type your query -::
 

@@ -128,7 +128,9 @@ void AI::help(int n=1) {
 	std::cout << "/learned -- lists the added data through learning." << std::endl;
 	std::cout << "/what -- lists the added data through learning." << std::endl;
 	std::cout << "/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model." << std::endl;
-	std::cout << "/test -- test the transponder responses." << std::endl;
+	std::cout << "/test -- test functions." << std::endl;
+	std::cout << "/testa -- test (A) functions." << std::endl;
+	std::cout << "/testA -- test (A) functions." << std::endl;
 	std::cout << "/answer" << std::endl;
 	std::cout << "/list -- lists the conversation." << std::endl;
 	std::cout << "/export_backlogs -- export backlogs of user queries & transponder queries." << std::endl;
@@ -2355,6 +2357,10 @@ void AI::testA() {	// testing queue
 /*
 // Need to use CHAIN.H to build chain dynamics in architecture.
 
+
+	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
+	// TO TEST THE FUNCTION INSIDE THE MODEL.
+
 struct Chain {
     int id;    // id
     int nrOfChains; // nr   // ((( could fluctuate ;; needs implementation)))
@@ -2389,15 +2395,21 @@ struct Chain {
 
 */
 
-	std::cout << "CREATING FIRST CHAIN:" << std::endl;
+	std::cout << "Creating chain w/ chainID(0):" << std::endl;
 	Chain *chain1 = &chainCreate();
 
 	// chain1->id = 6;
+	std::cout << std::endl << "Viewing ChainID():" << std::endl;
 	chainID(*chain1);
 
+	// void writeChain(int x, int id, Chain &c, std::string str)
+	std::cout << std::endl << "Writing Chain Data:" << std::endl;
+	writeChain(0, 0, *chain1, "test data");
 
-	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
-	// TO TEST THE FUNCTION INSIDE THE MODEL.
+	std::cout << std::endl << "Viewing Chain Data:" << std::endl;
+	viewChainData(*chain1, 0);
+
+
 
 	// std::string str = "this is a bool envelope!";
 
