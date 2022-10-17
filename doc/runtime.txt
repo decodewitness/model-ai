@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe8687e320)
-	- stacking header:(1)::<address>(0x7ffe8687e340)
-	- stacking header:(2)::<address>(0x7ffe8687e360)
-	- stacking header:(3)::<address>(0x7ffe8687e380)
-	- stacking header:(4)::<address>(0x7ffe8687e3a0)
-	- stacking header:(5)::<address>(0x7ffe8687e3c0)
-	- stacking header:(6)::<address>(0x7ffe8687e3e0)
-	- stacking header:(7)::<address>(0x7ffe8687e400)
-	- stacking header:(8)::<address>(0x7ffe8687e420)
-	- stacking header:(9)::<address>(0x7ffe8687e440)
+	- stacking header:(0)::<address>(0x7ffec2d7be50)
+	- stacking header:(1)::<address>(0x7ffec2d7be70)
+	- stacking header:(2)::<address>(0x7ffec2d7be90)
+	- stacking header:(3)::<address>(0x7ffec2d7beb0)
+	- stacking header:(4)::<address>(0x7ffec2d7bed0)
+	- stacking header:(5)::<address>(0x7ffec2d7bef0)
+	- stacking header:(6)::<address>(0x7ffec2d7bf10)
+	- stacking header:(7)::<address>(0x7ffec2d7bf30)
+	- stacking header:(8)::<address>(0x7ffec2d7bf50)
+	- stacking header:(9)::<address>(0x7ffec2d7bf70)
 
 
 -:: checking AI functions.
@@ -1516,22 +1516,22 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-socket: -- ./module_bay
+FIFO/pipe: -- ./module_bay
 
 ~:: stats() function:
-socket: -- ./DCIM
+FIFO/pipe: -- ./DCIM
 
 ~:: stats() function:
-socket: -- ./info.txt
+FIFO/pipe: -- ./info.txt
 
 ~:: stats() function:
-socket: -- ./downloads
+FIFO/pipe: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (2) queries.
+~:: running (10) queries.
 
 ::- type your query -::
 
@@ -1579,7 +1579,7 @@ Viewing Chain Data:
 
 
 
-~:: running (1) queries.
+~:: running (9) queries.
 
 ::- type your query -::
 

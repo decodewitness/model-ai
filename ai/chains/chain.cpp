@@ -99,7 +99,7 @@ void writeChain(int x, int id, Chain &c, std::string str) {   // x=chain, id=cha
     // write to chain
     if (id == c.id) {
         // correct Chain!
-        std::cout << "+chain:" << xii << " length: (" << strlen(str.c_str()) << ")"<< std::endl;
+        std::cout << "+chain:" << xii << " length: (" << str.length() << ")"<< std::endl;
         if (lng > 0 && xii < c.nrOfChains) {
             for (int i=0; i<strlimit-1; i++) {
                 if (i<lng) {
