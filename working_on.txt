@@ -1,10 +1,19 @@
 CURRENTLY WORKING ON:
------
+=====
+
 
 17/10/2022:
 -----
-- Chains (chain.cpp, chain.h).
+- Needs POS Tagging / NER functions.
+
+17/10/2022:
+-----
+- Chains: (chain.cpp, chain.h).
     -- Finish implementation.
+    -- Needs "editing" function, unless just discarding chains.
+    -- Needs "swapping" function.
+    -- Needs "insert" function.
+    -- Doesn't overwrite the "chain" file: (ai/chains/chain <--)
 
 1/10/2022:
 -----
