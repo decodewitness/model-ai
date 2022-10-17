@@ -5,17 +5,22 @@
 echo
 echo "~:start."
 echo
-./start $@  # runs the Ai model
+script ./model.ai.log -c ./start $@  # runs the Ai model
 echo
 echo "~:completing readme."
 echo
 ./readme.sh # copies README.md from ./doc
 echo
 echo "Done."
+echo
 
-echo "COPYRIGHT NOTICE:"
-echo "-----"
-echo "(Model-Ai) Copyright(©)(2021-2022) :: (Author): Vera Lo :: (Website): https://model-ai.com"
+echo "(COPYRIGHT NOTICE):"
+echo "  -o-e-"
+echo "(Model-Ai) Copyright(©)(2021-2022)"
+echo "::  ::"
+echo "::  (Author): Vera Lo (1980-2022)"
+echo "::"
+echo "(Website): https://model-ai.com"
 echo
 
 exit 0

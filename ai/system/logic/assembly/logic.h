@@ -14,6 +14,7 @@ bool isLogic=false;
 
 // booleans for in "AI/AI.CPP" -- query() function
 bool isTestA=false;
+bool isTestB=false;
 bool isHelp=false;
 bool isVersion=false;
 bool isSim=false;

@@ -60,6 +60,7 @@
 #include "comodo/varaan.h"
 #include "chains/chain.cpp"
 #include "lib/construct.cpp"
+#include "tempus/tempus.cpp"
 #include "patching/patch.cpp"
 #include "system/protocol.cpp"
 #include "entropy/b33hiv3.cpp"	// includes entropy.cpp && ltctapttclt.cpp
@@ -127,6 +128,11 @@ private:
 	int step;
 	int element;
 	int elements;
+
+	// ai cyclus
+	int bstepcount;
+		int *pbstep;
+
 	
 	// references
 	int rNr;	// nr for the last reference (size of references)

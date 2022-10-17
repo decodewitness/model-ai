@@ -224,6 +224,9 @@ AI::AI(int n=1, int ss=0) {	// AI constructor
 	// char ch;
 	ifstream fs;
 
+	// ai private variable pointer pbstep points to stages/countdown sequence, which is the number of queries...
+	pbstep = &bstepcount;	// The number of times of running and performing "this->query()" function...
+	
 	fs.open("./chk.0");
 
 	if (fs.is_open() == true) {
@@ -283,14 +286,34 @@ AI::AI(int n=1, int ss=0) {	// AI constructor
 		std::cout << "\t -:: loading virtual instance" << std::endl << std::endl;
 		this->appliance(); // this->appliance(); runs the virtual instance
 	}
+	
+		///////////////////////////////////////
+	// ORIGINAL (COPY) OF THE FUNCTION: //
+	/////////////////////////////////////
+	// // perform query sampling and nlp query
+	// 	// adjusted to provide allowing skipping counts for testing rounds (command "/testA" or "/testa");
+	// for (int i=0; i<n; i++) {
+	// 	std::cout << std::endl << "~:: running (" << (n-i) << ") queries." << std::endl << std::endl;
+	// 	//this->assembleBrain();
+	// 	this->query();
+	// 	//std::cout << "- catching single character to continue..." << std::endl;
+	// 	//ch = getchar();
+	// }
+	/////////////////////////////////////
+
+	// (ORIGINAL) ABOVE ^ //
 	// perform query sampling and nlp query
-	for (int i=0; i<n; i++) {
-		std::cout << std::endl << "~:: running (" << (n-i) << ") queries." << std::endl << std::endl;
+		// adjusted to provide allowing skipping counts for testing rounds (command "/testA" or "/testa");
+	
+	bstepcount=n;	//
+	for (int i=0; i<bstepcount; i++) {
+		std::cout << std::endl;
+		std::cout << "~:: running (" << (*pbstep-i) << ") queries." << std::endl;
+		std::cout << std::endl;
+
 		//this->assembleBrain();
-		this->query();
-		//std::cout << "- catching single character to continue..." << std::endl;
-		//ch = getchar();
-	}
+		this->query();	// running the main query (function)
+	}	
 };
 
 void AI::openfs() {	// opens filestream to "ai/bin/TL/tl" file
@@ -1076,13 +1099,28 @@ void AI::query() {	// respond to logical query method
 		isTest = false;
 		// this->killc(9);
 	} else if (isTestA == true) {
-		std::cout << "~:: *(testA)->{" << std::endl;
-		this->testA();
-		std::cout << std::endl << "} -- (testA)." << std::endl;
-		std::cout << std::endl << "Press --ENTER--." << std::endl;
+		this->testA();	// currently only testA() is available	// Change to test implemented features later.
 		std::cin >> ch;
 		isTestA = false;
+		// !!!!!!!!!
+		// Has a "bonus round" in Ai (for testing) (this round is not deducted from the credits for running a query).
+		*pbstep += 1;	// adds the bonus round ;; pbstep is "this->bstepcount"...
 		// this->killc(9);
+
+
+			// prep() for testing
+
+
+
+
+	} else if (isTestB == true) {
+		std::cout << "~:: *(testB)->{" << std::endl;
+		this->testA();
+		std::cout << std::endl << "} -- (testB)." << std::endl;
+		std::cout << std::endl << "Press:\t\t(k) and hit (╚ENTER═►)." << std::endl;
+		std::cin >> ch;
+		isTestB = false;
+		this->killc(9);
 	} else if (isSim == true) {	// run simulation
 		std::cout << std::endl << "(simulation) entities: ";
 		std::cin >> x;
@@ -2126,7 +2164,6 @@ void AI::runSim() {	// sim objects and such go here
 	// start the sim	// should be 1st statement in the function "runSim()"
 	// this->startSim();
 	
-
 	// play audio file -- already done in "startSim()"
 	// this->play_audio_file("ai/system/audio/samples/vworge.wav");
 	sleep(1);
@@ -2345,41 +2382,40 @@ void AI::train_model(std::string q, std::string a) {
 
 // create new chain
 Chain & AI::create_chain() {
-	std::cout << std::endl << "Creating Chain:" << std::endl;
+	std::cout << std::endl << "~Creating Chain:" << std::endl;
 	Chain *ccc = &chainCreate();
 	return *ccc;
 };
 
 void AI::chain_id(Chain & ccc) {
-	std::cout << std::endl << "Viewing ChainID():" << std::endl;
+	std::cout << std::endl << "~Viewing ChainID():" << std::endl;
 	chainID(ccc);
 }
 
 void AI::read_chain(Chain & ccc) {
-	std::cout << std::endl << "Reading Chain Data:" << std::endl;
+	std::cout << std::endl << "~Reading Chain Data:" << std::endl;
 	readChain(ccc);
 }
 
 void AI::write_chain(int x, int id, Chain & ccc, std::string str) {
-	std::cout << std::endl << "Writing Chain Data:" << std::endl;
+	std::cout << std::endl << "~Writing Chain Data:" << std::endl;
 	writeChain(x, id, ccc, str);
 }
 
-
 void AI::view_chain(Chain & ccc,int x) {
-	std::cout << std::endl << "Viewing Chain Data:" << std::endl;
+	std::cout << std::endl << "~Viewing Chain Data:" << std::endl;
 	viewChainData(ccc, x);
 }
 
 void AI::delete_chain(Chain & ccc) {
-	std::cout << std::endl << "Deleting Chain Data:" << std::endl;
+	std::cout << std::endl << "~Deleting Chain Data:" << std::endl;
 	deleteChain(ccc);
 }
 
 
-
 // TESTING!!! TESTING!!! TESTING!!! TESTING!!! TESTING!!!
    // TESTING!!! TESTING!!! TESTING!!! TESTING!!! TESTING!!!
+
 
 void AI::testA() {	// testing queue
 	// this->readMetaQue();
@@ -2389,13 +2425,16 @@ void AI::testA() {	// testing queue
 	std::cout << "<!> trial rounds in these functions (logged output):" << std::endl;
 	std::cout << std::endl <<  "=== * === * === *" << std::endl << std::endl;
 /*
+//
 // Need to use CHAIN.H to build chain dynamics in architecture.
 //
-//
+
+/*
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
 		// TO TEST THE FUNCTION INSIDE THE MODEL.
 	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] //
-//
+/*
+
 //
 */
 Chain *cp1 = &AI::create_chain();
@@ -2405,6 +2444,10 @@ AI::read_chain(*cp1);
 AI::view_chain(*cp1,0);
 AI::delete_chain(*cp1);
 cp1 = NULL;
+
+
+// <<< >>>>>>>> :
+	tempo();
 
 	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] //
 

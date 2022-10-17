@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe290a25f0)
-	- stacking header:(1)::<address>(0x7ffe290a2610)
-	- stacking header:(2)::<address>(0x7ffe290a2630)
-	- stacking header:(3)::<address>(0x7ffe290a2650)
-	- stacking header:(4)::<address>(0x7ffe290a2670)
-	- stacking header:(5)::<address>(0x7ffe290a2690)
-	- stacking header:(6)::<address>(0x7ffe290a26b0)
-	- stacking header:(7)::<address>(0x7ffe290a26d0)
-	- stacking header:(8)::<address>(0x7ffe290a26f0)
-	- stacking header:(9)::<address>(0x7ffe290a2710)
+	- stacking header:(0)::<address>(0x7ffff3cc7250)
+	- stacking header:(1)::<address>(0x7ffff3cc7270)
+	- stacking header:(2)::<address>(0x7ffff3cc7290)
+	- stacking header:(3)::<address>(0x7ffff3cc72b0)
+	- stacking header:(4)::<address>(0x7ffff3cc72d0)
+	- stacking header:(5)::<address>(0x7ffff3cc72f0)
+	- stacking header:(6)::<address>(0x7ffff3cc7310)
+	- stacking header:(7)::<address>(0x7ffff3cc7330)
+	- stacking header:(8)::<address>(0x7ffff3cc7350)
+	- stacking header:(9)::<address>(0x7ffff3cc7370)
 
 
 -:: checking AI functions.
@@ -1531,7 +1531,7 @@ file or directory: -- ./downloads
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (1) queries.
+~:: running (10) queries.
 
 ::- type your query -::
 
@@ -1540,9 +1540,9 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/test
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: testing parameters request: test().
+	/testa
+	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
+~:: testing parameters: testA().
  ]
 
 -:: finished x computation.
@@ -1555,24 +1555,24 @@ punch.
 === * === * === *
 
 
-Creating Chain:
+~Creating Chain:
 ~:: chainCreate().
 	~:: id=[0]
 	~:: updated chain ref (1) in "chain" file.
 
 
-Viewing ChainID():
+~Viewing ChainID():
 ~:: chainID().
 	~:: Chain ID	:	0
 	~:: Active Chain	:	1
 	!:: Nr. of Chains	:	1
 
-Writing Chain Data:
+~Writing Chain Data:
 ~:: writeChain().
 	~:: +chain:0 length: (15)
 	~:: (wrote) chain data (15).
 
-Reading Chain Data:
+~Reading Chain Data:
 ~:: readChain().
 	~:: ChainID:	0
 	~:: Nr of Chains:	1
@@ -1586,13 +1586,17 @@ Reading Chain Data:
 
 	~:: Chain Pool Data:
 
-Viewing Chain Data:
+~Viewing Chain Data:
 ~:: viewChainData().
 	~:: (*)[chain][0][0]->("testing success").
 
-Deleting Chain Data:
+~Deleting Chain Data:
 ~:: deleteChain().
 	~:: Chain[0]->(deleted).
+
+1666031130
+-2698470(seconds) since January 17, 2022 in the current timezone
+
 
 
 This line should be visible!
@@ -1601,28 +1605,9 @@ This line should be visible!
 
 
 
--:: aborting artificial life sequence, and clean up gracefully!
+~:: running (10) queries.
 
--:: display ((x)->live())(?x) equaled  .
+::- type your query -::
 
--:: destructor artificial life routine was called. -::
-	killing abstraction layer.
-
--:: decoupler.
-	-:: decoupling sampler
-	-:: sampler set to pause.
-		(-  ||  -)
-
-
-::=> saving grace (routine) and closing libraries <=::
-
--:: closing files.
--:: cleaning memory.
-
-~:: decoupling transponder.
-	~:: closed "ai/lib/queries/weights" transponder file access.
-	~:: closed "ai/data/files/synonyms.txt" transponder file access.
-~:: closed access.
-
--:: calling destructor for AI::Model.
--:: done.
+punch.
+--?:: 

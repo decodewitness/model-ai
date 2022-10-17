@@ -62,6 +62,8 @@ void commands(int x, std::string param) {
 
 };
 
+// find these commands in logic.h and the query() function in ai.cpp..!!!
+    // logic.h, logic.cpp, ai/ai.cpp ;
 void compare_query_str(std::string str) {   // handles the commands for the logic input
     if (str.compare("/test") == false) {
         std::cout << std::endl << "~:: testing parameters request: test()." << std::endl;
@@ -69,6 +71,9 @@ void compare_query_str(std::string str) {   // handles the commands for the logi
     } else if (str.compare("/testA") == false || str.compare("/testa") == false) {
         std::cout << std::endl << "~:: testing parameters: testA()." << std::endl;
         isTestA = true;   // triggers testing function (AI::testA)
+    } else if (str.compare("/testB") == false || str.compare("/testb") == false) {
+        std::cout << std::endl << "~:: testing parameters: testB()." << std::endl;
+        isTestB = true;   // triggers testing function (AI::testB)
     } else if (str.compare("/sim") == false || str.compare("/simulation") == false) {
         std::cout << std::endl << "~:: parameter request: simulation()." << std::endl;
         isSim = true;   // triggers Simulation in AI/AI.CPP
