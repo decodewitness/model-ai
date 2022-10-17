@@ -1617,3 +1617,153 @@ COMMANDS:
 ::- type your query -::
 
 punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/testa
+	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
+~:: testing parameters: testA().
+ ]
+
+-:: finished x computation.
+
+
+
+=== * === * === *
+<!> trial rounds in these functions (logged output):
+
+=== * === * === *
+
+
+~Creating Chain:
+~:: chainCreate().
+	~:: id=[0]
+	~:: updated chain ref (1) in "chain" file.
+
+
+~Viewing ChainID():
+~:: chainID().
+	~:: Chain ID	:	0
+	~:: Active Chain	:	1
+	!:: Nr. of Chains	:	1
+
+~Writing Chain Data:
+~:: writeChain().
+	~:: +chain:0 length: (15)
+	~:: (wrote) chain data (15).
+
+~Reading Chain Data:
+~:: readChain().
+	~:: ChainID:	0
+	~:: Nr of Chains:	1
+	~:: Active Chain:	1
+
+	~:: Chain Data (int):
+		-745960291
+
+	~:: Chain Data (char):
+		-testing success
+
+	~:: Chain Pool Data:
+
+~Viewing Chain Data:
+~:: viewChainData().
+	~:: (*)[chain][0][0]->("testing success").
+
+~Deleting Chain Data:
+~:: deleteChain().
+	~:: Chain[0]->(deleted).
+
+1666036641
+-2692959(seconds) since January 17, 2022 in the current timezone
+
+
+
+This line should be visible!
+
+=== * === * === *
+
+
+
+~:: running (1) queries.
+
+::- type your query -::
+
+punch.
+--?:: 
+
+-:: testing sample ::-
+-:: :logic: (compute x computation)::-
+	/testb
+	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
+~:: testing parameters: testB().
+ ]
+
+-:: finished x computation.
+~:: *(testB)->{
+
+
+
+=== * === * === *
+<!> trial rounds in these functions (logged output):
+
+=== * === * === *
+
+
+~Creating Chain:
+~:: chainCreate().
+	~:: id=[0]
+	~:: updated chain ref (1) in "chain" file.
+
+
+~Viewing ChainID():
+~:: chainID().
+	~:: Chain ID	:	0
+	~:: Active Chain	:	1
+	!:: Nr. of Chains	:	1
+
+~Writing Chain Data:
+~:: writeChain().
+	~:: +chain:0 length: (15)
+	~:: (wrote) chain data (15).
+
+~Reading Chain Data:
+~:: readChain().
+	~:: ChainID:	0
+	~:: Nr of Chains:	1
+	~:: Active Chain:	1
+
+	~:: Chain Data (int):
+		-0
+
+	~:: Chain Data (char):
+		-testing success
+
+	~:: Chain Pool Data:
+
+~Viewing Chain Data:
+~:: viewChainData().
+	~:: (*)[chain][0][0]->("testing success").
+
+~Deleting Chain Data:
+~:: deleteChain().
+	~:: Chain[0]->(deleted).
+
+1666036752
+-2692848(seconds) since January 17, 2022 in the current timezone
+
+
+
+This line should be visible!
+
+=== * === * === *
+
+
+
+} -- (testB).
+
+Press:		(k) and hit (╚ENTER═►).
+
+-/- initializing killchain(1) sequence.
+
