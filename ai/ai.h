@@ -424,6 +424,26 @@ public:
 
 	// running scripts
 	void runscript(std::string ss);
+
+	// chains
+	Chain & create_chain();
+	
+	void chain_id(Chain & ccc);
+
+	void write_chain(int x, int id, Chain & ccc, std::string str);
+
+	void view_chain(Chain & ccc,int x);
+
+	void delete_chain(Chain & ccc);
+	
+	// std::cout << std::endl << "Writing Chain Data:" << std::endl;
+	// writeChain(0, 0, *chain1, "test data");
+
+	// std::cout << std::endl << "Viewing Chain Data:" << std::endl;
+	// viewChainData(*chain1, 0);
+
+	// std::cout << std::endl << "Deleting Chain w/ Data:" << std::endl;
+	// deleteChain(*chain1);
 };
 
 #endif

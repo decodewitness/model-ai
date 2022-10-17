@@ -2343,6 +2343,35 @@ void AI::train_model(std::string q, std::string a) {
 	this->storeRef(x);
 };
 
+// create new chain
+Chain & AI::create_chain() {
+	Chain *ccc = &chainCreate();
+	return *ccc;
+};
+
+void AI::chain_id(Chain & ccc) {
+	std::cout << std::endl << "Viewing ChainID():" << std::endl;
+	chainID(ccc);
+}
+
+void AI::write_chain(int x, int id, Chain & ccc, std::string str) {
+	std::cout << std::endl << "Writing Chain Data:" << std::endl;
+	writeChain(x, id, ccc, str);
+}
+
+
+void AI::view_chain(Chain & ccc,int x) {
+	std::cout << std::endl << "Viewing Chain Data:" << std::endl;
+	viewChainData(ccc, x);
+}
+
+void AI::delete_chain(Chain & ccc) {
+	std::cout << std::endl << "Deleting Chain w/ Data:" << std::endl;
+	deleteChain(ccc);
+}
+
+
+
 // TESTING!!! TESTING!!! TESTING!!! TESTING!!! TESTING!!!
    // TESTING!!! TESTING!!! TESTING!!! TESTING!!! TESTING!!!
 
@@ -2360,7 +2389,19 @@ void AI::testA() {	// testing queue
 
 	// PUT YOUR FUNCTION HERE AND RUN THE "/test" COMMAND
 	// TO TEST THE FUNCTION INSIDE THE MODEL.
+	
+	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
+*/
+Chain *cp1 = &AI::create_chain();
+AI::chain_id(*cp1);
+AI::write_chain(0,0,*cp1,"testing success");
+AI::view_chain(*cp1,0);
+AI::delete_chain(*cp1);
+cp1 = NULL;
+	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+/*
 struct Chain {
     int id;    // id
     int nrOfChains; // nr   // ((( could fluctuate ;; needs implementation)))
@@ -2395,21 +2436,28 @@ struct Chain {
 
 */
 
-	std::cout << "Creating chain w/ chainID(0):" << std::endl;
-	Chain *chain1 = &chainCreate();
+	// ===== CHAINS =====
 
-	// chain1->id = 6;
-	std::cout << std::endl << "Viewing ChainID():" << std::endl;
-	chainID(*chain1);
+	// std::cout << "Creating chain w/ chainID(0):" << std::endl;
+	// Chain *chain1 = &chainCreate();
 
-	// void writeChain(int x, int id, Chain &c, std::string str)
-	std::cout << std::endl << "Writing Chain Data:" << std::endl;
-	writeChain(0, 0, *chain1, "test data");
+	// // chain1->id = 6;
+	// std::cout << std::endl << "Viewing ChainID():" << std::endl;
+	// chainID(*chain1);
 
-	std::cout << std::endl << "Viewing Chain Data:" << std::endl;
-	viewChainData(*chain1, 0);
+	// // void writeChain(int x, int id, Chain &c, std::string str)
+	// std::cout << std::endl << "Writing Chain Data:" << std::endl;
+	// writeChain(0, 0, *chain1, "test data");
 
+	// std::cout << std::endl << "Viewing Chain Data:" << std::endl;
+	// viewChainData(*chain1, 0);
 
+	// std::cout << std::endl << "Deleting Chain w/ Data:" << std::endl;
+	// deleteChain(*chain1);
+
+	// =====
+
+	std::cout << std::endl << std::endl << "This line should be visible!" << std::endl;
 
 	// std::string str = "this is a bool envelope!";
 

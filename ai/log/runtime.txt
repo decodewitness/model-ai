@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffec2d7be50)
-	- stacking header:(1)::<address>(0x7ffec2d7be70)
-	- stacking header:(2)::<address>(0x7ffec2d7be90)
-	- stacking header:(3)::<address>(0x7ffec2d7beb0)
-	- stacking header:(4)::<address>(0x7ffec2d7bed0)
-	- stacking header:(5)::<address>(0x7ffec2d7bef0)
-	- stacking header:(6)::<address>(0x7ffec2d7bf10)
-	- stacking header:(7)::<address>(0x7ffec2d7bf30)
-	- stacking header:(8)::<address>(0x7ffec2d7bf50)
-	- stacking header:(9)::<address>(0x7ffec2d7bf70)
+	- stacking header:(0)::<address>(0x7ffce25eb1e0)
+	- stacking header:(1)::<address>(0x7ffce25eb200)
+	- stacking header:(2)::<address>(0x7ffce25eb220)
+	- stacking header:(3)::<address>(0x7ffce25eb240)
+	- stacking header:(4)::<address>(0x7ffce25eb260)
+	- stacking header:(5)::<address>(0x7ffce25eb280)
+	- stacking header:(6)::<address>(0x7ffce25eb2a0)
+	- stacking header:(7)::<address>(0x7ffce25eb2c0)
+	- stacking header:(8)::<address>(0x7ffce25eb2e0)
+	- stacking header:(9)::<address>(0x7ffce25eb300)
 
 
 -:: checking AI functions.
@@ -1516,22 +1516,22 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-FIFO/pipe: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-FIFO/pipe: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-FIFO/pipe: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-FIFO/pipe: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (10) queries.
+~:: running (3) queries.
 
 ::- type your query -::
 
@@ -1540,12 +1540,13 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/test
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: testing parameters request: test().
+	/testa
+	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
+~:: testing parameters: testA().
  ]
 
 -:: finished x computation.
+~:: *(testA)->{
 
 
 
@@ -1554,7 +1555,6 @@ punch.
 
 === * === * === *
 
-Creating chain w/ chainID(0):
 
 ~:: chainCreate().
 	~:: id=[0]
@@ -1569,33 +1569,21 @@ Active Chain	:	1
 Nr. of Chains	:	1
 
 Writing Chain Data:
-+chain:0 length: (9)
-~:: (wrote) chain data (9).
++chain:0 length: (15)
+~:: (wrote) chain data (15).
 
 Viewing Chain Data:
-~:: (*)[chain][0][0]->("test data").
+~:: (*)[chain][0][0]->("testing success").
+
+Deleting Chain w/ Data:
+
+
+This line should be visible!
 
 === * === * === *
 
 
 
-~:: running (9) queries.
+} -- (testA).
 
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
- ]
-
--:: finished x computation.
-
-(kill chain) function() : 9
-
--/- initializing killchain(1) sequence.
-
+Press --ENTER--.
