@@ -1516,16 +1516,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe2f5a2710)
-	- stacking header:(1)::<address>(0x7ffe2f5a2730)
-	- stacking header:(2)::<address>(0x7ffe2f5a2750)
-	- stacking header:(3)::<address>(0x7ffe2f5a2770)
-	- stacking header:(4)::<address>(0x7ffe2f5a2790)
-	- stacking header:(5)::<address>(0x7ffe2f5a27b0)
-	- stacking header:(6)::<address>(0x7ffe2f5a27d0)
-	- stacking header:(7)::<address>(0x7ffe2f5a27f0)
-	- stacking header:(8)::<address>(0x7ffe2f5a2810)
-	- stacking header:(9)::<address>(0x7ffe2f5a2830)
+	- stacking header:(0)::<address>(0x7ffec5178f10)
+	- stacking header:(1)::<address>(0x7ffec5178f30)
+	- stacking header:(2)::<address>(0x7ffec5178f50)
+	- stacking header:(3)::<address>(0x7ffec5178f70)
+	- stacking header:(4)::<address>(0x7ffec5178f90)
+	- stacking header:(5)::<address>(0x7ffec5178fb0)
+	- stacking header:(6)::<address>(0x7ffec5178fd0)
+	- stacking header:(7)::<address>(0x7ffec5178ff0)
+	- stacking header:(8)::<address>(0x7ffec5179010)
+	- stacking header:(9)::<address>(0x7ffec5179030)
 
 
 -:: checking AI functions.
@@ -1568,100 +1568,19 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-file or directory: -- ./module_bay
+regular file: -- ./module_bay
 
 ~:: stats() function:
-file or directory: -- ./DCIM
+regular file: -- ./DCIM
 
 ~:: stats() function:
-file or directory: -- ./info.txt
+regular file: -- ./info.txt
 
 ~:: stats() function:
-file or directory: -- ./downloads
+regular file: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
-
-
-~:: running (2) queries.
-
-::- type your query -::
-
-punch.
---?:: 
-
--:: testing sample ::-
--:: :logic: (compute x computation)::-
-	/help
-	[ simple x computation: type:[char]: len:5 vowels:3 consonants:1 special:1 
-~:: parameter request: help().
- ]
-
--:: finished x computation.
-
-Help Function
------
-
-MODEL-AI
-v0.1-29a
-Author: vera lo
-https://model-ai.com/archive/model-ai.tar.gz
-
-When the Ai asks you for Logic you can enter a string to trigger natural language processing,
-or you can enter one of the following commands.
-
-COMMANDS:
------
-
-/help -- triggers this help function.
-/help -- displays version information.
-/killc -- built in killchain(1).
-/bank -- starts accounting.
-/hash -- hashes a string in MD5.
-/curl -- curls a website of choice from your machine.
-/table -- prints the table in numbers of your chosen number.
-/tableto -- prints the table in numbers of your chosen number up to max chosen number.
-/dice -- print a random dice number. (1...6)
-/dice2 -- print a random dice number. (1...nr_of_eyes)
-/stat -- stat() function stats directory/file.
-/cp -- copies file_1 into file_2. (src) -> (dst)
-/rm -- removes a file from the system.
-/+ -- adds 2 numbers.
-/- -- subtracts 2 numbers.
-// -- divides number 1 by number 2.
-/* -- multiplies number 1 by number 2.
-/pow -- does number 1 to power of number 2.
-/punch -- punch in numbers like with a calculator.
-/prpunch -- punch in numbers like with a calculator.
-/simulation -- runs a simulation for enities from the Entity class -&- objects from the Object class.
-/convert -- converts from '€' EUROs to '$' USD (the valid EURO/Dollar course is not yet live being updated).
-/convertd -- converts from '$' USD to '€' EUROs (the valid Dollar/EURO course is not yet live being updated).
-/stepping -- will start the (incremental for now) "stepping engine" in which you could potentially stack any type of: math, algorithm, or data.
-/rollout -- this function will handle the rolling out of new features, compiling tasks, or permissions; A variety of tools could be deployed this way.
-/add_data -- adds data to the logical cabinets manually.
-/convert_data -- converts the data from a file.
-/audio_toggle -- disables/enables the Ai model its sound FX.
-/run_tube -- download YouTube file or playlist.
-/menu -- will hand you a menu with several options.
-/passwd -- changes the access code for running the model.
-/list_cred -- lists the MD5 hash (the access code) from the credentials store.
-/learned -- lists the added data through learning.
-/what -- lists the added data through learning.
-/clear metas -- clears the cache of stored meta sequences / not advisable or retrain the model.
-/test -- test functions.
-/testa -- test (A) functions.
-/testA -- test (A) functions.
-/answer
-/list -- lists the conversation.
-/export_backlogs -- export backlogs of user queries & transponder queries.
-/export_backlog1 -- export backlogs of user queries.
-/export_backlog2 -- export backlogs of transponder queries.
-/buildref -- build custom reference.
-/readref -- read a certain reference.
-/readrefs -- read all references.
-/lastref -- print the last reference.
-/refnumber -- print the number of references.
-/qlog -- qlog(x) -- log (x) queries.
 
 
 ~:: running (1) queries.
@@ -1727,8 +1646,10 @@ punch.
 ~:: deleteChain().
 	~:: Chain[0]->(deleted).
 
-1666036641
--2692959(seconds) since January 17, 2022 in the current timezone
+~:: replacing line.
+
+1666121188
+-2608412(seconds) since January 17, 2022 in the current timezone
 
 
 
@@ -1747,75 +1668,14 @@ punch.
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/testb
+	/killc
 	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: testing parameters: testB().
+~:: parameter request: kill_chain().
  ]
 
 -:: finished x computation.
-~:: *(testB)->{
 
-
-
-=== * === * === *
-<!> trial rounds in these functions (logged output):
-
-=== * === * === *
-
-
-~Creating Chain:
-~:: chainCreate().
-	~:: id=[0]
-	~:: updated chain ref (1) in "chain" file.
-
-
-~Viewing ChainID():
-~:: chainID().
-	~:: Chain ID	:	0
-	~:: Active Chain	:	1
-	!:: Nr. of Chains	:	1
-
-~Writing Chain Data:
-~:: writeChain().
-	~:: +chain:0 length: (15)
-	~:: (wrote) chain data (15).
-
-~Reading Chain Data:
-~:: readChain().
-	~:: ChainID:	0
-	~:: Nr of Chains:	1
-	~:: Active Chain:	1
-
-	~:: Chain Data (int):
-		-0
-
-	~:: Chain Data (char):
-		-testing success
-
-	~:: Chain Pool Data:
-
-~Viewing Chain Data:
-~:: viewChainData().
-	~:: (*)[chain][0][0]->("testing success").
-
-~Deleting Chain Data:
-~:: deleteChain().
-	~:: Chain[0]->(deleted).
-
-1666036752
--2692848(seconds) since January 17, 2022 in the current timezone
-
-
-
-This line should be visible!
-
-=== * === * === *
-
-
-
-} -- (testB).
-
-Press:		(k) and hit (╚ENTER═►).
+(kill chain) function() : 9
 
 -/- initializing killchain(1) sequence.
 

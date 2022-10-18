@@ -24,6 +24,7 @@
 
 // headers
 #include <cstring>
+#include <cstdio>
 #include <iostream>
 #include <string>
 #include <sys/stat.h>
@@ -438,6 +439,10 @@ public:
 	void write_chain(int x, int id, Chain & ccc, std::string str);
 	void view_chain(Chain & ccc,int x);
 	void delete_chain(Chain & ccc);
+
+	// file operations
+	int replace_line(std::string filename, int line_number, std::string line);
+	int replace_text(std::string filename, std::string txt, std::string newtxt);
 };
 
 #endif

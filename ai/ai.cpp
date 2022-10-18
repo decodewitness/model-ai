@@ -2412,6 +2412,72 @@ void AI::delete_chain(Chain & ccc) {
 	deleteChain(ccc);
 }
 
+int AI::replace_line(std::string filename, int line_number, std::string txt) {
+	int counter=0;
+	std::string line;
+	std::string tmp;
+	std::string tmpfile = "dveruyhjbvcvd_.tmp";
+
+	std::cout << std::endl << "~:: replacing line." << std::endl;
+
+	ifstream f(filename);
+	ofstream o(tmpfile);
+	
+	if (!f && !o) {
+		std::cout << std::endl << "~::!::~ (error) opening files." << std::endl;
+		return 1;
+	}
+
+	while (f >> tmp) {
+		counter++;
+		if (counter == line_number) {
+			tmp = txt;
+		}
+		tmp += "\n";
+		o << tmp;
+	}
+
+	f.close();
+	o.close();
+
+	unlink(filename.c_str());
+	rename(tmpfile.c_str(), filename.c_str());
+return 0;
+};
+
+int AI::replace_text(std::string filename, std::string txt, std::string newtxt) {
+	int counter=0;
+	std::string line;
+	std::string tmp;
+
+	std::string tmpfile = "__dveruyhjbvcvd_.tmp";
+
+	std::cout << std::endl << "~:: replacing text." << std::endl;
+
+	ifstream f(filename);
+	ofstream o(tmpfile);
+
+	if (!f && !o) {
+		std::cout << std::endl << "~::!::~ (error) opening files." << std::endl;
+		return 1;
+	}
+
+	while(f >> tmp) {
+		if (tmp == txt) {
+			tmp = newtxt;
+		}
+		tmp += "\n";
+		o << tmp;
+	}
+
+	f.close();
+	o.close();
+
+	unlink(filename.c_str());
+	rename(tmpfile.c_str(), filename.c_str());
+
+return 0;
+};
 
 // TESTING!!! TESTING!!! TESTING!!! TESTING!!! TESTING!!!
    // TESTING!!! TESTING!!! TESTING!!! TESTING!!! TESTING!!!
@@ -2444,6 +2510,12 @@ AI::read_chain(*cp1);
 AI::view_chain(*cp1,0);
 AI::delete_chain(*cp1);
 cp1 = NULL;
+
+// replace_line("filename.txt", 3, "blah");
+// replace_text("filename.txt", "line5", "oblahdi");
+
+// int replace_line(std::string filename, int line_number, std::string line);
+// int replace_text(std::string filename, std::string txt, std::string newtxt);
 
 
 // <<< >>>>>>>> :
