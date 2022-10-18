@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffec5178f10)
-	- stacking header:(1)::<address>(0x7ffec5178f30)
-	- stacking header:(2)::<address>(0x7ffec5178f50)
-	- stacking header:(3)::<address>(0x7ffec5178f70)
-	- stacking header:(4)::<address>(0x7ffec5178f90)
-	- stacking header:(5)::<address>(0x7ffec5178fb0)
-	- stacking header:(6)::<address>(0x7ffec5178fd0)
-	- stacking header:(7)::<address>(0x7ffec5178ff0)
-	- stacking header:(8)::<address>(0x7ffec5179010)
-	- stacking header:(9)::<address>(0x7ffec5179030)
+	- stacking header:(0)::<address>(0x7ffe77065180)
+	- stacking header:(1)::<address>(0x7ffe770651a0)
+	- stacking header:(2)::<address>(0x7ffe770651c0)
+	- stacking header:(3)::<address>(0x7ffe770651e0)
+	- stacking header:(4)::<address>(0x7ffe77065200)
+	- stacking header:(5)::<address>(0x7ffe77065220)
+	- stacking header:(6)::<address>(0x7ffe77065240)
+	- stacking header:(7)::<address>(0x7ffe77065260)
+	- stacking header:(8)::<address>(0x7ffe77065280)
+	- stacking header:(9)::<address>(0x7ffe770652a0)
 
 
 -:: checking AI functions.
@@ -1516,16 +1516,16 @@ regular file:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 ~:: stats() function:
-regular file: -- ./module_bay
+file or directory: -- ./module_bay
 
 ~:: stats() function:
-regular file: -- ./DCIM
+file or directory: -- ./DCIM
 
 ~:: stats() function:
-regular file: -- ./info.txt
+file or directory: -- ./info.txt
 
 ~:: stats() function:
-regular file: -- ./downloads
+file or directory: -- ./downloads
 
 ~:: stats() function:
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
@@ -1594,10 +1594,10 @@ punch.
 ~:: deleteChain().
 	~:: Chain[0]->(deleted).
 
-~:: replacing line.
+~:: replacing text.
 
-1666121188
--2608412(seconds) since January 17, 2022 in the current timezone
+1666121245
+-2608355(seconds) since January 17, 2022 in the current timezone
 
 
 
