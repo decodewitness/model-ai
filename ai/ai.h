@@ -7,7 +7,7 @@
 	// Commands are in ai/system/logic/assembly/logic.cpp, logic.h, AI::Query().
 
 #define PROGRAM "MODEL-AI"
-#define VERSION "v0.1-29a"
+#define VERSION "v0.1-30"
 #define WEBSITE	"https://model-ai.com"
 #define AUTHOR "Author: vera lo"
 #define DOWNLOADURL "https://model-ai.com/archive/model-ai.tar.gz"
