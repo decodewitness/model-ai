@@ -371,6 +371,36 @@ FILES FOR USE BY BUILD MODEL IN THE RUNTIME:
 -----
 ai/lib/queries/meta_queries					// stores meta_queries here from Transponder->(func)()
 
+
+OTHER FUNCTIONS:
+-----
+runscript()
+
+replace_text()
+replace_line()
+
+jot_score()
+
+read_chain()
+write_chain()
+chainID()
+delete_chain()
+
+reportStatID()
+reportActiveChain()
+reportStatChains()
+
+tempo()
+
+
+
+
+STRUCTS:
+-----
+struct Chain
+struct nref
+
+
 SAMPLE FILES WITH AUDIO:
 -----
 ai/system/audio/samples/chirp.wav

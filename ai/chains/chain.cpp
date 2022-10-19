@@ -33,17 +33,23 @@ Chain & chainCreate() {
     int active_chain=1;
     int chainno=1;
 
+    std::string tmpf = "__ogudejbckbdsgs.lnmkv";
+
     Chain *c = new Chain;
-    std::ifstream f;
+    std::ifstream f(chainfile);
+    std::ofstream tpf(tmpf);
+
+    if (!f || !tpf) {
+        std::cout << std::endl << "~::!::~ (error) opening files." << std::endl;
+    }
 
     std::cout << "~:: chainCreate()." << std::endl;
     
-    f.open(chainfile);
-    
+        
     if (f.is_open() == true) {
+        std::cout << "\t~:: reading 'chain id' from store." << std::endl;
         f >> id;
         f.close();
-    
         std::cout << "\t~:: id=[" << id << "]" << std::endl;
     } else {
         std::cout << "~::!::~ (error) can't open \"chain\" file for reading!" << std::endl;
@@ -56,17 +62,19 @@ Chain & chainCreate() {
     c->activeChain = active_chain;
     c->nrOfChains = chainno;
 
-    std::ofstream o;
-
-    o.open(chainfile);
-
-    if (o.is_open() == true) {
-        o << id++;
+    if (tpf.is_open() == true) {
+        std::cout << "\t~:: writing 'chain id' to store." << std::endl;
+        tpf << id++;
         std::cout << "\t~:: updated chain ref (" << id << ") in \"chain\" file." << std::endl;
-        o.close();
+        std::cout << "\t\tsaving." << std::endl;
+        tpf.close();
     }
-    std::cout << std::endl;
 
+    std::cout << std::endl;
+    
+    unlink(chainfile.c_str());
+    rename(tmpf.c_str(), chainfile.c_str());
+    std::cout << "~:: done." << std::endl;
 return *c;
 }
 

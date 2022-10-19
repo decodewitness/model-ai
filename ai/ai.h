@@ -430,7 +430,7 @@ public:
 	void qlog(int x);	// log last queries ;; x=number (0 default ;; means only last query+response)
 
 	// running scripts
-	void runscript(std::string ss);
+	void runscript(std::string scr);
 
 	// chains
 	Chain & create_chain();

@@ -1,6 +1,7 @@
 17/10/2022:
 -----
 - Needs POS Tagging / NER functions.
+- Needs console.
 
 17/10/2022:
 -----

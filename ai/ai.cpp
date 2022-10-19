@@ -154,16 +154,16 @@ void AI::version() {
 	std::cout << std::endl;
 };
 
-// RUNNING SCRIPTS
-void AI::runscript(std::string ss="1") {
-	std::string xs = ss;
+// running scripts
+void AI::runscript(std::string scr="1") {
+	std::string xs = scr;
+	std::cout << "~:: runscript():" << std::endl;
 	if (xs=="1") {
 		xs = "ai/bin/script/disable_apt.sh";
 	} else {
-		xs = ss;
+		xs = scr;
 	}
-	std::cout << std::endl;
-	std::cout << "~:: running: " << xs << std::endl;
+	std::cout << "\t~:: - running: " << xs << std::endl;
 	std::cout << std::endl;
 
 	system(xs.c_str());
@@ -235,8 +235,7 @@ AI::AI(int n=1, int ss=0) {	// AI constructor
 		std::cout << std::endl;
 
 		// this will execute runscript
-		// xs = 1; 
-
+			// xs = 1;
 		xs = 1;	// or xs=ss=1.
 	} else {
 		std::cout << std::endl;
@@ -817,7 +816,7 @@ void AI::init() {		// INITIALIZATION
 
 	// int x=0;
 
-	// tranponder
+	// transponder
 	this->transponderIsPrepped = false;
 
 	this->pytubeRan = false;
@@ -2380,7 +2379,7 @@ void AI::train_model(std::string q, std::string a) {
 	this->storeRef(x);
 };
 
-// create new chain
+// create chain
 Chain & AI::create_chain() {
 	std::cout << std::endl << "~Creating Chain:" << std::endl;
 	Chain *ccc = &chainCreate();
@@ -2412,6 +2411,7 @@ void AI::delete_chain(Chain & ccc) {
 	deleteChain(ccc);
 }
 
+// replace text in file at line number
 int AI::replace_line(std::string filename, int line_number, std::string txt) {
 	int counter=0;
 	std::string line;
@@ -2445,6 +2445,7 @@ int AI::replace_line(std::string filename, int line_number, std::string txt) {
 return 0;
 };
 
+// replace text in file at occurrence of txt in file
 int AI::replace_text(std::string filename, std::string txt, std::string newtxt) {
 	int counter=0;
 	std::string line;
@@ -2503,6 +2504,8 @@ void AI::testA() {	// testing queue
 
 //
 */
+
+// CHAINS
 Chain *cp1 = &AI::create_chain();
 AI::chain_id(*cp1);
 AI::write_chain(0,0,*cp1,"testing success");
@@ -2511,15 +2514,19 @@ AI::view_chain(*cp1,0);
 AI::delete_chain(*cp1);
 cp1 = NULL;
 
-// replace_line("filename.txt", 3, "blah");
-// replace_text("filename.txt", "line5", "oblahdi");
-
+// Functions: replaces text.
 // int replace_line(std::string filename, int line_number, std::string line);
 // int replace_text(std::string filename, std::string txt, std::string newtxt);
+replace_line("filename.txt", 3, "blah");
+replace_text("filename.txt", "line5", "oblahdi");
 
 
-// <<< >>>>>>>> :
-	tempo();
+// <<< t(x) >>>>>>>> :
+tempo();	// log time from/to...NNNN date.
+
+//std::cout << std::endl;
+//std::cout << JOT_SCORE":" << std::endl;
+this->transponder->jot_score("ai");	// JOT_SCORE()
 
 	// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] //
 

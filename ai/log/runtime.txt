@@ -14,8 +14,8 @@ ENTER PASSCODE:
 	- checking redundancy.
 	- file hierarchy.
 ~:: --	-- executing runscript().
-
-~:: running: ai/bin/script/disable_apt.sh
+~:: runscript():
+	~:: - running: ai/bin/script/disable_apt.sh
 
 	- file integrity.
 
@@ -1294,7 +1294,7 @@ ENTER PASSCODE:
 ~:: transponder queries.
 
 	~:: transponder->init().
-		~:: successfully opened: "ai/lib/queries/weights".
+		~:: successfully opened: "ai/data/weights".
 		~:: successfully opened: "ai/data/files/synonyms.txt".
 -:: running checks arguments.
 	0: arguments.
@@ -1464,16 +1464,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffe77065180)
-	- stacking header:(1)::<address>(0x7ffe770651a0)
-	- stacking header:(2)::<address>(0x7ffe770651c0)
-	- stacking header:(3)::<address>(0x7ffe770651e0)
-	- stacking header:(4)::<address>(0x7ffe77065200)
-	- stacking header:(5)::<address>(0x7ffe77065220)
-	- stacking header:(6)::<address>(0x7ffe77065240)
-	- stacking header:(7)::<address>(0x7ffe77065260)
-	- stacking header:(8)::<address>(0x7ffe77065280)
-	- stacking header:(9)::<address>(0x7ffe770652a0)
+	- stacking header:(0)::<address>(0x7ffc30270eb0)
+	- stacking header:(1)::<address>(0x7ffc30270ed0)
+	- stacking header:(2)::<address>(0x7ffc30270ef0)
+	- stacking header:(3)::<address>(0x7ffc30270f10)
+	- stacking header:(4)::<address>(0x7ffc30270f30)
+	- stacking header:(5)::<address>(0x7ffc30270f50)
+	- stacking header:(6)::<address>(0x7ffc30270f70)
+	- stacking header:(7)::<address>(0x7ffc30270f90)
+	- stacking header:(8)::<address>(0x7ffc30270fb0)
+	- stacking header:(9)::<address>(0x7ffc30270fd0)
 
 
 -:: checking AI functions.
@@ -1531,7 +1531,7 @@ file or directory: -- ./downloads
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (1) queries.
+~:: running (2) queries.
 
 ::- type your query -::
 
@@ -1557,9 +1557,13 @@ punch.
 
 ~Creating Chain:
 ~:: chainCreate().
+	~:: reading 'chain id' from store.
 	~:: id=[0]
+	~:: writing 'chain id' to store.
 	~:: updated chain ref (1) in "chain" file.
+		saving.
 
+~:: done.
 
 ~Viewing ChainID():
 ~:: chainID().
@@ -1594,11 +1598,21 @@ punch.
 ~:: deleteChain().
 	~:: Chain[0]->(deleted).
 
+~:: replacing line.
+
 ~:: replacing text.
 
-1666121245
--2608355(seconds) since January 17, 2022 in the current timezone
+1666213176
+-2516424(seconds) since January 17, 2022 in the current timezone
 
+
+~:: jot_score():
+	~:: keyphrase:
+		.;ai={artificial intelligence, machine learning, deep learning};.
+
+	~:: word(s): 6 : sentence(s): 1
+		~:: -null score-.
+		~:: -vector<std::string> &:()=0;
 
 
 This line should be visible!
@@ -1607,7 +1621,7 @@ This line should be visible!
 
 
 
-~:: running (1) queries.
+~:: running (2) queries.
 
 ::- type your query -::
 

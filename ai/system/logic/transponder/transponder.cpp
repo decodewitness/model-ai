@@ -78,7 +78,162 @@ void Transponder::clear_property() {
     hasCResult = false;
     hasDResult = false;
     hasEResult = false;
+    hasFResult = false;
 };
+
+void Transponder::set_property(int n, int x) {
+    switch (n) {
+        // individuals && properties
+        case 0:
+        break;
+        case 1:
+            this->query_relating_to_self = x;    // used when the person typing the query is referring to self "I, me, myself, we".
+        break;
+        case 2:
+            this->query_relating_to_other = x;    // used when the person is referring to "him, them, they".
+        break;
+        case 3:
+            this->query_relating_to_her = x;
+        break;
+        case 4:
+            this->query_relating_to_it = x;
+        break;
+        case 5:
+            this->query_relating_to_property = x;    // used when the person is referring to "mine, my, our, their".
+        break;
+        case 6:
+            this->query_relating_to_model = x;   // used when the person typing the query is referring to "you",
+        break;
+        case 7:
+            this->query_relating_to_property_model = x; // used when relating to model-ai's property or attributes.
+        break;
+        case 8:
+            this->query_relating_to_her_property = x;
+        break;
+        // manual overrides
+        case 9:
+            hasAResult = x;
+        break;
+        case 10:
+            hasBResult = x;
+        break;
+        case 11:
+            hasCResult = x;
+        break;
+        case 12:
+            hasDResult = x;
+        break;
+        case 13:
+            hasEResult = x;
+        break;
+        case 14:
+            hasFResult = x;
+        default:
+            std::cout << "~::!::~ (error) not a valid property - (" << n << "," << x << ")." << std::endl;
+        break;
+    };
+}
+
+int Transponder::round_robin(int j=0, int k=0, int l=0, int m=0, int n=0, int o=0, int p=0, int q=0, int r=0, int s=0, int t=0, int u=0, int v=0, int w=0, int x=0) {
+    // bool zero;          // nothing, irony, redundant.
+    // bool one;           // this->query_relating_to_self = false;    // used when the person typing the query is referring to self "I, me, myself, we".
+    // bool two;           // this->query_relating_to_other = false;    // used when the person is referring to "him, them, they".
+    // bool three;         // this->query_relating_to_her = false;
+    // bool four;          // this->query_relating_to_it = false;
+    // bool five;          // this->query_relating_to_property = false;    // used when the person is referring to "mine, my, our, their".
+    // bool six;           // this->query_relating_to_model = false;   // used when the person typing the query is referring to "you",
+    // bool seven;         // this->query_relating_to_property_model = false; // used when relating to model-ai's property or attributes.
+    // bool eight;         // this->query_relating_to_her_property = false;
+    // bool nine;          // hasAResult = false;
+    // bool ten;           // hasBResult = false;
+    // bool eleven;        // hasCResult = false;
+    // bool twelve;        // hasDResult = false;
+    // bool thirteen;      // hasEResult = false;
+    // bool fourteen;      // hasFResult = false;
+
+
+    int zero[16];
+    // queries
+    zero[0] = j; // is null situation. (nil)
+    zero[1] = k; // is relating to self (client)
+    zero[2] = l; // is relating to other (him, them, they)
+    zero[3] = m; // is relating to her (her)
+    zero[4] = n; // is relating to it (it)
+    zero[5] = o; // is relating to property (property, it)
+    zero[6] = p; // is relating to model (model-ai, you)
+    zero[7] = q; // is relating to property model (model-ai's property)
+    zero[8] = r; // is relating to her property (her property)
+    // results
+    zero[9] = s;  // hasAResult
+    zero[10] = t; // hasBResult
+    zero[11] = u; // hasCResult
+    zero[12] = v; // hasDResult
+    zero[13] = w; // hasEResult
+    zero[14] = x; // hasFResult
+
+    int i=0;
+    while (1) {
+        if (i==0) { // irony (nil);
+            this->clear_property();
+        } else {
+            this->set_property(i, zero[i++]);
+        }
+        if (i==15) {
+            break;
+        }
+    }
+
+    std::cout << std::endl;
+    std::cout << "~:: out of the loop." << std::endl;
+
+    if (zero[0] > 0) {
+        // irony, nil
+    }
+    if (zero[1] > 0) {
+        // self
+    }
+    if (zero[2] > 0) {
+        // him, other, they
+    }
+    if (zero[3] > 0) {
+        // her
+    }
+    if (zero[4] > 0) {
+        // it
+    }
+    if (zero[5] > 0) {
+        // property
+    }
+    if (zero[6] > 0) {
+        // model
+    }
+    if (zero[7] > 0) {
+        // property model
+    }
+    if (zero[8] > 0) {
+        // her property
+    }
+    if (zero[9] > 0) {
+        // hasAResult
+    }
+    if (zero[10] > 0) {
+        // hasBResult
+    }
+    if (zero[11] > 0) {
+        // hasCResult
+    }
+    if (zero[12] > 0) {
+        // hasDResult
+    }
+    if (zero[13] > 0) {
+        // hasEResult
+    }
+    if (zero[14] > 0) {
+        // hasFResult
+    }
+
+return 0;
+}
 
 void Transponder::init() {
     std::cout << std::endl << "\t~:: transponder->init()." << std::endl;
@@ -88,7 +243,7 @@ void Transponder::init() {
     this->override = false;
     
     this->points = 0;
-    this->default_response = "can't relate to query.";
+    this->default_response = "-can't relate to query- ";
 
     if (this->scores.is_open() == false) {
         this->scores.open(weights);
@@ -165,7 +320,8 @@ void Transponder::setSubject(std::string s) {
 
 std::string Transponder::respond(bool b) {
     std::string syn_res;
-    
+    char z;
+
     // skip line and respond from mechanism
     std::cout << std::endl;
     std::cout << "\tTRANSPONDER::responding:" << std::endl;
@@ -173,6 +329,12 @@ std::string Transponder::respond(bool b) {
 
     // std::string x;
     // do logic here to determine if analytics are required.
+    
+    // JOT OVER HERE !!!
+    this->jot_score(this->subject);
+    
+    std::cout << ":: ";
+    sleep(3);
 
     if (b == true) {
         // x = this->subject;
@@ -195,7 +357,8 @@ std::string Transponder::respond(bool b) {
 };
 
 void Transponder::analytics(std::string s) {    // function that performs the analytics
-    
+    std::cout << std::endl;
+    std::cout << "~:: analytic-s:" << std::endl;
     this->construed.clear();
 
     // metas
@@ -231,9 +394,6 @@ void Transponder::analytics(std::string s) {    // function that performs the an
 
     // NEED TO CHECK HERE IF SOME "clear_property()" LEASES STILL APPLY ON PROPERTIES OR CONVERSATION, AND BACK PROPAGATE.
 
-
-    // debugging output
-    std::cout << "\t~:: (DEBUG) performing analytics() in {transponder}." << std::endl;
 
     for (int i=0; i<len; i++) {
         
@@ -334,9 +494,11 @@ void Transponder::analytics(std::string s) {    // function that performs the an
 
     // analytics function output
     std::cout << "\t::- analytics -::" << std::endl;
-    std::cout << std::endl << "\t-----------------" << std::endl;
+    std::cout << "\t-----------------" << std::endl;
+    // debugging output
     std::cout << std::endl;
-
+    std::cout << "\t~:: (DEBUG) performing analytics() in {transponder}." << std::endl;
+    std::cout << std::endl;
     // output analytical data
     std::cout << "\t\t* words no_#: " << (wordcount + 1) << std::endl;
     std::cout << "\t\t* length: " << len << std::endl;
@@ -574,6 +736,7 @@ std::string Transponder::retVal() {
     return this->initial_sentence;
 };
 
+// answer function
 std::string Transponder::answer(std::string s) {
 
     std::cout << std::endl;
@@ -1361,7 +1524,6 @@ return term;
 };
 
 void Transponder::export_backlog(int n=2) {
-
     ofstream out_queries;
     ofstream out_answers;
 
@@ -1544,7 +1706,6 @@ void Transponder::cappedsize() {
 };
 
 std::string Transponder::transcode(std::string s) {
-
     // strings
     std::string w;
     std::string model;
@@ -1653,6 +1814,105 @@ std::string Transponder::transcode(std::string s) {
 
 return "-returning from transponder queries-";
 }
+
+int Transponder::jot_score(std::string term="null") {
+    std::cout << std::endl;
+    std::cout << "~:: jot_score():" << std::endl;
+
+    bool nothing=false;
+
+    if (term=="null") {
+        std::cout << std::endl;
+        std::cout << "-1;- " << std::endl;
+        std::cout << std::endl;
+        std::cout << "~:: ~(transponder) infers 0 - (null) /{false}." << std::endl;
+        nothing=true;
+    }
+
+    int score = 0;
+    int vectorsize = 0;
+    std::string keyphrase;
+    std::string words;
+    std::vector<std::string> v;
+
+    ifstream in(scoretab);
+    ifstream in2(weights);
+    ofstream ot("__tmp_score__.txt");
+
+    if (!in || !ot || !in2) {
+        std::cout << std::endl;
+        std::cout << "~::!::~ (error) opening files." << std::endl;
+        return 1;
+    }
+
+    while (std::getline(in, keyphrase)) {
+        std::stringstream ss(keyphrase);
+        // std::cout << std::endl;
+        std::cout << "\t~:: keyphrase:" << std::endl;
+        std::cout << "\t\t.;" << keyphrase << "." << std::endl;
+
+               // OvER HERE!!!
+
+        int wordcount = 0;
+        int sentence_count = 0;
+        while (ss >> words) {
+            wordcount++;
+            if (words == term) {
+                std::cout << "+1;- ";
+                score++;
+            }
+        }
+
+        for (int i = 0; i < words.length(); i++) {
+            if (words[i] == ';') {
+                sentence_count++;
+            }   
+        }
+
+        std::cout << std::endl;
+        std::cout << "\t~:: word(s): " << wordcount << " : sentence(s): " << sentence_count;
+        std::cout << std::endl;
+
+        if (score>0) {
+            std::cout << "\t\t~:: score(" << score << ")" << std::endl;
+            std::cout << "\t\t~:: vector grew in size to: " << vectorsize << std::endl;
+            
+            vectorsize = v.size();
+            std::cout << std::endl << "~:: vector<std::string> &:" << std::endl << "\t- ";
+            if (vectorsize>0) {
+                for (std::size_t i = 0; i < v.size(); i++) {
+                    std::cout << v.at(i) << ", " << std::endl;
+                }
+            }
+        } else {
+            std::cout << "\t\t~:: -null score-." << std::endl;
+            std::cout << "\t\t~:: -vector<std::string> &:()=0;" << std::endl;
+
+        }
+        // std::cout << "\t~:: ";
+        
+        // weights -> intelligence={smart,logic,intelligent,genius,inventive,clever,patient,patience};
+        // scoretab ->
+        in.close();
+        in2.close();
+        ot.close();
+        // look for additional word vector inside catalogue -> weights -&- scoretab...
+    }
+return 0;
+}
+        // ***(INSIDE PREVIOUS WHILE LOOP)
+        // for (std::string k; ss >> k;) {
+        //     if (k.find_first_of(term) !=  string::npos) {
+        //         std::cout << std::endl << "!!! SCORE !!! (" << k << " = " << term << ")" << std::endl;
+        //         score += 1;
+        //         std::cout << std::endl << "~:: -push back(" << keyphrase << ")" << std::endl;
+        //         v.push_back(term);
+        //     } else {
+        //         std::cout << "~:: string::npos." << std::endl;
+        //     }
+        // }
+
+ 
     // // variables
     // int nr_of_synonyms; // the number of actual synonyms for term
     // // bools

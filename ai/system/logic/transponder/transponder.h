@@ -34,14 +34,15 @@ std::string question_answers = "ai/data/files/question_answers.txt";
 std::string trivia_logic = "ai/data/files/trivia_logic.txt";
 std::string relatives = "ai/data/files/relatives.txt";
 std::string synonym = "ai/data/files/synonyms.txt";
-std::string weights = "ai/lib/queries/weights";
+std::string weights = "ai/data/weights";
+std::string scoretab = "ai/data/scoretab";
 
 // backlog export
 std::string backlog_query = "ai/log/backlog_queries.txt";
 std::string backlog_answer = "ai/log/backlog_answers.txt";
 
 // log file for query related things / - abstract
-std::string logfile = "modelai_extract.txt";
+std::string logfile = "model_ai-extract.txt";
 
 // Transponder  
 class Transponder {
@@ -59,11 +60,12 @@ private:
     bool overriden; // if this is true then the model overriden a sentence  ;; applied to construed <vector>
 
     // manual overrides
-    bool hasAResult;
-    bool hasBResult;
-    bool hasCResult;
-    bool hasDResult;
-    bool hasEResult;
+    int hasAResult;
+    int hasBResult;
+    int hasCResult;
+    int hasDResult;
+    int hasEResult;
+    int hasFResult;
 
     // analytical
     bool fitting; // used in case the answer is fitting else resets bool and is checked in the query
@@ -71,14 +73,14 @@ private:
     bool alwaysFitting;  // used when applies in every answer context
     
     // individuals & relations to property
-    bool query_relating_to_model;   // used when the person typing the query is referring to "you",
-    bool query_relating_to_self;    // used when the person typing the query is referring to self "I, me, myself, we".
-    bool query_relating_to_other;    // used when the person is referring to "him, her, them, they".
-    bool query_relating_to_it;  // used when referred to "it".
-    bool query_relating_to_her;    // used when referring to "her".
-    bool query_relating_to_her_property;   // used in conjunction with "hers".  // needs further checks in place.
-    bool query_relating_to_property;    // used when the person is referring to "mine, my, our, their".
-    bool query_relating_to_property_model;  // used when relating to model-ai's property or attributes.
+    int query_relating_to_model;   // used when the person typing the query is referring to "you",
+    int query_relating_to_self;    // used when the person typing the query is referring to self "I, me, myself, we".
+    int query_relating_to_other;    // used when the person is referring to "him, her, them, they".
+    int query_relating_to_it;  // used when referred to "it".
+    int query_relating_to_her;    // used when referring to "her".
+    int query_relating_to_her_property;   // used in conjunction with "hers".  // needs further checks in place.
+    int query_relating_to_property;    // used when the person is referring to "mine, my, our, their".
+    int query_relating_to_property_model;  // used when relating to model-ai's property or attributes.
 
     // strings
     std::string initial_sentence;   // logic comparts from here
@@ -124,7 +126,12 @@ public:
     void setSubject(std::string s);
     int scored(std::string q, std::string tq);
     std::string synonyms(std::string q);
+    // this function set_property() gets called by new instance *** (instance is assignment of values for function!)
+    
+    int round_robin(int j, int k, int l, int m, int n, int o, int p, int q, int r, int s, int t, int u, int v, int w, int x);  // assigns numbers to the set_property() function, and calls new instances in time...
+    void set_property(int n, int x); // set relation flag -- routine (self,other,her,it,property,model,property model,her property)
     void clear_property();  // cleans the relations indicating if there is a relation between: "you, him, her, their, etc.".
+    
     std::string transcode(std::string s);   // returns processed output for the [RESPONSE].
 
     // analytical functions and preparation functions
@@ -156,6 +163,7 @@ public:
 
     // weights
     int weighted(std::string s);   // checks occurences inside /ai/lib/queries/weights
+    int jot_score(std::string term);   // jots precision score to "score" file == /ai/data/scoretab
 };
 
 // eof
