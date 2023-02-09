@@ -1,0 +1,8 @@
+// CATALOGUE INDEX - FILE WITH REFERENCES (USED BY: TRANSPONDER/BRAIN/NLP/BRAIN.CPP)
+0   cmd     "skip_connection"   // meta key [],
+1   p.1     "intelligence"      // meta key [],
+2   p.1     "logic"             // meta key [],
+3   p.1     "model-ai"          // meta key [],
+4   p.1     "artificial"        // meta key [],
+5   p.1     "help"              // meta key [],
+6   <!>     <empty>             // meta key [],

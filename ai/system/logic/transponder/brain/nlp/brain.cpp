@@ -37,6 +37,24 @@ Brain::~Brain() {
     }
 };
 
+bool Brain::verbosity_level() {
+    std::cout << std::endl;
+    std::cout << std::boolalpha;
+    std::cout << "~:: verbosity = " << (this->verbose) << std::endl;
+    std::cout << std::boolalpha;
+    return this->verbose;
+}
+
+void Brain::verbose_mode_toggle() {
+    this->verbose = !(this->verbose);
+    if (this->verbose == true) {
+        std::cout << std::endl;
+        std::cout << "~:: _[verbosis]_ ::~" << std::endl;
+        std::cout << std::endl;
+        bool x = verbosity_level();
+    }
+} // sets verbose mode to the opposite of what it was
+
 // technicalities
 void Brain::file_access(int level) {
 
@@ -282,11 +300,20 @@ void Brain::file_access(int level) {
 
         // could also keep open for duration of the program depending on the brain logic
     
-void Brain::intialize1(bool perm) {    // perm = descriptor
+void Brain::intialize1(bool perm, int verbosity) {    // perm = descriptor
     long int max_index; // number of max entries to dig
     long int difference;    // tracks the difference off from this->handles in the max_index lines account
     bool stop = false;
     std::string line;
+
+    if (this->verbosity_level() != true) {
+        // this->verbose = VERBOSE;
+        this->verbose_mode_toggle();
+    } else if (verbosity >= 1) {
+        this->verbose = VERBOSE;
+    } else {
+        this->verbose= QUIET;
+    }
 
     // loop over indexes // later change to index reference numbers
     // first indexing the line count
@@ -387,6 +414,15 @@ int Brain::procure(int nr) {    // nr = this->set1
 
     // update this->handles
 
+int search_catalogue_index(std::string s) {  // search for 
+    int x=-1;
+
+    // scan catalogue indexes
+    // count occurrences.
+    // return count
+
+return x;
+}
 
 void Brain::useBrain(std::string query) {
     // logic think
@@ -395,16 +431,23 @@ void Brain::useBrain(std::string query) {
     this->neural_net(query, logic, 1);
 
     // check if Transponder
-
     // logic
 
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!        !!!!   !!!!!!!
+    // !!     !!!  !!!!!!!!!!!
+    // !!!!! !!! !!!!!!   !!!
+    // !!!!!!!!!!!!!!!!!!!!!!  !!!
 
-
-
-
+    // LOGIC HERE !!!!
 
     //this->search(logic, 3);
     //this->search_catalogue_index(logic);
+
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
     // options
         // stepping engine
@@ -561,6 +604,7 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
 
                 std::cout << "\tsearch1 : " << search1 << std::endl;
                 std::cout << "\tsearch2 : " << search2 << std::endl;
+                std::cout << std::endl;
 
                 // getting the description in the cabinets
                 std::getline(access, line1);
@@ -622,7 +666,9 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
                                 condition=true;
                                 break;
                             } else if (i_string.length() > 0) {
-                                std::cout << ":::_]{ (" << i_string << ")" << std::endl;
+                                if (true) {
+                                    std::cout << ":::_]{ (" << i_string << ")" << std::endl;
+                                }
                                 wordCount++;
                                 b_string.append(i_string);
                                 b_string.append(" ");
@@ -724,9 +770,10 @@ std::string Brain::search(std::string logic, int n) { // search cabinet    // n 
         }
 
         if (b_string.length() > 0) {
-            std::cout << std::endl << "b_string:" << std::endl;
-            std::cout << "!~ " << b_string << std::endl;
-
+            if (this->verbosity_level()) {
+                std::cout << std::endl << "b_string:" << std::endl;
+                std::cout << "!~ " << b_string << std::endl;
+            }
             // store answer b_string from catalogs in bstrings
             bstrings.push_back(b_string);
             sleep(1);

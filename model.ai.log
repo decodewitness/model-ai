@@ -1,4 +1,4 @@
-Script started on 2022-10-19 16:59:13-04:00 [COMMAND="./start" TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="195" LINES="15"]
+Script started on 2023-02-09 14:13:20-05:00 [COMMAND="./start" TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="85" LINES="11"]
 
 ~:RUNTIME SCRIPT:~
 
@@ -15,7 +15,7 @@ Script started on 2022-10-19 16:59:13-04:00 [COMMAND="./start" TERM="xterm-256co
 
 ~:RUNNING: AI...
 
-~:: how many queries to run? : 2
+~:: how many queries to run? : 10
 
 		CHK.0		+OK.
 
@@ -1485,16 +1485,16 @@ regular file:
 		* images_translation.csv
 
 ~:: stacking headers/modules ::~
-	- stacking header:(0)::<address>(0x7ffc30270eb0)
-	- stacking header:(1)::<address>(0x7ffc30270ed0)
-	- stacking header:(2)::<address>(0x7ffc30270ef0)
-	- stacking header:(3)::<address>(0x7ffc30270f10)
-	- stacking header:(4)::<address>(0x7ffc30270f30)
-	- stacking header:(5)::<address>(0x7ffc30270f50)
-	- stacking header:(6)::<address>(0x7ffc30270f70)
-	- stacking header:(7)::<address>(0x7ffc30270f90)
-	- stacking header:(8)::<address>(0x7ffc30270fb0)
-	- stacking header:(9)::<address>(0x7ffc30270fd0)
+	- stacking header:(0)::<address>(0x7ffd7a81dd70)
+	- stacking header:(1)::<address>(0x7ffd7a81dd90)
+	- stacking header:(2)::<address>(0x7ffd7a81ddb0)
+	- stacking header:(3)::<address>(0x7ffd7a81ddd0)
+	- stacking header:(4)::<address>(0x7ffd7a81ddf0)
+	- stacking header:(5)::<address>(0x7ffd7a81de10)
+	- stacking header:(6)::<address>(0x7ffd7a81de30)
+	- stacking header:(7)::<address>(0x7ffd7a81de50)
+	- stacking header:(8)::<address>(0x7ffd7a81de70)
+	- stacking header:(9)::<address>(0x7ffd7a81de90)
 
 
 -:: checking AI functions.
@@ -1552,81 +1552,149 @@ file or directory: -- ./downloads
 	--directory: (debug) xcomp=true; skipping "." -&- ".."
 
 
-~:: running (2) queries.
+~:: running (10) queries.
 
 ::- type your query -::
 
 punch.
---?:: /testa
+--?:: intelligence
 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/testa
-	[ simple x computation: type:[char]: len:6 vowels:3 consonants:2 special:1 
-~:: testing parameters: testA().
- ]
+	intelligence
+	[ simple x computation: type:[char]: len:12 vowels:7 consonants:5 special:0 ]
+
+[ -- you're asking my input -- ]
 
 -:: finished x computation.
+*string_next_logic() :: ssh: "intelligence".
+	- HMAC string :: *string_next_logic() ::  (intelligence) is >> 
+~:: file_access()
+(debug) file_access(level=0).
 
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : intelligence
+	search2 : intelligence
 
+~:: collusion().
+~:: collusion().
+	line1 :     deciphering algorithms, and using strategies to solve the inherent problem. + 6
+	line2 :     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
 
-=== * === * === *
-<!> trial rounds in these functions (logged output):
+sorter():
+{ ai/system/logic/transponder/brain/data/intelligence.dat }
+- opening: ai/system/logic/transponder/brain/data/intelligence.dat.
+	- ai/system/logic/transponder/brain/data/intelligence.dat : is open.
+		-- :: ( prime intelligence. seeking reason to understanding. allowing intelligence. seeking strategies. reasoning, or to reason. understanding. )
+~:: collusion().
 
-=== * === * === *
+sorted: ai/system/logic/transponder/brain/data/intelligence.dat
+~:: file_access()
+(debug) file_access(level=7).
 
+	<<<
 
-~Creating Chain:
-~:: chainCreate().
-	~:: reading 'chain id' from store.
-	~:: id=[0]
-	~:: writing 'chain id' to store.
-	~:: updated chain ref (1) in "chain" file.
-		saving.
+- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
 
+:: artificial intelligence ::
+
+TMP: intelligence
+~:: found index [intelligence].
+:::_]{ (intelligence can be used to manipulate objects.)
+~:: collusion().
+:::_]{ (intelligent manners could be manners that would be described.)
+~:: collusion().
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/system/logic/transponder/brain/data/intelligence.dat
+~:: resonate_index::match found on line: (6).
 ~:: done.
 
-~Viewing ChainID():
-~:: chainID().
-	~:: Chain ID	:	0
-	~:: Active Chain	:	1
-	!:: Nr. of Chains	:	1
+~:: verbosity = false
+	~:: query matches search string: "intelligence".
 
-~Writing Chain Data:
-~:: writeChain().
-	~:: +chain:0 length: (15)
-	~:: (wrote) chain data (15).
+-* intelligence is:
+    deciphering algorithms, and using strategies to solve the inherent problem. + 6
 
-~Reading Chain Data:
-~:: readChain().
-	~:: ChainID:	0
-	~:: Nr of Chains:	1
-	~:: Active Chain:	1
+    IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
 
-	~:: Chain Data (int):
-		-745960291
+~:: transponder was not prepared yet.
+	~:: preparing transponder.
 
-	~:: Chain Data (char):
-		-testing success
+~:: prepTransponder() : (intelligence)
+~:: transponder -> prep()
 
-	~:: Chain Pool Data:
+~:: set subject to: "intelligence".
+(debug) word :: intelligence
 
-~Viewing Chain Data:
-~:: viewChainData().
-	~:: (*)[chain][0][0]->("testing success").
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
 
-~Deleting Chain Data:
-~:: deleteChain().
-	~:: Chain[0]->(deleted).
+(debug) calling prepare_ints() (from) -> "intelligence".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
 
-~:: replacing line.
+~:: (debug) number of matching occurences: (1).
 
-~:: replacing text.
+~:: intvars int_occurences[] ::~
+(debug) 0) intelligence :: #2526
 
-1666213176
--2516424(seconds) since January 17, 2022 in the current timezone
+~:: meta queries ~:: storing meta query sequence
+	~::::meta::::~
+	- path: "ai/lib/queries/meta_queries".
+	- meta sequences:
+		- 2526
+~:: meta queries
+	~:: reverse_meta_query_lookup("2526,")
 
+~:: reverse meta query lookup: 
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+
+(EOT)
+
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (intelligence)
+~:: transponder -> prep()
+
+~:: set subject to: "intelligence".
+(debug) word :: intelligence
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "intelligence".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (2).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) intelligence :: #2526
+
+
+~:: meta queries
+	~:: reverse_meta_query_lookup("2526,")
+
+~:: reverse meta query lookup: 
+	- intelligence		 --> *(a+i) = 2526 - *(a+i) - 1 = 2525
+
+(EOT)
+
+
+	TRANSPONDER::responding:
+	-----
 
 ~:: jot_score():
 	~:: keyphrase:
@@ -1635,63 +1703,391 @@ punch.
 	~:: word(s): 6 : sentence(s): 1
 		~:: -null score-.
 		~:: -vector<std::string> &:()=0;
+:: 
+~:: analytic-s:
+	::- analytics -::
+	-----------------
+
+	~:: (DEBUG) performing analytics() in {transponder}.
+
+		* words no_#: 1
+		* length: 12
+		* vowels: 5
+		* consonants: 7
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
 
 
-This line should be visible!
+(debug) answer.
 
-=== * === * === *
+~:: --(!)-- answer(std::string)
+
+(debug) : 
+	-1
+	intelligence
 
 
-k
+~:: (!!) rank of: intelligence
+	:: == 1,transponder has query.
 
-~:: running (2) queries.
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 2,transponder gets answer.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 3,transponder is bool.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 4"ransponder is boolean.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 5,transponder is boolean boolean.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 6,hi.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 7,hello.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 8,goodbye.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 9,I'm your assistant.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 10,limited assistance right now.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 11,use the /help function.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 12,model-ai is an artificial intelligence model that will categorize research and could respond in main articular fashion.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 13,you are amazing.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	intelligence
+
+
+~:: (!!) rank of: intelligence
+	:: == 14,inferring logic.
+
+~:: (!) ranked
+
+~:: (debug) -- normal query!
+~:: (debug) -- answers processed: 14
+
+(debug)
+noted : 1
+biggest : 1
+
+
+labelled biggest faculty : 1
+
+
+----- ----- -----
+(debug) result : 
+
+~:: transponder -> answer()
+
+[RESPONSE] :
+~:: readref() :
+	::     deciphering algorithms, and using strategies to solve the inherent problem. + 6
+	::     IQ is smart RPIs in resource and key management in assigning data in research initiatives, using the fishing tool to fish out updates in information, intuition pumps, solving logic patiently, having more patience.   [intelligence.dat]  {}
+	:: prime intelligence. seeking reason to understanding. allowing intelligence. seeking strategies. reasoning, or to reason. understanding.
+	:: intelligence can be used to manipulate objects.
+	:: intelligent manners could be manners that would be described.
+
+
+~:: clearref() - clearing last references.
+
+(EOT)
+
+~:: running (9) queries.
 
 ::- type your query -::
 
 punch.
---?:: /killc
+
+--?:: logic
 
 
 -:: testing sample ::-
 -:: :logic: (compute x computation)::-
-	/killc
-	[ simple x computation: type:[char]: len:6 vowels:4 consonants:1 special:1 
-~:: parameter request: kill_chain().
- ]
+	logic
+	[ simple x computation: type:[char]: len:5 vowels:3 consonants:2 special:0 ]
+
+[ -- you're asking my input -- ]
 
 -:: finished x computation.
+*string_next_logic() :: ssh: "logic".
+	- HMAC string :: *string_next_logic() ::  (logic) is >> 
+~:: file_access()
+(debug) file_access(level=0).
 
-(kill chain) function() : 9
+~:: searching indexes:
+	- rewinding file index.
+(debug) hit search function.
+	search1 : logic
+	search2 : logic
 
--/- initializing killchain(1) sequence.
+~:: collusion().
+~:: collusion().
+	line1 :    logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 7
+	line2 :    still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+sorter():
+{ ai/system/logic/transponder/brain/data/logic.dat }
+- opening: ai/system/logic/transponder/brain/data/logic.dat.
+	- ai/system/logic/transponder/brain/data/logic.dat : is open.
+		-- :: ( logical assembly, model-ai. )
+~:: collusion().
+
+sorted: ai/system/logic/transponder/brain/data/logic.dat
+~:: file_access()
+(debug) file_access(level=7).
+
+	<<<
+
+- opened "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+	- intelligence is open.
+
+:: artificial intelligence ::
+
+TMP: intelligence
+TMP: logic
+~:: found index [logic].
+:::_]{ (logical ways to infer reason.)
+~:: collusion().
+:::_]{ (a logical standard for conventions of proceeding with thinking.)
+~:: collusion().
+(!) omitted empty line.
+(debug) file_access().
+~:: file_access()
+(debug) file_access(level=8).
+~:: closed file "ai/system/logic/transponder/brain/nlp/intelligence/intelligence".
+
+- adding (2) weights.
+
+[]:: ai/system/logic/transponder/brain/data/logic.dat
+~:: resonate_index::match found on line: (7).
+~:: done.
+
+~:: verbosity = false
+	~:: query matches search string: "logic".
+
+-* logic is:
+   logic is my only type of relation inside this algorithm, using logic structure adherent to a subject.    + 7
+
+   still need to add a library first (database e.g. twitter data collection), use logic to do your work, using logic to make sense of complex (or enhance) problems.   [logic.dat] {}
+
+~:: tsp() :
+	~:!:~ transponder is not prepared yet.
+		;; preparing transponder.
+
+~:: prepTransponder() : (logic)
+~:: transponder -> prep()
+
+~:: set subject to: "logic".
+(debug) word :: logic
+
+~:: (debug)::nrOfWords = 1.
+~:: (debug)::counter = 1.
+
+(debug) calling prepare_ints() (from) -> "logic".
+~:: succesfully opened dictionary: "ai/data/files/20k.txt".
+
+~:: (debug) number of matching occurences: (3).
+
+~:: intvars int_occurences[] ::~
+(debug) 0) logic :: #3198
 
 
+~:: meta queries
+	~:: reverse_meta_query_lookup("3198,")
 
-~:copying "runtime.txt" log file to "./doc"
-~:copying "make_readme.sh"
-~:creating README.md -> ./doc/README.md
-- make_readme.sh - script is * running *
+~:: reverse meta query lookup: 
+	- logic		 --> *(a+i) = 3198 - *(a+i) - 1 = 3197
 
---2022-10-19 17:00:34--  https://model-ai.com/archive/doc.tar
-Resolving model-ai.com (model-ai.com)... 62.221.254.104, fe80::1c00:f3ff:fe00:bd9
-Connecting to model-ai.com (model-ai.com)|62.221.254.104|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 24576 (24K) [application/x-tar]
-Saving to: ‘doc.tar’
+(EOT)
 
-doc.tar                                            0%[                                                                                                          ]       0  --.-KB/s               doc.tar                                          100%[=========================================================================================================>]  24.00K  --.-KB/s    in 0s      
 
-2022-10-19 17:00:34 (310 MB/s) - ‘doc.tar’ saved [24576/24576]
+	TRANSPONDER::responding:
+	-----
 
-authors.txt
-beneficial.txt
-header1.txt
-header2.txt
-make_readme.sh
-program.txt
-readme_component_1.txt
-readme_component_2.txt
+~:: jot_score():
+	~:: keyphrase:
+		.;ai={artificial intelligence, machine learning, deep learning};.
 
-done.
+	~:: word(s): 6 : sentence(s): 1
+		~:: -null score-.
+		~:: -vector<std::string> &:()=0;
+:: 
+~:: analytic-s:
+	::- analytics -::
+	-----------------
 
-Script done on 2022-10-19 17:00:34-04:00 [COMMAND_EXIT_CODE="0"]
+	~:: (DEBUG) performing analytics() in {transponder}.
+
+		* words no_#: 1
+		* length: 5
+		* vowels: 2
+		* consonants: 3
+		* numbers: 0
+		* special chars: 0
+		* unknown chars: 0
+
+
+(debug) answer.
+
+~:: --(!)-- answer(std::string)
+
+(debug) : 
+	-1
+	logic
+
+
+~:: (!!) rank of: logic
+	:: == 1,transponder has query.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	logic
+
+
+~:: (!!) rank of: logic
+	:: == 2,transponder gets answer.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	logic
+
+
+~:: (!!) rank of: logic
+	:: == 3,transponder is bool.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	logic
+
+
+~:: (!!) rank of: logic
+	:: == 4"ransponder is boolean.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	logic
+
+
+~:: (!!) rank of: logic
+	:: == 5,transponder is boolean boolean.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	logic
+
+
+~:: (!!) rank of: logic
+	:: == 6,hi.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	logic
+
+
+~:: (!!) rank of: logic
+	:: == 7,hello.
+
+~:: (!) ranked
+(debug) : 
+	-1
+	logic
+
+
+~:: (!!) rank of: logic
+	:: == 8,goodbye.
+
+~:: (!) ranked
+(debug) : 

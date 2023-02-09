@@ -7,7 +7,6 @@ std::vector<std::string> ev;
 
 // function collusion() ;; takes data from other functions and stores it in public <vector> ev.
 void collusion(std::string& ref) {
-    std::cout << std::endl;
     std::cout << "~:: collusion()." << std::endl;
     ev.push_back(ref);
 };

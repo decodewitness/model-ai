@@ -8,6 +8,10 @@
 
 using namespace std;
 
+// bools
+const bool VERBOSE=true;
+const bool QUIET=false;
+
 // ints
 const int starting_index = 1;
 const int batch_size = 1024;
@@ -18,13 +22,21 @@ const char data_collection[] = "ai/system/logic/transponder/brain/nlp/intelligen
 const char store_file[] = "ai/system/logic/transponder/brain/nlp/intelligence/store_file";
 
 // strings
-std::string intelligence_file = "ai/system/logic/transponder/brain/nlp/intelligence/intelligence";   // will poke into the file with the intelligence
-std::string intel_file = "ai/system/logic/transponder/brain/nlp/intelligence/intelligence";
+const std::string intelligence_file = "ai/system/logic/transponder/brain/nlp/intelligence/intelligence";   // will poke into the file with the intelligence
+const std::string intel_file = "ai/system/logic/transponder/brain/nlp/intelligence/intelligence";
+
+// some variable strings
 std::string code;   // used by std::string Brain::search_index_code(std::string l)  // in file brain.cpp
 std::string b_string;   // string with various tags in intelligence_file
 
 // vectors
 std::vector<std::string> bstrings;
+
+// CREATE STORE METHOD HERE FOR bstrings...
+
+const std::string bstring_store = "ai/system/logic/transponder/brain/nlp/intelligence/catalogue_pages";
+const std::string bstring_store_filename = "bstrings.dat";
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class Brain {
 private:
@@ -39,6 +51,8 @@ private:
     int set2;   // number of research batches processed internally
     long int resonate_index;
     long int handles;
+
+    bool verbose;
 
     bool done[batch_size];
     bool descriptor;
@@ -68,10 +82,12 @@ public:
     ~Brain();
 
     // technicalities
+    bool verbosity_level(); // returns this->verbose
+    void verbose_mode_toggle(); // sets verbose mode to the opposite of what it was
     int search_catalogue_index(std::string s);  // search for 
     int procure(int nr);   // nr of lines back from the log to procure
     void file_access(int level);    // create file access to cabinet
-    void intialize1(bool perm); // perm = descriptor
+    void intialize1(bool perm, int verbosity=1); // perm = descriptor
     void consolidate(int nr); // does heavy research
     
     // nlp
